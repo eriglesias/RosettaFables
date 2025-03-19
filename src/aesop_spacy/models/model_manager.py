@@ -1,6 +1,8 @@
 from typing import Optional
 import logging
 import spacy
+from .stanza_wrapper import get_stanza_greek_processor
+
 
 # Define language-model mapping
 LANGUAGE_MODELS = {
@@ -23,7 +25,19 @@ def get_model(language_code: str) -> Optional[spacy.language.Language]:
 
     # Handle Ancient Greek
     if language_code == 'grc':
-        language_code = 'xx'
+        if 'grc' in _loaded_models:
+            return _loaded_models['grc']
+        try:
+            # Import the Stanza wrapper
+            from .stanza_wrapper import get_stanza_greek_processor
+            processor = get_stanza_greek_processor()
+            _loaded_models['grc'] = processor
+            logging.info("Successfully loaded Stanza processor for Ancient Greek")
+            return processor
+        except Exception as e:
+            logging.error(f"Error loading Stanza processor for Ancient Greek: {e}")
+            logging.warning("Falling back to multilingual model for Ancient Greek")
+            language_code = 'xx'
 
     # Return cached model if available
     if language_code in _loaded_models:
