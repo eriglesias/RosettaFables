@@ -56,55 +56,58 @@ class FableAnalyzer:
             except Exception as e:
                 print(f"Error loading {lang_file.name}: {e}")
 
-    def serialize_spacy_objects(self, obj):
-        """
-        Recursively convert spaCy objects to serializable Python types.
-        
+    def serialize_spacy_objects(self, obj, visited=None):
+        """Recursively serialize spaCy objects to JSON-compatible data structures.
         Args:
-            obj: Any object or data structure
+            obj: The object to serialize
+            visited: A set of object IDs that have already been visited to prevent cycles
             
         Returns:
-            JSON-serializable version of the object
+            A JSON-serializable representation of the object
         """
-        # Handle different types of objects
-        if isinstance(obj, (Doc, Span)):
-            # Convert Doc or Span to a dictionary with basic properties
-            return {
-                "text": obj.text,
-                "start": getattr(obj, "start", 0),
-                "end": getattr(obj, "end", len(obj)),
-                "label_": getattr(obj, "label_", ""),
-                # Add any other attributes you need
-            }
-        elif isinstance(obj, Token):
-            # Convert Token to a dictionary
-            return {
-                "text": obj.text,
-                "pos_": obj.pos_,
-                "tag_": obj.tag_,
-                "dep_": obj.dep_,
-                "lemma_": obj.lemma_,
-                "is_stop": obj.is_stop,
-                # Add any other attributes you need
-            }
-        elif isinstance(obj, np.ndarray):
-            # Convert numpy arrays to lists
-            return obj.tolist()
-        elif isinstance(obj, dict):
-            # Recursively process dictionary values
-            return {key: self.serialize_spacy_objects(value) for key, value in obj.items()}
-        elif isinstance(obj, list):
-            # Recursively process list items
-            return [self.serialize_spacy_objects(item) for item in obj]
-        elif isinstance(obj, tuple):
-            # Convert tuples to lists and recursively process
-            return [self.serialize_spacy_objects(item) for item in obj]
-        elif hasattr(obj, "__dict__"):
-            # Handle custom objects by converting them to dictionaries
-            return self.serialize_spacy_objects(obj.__dict__)
-        else:
-            # Return other types as-is (assumes they're JSON-serializable)
+        # Initialize the visited set on the first call
+        if visited is None:
+            visited = set()
+        
+        # Get the object ID to detect cycles
+        obj_id = id(obj)
+        
+        # If we've seen this object before, return a placeholder to break the cycle
+        if obj_id in visited:
+            return "<circular reference>"
+        
+        # Add this object to the visited set
+        visited.add(obj_id)
+        
+        # Handle different types
+        if obj is None or isinstance(obj, (int, float, str, bool)):
+            # Base types can be returned as is
             return obj
+        
+        elif isinstance(obj, list) or isinstance(obj, tuple):
+            # For lists and tuples, recursively serialize each item
+            return [self.serialize_spacy_objects(item, visited.copy()) for item in obj]
+        
+        elif isinstance(obj, dict):
+            # For dictionaries, recursively serialize each value
+            return {key: self.serialize_spacy_objects(value, visited.copy()) for key, value in obj.items()}
+        
+        elif hasattr(obj, 'to_dict') and callable(getattr(obj, 'to_dict')):
+            # If the object has a to_dict method, use that
+            return self.serialize_spacy_objects(obj.to_dict(), visited.copy())
+        
+        elif hasattr(obj, '__dict__'):
+            # For objects with a __dict__, serialize the dictionary
+            # but filter out private attributes (those starting with _)
+            filtered_dict = {k: v for k, v in obj.__dict__.items() if not k.startswith('_')}
+            return self.serialize_spacy_objects(filtered_dict, visited.copy())
+        
+        else:
+            # For anything else, convert to string
+            try:
+                return str(obj)
+            except:
+                return "<unserializable object>"
 
     def process_all_languages(self):
         """Process fables in all languages."""

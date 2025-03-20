@@ -52,30 +52,10 @@
     },
     "doc_length": 128,
     "sentences": [
-      {
-        "text": "Un lobo que vio a un cordero beber en un río quiso devorarlo con un pretexto razonable.",
-        "start": 0,
-        "end": 18,
-        "label_": ""
-      },
-      {
-        "text": "Por eso, aunque el lobo estaba situado río arriba, le acusó de haber removido el agua y no dejarle beber.",
-        "start": 18,
-        "end": 41,
-        "label_": ""
-      },
-      {
-        "text": "El cordero le dijo que bebía con la punta del hocico y que además no era posible, estando él río abajo, remover el agua de arriba; mas el lobo, al fracasar en ese pretexto, dijo: «El año pasado injuriaste a mi padre».",
-        "start": 41,
-        "end": 92,
-        "label_": ""
-      },
-      {
-        "text": "Sin embargo, el cordero dijo que ni siquiera tenía un año de vida, a lo que el lobo replicó: «Aunque tengas abundantes justificaciones, no voy a dejar de devorarte».",
-        "start": 92,
-        "end": 128,
-        "label_": ""
-      }
+      "Un lobo que vio a un cordero beber en un río quiso devorarlo con un pretexto razonable.",
+      "Por eso, aunque el lobo estaba situado río arriba, le acusó de haber removido el agua y no dejarle beber.",
+      "El cordero le dijo que bebía con la punta del hocico y que además no era posible, estando él río abajo, remover el agua de arriba; mas el lobo, al fracasar en ese pretexto, dijo: «El año pasado injuriaste a mi padre».",
+      "Sin embargo, el cordero dijo que ni siquiera tenía un año de vida, a lo que el lobo replicó: «Aunque tengas abundantes justificaciones, no voy a dejar de devorarte»."
     ],
     "tokens": [
       "Un",
@@ -933,72 +913,17 @@
     },
     "doc_length": 238,
     "sentences": [
-      {
-        "text": "Un ratón de campo era amigo de otro que vivía en una casa.",
-        "start": 0,
-        "end": 14,
-        "label_": ""
-      },
-      {
-        "text": "El de la casa, invitado por su amigo, fue primero a cenar al campo.",
-        "start": 14,
-        "end": 31,
-        "label_": ""
-      },
-      {
-        "text": "Después de haber comido cebada y trigo, dijo: «Reconócelo, amigo, llevas la vida de las hormigas, pero, ya que yo tengo multitud de bienes, ven conmigo y disfrutarás de todo».",
-        "start": 31,
-        "end": 71,
-        "label_": ""
-      },
-      {
-        "text": "Y, al instante, los dos se fueron.",
-        "start": 71,
-        "end": 81,
-        "label_": ""
-      },
-      {
-        "text": "Y el de la casa le mostró legumbres y trigo, y además dátiles, queso, miel, frutos.",
-        "start": 81,
-        "end": 102,
-        "label_": ""
-      },
-      {
-        "text": "Aquél a su vez, admirándole, lo elogiaba vehementemente y maldecía su propia suerte.",
-        "start": 102,
-        "end": 118,
-        "label_": ""
-      },
-      {
-        "text": "Cuando se disponían a empezar a comer, de repente un hombre abrió la puerta.",
-        "start": 118,
-        "end": 134,
-        "label_": ""
-      },
-      {
-        "text": "Atemorizados por el ruido, los ratones se lanzaron a los agujeros.",
-        "start": 134,
-        "end": 147,
-        "label_": ""
-      },
-      {
-        "text": "Cuando quisieron de nuevo coger unos higos secos, llegó otro hombre para retirar algo de lo que había dentro.",
-        "start": 147,
-        "end": 168,
-        "label_": ""
-      },
-      {
-        "text": "Al verlo los ratones, de nuevo se precipitaron a ocultarse en un escondrijo.",
-        "start": 168,
-        "end": 183,
-        "label_": ""
-      },
-      {
-        "text": "El ratón de campo, sobreponiéndose al hambre, suspiró y dijo al otro: «Disfruta tú, amigo, con tu comida hasta que te hartes, gozándolo con placer y peligro y mucho miedo; yo, desdichado, viviré despreocupadamente sin temer a nadie, comiendo cebada y trigo».",
-        "start": 183,
-        "end": 238,
-        "label_": ""
-      }
+      "Un ratón de campo era amigo de otro que vivía en una casa.",
+      "El de la casa, invitado por su amigo, fue primero a cenar al campo.",
+      "Después de haber comido cebada y trigo, dijo: «Reconócelo, amigo, llevas la vida de las hormigas, pero, ya que yo tengo multitud de bienes, ven conmigo y disfrutarás de todo».",
+      "Y, al instante, los dos se fueron.",
+      "Y el de la casa le mostró legumbres y trigo, y además dátiles, queso, miel, frutos.",
+      "Aquél a su vez, admirándole, lo elogiaba vehementemente y maldecía su propia suerte.",
+      "Cuando se disponían a empezar a comer, de repente un hombre abrió la puerta.",
+      "Atemorizados por el ruido, los ratones se lanzaron a los agujeros.",
+      "Cuando quisieron de nuevo coger unos higos secos, llegó otro hombre para retirar algo de lo que había dentro.",
+      "Al verlo los ratones, de nuevo se precipitaron a ocultarse en un escondrijo.",
+      "El ratón de campo, sobreponiéndose al hambre, suspiró y dijo al otro: «Disfruta tú, amigo, con tu comida hasta que te hartes, gozándolo con placer y peligro y mucho miedo; yo, desdichado, viviré despreocupadamente sin temer a nadie, comiendo cebada y trigo»."
     ],
     "tokens": [
       "Un",
@@ -2522,18 +2447,8 @@
     },
     "doc_length": 36,
     "sentences": [
-      {
-        "text": "Una zorra hambrienta, al ver unos racimos que colgaban de una parra, quiso apoderarse de ellos, y no pudo.",
-        "start": 0,
-        "end": 23,
-        "label_": ""
-      },
-      {
-        "text": "Apartándose, se dijo a sí misma: «Están verdes».",
-        "start": 23,
-        "end": 36,
-        "label_": ""
-      }
+      "Una zorra hambrienta, al ver unos racimos que colgaban de una parra, quiso apoderarse de ellos, y no pudo.",
+      "Apartándose, se dijo a sí misma: «Están verdes»."
     ],
     "tokens": [
       "Una",
@@ -2827,30 +2742,10 @@
     },
     "doc_length": 98,
     "sentences": [
-      {
-        "text": "Un lobo que se había atragantado con un hueso iba de un lado a otro buscando a quien lo curara.",
-        "start": 0,
-        "end": 21,
-        "label_": ""
-      },
-      {
-        "text": "Al encontrarse con una garza, le pidió que le sacase el hueso a cambio de una retribución.",
-        "start": 21,
-        "end": 40,
-        "label_": ""
-      },
-      {
-        "text": "Y aquélla metió su propia cabeza en la garganta del lobo, sacó el hueso y le reclamó la paga acordada.",
-        "start": 40,
-        "end": 62,
-        "label_": ""
-      },
-      {
-        "text": "Él, respondiendo, dijo: «¡Eh tú!, ¿no te contentas con haber sacado sana tu cabeza de la boca del lobo, sino que también pides paga?».",
-        "start": 62,
-        "end": 98,
-        "label_": ""
-      }
+      "Un lobo que se había atragantado con un hueso iba de un lado a otro buscando a quien lo curara.",
+      "Al encontrarse con una garza, le pidió que le sacase el hueso a cambio de una retribución.",
+      "Y aquélla metió su propia cabeza en la garganta del lobo, sacó el hueso y le reclamó la paga acordada.",
+      "Él, respondiendo, dijo: «¡Eh tú!, ¿no te contentas con haber sacado sana tu cabeza de la boca del lobo, sino que también pides paga?»."
     ],
     "tokens": [
       "Un",
@@ -3520,36 +3415,11 @@
     },
     "doc_length": 150,
     "sentences": [
-      {
-        "text": "Un ratón se puso a corretear sobre el cuerpo de un león dormido.",
-        "start": 0,
-        "end": 14,
-        "label_": ""
-      },
-      {
-        "text": "Éste se despertó y lo atrapó; y estaba a punto de devorarlo.",
-        "start": 14,
-        "end": 28,
-        "label_": ""
-      },
-      {
-        "text": "Pero, como el ratón le pidiera que lo soltase y le dijera que si lo salvaba se lo agradecería, el león, sonriendo, lo dejó libre.",
-        "start": 28,
-        "end": 58,
-        "label_": ""
-      },
-      {
-        "text": "Ocurrió que, no mucho después, él se salvó gracias al ratón.",
-        "start": 58,
-        "end": 72,
-        "label_": ""
-      },
-      {
-        "text": "Pues, cuando, capturado por unos cazadores, fue atado a un árbol con una soga, el ratón, que había oído sus lamentos, acudió y se puso a roer la soga y, una vez que lo hubo desatado, dijo: «Te reíste un día de mí, incrédulo de que yo pudiera devolverte el favor, pero ahora sabe bien que también hay agradecimiento de parte de los ratones».",
-        "start": 72,
-        "end": 150,
-        "label_": ""
-      }
+      "Un ratón se puso a corretear sobre el cuerpo de un león dormido.",
+      "Éste se despertó y lo atrapó; y estaba a punto de devorarlo.",
+      "Pero, como el ratón le pidiera que lo soltase y le dijera que si lo salvaba se lo agradecería, el león, sonriendo, lo dejó libre.",
+      "Ocurrió que, no mucho después, él se salvó gracias al ratón.",
+      "Pues, cuando, capturado por unos cazadores, fue atado a un árbol con una soga, el ratón, que había oído sus lamentos, acudió y se puso a roer la soga y, una vez que lo hubo desatado, dijo: «Te reíste un día de mí, incrédulo de que yo pudiera devolverte el favor, pero ahora sabe bien que también hay agradecimiento de parte de los ratones»."
     ],
     "tokens": [
       "Un",
@@ -4479,48 +4349,13 @@
     },
     "doc_length": 174,
     "sentences": [
-      {
-        "text": "Un mosquito se acercó a un león y le dijo: «Ni te temo ni eres más fuerte que yo; si no ¿qué fuerza tienes: que arañas con tus garras y muerdes con tus dientes?",
-        "start": 0,
-        "end": 40,
-        "label_": ""
-      },
-      {
-        "text": "Eso también lo hace una mujer cuando se pelea con su marido.",
-        "start": 40,
-        "end": 53,
-        "label_": ""
-      },
-      {
-        "text": "Yo soy mucho más fuerte que tú.",
-        "start": 53,
-        "end": 61,
-        "label_": ""
-      },
-      {
-        "text": "Si quieres, entremos en lucha.",
-        "start": 61,
-        "end": 68,
-        "label_": ""
-      },
-      {
-        "text": "» Y el mosquito hizo zumbar su trompetilla y le clavó el aguijón, picándole en la parte sin pelo de sus fauces, cerca de las narices.",
-        "start": 68,
-        "end": 97,
-        "label_": ""
-      },
-      {
-        "text": "Y el león se puso a rascarse con sus propias garras hasta que desfalleció.",
-        "start": 97,
-        "end": 112,
-        "label_": ""
-      },
-      {
-        "text": "El mosquito, luego de vencer al león, volvió a hacer zumbar su trompetilla y entonando un epinicio \" echó a volar; se enredó con la tela de una araña y, mientras era devorado, se lamentaba de cómo, tras pelear con los animales más grandes, perecía por obra de un animal insignificante, la araña.",
-        "start": 112,
-        "end": 174,
-        "label_": ""
-      }
+      "Un mosquito se acercó a un león y le dijo: «Ni te temo ni eres más fuerte que yo; si no ¿qué fuerza tienes: que arañas con tus garras y muerdes con tus dientes?",
+      "Eso también lo hace una mujer cuando se pelea con su marido.",
+      "Yo soy mucho más fuerte que tú.",
+      "Si quieres, entremos en lucha.",
+      "» Y el mosquito hizo zumbar su trompetilla y le clavó el aguijón, picándole en la parte sin pelo de sus fauces, cerca de las narices.",
+      "Y el león se puso a rascarse con sus propias garras hasta que desfalleció.",
+      "El mosquito, luego de vencer al león, volvió a hacer zumbar su trompetilla y entonando un epinicio \" echó a volar; se enredó con la tela de una araña y, mientras era devorado, se lamentaba de cómo, tras pelear con los animales más grandes, perecía por obra de un animal insignificante, la araña."
     ],
     "tokens": [
       "Un",

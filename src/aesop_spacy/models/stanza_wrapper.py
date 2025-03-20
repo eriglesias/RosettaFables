@@ -3,14 +3,37 @@ Stanza wrapper module for Ancient Greek language processing.
 Provides compatibility between Stanza's output and the spaCy-based pipeline.
 """
 
+class Token:
+    """Simple class to mimic essential functionality of spaCy's Token class."""
+    
+    def __init__(self, text, pos=None, lemma=None, i=None):
+        self.text = text
+        self.pos_ = pos
+        self.lemma_ = lemma
+        self.i = i  # Index in the doc
+        self.ent_type_ = ""  # Named entity type (empty placeholder)
+        self.ent_iob_ = ""  # IOB tag (empty placeholder)
+        self.is_stop = False  # Is stopword flag
+        
+        # Important: we're not storing references to other objects
+        # that would create cycles
+    
+    def __str__(self):
+        return self.text
+    
+    def __repr__(self):
+        return self.text
+
+
 class Span:
     """Simple class to mimic essential functionality of spaCy's Span class."""
     
-    def __init__(self, doc, start_idx, end_idx, text):
-        self.doc = doc
-        self.start = start_idx
-        self.end = end_idx
+    def __init__(self, token_indexes, text):
         self.text = text
+        self.start = token_indexes[0] if token_indexes else 0
+        self.end = token_indexes[-1] + 1 if token_indexes else 0
+        # Store token indexes rather than tokens themselves
+        self.token_indexes = token_indexes
     
     def __repr__(self):
         return self.text
@@ -21,26 +44,41 @@ class CompatibleDoc:
     
     def __init__(self, text):
         self.text = text
-        self.tokens = []
-        self.lemmas = []
-        self.pos_tags = []
-        self.entities = []
-        self.sentences = []
-        # Will hold actual Span objects for sentences
-        self._sentence_spans = []
-        
+        self.tokens = []  # Will store Token objects
+        self.ents = []    # Named entities (empty list as placeholder)
+        self.sentence_spans = []  # Will hold sentence spans
+    
     def __len__(self):
         """Return number of tokens, similar to spaCy's behavior."""
         return len(self.tokens)
         
     def __getitem__(self, key):
         """Support indexing to access tokens."""
+        if isinstance(key, slice):
+            # Return a list of tokens for slices
+            return self.tokens[key]
         return self.tokens[key]
     
     @property
     def sents(self):
         """Return an iterator over sentence spans, similar to spaCy."""
-        return iter(self._sentence_spans)
+        class SentenceIterator:
+            def __init__(self, doc):
+                self.doc = doc
+                self.spans = doc.sentence_spans
+                self.current = 0
+                
+            def __iter__(self):
+                return self
+                
+            def __next__(self):
+                if self.current >= len(self.spans):
+                    raise StopIteration
+                span = self.spans[self.current]
+                self.current += 1
+                return span
+        
+        return SentenceIterator(self)
 
 
 class StanzaWrapper:
@@ -61,6 +99,7 @@ class StanzaWrapper:
         doc = CompatibleDoc(text)
         
         # Extract sentences
+        token_idx = 0
         for sent_idx, sent in enumerate(stanza_doc.sentences):
             # Get sentence text
             sent_text = sent.text
@@ -71,27 +110,26 @@ class StanzaWrapper:
                 sent_start = sum(len(s.text) for s in stanza_doc.sentences[:sent_idx])
             sent_end = sent_start + len(sent_text)
             
-            # Add sentence boundaries
-            doc.sentences.append({
-                'text': sent_text,
-                'start': sent_start,
-                'end': sent_end,
-                'label_': ''
-            })
-            
             # Track token indices for sentence spans
-            token_start_idx = len(doc.tokens)
+            token_start_idx = token_idx
+            token_indices = []
             
             # Extract tokens, lemmas, and POS tags
             for word in sent.words:
-                doc.tokens.append(word.text)
-                doc.lemmas.append(word.lemma if word.lemma else word.text)
-                doc.pos_tags.append([word.text, word.upos])  # Using Universal POS tags
+                # Create a Token object for each word (without doc reference)
+                token = Token(
+                    text=word.text,
+                    pos=word.upos,  # Universal POS tag
+                    lemma=word.lemma if word.lemma else word.text,
+                    i=token_idx
+                )
+                doc.tokens.append(token)
+                token_indices.append(token_idx)
+                token_idx += 1
             
-            # Create a sentence span from token indices
-            token_end_idx = len(doc.tokens)
-            span = Span(doc, token_start_idx, token_end_idx, sent_text)
-            doc._sentence_spans.append(span)
+            # Create a sentence span with just token indices
+            span = Span(token_indices, sent_text)
+            doc.sentence_spans.append(span)
         
         return doc
 

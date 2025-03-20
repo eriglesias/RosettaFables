@@ -34,156 +34,31 @@
     },
     "doc_length": 381,
     "sentences": [
-      {
-        "text": "Er was eens een klein geitje dat hoorntjes begon te krijgen en daarom dacht dat hij nu al een grote geit was.",
-        "start": 0,
-        "end": 23,
-        "label_": ""
-      },
-      {
-        "text": "Hij liep in de wei, samen met zijn moeder en een grote kudde geiten, en zei tegen iedereen dat hij nu wel voor zichzelf kon zorgen.",
-        "start": 23,
-        "end": 52,
-        "label_": ""
-      },
-      {
-        "text": "Elke avond gingen de geiten naar hun stal om er te slapen.",
-        "start": 52,
-        "end": 65,
-        "label_": ""
-      },
-      {
-        "text": "Op een avond bleef het klein geitje op de wei staan.",
-        "start": 65,
-        "end": 77,
-        "label_": ""
-      },
-      {
-        "text": "Zijn moeder riep hem om mee naar huis te gaan.",
-        "start": 77,
-        "end": 88,
-        "label_": ""
-      },
-      {
-        "text": "Maar hij wilde niet luisteren en bleef knabbelen aan het malse gras.",
-        "start": 88,
-        "end": 101,
-        "label_": ""
-      },
-      {
-        "text": "Toen hij na een tijdje rondkeek zag hij dat zijn moeder en de andere geiten al naar huis waren.",
-        "start": 101,
-        "end": 121,
-        "label_": ""
-      },
-      {
-        "text": "Hij was helemaal alleen.",
-        "start": 121,
-        "end": 126,
-        "label_": ""
-      },
-      {
-        "text": "De zon ging onder en er kropen lange schaduwen over de grond.",
-        "start": 126,
-        "end": 139,
-        "label_": ""
-      },
-      {
-        "text": "Een koude wind stak op en maakte akelige geluiden in het gras en in de bomen.",
-        "start": 139,
-        "end": 156,
-        "label_": ""
-      },
-      {
-        "text": "Het geitje rilde toen het dacht aan de verschrikkelijke wolf.",
-        "start": 156,
-        "end": 167,
-        "label_": ""
-      },
-      {
-        "text": "Hij liep snel over de weide en begon te roepen op zijn moeder.",
-        "start": 167,
-        "end": 181,
-        "label_": ""
-      },
-      {
-        "text": "Maar hij was nog niet halfweg toen hij, naast een groepje bomen, de wolf zag staan!",
-        "start": 181,
-        "end": 200,
-        "label_": ""
-      },
-      {
-        "text": "Het geitje was bang want het wist dat de wolf hem zou opeten.",
-        "start": 200,
-        "end": 214,
-        "label_": ""
-      },
-      {
-        "text": "“Alstublieft, mijnheer de wolf” zei hij bevend",
-        "start": 214,
-        "end": 224,
-        "label_": ""
-      },
-      {
-        "text": "“Ik weet dat u mij gaat opeten.",
-        "start": 224,
-        "end": 233,
-        "label_": ""
-      },
-      {
-        "text": "Maar speel eerst op uw blokfluit een liedje voor mij, want ik wil dansen en vrolijk zijn, zolang als ik kan.”",
-        "start": 233,
-        "end": 258,
-        "label_": ""
-      },
-      {
-        "text": "De wolf vond het een leuk idee om eerst een liedje te spelen vooraleer hij het geitje zou opeten.",
-        "start": 258,
-        "end": 278,
-        "label_": ""
-      },
-      {
-        "text": "Hij zette zijn blokfluit aan zijn mond en speelde een liedje.",
-        "start": 278,
-        "end": 290,
-        "label_": ""
-      },
-      {
-        "text": "Het geitje begon vrolijk te dansen en rond te springen.",
-        "start": 290,
-        "end": 301,
-        "label_": ""
-      },
-      {
-        "text": "Maar het geluid van de blokfluit werd gehoord door de honden die de geiten beschermen.",
-        "start": 301,
-        "end": 317,
-        "label_": ""
-      },
-      {
-        "text": "Ze herkenden het liedje van de wolf en begonnen heel hard naar de wei te lopen.",
-        "start": 317,
-        "end": 334,
-        "label_": ""
-      },
-      {
-        "text": "De wolf hield ineens op met zijn liedje en liep snel weg.",
-        "start": 334,
-        "end": 347,
-        "label_": ""
-      },
-      {
-        "text": "Terwijl de honden achter hem zaten was hij boos op zichzelf omdat hij zo dom was geweest.",
-        "start": 347,
-        "end": 365,
-        "label_": ""
-      },
-      {
-        "text": "In plaats van eerst een liedje te spelen had hij beter het geitje onmiddellijk opgegeten.",
-        "start": 365,
-        "end": 381,
-        "label_": ""
-      }
+      "Er was eens een klein geitje dat hoorntjes begon te krijgen en daarom dacht dat hij nu al een grote geit was.",
+      "Hij liep in de wei, samen met zijn moeder en een grote kudde geiten, en zei tegen iedereen dat hij nu wel voor zichzelf kon zorgen.",
+      "Elke avond gingen de geiten naar hun stal om er te slapen.",
+      "Op een avond bleef het klein geitje op de wei staan.",
+      "Zijn moeder riep hem om mee naar huis te gaan.",
+      "Maar hij wilde niet luisteren en bleef knabbelen aan het malse gras.",
+      "Toen hij na een tijdje rondkeek zag hij dat zijn moeder en de andere geiten al naar huis waren.",
+      "Hij was helemaal alleen.",
+      "De zon ging onder en er kropen lange schaduwen over de grond.",
+      "Een koude wind stak op en maakte akelige geluiden in het gras en in de bomen.",
+      "Het geitje rilde toen het dacht aan de verschrikkelijke wolf.",
+      "Hij liep snel over de weide en begon te roepen op zijn moeder.",
+      "Maar hij was nog niet halfweg toen hij, naast een groepje bomen, de wolf zag staan!",
+      "Het geitje was bang want het wist dat de wolf hem zou opeten.",
+      "“Alstublieft, mijnheer de wolf” zei hij bevend",
+      "“Ik weet dat u mij gaat opeten.",
+      "Maar speel eerst op uw blokfluit een liedje voor mij, want ik wil dansen en vrolijk zijn, zolang als ik kan.”",
+      "De wolf vond het een leuk idee om eerst een liedje te spelen vooraleer hij het geitje zou opeten.",
+      "Hij zette zijn blokfluit aan zijn mond en speelde een liedje.",
+      "Het geitje begon vrolijk te dansen en rond te springen.",
+      "Maar het geluid van de blokfluit werd gehoord door de honden die de geiten beschermen.",
+      "Ze herkenden het liedje van de wolf en begonnen heel hard naar de wei te lopen.",
+      "De wolf hield ineens op met zijn liedje en liep snel weg.",
+      "Terwijl de honden achter hem zaten was hij boos op zichzelf omdat hij zo dom was geweest.",
+      "In plaats van eerst een liedje te spelen had hij beter het geitje onmiddellijk opgegeten."
     ],
     "tokens": [
       "Er",
@@ -2539,126 +2414,26 @@
     },
     "doc_length": 392,
     "sentences": [
-      {
-        "text": "Een Stadsmuis ging op bezoek bij een familielid, welke in het veld woonde, en bleef daar eten.",
-        "start": 0,
-        "end": 20,
-        "label_": ""
-      },
-      {
-        "text": "De Veldmuis serveerde een maaltijd van tarwe, wortels en eikels, samen met wat koud water om erbij te drinken.",
-        "start": 20,
-        "end": 42,
-        "label_": ""
-      },
-      {
-        "text": "De Stadsmuis at maar heel weinig en nam slechts een hapje van dit en een hapje van dat.",
-        "start": 42,
-        "end": 60,
-        "label_": ""
-      },
-      {
-        "text": "Het was heel duidelijk dat ze het eenvoudige eten niet lustte en er alleen maar aan knabbelde om niet onbeleefd te zijn.",
-        "start": 60,
-        "end": 83,
-        "label_": ""
-      },
-      {
-        "text": "Na de maaltijd begon de Stadsmuis te spreken over haar luxe leven in de stad, terwijl de Veldmuis aandachtig luisterde.",
-        "start": 83,
-        "end": 105,
-        "label_": ""
-      },
-      {
-        "text": "Daarna gingen ze naar bed in een gezellig nestje onder de grond en sliepen rustig en ongestoord tot de volgende morgen.",
-        "start": 105,
-        "end": 127,
-        "label_": ""
-      },
-      {
-        "text": "Terwijl ze sliep droomde de Veldmuis dat ze een Stadsmuis was en dat ze genoot van alle luxe en genoegens waarover de Stadsmuis verteld had.",
-        "start": 127,
-        "end": 153,
-        "label_": ""
-      },
-      {
-        "text": "De volgende morgen vroeg de Stadsmuis aan de Veldmuis of ze graag mee ging naar de stad.",
-        "start": 153,
-        "end": 171,
-        "label_": ""
-      },
-      {
-        "text": "De Veldmuis was blij en zei ja.",
-        "start": 171,
-        "end": 179,
-        "label_": ""
-      },
-      {
-        "text": "Toen ze in de stad waren gingen ze binnen in een mooi, groot huis.",
-        "start": 179,
-        "end": 195,
-        "label_": ""
-      },
-      {
-        "text": "In de eetkamer stond een tafel met daarop de overschotjes van een rijkelijk feestmaal.",
-        "start": 195,
-        "end": 210,
-        "label_": ""
-      },
-      {
-        "text": "Er waren snoepjes en gelatinepudding, taartjes, heerlijke kazen, en nog veel andere zaken die muizen zo graag eten.",
-        "start": 210,
-        "end": 232,
-        "label_": ""
-      },
-      {
-        "text": "Maar toen de Veldmuis aan een taartje wou knabbelen hoorden ze een Kat luid miauwen en krabben aan de deur.",
-        "start": 232,
-        "end": 253,
-        "label_": ""
-      },
-      {
-        "text": "Doodsbang vluchten de muizen naar een schuilplaats en daar bleven ze lange tijd heel stil liggen;",
-        "start": 253,
-        "end": 270,
-        "label_": ""
-      },
-      {
-        "text": "ze durfden zelfs amper ademhalen.",
-        "start": 270,
-        "end": 276,
-        "label_": ""
-      },
-      {
-        "text": "Toen ze zich tenslotte terug naar de tafel waagden zwaaide plots de deur open.",
-        "start": 276,
-        "end": 291,
-        "label_": ""
-      },
-      {
-        "text": "Er kwamen dienstboden binnen om de tafel af te ruimen, op de voet gevolgd door de hond van het huis.",
-        "start": 291,
-        "end": 313,
-        "label_": ""
-      },
-      {
-        "text": "In paniek vluchtten de muisjes terug naar hun schuilplaats, welke ze veilig bereikten.",
-        "start": 313,
-        "end": 328,
-        "label_": ""
-      },
-      {
-        "text": "Van zodra de dienstboden en de hond de kamer hadden verlaten nam de Veldmuis haar paraplu en haar handtas en zei tegen de Stadsmuis: “Je hebt meer luxe en lekkernijen dan ik heb, maar toch heb ik liever mijn eenvoudig eten en mijn nederig leventje op het platteland.",
-        "start": 328,
-        "end": 380,
-        "label_": ""
-      },
-      {
-        "text": "En vooral de vrede en de veiligheid die erbij horen.”",
-        "start": 380,
-        "end": 392,
-        "label_": ""
-      }
+      "Een Stadsmuis ging op bezoek bij een familielid, welke in het veld woonde, en bleef daar eten.",
+      "De Veldmuis serveerde een maaltijd van tarwe, wortels en eikels, samen met wat koud water om erbij te drinken.",
+      "De Stadsmuis at maar heel weinig en nam slechts een hapje van dit en een hapje van dat.",
+      "Het was heel duidelijk dat ze het eenvoudige eten niet lustte en er alleen maar aan knabbelde om niet onbeleefd te zijn.",
+      "Na de maaltijd begon de Stadsmuis te spreken over haar luxe leven in de stad, terwijl de Veldmuis aandachtig luisterde.",
+      "Daarna gingen ze naar bed in een gezellig nestje onder de grond en sliepen rustig en ongestoord tot de volgende morgen.",
+      "Terwijl ze sliep droomde de Veldmuis dat ze een Stadsmuis was en dat ze genoot van alle luxe en genoegens waarover de Stadsmuis verteld had.",
+      "De volgende morgen vroeg de Stadsmuis aan de Veldmuis of ze graag mee ging naar de stad.",
+      "De Veldmuis was blij en zei ja.",
+      "Toen ze in de stad waren gingen ze binnen in een mooi, groot huis.",
+      "In de eetkamer stond een tafel met daarop de overschotjes van een rijkelijk feestmaal.",
+      "Er waren snoepjes en gelatinepudding, taartjes, heerlijke kazen, en nog veel andere zaken die muizen zo graag eten.",
+      "Maar toen de Veldmuis aan een taartje wou knabbelen hoorden ze een Kat luid miauwen en krabben aan de deur.",
+      "Doodsbang vluchten de muizen naar een schuilplaats en daar bleven ze lange tijd heel stil liggen;",
+      "ze durfden zelfs amper ademhalen.",
+      "Toen ze zich tenslotte terug naar de tafel waagden zwaaide plots de deur open.",
+      "Er kwamen dienstboden binnen om de tafel af te ruimen, op de voet gevolgd door de hond van het huis.",
+      "In paniek vluchtten de muisjes terug naar hun schuilplaats, welke ze veilig bereikten.",
+      "Van zodra de dienstboden en de hond de kamer hadden verlaten nam de Veldmuis haar paraplu en haar handtas en zei tegen de Stadsmuis: “Je hebt meer luxe en lekkernijen dan ik heb, maar toch heb ik liever mijn eenvoudig eten en mijn nederig leventje op het platteland.",
+      "En vooral de vrede en de veiligheid die erbij horen.”"
     ],
     "tokens": [
       "Een",
@@ -5124,90 +4899,20 @@
     },
     "doc_length": 189,
     "sentences": [
-      {
-        "text": "Op een dag zag een vos een mooie tros druiven hangen.",
-        "start": 0,
-        "end": 12,
-        "label_": ""
-      },
-      {
-        "text": "Maar de druiven hingen heel hoog, aan een druivenrank in de takken van een boom.",
-        "start": 12,
-        "end": 29,
-        "label_": ""
-      },
-      {
-        "text": "Ze waren zo rijp dat het leek alsof het sap er op elk ogenblik kon uitbrasten.",
-        "start": 29,
-        "end": 46,
-        "label_": ""
-      },
-      {
-        "text": "De vos had veel zin om de druiven op te eten en keek verlangend omhoog.",
-        "start": 46,
-        "end": 62,
-        "label_": ""
-      },
-      {
-        "text": "Omdat de druiven zo hoog hingen probeerde hij er naartoe te springen.",
-        "start": 62,
-        "end": 75,
-        "label_": ""
-      },
-      {
-        "text": "Bij de eerste sprong was hij nog een heel eind van de druiven verwijderd.",
-        "start": 75,
-        "end": 90,
-        "label_": ""
-      },
-      {
-        "text": "Hij nam nu een aanloop en sprong opnieuw.",
-        "start": 90,
-        "end": 99,
-        "label_": ""
-      },
-      {
-        "text": "Maar ook nu kwam hij niet hoog genoeg.",
-        "start": 99,
-        "end": 108,
-        "label_": ""
-      },
-      {
-        "text": "Steeds weer opnieuw sprong hij naar de druiven, maar geen enkele keer kon hij erbij.",
-        "start": 108,
-        "end": 125,
-        "label_": ""
-      },
-      {
-        "text": "Moe van al het springen ging hij neerzitten en keek met tegenzin naar de druiven.",
-        "start": 125,
-        "end": 141,
-        "label_": ""
-      },
-      {
-        "text": "“Wat een gek ben ik toch,” zei hij tenslotte",
-        "start": 141,
-        "end": 153,
-        "label_": ""
-      },
-      {
-        "text": "“Ik zit mezelf hier moe te maken voor wat druiven die nog niet rijp en veel te zuur zijn.",
-        "start": 153,
-        "end": 174,
-        "label_": ""
-      },
-      {
-        "text": "”",
-        "start": 174,
-        "end": 175,
-        "label_": ""
-      },
-      {
-        "text": "En trots liep hij weg, met een minachtende uitdrukking op zijn gezicht.",
-        "start": 175,
-        "end": 189,
-        "label_": ""
-      }
+      "Op een dag zag een vos een mooie tros druiven hangen.",
+      "Maar de druiven hingen heel hoog, aan een druivenrank in de takken van een boom.",
+      "Ze waren zo rijp dat het leek alsof het sap er op elk ogenblik kon uitbrasten.",
+      "De vos had veel zin om de druiven op te eten en keek verlangend omhoog.",
+      "Omdat de druiven zo hoog hingen probeerde hij er naartoe te springen.",
+      "Bij de eerste sprong was hij nog een heel eind van de druiven verwijderd.",
+      "Hij nam nu een aanloop en sprong opnieuw.",
+      "Maar ook nu kwam hij niet hoog genoeg.",
+      "Steeds weer opnieuw sprong hij naar de druiven, maar geen enkele keer kon hij erbij.",
+      "Moe van al het springen ging hij neerzitten en keek met tegenzin naar de druiven.",
+      "“Wat een gek ben ik toch,” zei hij tenslotte",
+      "“Ik zit mezelf hier moe te maken voor wat druiven die nog niet rijp en veel te zuur zijn.",
+      "”",
+      "En trots liep hij weg, met een minachtende uitdrukking op zijn gezicht."
     ],
     "tokens": [
       "Op",
@@ -6389,102 +6094,22 @@
     },
     "doc_length": 194,
     "sentences": [
-      {
-        "text": "Een Wolf had te gulzig een kip opgegeten en een beentje was dwars in zijn keel blijven steken.",
-        "start": 0,
-        "end": 19,
-        "label_": ""
-      },
-      {
-        "text": "Hij kon het niet meer uitspuwen en ookniet meer inslikken.",
-        "start": 19,
-        "end": 30,
-        "label_": ""
-      },
-      {
-        "text": "Dat was natuurlijk heel erg voor een gulzige wolf.",
-        "start": 30,
-        "end": 40,
-        "label_": ""
-      },
-      {
-        "text": "Hij liep dus naar de Kraanvogel.",
-        "start": 40,
-        "end": 47,
-        "label_": ""
-      },
-      {
-        "text": "Hij was er zeker van dat zij, met haar lange nek en lange snavel, gemakkelijk bij het beentje kon komen en het er uit kon trekken.",
-        "start": 47,
-        "end": 76,
-        "label_": ""
-      },
-      {
-        "text": "“Ik zal je rijkelijk belonen” zei de Wolf “wanneer je dat beentje er uit kunt nemen.”",
-        "start": 76,
-        "end": 97,
-        "label_": ""
-      },
-      {
-        "text": "De Kraanvogel had weinig zin om haar hoofd in de muil van de wolf te steken.",
-        "start": 97,
-        "end": 114,
-        "label_": ""
-      },
-      {
-        "text": "Maar ze wou graag de beloning en deed dus wat de Wolf vroeg.",
-        "start": 114,
-        "end": 128,
-        "label_": ""
-      },
-      {
-        "text": "Toen de Wolf voelde dat hij van het beentje verlost was, liep hij weg.",
-        "start": 128,
-        "end": 144,
-        "label_": ""
-      },
-      {
-        "text": "“Maar hoe zit het met mijn beloning?",
-        "start": 144,
-        "end": 153,
-        "label_": ""
-      },
-      {
-        "text": "”",
-        "start": 153,
-        "end": 154,
-        "label_": ""
-      },
-      {
-        "text": "riep de Kraanvogel verontwaardigd uit.",
-        "start": 154,
-        "end": 160,
-        "label_": ""
-      },
-      {
-        "text": "“Wat!” snauwde de Wolf, terwijl hij zich omdraaide.",
-        "start": 160,
-        "end": 173,
-        "label_": ""
-      },
-      {
-        "text": "“Jij hebt je beloning al lang gekregen.",
-        "start": 173,
-        "end": 182,
-        "label_": ""
-      },
-      {
-        "text": "Wees maar blij dat ik je kop niet heb afgebeten!",
-        "start": 182,
-        "end": 193,
-        "label_": ""
-      },
-      {
-        "text": "”",
-        "start": 193,
-        "end": 194,
-        "label_": ""
-      }
+      "Een Wolf had te gulzig een kip opgegeten en een beentje was dwars in zijn keel blijven steken.",
+      "Hij kon het niet meer uitspuwen en ookniet meer inslikken.",
+      "Dat was natuurlijk heel erg voor een gulzige wolf.",
+      "Hij liep dus naar de Kraanvogel.",
+      "Hij was er zeker van dat zij, met haar lange nek en lange snavel, gemakkelijk bij het beentje kon komen en het er uit kon trekken.",
+      "“Ik zal je rijkelijk belonen” zei de Wolf “wanneer je dat beentje er uit kunt nemen.”",
+      "De Kraanvogel had weinig zin om haar hoofd in de muil van de wolf te steken.",
+      "Maar ze wou graag de beloning en deed dus wat de Wolf vroeg.",
+      "Toen de Wolf voelde dat hij van het beentje verlost was, liep hij weg.",
+      "“Maar hoe zit het met mijn beloning?",
+      "”",
+      "riep de Kraanvogel verontwaardigd uit.",
+      "“Wat!” snauwde de Wolf, terwijl hij zich omdraaide.",
+      "“Jij hebt je beloning al lang gekregen.",
+      "Wees maar blij dat ik je kop niet heb afgebeten!",
+      "”"
     ],
     "tokens": [
       "Een",
@@ -7722,126 +7347,26 @@
     },
     "doc_length": 288,
     "sentences": [
-      {
-        "text": "Een Leeuw lag te slapen in het bos.",
-        "start": 0,
-        "end": 9,
-        "label_": ""
-      },
-      {
-        "text": "Zijn grote hoofd rustte op zijn voorpoten.",
-        "start": 9,
-        "end": 17,
-        "label_": ""
-      },
-      {
-        "text": "Een kleine, bedeesde Muis kwam onverwacht in zijn buurt.",
-        "start": 17,
-        "end": 28,
-        "label_": ""
-      },
-      {
-        "text": "Toen ze de Leeuw zag werd ze bang en rende haastig weg, maar in haar haast liep ze net voor de muil van de Leeuw.",
-        "start": 28,
-        "end": 55,
-        "label_": ""
-      },
-      {
-        "text": "De Leeuw werd er wakker van en was boos omdat hij in zijn slaap gestoord werd.",
-        "start": 55,
-        "end": 72,
-        "label_": ""
-      },
-      {
-        "text": "Hij legde zijn grote poot op de Muis en wilde het kleine dier dood drukken.",
-        "start": 72,
-        "end": 88,
-        "label_": ""
-      },
-      {
-        "text": "“Spaar mij!” smeekte de arme Muis “Alstublieft, laat mij gaan.",
-        "start": 88,
-        "end": 104,
-        "label_": ""
-      },
-      {
-        "text": "Op een dag zal ik u ook helpen.”",
-        "start": 104,
-        "end": 114,
-        "label_": ""
-      },
-      {
-        "text": "De grote Leeuw lachte omdat de kleine Muis gezegd had dat ze hem ooit zou helpen.",
-        "start": 114,
-        "end": 131,
-        "label_": ""
-      },
-      {
-        "text": "Maar hij had een edelmoedig hart en liet de Muis gaan.",
-        "start": 131,
-        "end": 143,
-        "label_": ""
-      },
-      {
-        "text": "Enkele dagen later, toen hij eten zocht in het bos, werd de leeuw gevangen in de netten van een jager.",
-        "start": 143,
-        "end": 166,
-        "label_": ""
-      },
-      {
-        "text": "Hij kon het net niet kapot scheuren en brulde zo luid dat alle dieren in het bos het hoorden.",
-        "start": 166,
-        "end": 186,
-        "label_": ""
-      },
-      {
-        "text": "De Muis herkende zijn stem en rende er naartoe.",
-        "start": 186,
-        "end": 196,
-        "label_": ""
-      },
-      {
-        "text": "Ze zag hoe de Leeuw worstelde met het net maar het niet los kon maken.",
-        "start": 196,
-        "end": 212,
-        "label_": ""
-      },
-      {
-        "text": "Ze ging naar één van de touwen waarmee het net was vastgemaakt en begon met haar kleine scherpe tandjes aan het touw te knagen.",
-        "start": 212,
-        "end": 237,
-        "label_": ""
-      },
-      {
-        "text": "Na een poosje was het touw doorgeknaagd en was de Leeuw terug vrij.",
-        "start": 237,
-        "end": 251,
-        "label_": ""
-      },
-      {
-        "text": "De Muis zei tegen de Leeuw:",
-        "start": 251,
-        "end": 258,
-        "label_": ""
-      },
-      {
-        "text": "“Je lachte toen ik zei dat ik je zou helpen.",
-        "start": 258,
-        "end": 270,
-        "label_": ""
-      },
-      {
-        "text": "Nu heb je gezien dat zelfs een kleine Muis een grote Leeuw van dienst kan zijn.",
-        "start": 270,
-        "end": 287,
-        "label_": ""
-      },
-      {
-        "text": "”",
-        "start": 287,
-        "end": 288,
-        "label_": ""
-      }
+      "Een Leeuw lag te slapen in het bos.",
+      "Zijn grote hoofd rustte op zijn voorpoten.",
+      "Een kleine, bedeesde Muis kwam onverwacht in zijn buurt.",
+      "Toen ze de Leeuw zag werd ze bang en rende haastig weg, maar in haar haast liep ze net voor de muil van de Leeuw.",
+      "De Leeuw werd er wakker van en was boos omdat hij in zijn slaap gestoord werd.",
+      "Hij legde zijn grote poot op de Muis en wilde het kleine dier dood drukken.",
+      "“Spaar mij!” smeekte de arme Muis “Alstublieft, laat mij gaan.",
+      "Op een dag zal ik u ook helpen.”",
+      "De grote Leeuw lachte omdat de kleine Muis gezegd had dat ze hem ooit zou helpen.",
+      "Maar hij had een edelmoedig hart en liet de Muis gaan.",
+      "Enkele dagen later, toen hij eten zocht in het bos, werd de leeuw gevangen in de netten van een jager.",
+      "Hij kon het net niet kapot scheuren en brulde zo luid dat alle dieren in het bos het hoorden.",
+      "De Muis herkende zijn stem en rende er naartoe.",
+      "Ze zag hoe de Leeuw worstelde met het net maar het niet los kon maken.",
+      "Ze ging naar één van de touwen waarmee het net was vastgemaakt en begon met haar kleine scherpe tandjes aan het touw te knagen.",
+      "Na een poosje was het touw doorgeknaagd en was de Leeuw terug vrij.",
+      "De Muis zei tegen de Leeuw:",
+      "“Je lachte toen ik zei dat ik je zou helpen.",
+      "Nu heb je gezien dat zelfs een kleine Muis een grote Leeuw van dienst kan zijn.",
+      "”"
     ],
     "tokens": [
       "Een",
@@ -9635,96 +9160,21 @@
     },
     "doc_length": 208,
     "sentences": [
-      {
-        "text": "Een Mug zoemde rond het hoofd van een Leeuw.",
-        "start": 0,
-        "end": 10,
-        "label_": ""
-      },
-      {
-        "text": "De Leeuw riep:",
-        "start": 10,
-        "end": 14,
-        "label_": ""
-      },
-      {
-        "text": "“Ga weg, lelijk insect!”",
-        "start": 14,
-        "end": 22,
-        "label_": ""
-      },
-      {
-        "text": "Maar de Mug liet zich niet wegjagen en zei nijdig tegen de Leeuw:",
-        "start": 22,
-        "end": 36,
-        "label_": ""
-      },
-      {
-        "text": "“Denk je dat ik bang voor",
-        "start": 36,
-        "end": 43,
-        "label_": ""
-      },
-      {
-        "text": "je ben omdat men je de koning van de dieren noemt?”",
-        "start": 43,
-        "end": 56,
-        "label_": ""
-      },
-      {
-        "text": "Onmiddellijk daarop vloog ze naar de Leeuw en prikte hem in zijn neus.",
-        "start": 56,
-        "end": 70,
-        "label_": ""
-      },
-      {
-        "text": "Razend kwaad sloeg de Leeuw naar de Mug maar verwondde alleen zijn eigen neus.",
-        "start": 70,
-        "end": 85,
-        "label_": ""
-      },
-      {
-        "text": "De Mug liet zich niet doen en steeds opnieuw prikte ze in de Leeuw.",
-        "start": 85,
-        "end": 100,
-        "label_": ""
-      },
-      {
-        "text": "De Leeuw was nu buiten zichzelf van woede, maar zijn razernij maakte hem alleen maar moe.",
-        "start": 100,
-        "end": 118,
-        "label_": ""
-      },
-      {
-        "text": "Overdekt met de wonden van zijn eigen klauwen en tanden, gaf hij de strijd tenslotte op.",
-        "start": 118,
-        "end": 136,
-        "label_": ""
-      },
-      {
-        "text": "De Mug vloog weg om aan de hele wereld te vertellen dat ze een Leeuw had verslagen, en ze was daar zo fier over dat niet zag dat er een spinnenweb op haar weg hing.",
-        "start": 136,
-        "end": 173,
-        "label_": ""
-      },
-      {
-        "text": "Ze vloog erin en raakte niet meer los.",
-        "start": 173,
-        "end": 182,
-        "label_": ""
-      },
-      {
-        "text": "Zo kwam ze ellendig aan haar einde, gevangen door een kleine spin.",
-        "start": 182,
-        "end": 196,
-        "label_": ""
-      },
-      {
-        "text": "De zwakste van onze vijanden moet men dikwijls het meeste vrezen.",
-        "start": 196,
-        "end": 208,
-        "label_": ""
-      }
+      "Een Mug zoemde rond het hoofd van een Leeuw.",
+      "De Leeuw riep:",
+      "“Ga weg, lelijk insect!”",
+      "Maar de Mug liet zich niet wegjagen en zei nijdig tegen de Leeuw:",
+      "“Denk je dat ik bang voor",
+      "je ben omdat men je de koning van de dieren noemt?”",
+      "Onmiddellijk daarop vloog ze naar de Leeuw en prikte hem in zijn neus.",
+      "Razend kwaad sloeg de Leeuw naar de Mug maar verwondde alleen zijn eigen neus.",
+      "De Mug liet zich niet doen en steeds opnieuw prikte ze in de Leeuw.",
+      "De Leeuw was nu buiten zichzelf van woede, maar zijn razernij maakte hem alleen maar moe.",
+      "Overdekt met de wonden van zijn eigen klauwen en tanden, gaf hij de strijd tenslotte op.",
+      "De Mug vloog weg om aan de hele wereld te vertellen dat ze een Leeuw had verslagen, en ze was daar zo fier over dat niet zag dat er een spinnenweb op haar weg hing.",
+      "Ze vloog erin en raakte niet meer los.",
+      "Zo kwam ze ellendig aan haar einde, gevangen door een kleine spin.",
+      "De zwakste van onze vijanden moet men dikwijls het meeste vrezen."
     ],
     "tokens": [
       "Een",
@@ -11032,96 +10482,21 @@
     },
     "doc_length": 202,
     "sentences": [
-      {
-        "text": "Een Vos was in een waterput gevallen en alhoewel de put niet erg diep was, kon de Vos er toch niet meer uit.",
-        "start": 0,
-        "end": 25,
-        "label_": ""
-      },
-      {
-        "text": "Toen hij daar al een lange tijd zat kwam er een dorstige Geit langs.",
-        "start": 25,
-        "end": 40,
-        "label_": ""
-      },
-      {
-        "text": "De Geit dacht dat de Vos in de put was gesprongen om te drinken en ze vroeg of het water lekker was.",
-        "start": 40,
-        "end": 63,
-        "label_": ""
-      },
-      {
-        "text": "De slimme Vos antwoordde:",
-        "start": 63,
-        "end": 68,
-        "label_": ""
-      },
-      {
-        "text": "“Het lekkerste water van het hele land!",
-        "start": 68,
-        "end": 77,
-        "label_": ""
-      },
-      {
-        "text": "Spring maar beneden en proef",
-        "start": 77,
-        "end": 82,
-        "label_": ""
-      },
-      {
-        "text": "er zelf van.",
-        "start": 82,
-        "end": 86,
-        "label_": ""
-      },
-      {
-        "text": "Er is meer dan genoeg water voor ons beiden.”",
-        "start": 86,
-        "end": 97,
-        "label_": ""
-      },
-      {
-        "text": "De dorstige Geit sprong onmiddellijk in de waterput en begon te drinken.",
-        "start": 97,
-        "end": 110,
-        "label_": ""
-      },
-      {
-        "text": "De Vos sprong vlug op de rug van de Geit en klom zo uit de put.",
-        "start": 110,
-        "end": 127,
-        "label_": ""
-      },
-      {
-        "text": "De onnozele Geit zag nu in welke moeilijke situatie ze zichzelf had gebracht en ze smeekte de Vos om haar te helpen.",
-        "start": 127,
-        "end": 150,
-        "label_": ""
-      },
-      {
-        "text": "Maar de Vos was al op weg naar het bos en riep:",
-        "start": 150,
-        "end": 163,
-        "label_": ""
-      },
-      {
-        "text": "“Indien je verstand maar zo groot was als je baard",
-        "start": 163,
-        "end": 174,
-        "label_": ""
-      },
-      {
-        "text": "dan was je wel voorzichtiger geweest.",
-        "start": 174,
-        "end": 181,
-        "label_": ""
-      },
-      {
-        "text": "Dan had je, voor je in de put sprong wel eerst gekeken of je er terug kon uit geraken”",
-        "start": 181,
-        "end": 202,
-        "label_": ""
-      }
+      "Een Vos was in een waterput gevallen en alhoewel de put niet erg diep was, kon de Vos er toch niet meer uit.",
+      "Toen hij daar al een lange tijd zat kwam er een dorstige Geit langs.",
+      "De Geit dacht dat de Vos in de put was gesprongen om te drinken en ze vroeg of het water lekker was.",
+      "De slimme Vos antwoordde:",
+      "“Het lekkerste water van het hele land!",
+      "Spring maar beneden en proef",
+      "er zelf van.",
+      "Er is meer dan genoeg water voor ons beiden.”",
+      "De dorstige Geit sprong onmiddellijk in de waterput en begon te drinken.",
+      "De Vos sprong vlug op de rug van de Geit en klom zo uit de put.",
+      "De onnozele Geit zag nu in welke moeilijke situatie ze zichzelf had gebracht en ze smeekte de Vos om haar te helpen.",
+      "Maar de Vos was al op weg naar het bos en riep:",
+      "“Indien je verstand maar zo groot was als je baard",
+      "dan was je wel voorzichtiger geweest.",
+      "Dan had je, voor je in de put sprong wel eerst gekeken of je er terug kon uit geraken”"
     ],
     "tokens": [
       "Een",
