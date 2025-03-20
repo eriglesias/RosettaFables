@@ -53,12 +53,11 @@ Un lobo que vio a un cordero beber en un río quiso devorarlo con un pretexto ra
 ### English Version
 <fable_id>1</fable_id>
 <title>The Wolf and the Lamb</title>
-<language>en<language>
+<language>en</language>
 <source>Aesop Laura Gibbs</source>
 <version>1</version>
-<body>“A wolf once saw a lamb who had wandered away from the flock. He did not want to rush upon the lamb and seize him violently. Instead, he sought a reasonable complaint to justify his hatred. ‘You insulted me last year, when you were small’, said the wolf. The lamb replied, ‘How could I have insulted you last year? I’m not even a year old.’ The wolf continued, ‘Well, are you not cropping the grass of this field which belongs to me?’ The lamb said, ‘No, I haven’t eaten any grass; I have not even begun to graze.’ Finally the wolf exclaimed, ‘But didn’t you drink from the fountain which I drink from?’ The lamb answered, ‘It is my mother’s breast that gives me my drink.’ The wolf then seized the lamb and as he chewed he said, ‘You are not going to make this wolf go without his dinner, even if you are able to easily refute every one of my charges!”
-<body>
-<moral></moral>
+<body>“A wolf once saw a lamb who had wandered away from the flock. He did not want to rush upon the lamb and seize him violently. Instead, he sought a reasonable complaint to justify his hatred. ‘You insulted me last year, when you were small’, said the wolf. The lamb replied, ‘How could I have insulted you last year? I’m not even a year old.’ The wolf continued, ‘Well, are you not cropping the grass of this field which belongs to me?’ The lamb said, ‘No, I haven’t eaten any grass; I have not even begun to graze.’ Finally the wolf exclaimed, ‘But didn’t you drink from the fountain which I drink from?’ The lamb answered, ‘It is my mother’s breast that gives me my drink.’ The wolf then seized the lamb and as he chewed he said, ‘You are not going to make this wolf go without his dinner, even if you are able to easily refute every one of my charges!”</body>
+<moral type="implicit">This fable's moral is implicit in the narrative and concerns</moral>
 
 ## The Town Mouse and the Country Mouse
 ### Dutch Version
@@ -121,8 +120,7 @@ Een Stadsmuis ging op bezoek bij een familielid, welke in het veld woonde, en bl
 <source>Aesop Laura Gibbs</source>
 <version>1</version>
 <body>“A city mouse once happened to pay a visit to the house of a country mouse where he was served a humble meal of acorns. The city mouse finished his business in the country, and by means of insistent invitations he persuaded the country mouse to come pay him a visit. The city mouse then brought the country mouse into a room that was overflowing with food. As they were feasting on various delicacies, a butler opened the door. The city mouse quickly concealed himself in a familiar mouse-hole, but the poor country mouse was not acquainted with the house and frantically scurried around the floorboards, frightened out of his wits. When the butler had taken what he needed, he closed the door behind him. The city mouse then urged the country mouse to sit back down to dinner. The country mouse refused and said, ‘How could I possibly do that? Oh, how scared I am! Do you think that the man is going to come”
-“back?’ This was all that the terrified mouse was able to say. The city mouse insisted, ‘My dear fellow, you could never find such delicious food as this anywhere else in the world.’ ‘Acorns are enough for me,’ the country mouse maintained, ‘so long as I am secure in my freedom!”
-<body>
+“back?’ This was all that the terrified mouse was able to say. The city mouse insisted, ‘My dear fellow, you could never find such delicious food as this anywhere else in the world.’ ‘Acorns are enough for me,’ the country mouse maintained, ‘so long as I am secure in my freedom!”</body>
 <moral type="explicit">It is better to live in self-sufficient poverty than to be tormented by the worries of wealth.</moral>
 
 ## The Fox and the Grapes
@@ -171,11 +169,11 @@ pudo. Apartándose, se dijo a sí misma: «Están verdes».</body>
 ### English Version
 <fable_id>3</fable_id>
 <title>The Fox and the Grapes</title>
-<language>en<language>
+<language>en</language>
 <source>Aesop Laura Gibbs</source>
 <version>1</version>
 <body>Driven by hunger, a fox tried to reach some grapes hanging high on the vine. Although she leaped with all her strength, she couldn’t manage to reach the grapes. As she went away, the fox remarked, ‘Oh, you aren’t even ripe yet! I don’t need any sour grapes.
-<body>
+</body>
 <moral type="explicit">People who speak disparagingly of things that they cannot attain would do well to apply this instructive little story to their own lives.</moral>
 
 ## The Wolf and the Crane 
@@ -230,10 +228,10 @@ le reclamó la paga acordada. Él, respondiendo, dijo: «¡Eh tú!, ¿no te cont
 ### English Version
 <fable_id>4</fable_id>
 <title>The Wolf and the Crane</title>
-<language>en<language>
+<language>en</language>
 <source>Aesop Laura Gibbs</source>
 <version>1</version>
-<body>“A wolf swallowed a bone which got stuck in his throat. The pain was excruciating, so the wolf started looking for someone who could be induced to remove the accursed thing in exchange for a reward. The wolf asked each of the animals if they would help him, and finally the crane was convinced by the wolf’s solemn promises. Trusting her long beak to the wolf’s gaping maw, the crane carried out the dangerous cure. Yet when the crane demanded the promised reward, the wolf simply said, ‘You ungrateful creature! You extracted your head unharmed from my mouth and still you ask for a reward?”<body>
+<body>“A wolf swallowed a bone which got stuck in his throat. The pain was excruciating, so the wolf started looking for someone who could be induced to remove the accursed thing in exchange for a reward. The wolf asked each of the animals if they would help him, and finally the crane was convinced by the wolf’s solemn promises. Trusting her long beak to the wolf’s gaping maw, the crane carried out the dangerous cure. Yet when the crane demanded the promised reward, the wolf simply said, ‘You ungrateful creature! You extracted your head unharmed from my mouth and still you ask for a reward?”</body>
 <moral type="explicit">If you think a scoundrel will reward you for a job well done, you are making two mistakes: first, you are helping someone who doesn’t deserve it, and second, you will be lucky to escape unharmed.</moral>
 
 
@@ -286,12 +284,12 @@ le reclamó la paga acordada. Él, respondiendo, dijo: «¡Eh tú!, ¿no te cont
 ### English Version
 <fable_id>5</fable_id>
 <title>The Lion and the Mouse on His Mane</title>
-<language>en<language>
+<language>en</language>
 <source>Aesop Laura Gibbs</source>
 <version>1</version>
 <body>While a lion was sleeping, a mouse ran over his shaggy mane. This angered the lion and he leaped up from his den, all the hairs of his mane standing on end. A fox made fun of the fact that a lion, king of all the animals, had been startled by a mouse. The lion answered the fox, ‘You insolent creature! I was not afraid of the mouse “scratching me and running away; I was just worried that he might make a mess on my mane.’
-<body>
-<moral type="implicit">This fable's moral is implicit in the narrative and concerns [brief description of the implied message].</moral>
+</body>
+<moral type="implicit">This fable's moral is implicit in the narrative and concerns.</moral>
 
 ## The Lion and the Mosquito
 
@@ -414,10 +412,10 @@ ellas.</moral>
 ### English Version
 <fable_id>7</fable_id>
 <title>The Fox and the Goat in the Well </title>
-<language>en<language>
+<language>en</language>
 <source>Aesop Laura Gibbs</source>
 <version>1</version>
-<body>A fox had unwittingly fallen down a well and found herself trapped inside its high walls. Meanwhile, a thirsty goat had made his way to that same place and asked the fox whether the water was fresh and plentiful. The fox set about laying her trap. ‘Come down, my friend,’ said the fox. ‘The water is so good that I cannot get enough of it myself!’ The bearded billy-goat lowered himself into the well, whereupon that little vixen leaped up on his lofty horns and emerged from the hole, leaving the goat stuck inside the watery prison.<body>
+<body>A fox had unwittingly fallen down a well and found herself trapped inside its high walls. Meanwhile, a thirsty goat had made his way to that same place and asked the fox whether the water was fresh and plentiful. The fox set about laying her trap. ‘Come down, my friend,’ said the fox. ‘The water is so good that I cannot get enough of it myself!’ The bearded billy-goat lowered himself into the well, whereupon that little vixen leaped up on his lofty horns and emerged from the hole, leaving the goat stuck inside the watery prison.</body>
 <moral type="explicit">As soon as someone clever gets into trouble, he tries to find a way out at someone else’s expense.</moral>
 
 
