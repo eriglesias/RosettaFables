@@ -1,11 +1,10 @@
-from typing import Dict, Any, List, Optional
+from typing import Dict, Any
 from collections import Counter
 import json
 import re
 import logging
 from pathlib import Path
-from spacy.tokens import Doc, Span, Token
-import numpy as np
+from spacy.tokens import  Token
 from ..models.model_manager import get_model
 from ..preprocessing.text_processor import preprocess_fable
 
@@ -203,11 +202,6 @@ class FableAnalyzer:
                 print(f"\n🔍 ENGLISH PROCESSING DIAGNOSTICS:")
                 print(f"  - Using model: {nlp.meta.get('name', 'unknown')}")
                 print(f"  - Found {len(fables)} English fables")
-                
-                # Test model with simple sentence
-                test_text = "This is a test sentence."
-                test_doc = nlp(test_text)
-                print(f"  - Model test: {[(t.text, t.pos_) for t in test_doc]}")
                 
                 # Check first fable content 
                 if fables:
