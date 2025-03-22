@@ -6,7 +6,7 @@ import logging
 from pathlib import Path
 from spacy.tokens import  Token
 from ..models.model_manager import get_model
-from ..preprocessing.text_processor import preprocess_fable
+from ..preprocessing.processor import preprocess_fable
 
 class FableAnalyzer:
     """Analyze fables across different languages."""

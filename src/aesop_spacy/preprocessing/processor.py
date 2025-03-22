@@ -80,17 +80,41 @@ class FableProcessor:
     def _extract_sentences(self, doc) -> List[Dict[str, Any]]:
         """Extract sentences with their metadata."""
         sentences = []
-        for sent in doc.sents:
-            sentences.append({
-                'text': sent.text,
-                'start': sent.start,
-                'end': sent.end,
-                'root': {
-                    'text': sent.root.text,
-                    'pos': sent.root.pos_,
-                    'dep': sent.root.dep_
+
+        # Check if this is a spaCy doc or a Stanza doc
+        is_stanza = hasattr(doc, 'sentences') and not hasattr(doc, 'sents')
+
+        if is_stanza:
+            # Handle Stanza document
+            for sent in doc.sentences:
+                sentence_data = {
+                    'text': sent.text,
+                    'start': sent.tokens[0].id if sent.tokens else 0,
+                    'end': sent.tokens[-1].id if sent.tokens else 0,
                 }
-            })
+                sentences.append(sentence_data)
+        else:
+            # Handle spaCy document
+            for sent in doc.sents:
+                try:
+                    # Some spans might not have root attribute
+                    root_data = {
+                        'text': sent.root.text if hasattr(sent, 'root') else "",
+                        'pos': sent.root.pos_ if hasattr(sent, 'root') else "",
+                        'dep': sent.root.dep_ if hasattr(sent, 'root') else ""
+                    }
+                except AttributeError:
+                    # Fallback if there's any issue
+                    root_data = {'text': "", 'pos': "", 'dep': ""}
+
+                sentence_data = {
+                    'text': sent.text,
+                    'start': sent.start,
+                    'end': sent.end,
+                    'root': root_data
+                }
+                sentences.append(sentence_data)
+        
         return sentences
 
     def _process_moral(self, moral_text: str, nlp_model) -> Dict[str, Any]:

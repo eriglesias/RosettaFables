@@ -2,14 +2,14 @@
 from typing import Dict, List, Any, Optional
 from pathlib import Path
 import logging
-
-from ..io.loader import FableLoader
-from ..io.writer import OutputWriter
-from ..io.serializer import SpacySerializer
-from ..preprocessing.cleaner import TextCleaner
-from ..preprocessing.extractor import ContentExtractor
-from ..preprocessing.processor import FableProcessor
-from ..models.model_manager import get_model
+import json
+from aesop_spacy.io.loader import FableLoader
+from aesop_spacy.io.writer import OutputWriter
+from aesop_spacy.io.serializer import SpacySerializer
+from aesop_spacy.preprocessing.cleaner import TextCleaner
+from aesop_spacy.preprocessing.extractor import ContentExtractor
+from aesop_spacy.preprocessing.processor import FableProcessor
+from aesop_spacy.models.model_manager import get_model
 
 
 class FablePipeline:
@@ -88,9 +88,20 @@ class FablePipeline:
         if not model:
             self.logger.warning(f"Skipping {language} - no NLP model available")
             return
-            
-        self.logger.info(f"Using model {model.meta.get('name', 'unknown')} for {language}")
-        
+
+        # Get model info differently depending on model type
+        if hasattr(model, 'meta'):
+            # This is a spaCy model
+            model_name = model.meta.get('name', 'unknown')
+        elif hasattr(model, 'nlp'):
+            # This is likely a StanzaWrapper
+            model_name = f"StanzaWrapper({language})"
+        else:
+            # Fallback for any other model type
+            model_name = f"{type(model).__name__}"
+
+        self.logger.info(f"Using model {model_name} for {language}")
+     
         # Process each fable
         processed_fables = []
         for fable in fables:
@@ -213,13 +224,23 @@ class FablePipeline:
                 return {}
                 
             with open(processed_file, 'r', encoding='utf-8') as f:
-                fables = json.load(f)
+                data = json.load(f)
+                
+                # Ensure data is in the expected format
+                if not isinstance(data, list):
+                    self.logger.warning(f"Data for {language} is not in expected list format")
+                    return {}
+                
+                fables = data
                 
             # Count POS tags
             pos_counts = {}
             total_tokens = 0
             
             for fable in fables:
+                if not isinstance(fable, dict):
+                    continue
+                    
                 for token, pos in fable.get('pos_tags', []):
                     pos_counts[pos] = pos_counts.get(pos, 0) + 1
                     total_tokens += 1
@@ -263,7 +284,14 @@ class FablePipeline:
                 return {}
                 
             with open(processed_file, 'r', encoding='utf-8') as f:
-                fables = json.load(f)
+                data = json.load(f)
+                
+                # Ensure data is in the expected format
+                if not isinstance(data, list):
+                    self.logger.warning(f"Data for {language} is not in expected list format")
+                    return {}
+                
+                fables = data
                 
             # Count entity types
             entity_counts = {}
@@ -271,7 +299,16 @@ class FablePipeline:
             total_entities = 0
             
             for fable in fables:
-                for entity, entity_type, *_ in fable.get('entities', []):
+                if not isinstance(fable, dict):
+                    continue
+                    
+                for entity_data in fable.get('entities', []):
+                    # Make sure entity data has at least two elements
+                    if not isinstance(entity_data, list) or len(entity_data) < 2:
+                        continue
+                        
+                    entity, entity_type = entity_data[0], entity_data[1]
+                    
                     entity_counts[entity_type] = entity_counts.get(entity_type, 0) + 1
                     
                     # Store examples for each entity type (up to 5)
@@ -330,8 +367,13 @@ class FablePipeline:
                 
             try:
                 with open(processed_file, 'r', encoding='utf-8') as f:
-                    fables = json.load(f)
-                    fables_by_language[lang] = fables
+                    data = json.load(f)
+                    
+                    # Check if the loaded data is a list (as expected)
+                    if isinstance(data, list):
+                        fables_by_language[lang] = data
+                    else:
+                        self.logger.warning(f"Skipping {lang} - data is not in the expected list format")
             except Exception as e:
                 self.logger.error(f"Error loading processed data for {lang}: {e}")
         
@@ -339,14 +381,19 @@ class FablePipeline:
         fable_ids_by_language = {}
         
         for lang, fables in fables_by_language.items():
-            fable_ids = [fable.get('id') for fable in fables if fable.get('id')]
+            # Make sure each fable is a dictionary with an 'id' key
+            fable_ids = []
+            for fable in fables:
+                if isinstance(fable, dict) and fable.get('id'):
+                    fable_ids.append(fable.get('id'))
+            
             fable_ids_by_language[lang] = set(fable_ids)
         
         # Find IDs that appear in at least 2 languages
         if not fable_ids_by_language:
             return []
             
-        all_ids = set().union(*fable_ids_by_language.values())
+        all_ids = set().union(*fable_ids_by_language.values()) if fable_ids_by_language else set()
         common_ids = [fable_id for fable_id in all_ids 
                      if sum(1 for lang_ids in fable_ids_by_language.values() 
                            if fable_id in lang_ids) >= 2]
@@ -362,7 +409,7 @@ class FablePipeline:
             languages: List of language codes to check
             
         Returns:
-            Comparison data dictionary
+            Comparison data dictionary or None if not found in multiple languages
         """
         comparison = {
             'fable_id': fable_id,
@@ -385,10 +432,20 @@ class FablePipeline:
                 
             try:
                 with open(processed_file, 'r', encoding='utf-8') as f:
-                    fables = json.load(f)
+                    data = json.load(f)
+                    
+                    # Ensure data is in the expected format
+                    if not isinstance(data, list):
+                        self.logger.warning(f"Data for {lang} is not in expected list format - skipping comparison")
+                        continue
+                    
+                    fables = data
                     
                 # Find the specific fable
                 for fable in fables:
+                    if not isinstance(fable, dict):
+                        continue
+                        
                     if fable.get('id') == fable_id:
                         # Add language to the list
                         comparison['languages'].append(lang)
@@ -401,8 +458,10 @@ class FablePipeline:
                         
                         # Calculate POS distribution
                         pos_counts = {}
-                        for _, pos in fable.get('pos_tags', []):
-                            pos_counts[pos] = pos_counts.get(pos, 0) + 1
+                        for token_data in fable.get('pos_tags', []):
+                            if isinstance(token_data, list) and len(token_data) >= 2:
+                                _, pos = token_data[0], token_data[1]
+                                pos_counts[pos] = pos_counts.get(pos, 0) + 1
                             
                         total_tokens = sum(pos_counts.values())
                         if total_tokens > 0:
@@ -412,12 +471,14 @@ class FablePipeline:
                             }
                         
                         # Check moral
-                        has_moral = bool(fable.get('moral', {}).get('text', ''))
-                        comparison['has_moral'][lang] = has_moral
-                        
-                        if has_moral:
-                            moral_text = fable.get('moral', {}).get('text', '')
-                            comparison['moral_length'][lang] = len(moral_text.split())
+                        moral = fable.get('moral', {})
+                        if isinstance(moral, dict):
+                            has_moral = bool(moral.get('text', ''))
+                            comparison['has_moral'][lang] = has_moral
+                            
+                            if has_moral:
+                                moral_text = moral.get('text', '')
+                                comparison['moral_length'][lang] = len(moral_text.split())
                         
                         break
                     

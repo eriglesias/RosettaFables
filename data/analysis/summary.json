@@ -1,0 +1,25 @@
+{
+  "languages_processed": [
+    "test",
+    "grc",
+    "nl",
+    "de",
+    "en",
+    "",
+    "es"
+  ],
+  "fables_compared": [
+    "7",
+    "5",
+    "4",
+    "1",
+    "3",
+    "6",
+    "2"
+  ],
+  "analysis_types": [
+    "pos_distribution",
+    "entity_distribution",
+    "fable_comparisons"
+  ]
+}

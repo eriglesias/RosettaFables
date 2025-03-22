@@ -1,0 +1,75 @@
+{
+  "PERSON": {
+    "percentage": 21.052631578947366,
+    "count": 40,
+    "examples": [
+      "Wolf",
+      "Muis",
+      "Razend",
+      "Vos"
+    ]
+  },
+  "ORG": {
+    "percentage": 18.421052631578945,
+    "count": 35,
+    "examples": [
+      "Stadsmuis",
+      "Stadsmuis at"
+    ]
+  },
+  "FAC": {
+    "percentage": 18.421052631578945,
+    "count": 35,
+    "examples": [
+      "Veldmuis"
+    ]
+  },
+  "WORK_OF_ART": {
+    "percentage": 15.789473684210526,
+    "count": 30,
+    "examples": [
+      "Alstublieft",
+      "De wolf",
+      "De Kraanvogel",
+      "Jij hebt je beloning al lang",
+      "Het lekkerste water"
+    ]
+  },
+  "LOC": {
+    "percentage": 13.157894736842104,
+    "count": 25,
+    "examples": [
+      "Kraanvogel",
+      "Leeuw"
+    ]
+  },
+  "DATE": {
+    "percentage": 5.263157894736842,
+    "count": 10,
+    "examples": [
+      "volgende morgen",
+      "Enkele dagen"
+    ]
+  },
+  "ORDINAL": {
+    "percentage": 2.631578947368421,
+    "count": 5,
+    "examples": [
+      "eerste"
+    ]
+  },
+  "EVENT": {
+    "percentage": 2.631578947368421,
+    "count": 5,
+    "examples": [
+      "Kraanvogel"
+    ]
+  },
+  "CARDINAL": {
+    "percentage": 2.631578947368421,
+    "count": 5,
+    "examples": [
+      "één"
+    ]
+  }
+}

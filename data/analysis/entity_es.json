@@ -1,0 +1,39 @@
+{
+  "MISC": {
+    "percentage": 72.46376811594203,
+    "count": 100,
+    "examples": [
+      "Por eso, aunque el lobo",
+      "El cordero",
+      "Sin embargo, el cordero",
+      "El de la casa",
+      "Después"
+    ]
+  },
+  "PER": {
+    "percentage": 17.391304347826086,
+    "count": 24,
+    "examples": [
+      "Aquél",
+      "Él",
+      "pides",
+      "Yo",
+      "Atendió"
+    ]
+  },
+  "LOC": {
+    "percentage": 6.521739130434782,
+    "count": 9,
+    "examples": [
+      "Apartándose",
+      "Después"
+    ]
+  },
+  "ORG": {
+    "percentage": 3.6231884057971016,
+    "count": 5,
+    "examples": [
+      "Ocurrió"
+    ]
+  }
+}

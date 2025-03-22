@@ -1,0 +1,9 @@
+{
+  "languages_processed": [],
+  "fables_compared": [],
+  "analysis_types": [
+    "pos_distribution",
+    "entity_distribution",
+    "fable_comparisons"
+  ]
+}
