@@ -1,7 +1,7 @@
 {
   "MISC": {
-    "percentage": 72.46376811594203,
-    "count": 100,
+    "percentage": 72.44897959183673,
+    "count": 142,
     "examples": [
       "Por eso, aunque el lobo",
       "El cordero",
@@ -11,8 +11,8 @@
     ]
   },
   "PER": {
-    "percentage": 17.391304347826086,
-    "count": 24,
+    "percentage": 17.346938775510203,
+    "count": 34,
     "examples": [
       "Aquél",
       "Él",
@@ -22,16 +22,16 @@
     ]
   },
   "LOC": {
-    "percentage": 6.521739130434782,
-    "count": 9,
+    "percentage": 6.63265306122449,
+    "count": 13,
     "examples": [
       "Apartándose",
       "Después"
     ]
   },
   "ORG": {
-    "percentage": 3.6231884057971016,
-    "count": 5,
+    "percentage": 3.571428571428571,
+    "count": 7,
     "examples": [
       "Ocurrió"
     ]

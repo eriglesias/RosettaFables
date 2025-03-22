@@ -15,14 +15,14 @@
     "es": "El ratón de campo y el de ciudad"
   },
   "token_counts": {
-    "grc": 0,
+    "grc": 200,
     "nl": 392,
     "de": 416,
     "en": 0,
     "es": 238
   },
   "sentence_counts": {
-    "grc": 0,
+    "grc": 14,
     "nl": 21,
     "de": 18,
     "en": 0,
@@ -36,6 +36,20 @@
     "es": 8
   },
   "pos_distribution": {
+    "grc": {
+      "NOUN": 21.0,
+      "ADJ": 11.5,
+      "DET": 14.000000000000002,
+      "ADP": 5.0,
+      "VERB": 15.5,
+      "PUNCT": 12.5,
+      "ADV": 9.0,
+      "CCONJ": 5.0,
+      "PRON": 4.5,
+      "AUX": 0.5,
+      "SCONJ": 1.0,
+      "PART": 0.5
+    },
     "nl": {
       "DET": 13.520408163265307,
       "PROPN": 3.826530612244898,

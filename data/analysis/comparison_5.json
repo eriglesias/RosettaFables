@@ -17,7 +17,7 @@
     "es": "El león y el ratón agradecido"
   },
   "token_counts": {
-    "grc": 0,
+    "grc": 100,
     "nl": 288,
     "de": 142,
     "en": 0,
@@ -25,7 +25,7 @@
     "es": 150
   },
   "sentence_counts": {
-    "grc": 0,
+    "grc": 8,
     "nl": 20,
     "de": 8,
     "en": 0,
@@ -41,6 +41,20 @@
     "es": 2
   },
   "pos_distribution": {
+    "grc": {
+      "NOUN": 14.000000000000002,
+      "ADJ": 11.0,
+      "DET": 8.0,
+      "VERB": 26.0,
+      "PUNCT": 9.0,
+      "ADV": 9.0,
+      "CCONJ": 6.0,
+      "PRON": 6.0,
+      "AUX": 2.0,
+      "PART": 4.0,
+      "SCONJ": 3.0,
+      "ADP": 2.0
+    },
     "nl": {
       "DET": 11.805555555555555,
       "NOUN": 12.5,
