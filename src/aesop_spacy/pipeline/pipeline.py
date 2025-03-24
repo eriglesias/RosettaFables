@@ -1,5 +1,5 @@
 # src/aesop_spacy/pipeline/pipeline.py
-from typing import Dict, List, Any, Optional
+from typing import Dict, List, Any
 from pathlib import Path
 import logging
 import json
@@ -14,7 +14,7 @@ from aesop_spacy.models.model_manager import get_model
 
 class FablePipeline:
     """Coordinates the entire fable processing pipeline."""
-    
+
     def __init__(self, data_dir: Path, output_dir: Path):
         """
         Initialize the pipeline with directories and components.
@@ -26,14 +26,14 @@ class FablePipeline:
         self.data_dir = data_dir
         self.output_dir = output_dir
         self.logger = logging.getLogger(__name__)
-        
+  
         # Configure logging if not already configured
         if not self.logger.handlers:
             logging.basicConfig(
                 level=logging.INFO,
                 format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
             )
-        
+
         # Initialize components
         self.loader = FableLoader(data_dir)
         self.cleaner = TextCleaner()
@@ -41,34 +41,88 @@ class FablePipeline:
         self.processor = FableProcessor()
         self.serializer = SpacySerializer()
         self.writer = OutputWriter(output_dir)
-        
+   
         self.logger.info("Fable pipeline initialized")
-        self.logger.info(f"Data directory: {data_dir}")
-        self.logger.info(f"Output directory: {output_dir}")
-    
-    def run(self):
+        self.logger.info("Data directory: %s", data_dir)
+        self.logger.info("Output directory: %s", output_dir)
+
+    def run(self, use_processed=True):
         """
         Run the complete pipeline from loading to processing to analysis.
+        
+        Args:
+            use_processed: If True, load from processed files when available.
+                          If False, always process from raw files.
         
         Returns:
             True if the pipeline completed successfully
         """
-        self.logger.info("Starting fable processing pipeline")
-        
-        # Load all fables from both JSON and markdown files
+        self.logger.info("Starting fable processing pipeline (use_processed=%s)", use_processed)
+
+        if use_processed and self._processed_files_exist():
+            # Load directly from processed files
+            fables_by_language = self._load_from_processed()
+ 
+            # Log what we found
+            total_fables = sum(len(fables) for fables in fables_by_language.values())
+            self.logger.info("Loaded %d fables from processed files across %d languages", 
+                             total_fables, len(fables_by_language))
+
+            return True
+
+        # Regular processing from raw files
+        self.logger.info("Processing from raw files")
         fables_by_language = self.loader.load_all()
-        
+
         # Log what we found
         total_fables = sum(len(fables) for fables in fables_by_language.values())
-        self.logger.info(f"Loaded {total_fables} fables across {len(fables_by_language)} languages")
-        
+        self.logger.info("Loaded %d fables across %d languages", 
+                        total_fables, len(fables_by_language))
+
         # Process each language
         for lang, fables in fables_by_language.items():
             self._process_language(lang, fables)
-            
+
         self.logger.info("Pipeline execution completed successfully")
         return True
-    
+
+    def _processed_files_exist(self):
+        """Check if processed files already exist."""
+        processed_dir = self.output_dir / "processed"
+
+        if not processed_dir.exists():
+            return False
+
+        json_files = list(processed_dir.glob("fables_*.json"))
+        return len(json_files) > 0
+
+    def _load_from_processed(self):
+        """Load fables directly from processed JSON files."""
+        fables_by_language = {}
+        processed_dir = self.output_dir / "processed"
+
+        for json_file in processed_dir.glob("fables_*.json"):
+            lang = json_file.stem.split('_')[1]  # Extract language from filename
+
+            try:
+                with open(json_file, 'r', encoding='utf-8') as f:
+                    fables = json.load(f)
+
+                if isinstance(fables, list):
+                    fables_by_language[lang] = fables
+                    self.logger.info("Loaded %d processed fables for %s", len(fables), lang)
+                else:
+                    self.logger.warning("Skipping %s - data not in expected list format", json_file)
+
+            except FileNotFoundError:
+                self.logger.error("File not found: %s", json_file)
+            except json.JSONDecodeError as e:
+                self.logger.error("Invalid JSON in %s: %s", json_file.name, e)
+            except IOError as e:
+                self.logger.error("I/O error reading %s: %s", json_file.name, e)
+
+        return fables_by_language
+
     def _process_language(self, language: str, fables: List[Dict[str, Any]]):
         """
         Process all fables for a specific language.
@@ -78,15 +132,15 @@ class FablePipeline:
             fables: List of fables for this language
         """
         if not fables:
-            self.logger.warning(f"No fables to process for language: {language}")
+            self.logger.warning("No fables to process for language: %s", language)
             return
-            
-        self.logger.info(f"Processing {len(fables)} fables for language: {language}")
-        
+
+        self.logger.info("Processing %d fables for language: %s", len(fables), language)
+
         # Get the appropriate model
         model = get_model(language)
         if not model:
-            self.logger.warning(f"Skipping {language} - no NLP model available")
+            self.logger.warning("Skipping %s - no NLP model available", language)
             return
 
         # Get model info differently depending on model type
@@ -100,37 +154,47 @@ class FablePipeline:
             # Fallback for any other model type
             model_name = f"{type(model).__name__}"
 
-        self.logger.info(f"Using model {model_name} for {language}")
-     
+        self.logger.info("Using model %s for %s", model_name, language)
+
         # Process each fable
         processed_fables = []
         for fable in fables:
             try:
                 # Clean the text
                 cleaned_fable = self.cleaner.clean_fable(fable)
-                self.logger.debug(f"Cleaned fable: {cleaned_fable.get('title', 'Untitled')}")
-                
+                self.logger.debug("Cleaned fable: %s", cleaned_fable.get('title', 'Untitled'))
+
                 # Extract content
                 extracted_fable = self.extractor.extract_content(cleaned_fable)
-                self.logger.debug(f"Extracted content for: {extracted_fable.get('title', 'Untitled')}")
-                
+                self.logger.debug("Extracted content for: %s", extracted_fable.get('title', 'Untitled'))
+
                 # Process with NLP
                 processed_fable = self.processor.process_fable(extracted_fable, model)
-                self.logger.debug(f"Processed fable: {processed_fable.get('title', 'Untitled')}")
-                
+                self.logger.debug("Processed fable: %s", processed_fable.get('title', 'Untitled'))
+
                 # Serialize spaCy objects to JSON-compatible format
                 serialized_fable = self.serializer.serialize(processed_fable)
-                
+
                 processed_fables.append(serialized_fable)
-                
+
+            except ValueError as e:
+                self.logger.error("Value error processing fable %s: %s", 
+                                 fable.get('title', 'Untitled'), e)
+            except KeyError as e:
+                self.logger.error("Missing key in fable %s: %s", 
+                                 fable.get('title', 'Untitled'), e)
+            except RuntimeError as e:
+                self.logger.error("Runtime error processing fable %s: %s", 
+                                 fable.get('title', 'Untitled'), e)
             except Exception as e:
-                self.logger.error(f"Error processing fable {fable.get('title', 'Untitled')}: {e}", exc_info=True)
-        
+                self.logger.error("Unexpected error processing fable %s: %s (%s)", 
+                                 fable.get('title', 'Untitled'), e, type(e).__name__)
+
         # Save results
         if processed_fables:
             output_file = self.writer.save_processed_fables(processed_fables, language)
-            self.logger.info(f"Saved {len(processed_fables)} processed fables to {output_file}")
-        
+            self.logger.info("Saved %d processed fables to %s", len(processed_fables), output_file)
+
     def analyze(self, analysis_types=None):
         """
         Run analyses on processed fables.
@@ -142,7 +206,7 @@ class FablePipeline:
             Dictionary of analysis results
         """
         self.logger.info("Starting fable analysis")
-        
+
         # Default to all analysis types if none specified
         if analysis_types is None:
             analysis_types = ['pos', 'entity', 'moral', 'comparison']
@@ -156,7 +220,7 @@ class FablePipeline:
             lang = lang_file.stem.split('_')[1]
             languages.append(lang)
         
-        self.logger.info(f"Found processed data for languages: {', '.join(languages)}")
+        self.logger.info("Found processed data for languages: %s", ', '.join(languages))
         
         # POS tag distribution analysis
         if 'pos' in analysis_types:
@@ -192,7 +256,7 @@ class FablePipeline:
             
             # Identify fable IDs that appear in multiple languages
             fable_ids = self._find_common_fable_ids(languages)
-            self.logger.info(f"Found {len(fable_ids)} fables with content in multiple languages")
+            self.logger.info("Found %d fables with content in multiple languages", len(fable_ids))
             
             for fable_id in fable_ids:
                 comparison = self._compare_fable(fable_id, languages)
@@ -220,7 +284,7 @@ class FablePipeline:
             processed_file = self.output_dir / "processed" / f"fables_{language}.json"
             
             if not processed_file.exists():
-                self.logger.warning(f"No processed data for {language}")
+                self.logger.warning("No processed data for %s", language)
                 return {}
                 
             with open(processed_file, 'r', encoding='utf-8') as f:
@@ -228,7 +292,7 @@ class FablePipeline:
                 
                 # Ensure data is in the expected format
                 if not isinstance(data, list):
-                    self.logger.warning(f"Data for {language} is not in expected list format")
+                    self.logger.warning("Data for %s is not in expected list format", language)
                     return {}
                 
                 fables = data
@@ -241,7 +305,7 @@ class FablePipeline:
                 if not isinstance(fable, dict):
                     continue
                     
-                for token, pos in fable.get('pos_tags', []):
+                for _, pos in fable.get('pos_tags', []):
                     pos_counts[pos] = pos_counts.get(pos, 0) + 1
                     total_tokens += 1
             
@@ -255,14 +319,22 @@ class FablePipeline:
                                               key=lambda x: x[1], 
                                               reverse=True))
                 
-                self.logger.info(f"Analyzed POS distribution for {language}: {len(pos_distribution)} tags from {total_tokens} tokens")
+                self.logger.info("Analyzed POS distribution for %s: %d tags from %d tokens", 
+                                language, len(pos_distribution), total_tokens)
                 return pos_distribution
             else:
-                self.logger.warning(f"No tokens found for {language}")
+                self.logger.warning("No tokens found for %s", language)
                 return {}
                 
+        except FileNotFoundError:
+            self.logger.error("File not found for %s", language)
+            return {}
+        except json.JSONDecodeError as e:
+            self.logger.error("Invalid JSON for %s: %s", language, e)
+            return {}
         except Exception as e:
-            self.logger.error(f"Error analyzing POS distribution for {language}: {e}")
+            self.logger.error("Error analyzing POS distribution for %s: %s (%s)", 
+                             language, e, type(e).__name__)
             return {}
     
     def _analyze_entity_distribution(self, language: str) -> Dict[str, Dict[str, float]]:
@@ -280,7 +352,7 @@ class FablePipeline:
             processed_file = self.output_dir / "processed" / f"fables_{language}.json"
             
             if not processed_file.exists():
-                self.logger.warning(f"No processed data for {language}")
+                self.logger.warning("No processed data for %s", language)
                 return {}
                 
             with open(processed_file, 'r', encoding='utf-8') as f:
@@ -288,7 +360,7 @@ class FablePipeline:
                 
                 # Ensure data is in the expected format
                 if not isinstance(data, list):
-                    self.logger.warning(f"Data for {language} is not in expected list format")
+                    self.logger.warning("Data for %s is not in expected list format", language)
                     return {}
                 
                 fables = data
@@ -336,14 +408,22 @@ class FablePipeline:
                                                 key=lambda x: x[1]['count'], 
                                                 reverse=True))
                 
-                self.logger.info(f"Analyzed entity distribution for {language}: {len(entity_distribution)} types from {total_entities} entities")
+                self.logger.info("Analyzed entity distribution for %s: %d types from %d entities", 
+                                language, len(entity_distribution), total_entities)
                 return entity_distribution
             else:
-                self.logger.warning(f"No entities found for {language}")
+                self.logger.warning("No entities found for %s", language)
                 return {}
                 
+        except FileNotFoundError:
+            self.logger.error("File not found for %s", language)
+            return {}
+        except json.JSONDecodeError as e:
+            self.logger.error("Invalid JSON for %s: %s", language, e)
+            return {}
         except Exception as e:
-            self.logger.error(f"Error analyzing entity distribution for {language}: {e}")
+            self.logger.error("Error analyzing entity distribution for %s: %s (%s)", 
+                             language, e, type(e).__name__)
             return {}
     
     def _find_common_fable_ids(self, languages: List[str]) -> List[str]:
@@ -373,9 +453,14 @@ class FablePipeline:
                     if isinstance(data, list):
                         fables_by_language[lang] = data
                     else:
-                        self.logger.warning(f"Skipping {lang} - data is not in the expected list format")
+                        self.logger.warning("Skipping %s - data not in expected list format", lang)
+            except FileNotFoundError:
+                self.logger.error("File not found: %s", processed_file)
+            except json.JSONDecodeError as e:
+                self.logger.error("Invalid JSON in %s: %s", processed_file.name, e)
             except Exception as e:
-                self.logger.error(f"Error loading processed data for {lang}: {e}")
+                self.logger.error("Error loading processed data for %s: %s (%s)", 
+                                 lang, e, type(e).__name__)
         
         # Find IDs that appear in multiple languages
         fable_ids_by_language = {}
@@ -436,7 +521,7 @@ class FablePipeline:
                     
                     # Ensure data is in the expected format
                     if not isinstance(data, list):
-                        self.logger.warning(f"Data for {lang} is not in expected list format - skipping comparison")
+                        self.logger.warning("Data for %s is not in expected list format - skipping comparison", lang)
                         continue
                     
                     fables = data
@@ -458,9 +543,9 @@ class FablePipeline:
                         
                         # Calculate POS distribution
                         pos_counts = {}
-                        for token_data in fable.get('pos_tags', []):
-                            if isinstance(token_data, list) and len(token_data) >= 2:
-                                _, pos = token_data[0], token_data[1]
+                        for token_pos in fable.get('pos_tags', []):
+                            if isinstance(token_pos, list) and len(token_pos) >= 2:
+                                pos = token_pos[1]  # Only use the POS tag, ignore token
                                 pos_counts[pos] = pos_counts.get(pos, 0) + 1
                             
                         total_tokens = sum(pos_counts.values())
@@ -482,13 +567,19 @@ class FablePipeline:
                         
                         break
                     
+            except FileNotFoundError:
+                self.logger.error("File not found: %s", processed_file)
+            except json.JSONDecodeError as e:
+                self.logger.error("Invalid JSON in %s: %s", processed_file.name, e)
             except Exception as e:
-                self.logger.error(f"Error comparing fable {fable_id} for {lang}: {e}")
+                self.logger.error("Error comparing fable %s for %s: %s (%s)", 
+                                 fable_id, lang, e, type(e).__name__)
         
         # Only return if we found the fable in at least 2 languages
         if len(comparison['languages']) >= 2:
-            self.logger.info(f"Compared fable {fable_id} across {len(comparison['languages'])} languages")
+            self.logger.info("Compared fable %s across %d languages", 
+                            fable_id, len(comparison['languages']))
             return comparison
         else:
-            self.logger.warning(f"Fable {fable_id} not found in multiple languages")
+            self.logger.warning("Fable %s not found in multiple languages", fable_id)
             return None
