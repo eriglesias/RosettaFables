@@ -56,8 +56,8 @@ Un lobo que vio a un cordero beber en un río quiso devorarlo con un pretexto ra
 <language>en</language>
 <source>Aesop Laura Gibbs</source>
 <version>1</version>
-<body>“A wolf once saw a lamb who had wandered away from the flock. He did not want to rush upon the lamb and seize him violently. Instead, he sought a reasonable complaint to justify his hatred. ‘You insulted me last year, when you were small’, said the wolf. The lamb replied, ‘How could I have insulted you last year? I’m not even a year old.’ The wolf continued, ‘Well, are you not cropping the grass of this field which belongs to me?’ The lamb said, ‘No, I haven’t eaten any grass; I have not even begun to graze.’ Finally the wolf exclaimed, ‘But didn’t you drink from the fountain which I drink from?’ The lamb answered, ‘It is my mother’s breast that gives me my drink.’ The wolf then seized the lamb and as he chewed he said, ‘You are not going to make this wolf go without his dinner, even if you are able to easily refute every one of my charges!”</body>
-<moral type="implicit">This fable's moral is implicit in the narrative and concerns</moral>
+<body>A wolf once saw a lamb who had wandered away from the flock. He did not want to rush upon the lamb and seize him violently. Instead, he sought a reasonable complaint to justify his hatred. ‘You insulted me last year, when you were small’, said the wolf. The lamb replied, ‘How could I have insulted you last year? I’m not even a year old.’ The wolf continued, ‘Well, are you not cropping the grass of this field which belongs to me?’ The lamb said, ‘No, I haven’t eaten any grass; I have not even begun to graze.’ Finally the wolf exclaimed, ‘But didn’t you drink from the fountain which I drink from?’ The lamb answered, ‘It is my mother’s breast that gives me my drink.’ The wolf then seized the lamb and as he chewed he said, ‘You are not going to make this wolf go without his dinner, even if you are able to easily refute every one of my charges!</body>
+<moral type="implicit">This fable's moral is implicit in the narrative</moral>
 
 ## The Town Mouse and the Country Mouse
 ### Dutch Version

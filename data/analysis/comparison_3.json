@@ -5,7 +5,6 @@
     "nl",
     "de",
     "en",
-    "",
     "es"
   ],
   "title": {
@@ -13,31 +12,27 @@
     "nl": "De Vos en de druiven",
     "de": "Der Fuchs und die Trauben",
     "en": "The Fox and the Grapes",
-    "": "The Fox and the Grapes",
     "es": "La zorra y las uvas"
   },
   "token_counts": {
     "grc": 63,
     "nl": 189,
     "de": 268,
-    "en": 0,
-    "": 0,
+    "en": 61,
     "es": 36
   },
   "sentence_counts": {
     "grc": 5,
     "nl": 13,
     "de": 17,
-    "en": 0,
-    "": 0,
+    "en": 4,
     "es": 2
   },
   "entity_counts": {
     "grc": 0,
     "nl": 1,
     "de": 0,
-    "en": 0,
-    "": 0,
+    "en": 1,
     "es": 2
   },
   "pos_distribution": {
@@ -80,6 +75,20 @@
       "SCONJ": 0.3731343283582089,
       "PROPN": 0.3731343283582089
     },
+    "en": {
+      "VERB": 16.39344262295082,
+      "ADP": 4.918032786885246,
+      "NOUN": 13.114754098360656,
+      "PUNCT": 16.39344262295082,
+      "DET": 11.475409836065573,
+      "PART": 8.19672131147541,
+      "ADV": 6.557377049180328,
+      "SCONJ": 3.278688524590164,
+      "PRON": 9.836065573770492,
+      "AUX": 4.918032786885246,
+      "INTJ": 1.639344262295082,
+      "ADJ": 3.278688524590164
+    },
     "es": {
       "DET": 11.11111111111111,
       "NOUN": 11.11111111111111,
@@ -98,14 +107,12 @@
     "nl": true,
     "de": false,
     "en": true,
-    "": true,
     "es": true
   },
   "moral_length": {
     "grc": 15,
     "nl": 13,
     "en": 23,
-    "": 23,
     "es": 16
   }
 }

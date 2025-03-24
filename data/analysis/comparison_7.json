@@ -4,36 +4,31 @@
     "grc",
     "nl",
     "de",
-    "en",
-    ""
+    "en"
   ],
   "title": {
     "grc": "Ἀλώπηξ καὶ τράγος",
     "nl": "De Vos en de Geit",
     "de": "Der Fuchs und der Bock",
-    "en": "The Fox and the Goat in the Well",
-    "": "The Fox and the Goat in the Well"
+    "en": "The Fox and the Goat in the Well"
   },
   "token_counts": {
     "grc": 195,
     "nl": 202,
     "de": 222,
-    "en": 0,
-    "": 0
+    "en": 115
   },
   "sentence_counts": {
     "grc": 11,
     "nl": 15,
     "de": 10,
-    "en": 0,
-    "": 0
+    "en": 6
   },
   "entity_counts": {
     "grc": 0,
     "nl": 3,
     "de": 0,
-    "en": 0,
-    "": 0
+    "en": 4
   },
   "pos_distribution": {
     "grc": {
@@ -79,19 +74,32 @@
       "PRON": 8.558558558558559,
       "PART": 0.9009009009009009,
       "AUX": 2.2522522522522523
+    },
+    "en": {
+      "DET": 13.043478260869565,
+      "NOUN": 15.65217391304348,
+      "AUX": 4.3478260869565215,
+      "ADV": 2.608695652173913,
+      "VERB": 13.043478260869565,
+      "ADP": 9.565217391304348,
+      "CCONJ": 3.4782608695652173,
+      "PRON": 8.695652173913043,
+      "ADJ": 9.565217391304348,
+      "PUNCT": 13.91304347826087,
+      "PROPN": 2.608695652173913,
+      "SCONJ": 2.608695652173913,
+      "PART": 0.8695652173913043
     }
   },
   "has_moral": {
     "grc": false,
     "nl": true,
     "de": true,
-    "en": true,
-    "": true
+    "en": true
   },
   "moral_length": {
     "nl": 8,
     "de": 9,
-    "en": 19,
-    "": 19
+    "en": 19
   }
 }

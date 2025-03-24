@@ -5,7 +5,6 @@
     "nl",
     "de",
     "en",
-    "",
     "es"
   ],
   "title": {
@@ -13,31 +12,27 @@
     "nl": "De Wolf en de Kraanvogel",
     "de": "Der Wolf und der Kranich",
     "en": "The Wolf and the Crane",
-    "": "The Wolf and the Crane",
     "es": "El lobo y la garza"
   },
   "token_counts": {
     "grc": 63,
     "nl": 194,
     "de": 106,
-    "en": 0,
-    "": 0,
+    "en": 121,
     "es": 98
   },
   "sentence_counts": {
     "grc": 5,
     "nl": 16,
     "de": 7,
-    "en": 0,
-    "": 0,
+    "en": 6,
     "es": 4
   },
   "entity_counts": {
     "grc": 0,
     "nl": 8,
     "de": 0,
-    "en": 0,
-    "": 0,
+    "en": 3,
     "es": 3
   },
   "pos_distribution": {
@@ -80,6 +75,21 @@
       "ADJ": 1.8867924528301887,
       "PART": 0.9433962264150944
     },
+    "en": {
+      "PUNCT": 11.570247933884298,
+      "DET": 14.049586776859504,
+      "NOUN": 19.834710743801654,
+      "VERB": 14.049586776859504,
+      "PRON": 10.743801652892563,
+      "AUX": 4.958677685950414,
+      "ADP": 8.264462809917356,
+      "ADJ": 5.785123966942149,
+      "SCONJ": 2.479338842975207,
+      "PART": 2.479338842975207,
+      "CCONJ": 2.479338842975207,
+      "ADV": 2.479338842975207,
+      "PROPN": 0.8264462809917356
+    },
     "es": {
       "DET": 13.26530612244898,
       "NOUN": 16.3265306122449,
@@ -100,7 +110,6 @@
     "nl": true,
     "de": true,
     "en": true,
-    "": true,
     "es": true
   },
   "moral_length": {
@@ -108,7 +117,6 @@
     "nl": 8,
     "de": 20,
     "en": 36,
-    "": 36,
     "es": 21
   }
 }

@@ -5,7 +5,6 @@
     "nl",
     "de",
     "en",
-    "",
     "es"
   ],
   "title": {
@@ -13,31 +12,27 @@
     "nl": "De Wolf en het Geitje",
     "de": "Das Lamm und der Wolf",
     "en": "The Wolf and the Lamb",
-    "": "The Wolf and the Lamb",
     "es": "El lobo y el cordero"
   },
   "token_counts": {
     "grc": 91,
     "nl": 381,
     "de": 244,
-    "en": 0,
-    "": 0,
+    "en": 204,
     "es": 128
   },
   "sentence_counts": {
     "grc": 5,
     "nl": 25,
     "de": 15,
-    "en": 0,
-    "": 0,
+    "en": 11,
     "es": 4
   },
   "entity_counts": {
     "grc": 0,
     "nl": 2,
     "de": 0,
-    "en": 0,
-    "": 0,
+    "en": 3,
     "es": 3
   },
   "pos_distribution": {
@@ -83,6 +78,22 @@
       "SCONJ": 2.0491803278688523,
       "INTJ": 0.4098360655737705
     },
+    "en": {
+      "DET": 9.803921568627452,
+      "NOUN": 13.23529411764706,
+      "ADV": 4.901960784313726,
+      "VERB": 15.196078431372548,
+      "PRON": 14.705882352941178,
+      "AUX": 5.88235294117647,
+      "ADP": 3.431372549019608,
+      "PUNCT": 18.137254901960784,
+      "PART": 6.372549019607843,
+      "SCONJ": 2.450980392156863,
+      "CCONJ": 1.4705882352941175,
+      "ADJ": 2.941176470588235,
+      "INTJ": 0.9803921568627451,
+      "NUM": 0.49019607843137253
+    },
     "es": {
       "DET": 12.5,
       "NOUN": 17.96875,
@@ -101,14 +112,14 @@
     "grc": true,
     "nl": true,
     "de": true,
-    "en": false,
-    "": false,
+    "en": true,
     "es": true
   },
   "moral_length": {
     "grc": 15,
     "nl": 9,
     "de": 23,
+    "en": 8,
     "es": 18
   }
 }

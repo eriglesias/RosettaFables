@@ -1,21 +1,19 @@
 {
   "languages_processed": [
-    "test",
     "grc",
     "nl",
     "de",
     "en",
-    "",
     "es"
   ],
   "fables_compared": [
-    "2",
+    "5",
     "6",
     "1",
     "7",
-    "4",
-    "5",
-    "3"
+    "3",
+    "2",
+    "4"
   ],
   "analysis_types": [
     "pos_distribution",
