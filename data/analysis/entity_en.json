@@ -1,14 +1,14 @@
 {
   "ORG": {
     "percentage": 45.45454545454545,
-    "count": 60,
+    "count": 80,
     "examples": [
       "fox"
     ]
   },
   "DATE": {
     "percentage": 27.27272727272727,
-    "count": 36,
+    "count": 48,
     "examples": [
       "last year",
       "a year old"
@@ -16,7 +16,7 @@
   },
   "PERSON": {
     "percentage": 27.27272727272727,
-    "count": 36,
+    "count": 48,
     "examples": [
       "wolf"
     ]

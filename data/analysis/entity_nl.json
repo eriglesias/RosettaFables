@@ -1,7 +1,7 @@
 {
   "PERSON": {
     "percentage": 21.052631578947366,
-    "count": 56,
+    "count": 72,
     "examples": [
       "Wolf",
       "Muis",
@@ -11,7 +11,7 @@
   },
   "ORG": {
     "percentage": 18.421052631578945,
-    "count": 49,
+    "count": 63,
     "examples": [
       "Stadsmuis",
       "Stadsmuis at"
@@ -19,14 +19,14 @@
   },
   "FAC": {
     "percentage": 18.421052631578945,
-    "count": 49,
+    "count": 63,
     "examples": [
       "Veldmuis"
     ]
   },
   "WORK_OF_ART": {
     "percentage": 15.789473684210526,
-    "count": 42,
+    "count": 54,
     "examples": [
       "Alstublieft",
       "De wolf",
@@ -37,7 +37,7 @@
   },
   "LOC": {
     "percentage": 13.157894736842104,
-    "count": 35,
+    "count": 45,
     "examples": [
       "Kraanvogel",
       "Leeuw"
@@ -45,7 +45,7 @@
   },
   "DATE": {
     "percentage": 5.263157894736842,
-    "count": 14,
+    "count": 18,
     "examples": [
       "volgende morgen",
       "Enkele dagen"
@@ -53,21 +53,21 @@
   },
   "ORDINAL": {
     "percentage": 2.631578947368421,
-    "count": 7,
+    "count": 9,
     "examples": [
       "eerste"
     ]
   },
   "EVENT": {
     "percentage": 2.631578947368421,
-    "count": 7,
+    "count": 9,
     "examples": [
       "Kraanvogel"
     ]
   },
   "CARDINAL": {
     "percentage": 2.631578947368421,
-    "count": 7,
+    "count": 9,
     "examples": [
       "één"
     ]
