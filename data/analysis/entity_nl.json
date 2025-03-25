@@ -1,7 +1,34 @@
 {
+  "WORK_OF_ART": {
+    "percentage": 21.428571428571427,
+    "count": 9,
+    "examples": [
+      "Alstublieft",
+      "De wolf",
+      "De Kraanvogel",
+      "Jij hebt je beloning al lang",
+      "Alstublieft, laat mij gaan"
+    ]
+  },
+  "ORG": {
+    "percentage": 19.047619047619047,
+    "count": 8,
+    "examples": [
+      "Stadsmuis",
+      "Stadsmuis at",
+      "Spaar mij!"
+    ]
+  },
+  "FAC": {
+    "percentage": 16.666666666666664,
+    "count": 7,
+    "examples": [
+      "Veldmuis"
+    ]
+  },
   "PERSON": {
-    "percentage": 21.052631578947366,
-    "count": 96,
+    "percentage": 16.666666666666664,
+    "count": 7,
     "examples": [
       "Wolf",
       "Muis",
@@ -9,65 +36,46 @@
       "Vos"
     ]
   },
-  "ORG": {
-    "percentage": 18.421052631578945,
-    "count": 84,
-    "examples": [
-      "Stadsmuis",
-      "Stadsmuis at"
-    ]
-  },
-  "FAC": {
-    "percentage": 18.421052631578945,
-    "count": 84,
-    "examples": [
-      "Veldmuis"
-    ]
-  },
-  "WORK_OF_ART": {
-    "percentage": 15.789473684210526,
-    "count": 72,
-    "examples": [
-      "Alstublieft",
-      "De wolf",
-      "De Kraanvogel",
-      "Jij hebt je beloning al lang",
-      "Het lekkerste water"
-    ]
-  },
   "LOC": {
-    "percentage": 13.157894736842104,
-    "count": 60,
+    "percentage": 11.904761904761903,
+    "count": 5,
     "examples": [
       "Kraanvogel",
       "Leeuw"
     ]
   },
   "DATE": {
-    "percentage": 5.263157894736842,
-    "count": 24,
+    "percentage": 4.761904761904762,
+    "count": 2,
     "examples": [
       "volgende morgen",
       "Enkele dagen"
     ]
   },
   "ORDINAL": {
-    "percentage": 2.631578947368421,
-    "count": 12,
+    "percentage": 2.380952380952381,
+    "count": 1,
     "examples": [
       "eerste"
     ]
   },
   "EVENT": {
-    "percentage": 2.631578947368421,
-    "count": 12,
+    "percentage": 2.380952380952381,
+    "count": 1,
     "examples": [
       "Kraanvogel"
     ]
   },
+  "GPE": {
+    "percentage": 2.380952380952381,
+    "count": 1,
+    "examples": [
+      "arme Muis"
+    ]
+  },
   "CARDINAL": {
-    "percentage": 2.631578947368421,
-    "count": 12,
+    "percentage": 2.380952380952381,
+    "count": 1,
     "examples": [
       "één"
     ]

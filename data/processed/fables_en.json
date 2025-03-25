@@ -4,18 +4,18 @@
     "language": "en",
     "source": "Aesop Laura Gibbs",
     "version": "1",
-    "body": "A wolf once saw a lamb who had wandered away from the flock. He did not want to rush upon the lamb and seize him violently. Instead, he sought a reasonable complaint to justify his hatred. ‘You insulted me last year, when you were small’, said the wolf. The lamb replied, ‘How could I have insulted you last year? I’m not even a year old. ’ The wolf continued, ‘Well, are you not cropping the grass of this field which belongs to me? ’ The lamb said, ‘No, I haven’t eaten any grass; I have not even begun to graze. ’ Finally the wolf exclaimed, ‘But didn’t you drink from the fountain which I drink from? ’ The lamb answered, ‘It is my mother’s breast that gives me my drink. ’ The wolf then seized the lamb and as he chewed he said, ‘You are not going to make this wolf go without his dinner, even if you are able to easily refute every one of my charges!",
+    "body": "A wolf once saw a lamb who had wandered away from the flock. He did not want to rush upon the lamb and seize him violently. Instead, he sought a reasonable complaint to justify his hatred.'You insulted me last year, when you were small', said the wolf. The lamb replied,'How could I have insulted you last year? I'm not even a year old.' The wolf continued,'Well, are you not cropping the grass of this field which belongs to me?' The lamb said,'No, I haven't eaten any grass; I have not even begun to graze.' Finally the wolf exclaimed,'But didn't you drink from the fountain which I drink from?' The lamb answered,'It is my mother's breast that gives me my drink.' The wolf then seized the lamb and as he chewed he said,'You are not going to make this wolf go without his dinner, even if you are able to easily refute every one of my charges!",
     "id": "1",
     "moral": {
       "type": "implicit",
       "text": "This fable's moral is implicit in the narrative"
     },
-    "extracted_body": "A wolf once saw a lamb who had wandered away from the flock. He did not want to rush upon the lamb and seize him violently. Instead, he sought a reasonable complaint to justify his hatred. ‘You insulted me last year, when you were small’, said the wolf. The lamb replied, ‘How could I have insulted you last year? I’m not even a year old. ’ The wolf continued, ‘Well, are you not cropping the grass of this field which belongs to me? ’ The lamb said, ‘No, I haven’t eaten any grass; I have not even begun to graze. ’ Finally the wolf exclaimed, ‘But didn’t you drink from the fountain which I drink from? ’ The lamb answered, ‘It is my mother’s breast that gives me my drink. ’ The wolf then seized the lamb and as he chewed he said, ‘You are not going to make this wolf go without his dinner, even if you are able to easily refute every one of my charges!",
+    "extracted_body": "A wolf once saw a lamb who had wandered away from the flock. He did not want to rush upon the lamb and seize him violently. Instead, he sought a reasonable complaint to justify his hatred.'You insulted me last year, when you were small', said the wolf. The lamb replied,'How could I have insulted you last year? I'm not even a year old.' The wolf continued,'Well, are you not cropping the grass of this field which belongs to me?' The lamb said,'No, I haven't eaten any grass; I have not even begun to graze.' Finally the wolf exclaimed,'But didn't you drink from the fountain which I drink from?' The lamb answered,'It is my mother's breast that gives me my drink.' The wolf then seized the lamb and as he chewed he said,'You are not going to make this wolf go without his dinner, even if you are able to easily refute every one of my charges!",
     "extracted_moral": {
       "text": "This fable's moral is implicit in the narrative",
       "type": "implicit"
     },
-    "doc_length": 204,
+    "doc_length": 185,
     "tokens": [
       [
         "A",
@@ -178,660 +178,584 @@
         39
       ],
       [
-        "‘",
+        "'You",
         40
       ],
       [
-        "You",
+        "insulted",
         41
       ],
       [
-        "insulted",
+        "me",
         42
       ],
       [
-        "me",
+        "last",
         43
       ],
       [
-        "last",
+        "year",
         44
       ],
       [
-        "year",
+        ",",
         45
       ],
       [
-        ",",
+        "when",
         46
       ],
       [
-        "when",
+        "you",
         47
       ],
       [
-        "you",
+        "were",
         48
       ],
       [
-        "were",
+        "small",
         49
       ],
       [
-        "small",
+        "'",
         50
       ],
       [
-        "’",
+        ",",
         51
       ],
       [
-        ",",
+        "said",
         52
       ],
       [
-        "said",
+        "the",
         53
       ],
       [
-        "the",
+        "wolf",
         54
       ],
       [
-        "wolf",
+        ".",
         55
       ],
       [
-        ".",
+        "The",
         56
       ],
       [
-        "The",
+        "lamb",
         57
       ],
       [
-        "lamb",
+        "replied,'How",
         58
       ],
       [
-        "replied",
+        "could",
         59
       ],
       [
-        ",",
+        "I",
         60
       ],
       [
-        "‘",
+        "have",
         61
       ],
       [
-        "How",
+        "insulted",
         62
       ],
       [
-        "could",
+        "you",
         63
       ],
       [
-        "I",
+        "last",
         64
       ],
       [
-        "have",
+        "year",
         65
       ],
       [
-        "insulted",
+        "?",
         66
       ],
       [
-        "you",
+        "I",
         67
       ],
       [
-        "last",
+        "'m",
         68
       ],
       [
-        "year",
+        "not",
         69
       ],
       [
-        "?",
+        "even",
         70
       ],
       [
-        "I",
+        "a",
         71
       ],
       [
-        "’m",
+        "year",
         72
       ],
       [
-        "not",
+        "old",
         73
       ],
       [
-        "even",
+        ".",
         74
       ],
       [
-        "a",
+        "'",
         75
       ],
       [
-        "year",
+        "The",
         76
       ],
       [
-        "old",
+        "wolf",
         77
       ],
       [
-        ".",
+        "continued,'Well",
         78
       ],
       [
-        "’",
+        ",",
         79
       ],
       [
-        "The",
+        "are",
         80
       ],
       [
-        "wolf",
+        "you",
         81
       ],
       [
-        "continued",
+        "not",
         82
       ],
       [
-        ",",
+        "cropping",
         83
       ],
       [
-        "‘",
+        "the",
         84
       ],
       [
-        "Well",
+        "grass",
         85
       ],
       [
-        ",",
+        "of",
         86
       ],
       [
-        "are",
+        "this",
         87
       ],
       [
-        "you",
+        "field",
         88
       ],
       [
-        "not",
+        "which",
         89
       ],
       [
-        "cropping",
+        "belongs",
         90
       ],
       [
-        "the",
+        "to",
         91
       ],
       [
-        "grass",
+        "me",
         92
       ],
       [
-        "of",
+        "?",
         93
       ],
       [
-        "this",
+        "'",
         94
       ],
       [
-        "field",
+        "The",
         95
       ],
       [
-        "which",
+        "lamb",
         96
       ],
       [
-        "belongs",
+        "said,'No",
         97
       ],
       [
-        "to",
+        ",",
         98
       ],
       [
-        "me",
+        "I",
         99
       ],
       [
-        "?",
+        "have",
         100
       ],
       [
-        "’",
+        "n't",
         101
       ],
       [
-        "The",
+        "eaten",
         102
       ],
       [
-        "lamb",
+        "any",
         103
       ],
       [
-        "said",
+        "grass",
         104
       ],
       [
-        ",",
+        ";",
         105
       ],
       [
-        "‘",
+        "I",
         106
       ],
       [
-        "No",
+        "have",
         107
       ],
       [
-        ",",
+        "not",
         108
       ],
       [
-        "I",
+        "even",
         109
       ],
       [
-        "have",
+        "begun",
         110
       ],
       [
-        "n’t",
+        "to",
         111
       ],
       [
-        "eaten",
+        "graze",
         112
       ],
       [
-        "any",
+        ".",
         113
       ],
       [
-        "grass",
+        "'",
         114
       ],
       [
-        ";",
+        "Finally",
         115
       ],
       [
-        "I",
+        "the",
         116
       ],
       [
-        "have",
+        "wolf",
         117
       ],
       [
-        "not",
+        "exclaimed,'But",
         118
       ],
       [
-        "even",
+        "did",
         119
       ],
       [
-        "begun",
+        "n't",
         120
       ],
       [
-        "to",
+        "you",
         121
       ],
       [
-        "graze",
+        "drink",
         122
       ],
       [
-        ".",
+        "from",
         123
       ],
       [
-        "’",
+        "the",
         124
       ],
       [
-        "Finally",
+        "fountain",
         125
       ],
       [
-        "the",
+        "which",
         126
       ],
       [
-        "wolf",
+        "I",
         127
       ],
       [
-        "exclaimed",
+        "drink",
         128
       ],
       [
-        ",",
+        "from",
         129
       ],
       [
-        "‘",
+        "?",
         130
       ],
       [
-        "But",
+        "'",
         131
       ],
       [
-        "did",
+        "The",
         132
       ],
       [
-        "n’t",
+        "lamb",
         133
       ],
       [
-        "you",
+        "answered,'It",
         134
       ],
       [
-        "drink",
+        "is",
         135
       ],
       [
-        "from",
+        "my",
         136
       ],
       [
-        "the",
+        "mother",
         137
       ],
       [
-        "fountain",
+        "'s",
         138
       ],
       [
-        "which",
+        "breast",
         139
       ],
       [
-        "I",
+        "that",
         140
       ],
       [
-        "drink",
+        "gives",
         141
       ],
       [
-        "from",
+        "me",
         142
       ],
       [
-        "?",
+        "my",
         143
       ],
       [
-        "’",
+        "drink",
         144
       ],
       [
-        "The",
+        ".",
         145
       ],
       [
-        "lamb",
+        "'",
         146
       ],
       [
-        "answered",
+        "The",
         147
       ],
       [
-        ",",
+        "wolf",
         148
       ],
       [
-        "‘",
+        "then",
         149
       ],
       [
-        "It",
+        "seized",
         150
       ],
       [
-        "is",
+        "the",
         151
       ],
       [
-        "my",
+        "lamb",
         152
       ],
       [
-        "mother",
+        "and",
         153
       ],
       [
-        "’s",
+        "as",
         154
       ],
       [
-        "breast",
+        "he",
         155
       ],
       [
-        "that",
+        "chewed",
         156
       ],
       [
-        "gives",
+        "he",
         157
       ],
       [
-        "me",
+        "said,'You",
         158
       ],
       [
-        "my",
+        "are",
         159
       ],
       [
-        "drink",
+        "not",
         160
       ],
       [
-        ".",
+        "going",
         161
       ],
       [
-        "’",
+        "to",
         162
       ],
       [
-        "The",
+        "make",
         163
       ],
       [
-        "wolf",
+        "this",
         164
       ],
       [
-        "then",
+        "wolf",
         165
       ],
       [
-        "seized",
+        "go",
         166
       ],
       [
-        "the",
+        "without",
         167
       ],
       [
-        "lamb",
+        "his",
         168
       ],
       [
-        "and",
+        "dinner",
         169
       ],
       [
-        "as",
+        ",",
         170
       ],
       [
-        "he",
+        "even",
         171
       ],
       [
-        "chewed",
+        "if",
         172
       ],
       [
-        "he",
+        "you",
         173
       ],
       [
-        "said",
+        "are",
         174
       ],
       [
-        ",",
+        "able",
         175
       ],
       [
-        "‘",
+        "to",
         176
       ],
       [
-        "You",
+        "easily",
         177
       ],
       [
-        "are",
+        "refute",
         178
       ],
       [
-        "not",
+        "every",
         179
       ],
       [
-        "going",
+        "one",
         180
       ],
       [
-        "to",
+        "of",
         181
       ],
       [
-        "make",
+        "my",
         182
       ],
       [
-        "this",
+        "charges",
         183
       ],
       [
-        "wolf",
-        184
-      ],
-      [
-        "go",
-        185
-      ],
-      [
-        "without",
-        186
-      ],
-      [
-        "his",
-        187
-      ],
-      [
-        "dinner",
-        188
-      ],
-      [
-        ",",
-        189
-      ],
-      [
-        "even",
-        190
-      ],
-      [
-        "if",
-        191
-      ],
-      [
-        "you",
-        192
-      ],
-      [
-        "are",
-        193
-      ],
-      [
-        "able",
-        194
-      ],
-      [
-        "to",
-        195
-      ],
-      [
-        "easily",
-        196
-      ],
-      [
-        "refute",
-        197
-      ],
-      [
-        "every",
-        198
-      ],
-      [
-        "one",
-        199
-      ],
-      [
-        "of",
-        200
-      ],
-      [
-        "my",
-        201
-      ],
-      [
-        "charges",
-        202
-      ],
-      [
         "!",
-        203
+        184
       ]
     ],
     "lemmas": [
@@ -996,239 +920,239 @@
         39
       ],
       [
-        "'",
+        "'You",
         40
       ],
       [
-        "you",
+        "insult",
         41
       ],
       [
-        "insult",
+        "I",
         42
       ],
       [
-        "I",
+        "last",
         43
       ],
       [
-        "last",
+        "year",
         44
       ],
       [
-        "year",
+        ",",
         45
       ],
       [
-        ",",
+        "when",
         46
       ],
       [
-        "when",
+        "you",
         47
       ],
       [
-        "you",
+        "be",
         48
       ],
       [
-        "be",
+        "small",
         49
       ],
       [
-        "small",
+        "'",
         50
       ],
       [
-        "'",
+        ",",
         51
       ],
       [
-        ",",
+        "say",
         52
       ],
       [
-        "say",
+        "the",
         53
       ],
       [
-        "the",
+        "wolf",
         54
       ],
       [
-        "wolf",
+        ".",
         55
       ],
       [
-        ".",
+        "the",
         56
       ],
       [
-        "the",
+        "lamb",
         57
       ],
       [
-        "lamb",
+        "replied,'how",
         58
       ],
       [
-        "reply",
+        "could",
         59
       ],
       [
-        ",",
+        "I",
         60
       ],
       [
-        "'",
+        "have",
         61
       ],
       [
-        "how",
+        "insult",
         62
       ],
       [
-        "could",
+        "you",
         63
       ],
       [
-        "I",
+        "last",
         64
       ],
       [
-        "have",
+        "year",
         65
       ],
       [
-        "insult",
+        "?",
         66
       ],
       [
-        "you",
+        "I",
         67
       ],
       [
-        "last",
+        "be",
         68
       ],
       [
-        "year",
+        "not",
         69
       ],
       [
-        "?",
+        "even",
         70
       ],
       [
-        "I",
+        "a",
         71
       ],
       [
-        "’m",
+        "year",
         72
       ],
       [
-        "not",
+        "old",
         73
       ],
       [
-        "even",
+        ".",
         74
       ],
       [
-        "a",
+        "'",
         75
       ],
       [
-        "year",
+        "the",
         76
       ],
       [
-        "old",
+        "wolf",
         77
       ],
       [
-        ".",
+        "continued,'well",
         78
       ],
       [
-        "'",
+        ",",
         79
       ],
       [
-        "the",
+        "be",
         80
       ],
       [
-        "wolf",
+        "you",
         81
       ],
       [
-        "continue",
+        "not",
         82
       ],
       [
-        ",",
+        "crop",
         83
       ],
       [
-        "'",
+        "the",
         84
       ],
       [
-        "well",
+        "grass",
         85
       ],
       [
-        ",",
+        "of",
         86
       ],
       [
-        "be",
+        "this",
         87
       ],
       [
-        "you",
+        "field",
         88
       ],
       [
-        "not",
+        "which",
         89
       ],
       [
-        "crop",
+        "belong",
         90
       ],
       [
-        "the",
+        "to",
         91
       ],
       [
-        "grass",
+        "I",
         92
       ],
       [
-        "of",
+        "?",
         93
       ],
       [
-        "this",
+        "'",
         94
       ],
       [
-        "field",
+        "the",
         95
       ],
       [
-        "which",
+        "lamb",
         96
       ],
       [
-        "belong",
+        "said,'No",
         97
       ],
       [
-        "to",
+        ",",
         98
       ],
       [
@@ -1236,420 +1160,344 @@
         99
       ],
       [
-        "?",
+        "have",
         100
       ],
       [
-        "'",
+        "not",
         101
       ],
       [
-        "the",
+        "eat",
         102
       ],
       [
-        "lamb",
+        "any",
         103
       ],
       [
-        "say",
+        "grass",
         104
       ],
       [
-        ",",
+        ";",
         105
       ],
       [
-        "'",
+        "I",
         106
       ],
       [
-        "no",
+        "have",
         107
       ],
       [
-        ",",
+        "not",
         108
       ],
       [
-        "I",
+        "even",
         109
       ],
       [
-        "have",
+        "begin",
         110
       ],
       [
-        "not",
+        "to",
         111
       ],
       [
-        "eat",
+        "graze",
         112
       ],
       [
-        "any",
+        ".",
         113
       ],
       [
-        "grass",
+        "'",
         114
       ],
       [
-        ";",
+        "finally",
         115
       ],
       [
-        "I",
+        "the",
         116
       ],
       [
-        "have",
+        "wolf",
         117
       ],
       [
-        "not",
+        "exclaimed,'but",
         118
       ],
       [
-        "even",
+        "do",
         119
       ],
       [
-        "begin",
+        "not",
         120
       ],
       [
-        "to",
+        "you",
         121
       ],
       [
-        "graze",
+        "drink",
         122
       ],
       [
-        ".",
+        "from",
         123
       ],
       [
-        "'",
+        "the",
         124
       ],
       [
-        "finally",
+        "fountain",
         125
       ],
       [
-        "the",
+        "which",
         126
       ],
       [
-        "wolf",
+        "I",
         127
       ],
       [
-        "exclaim",
+        "drink",
         128
       ],
       [
-        ",",
+        "from",
         129
       ],
       [
-        "'",
+        "?",
         130
       ],
       [
-        "but",
+        "'",
         131
       ],
       [
-        "do",
+        "the",
         132
       ],
       [
-        "not",
+        "lamb",
         133
       ],
       [
-        "you",
+        "answered,'It",
         134
       ],
       [
-        "drink",
+        "be",
         135
       ],
       [
-        "from",
+        "my",
         136
       ],
       [
-        "the",
+        "mother",
         137
       ],
       [
-        "fountain",
+        "'s",
         138
       ],
       [
-        "which",
+        "breast",
         139
       ],
       [
-        "I",
+        "that",
         140
       ],
       [
-        "drink",
+        "give",
         141
       ],
       [
-        "from",
+        "I",
         142
       ],
       [
-        "?",
+        "my",
         143
       ],
       [
-        "'",
+        "drink",
         144
       ],
       [
-        "the",
+        ".",
         145
       ],
       [
-        "lamb",
+        "'",
         146
       ],
       [
-        "answer",
+        "the",
         147
       ],
       [
-        ",",
+        "wolf",
         148
       ],
       [
-        "'",
+        "then",
         149
       ],
       [
-        "it",
+        "seize",
         150
       ],
       [
-        "be",
+        "the",
         151
       ],
       [
-        "my",
+        "lamb",
         152
       ],
       [
-        "mother",
+        "and",
         153
       ],
       [
-        "’s",
+        "as",
         154
       ],
       [
-        "breast",
+        "he",
         155
       ],
       [
-        "that",
+        "chew",
         156
       ],
       [
-        "give",
+        "he",
         157
       ],
       [
-        "I",
+        "said,'you",
         158
       ],
       [
-        "my",
+        "be",
         159
       ],
       [
-        "drink",
+        "not",
         160
       ],
       [
-        ".",
+        "go",
         161
       ],
       [
-        "'",
+        "to",
         162
       ],
       [
-        "the",
+        "make",
         163
       ],
       [
-        "wolf",
+        "this",
         164
       ],
       [
-        "then",
+        "wolf",
         165
       ],
       [
-        "seize",
+        "go",
         166
       ],
       [
-        "the",
+        "without",
         167
       ],
       [
-        "lamb",
+        "his",
         168
       ],
       [
-        "and",
+        "dinner",
         169
       ],
       [
-        "as",
+        ",",
         170
       ],
       [
-        "he",
+        "even",
         171
       ],
       [
-        "chew",
+        "if",
         172
       ],
       [
-        "he",
+        "you",
         173
       ],
       [
-        "say",
+        "be",
         174
       ],
       [
-        ",",
+        "able",
         175
       ],
       [
-        "'",
+        "to",
         176
       ],
       [
-        "you",
+        "easily",
         177
       ],
       [
-        "be",
+        "refute",
         178
       ],
       [
-        "not",
+        "every",
         179
       ],
       [
-        "go",
+        "one",
         180
       ],
       [
-        "to",
+        "of",
         181
       ],
       [
-        "make",
+        "my",
         182
       ],
       [
-        "this",
+        "charge",
         183
       ],
       [
-        "wolf",
-        184
-      ],
-      [
-        "go",
-        185
-      ],
-      [
-        "without",
-        186
-      ],
-      [
-        "his",
-        187
-      ],
-      [
-        "dinner",
-        188
-      ],
-      [
-        ",",
-        189
-      ],
-      [
-        "even",
-        190
-      ],
-      [
-        "if",
-        191
-      ],
-      [
-        "you",
-        192
-      ],
-      [
-        "be",
-        193
-      ],
-      [
-        "able",
-        194
-      ],
-      [
-        "to",
-        195
-      ],
-      [
-        "easily",
-        196
-      ],
-      [
-        "refute",
-        197
-      ],
-      [
-        "every",
-        198
-      ],
-      [
-        "one",
-        199
-      ],
-      [
-        "of",
-        200
-      ],
-      [
-        "my",
-        201
-      ],
-      [
-        "charge",
-        202
-      ],
-      [
         "!",
-        203
+        184
       ]
     ],
     "pos_tags": [
@@ -1814,12 +1662,8 @@
         "PUNCT"
       ],
       [
-        "‘",
-        "PUNCT"
-      ],
-      [
-        "You",
-        "PRON"
+        "'You",
+        "PROPN"
       ],
       [
         "insulted",
@@ -1858,7 +1702,7 @@
         "ADJ"
       ],
       [
-        "’",
+        "'",
         "PUNCT"
       ],
       [
@@ -1887,23 +1731,11 @@
       ],
       [
         "lamb",
-        "NOUN"
+        "PROPN"
       ],
       [
-        "replied",
-        "VERB"
-      ],
-      [
-        ",",
-        "PUNCT"
-      ],
-      [
-        "‘",
-        "PUNCT"
-      ],
-      [
-        "How",
-        "SCONJ"
+        "replied,'How",
+        "X"
       ],
       [
         "could",
@@ -1942,8 +1774,8 @@
         "PRON"
       ],
       [
-        "’m",
-        "VERB"
+        "'m",
+        "AUX"
       ],
       [
         "not",
@@ -1970,7 +1802,7 @@
         "PUNCT"
       ],
       [
-        "’",
+        "'",
         "PUNCT"
       ],
       [
@@ -1982,20 +1814,8 @@
         "NOUN"
       ],
       [
-        "continued",
-        "VERB"
-      ],
-      [
-        ",",
-        "PUNCT"
-      ],
-      [
-        "‘",
-        "PUNCT"
-      ],
-      [
-        "Well",
-        "INTJ"
+        "continued,'Well",
+        "NOUN"
       ],
       [
         ",",
@@ -2058,7 +1878,7 @@
         "PUNCT"
       ],
       [
-        "’",
+        "'",
         "PUNCT"
       ],
       [
@@ -2067,23 +1887,11 @@
       ],
       [
         "lamb",
-        "NOUN"
+        "PROPN"
       ],
       [
-        "said",
-        "VERB"
-      ],
-      [
-        ",",
-        "PUNCT"
-      ],
-      [
-        "‘",
-        "PUNCT"
-      ],
-      [
-        "No",
-        "INTJ"
+        "said,'No",
+        "PROPN"
       ],
       [
         ",",
@@ -2098,7 +1906,7 @@
         "AUX"
       ],
       [
-        "n’t",
+        "n't",
         "PART"
       ],
       [
@@ -2150,7 +1958,7 @@
         "PUNCT"
       ],
       [
-        "’",
+        "'",
         "PUNCT"
       ],
       [
@@ -2166,19 +1974,7 @@
         "NOUN"
       ],
       [
-        "exclaimed",
-        "VERB"
-      ],
-      [
-        ",",
-        "PUNCT"
-      ],
-      [
-        "‘",
-        "PUNCT"
-      ],
-      [
-        "But",
+        "exclaimed,'But",
         "CCONJ"
       ],
       [
@@ -2186,7 +1982,7 @@
         "AUX"
       ],
       [
-        "n’t",
+        "n't",
         "PART"
       ],
       [
@@ -2230,7 +2026,7 @@
         "PUNCT"
       ],
       [
-        "’",
+        "'",
         "PUNCT"
       ],
       [
@@ -2239,23 +2035,11 @@
       ],
       [
         "lamb",
-        "NOUN"
+        "PROPN"
       ],
       [
-        "answered",
-        "VERB"
-      ],
-      [
-        ",",
-        "PUNCT"
-      ],
-      [
-        "‘",
-        "PUNCT"
-      ],
-      [
-        "It",
-        "PRON"
+        "answered,'It",
+        "PROPN"
       ],
       [
         "is",
@@ -2270,7 +2054,7 @@
         "NOUN"
       ],
       [
-        "’s",
+        "'s",
         "PART"
       ],
       [
@@ -2302,7 +2086,7 @@
         "PUNCT"
       ],
       [
-        "’",
+        "'",
         "PUNCT"
       ],
       [
@@ -2350,19 +2134,7 @@
         "PRON"
       ],
       [
-        "said",
-        "VERB"
-      ],
-      [
-        ",",
-        "PUNCT"
-      ],
-      [
-        "‘",
-        "PUNCT"
-      ],
-      [
-        "You",
+        "said,'You",
         "PRON"
       ],
       [
@@ -2474,20 +2246,32 @@
       [
         "last year",
         "DATE",
-        44,
-        46
+        43,
+        45
       ],
       [
         "last year",
         "DATE",
-        68,
-        70
+        64,
+        66
       ],
       [
         "a year old",
         "DATE",
-        75,
-        78
+        71,
+        74
+      ],
+      [
+        "said,'No",
+        "PERSON",
+        97,
+        98
+      ],
+      [
+        "The lamb answered,'It",
+        "ORG",
+        132,
+        135
       ]
     ],
     "sentences": [
@@ -2522,9 +2306,9 @@
         }
       },
       {
-        "text": "‘You insulted me last year, when you were small’, said the wolf.",
+        "text": "'You insulted me last year, when you were small', said the wolf.",
         "start": 40,
-        "end": 57,
+        "end": 56,
         "root": {
           "text": "said",
           "pos": "VERB",
@@ -2532,69 +2316,69 @@
         }
       },
       {
-        "text": "The lamb replied, ‘How could I have insulted you last year?",
-        "start": 57,
-        "end": 71,
+        "text": "The lamb replied,'How could I have insulted you last year?",
+        "start": 56,
+        "end": 67,
         "root": {
-          "text": "replied",
+          "text": "insulted",
           "pos": "VERB",
           "dep": "ROOT"
         }
       },
       {
-        "text": "I’m not even a year old. ’",
-        "start": 71,
-        "end": 80,
+        "text": "I'm not even a year old.'",
+        "start": 67,
+        "end": 76,
         "root": {
-          "text": "’m",
+          "text": "'m",
+          "pos": "AUX",
+          "dep": "ROOT"
+        }
+      },
+      {
+        "text": "The wolf continued,'Well, are you not cropping the grass of this field which belongs to me?'",
+        "start": 76,
+        "end": 95,
+        "root": {
+          "text": "cropping",
           "pos": "VERB",
           "dep": "ROOT"
         }
       },
       {
-        "text": "The wolf continued, ‘Well, are you not cropping the grass of this field which belongs to me? ’",
-        "start": 80,
-        "end": 102,
+        "text": "The lamb said,'No, I haven't eaten any grass; I have not even begun to graze.'",
+        "start": 95,
+        "end": 115,
         "root": {
-          "text": "continued",
+          "text": "begun",
           "pos": "VERB",
           "dep": "ROOT"
         }
       },
       {
-        "text": "The lamb said, ‘No, I haven’t eaten any grass; I have not even begun to graze. ’",
-        "start": 102,
-        "end": 125,
+        "text": "Finally the wolf exclaimed,'But didn't you drink from the fountain which I drink from?'",
+        "start": 115,
+        "end": 132,
         "root": {
-          "text": "said",
+          "text": "drink",
           "pos": "VERB",
           "dep": "ROOT"
         }
       },
       {
-        "text": "Finally the wolf exclaimed, ‘But didn’t you drink from the fountain which I drink from? ’",
-        "start": 125,
-        "end": 145,
+        "text": "The lamb answered,'It is my mother's breast that gives me my drink.'",
+        "start": 132,
+        "end": 147,
         "root": {
-          "text": "exclaimed",
-          "pos": "VERB",
+          "text": "is",
+          "pos": "AUX",
           "dep": "ROOT"
         }
       },
       {
-        "text": "The lamb answered, ‘It is my mother’s breast that gives me my drink. ’",
-        "start": 145,
-        "end": 163,
-        "root": {
-          "text": "answered",
-          "pos": "VERB",
-          "dep": "ROOT"
-        }
-      },
-      {
-        "text": "The wolf then seized the lamb and as he chewed he said, ‘You are not going to make this wolf go without his dinner, even if you are able to easily refute every one of my charges!",
-        "start": 163,
-        "end": 204,
+        "text": "The wolf then seized the lamb and as he chewed he said,'You are not going to make this wolf go without his dinner, even if you are able to easily refute every one of my charges!",
+        "start": 147,
+        "end": 185,
         "root": {
           "text": "seized",
           "pos": "VERB",
@@ -2677,21 +2461,21 @@
     "language": "en",
     "source": "Aesop Laura Gibbs",
     "version": "1",
-    "body": "“A city mouse once happened to pay a visit to the house of a country mouse where he was served a humble meal of acorns. The city mouse finished his business in the country, and by means of insistent invitations he persuaded the country mouse to come pay him a visit. The city mouse then brought the country mouse into a room that was overflowing with food. As they were feasting on various delicacies, a butler opened the door. The city mouse quickly concealed himself in a familiar mouse-hole, but the poor country mouse was not acquainted with the house and frantically scurried around the floorboards, frightened out of his wits. When the butler had taken what he needed, he closed the door behind him. The city mouse then urged the country mouse to sit back down to dinner. The country mouse refused and said, ‘How could I possibly do that? Oh, how scared I am! Do you think that the man is going to come” “back? ’ This was all that the terrified mouse was able to say. The city mouse insisted, ‘My dear fellow, you could never find such delicious food as this anywhere else in the world. ’ ‘Acorns are enough for me, ’ the country mouse maintained, ‘so long as I am secure in my freedom! ”",
+    "body": "'A city mouse once happened to pay a visit to the house of a country mouse where he was served a humble meal of acorns. The city mouse finished his business in the country, and by means of insistent invitations he persuaded the country mouse to come pay him a visit. The city mouse then brought the country mouse into a room that was overflowing with food. As they were feasting on various delicacies, a butler opened the door. The city mouse quickly concealed himself in a familiar mouse-hole, but the poor country mouse was not acquainted with the house and frantically scurried around the floorboards, frightened out of his wits. When the butler had taken what he needed, he closed the door behind him. The city mouse then urged the country mouse to sit back down to dinner. The country mouse refused and said,'How could I possibly do that? Oh, how scared I am! Do you think that the man is going to comeback?' This was all that the terrified mouse was able to say. The city mouse insisted,'My dear fellow, you could never find such delicious food as this anywhere else in the world. Acorns are enough for me,' the country mouse maintained,'so long as I am secure in my freedom!'",
     "id": "2",
     "moral": {
       "type": "explicit",
       "text": "It is better to live in self-sufficient poverty than to be tormented by the worries of wealth."
     },
-    "extracted_body": "“A city mouse once happened to pay a visit to the house of a country mouse where he was served a humble meal of acorns. The city mouse finished his business in the country, and by means of insistent invitations he persuaded the country mouse to come pay him a visit. The city mouse then brought the country mouse into a room that was overflowing with food. As they were feasting on various delicacies, a butler opened the door. The city mouse quickly concealed himself in a familiar mouse-hole, but the poor country mouse was not acquainted with the house and frantically scurried around the floorboards, frightened out of his wits. When the butler had taken what he needed, he closed the door behind him. The city mouse then urged the country mouse to sit back down to dinner. The country mouse refused and said, ‘How could I possibly do that? Oh, how scared I am! Do you think that the man is going to come” “back? ’ This was all that the terrified mouse was able to say. The city mouse insisted, ‘My dear fellow, you could never find such delicious food as this anywhere else in the world. ’ ‘Acorns are enough for me, ’ the country mouse maintained, ‘so long as I am secure in my freedom! ”",
+    "extracted_body": "'A city mouse once happened to pay a visit to the house of a country mouse where he was served a humble meal of acorns. The city mouse finished his business in the country, and by means of insistent invitations he persuaded the country mouse to come pay him a visit. The city mouse then brought the country mouse into a room that was overflowing with food. As they were feasting on various delicacies, a butler opened the door. The city mouse quickly concealed himself in a familiar mouse-hole, but the poor country mouse was not acquainted with the house and frantically scurried around the floorboards, frightened out of his wits. When the butler had taken what he needed, he closed the door behind him. The city mouse then urged the country mouse to sit back down to dinner. The country mouse refused and said,'How could I possibly do that? Oh, how scared I am! Do you think that the man is going to comeback?' This was all that the terrified mouse was able to say. The city mouse insisted,'My dear fellow, you could never find such delicious food as this anywhere else in the world. Acorns are enough for me,' the country mouse maintained,'so long as I am secure in my freedom!'",
     "extracted_moral": {
       "text": "It is better to live in self-sufficient poverty than to be tormented by the worries of wealth.",
       "type": "explicit"
     },
-    "doc_length": 254,
+    "doc_length": 240,
     "tokens": [
       [
-        "“",
+        "'",
         0
       ],
       [
@@ -3327,135 +3111,135 @@
         158
       ],
       [
-        "said",
+        "said,'How",
         159
       ],
       [
-        ",",
+        "could",
         160
       ],
       [
-        "‘",
+        "I",
         161
       ],
       [
-        "How",
+        "possibly",
         162
       ],
       [
-        "could",
+        "do",
         163
       ],
       [
-        "I",
+        "that",
         164
       ],
       [
-        "possibly",
+        "?",
         165
       ],
       [
-        "do",
+        "Oh",
         166
       ],
       [
-        "that",
+        ",",
         167
       ],
       [
-        "?",
+        "how",
         168
       ],
       [
-        "Oh",
+        "scared",
         169
       ],
       [
-        ",",
+        "I",
         170
       ],
       [
-        "how",
+        "am",
         171
       ],
       [
-        "scared",
+        "!",
         172
       ],
       [
-        "I",
+        "Do",
         173
       ],
       [
-        "am",
+        "you",
         174
       ],
       [
-        "!",
+        "think",
         175
       ],
       [
-        "Do",
+        "that",
         176
       ],
       [
-        "you",
+        "the",
         177
       ],
       [
-        "think",
+        "man",
         178
       ],
       [
-        "that",
+        "is",
         179
       ],
       [
-        "the",
+        "going",
         180
       ],
       [
-        "man",
+        "to",
         181
       ],
       [
-        "is",
+        "comeback",
         182
       ],
       [
-        "going",
+        "?",
         183
       ],
       [
-        "to",
+        "'",
         184
       ],
       [
-        "come",
+        "This",
         185
       ],
       [
-        "”",
+        "was",
         186
       ],
       [
-        "“",
+        "all",
         187
       ],
       [
-        "back",
+        "that",
         188
       ],
       [
-        "?",
+        "the",
         189
       ],
       [
-        "’",
+        "terrified",
         190
       ],
       [
-        "This",
+        "mouse",
         191
       ],
       [
@@ -3463,253 +3247,197 @@
         192
       ],
       [
-        "all",
+        "able",
         193
       ],
       [
-        "that",
+        "to",
         194
       ],
       [
-        "the",
+        "say",
         195
       ],
       [
-        "terrified",
+        ".",
         196
       ],
       [
-        "mouse",
+        "The",
         197
       ],
       [
-        "was",
+        "city",
         198
       ],
       [
-        "able",
+        "mouse",
         199
       ],
       [
-        "to",
+        "insisted,'My",
         200
       ],
       [
-        "say",
+        "dear",
         201
       ],
       [
-        ".",
+        "fellow",
         202
       ],
       [
-        "The",
+        ",",
         203
       ],
       [
-        "city",
+        "you",
         204
       ],
       [
-        "mouse",
+        "could",
         205
       ],
       [
-        "insisted",
+        "never",
         206
       ],
       [
-        ",",
+        "find",
         207
       ],
       [
-        "‘",
+        "such",
         208
       ],
       [
-        "My",
+        "delicious",
         209
       ],
       [
-        "dear",
+        "food",
         210
       ],
       [
-        "fellow",
+        "as",
         211
       ],
       [
-        ",",
+        "this",
         212
       ],
       [
-        "you",
+        "anywhere",
         213
       ],
       [
-        "could",
+        "else",
         214
       ],
       [
-        "never",
+        "in",
         215
       ],
       [
-        "find",
+        "the",
         216
       ],
       [
-        "such",
+        "world",
         217
       ],
       [
-        "delicious",
+        ".",
         218
       ],
       [
-        "food",
+        "Acorns",
         219
       ],
       [
-        "as",
+        "are",
         220
       ],
       [
-        "this",
+        "enough",
         221
       ],
       [
-        "anywhere",
+        "for",
         222
       ],
       [
-        "else",
+        "me",
         223
       ],
       [
-        "in",
+        ",",
         224
       ],
       [
-        "the",
+        "'",
         225
       ],
       [
-        "world",
+        "the",
         226
       ],
       [
-        ".",
+        "country",
         227
       ],
       [
-        "’",
+        "mouse",
         228
       ],
       [
-        "‘",
+        "maintained,'so",
         229
       ],
       [
-        "Acorns",
+        "long",
         230
       ],
       [
-        "are",
+        "as",
         231
       ],
       [
-        "enough",
+        "I",
         232
       ],
       [
-        "for",
+        "am",
         233
       ],
       [
-        "me",
+        "secure",
         234
       ],
       [
-        ",",
+        "in",
         235
       ],
       [
-        "’",
+        "my",
         236
       ],
       [
-        "the",
+        "freedom",
         237
       ],
       [
-        "country",
+        "!",
         238
       ],
       [
-        "mouse",
+        "'",
         239
-      ],
-      [
-        "maintained",
-        240
-      ],
-      [
-        ",",
-        241
-      ],
-      [
-        "‘",
-        242
-      ],
-      [
-        "so",
-        243
-      ],
-      [
-        "long",
-        244
-      ],
-      [
-        "as",
-        245
-      ],
-      [
-        "I",
-        246
-      ],
-      [
-        "am",
-        247
-      ],
-      [
-        "secure",
-        248
-      ],
-      [
-        "in",
-        249
-      ],
-      [
-        "my",
-        250
-      ],
-      [
-        "freedom",
-        251
-      ],
-      [
-        "!",
-        252
-      ],
-      [
-        "”",
-        253
       ]
     ],
     "lemmas": [
       [
-        "\"",
+        "'",
         0
       ],
       [
@@ -4345,135 +4073,135 @@
         158
       ],
       [
-        "say",
+        "said,'how",
         159
       ],
       [
-        ",",
+        "could",
         160
       ],
       [
-        "'",
+        "I",
         161
       ],
       [
-        "how",
+        "possibly",
         162
       ],
       [
-        "could",
+        "do",
         163
       ],
       [
-        "I",
+        "that",
         164
       ],
       [
-        "possibly",
+        "?",
         165
       ],
       [
-        "do",
+        "oh",
         166
       ],
       [
-        "that",
+        ",",
         167
       ],
       [
-        "?",
+        "how",
         168
       ],
       [
-        "oh",
+        "scared",
         169
       ],
       [
-        ",",
+        "I",
         170
       ],
       [
-        "how",
+        "be",
         171
       ],
       [
-        "scared",
+        "!",
         172
       ],
       [
-        "I",
+        "do",
         173
       ],
       [
-        "be",
+        "you",
         174
       ],
       [
-        "!",
+        "think",
         175
       ],
       [
-        "do",
+        "that",
         176
       ],
       [
-        "you",
+        "the",
         177
       ],
       [
-        "think",
+        "man",
         178
       ],
       [
-        "that",
+        "be",
         179
       ],
       [
-        "the",
+        "go",
         180
       ],
       [
-        "man",
+        "to",
         181
       ],
       [
-        "be",
+        "comeback",
         182
       ],
       [
-        "go",
+        "?",
         183
       ],
       [
-        "to",
+        "'",
         184
       ],
       [
-        "come",
+        "this",
         185
       ],
       [
-        "\"",
+        "be",
         186
       ],
       [
-        "\"",
+        "all",
         187
       ],
       [
-        "back",
+        "that",
         188
       ],
       [
-        "?",
+        "the",
         189
       ],
       [
-        "'",
+        "terrified",
         190
       ],
       [
-        "this",
+        "mouse",
         191
       ],
       [
@@ -4481,253 +4209,197 @@
         192
       ],
       [
-        "all",
+        "able",
         193
       ],
       [
-        "that",
+        "to",
         194
       ],
       [
-        "the",
+        "say",
         195
       ],
       [
-        "terrified",
+        ".",
         196
       ],
       [
-        "mouse",
+        "the",
         197
       ],
       [
-        "be",
+        "city",
         198
       ],
       [
-        "able",
+        "mouse",
         199
       ],
       [
-        "to",
+        "insisted,'My",
         200
       ],
       [
-        "say",
+        "dear",
         201
       ],
       [
-        ".",
+        "fellow",
         202
       ],
       [
-        "the",
+        ",",
         203
       ],
       [
-        "city",
+        "you",
         204
       ],
       [
-        "mouse",
+        "could",
         205
       ],
       [
-        "insist",
+        "never",
         206
       ],
       [
-        ",",
+        "find",
         207
       ],
       [
-        "'",
+        "such",
         208
       ],
       [
-        "my",
+        "delicious",
         209
       ],
       [
-        "dear",
+        "food",
         210
       ],
       [
-        "fellow",
+        "as",
         211
       ],
       [
-        ",",
+        "this",
         212
       ],
       [
-        "you",
+        "anywhere",
         213
       ],
       [
-        "could",
+        "else",
         214
       ],
       [
-        "never",
+        "in",
         215
       ],
       [
-        "find",
+        "the",
         216
       ],
       [
-        "such",
+        "world",
         217
       ],
       [
-        "delicious",
+        ".",
         218
       ],
       [
-        "food",
+        "acorn",
         219
       ],
       [
-        "as",
+        "be",
         220
       ],
       [
-        "this",
+        "enough",
         221
       ],
       [
-        "anywhere",
+        "for",
         222
       ],
       [
-        "else",
+        "I",
         223
       ],
       [
-        "in",
+        ",",
         224
       ],
       [
-        "the",
+        "'",
         225
       ],
       [
-        "world",
+        "the",
         226
       ],
       [
-        ".",
+        "country",
         227
       ],
       [
-        "'",
+        "mouse",
         228
       ],
       [
-        "'",
+        "maintained,'so",
         229
       ],
       [
-        "acorn",
+        "long",
         230
       ],
       [
-        "be",
+        "as",
         231
       ],
       [
-        "enough",
+        "I",
         232
       ],
       [
-        "for",
+        "be",
         233
       ],
       [
-        "I",
+        "secure",
         234
       ],
       [
-        ",",
+        "in",
         235
       ],
       [
-        "'",
+        "my",
         236
       ],
       [
-        "the",
+        "freedom",
         237
       ],
       [
-        "country",
+        "!",
         238
       ],
       [
-        "mouse",
-        239
-      ],
-      [
-        "maintain",
-        240
-      ],
-      [
-        ",",
-        241
-      ],
-      [
         "'",
-        242
-      ],
-      [
-        "so",
-        243
-      ],
-      [
-        "long",
-        244
-      ],
-      [
-        "as",
-        245
-      ],
-      [
-        "I",
-        246
-      ],
-      [
-        "be",
-        247
-      ],
-      [
-        "secure",
-        248
-      ],
-      [
-        "in",
-        249
-      ],
-      [
-        "my",
-        250
-      ],
-      [
-        "freedom",
-        251
-      ],
-      [
-        "!",
-        252
-      ],
-      [
-        "\"",
-        253
+        239
       ]
     ],
     "pos_tags": [
       [
-        "“",
+        "'",
         "PUNCT"
       ],
       [
@@ -5363,20 +5035,8 @@
         "CCONJ"
       ],
       [
-        "said",
-        "VERB"
-      ],
-      [
-        ",",
-        "PUNCT"
-      ],
-      [
-        "‘",
-        "PUNCT"
-      ],
-      [
-        "How",
-        "SCONJ"
+        "said,'How",
+        "PRON"
       ],
       [
         "could",
@@ -5467,27 +5127,15 @@
         "PART"
       ],
       [
-        "come",
+        "comeback",
         "VERB"
-      ],
-      [
-        "”",
-        "PUNCT"
-      ],
-      [
-        "“",
-        "PUNCT"
-      ],
-      [
-        "back",
-        "ADV"
       ],
       [
         "?",
         "PUNCT"
       ],
       [
-        "’",
+        "'",
         "PUNCT"
       ],
       [
@@ -5548,23 +5196,11 @@
       ],
       [
         "mouse",
-        "NOUN"
+        "PROPN"
       ],
       [
-        "insisted",
-        "VERB"
-      ],
-      [
-        ",",
-        "PUNCT"
-      ],
-      [
-        "‘",
-        "PUNCT"
-      ],
-      [
-        "My",
-        "PRON"
+        "insisted,'My",
+        "PROPN"
       ],
       [
         "dear",
@@ -5639,14 +5275,6 @@
         "PUNCT"
       ],
       [
-        "’",
-        "PUNCT"
-      ],
-      [
-        "‘",
-        "PUNCT"
-      ],
-      [
         "Acorns",
         "NOUN"
       ],
@@ -5671,7 +5299,7 @@
         "PUNCT"
       ],
       [
-        "’",
+        "'",
         "PUNCT"
       ],
       [
@@ -5684,23 +5312,11 @@
       ],
       [
         "mouse",
+        "NOUN"
+      ],
+      [
+        "maintained,'so",
         "PROPN"
-      ],
-      [
-        "maintained",
-        "VERB"
-      ],
-      [
-        ",",
-        "PUNCT"
-      ],
-      [
-        "‘",
-        "PUNCT"
-      ],
-      [
-        "so",
-        "ADV"
       ],
       [
         "long",
@@ -5739,14 +5355,21 @@
         "PUNCT"
       ],
       [
-        "”",
+        "'",
         "PUNCT"
       ]
     ],
-    "entities": [],
+    "entities": [
+      [
+        "insisted,'My",
+        "GPE",
+        200,
+        201
+      ]
+    ],
     "sentences": [
       {
-        "text": "“A city mouse once happened to pay a visit to the house of a country mouse where he was served a humble meal of acorns.",
+        "text": "'A city mouse once happened to pay a visit to the house of a country mouse where he was served a humble meal of acorns.",
         "start": 0,
         "end": 27,
         "root": {
@@ -5816,9 +5439,9 @@
         }
       },
       {
-        "text": "The country mouse refused and said, ‘How could I possibly do that?",
+        "text": "The country mouse refused and said,'How could I possibly do that?",
         "start": 154,
-        "end": 169,
+        "end": 166,
         "root": {
           "text": "refused",
           "pos": "VERB",
@@ -5827,8 +5450,8 @@
       },
       {
         "text": "Oh, how scared I am!",
-        "start": 169,
-        "end": 176,
+        "start": 166,
+        "end": 173,
         "root": {
           "text": "am",
           "pos": "AUX",
@@ -5836,9 +5459,9 @@
         }
       },
       {
-        "text": "Do you think that the man is going to come” “back? ’",
-        "start": 176,
-        "end": 191,
+        "text": "Do you think that the man is going to comeback?'",
+        "start": 173,
+        "end": 185,
         "root": {
           "text": "think",
           "pos": "VERB",
@@ -5847,8 +5470,8 @@
       },
       {
         "text": "This was all that the terrified mouse was able to say.",
-        "start": 191,
-        "end": 203,
+        "start": 185,
+        "end": 197,
         "root": {
           "text": "was",
           "pos": "AUX",
@@ -5856,19 +5479,19 @@
         }
       },
       {
-        "text": "The city mouse insisted, ‘My dear fellow, you could never find such delicious food as this anywhere else in the world. ’",
-        "start": 203,
-        "end": 229,
+        "text": "The city mouse insisted,'My dear fellow, you could never find such delicious food as this anywhere else in the world.",
+        "start": 197,
+        "end": 219,
         "root": {
-          "text": "insisted",
+          "text": "find",
           "pos": "VERB",
           "dep": "ROOT"
         }
       },
       {
-        "text": "‘Acorns are enough for me, ’ the country mouse maintained, ‘so long as I am secure in my freedom! ”",
-        "start": 229,
-        "end": 254,
+        "text": "Acorns are enough for me,' the country mouse maintained,'so long as I am secure in my freedom!'",
+        "start": 219,
+        "end": 240,
         "root": {
           "text": "are",
           "pos": "AUX",
@@ -6021,18 +5644,18 @@
     "language": "en",
     "source": "Aesop Laura Gibbs",
     "version": "1",
-    "body": "Driven by hunger, a fox tried to reach some grapes hanging high on the vine. Although she leaped with all her strength, she couldn’t manage to reach the grapes. As she went away, the fox remarked, ‘Oh, you aren’t even ripe yet! I don’t need any sour grapes.",
+    "body": "Driven by hunger, a fox tried to reach some grapes hanging high on the vine. Although she leaped with all her strength, she couldn't manage to reach the grapes. As she went away, the fox remarked,'Oh, you aren't even ripe yet! I don't need any sour grapes.",
     "id": "3",
     "moral": {
       "type": "explicit",
       "text": "People who speak disparagingly of things that they cannot attain would do well to apply this instructive little story to their own lives."
     },
-    "extracted_body": "Driven by hunger, a fox tried to reach some grapes hanging high on the vine. Although she leaped with all her strength, she couldn’t manage to reach the grapes. As she went away, the fox remarked, ‘Oh, you aren’t even ripe yet! I don’t need any sour grapes.",
+    "extracted_body": "Driven by hunger, a fox tried to reach some grapes hanging high on the vine. Although she leaped with all her strength, she couldn't manage to reach the grapes. As she went away, the fox remarked,'Oh, you aren't even ripe yet! I don't need any sour grapes.",
     "extracted_moral": {
       "text": "People who speak disparagingly of things that they cannot attain would do well to apply this instructive little story to their own lives.",
       "type": "explicit"
     },
-    "doc_length": 61,
+    "doc_length": 58,
     "tokens": [
       [
         "Driven",
@@ -6143,7 +5766,7 @@
         26
       ],
       [
-        "n’t",
+        "n't",
         27
       ],
       [
@@ -6199,7 +5822,7 @@
         40
       ],
       [
-        "remarked",
+        "remarked,'Oh",
         41
       ],
       [
@@ -6207,76 +5830,64 @@
         42
       ],
       [
-        "‘",
+        "you",
         43
       ],
       [
-        "Oh",
+        "are",
         44
       ],
       [
-        ",",
+        "n't",
         45
       ],
       [
-        "you",
+        "even",
         46
       ],
       [
-        "are",
+        "ripe",
         47
       ],
       [
-        "n’t",
+        "yet",
         48
       ],
       [
-        "even",
+        "!",
         49
       ],
       [
-        "ripe",
+        "I",
         50
       ],
       [
-        "yet",
+        "do",
         51
       ],
       [
-        "!",
+        "n't",
         52
       ],
       [
-        "I",
+        "need",
         53
       ],
       [
-        "do",
+        "any",
         54
       ],
       [
-        "n’t",
+        "sour",
         55
       ],
       [
-        "need",
+        "grapes",
         56
       ],
       [
-        "any",
-        57
-      ],
-      [
-        "sour",
-        58
-      ],
-      [
-        "grapes",
-        59
-      ],
-      [
         ".",
-        60
+        57
       ]
     ],
     "lemmas": [
@@ -6445,7 +6056,7 @@
         40
       ],
       [
-        "remark",
+        "remarked,'oh",
         41
       ],
       [
@@ -6453,76 +6064,64 @@
         42
       ],
       [
-        "'",
+        "you",
         43
       ],
       [
-        "oh",
+        "be",
         44
       ],
       [
-        ",",
+        "not",
         45
       ],
       [
-        "you",
+        "even",
         46
       ],
       [
-        "be",
+        "ripe",
         47
       ],
       [
-        "not",
+        "yet",
         48
       ],
       [
-        "even",
+        "!",
         49
       ],
       [
-        "ripe",
+        "I",
         50
       ],
       [
-        "yet",
+        "do",
         51
       ],
       [
-        "!",
+        "not",
         52
       ],
       [
-        "I",
+        "need",
         53
       ],
       [
-        "do",
+        "any",
         54
       ],
       [
-        "not",
+        "sour",
         55
       ],
       [
-        "need",
+        "grape",
         56
       ],
       [
-        "any",
-        57
-      ],
-      [
-        "sour",
-        58
-      ],
-      [
-        "grape",
-        59
-      ],
-      [
         ".",
-        60
+        57
       ]
     ],
     "pos_tags": [
@@ -6635,7 +6234,7 @@
         "AUX"
       ],
       [
-        "n’t",
+        "n't",
         "PART"
       ],
       [
@@ -6691,20 +6290,8 @@
         "NOUN"
       ],
       [
-        "remarked",
-        "VERB"
-      ],
-      [
-        ",",
-        "PUNCT"
-      ],
-      [
-        "‘",
-        "PUNCT"
-      ],
-      [
-        "Oh",
-        "INTJ"
+        "remarked,'Oh",
+        "NOUN"
       ],
       [
         ",",
@@ -6719,7 +6306,7 @@
         "AUX"
       ],
       [
-        "n’t",
+        "n't",
         "PART"
       ],
       [
@@ -6747,7 +6334,7 @@
         "AUX"
       ],
       [
-        "n’t",
+        "n't",
         "PART"
       ],
       [
@@ -6773,10 +6360,10 @@
     ],
     "entities": [
       [
-        "fox",
-        "ORG",
-        40,
-        41
+        "the fox remarked,'Oh",
+        "FAC",
+        39,
+        42
       ]
     ],
     "sentences": [
@@ -6791,7 +6378,7 @@
         }
       },
       {
-        "text": "Although she leaped with all her strength, she couldn’t manage to reach the grapes.",
+        "text": "Although she leaped with all her strength, she couldn't manage to reach the grapes.",
         "start": 17,
         "end": 34,
         "root": {
@@ -6801,19 +6388,19 @@
         }
       },
       {
-        "text": "As she went away, the fox remarked, ‘Oh, you aren’t even ripe yet!",
+        "text": "As she went away, the fox remarked,'Oh, you aren't even ripe yet!",
         "start": 34,
-        "end": 53,
+        "end": 50,
         "root": {
-          "text": "remarked",
-          "pos": "VERB",
+          "text": "are",
+          "pos": "AUX",
           "dep": "ROOT"
         }
       },
       {
-        "text": "I don’t need any sour grapes.",
-        "start": 53,
-        "end": 61,
+        "text": "I don't need any sour grapes.",
+        "start": 50,
+        "end": 58,
         "root": {
           "text": "need",
           "pos": "VERB",
@@ -6997,21 +6584,21 @@
     "language": "en",
     "source": "Aesop Laura Gibbs",
     "version": "1",
-    "body": "“A wolf swallowed a bone which got stuck in his throat. The pain was excruciating, so the wolf started looking for someone who could be induced to remove the accursed thing in exchange for a reward. The wolf asked each of the animals if they would help him, and finally the crane was convinced by the wolf’s solemn promises. Trusting her long beak to the wolf’s gaping maw, the crane carried out the dangerous cure. Yet when the crane demanded the promised reward, the wolf simply said, ‘You ungrateful creature! You extracted your head unharmed from my mouth and still you ask for a reward? ”",
+    "body": "'A wolf swallowed a bone which got stuck in his throat. The pain was excruciating, so the wolf started looking for someone who could be induced to remove the accursed thing in exchange for a reward. The wolf asked each of the animals if they would help him, and finally the crane was convinced by the wolf's solemn promises. Trusting her long beak to the wolf's gaping maw, the crane carried out the dangerous cure. Yet when the crane demanded the promised reward, the wolf simply said,'You ungrateful creature! You extracted your head unharmed from my mouth and still you ask for a reward?'",
     "id": "4",
     "moral": {
       "type": "explicit",
-      "text": "If you think a scoundrel will reward you for a job well done, you are making two mistakes: first, you are helping someone who doesn’t deserve it, and second, you will be lucky to escape unharmed."
+      "text": "If you think a scoundrel will reward you for a job well done, you are making two mistakes: first, you are helping someone who doesn't deserve it, and second, you will be lucky to escape unharmed."
     },
-    "extracted_body": "“A wolf swallowed a bone which got stuck in his throat. The pain was excruciating, so the wolf started looking for someone who could be induced to remove the accursed thing in exchange for a reward. The wolf asked each of the animals if they would help him, and finally the crane was convinced by the wolf’s solemn promises. Trusting her long beak to the wolf’s gaping maw, the crane carried out the dangerous cure. Yet when the crane demanded the promised reward, the wolf simply said, ‘You ungrateful creature! You extracted your head unharmed from my mouth and still you ask for a reward? ”",
+    "extracted_body": "'A wolf swallowed a bone which got stuck in his throat. The pain was excruciating, so the wolf started looking for someone who could be induced to remove the accursed thing in exchange for a reward. The wolf asked each of the animals if they would help him, and finally the crane was convinced by the wolf's solemn promises. Trusting her long beak to the wolf's gaping maw, the crane carried out the dangerous cure. Yet when the crane demanded the promised reward, the wolf simply said,'You ungrateful creature! You extracted your head unharmed from my mouth and still you ask for a reward?'",
     "extracted_moral": {
-      "text": "If you think a scoundrel will reward you for a job well done, you are making two mistakes: first, you are helping someone who doesn’t deserve it, and second, you will be lucky to escape unharmed.",
+      "text": "If you think a scoundrel will reward you for a job well done, you are making two mistakes: first, you are helping someone who doesn't deserve it, and second, you will be lucky to escape unharmed.",
       "type": "explicit"
     },
-    "doc_length": 121,
+    "doc_length": 118,
     "tokens": [
       [
-        "“",
+        "'",
         0
       ],
       [
@@ -7259,7 +6846,7 @@
         61
       ],
       [
-        "’s",
+        "'s",
         62
       ],
       [
@@ -7303,7 +6890,7 @@
         72
       ],
       [
-        "’s",
+        "'s",
         73
       ],
       [
@@ -7399,105 +6986,93 @@
         96
       ],
       [
-        "said",
+        "said,'You",
         97
       ],
       [
-        ",",
+        "ungrateful",
         98
       ],
       [
-        "‘",
+        "creature",
         99
       ],
       [
-        "You",
+        "!",
         100
       ],
       [
-        "ungrateful",
+        "You",
         101
       ],
       [
-        "creature",
+        "extracted",
         102
       ],
       [
-        "!",
+        "your",
         103
       ],
       [
-        "You",
+        "head",
         104
       ],
       [
-        "extracted",
+        "unharmed",
         105
       ],
       [
-        "your",
+        "from",
         106
       ],
       [
-        "head",
+        "my",
         107
       ],
       [
-        "unharmed",
+        "mouth",
         108
       ],
       [
-        "from",
+        "and",
         109
       ],
       [
-        "my",
+        "still",
         110
       ],
       [
-        "mouth",
+        "you",
         111
       ],
       [
-        "and",
+        "ask",
         112
       ],
       [
-        "still",
+        "for",
         113
       ],
       [
-        "you",
+        "a",
         114
       ],
       [
-        "ask",
+        "reward",
         115
       ],
       [
-        "for",
+        "?",
         116
       ],
       [
-        "a",
+        "'",
         117
-      ],
-      [
-        "reward",
-        118
-      ],
-      [
-        "?",
-        119
-      ],
-      [
-        "”",
-        120
       ]
     ],
     "lemmas": [
       [
-        "\"",
+        "'",
         0
       ],
       [
@@ -7745,7 +7320,7 @@
         61
       ],
       [
-        "’s",
+        "'s",
         62
       ],
       [
@@ -7789,7 +7364,7 @@
         72
       ],
       [
-        "’s",
+        "'s",
         73
       ],
       [
@@ -7885,105 +7460,93 @@
         96
       ],
       [
-        "say",
+        "said,'you",
         97
       ],
       [
-        ",",
+        "ungrateful",
         98
       ],
       [
-        "'",
+        "creature",
         99
       ],
       [
-        "you",
+        "!",
         100
       ],
       [
-        "ungrateful",
+        "you",
         101
       ],
       [
-        "creature",
+        "extract",
         102
       ],
       [
-        "!",
+        "your",
         103
       ],
       [
-        "you",
+        "head",
         104
       ],
       [
-        "extract",
+        "unharmed",
         105
       ],
       [
-        "your",
+        "from",
         106
       ],
       [
-        "head",
+        "my",
         107
       ],
       [
-        "unharmed",
+        "mouth",
         108
       ],
       [
-        "from",
+        "and",
         109
       ],
       [
-        "my",
+        "still",
         110
       ],
       [
-        "mouth",
+        "you",
         111
       ],
       [
-        "and",
+        "ask",
         112
       ],
       [
-        "still",
+        "for",
         113
       ],
       [
-        "you",
+        "a",
         114
       ],
       [
-        "ask",
+        "reward",
         115
       ],
       [
-        "for",
+        "?",
         116
       ],
       [
-        "a",
+        "'",
         117
-      ],
-      [
-        "reward",
-        118
-      ],
-      [
-        "?",
-        119
-      ],
-      [
-        "\"",
-        120
       ]
     ],
     "pos_tags": [
       [
-        "“",
+        "'",
         "PUNCT"
       ],
       [
@@ -8228,10 +7791,10 @@
       ],
       [
         "wolf",
-        "PROPN"
+        "NOUN"
       ],
       [
-        "’s",
+        "'s",
         "PART"
       ],
       [
@@ -8275,7 +7838,7 @@
         "NOUN"
       ],
       [
-        "’s",
+        "'s",
         "PART"
       ],
       [
@@ -8371,19 +7934,7 @@
         "ADV"
       ],
       [
-        "said",
-        "VERB"
-      ],
-      [
-        ",",
-        "PUNCT"
-      ],
-      [
-        "‘",
-        "PUNCT"
-      ],
-      [
-        "You",
+        "said,'You",
         "PRON"
       ],
       [
@@ -8463,7 +8014,7 @@
         "PUNCT"
       ],
       [
-        "”",
+        "'",
         "PUNCT"
       ]
     ],
@@ -8479,17 +8030,11 @@
         "PERSON",
         61,
         62
-      ],
-      [
-        "wolf",
-        "PERSON",
-        95,
-        96
       ]
     ],
     "sentences": [
       {
-        "text": "“A wolf swallowed a bone which got stuck in his throat.",
+        "text": "'A wolf swallowed a bone which got stuck in his throat.",
         "start": 0,
         "end": 13,
         "root": {
@@ -8509,7 +8054,7 @@
         }
       },
       {
-        "text": "The wolf asked each of the animals if they would help him, and finally the crane was convinced by the wolf’s solemn promises.",
+        "text": "The wolf asked each of the animals if they would help him, and finally the crane was convinced by the wolf's solemn promises.",
         "start": 40,
         "end": 66,
         "root": {
@@ -8519,7 +8064,7 @@
         }
       },
       {
-        "text": "Trusting her long beak to the wolf’s gaping maw, the crane carried out the dangerous cure.",
+        "text": "Trusting her long beak to the wolf's gaping maw, the crane carried out the dangerous cure.",
         "start": 66,
         "end": 85,
         "root": {
@@ -8529,19 +8074,19 @@
         }
       },
       {
-        "text": "Yet when the crane demanded the promised reward, the wolf simply said, ‘You ungrateful creature!",
+        "text": "Yet when the crane demanded the promised reward, the wolf simply said,'You ungrateful creature!",
         "start": 85,
-        "end": 104,
+        "end": 101,
         "root": {
-          "text": "said",
-          "pos": "VERB",
+          "text": "Yet",
+          "pos": "CCONJ",
           "dep": "ROOT"
         }
       },
       {
-        "text": "You extracted your head unharmed from my mouth and still you ask for a reward? ”",
-        "start": 104,
-        "end": 121,
+        "text": "You extracted your head unharmed from my mouth and still you ask for a reward?'",
+        "start": 101,
+        "end": 118,
         "root": {
           "text": "extracted",
           "pos": "VERB",
@@ -8579,7 +8124,7 @@
         "someone",
         "who",
         "does",
-        "n’t",
+        "n't",
         "deserve",
         "it",
         ",",
@@ -8754,7 +8299,7 @@
           "AUX"
         ],
         [
-          "n’t",
+          "n't",
           "PART"
         ],
         [
@@ -8848,18 +8393,18 @@
     "language": "en",
     "source": "Aesop Laura Gibbs",
     "version": "1",
-    "body": "While a lion was sleeping, a mouse ran over his shaggy mane. This angered the lion and he leaped up from his den, all the hairs of his mane standing on end. A fox made fun of the fact that a lion, king of all the animals, had been startled by a mouse. The lion answered the fox, ‘You insolent creature! I was not afraid of the mouse “scratching me and running away; I was just worried that he might make a mess on my mane. ’",
+    "body": "While a lion was sleeping, a mouse ran over his shaggy mane. This angered the lion and he leaped up from his den, all the hairs of his mane standing on end. A fox made fun of the fact that a lion, king of all the animals, had been startled by a mouse. The lion answered the fox,'You insolent creature! I was not afraid of the mouse'scratching me and running away; I was just worried that he might make a mess on my mane.'",
     "id": "5",
     "moral": {
       "type": "implicit",
       "text": "This fable's moral is implicit in the narrative and concerns."
     },
-    "extracted_body": "While a lion was sleeping, a mouse ran over his shaggy mane. This angered the lion and he leaped up from his den, all the hairs of his mane standing on end. A fox made fun of the fact that a lion, king of all the animals, had been startled by a mouse. The lion answered the fox, ‘You insolent creature! I was not afraid of the mouse “scratching me and running away; I was just worried that he might make a mess on my mane. ’",
+    "extracted_body": "While a lion was sleeping, a mouse ran over his shaggy mane. This angered the lion and he leaped up from his den, all the hairs of his mane standing on end. A fox made fun of the fact that a lion, king of all the animals, had been startled by a mouse. The lion answered the fox,'You insolent creature! I was not afraid of the mouse'scratching me and running away; I was just worried that he might make a mess on my mane.'",
     "extracted_moral": {
       "text": "This fable's moral is implicit in the narrative and concerns.",
       "type": "implicit"
     },
-    "doc_length": 100,
+    "doc_length": 95,
     "tokens": [
       [
         "While",
@@ -9118,148 +8663,128 @@
         63
       ],
       [
-        "fox",
+        "fox,'You",
         64
       ],
       [
-        ",",
+        "insolent",
         65
       ],
       [
-        "‘",
+        "creature",
         66
       ],
       [
-        "You",
+        "!",
         67
       ],
       [
-        "insolent",
+        "I",
         68
       ],
       [
-        "creature",
+        "was",
         69
       ],
       [
-        "!",
+        "not",
         70
       ],
       [
-        "I",
+        "afraid",
         71
       ],
       [
-        "was",
+        "of",
         72
       ],
       [
-        "not",
+        "the",
         73
       ],
       [
-        "afraid",
+        "mouse'scratching",
         74
       ],
       [
-        "of",
+        "me",
         75
       ],
       [
-        "the",
+        "and",
         76
       ],
       [
-        "mouse",
+        "running",
         77
       ],
       [
-        "“",
+        "away",
         78
       ],
       [
-        "scratching",
+        ";",
         79
       ],
       [
-        "me",
+        "I",
         80
       ],
       [
-        "and",
+        "was",
         81
       ],
       [
-        "running",
+        "just",
         82
       ],
       [
-        "away",
+        "worried",
         83
       ],
       [
-        ";",
+        "that",
         84
       ],
       [
-        "I",
+        "he",
         85
       ],
       [
-        "was",
+        "might",
         86
       ],
       [
-        "just",
+        "make",
         87
       ],
       [
-        "worried",
+        "a",
         88
       ],
       [
-        "that",
+        "mess",
         89
       ],
       [
-        "he",
+        "on",
         90
       ],
       [
-        "might",
+        "my",
         91
       ],
       [
-        "make",
+        "mane",
         92
       ],
       [
-        "a",
+        ".",
         93
       ],
       [
-        "mess",
+        "'",
         94
-      ],
-      [
-        "on",
-        95
-      ],
-      [
-        "my",
-        96
-      ],
-      [
-        "mane",
-        97
-      ],
-      [
-        ".",
-        98
-      ],
-      [
-        "’",
-        99
       ]
     ],
     "lemmas": [
@@ -9520,67 +9045,67 @@
         63
       ],
       [
-        "fox",
+        "fox,'You",
         64
       ],
       [
-        ",",
+        "insolent",
         65
       ],
       [
-        "'",
+        "creature",
         66
       ],
       [
-        "you",
+        "!",
         67
       ],
       [
-        "insolent",
+        "I",
         68
       ],
       [
-        "creature",
+        "be",
         69
       ],
       [
-        "!",
+        "not",
         70
       ],
       [
-        "I",
+        "afraid",
         71
       ],
       [
-        "be",
+        "of",
         72
       ],
       [
-        "not",
+        "the",
         73
       ],
       [
-        "afraid",
+        "mouse'scratche",
         74
       ],
       [
-        "of",
+        "I",
         75
       ],
       [
-        "the",
+        "and",
         76
       ],
       [
-        "mouse",
+        "run",
         77
       ],
       [
-        "\"",
+        "away",
         78
       ],
       [
-        "scratch",
+        ";",
         79
       ],
       [
@@ -9588,80 +9113,60 @@
         80
       ],
       [
-        "and",
+        "be",
         81
       ],
       [
-        "run",
+        "just",
         82
       ],
       [
-        "away",
+        "worried",
         83
       ],
       [
-        ";",
+        "that",
         84
       ],
       [
-        "I",
+        "he",
         85
       ],
       [
-        "be",
+        "might",
         86
       ],
       [
-        "just",
+        "make",
         87
       ],
       [
-        "worried",
+        "a",
         88
       ],
       [
-        "that",
+        "mess",
         89
       ],
       [
-        "he",
+        "on",
         90
       ],
       [
-        "might",
+        "my",
         91
       ],
       [
-        "make",
+        "mane",
         92
       ],
       [
-        "a",
+        ".",
         93
       ],
       [
-        "mess",
-        94
-      ],
-      [
-        "on",
-        95
-      ],
-      [
-        "my",
-        96
-      ],
-      [
-        "mane",
-        97
-      ],
-      [
-        ".",
-        98
-      ],
-      [
         "'",
-        99
+        94
       ]
     ],
     "pos_tags": [
@@ -9922,20 +9427,8 @@
         "DET"
       ],
       [
-        "fox",
-        "NOUN"
-      ],
-      [
-        ",",
-        "PUNCT"
-      ],
-      [
-        "‘",
-        "PUNCT"
-      ],
-      [
-        "You",
-        "PRON"
+        "fox,'You",
+        "VERB"
       ],
       [
         "insolent",
@@ -9974,15 +9467,7 @@
         "DET"
       ],
       [
-        "mouse",
-        "NOUN"
-      ],
-      [
-        "“",
-        "PUNCT"
-      ],
-      [
-        "scratching",
+        "mouse'scratching",
         "VERB"
       ],
       [
@@ -10062,7 +9547,7 @@
         "PUNCT"
       ],
       [
-        "’",
+        "'",
         "PUNCT"
       ]
     ],
@@ -10099,9 +9584,9 @@
         }
       },
       {
-        "text": "The lion answered the fox, ‘You insolent creature!",
+        "text": "The lion answered the fox,'You insolent creature!",
         "start": 60,
-        "end": 71,
+        "end": 68,
         "root": {
           "text": "answered",
           "pos": "VERB",
@@ -10109,9 +9594,9 @@
         }
       },
       {
-        "text": "I was not afraid of the mouse “scratching me and running away; I was just worried that he might make a mess on my mane. ’",
-        "start": 71,
-        "end": 100,
+        "text": "I was not afraid of the mouse'scratching me and running away; I was just worried that he might make a mess on my mane.'",
+        "start": 68,
+        "end": 95,
         "root": {
           "text": "was",
           "pos": "AUX",
@@ -10213,18 +9698,18 @@
     "language": "en",
     "source": "Aesop Laura Gibbs",
     "version": "1",
-    "body": "A fox had unwittingly fallen down a well and found herself trapped inside its high walls. Meanwhile, a thirsty goat had made his way to that same place and asked the fox whether the water was fresh and plentiful. The fox set about laying her trap. ‘Come down, my friend, ’ said the fox. ‘The water is so good that I cannot get enough of it myself! ’ The bearded billy-goat lowered himself into the well, whereupon that little vixen leaped up on his lofty horns and emerged from the hole, leaving the goat stuck inside the watery prison.",
+    "body": "A fox had unwittingly fallen down a well and found herself trapped inside its high walls. Meanwhile, a thirsty goat had made his way to that same place and asked the fox whether the water was fresh and plentiful. The fox set about laying her trap.'Come down, my friend,' said the fox.'The water is so good that I cannot get enough of it myself!' The bearded billy-goat lowered himself into the well, whereupon that little vixen leaped up on his lofty horns and emerged from the hole, leaving the goat stuck inside the watery prison.",
     "id": "7",
     "moral": {
       "type": "explicit",
-      "text": "As soon as someone clever gets into trouble, he tries to find a way out at someone else’s expense."
+      "text": "As soon as someone clever gets into trouble, he tries to find a way out at someone else's expense."
     },
-    "extracted_body": "A fox had unwittingly fallen down a well and found herself trapped inside its high walls. Meanwhile, a thirsty goat had made his way to that same place and asked the fox whether the water was fresh and plentiful. The fox set about laying her trap. ‘Come down, my friend, ’ said the fox. ‘The water is so good that I cannot get enough of it myself! ’ The bearded billy-goat lowered himself into the well, whereupon that little vixen leaped up on his lofty horns and emerged from the hole, leaving the goat stuck inside the watery prison.",
+    "extracted_body": "A fox had unwittingly fallen down a well and found herself trapped inside its high walls. Meanwhile, a thirsty goat had made his way to that same place and asked the fox whether the water was fresh and plentiful. The fox set about laying her trap.'Come down, my friend,' said the fox.'The water is so good that I cannot get enough of it myself!' The bearded billy-goat lowered himself into the well, whereupon that little vixen leaped up on his lofty horns and emerged from the hole, leaving the goat stuck inside the watery prison.",
     "extracted_moral": {
-      "text": "As soon as someone clever gets into trouble, he tries to find a way out at someone else’s expense.",
+      "text": "As soon as someone clever gets into trouble, he tries to find a way out at someone else's expense.",
       "type": "explicit"
     },
-    "doc_length": 115,
+    "doc_length": 113,
     "tokens": [
       [
         "A",
@@ -10427,264 +9912,256 @@
         49
       ],
       [
-        "‘",
+        "'Come",
         50
       ],
       [
-        "Come",
+        "down",
         51
       ],
       [
-        "down",
+        ",",
         52
       ],
       [
-        ",",
+        "my",
         53
       ],
       [
-        "my",
+        "friend",
         54
       ],
       [
-        "friend",
+        ",",
         55
       ],
       [
-        ",",
+        "'",
         56
       ],
       [
-        "’",
+        "said",
         57
       ],
       [
-        "said",
+        "the",
         58
       ],
       [
-        "the",
+        "fox",
         59
       ],
       [
-        "fox",
+        ".",
         60
       ],
       [
-        ".",
+        "'The",
         61
       ],
       [
-        "‘",
+        "water",
         62
       ],
       [
-        "The",
+        "is",
         63
       ],
       [
-        "water",
+        "so",
         64
       ],
       [
-        "is",
+        "good",
         65
       ],
       [
-        "so",
+        "that",
         66
       ],
       [
-        "good",
+        "I",
         67
       ],
       [
-        "that",
+        "can",
         68
       ],
       [
-        "I",
+        "not",
         69
       ],
       [
-        "can",
+        "get",
         70
       ],
       [
-        "not",
+        "enough",
         71
       ],
       [
-        "get",
+        "of",
         72
       ],
       [
-        "enough",
+        "it",
         73
       ],
       [
-        "of",
+        "myself",
         74
       ],
       [
-        "it",
+        "!",
         75
       ],
       [
-        "myself",
+        "'",
         76
       ],
       [
-        "!",
+        "The",
         77
       ],
       [
-        "’",
+        "bearded",
         78
       ],
       [
-        "The",
+        "billy",
         79
       ],
       [
-        "bearded",
+        "-",
         80
       ],
       [
-        "billy",
+        "goat",
         81
       ],
       [
-        "-",
+        "lowered",
         82
       ],
       [
-        "goat",
+        "himself",
         83
       ],
       [
-        "lowered",
+        "into",
         84
       ],
       [
-        "himself",
+        "the",
         85
       ],
       [
-        "into",
+        "well",
         86
       ],
       [
-        "the",
+        ",",
         87
       ],
       [
-        "well",
+        "whereupon",
         88
       ],
       [
-        ",",
+        "that",
         89
       ],
       [
-        "whereupon",
+        "little",
         90
       ],
       [
-        "that",
+        "vixen",
         91
       ],
       [
-        "little",
+        "leaped",
         92
       ],
       [
-        "vixen",
+        "up",
         93
       ],
       [
-        "leaped",
+        "on",
         94
       ],
       [
-        "up",
+        "his",
         95
       ],
       [
-        "on",
+        "lofty",
         96
       ],
       [
-        "his",
+        "horns",
         97
       ],
       [
-        "lofty",
+        "and",
         98
       ],
       [
-        "horns",
+        "emerged",
         99
       ],
       [
-        "and",
+        "from",
         100
       ],
       [
-        "emerged",
+        "the",
         101
       ],
       [
-        "from",
+        "hole",
         102
       ],
       [
-        "the",
+        ",",
         103
       ],
       [
-        "hole",
+        "leaving",
         104
       ],
       [
-        ",",
+        "the",
         105
       ],
       [
-        "leaving",
+        "goat",
         106
       ],
       [
-        "the",
+        "stuck",
         107
       ],
       [
-        "goat",
+        "inside",
         108
       ],
       [
-        "stuck",
+        "the",
         109
       ],
       [
-        "inside",
+        "watery",
         110
       ],
       [
-        "the",
+        "prison",
         111
       ],
       [
-        "watery",
-        112
-      ],
-      [
-        "prison",
-        113
-      ],
-      [
         ".",
-        114
+        112
       ]
     ],
     "lemmas": [
@@ -10889,264 +10366,256 @@
         49
       ],
       [
-        "'",
+        "'come",
         50
       ],
       [
-        "come",
+        "down",
         51
       ],
       [
-        "down",
+        ",",
         52
       ],
       [
-        ",",
+        "my",
         53
       ],
       [
-        "my",
+        "friend",
         54
       ],
       [
-        "friend",
+        ",",
         55
       ],
       [
-        ",",
+        "'",
         56
       ],
       [
-        "'",
+        "say",
         57
       ],
       [
-        "say",
+        "the",
         58
       ],
       [
-        "the",
+        "fox",
         59
       ],
       [
-        "fox",
+        ".",
         60
       ],
       [
-        ".",
+        "'The",
         61
       ],
       [
-        "'",
+        "water",
         62
       ],
       [
-        "the",
+        "be",
         63
       ],
       [
-        "water",
+        "so",
         64
       ],
       [
-        "be",
+        "good",
         65
       ],
       [
-        "so",
+        "that",
         66
       ],
       [
-        "good",
+        "I",
         67
       ],
       [
-        "that",
+        "can",
         68
       ],
       [
-        "I",
+        "not",
         69
       ],
       [
-        "can",
+        "get",
         70
       ],
       [
-        "not",
+        "enough",
         71
       ],
       [
-        "get",
+        "of",
         72
       ],
       [
-        "enough",
+        "it",
         73
       ],
       [
-        "of",
+        "myself",
         74
       ],
       [
-        "it",
+        "!",
         75
       ],
       [
-        "myself",
+        "'",
         76
       ],
       [
-        "!",
+        "the",
         77
       ],
       [
-        "'",
+        "bearded",
         78
       ],
       [
-        "the",
+        "billy",
         79
       ],
       [
-        "bearded",
+        "-",
         80
       ],
       [
-        "billy",
+        "goat",
         81
       ],
       [
-        "-",
+        "lower",
         82
       ],
       [
-        "goat",
+        "himself",
         83
       ],
       [
-        "lower",
+        "into",
         84
       ],
       [
-        "himself",
+        "the",
         85
       ],
       [
-        "into",
+        "well",
         86
       ],
       [
-        "the",
+        ",",
         87
       ],
       [
-        "well",
+        "whereupon",
         88
       ],
       [
-        ",",
+        "that",
         89
       ],
       [
-        "whereupon",
+        "little",
         90
       ],
       [
-        "that",
+        "vixen",
         91
       ],
       [
-        "little",
+        "leap",
         92
       ],
       [
-        "vixen",
+        "up",
         93
       ],
       [
-        "leap",
+        "on",
         94
       ],
       [
-        "up",
+        "his",
         95
       ],
       [
-        "on",
+        "lofty",
         96
       ],
       [
-        "his",
+        "horn",
         97
       ],
       [
-        "lofty",
+        "and",
         98
       ],
       [
-        "horn",
+        "emerge",
         99
       ],
       [
-        "and",
+        "from",
         100
       ],
       [
-        "emerge",
+        "the",
         101
       ],
       [
-        "from",
+        "hole",
         102
       ],
       [
-        "the",
+        ",",
         103
       ],
       [
-        "hole",
+        "leave",
         104
       ],
       [
-        ",",
+        "the",
         105
       ],
       [
-        "leave",
+        "goat",
         106
       ],
       [
-        "the",
+        "stick",
         107
       ],
       [
-        "goat",
+        "inside",
         108
       ],
       [
-        "stick",
+        "the",
         109
       ],
       [
-        "inside",
+        "watery",
         110
       ],
       [
-        "the",
+        "prison",
         111
       ],
       [
-        "watery",
-        112
-      ],
-      [
-        "prison",
-        113
-      ],
-      [
         ".",
-        114
+        112
       ]
     ],
     "pos_tags": [
@@ -11351,16 +10820,12 @@
         "PUNCT"
       ],
       [
-        "‘",
-        "PUNCT"
-      ],
-      [
-        "Come",
+        "'Come",
         "VERB"
       ],
       [
         "down",
-        "ADP"
+        "ADV"
       ],
       [
         ",",
@@ -11379,7 +10844,7 @@
         "PUNCT"
       ],
       [
-        "’",
+        "'",
         "PUNCT"
       ],
       [
@@ -11392,19 +10857,15 @@
       ],
       [
         "fox",
-        "NOUN"
+        "PROPN"
       ],
       [
         ".",
         "PUNCT"
       ],
       [
-        "‘",
-        "PUNCT"
-      ],
-      [
-        "The",
-        "DET"
+        "'The",
+        "PROPN"
       ],
       [
         "water",
@@ -11463,7 +10924,7 @@
         "PUNCT"
       ],
       [
-        "’",
+        "'",
         "PUNCT"
       ],
       [
@@ -11633,8 +11094,8 @@
       [
         "fox",
         "ORG",
-        60,
-        61
+        59,
+        60
       ]
     ],
     "sentences": [
@@ -11669,9 +11130,9 @@
         }
       },
       {
-        "text": "‘Come down, my friend, ’ said the fox.",
+        "text": "'Come down, my friend,' said the fox.",
         "start": 50,
-        "end": 62,
+        "end": 61,
         "root": {
           "text": "said",
           "pos": "VERB",
@@ -11679,9 +11140,9 @@
         }
       },
       {
-        "text": "‘The water is so good that I cannot get enough of it myself! ’",
-        "start": 62,
-        "end": 79,
+        "text": "'The water is so good that I cannot get enough of it myself!'",
+        "start": 61,
+        "end": 77,
         "root": {
           "text": "is",
           "pos": "AUX",
@@ -11690,8 +11151,8 @@
       },
       {
         "text": "The bearded billy-goat lowered himself into the well, whereupon that little vixen leaped up on his lofty horns and emerged from the hole, leaving the goat stuck inside the watery prison.",
-        "start": 79,
-        "end": 115,
+        "start": 77,
+        "end": 113,
         "root": {
           "text": "lowered",
           "pos": "VERB",
@@ -11720,7 +11181,7 @@
         "at",
         "someone",
         "else",
-        "’s",
+        "'s",
         "expense",
         "."
       ],
@@ -11744,7 +11205,7 @@
         "at",
         "someone",
         "else",
-        "’s",
+        "'s",
         "expense",
         "."
       ],
@@ -11826,7 +11287,7 @@
           "ADV"
         ],
         [
-          "’s",
+          "'s",
           "PART"
         ],
         [

@@ -1,13 +1,14 @@
 {
   "ORG": {
-    "percentage": 45.45454545454545,
+    "percentage": 38.46153846153847,
     "count": 5,
     "examples": [
+      "The lamb answered,'It",
       "fox"
     ]
   },
   "DATE": {
-    "percentage": 27.27272727272727,
+    "percentage": 23.076923076923077,
     "count": 3,
     "examples": [
       "last year",
@@ -15,10 +16,25 @@
     ]
   },
   "PERSON": {
-    "percentage": 27.27272727272727,
+    "percentage": 23.076923076923077,
     "count": 3,
     "examples": [
+      "said,'No",
       "wolf"
+    ]
+  },
+  "GPE": {
+    "percentage": 7.6923076923076925,
+    "count": 1,
+    "examples": [
+      "insisted,'My"
+    ]
+  },
+  "FAC": {
+    "percentage": 7.6923076923076925,
+    "count": 1,
+    "examples": [
+      "the fox remarked,'Oh"
     ]
   }
 }
