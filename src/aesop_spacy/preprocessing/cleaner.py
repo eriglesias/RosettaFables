@@ -160,7 +160,7 @@ class TextCleaner:
         if not text:
             return ""
 
-        # Common character replacements
+        
         replacements = {
             '\u00A0': ' ',    # Non-breaking space
             '\u2022': '•',    # Bullet
