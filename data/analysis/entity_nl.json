@@ -1,33 +1,25 @@
 {
-  "WORK_OF_ART": {
-    "percentage": 21.428571428571427,
+  "FAC": {
+    "percentage": 22.5,
     "count": 9,
     "examples": [
-      "Alstublieft",
-      "De wolf",
-      "De Kraanvogel",
-      "Jij hebt je beloning al lang",
-      "Alstublieft, laat mij gaan"
+      "Veldmuis",
+      "Stadsmuis:\"Je",
+      "Leeuw riep:\"Ga"
     ]
   },
   "ORG": {
-    "percentage": 19.047619047619047,
+    "percentage": 20.0,
     "count": 8,
     "examples": [
       "Stadsmuis",
       "Stadsmuis at",
-      "Spaar mij!"
-    ]
-  },
-  "FAC": {
-    "percentage": 16.666666666666664,
-    "count": 7,
-    "examples": [
-      "Veldmuis"
+      "trekken.\"Ik",
+      "Leeuw:\"Je"
     ]
   },
   "PERSON": {
-    "percentage": 16.666666666666664,
+    "percentage": 17.5,
     "count": 7,
     "examples": [
       "Wolf",
@@ -36,16 +28,35 @@
       "Vos"
     ]
   },
+  "WORK_OF_ART": {
+    "percentage": 12.5,
+    "count": 5,
+    "examples": [
+      "De wolf",
+      "De Kraanvogel",
+      "Alstublieft, laat mij gaan",
+      "De grote Leeuw",
+      "De dorstige Geit"
+    ]
+  },
   "LOC": {
-    "percentage": 11.904761904761903,
+    "percentage": 12.5,
     "count": 5,
     "examples": [
       "Kraanvogel",
       "Leeuw"
     ]
   },
+  "GPE": {
+    "percentage": 5.0,
+    "count": 2,
+    "examples": [
+      "opeten.\"Alstublieft",
+      "arme Muis"
+    ]
+  },
   "DATE": {
-    "percentage": 4.761904761904762,
+    "percentage": 5.0,
     "count": 2,
     "examples": [
       "volgende morgen",
@@ -53,28 +64,14 @@
     ]
   },
   "ORDINAL": {
-    "percentage": 2.380952380952381,
+    "percentage": 2.5,
     "count": 1,
     "examples": [
       "eerste"
     ]
   },
-  "EVENT": {
-    "percentage": 2.380952380952381,
-    "count": 1,
-    "examples": [
-      "Kraanvogel"
-    ]
-  },
-  "GPE": {
-    "percentage": 2.380952380952381,
-    "count": 1,
-    "examples": [
-      "arme Muis"
-    ]
-  },
   "CARDINAL": {
-    "percentage": 2.380952380952381,
+    "percentage": 2.5,
     "count": 1,
     "examples": [
       "één"

@@ -25,8 +25,10 @@ class TextCleaner:
             self.logger.warning("Empty fable provided to cleaner")
             return {}
 
+        # Create a copy to avoid modifying the original
         cleaned_fable = fable.copy()
 
+        # Get language for language-specific cleaning
         language = fable.get('language', '').lower()
 
         # Clean text fields
@@ -34,7 +36,7 @@ class TextCleaner:
             if field in fable and fable[field]:
                 cleaned_fable[field] = self._clean_text_field(fable[field], language)
 
-        
+        # Handle moral field which could be a dict or string
         if 'moral' in fable:
             cleaned_fable['moral'] = self._clean_moral_field(fable['moral'], language)
 
@@ -62,10 +64,9 @@ class TextCleaner:
         # Apply language-specific cleaning
         if language == 'en':
             text = self._clean_english_text(text)
-        elif language == 'nl':
-            pass
-        elif language == 'de':
-            pass
+        elif language in ['nl', 'de', 'es', 'grc']:
+            # For Dutch, German, Spanish, Greek - handle general quote formatting
+            text = self._clean_multilingual_quotes(text)
 
         return text
 
@@ -93,11 +94,11 @@ class TextCleaner:
             }
         else:
             return moral
-    
+
     def normalize_text(self, text: str) -> str:
         """
         Normalize text by fixing whitespace and standardizing characters.
-
+        
         Args:
             text: Text to normalize
             
@@ -113,21 +114,21 @@ class TextCleaner:
         # Normalize quotes
         text = text.replace('"', '"').replace('"', '"')
         text = text.replace(''', "'").replace(''', "'")
- 
+
         # Normalize dashes
         text = text.replace('–', '-').replace('—', '-')
-    
+
         # Normalize ellipses
         text = text.replace('…', '...')
-    
+
         # Ensure space after punctuation but not before
         text = re.sub(r'([.,;:!?])(?!\s)', r'\1 ', text)
-       
+
         # Remove multiple spaces
         text = re.sub(r'\s+', ' ', text).strip()
-       
+
         return text
-    
+
     def remove_xml_tags(self, text: str) -> str:
         """
         Remove XML tags from text.
@@ -140,12 +141,12 @@ class TextCleaner:
         """
         if not text:
             return ""
-        
-        # Simple approach: remove all XML tags
+
+
         text = re.sub(r'<[^>]+>', '', text)
-        
+
         return text.strip()
-    
+
     def fix_encoding_issues(self, text: str) -> str:
         """
         Fix common encoding issues in text.
@@ -158,7 +159,7 @@ class TextCleaner:
         """
         if not text:
             return ""
-        
+
         # Common character replacements
         replacements = {
             '\u00A0': ' ',    # Non-breaking space
@@ -173,12 +174,12 @@ class TextCleaner:
             '\u00AB': '"',    # Left pointing double angle quotation mark
             '\u00BB': '"',    # Right pointing double angle quotation mark
         }
-        
+
         for orig, repl in replacements.items():
             text = text.replace(orig, repl)
-        
+
         return text
-    
+
     def _clean_english_text(self, text: str) -> str:
         """
         Apply English-specific text cleaning rules, especially for quotes.
@@ -191,38 +192,73 @@ class TextCleaner:
         """
         if not text:
             return ""
-        
-        # First pass: standardize all quotes to single quotes
+
+        # First pass: standardize all quotes to single quotes for English
         text = re.sub(r'[""]', "'", text)
+
+        # Apply common quote cleaning (works for both single and double quotes)
+        text = self._clean_quote_formatting(text, quote_char="'")
+
+        return text
+
+    def _clean_multilingual_quotes(self, text: str) -> str:
+        """
+        Clean quotes in languages that use double quotes.
         
-        # Fix the split quote issue (e.g., " ")
-        text = re.sub(r'" "', '', text)
-        text = re.sub(r"' '", '', text)
+        Args:
+            text: Text to clean
+            
+        Returns:
+            Cleaned text with proper quote formatting
+        """
+        if not text:
+            return ""
+
+        # Apply common quote cleaning with double quotes
+        text = self._clean_quote_formatting(text, quote_char='"')
+
+        return text
+
+    def _clean_quote_formatting(self, text: str, quote_char: str) -> str:
+        """
+        Clean quote formatting regardless of the quote character used.
         
-        # Fix spaces between punctuation and quotes - THE MAIN ISSUE
+        Args:
+            text: Text to clean
+            quote_char: The quote character used (single or double)
+            
+        Returns:
+            Text with properly formatted quotes
+        """
+        if not text:
+            return ""
+
+        # Escape the quote character for regex
+        q = re.escape(quote_char)
+
+        # Fix the split quote issue (e.g., " " or ' ')
+        text = re.sub(f"{q} {q}", '', text)
+
         # Remove space before any punctuation
         text = re.sub(r'\s+([.,;:!?])', r'\1', text)
-        
-        # Fix spaces after closing quotes (the most common issue in the example)
-        text = re.sub(r"'(\s+)([.,;:!?])", r"'\2", text)
-        
-        # Handle quotes around punctuation - ensure punctuation is outside quotes when appropriate
-        text = re.sub(r"'([.,;:!?])'", r"\1", text)
-        
+
+        # Fix spaces after closing quotes (the most common issue)
+        text = re.sub(f"{q}(\\s+)([.,;:!?])", f"{q}\\2", text)
+
         # Remove space between closing quote and following punctuation
-        text = re.sub(r"'\s+([.,;:!?])", r"'\1", text)
-        
+        text = re.sub(f"{q}\\s+([.,;:!?])", f"{q}\\1", text)
+
         # Fix spaces between quotes and text
-        text = re.sub(r"\s+'", "'", text)  # Remove space before opening quote
-        text = re.sub(r"'\s+", "' ", text)  # Ensure exactly one space after closing quote
-        
+        text = re.sub(f"\\s+{q}", f"{q}", text)  # Remove space before opening quote
+        text = re.sub(f"{q}\\s+", f"{q} ", text)  # Ensure exactly one space after closing quote
+
         # Fix space inside quotes at the end of sentences
-        text = re.sub(r"(\w)\s+'\s*", r"\1' ", text)
-        
+        text = re.sub(f"(\\w)\\s+{q}\\s*", f"\\1{q} ", text)
+
         # Ensure correct spacing around periods in quoted speech
-        text = re.sub(r"(\w)\.\s+'", r"\1.' ", text)
-        
+        text = re.sub(f"(\\w)\\.\\s+{q}", f"\\1.{q} ", text)
+
         # Fix any double spaces
         text = re.sub(r'\s+', ' ', text).strip()
-        
+
         return text

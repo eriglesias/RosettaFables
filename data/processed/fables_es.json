@@ -4,18 +4,18 @@
     "language": "es",
     "source": "Aesop's Original Collection",
     "version": "1",
-    "body": "Un lobo que vio a un cordero beber en un río quiso devorarlo con un pretexto razonable. Por eso, aunque el lobo estaba situado río arriba, le acusó de haber removido el agua y no dejarle beber. El cordero le dijo que bebía con la punta del hocico y que además no era posible, estando él río abajo, remover el agua de arriba; mas el lobo, al fracasar en ese pretexto, dijo: \"El año pasado injuriaste a mi padre\". Sin embargo, el cordero dijo que ni siquiera tenía un año de vida, a lo que el lobo replicó: \"Aunque tengas abundantes justificaciones, no voy a dejar de devorarte\".",
+    "body": "Un lobo que vio a un cordero beber en un río quiso devorarlo con un pretexto razonable. Por eso, aunque el lobo estaba situado río arriba, le acusó de haber removido el agua y no dejarle beber. El cordero le dijo que bebía con la punta del hocico y que además no era posible, estando él río abajo, remover el agua de arriba; mas el lobo, al fracasar en ese pretexto, dijo:\"El año pasado injuriaste a mi padre\". Sin embargo, el cordero dijo que ni siquiera tenía un año de vida, a lo que el lobo replicó:\"Aunque tengas abundantes justificaciones, no voy a dejar de devorarte\".",
     "id": "1",
     "moral": {
       "type": "unknown",
       "text": "La fábula muestra que no tiene fuerza una defensa justa con quienes tienen la voluntad de hacer daño."
     },
-    "extracted_body": "Un lobo que vio a un cordero beber en un río quiso devorarlo con un pretexto razonable. Por eso, aunque el lobo estaba situado río arriba, le acusó de haber removido el agua y no dejarle beber. El cordero le dijo que bebía con la punta del hocico y que además no era posible, estando él río abajo, remover el agua de arriba; mas el lobo, al fracasar en ese pretexto, dijo: \"El año pasado injuriaste a mi padre\". Sin embargo, el cordero dijo que ni siquiera tenía un año de vida, a lo que el lobo replicó: \"Aunque tengas abundantes justificaciones, no voy a dejar de devorarte\".",
+    "extracted_body": "Un lobo que vio a un cordero beber en un río quiso devorarlo con un pretexto razonable. Por eso, aunque el lobo estaba situado río arriba, le acusó de haber removido el agua y no dejarle beber. El cordero le dijo que bebía con la punta del hocico y que además no era posible, estando él río abajo, remover el agua de arriba; mas el lobo, al fracasar en ese pretexto, dijo:\"El año pasado injuriaste a mi padre\". Sin embargo, el cordero dijo que ni siquiera tenía un año de vida, a lo que el lobo replicó:\"Aunque tengas abundantes justificaciones, no voy a dejar de devorarte\".",
     "extracted_moral": {
       "text": "La fábula muestra que no tiene fuerza una defensa justa con quienes tienen la voluntad de hacer daño.",
       "type": "unknown"
     },
-    "doc_length": 128,
+    "doc_length": 122,
     "tokens": [
       [
         "Un",
@@ -338,196 +338,172 @@
         79
       ],
       [
-        "dijo",
+        "dijo:\"El",
         80
       ],
       [
-        ":",
+        "año",
         81
       ],
       [
-        "\"",
+        "pasado",
         82
       ],
       [
-        "El",
+        "injuriaste",
         83
       ],
       [
-        "año",
+        "a",
         84
       ],
       [
-        "pasado",
+        "mi",
         85
       ],
       [
-        "injuriaste",
+        "padre",
         86
       ],
       [
-        "a",
+        "\"",
         87
       ],
       [
-        "mi",
+        ".",
         88
       ],
       [
-        "padre",
+        "Sin",
         89
       ],
       [
-        "\"",
+        "embargo",
         90
       ],
       [
-        ".",
+        ",",
         91
       ],
       [
-        "Sin",
+        "el",
         92
       ],
       [
-        "embargo",
+        "cordero",
         93
       ],
       [
-        ",",
+        "dijo",
         94
       ],
       [
-        "el",
+        "que",
         95
       ],
       [
-        "cordero",
+        "ni",
         96
       ],
       [
-        "dijo",
+        "siquiera",
         97
       ],
       [
-        "que",
+        "tenía",
         98
       ],
       [
-        "ni",
+        "un",
         99
       ],
       [
-        "siquiera",
+        "año",
         100
       ],
       [
-        "tenía",
+        "de",
         101
       ],
       [
-        "un",
+        "vida",
         102
       ],
       [
-        "año",
+        ",",
         103
       ],
       [
-        "de",
+        "a",
         104
       ],
       [
-        "vida",
+        "lo",
         105
       ],
       [
-        ",",
+        "que",
         106
       ],
       [
-        "a",
+        "el",
         107
       ],
       [
-        "lo",
+        "lobo",
         108
       ],
       [
-        "que",
+        "replicó:\"Aunque",
         109
       ],
       [
-        "el",
+        "tengas",
         110
       ],
       [
-        "lobo",
+        "abundantes",
         111
       ],
       [
-        "replicó",
+        "justificaciones",
         112
       ],
       [
-        ":",
+        ",",
         113
       ],
       [
-        "\"",
+        "no",
         114
       ],
       [
-        "Aunque",
+        "voy",
         115
       ],
       [
-        "tengas",
+        "a",
         116
       ],
       [
-        "abundantes",
+        "dejar",
         117
       ],
       [
-        "justificaciones",
+        "de",
         118
       ],
       [
-        ",",
+        "devorarte",
         119
       ],
       [
-        "no",
+        "\"",
         120
       ],
       [
-        "voy",
-        121
-      ],
-      [
-        "a",
-        122
-      ],
-      [
-        "dejar",
-        123
-      ],
-      [
-        "de",
-        124
-      ],
-      [
-        "devorarte",
-        125
-      ],
-      [
-        "\"",
-        126
-      ],
-      [
         ".",
-        127
+        121
       ]
     ],
     "lemmas": [
@@ -852,196 +828,172 @@
         79
       ],
       [
-        "decir",
+        "dijo:\"El",
         80
       ],
       [
-        ":",
+        "año",
         81
       ],
       [
-        "\"",
+        "pasado",
         82
       ],
       [
-        "el",
+        "injuriaste",
         83
       ],
       [
-        "año",
+        "a",
         84
       ],
       [
-        "pasado",
+        "mi",
         85
       ],
       [
-        "injuriaste",
+        "padre",
         86
       ],
       [
-        "a",
+        "\"",
         87
       ],
       [
-        "mi",
+        ".",
         88
       ],
       [
-        "padre",
+        "sin",
         89
       ],
       [
-        "\"",
+        "embargo",
         90
       ],
       [
-        ".",
+        ",",
         91
       ],
       [
-        "sin",
+        "el",
         92
       ],
       [
-        "embargo",
+        "cordero",
         93
       ],
       [
-        ",",
+        "decir",
         94
       ],
       [
-        "el",
+        "que",
         95
       ],
       [
-        "cordero",
+        "ni",
         96
       ],
       [
-        "decir",
+        "siquiera",
         97
       ],
       [
-        "que",
+        "tener",
         98
       ],
       [
-        "ni",
+        "uno",
         99
       ],
       [
-        "siquiera",
+        "año",
         100
       ],
       [
-        "tener",
+        "de",
         101
       ],
       [
-        "uno",
+        "vida",
         102
       ],
       [
-        "año",
+        ",",
         103
       ],
       [
-        "de",
+        "a",
         104
       ],
       [
-        "vida",
+        "él",
         105
       ],
       [
-        ",",
+        "que",
         106
       ],
       [
-        "a",
+        "el",
         107
       ],
       [
-        "él",
+        "lobo",
         108
       ],
       [
-        "que",
+        "replicó:\"aunque",
         109
       ],
       [
-        "el",
+        "tengas",
         110
       ],
       [
-        "lobo",
+        "abundante",
         111
       ],
       [
-        "replicar",
+        "justificación",
         112
       ],
       [
-        ":",
+        ",",
         113
       ],
       [
-        "\"",
+        "no",
         114
       ],
       [
-        "Aunque",
+        "ir",
         115
       ],
       [
-        "tengas",
+        "a",
         116
       ],
       [
-        "abundante",
+        "dejar",
         117
       ],
       [
-        "justificación",
+        "de",
         118
       ],
       [
-        ",",
+        "devorarte",
         119
       ],
       [
-        "no",
+        "\"",
         120
       ],
       [
-        "ir",
-        121
-      ],
-      [
-        "a",
-        122
-      ],
-      [
-        "dejar",
-        123
-      ],
-      [
-        "de",
-        124
-      ],
-      [
-        "devorarte",
-        125
-      ],
-      [
-        "\"",
-        126
-      ],
-      [
         ".",
-        127
+        121
       ]
     ],
     "pos_tags": [
@@ -1366,20 +1318,8 @@
         "PUNCT"
       ],
       [
-        "dijo",
-        "VERB"
-      ],
-      [
-        ":",
+        "dijo:\"El",
         "PUNCT"
-      ],
-      [
-        "\"",
-        "PUNCT"
-      ],
-      [
-        "El",
-        "DET"
       ],
       [
         "año",
@@ -1494,20 +1434,8 @@
         "NOUN"
       ],
       [
-        "replicó",
-        "VERB"
-      ],
-      [
-        ":",
-        "PUNCT"
-      ],
-      [
-        "\"",
-        "PUNCT"
-      ],
-      [
-        "Aunque",
-        "SCONJ"
+        "replicó:\"Aunque",
+        "PRON"
       ],
       [
         "tengas",
@@ -1572,10 +1500,16 @@
         43
       ],
       [
+        "injuriaste",
+        "LOC",
+        83,
+        84
+      ],
+      [
         "Sin embargo, el cordero",
         "MISC",
-        92,
-        97
+        89,
+        94
       ]
     ],
     "sentences": [
@@ -1600,9 +1534,9 @@
         }
       },
       {
-        "text": "El cordero le dijo que bebía con la punta del hocico y que además no era posible, estando él río abajo, remover el agua de arriba; mas el lobo, al fracasar en ese pretexto, dijo: \"El año pasado injuriaste a mi padre\".",
+        "text": "El cordero le dijo que bebía con la punta del hocico y que además no era posible, estando él río abajo, remover el agua de arriba; mas el lobo, al fracasar en ese pretexto, dijo:\"El año pasado injuriaste a mi padre\".",
         "start": 41,
-        "end": 92,
+        "end": 89,
         "root": {
           "text": "dijo",
           "pos": "VERB",
@@ -1610,9 +1544,9 @@
         }
       },
       {
-        "text": "Sin embargo, el cordero dijo que ni siquiera tenía un año de vida, a lo que el lobo replicó: \"Aunque tengas abundantes justificaciones, no voy a dejar de devorarte\".",
-        "start": 92,
-        "end": 128,
+        "text": "Sin embargo, el cordero dijo que ni siquiera tenía un año de vida, a lo que el lobo replicó:\"Aunque tengas abundantes justificaciones, no voy a dejar de devorarte\".",
+        "start": 89,
+        "end": 122,
         "root": {
           "text": "dijo",
           "pos": "VERB",
@@ -1758,18 +1692,18 @@
     "language": "es",
     "source": "Aesop's Original Collection",
     "version": "1",
-    "body": "Un ratón de campo era amigo de otro que vivía en una casa. El de la casa, invitado por su amigo, fue primero a cenar al campo. Después de haber comido cebada y trigo, dijo: \"Reconócelo, amigo, llevas la vida de las hormigas, pero, ya que yo tengo multitud de bienes, ven conmigo y disfrutarás de todo\". Y, al instante, los dos se fueron. Y el de la casa le mostró legumbres y trigo, y además dátiles, queso, miel, frutos. Aquél a su vez, admirándole, lo elogiaba vehementemente y maldecía su propia suerte. Cuando se disponían a empezar a comer, de repente un hombre abrió la puerta. Atemorizados por el ruido, los ratones se lanzaron a los agujeros. Cuando quisieron de nuevo coger unos higos secos, llegó otro hombre para retirar algo de lo que había dentro. Al verlo los ratones, de nuevo se precipitaron a ocultarse en un escondrijo. El ratón de campo, sobreponiéndose al hambre, suspiró y dijo al otro: \"Disfruta tú, amigo, con tu comida hasta que te hartes, gozándolo con placer y peligro y mucho miedo; yo, desdichado, viviré despreocupadamente sin temer a nadie, comiendo cebada y trigo\".",
+    "body": "Un ratón de campo era amigo de otro que vivía en una casa. El de la casa, invitado por su amigo, fue primero a cenar al campo. Después de haber comido cebada y trigo, dijo:\"Reconócelo, amigo, llevas la vida de las hormigas, pero, ya que yo tengo multitud de bienes, ven conmigo y disfrutarás de todo\". Y, al instante, los dos se fueron. Y el de la casa le mostró legumbres y trigo, y además dátiles, queso, miel, frutos. Aquél a su vez, admirándole, lo elogiaba vehementemente y maldecía su propia suerte. Cuando se disponían a empezar a comer, de repente un hombre abrió la puerta. Atemorizados por el ruido, los ratones se lanzaron a los agujeros. Cuando quisieron de nuevo coger unos higos secos, llegó otro hombre para retirar algo de lo que había dentro. Al verlo los ratones, de nuevo se precipitaron a ocultarse en un escondrijo. El ratón de campo, sobreponiéndose al hambre, suspiró y dijo al otro:\"Disfruta tú, amigo, con tu comida hasta que te hartes, gozándolo con placer y peligro y mucho miedo; yo, desdichado, viviré despreocupadamente sin temer a nadie, comiendo cebada y trigo\".",
     "id": "2",
     "moral": {
       "type": "explicit",
       "text": "La fábula muestra que pasar la vida con sencillez y vivir con tranquilidad está por encima de una vida regalada con miedo y con dolor."
     },
-    "extracted_body": "Un ratón de campo era amigo de otro que vivía en una casa. El de la casa, invitado por su amigo, fue primero a cenar al campo. Después de haber comido cebada y trigo, dijo: \"Reconócelo, amigo, llevas la vida de las hormigas, pero, ya que yo tengo multitud de bienes, ven conmigo y disfrutarás de todo\". Y, al instante, los dos se fueron. Y el de la casa le mostró legumbres y trigo, y además dátiles, queso, miel, frutos. Aquél a su vez, admirándole, lo elogiaba vehementemente y maldecía su propia suerte. Cuando se disponían a empezar a comer, de repente un hombre abrió la puerta. Atemorizados por el ruido, los ratones se lanzaron a los agujeros. Cuando quisieron de nuevo coger unos higos secos, llegó otro hombre para retirar algo de lo que había dentro. Al verlo los ratones, de nuevo se precipitaron a ocultarse en un escondrijo. El ratón de campo, sobreponiéndose al hambre, suspiró y dijo al otro: \"Disfruta tú, amigo, con tu comida hasta que te hartes, gozándolo con placer y peligro y mucho miedo; yo, desdichado, viviré despreocupadamente sin temer a nadie, comiendo cebada y trigo\".",
+    "extracted_body": "Un ratón de campo era amigo de otro que vivía en una casa. El de la casa, invitado por su amigo, fue primero a cenar al campo. Después de haber comido cebada y trigo, dijo:\"Reconócelo, amigo, llevas la vida de las hormigas, pero, ya que yo tengo multitud de bienes, ven conmigo y disfrutarás de todo\". Y, al instante, los dos se fueron. Y el de la casa le mostró legumbres y trigo, y además dátiles, queso, miel, frutos. Aquél a su vez, admirándole, lo elogiaba vehementemente y maldecía su propia suerte. Cuando se disponían a empezar a comer, de repente un hombre abrió la puerta. Atemorizados por el ruido, los ratones se lanzaron a los agujeros. Cuando quisieron de nuevo coger unos higos secos, llegó otro hombre para retirar algo de lo que había dentro. Al verlo los ratones, de nuevo se precipitaron a ocultarse en un escondrijo. El ratón de campo, sobreponiéndose al hambre, suspiró y dijo al otro:\"Disfruta tú, amigo, con tu comida hasta que te hartes, gozándolo con placer y peligro y mucho miedo; yo, desdichado, viviré despreocupadamente sin temer a nadie, comiendo cebada y trigo\".",
     "extracted_moral": {
       "text": "La fábula muestra que pasar la vida con sencillez y vivir con tranquilidad está por encima de una vida regalada con miedo y con dolor.",
       "type": "explicit"
     },
-    "doc_length": 238,
+    "doc_length": 232,
     "tokens": [
       [
         "Un",
@@ -1928,135 +1862,135 @@
         38
       ],
       [
-        "dijo",
+        "dijo:\"Reconócelo",
         39
       ],
       [
-        ":",
+        ",",
         40
       ],
       [
-        "\"",
+        "amigo",
         41
       ],
       [
-        "Reconócelo",
+        ",",
         42
       ],
       [
-        ",",
+        "llevas",
         43
       ],
       [
-        "amigo",
+        "la",
         44
       ],
       [
-        ",",
+        "vida",
         45
       ],
       [
-        "llevas",
+        "de",
         46
       ],
       [
-        "la",
+        "las",
         47
       ],
       [
-        "vida",
+        "hormigas",
         48
       ],
       [
-        "de",
+        ",",
         49
       ],
       [
-        "las",
+        "pero",
         50
       ],
       [
-        "hormigas",
+        ",",
         51
       ],
       [
-        ",",
+        "ya",
         52
       ],
       [
-        "pero",
+        "que",
         53
       ],
       [
-        ",",
+        "yo",
         54
       ],
       [
-        "ya",
+        "tengo",
         55
       ],
       [
-        "que",
+        "multitud",
         56
       ],
       [
-        "yo",
+        "de",
         57
       ],
       [
-        "tengo",
+        "bienes",
         58
       ],
       [
-        "multitud",
+        ",",
         59
       ],
       [
-        "de",
+        "ven",
         60
       ],
       [
-        "bienes",
+        "conmigo",
         61
       ],
       [
-        ",",
+        "y",
         62
       ],
       [
-        "ven",
+        "disfrutarás",
         63
       ],
       [
-        "conmigo",
+        "de",
         64
       ],
       [
-        "y",
+        "todo",
         65
       ],
       [
-        "disfrutarás",
+        "\"",
         66
       ],
       [
-        "de",
+        ".",
         67
       ],
       [
-        "todo",
+        "Y",
         68
       ],
       [
-        "\"",
+        ",",
         69
       ],
       [
-        ".",
+        "al",
         70
       ],
       [
-        "Y",
+        "instante",
         71
       ],
       [
@@ -2064,67 +1998,67 @@
         72
       ],
       [
-        "al",
+        "los",
         73
       ],
       [
-        "instante",
+        "dos",
         74
       ],
       [
-        ",",
+        "se",
         75
       ],
       [
-        "los",
+        "fueron",
         76
       ],
       [
-        "dos",
+        ".",
         77
       ],
       [
-        "se",
+        "Y",
         78
       ],
       [
-        "fueron",
+        "el",
         79
       ],
       [
-        ".",
+        "de",
         80
       ],
       [
-        "Y",
+        "la",
         81
       ],
       [
-        "el",
+        "casa",
         82
       ],
       [
-        "de",
+        "le",
         83
       ],
       [
-        "la",
+        "mostró",
         84
       ],
       [
-        "casa",
+        "legumbres",
         85
       ],
       [
-        "le",
+        "y",
         86
       ],
       [
-        "mostró",
+        "trigo",
         87
       ],
       [
-        "legumbres",
+        ",",
         88
       ],
       [
@@ -2132,596 +2066,572 @@
         89
       ],
       [
-        "trigo",
+        "además",
         90
       ],
       [
-        ",",
+        "dátiles",
         91
       ],
       [
-        "y",
+        ",",
         92
       ],
       [
-        "además",
+        "queso",
         93
       ],
       [
-        "dátiles",
+        ",",
         94
       ],
       [
-        ",",
+        "miel",
         95
       ],
       [
-        "queso",
+        ",",
         96
       ],
       [
-        ",",
+        "frutos",
         97
       ],
       [
-        "miel",
+        ".",
         98
       ],
       [
-        ",",
+        "Aquél",
         99
       ],
       [
-        "frutos",
+        "a",
         100
       ],
       [
-        ".",
+        "su",
         101
       ],
       [
-        "Aquél",
+        "vez",
         102
       ],
       [
-        "a",
+        ",",
         103
       ],
       [
-        "su",
+        "admirándole",
         104
       ],
       [
-        "vez",
+        ",",
         105
       ],
       [
-        ",",
+        "lo",
         106
       ],
       [
-        "admirándole",
+        "elogiaba",
         107
       ],
       [
-        ",",
+        "vehementemente",
         108
       ],
       [
-        "lo",
+        "y",
         109
       ],
       [
-        "elogiaba",
+        "maldecía",
         110
       ],
       [
-        "vehementemente",
+        "su",
         111
       ],
       [
-        "y",
+        "propia",
         112
       ],
       [
-        "maldecía",
+        "suerte",
         113
       ],
       [
-        "su",
+        ".",
         114
       ],
       [
-        "propia",
+        "Cuando",
         115
       ],
       [
-        "suerte",
+        "se",
         116
       ],
       [
-        ".",
+        "disponían",
         117
       ],
       [
-        "Cuando",
+        "a",
         118
       ],
       [
-        "se",
+        "empezar",
         119
       ],
       [
-        "disponían",
+        "a",
         120
       ],
       [
-        "a",
+        "comer",
         121
       ],
       [
-        "empezar",
+        ",",
         122
       ],
       [
-        "a",
+        "de",
         123
       ],
       [
-        "comer",
+        "repente",
         124
       ],
       [
-        ",",
+        "un",
         125
       ],
       [
-        "de",
+        "hombre",
         126
       ],
       [
-        "repente",
+        "abrió",
         127
       ],
       [
-        "un",
+        "la",
         128
       ],
       [
-        "hombre",
+        "puerta",
         129
       ],
       [
-        "abrió",
+        ".",
         130
       ],
       [
-        "la",
+        "Atemorizados",
         131
       ],
       [
-        "puerta",
+        "por",
         132
       ],
       [
-        ".",
+        "el",
         133
       ],
       [
-        "Atemorizados",
+        "ruido",
         134
       ],
       [
-        "por",
+        ",",
         135
       ],
       [
-        "el",
+        "los",
         136
       ],
       [
-        "ruido",
+        "ratones",
         137
       ],
       [
-        ",",
+        "se",
         138
       ],
       [
-        "los",
+        "lanzaron",
         139
       ],
       [
-        "ratones",
+        "a",
         140
       ],
       [
-        "se",
+        "los",
         141
       ],
       [
-        "lanzaron",
+        "agujeros",
         142
       ],
       [
-        "a",
+        ".",
         143
       ],
       [
-        "los",
+        "Cuando",
         144
       ],
       [
-        "agujeros",
+        "quisieron",
         145
       ],
       [
-        ".",
+        "de",
         146
       ],
       [
-        "Cuando",
+        "nuevo",
         147
       ],
       [
-        "quisieron",
+        "coger",
         148
       ],
       [
-        "de",
+        "unos",
         149
       ],
       [
-        "nuevo",
+        "higos",
         150
       ],
       [
-        "coger",
+        "secos",
         151
       ],
       [
-        "unos",
+        ",",
         152
       ],
       [
-        "higos",
+        "llegó",
         153
       ],
       [
-        "secos",
+        "otro",
         154
       ],
       [
-        ",",
+        "hombre",
         155
       ],
       [
-        "llegó",
+        "para",
         156
       ],
       [
-        "otro",
+        "retirar",
         157
       ],
       [
-        "hombre",
+        "algo",
         158
       ],
       [
-        "para",
+        "de",
         159
       ],
       [
-        "retirar",
+        "lo",
         160
       ],
       [
-        "algo",
+        "que",
         161
       ],
       [
-        "de",
+        "había",
         162
       ],
       [
-        "lo",
+        "dentro",
         163
       ],
       [
-        "que",
+        ".",
         164
       ],
       [
-        "había",
+        "Al",
         165
       ],
       [
-        "dentro",
+        "verlo",
         166
       ],
       [
-        ".",
+        "los",
         167
       ],
       [
-        "Al",
+        "ratones",
         168
       ],
       [
-        "verlo",
+        ",",
         169
       ],
       [
-        "los",
+        "de",
         170
       ],
       [
-        "ratones",
+        "nuevo",
         171
       ],
       [
-        ",",
+        "se",
         172
       ],
       [
-        "de",
+        "precipitaron",
         173
       ],
       [
-        "nuevo",
+        "a",
         174
       ],
       [
-        "se",
+        "ocultarse",
         175
       ],
       [
-        "precipitaron",
+        "en",
         176
       ],
       [
-        "a",
+        "un",
         177
       ],
       [
-        "ocultarse",
+        "escondrijo",
         178
       ],
       [
-        "en",
+        ".",
         179
       ],
       [
-        "un",
+        "El",
         180
       ],
       [
-        "escondrijo",
+        "ratón",
         181
       ],
       [
-        ".",
+        "de",
         182
       ],
       [
-        "El",
+        "campo",
         183
       ],
       [
-        "ratón",
+        ",",
         184
       ],
       [
-        "de",
+        "sobreponiéndose",
         185
       ],
       [
-        "campo",
+        "al",
         186
       ],
       [
-        ",",
+        "hambre",
         187
       ],
       [
-        "sobreponiéndose",
+        ",",
         188
       ],
       [
-        "al",
+        "suspiró",
         189
       ],
       [
-        "hambre",
+        "y",
         190
       ],
       [
-        ",",
+        "dijo",
         191
       ],
       [
-        "suspiró",
+        "al",
         192
       ],
       [
-        "y",
+        "otro:\"Disfruta",
         193
       ],
       [
-        "dijo",
+        "tú",
         194
       ],
       [
-        "al",
+        ",",
         195
       ],
       [
-        "otro",
+        "amigo",
         196
       ],
       [
-        ":",
+        ",",
         197
       ],
       [
-        "\"",
+        "con",
         198
       ],
       [
-        "Disfruta",
+        "tu",
         199
       ],
       [
-        "tú",
+        "comida",
         200
       ],
       [
-        ",",
+        "hasta",
         201
       ],
       [
-        "amigo",
+        "que",
         202
       ],
       [
-        ",",
+        "te",
         203
       ],
       [
-        "con",
+        "hartes",
         204
       ],
       [
-        "tu",
+        ",",
         205
       ],
       [
-        "comida",
+        "gozándolo",
         206
       ],
       [
-        "hasta",
+        "con",
         207
       ],
       [
-        "que",
+        "placer",
         208
       ],
       [
-        "te",
+        "y",
         209
       ],
       [
-        "hartes",
+        "peligro",
         210
       ],
       [
-        ",",
+        "y",
         211
       ],
       [
-        "gozándolo",
+        "mucho",
         212
       ],
       [
-        "con",
+        "miedo",
         213
       ],
       [
-        "placer",
+        ";",
         214
       ],
       [
-        "y",
+        "yo",
         215
       ],
       [
-        "peligro",
+        ",",
         216
       ],
       [
-        "y",
+        "desdichado",
         217
       ],
       [
-        "mucho",
+        ",",
         218
       ],
       [
-        "miedo",
+        "viviré",
         219
       ],
       [
-        ";",
+        "despreocupadamente",
         220
       ],
       [
-        "yo",
+        "sin",
         221
       ],
       [
-        ",",
+        "temer",
         222
       ],
       [
-        "desdichado",
+        "a",
         223
       ],
       [
-        ",",
+        "nadie",
         224
       ],
       [
-        "viviré",
+        ",",
         225
       ],
       [
-        "despreocupadamente",
+        "comiendo",
         226
       ],
       [
-        "sin",
+        "cebada",
         227
       ],
       [
-        "temer",
+        "y",
         228
       ],
       [
-        "a",
+        "trigo",
         229
       ],
       [
-        "nadie",
+        "\"",
         230
       ],
       [
-        ",",
-        231
-      ],
-      [
-        "comiendo",
-        232
-      ],
-      [
-        "cebada",
-        233
-      ],
-      [
-        "y",
-        234
-      ],
-      [
-        "trigo",
-        235
-      ],
-      [
-        "\"",
-        236
-      ],
-      [
         ".",
-        237
+        231
       ]
     ],
     "lemmas": [
@@ -2882,35 +2792,35 @@
         38
       ],
       [
-        "decir",
+        "dijo:\"reconócelo",
         39
       ],
       [
-        ":",
+        ",",
         40
       ],
       [
-        "\"",
+        "amigo",
         41
       ],
       [
-        "Reconócelo",
+        ",",
         42
       ],
       [
-        ",",
+        "llevar",
         43
       ],
       [
-        "amigo",
+        "el",
         44
       ],
       [
-        ",",
+        "vida",
         45
       ],
       [
-        "llevar",
+        "de",
         46
       ],
       [
@@ -2918,99 +2828,99 @@
         47
       ],
       [
-        "vida",
+        "hormiga",
         48
       ],
       [
-        "de",
+        ",",
         49
       ],
       [
-        "el",
+        "pero",
         50
       ],
       [
-        "hormiga",
+        ",",
         51
       ],
       [
-        ",",
+        "ya",
         52
       ],
       [
-        "pero",
+        "que",
         53
       ],
       [
-        ",",
+        "yo",
         54
       ],
       [
-        "ya",
+        "tener",
         55
       ],
       [
-        "que",
+        "multitud",
         56
       ],
       [
-        "yo",
+        "de",
         57
       ],
       [
-        "tener",
+        "bien",
         58
       ],
       [
-        "multitud",
+        ",",
         59
       ],
       [
-        "de",
+        "ver",
         60
       ],
       [
-        "bien",
+        "yo",
         61
       ],
       [
-        ",",
+        "y",
         62
       ],
       [
-        "ver",
+        "disfrutarás",
         63
       ],
       [
-        "yo",
+        "de",
         64
       ],
       [
-        "y",
+        "todo",
         65
       ],
       [
-        "disfrutarás",
+        "\"",
         66
       ],
       [
-        "de",
+        ".",
         67
       ],
       [
-        "todo",
+        "y",
         68
       ],
       [
-        "\"",
+        ",",
         69
       ],
       [
-        ".",
+        "al",
         70
       ],
       [
-        "y",
+        "instante",
         71
       ],
       [
@@ -3018,67 +2928,67 @@
         72
       ],
       [
-        "al",
+        "el",
         73
       ],
       [
-        "instante",
+        "dos",
         74
       ],
       [
-        ",",
+        "él",
         75
       ],
       [
-        "el",
+        "ser",
         76
       ],
       [
-        "dos",
+        ".",
         77
       ],
       [
-        "él",
+        "y",
         78
       ],
       [
-        "ser",
+        "el",
         79
       ],
       [
-        ".",
+        "de",
         80
       ],
       [
-        "y",
+        "el",
         81
       ],
       [
-        "el",
+        "casa",
         82
       ],
       [
-        "de",
+        "él",
         83
       ],
       [
-        "el",
+        "mostrar",
         84
       ],
       [
-        "casa",
+        "legumbr",
         85
       ],
       [
-        "él",
+        "y",
         86
       ],
       [
-        "mostrar",
+        "trigo",
         87
       ],
       [
-        "legumbr",
+        ",",
         88
       ],
       [
@@ -3086,187 +2996,187 @@
         89
       ],
       [
-        "trigo",
+        "además",
         90
       ],
       [
-        ",",
+        "dátil",
         91
       ],
       [
-        "y",
+        ",",
         92
       ],
       [
-        "además",
+        "queso",
         93
       ],
       [
-        "dátil",
+        ",",
         94
       ],
       [
-        ",",
+        "miel",
         95
       ],
       [
-        "queso",
+        ",",
         96
       ],
       [
-        ",",
+        "fruto",
         97
       ],
       [
-        "miel",
+        ".",
         98
       ],
       [
-        ",",
+        "aquél",
         99
       ],
       [
-        "fruto",
+        "a",
         100
       ],
       [
-        ".",
+        "su",
         101
       ],
       [
-        "aquél",
+        "vez",
         102
       ],
       [
-        "a",
+        ",",
         103
       ],
       [
-        "su",
+        "admirándole",
         104
       ],
       [
-        "vez",
+        ",",
         105
       ],
       [
-        ",",
+        "él",
         106
       ],
       [
-        "admirándole",
+        "elogiar",
         107
       ],
       [
-        ",",
+        "vehementemente",
         108
       ],
       [
-        "él",
+        "y",
         109
       ],
       [
-        "elogiar",
+        "maldecir",
         110
       ],
       [
-        "vehementemente",
+        "su",
         111
       ],
       [
-        "y",
+        "propio",
         112
       ],
       [
-        "maldecir",
+        "suerte",
         113
       ],
       [
-        "su",
+        ".",
         114
       ],
       [
-        "propio",
+        "cuando",
         115
       ],
       [
-        "suerte",
+        "él",
         116
       ],
       [
-        ".",
+        "disponer",
         117
       ],
       [
-        "cuando",
+        "a",
         118
       ],
       [
-        "él",
+        "empezar",
         119
       ],
       [
-        "disponer",
+        "a",
         120
       ],
       [
-        "a",
+        "comer",
         121
       ],
       [
-        "empezar",
+        ",",
         122
       ],
       [
-        "a",
+        "de",
         123
       ],
       [
-        "comer",
+        "repente",
         124
       ],
       [
-        ",",
+        "uno",
         125
       ],
       [
-        "de",
+        "hombre",
         126
       ],
       [
-        "repente",
+        "abrir",
         127
       ],
       [
-        "uno",
+        "el",
         128
       ],
       [
-        "hombre",
+        "puerta",
         129
       ],
       [
-        "abrir",
+        ".",
         130
       ],
       [
-        "el",
+        "atemorizado",
         131
       ],
       [
-        "puerta",
+        "por",
         132
       ],
       [
-        ".",
+        "el",
         133
       ],
       [
-        "atemorizado",
+        "ruido",
         134
       ],
       [
-        "por",
+        ",",
         135
       ],
       [
@@ -3274,408 +3184,384 @@
         136
       ],
       [
-        "ruido",
+        "ratón",
         137
       ],
       [
-        ",",
+        "él",
         138
       ],
       [
-        "el",
+        "lanzar",
         139
       ],
       [
-        "ratón",
+        "a",
         140
       ],
       [
-        "él",
+        "el",
         141
       ],
       [
-        "lanzar",
+        "agujero",
         142
       ],
       [
-        "a",
+        ".",
         143
       ],
       [
-        "el",
+        "cuando",
         144
       ],
       [
-        "agujero",
+        "querer",
         145
       ],
       [
-        ".",
+        "de",
         146
       ],
       [
-        "cuando",
+        "nuevo",
         147
       ],
       [
-        "querer",
+        "coger",
         148
       ],
       [
-        "de",
+        "uno",
         149
       ],
       [
-        "nuevo",
+        "higo",
         150
       ],
       [
-        "coger",
+        "seco",
         151
       ],
       [
-        "uno",
+        ",",
         152
       ],
       [
-        "higo",
+        "llegar",
         153
       ],
       [
-        "seco",
+        "otro",
         154
       ],
       [
-        ",",
+        "hombre",
         155
       ],
       [
-        "llegar",
+        "para",
         156
       ],
       [
-        "otro",
+        "retirar",
         157
       ],
       [
-        "hombre",
+        "algo",
         158
       ],
       [
-        "para",
+        "de",
         159
       ],
       [
-        "retirar",
+        "él",
         160
       ],
       [
-        "algo",
+        "que",
         161
       ],
       [
-        "de",
+        "haber",
         162
       ],
       [
-        "él",
+        "dentro",
         163
       ],
       [
-        "que",
+        ".",
         164
       ],
       [
-        "haber",
+        "al",
         165
       ],
       [
-        "dentro",
+        "ver él",
         166
       ],
       [
-        ".",
+        "el",
         167
       ],
       [
-        "al",
+        "ratón",
         168
       ],
       [
-        "ver él",
+        ",",
         169
       ],
       [
-        "el",
+        "de",
         170
       ],
       [
-        "ratón",
+        "nuevo",
         171
       ],
       [
-        ",",
+        "él",
         172
       ],
       [
-        "de",
+        "precipitar",
         173
       ],
       [
-        "nuevo",
+        "a",
         174
       ],
       [
-        "él",
+        "ocultar él",
         175
       ],
       [
-        "precipitar",
+        "en",
         176
       ],
       [
-        "a",
+        "uno",
         177
       ],
       [
-        "ocultar él",
+        "escondrijo",
         178
       ],
       [
-        "en",
+        ".",
         179
       ],
       [
-        "uno",
+        "el",
         180
       ],
       [
-        "escondrijo",
+        "ratón",
         181
       ],
       [
-        ".",
+        "de",
         182
       ],
       [
-        "el",
+        "campo",
         183
       ],
       [
-        "ratón",
+        ",",
         184
       ],
       [
-        "de",
+        "sobreponer él",
         185
       ],
       [
-        "campo",
+        "al",
         186
       ],
       [
-        ",",
+        "hambre",
         187
       ],
       [
-        "sobreponer él",
+        ",",
         188
       ],
       [
-        "al",
+        "suspirar",
         189
       ],
       [
-        "hambre",
+        "y",
         190
       ],
       [
-        ",",
+        "decir",
         191
       ],
       [
-        "suspirar",
+        "al",
         192
       ],
       [
-        "y",
+        "otro:\"Disfruta",
         193
       ],
       [
-        "decir",
+        "tú",
         194
       ],
       [
-        "al",
+        ",",
         195
       ],
       [
-        "otro",
+        "amigo",
         196
       ],
       [
-        ":",
+        ",",
         197
       ],
       [
-        "\"",
+        "con",
         198
       ],
       [
-        "Disfruta",
+        "tu",
         199
       ],
       [
-        "tú",
+        "comida",
         200
       ],
       [
-        ",",
+        "hasta",
         201
       ],
       [
-        "amigo",
+        "que",
         202
       ],
       [
-        ",",
+        "tú",
         203
       ],
       [
-        "con",
+        "hart",
         204
       ],
       [
-        "tu",
+        ",",
         205
       ],
       [
-        "comida",
+        "gozándolo",
         206
       ],
       [
-        "hasta",
+        "con",
         207
       ],
       [
-        "que",
+        "placer",
         208
       ],
       [
-        "tú",
+        "y",
         209
       ],
       [
-        "hart",
+        "peligro",
         210
       ],
       [
-        ",",
+        "y",
         211
       ],
       [
-        "gozándolo",
+        "mucho",
         212
       ],
       [
-        "con",
+        "miedo",
         213
       ],
       [
-        "placer",
+        ";",
         214
       ],
       [
-        "y",
+        "yo",
         215
       ],
       [
-        "peligro",
+        ",",
         216
       ],
       [
-        "y",
+        "desdichado",
         217
       ],
       [
-        "mucho",
+        ",",
         218
       ],
       [
-        "miedo",
+        "vivire ",
         219
       ],
       [
-        ";",
+        "despreocupadamente",
         220
       ],
       [
-        "yo",
+        "sin",
         221
       ],
       [
-        ",",
+        "temer",
         222
       ],
       [
-        "desdichado",
+        "a",
         223
       ],
       [
-        ",",
+        "nadie",
         224
       ],
       [
-        "vivire ",
+        ",",
         225
       ],
       [
-        "despreocupadamente",
+        "comer",
         226
       ],
       [
-        "sin",
+        "cebado",
         227
       ],
       [
-        "temer",
+        "y",
         228
       ],
       [
-        "a",
+        "trigo",
         229
       ],
       [
-        "nadie",
+        "\"",
         230
       ],
       [
-        ",",
-        231
-      ],
-      [
-        "comer",
-        232
-      ],
-      [
-        "cebado",
-        233
-      ],
-      [
-        "y",
-        234
-      ],
-      [
-        "trigo",
-        235
-      ],
-      [
-        "\"",
-        236
-      ],
-      [
         ".",
-        237
+        231
       ]
     ],
     "pos_tags": [
@@ -3836,20 +3722,8 @@
         "PUNCT"
       ],
       [
-        "dijo",
-        "VERB"
-      ],
-      [
-        ":",
-        "PUNCT"
-      ],
-      [
-        "\"",
-        "PUNCT"
-      ],
-      [
-        "Reconócelo",
-        "PROPN"
+        "dijo:\"Reconócelo",
+        "ADJ"
       ],
       [
         ",",
@@ -3857,7 +3731,7 @@
       ],
       [
         "amigo",
-        "PROPN"
+        "INTJ"
       ],
       [
         ",",
@@ -4464,19 +4338,7 @@
         "ADP"
       ],
       [
-        "otro",
-        "PRON"
-      ],
-      [
-        ":",
-        "PUNCT"
-      ],
-      [
-        "\"",
-        "PUNCT"
-      ],
-      [
-        "Disfruta",
+        "otro:\"Disfruta",
         "PROPN"
       ],
       [
@@ -4648,38 +4510,38 @@
       [
         "Y el de la casa",
         "MISC",
-        81,
-        86
+        78,
+        83
       ],
       [
         "Aquél",
         "PER",
-        102,
-        103
+        99,
+        100
       ],
       [
         "Atemorizados por el ruido",
         "MISC",
-        134,
-        138
+        131,
+        135
       ],
       [
         "Al verlo los ratones",
         "MISC",
-        168,
-        172
+        165,
+        169
       ],
       [
         "El ratón de campo",
         "MISC",
-        183,
-        187
+        180,
+        184
       ],
       [
-        "Disfruta",
+        "otro:\"Disfruta",
         "MISC",
-        199,
-        200
+        193,
+        194
       ]
     ],
     "sentences": [
@@ -4704,19 +4566,19 @@
         }
       },
       {
-        "text": "Después de haber comido cebada y trigo, dijo: \"Reconócelo, amigo, llevas la vida de las hormigas, pero, ya que yo tengo multitud de bienes, ven conmigo y disfrutarás de todo\".",
+        "text": "Después de haber comido cebada y trigo, dijo:\"Reconócelo, amigo, llevas la vida de las hormigas, pero, ya que yo tengo multitud de bienes, ven conmigo y disfrutarás de todo\".",
         "start": 31,
-        "end": 71,
+        "end": 68,
         "root": {
-          "text": "dijo",
+          "text": "llevas",
           "pos": "VERB",
           "dep": "ROOT"
         }
       },
       {
         "text": "Y, al instante, los dos se fueron.",
-        "start": 71,
-        "end": 81,
+        "start": 68,
+        "end": 78,
         "root": {
           "text": "fueron",
           "pos": "VERB",
@@ -4725,8 +4587,8 @@
       },
       {
         "text": "Y el de la casa le mostró legumbres y trigo, y además dátiles, queso, miel, frutos.",
-        "start": 81,
-        "end": 102,
+        "start": 78,
+        "end": 99,
         "root": {
           "text": "mostró",
           "pos": "VERB",
@@ -4735,8 +4597,8 @@
       },
       {
         "text": "Aquél a su vez, admirándole, lo elogiaba vehementemente y maldecía su propia suerte.",
-        "start": 102,
-        "end": 118,
+        "start": 99,
+        "end": 115,
         "root": {
           "text": "elogiaba",
           "pos": "VERB",
@@ -4745,8 +4607,8 @@
       },
       {
         "text": "Cuando se disponían a empezar a comer, de repente un hombre abrió la puerta.",
-        "start": 118,
-        "end": 134,
+        "start": 115,
+        "end": 131,
         "root": {
           "text": "abrió",
           "pos": "VERB",
@@ -4755,8 +4617,8 @@
       },
       {
         "text": "Atemorizados por el ruido, los ratones se lanzaron a los agujeros.",
-        "start": 134,
-        "end": 147,
+        "start": 131,
+        "end": 144,
         "root": {
           "text": "lanzaron",
           "pos": "VERB",
@@ -4765,8 +4627,8 @@
       },
       {
         "text": "Cuando quisieron de nuevo coger unos higos secos, llegó otro hombre para retirar algo de lo que había dentro.",
-        "start": 147,
-        "end": 168,
+        "start": 144,
+        "end": 165,
         "root": {
           "text": "llegó",
           "pos": "VERB",
@@ -4775,8 +4637,8 @@
       },
       {
         "text": "Al verlo los ratones, de nuevo se precipitaron a ocultarse en un escondrijo.",
-        "start": 168,
-        "end": 183,
+        "start": 165,
+        "end": 180,
         "root": {
           "text": "precipitaron",
           "pos": "VERB",
@@ -4784,9 +4646,9 @@
         }
       },
       {
-        "text": "El ratón de campo, sobreponiéndose al hambre, suspiró y dijo al otro: \"Disfruta tú, amigo, con tu comida hasta que te hartes, gozándolo con placer y peligro y mucho miedo; yo, desdichado, viviré despreocupadamente sin temer a nadie, comiendo cebada y trigo\".",
-        "start": 183,
-        "end": 238,
+        "text": "El ratón de campo, sobreponiéndose al hambre, suspiró y dijo al otro:\"Disfruta tú, amigo, con tu comida hasta que te hartes, gozándolo con placer y peligro y mucho miedo; yo, desdichado, viviré despreocupadamente sin temer a nadie, comiendo cebada y trigo\".",
+        "start": 180,
+        "end": 232,
         "root": {
           "text": "suspiró",
           "pos": "VERB",
@@ -4977,18 +4839,18 @@
     "language": "es",
     "source": "Aesop's Original Collection",
     "version": "1",
-    "body": "Una zorra hambrienta, al ver unos racimos que colgaban de una parra, quiso apoderarse de ellos, y no pudo. Apartándose, se dijo a sí misma: \"Están verdes\".",
+    "body": "Una zorra hambrienta, al ver unos racimos que colgaban de una parra, quiso apoderarse de ellos, y no pudo. Apartándose, se dijo a sí misma:\"Están verdes\".",
     "id": "3",
     "moral": {
       "type": "explicit",
       "text": "Así también algunos hombres, cuando no pueden conseguir las cosas por incompetencia, culpan a las circunstancias."
     },
-    "extracted_body": "Una zorra hambrienta, al ver unos racimos que colgaban de una parra, quiso apoderarse de ellos, y no pudo. Apartándose, se dijo a sí misma: \"Están verdes\".",
+    "extracted_body": "Una zorra hambrienta, al ver unos racimos que colgaban de una parra, quiso apoderarse de ellos, y no pudo. Apartándose, se dijo a sí misma:\"Están verdes\".",
     "extracted_moral": {
       "text": "Así también algunos hombres, cuando no pueden conseguir las cosas por incompetencia, culpan a las circunstancias.",
       "type": "explicit"
     },
-    "doc_length": 36,
+    "doc_length": 33,
     "tokens": [
       [
         "Una",
@@ -5107,11 +4969,11 @@
         28
       ],
       [
-        "misma",
+        "misma:\"Están",
         29
       ],
       [
-        ":",
+        "verdes",
         30
       ],
       [
@@ -5119,20 +4981,8 @@
         31
       ],
       [
-        "Están",
-        32
-      ],
-      [
-        "verdes",
-        33
-      ],
-      [
-        "\"",
-        34
-      ],
-      [
         ".",
-        35
+        32
       ]
     ],
     "lemmas": [
@@ -5253,11 +5103,11 @@
         28
       ],
       [
-        "mismo",
+        "misma:\"están",
         29
       ],
       [
-        ":",
+        "verde",
         30
       ],
       [
@@ -5265,20 +5115,8 @@
         31
       ],
       [
-        "estar",
-        32
-      ],
-      [
-        "verde",
-        33
-      ],
-      [
-        "\"",
-        34
-      ],
-      [
         ".",
-        35
+        32
       ]
     ],
     "pos_tags": [
@@ -5399,20 +5237,8 @@
         "PRON"
       ],
       [
-        "misma",
-        "DET"
-      ],
-      [
-        ":",
-        "PUNCT"
-      ],
-      [
-        "\"",
-        "PUNCT"
-      ],
-      [
-        "Están",
-        "AUX"
+        "misma:\"Están",
+        "NOUN"
       ],
       [
         "verdes",
@@ -5433,12 +5259,6 @@
         "LOC",
         23,
         24
-      ],
-      [
-        "Están verdes",
-        "MISC",
-        32,
-        34
       ]
     ],
     "sentences": [
@@ -5453,9 +5273,9 @@
         }
       },
       {
-        "text": "Apartándose, se dijo a sí misma: \"Están verdes\".",
+        "text": "Apartándose, se dijo a sí misma:\"Están verdes\".",
         "start": 23,
-        "end": 36,
+        "end": 33,
         "root": {
           "text": "dijo",
           "pos": "VERB",
@@ -5599,18 +5419,18 @@
     "language": "es",
     "source": "Aesop's Original Collection",
     "version": "1",
-    "body": "Un lobo que se había atragantado con un hueso iba de un lado a otro buscando a quien lo curara. Al encontrarse con una garza, le pidió que le sacase el hueso a cambio de una retribución. Y aquélla metió su propia cabeza en la garganta del lobo, sacó el hueso y le reclamó la paga acordada. Él, respondiendo, dijo: \"¡Eh tú! , ¿no te contentas con haber sacado sana tu cabeza de la boca del lobo, sino que también pides paga? \".",
+    "body": "Un lobo que se había atragantado con un hueso iba de un lado a otro buscando a quien lo curara. Al encontrarse con una garza, le pidió que le sacase el hueso a cambio de una retribución. Y aquélla metió su propia cabeza en la garganta del lobo, sacó el hueso y le reclamó la paga acordada. Él, respondiendo, dijo:\"¡Eh tú!, ¿no te contentas con haber sacado sana tu cabeza de la boca del lobo, sino que también pides paga?\".",
     "id": "4",
     "moral": {
       "type": "explicit",
       "text": "La fábula muestra que la mayor recompensa por una buena acción a los malvados es que ellos no te hagan daño."
     },
-    "extracted_body": "Un lobo que se había atragantado con un hueso iba de un lado a otro buscando a quien lo curara. Al encontrarse con una garza, le pidió que le sacase el hueso a cambio de una retribución. Y aquélla metió su propia cabeza en la garganta del lobo, sacó el hueso y le reclamó la paga acordada. Él, respondiendo, dijo: \"¡Eh tú! , ¿no te contentas con haber sacado sana tu cabeza de la boca del lobo, sino que también pides paga? \".",
+    "extracted_body": "Un lobo que se había atragantado con un hueso iba de un lado a otro buscando a quien lo curara. Al encontrarse con una garza, le pidió que le sacase el hueso a cambio de una retribución. Y aquélla metió su propia cabeza en la garganta del lobo, sacó el hueso y le reclamó la paga acordada. Él, respondiendo, dijo:\"¡Eh tú!, ¿no te contentas con haber sacado sana tu cabeza de la boca del lobo, sino que también pides paga?\".",
     "extracted_moral": {
       "text": "La fábula muestra que la mayor recompensa por una buena acción a los malvados es que ellos no te hagan daño.",
       "type": "explicit"
     },
-    "doc_length": 98,
+    "doc_length": 94,
     "tokens": [
       [
         "Un",
@@ -5877,132 +5697,116 @@
         65
       ],
       [
-        "dijo",
+        "dijo:\"¡Eh",
         66
       ],
       [
-        ":",
+        "tú",
         67
       ],
       [
-        "\"",
+        "!",
         68
       ],
       [
-        "¡",
+        ",",
         69
       ],
       [
-        "Eh",
+        "¿",
         70
       ],
       [
-        "tú",
+        "no",
         71
       ],
       [
-        "!",
+        "te",
         72
       ],
       [
-        ",",
+        "contentas",
         73
       ],
       [
-        "¿",
+        "con",
         74
       ],
       [
-        "no",
+        "haber",
         75
       ],
       [
-        "te",
+        "sacado",
         76
       ],
       [
-        "contentas",
+        "sana",
         77
       ],
       [
-        "con",
+        "tu",
         78
       ],
       [
-        "haber",
+        "cabeza",
         79
       ],
       [
-        "sacado",
+        "de",
         80
       ],
       [
-        "sana",
+        "la",
         81
       ],
       [
-        "tu",
+        "boca",
         82
       ],
       [
-        "cabeza",
+        "del",
         83
       ],
       [
-        "de",
+        "lobo",
         84
       ],
       [
-        "la",
+        ",",
         85
       ],
       [
-        "boca",
+        "sino",
         86
       ],
       [
-        "del",
+        "que",
         87
       ],
       [
-        "lobo",
+        "también",
         88
       ],
       [
-        ",",
+        "pides",
         89
       ],
       [
-        "sino",
+        "paga",
         90
       ],
       [
-        "que",
+        "?",
         91
       ],
       [
-        "también",
+        "\"",
         92
       ],
       [
-        "pides",
-        93
-      ],
-      [
-        "paga",
-        94
-      ],
-      [
-        "?",
-        95
-      ],
-      [
-        "\"",
-        96
-      ],
-      [
         ".",
-        97
+        93
       ]
     ],
     "lemmas": [
@@ -6271,132 +6075,116 @@
         65
       ],
       [
-        "decir",
+        "dijo:\"¡eh",
         66
       ],
       [
-        ":",
+        "tú",
         67
       ],
       [
-        "\"",
+        "!",
         68
       ],
       [
-        "¡",
+        ",",
         69
       ],
       [
-        "eh",
+        "¿",
         70
       ],
       [
-        "tú",
+        "no",
         71
       ],
       [
-        "!",
+        "tú",
         72
       ],
       [
-        ",",
+        "contento",
         73
       ],
       [
-        "¿",
+        "con",
         74
       ],
       [
-        "no",
+        "haber",
         75
       ],
       [
-        "tú",
+        "sacar",
         76
       ],
       [
-        "contento",
+        "sano",
         77
       ],
       [
-        "con",
+        "tu",
         78
       ],
       [
-        "haber",
+        "cabeza",
         79
       ],
       [
-        "sacar",
+        "de",
         80
       ],
       [
-        "sano",
+        "el",
         81
       ],
       [
-        "tu",
+        "boca",
         82
       ],
       [
-        "cabeza",
+        "del",
         83
       ],
       [
-        "de",
+        "lobo",
         84
       ],
       [
-        "el",
+        ",",
         85
       ],
       [
-        "boca",
+        "sino",
         86
       ],
       [
-        "del",
+        "que",
         87
       ],
       [
-        "lobo",
+        "también",
         88
       ],
       [
-        ",",
+        "pides",
         89
       ],
       [
-        "sino",
+        "paga",
         90
       ],
       [
-        "que",
+        "?",
         91
       ],
       [
-        "también",
+        "\"",
         92
       ],
       [
-        "pides",
-        93
-      ],
-      [
-        "paga",
-        94
-      ],
-      [
-        "?",
-        95
-      ],
-      [
-        "\"",
-        96
-      ],
-      [
         ".",
-        97
+        93
       ]
     ],
     "pos_tags": [
@@ -6665,24 +6453,8 @@
         "PUNCT"
       ],
       [
-        "dijo",
-        "VERB"
-      ],
-      [
-        ":",
-        "PUNCT"
-      ],
-      [
-        "\"",
-        "PUNCT"
-      ],
-      [
-        "¡",
-        "PUNCT"
-      ],
-      [
-        "Eh",
-        "PRON"
+        "dijo:\"¡Eh",
+        "ADV"
       ],
       [
         "tú",
@@ -6807,10 +6579,16 @@
         63
       ],
       [
+        "dijo:\"¡Eh tú!",
+        "MISC",
+        66,
+        69
+      ],
+      [
         "pides",
         "PER",
-        93,
-        94
+        89,
+        90
       ]
     ],
     "sentences": [
@@ -6845,12 +6623,12 @@
         }
       },
       {
-        "text": "Él, respondiendo, dijo: \"¡Eh tú! , ¿no te contentas con haber sacado sana tu cabeza de la boca del lobo, sino que también pides paga? \".",
+        "text": "Él, respondiendo, dijo:\"¡Eh tú!, ¿no te contentas con haber sacado sana tu cabeza de la boca del lobo, sino que también pides paga?\".",
         "start": 62,
-        "end": 98,
+        "end": 94,
         "root": {
-          "text": "dijo",
-          "pos": "VERB",
+          "text": "contentas",
+          "pos": "ADJ",
           "dep": "ROOT"
         }
       }
@@ -7011,18 +6789,18 @@
     "language": "es",
     "source": "Aesop's Original Collection",
     "version": "1",
-    "body": "Un ratón se puso a corretear sobre el cuerpo de un león dormido. Éste se despertó y lo atrapó; y estaba a punto de devorarlo. Pero, como el ratón le pidiera que lo soltase y le dijera que si lo salvaba se lo agradecería, el león, sonriendo, lo dejó libre. Ocurrió que, no mucho después, él se salvó gracias al ratón. Pues, cuando, capturado por unos cazadores, fue atado a un árbol con una soga, el ratón, que había oído sus lamentos, acudió y se puso a roer la soga y, una vez que lo hubo desatado, dijo: \"Te reíste un día de mí, incrédulo de que yo pudiera devolverte el favor, pero ahora sabe bien que también hay agradecimiento de parte de los ratones\".",
+    "body": "Un ratón se puso a corretear sobre el cuerpo de un león dormido. Éste se despertó y lo atrapó; y estaba a punto de devorarlo. Pero, como el ratón le pidiera que lo soltase y le dijera que si lo salvaba se lo agradecería, el león, sonriendo, lo dejó libre. Ocurrió que, no mucho después, él se salvó gracias al ratón. Pues, cuando, capturado por unos cazadores, fue atado a un árbol con una soga, el ratón, que había oído sus lamentos, acudió y se puso a roer la soga y, una vez que lo hubo desatado, dijo:\"Te reíste un día de mí, incrédulo de que yo pudiera devolverte el favor, pero ahora sabe bien que también hay agradecimiento de parte de los ratones\".",
     "id": "5",
     "moral": {
       "type": "explicit",
       "text": "La fábula muestra que con los cambios de fortuna los que pueden mucho llegan a estar necesitados de los más débiles."
     },
-    "extracted_body": "Un ratón se puso a corretear sobre el cuerpo de un león dormido. Éste se despertó y lo atrapó; y estaba a punto de devorarlo. Pero, como el ratón le pidiera que lo soltase y le dijera que si lo salvaba se lo agradecería, el león, sonriendo, lo dejó libre. Ocurrió que, no mucho después, él se salvó gracias al ratón. Pues, cuando, capturado por unos cazadores, fue atado a un árbol con una soga, el ratón, que había oído sus lamentos, acudió y se puso a roer la soga y, una vez que lo hubo desatado, dijo: \"Te reíste un día de mí, incrédulo de que yo pudiera devolverte el favor, pero ahora sabe bien que también hay agradecimiento de parte de los ratones\".",
+    "extracted_body": "Un ratón se puso a corretear sobre el cuerpo de un león dormido. Éste se despertó y lo atrapó; y estaba a punto de devorarlo. Pero, como el ratón le pidiera que lo soltase y le dijera que si lo salvaba se lo agradecería, el león, sonriendo, lo dejó libre. Ocurrió que, no mucho después, él se salvó gracias al ratón. Pues, cuando, capturado por unos cazadores, fue atado a un árbol con una soga, el ratón, que había oído sus lamentos, acudió y se puso a roer la soga y, una vez que lo hubo desatado, dijo:\"Te reíste un día de mí, incrédulo de que yo pudiera devolverte el favor, pero ahora sabe bien que también hay agradecimiento de parte de los ratones\".",
     "extracted_moral": {
       "text": "La fábula muestra que con los cambios de fortuna los que pueden mucho llegan a estar necesitados de los más débiles.",
       "type": "explicit"
     },
-    "doc_length": 150,
+    "doc_length": 147,
     "tokens": [
       [
         "Un",
@@ -7489,140 +7267,128 @@
         115
       ],
       [
-        "dijo",
+        "dijo:\"Te",
         116
       ],
       [
-        ":",
+        "reíste",
         117
       ],
       [
-        "\"",
+        "un",
         118
       ],
       [
-        "Te",
+        "día",
         119
       ],
       [
-        "reíste",
+        "de",
         120
       ],
       [
-        "un",
+        "mí",
         121
       ],
       [
-        "día",
+        ",",
         122
       ],
       [
-        "de",
+        "incrédulo",
         123
       ],
       [
-        "mí",
+        "de",
         124
       ],
       [
-        ",",
+        "que",
         125
       ],
       [
-        "incrédulo",
+        "yo",
         126
       ],
       [
-        "de",
+        "pudiera",
         127
       ],
       [
-        "que",
+        "devolverte",
         128
       ],
       [
-        "yo",
+        "el",
         129
       ],
       [
-        "pudiera",
+        "favor",
         130
       ],
       [
-        "devolverte",
+        ",",
         131
       ],
       [
-        "el",
+        "pero",
         132
       ],
       [
-        "favor",
+        "ahora",
         133
       ],
       [
-        ",",
+        "sabe",
         134
       ],
       [
-        "pero",
+        "bien",
         135
       ],
       [
-        "ahora",
+        "que",
         136
       ],
       [
-        "sabe",
+        "también",
         137
       ],
       [
-        "bien",
+        "hay",
         138
       ],
       [
-        "que",
+        "agradecimiento",
         139
       ],
       [
-        "también",
+        "de",
         140
       ],
       [
-        "hay",
+        "parte",
         141
       ],
       [
-        "agradecimiento",
+        "de",
         142
       ],
       [
-        "de",
+        "los",
         143
       ],
       [
-        "parte",
+        "ratones",
         144
       ],
       [
-        "de",
+        "\"",
         145
       ],
       [
-        "los",
-        146
-      ],
-      [
-        "ratones",
-        147
-      ],
-      [
-        "\"",
-        148
-      ],
-      [
         ".",
-        149
+        146
       ]
     ],
     "lemmas": [
@@ -8091,140 +7857,128 @@
         115
       ],
       [
-        "decir",
+        "dijo:\"te",
         116
       ],
       [
-        ":",
+        "reíste",
         117
       ],
       [
-        "\"",
+        "uno",
         118
       ],
       [
-        "tú",
+        "día",
         119
       ],
       [
-        "reíste",
+        "de",
         120
       ],
       [
-        "uno",
+        "yo",
         121
       ],
       [
-        "día",
+        ",",
         122
       ],
       [
-        "de",
+        "incrédulo",
         123
       ],
       [
-        "yo",
+        "de",
         124
       ],
       [
-        ",",
+        "que",
         125
       ],
       [
-        "incrédulo",
+        "yo",
         126
       ],
       [
-        "de",
+        "poder",
         127
       ],
       [
-        "que",
+        "devolverte",
         128
       ],
       [
-        "yo",
+        "el",
         129
       ],
       [
-        "poder",
+        "favor",
         130
       ],
       [
-        "devolverte",
+        ",",
         131
       ],
       [
-        "el",
+        "pero",
         132
       ],
       [
-        "favor",
+        "ahora",
         133
       ],
       [
-        ",",
+        "saber",
         134
       ],
       [
-        "pero",
+        "bien",
         135
       ],
       [
-        "ahora",
+        "que",
         136
       ],
       [
-        "saber",
+        "también",
         137
       ],
       [
-        "bien",
+        "haber",
         138
       ],
       [
-        "que",
+        "agradecimiento",
         139
       ],
       [
-        "también",
+        "de",
         140
       ],
       [
-        "haber",
+        "parte",
         141
       ],
       [
-        "agradecimiento",
+        "de",
         142
       ],
       [
-        "de",
+        "el",
         143
       ],
       [
-        "parte",
+        "ratón",
         144
       ],
       [
-        "de",
+        "\"",
         145
       ],
       [
-        "el",
-        146
-      ],
-      [
-        "ratón",
-        147
-      ],
-      [
-        "\"",
-        148
-      ],
-      [
         ".",
-        149
+        146
       ]
     ],
     "pos_tags": [
@@ -8693,20 +8447,8 @@
         "PUNCT"
       ],
       [
-        "dijo",
+        "dijo:\"Te",
         "VERB"
-      ],
-      [
-        ":",
-        "PUNCT"
-      ],
-      [
-        "\"",
-        "PUNCT"
-      ],
-      [
-        "Te",
-        "PRON"
       ],
       [
         "reíste",
@@ -8885,11 +8627,11 @@
         }
       },
       {
-        "text": "Pues, cuando, capturado por unos cazadores, fue atado a un árbol con una soga, el ratón, que había oído sus lamentos, acudió y se puso a roer la soga y, una vez que lo hubo desatado, dijo: \"Te reíste un día de mí, incrédulo de que yo pudiera devolverte el favor, pero ahora sabe bien que también hay agradecimiento de parte de los ratones\".",
+        "text": "Pues, cuando, capturado por unos cazadores, fue atado a un árbol con una soga, el ratón, que había oído sus lamentos, acudió y se puso a roer la soga y, una vez que lo hubo desatado, dijo:\"Te reíste un día de mí, incrédulo de que yo pudiera devolverte el favor, pero ahora sabe bien que también hay agradecimiento de parte de los ratones\".",
         "start": 72,
-        "end": 150,
+        "end": 147,
         "root": {
-          "text": "dijo",
+          "text": "atado",
           "pos": "VERB",
           "dep": "ROOT"
         }
@@ -9051,10 +8793,10 @@
     "language": "es",
     "source": "Aesop's Original Collection",
     "version": "1",
-    "body": "Un mosquito se acercó a un león y le dijo: \"Ni te temo ni eres más fuerte que yo; si no ¿qué fuerza tienes: que arañas con tus garras y muerdes con tus dientes? Eso también lo hace una mujer cuando se pelea con su marido. Yo soy mucho más fuerte que tú. Si quieres, entremos en lucha. \" Y el mosquito hizo zumbar su trompetilla y le clavó el aguijón, picándole en la parte sin pelo de sus fauces, cerca de las narices. Y el león se puso a rascarse con sus propias garras hasta que desfalleció. El mosquito, luego de vencer al león, volvió a hacer zumbar su trompetilla y entonando un epinicio \" echó a volar; se enredó con la tela de una araña y, mientras era devorado, se lamentaba de cómo, tras pelear con los animales más grandes, perecía por obra de un animal insignificante, la araña.",
+    "body": "Un mosquito se acercó a un león y le dijo:\"Ni te temo ni eres más fuerte que yo; si no ¿qué fuerza tienes: que arañas con tus garras y muerdes con tus dientes? Eso también lo hace una mujer cuando se pelea con su marido. Yo soy mucho más fuerte que tú. Si quieres, entremos en lucha.\" Y el mosquito hizo zumbar su trompetilla y le clavó el aguijón, picándole en la parte sin pelo de sus fauces, cerca de las narices. Y el león se puso a rascarse con sus propias garras hasta que desfalleció. El mosquito, luego de vencer al león, volvió a hacer zumbar su trompetilla y entonando un epinicio\" echó a volar; se enredó con la tela de una araña y, mientras era devorado, se lamentaba de cómo, tras pelear con los animales más grandes, perecía por obra de un animal insignificante, la araña.",
     "id": "6",
-    "extracted_body": "Un mosquito se acercó a un león y le dijo: \"Ni te temo ni eres más fuerte que yo; si no ¿qué fuerza tienes: que arañas con tus garras y muerdes con tus dientes? Eso también lo hace una mujer cuando se pelea con su marido. Yo soy mucho más fuerte que tú. Si quieres, entremos en lucha. \" Y el mosquito hizo zumbar su trompetilla y le clavó el aguijón, picándole en la parte sin pelo de sus fauces, cerca de las narices. Y el león se puso a rascarse con sus propias garras hasta que desfalleció. El mosquito, luego de vencer al león, volvió a hacer zumbar su trompetilla y entonando un epinicio \" echó a volar; se enredó con la tela de una araña y, mientras era devorado, se lamentaba de cómo, tras pelear con los animales más grandes, perecía por obra de un animal insignificante, la araña.",
-    "doc_length": 174,
+    "extracted_body": "Un mosquito se acercó a un león y le dijo:\"Ni te temo ni eres más fuerte que yo; si no ¿qué fuerza tienes: que arañas con tus garras y muerdes con tus dientes? Eso también lo hace una mujer cuando se pelea con su marido. Yo soy mucho más fuerte que tú. Si quieres, entremos en lucha.\" Y el mosquito hizo zumbar su trompetilla y le clavó el aguijón, picándole en la parte sin pelo de sus fauces, cerca de las narices. Y el león se puso a rascarse con sus propias garras hasta que desfalleció. El mosquito, luego de vencer al león, volvió a hacer zumbar su trompetilla y entonando un epinicio\" echó a volar; se enredó con la tela de una araña y, mientras era devorado, se lamentaba de cómo, tras pelear con los animales más grandes, perecía por obra de un animal insignificante, la araña.",
+    "doc_length": 171,
     "tokens": [
       [
         "Un",
@@ -9093,664 +8835,652 @@
         8
       ],
       [
-        "dijo",
+        "dijo:\"Ni",
         9
       ],
       [
-        ":",
+        "te",
         10
       ],
       [
-        "\"",
+        "temo",
         11
       ],
       [
-        "Ni",
+        "ni",
         12
       ],
       [
-        "te",
+        "eres",
         13
       ],
       [
-        "temo",
+        "más",
         14
       ],
       [
-        "ni",
+        "fuerte",
         15
       ],
       [
-        "eres",
+        "que",
         16
       ],
       [
-        "más",
+        "yo",
         17
       ],
       [
-        "fuerte",
+        ";",
         18
       ],
       [
-        "que",
+        "si",
         19
       ],
       [
-        "yo",
+        "no",
         20
       ],
       [
-        ";",
+        "¿",
         21
       ],
       [
-        "si",
+        "qué",
         22
       ],
       [
-        "no",
+        "fuerza",
         23
       ],
       [
-        "¿",
+        "tienes",
         24
       ],
       [
-        "qué",
+        ":",
         25
       ],
       [
-        "fuerza",
+        "que",
         26
       ],
       [
-        "tienes",
+        "arañas",
         27
       ],
       [
-        ":",
+        "con",
         28
       ],
       [
-        "que",
+        "tus",
         29
       ],
       [
-        "arañas",
+        "garras",
         30
       ],
       [
-        "con",
+        "y",
         31
       ],
       [
-        "tus",
+        "muerdes",
         32
       ],
       [
-        "garras",
+        "con",
         33
       ],
       [
-        "y",
+        "tus",
         34
       ],
       [
-        "muerdes",
+        "dientes",
         35
       ],
       [
-        "con",
+        "?",
         36
       ],
       [
-        "tus",
+        "Eso",
         37
       ],
       [
-        "dientes",
+        "también",
         38
       ],
       [
-        "?",
+        "lo",
         39
       ],
       [
-        "Eso",
+        "hace",
         40
       ],
       [
-        "también",
+        "una",
         41
       ],
       [
-        "lo",
+        "mujer",
         42
       ],
       [
-        "hace",
+        "cuando",
         43
       ],
       [
-        "una",
+        "se",
         44
       ],
       [
-        "mujer",
+        "pelea",
         45
       ],
       [
-        "cuando",
+        "con",
         46
       ],
       [
-        "se",
+        "su",
         47
       ],
       [
-        "pelea",
+        "marido",
         48
       ],
       [
-        "con",
+        ".",
         49
       ],
       [
-        "su",
+        "Yo",
         50
       ],
       [
-        "marido",
+        "soy",
         51
       ],
       [
-        ".",
+        "mucho",
         52
       ],
       [
-        "Yo",
+        "más",
         53
       ],
       [
-        "soy",
+        "fuerte",
         54
       ],
       [
-        "mucho",
+        "que",
         55
       ],
       [
-        "más",
+        "tú",
         56
       ],
       [
-        "fuerte",
+        ".",
         57
       ],
       [
-        "que",
+        "Si",
         58
       ],
       [
-        "tú",
+        "quieres",
         59
       ],
       [
-        ".",
+        ",",
         60
       ],
       [
-        "Si",
+        "entremos",
         61
       ],
       [
-        "quieres",
+        "en",
         62
       ],
       [
-        ",",
+        "lucha",
         63
       ],
       [
-        "entremos",
+        ".",
         64
       ],
       [
-        "en",
+        "\"",
         65
       ],
       [
-        "lucha",
+        "Y",
         66
       ],
       [
-        ".",
+        "el",
         67
       ],
       [
-        "\"",
+        "mosquito",
         68
       ],
       [
-        "Y",
+        "hizo",
         69
       ],
       [
-        "el",
+        "zumbar",
         70
       ],
       [
-        "mosquito",
+        "su",
         71
       ],
       [
-        "hizo",
+        "trompetilla",
         72
       ],
       [
-        "zumbar",
+        "y",
         73
       ],
       [
-        "su",
+        "le",
         74
       ],
       [
-        "trompetilla",
+        "clavó",
         75
       ],
       [
-        "y",
+        "el",
         76
       ],
       [
-        "le",
+        "aguijón",
         77
       ],
       [
-        "clavó",
+        ",",
         78
       ],
       [
-        "el",
+        "picándole",
         79
       ],
       [
-        "aguijón",
+        "en",
         80
       ],
       [
-        ",",
+        "la",
         81
       ],
       [
-        "picándole",
+        "parte",
         82
       ],
       [
-        "en",
+        "sin",
         83
       ],
       [
-        "la",
+        "pelo",
         84
       ],
       [
-        "parte",
+        "de",
         85
       ],
       [
-        "sin",
+        "sus",
         86
       ],
       [
-        "pelo",
+        "fauces",
         87
       ],
       [
-        "de",
+        ",",
         88
       ],
       [
-        "sus",
+        "cerca",
         89
       ],
       [
-        "fauces",
+        "de",
         90
       ],
       [
-        ",",
+        "las",
         91
       ],
       [
-        "cerca",
+        "narices",
         92
       ],
       [
-        "de",
+        ".",
         93
       ],
       [
-        "las",
+        "Y",
         94
       ],
       [
-        "narices",
+        "el",
         95
       ],
       [
-        ".",
+        "león",
         96
       ],
       [
-        "Y",
+        "se",
         97
       ],
       [
-        "el",
+        "puso",
         98
       ],
       [
-        "león",
+        "a",
         99
       ],
       [
-        "se",
+        "rascarse",
         100
       ],
       [
-        "puso",
+        "con",
         101
       ],
       [
-        "a",
+        "sus",
         102
       ],
       [
-        "rascarse",
+        "propias",
         103
       ],
       [
-        "con",
+        "garras",
         104
       ],
       [
-        "sus",
+        "hasta",
         105
       ],
       [
-        "propias",
+        "que",
         106
       ],
       [
-        "garras",
+        "desfalleció",
         107
       ],
       [
-        "hasta",
+        ".",
         108
       ],
       [
-        "que",
+        "El",
         109
       ],
       [
-        "desfalleció",
+        "mosquito",
         110
       ],
       [
-        ".",
+        ",",
         111
       ],
       [
-        "El",
+        "luego",
         112
       ],
       [
-        "mosquito",
+        "de",
         113
       ],
       [
-        ",",
+        "vencer",
         114
       ],
       [
-        "luego",
+        "al",
         115
       ],
       [
-        "de",
+        "león",
         116
       ],
       [
-        "vencer",
+        ",",
         117
       ],
       [
-        "al",
+        "volvió",
         118
       ],
       [
-        "león",
+        "a",
         119
       ],
       [
-        ",",
+        "hacer",
         120
       ],
       [
-        "volvió",
+        "zumbar",
         121
       ],
       [
-        "a",
+        "su",
         122
       ],
       [
-        "hacer",
+        "trompetilla",
         123
       ],
       [
-        "zumbar",
+        "y",
         124
       ],
       [
-        "su",
+        "entonando",
         125
       ],
       [
-        "trompetilla",
+        "un",
         126
       ],
       [
-        "y",
+        "epinicio",
         127
       ],
       [
-        "entonando",
+        "\"",
         128
       ],
       [
-        "un",
+        "echó",
         129
       ],
       [
-        "epinicio",
+        "a",
         130
       ],
       [
-        "\"",
+        "volar",
         131
       ],
       [
-        "echó",
+        ";",
         132
       ],
       [
-        "a",
+        "se",
         133
       ],
       [
-        "volar",
+        "enredó",
         134
       ],
       [
-        ";",
+        "con",
         135
       ],
       [
-        "se",
+        "la",
         136
       ],
       [
-        "enredó",
+        "tela",
         137
       ],
       [
-        "con",
+        "de",
         138
       ],
       [
-        "la",
+        "una",
         139
       ],
       [
-        "tela",
+        "araña",
         140
       ],
       [
-        "de",
+        "y",
         141
       ],
       [
-        "una",
+        ",",
         142
       ],
       [
-        "araña",
+        "mientras",
         143
       ],
       [
-        "y",
+        "era",
         144
       ],
       [
-        ",",
+        "devorado",
         145
       ],
       [
-        "mientras",
+        ",",
         146
       ],
       [
-        "era",
+        "se",
         147
       ],
       [
-        "devorado",
+        "lamentaba",
         148
       ],
       [
-        ",",
+        "de",
         149
       ],
       [
-        "se",
+        "cómo",
         150
       ],
       [
-        "lamentaba",
+        ",",
         151
       ],
       [
-        "de",
+        "tras",
         152
       ],
       [
-        "cómo",
+        "pelear",
         153
       ],
       [
-        ",",
+        "con",
         154
       ],
       [
-        "tras",
+        "los",
         155
       ],
       [
-        "pelear",
+        "animales",
         156
       ],
       [
-        "con",
+        "más",
         157
       ],
       [
-        "los",
+        "grandes",
         158
       ],
       [
-        "animales",
+        ",",
         159
       ],
       [
-        "más",
+        "perecía",
         160
       ],
       [
-        "grandes",
+        "por",
         161
       ],
       [
-        ",",
+        "obra",
         162
       ],
       [
-        "perecía",
+        "de",
         163
       ],
       [
-        "por",
+        "un",
         164
       ],
       [
-        "obra",
+        "animal",
         165
       ],
       [
-        "de",
+        "insignificante",
         166
       ],
       [
-        "un",
+        ",",
         167
       ],
       [
-        "animal",
+        "la",
         168
       ],
       [
-        "insignificante",
+        "araña",
         169
       ],
       [
-        ",",
-        170
-      ],
-      [
-        "la",
-        171
-      ],
-      [
-        "araña",
-        172
-      ],
-      [
         ".",
-        173
+        170
       ]
     ],
     "lemmas": [
@@ -9791,664 +9521,652 @@
         8
       ],
       [
-        "decir",
+        "dijo:\"ni",
         9
       ],
       [
-        ":",
+        "tú",
         10
       ],
       [
-        "\"",
+        "temer",
         11
       ],
       [
-        "Ni",
+        "ni",
         12
       ],
       [
-        "tú",
+        "ser",
         13
       ],
       [
-        "temer",
+        "más",
         14
       ],
       [
-        "ni",
+        "fuerte",
         15
       ],
       [
-        "ser",
+        "que",
         16
       ],
       [
-        "más",
+        "yo",
         17
       ],
       [
-        "fuerte",
+        ";",
         18
       ],
       [
-        "que",
+        "si",
         19
       ],
       [
-        "yo",
+        "no",
         20
       ],
       [
-        ";",
+        "¿",
         21
       ],
       [
-        "si",
+        "qué",
         22
       ],
       [
-        "no",
+        "fuerza",
         23
       ],
       [
-        "¿",
+        "tener",
         24
       ],
       [
-        "qué",
+        ":",
         25
       ],
       [
-        "fuerza",
+        "que",
         26
       ],
       [
-        "tener",
+        "araña",
         27
       ],
       [
-        ":",
+        "con",
         28
       ],
       [
-        "que",
+        "tu",
         29
       ],
       [
-        "araña",
+        "garra",
         30
       ],
       [
-        "con",
+        "y",
         31
       ],
       [
-        "tu",
+        "muerdar",
         32
       ],
       [
-        "garra",
+        "con",
         33
       ],
       [
-        "y",
+        "tu",
         34
       ],
       [
-        "muerdar",
+        "diente",
         35
       ],
       [
-        "con",
+        "?",
         36
       ],
       [
-        "tu",
+        "ese",
         37
       ],
       [
-        "diente",
+        "también",
         38
       ],
       [
-        "?",
+        "él",
         39
       ],
       [
-        "ese",
+        "hacer",
         40
       ],
       [
-        "también",
+        "uno",
         41
       ],
       [
-        "él",
+        "mujer",
         42
       ],
       [
-        "hacer",
+        "cuando",
         43
       ],
       [
-        "uno",
+        "él",
         44
       ],
       [
-        "mujer",
+        "pelear",
         45
       ],
       [
-        "cuando",
+        "con",
         46
       ],
       [
-        "él",
+        "su",
         47
       ],
       [
-        "pelear",
+        "marido",
         48
       ],
       [
-        "con",
+        ".",
         49
       ],
       [
-        "su",
+        "yo",
         50
       ],
       [
-        "marido",
+        "ser",
         51
       ],
       [
-        ".",
+        "mucho",
         52
       ],
       [
-        "yo",
+        "más",
         53
       ],
       [
-        "ser",
+        "fuerte",
         54
       ],
       [
-        "mucho",
+        "que",
         55
       ],
       [
-        "más",
+        "tú",
         56
       ],
       [
-        "fuerte",
+        ".",
         57
       ],
       [
-        "que",
+        "si",
         58
       ],
       [
-        "tú",
+        "querer",
         59
       ],
       [
-        ".",
+        ",",
         60
       ],
       [
-        "si",
+        "enter",
         61
       ],
       [
-        "querer",
+        "en",
         62
       ],
       [
-        ",",
+        "lucha",
         63
       ],
       [
-        "enter",
+        ".",
         64
       ],
       [
-        "en",
+        "\"",
         65
       ],
       [
-        "lucha",
+        "Y",
         66
       ],
       [
-        ".",
+        "el",
         67
       ],
       [
-        "\"",
+        "mosquito",
         68
       ],
       [
-        "Y",
+        "hacer",
         69
       ],
       [
-        "el",
+        "zumbar",
         70
       ],
       [
-        "mosquito",
+        "su",
         71
       ],
       [
-        "hacer",
+        "trompetilla",
         72
       ],
       [
-        "zumbar",
+        "y",
         73
       ],
       [
-        "su",
+        "él",
         74
       ],
       [
-        "trompetilla",
+        "clavar",
         75
       ],
       [
-        "y",
+        "el",
         76
       ],
       [
-        "él",
+        "aguijón",
         77
       ],
       [
-        "clavar",
+        ",",
         78
       ],
       [
-        "el",
+        "picar él",
         79
       ],
       [
-        "aguijón",
+        "en",
         80
       ],
       [
-        ",",
+        "el",
         81
       ],
       [
-        "picar él",
+        "parte",
         82
       ],
       [
-        "en",
+        "sin",
         83
       ],
       [
-        "el",
+        "pelo",
         84
       ],
       [
-        "parte",
+        "de",
         85
       ],
       [
-        "sin",
+        "su",
         86
       ],
       [
-        "pelo",
+        "fauz",
         87
       ],
       [
-        "de",
+        ",",
         88
       ],
       [
-        "su",
+        "cerca",
         89
       ],
       [
-        "fauz",
+        "de",
         90
       ],
       [
-        ",",
+        "el",
         91
       ],
       [
-        "cerca",
+        "narices",
         92
       ],
       [
-        "de",
+        ".",
         93
       ],
       [
-        "el",
+        "y",
         94
       ],
       [
-        "narices",
+        "el",
         95
       ],
       [
-        ".",
+        "león",
         96
       ],
       [
-        "y",
+        "él",
         97
       ],
       [
-        "el",
+        "poner",
         98
       ],
       [
-        "león",
+        "a",
         99
       ],
       [
-        "él",
+        "rascar él",
         100
       ],
       [
-        "poner",
+        "con",
         101
       ],
       [
-        "a",
+        "su",
         102
       ],
       [
-        "rascar él",
+        "propio",
         103
       ],
       [
-        "con",
+        "garra",
         104
       ],
       [
-        "su",
+        "hasta",
         105
       ],
       [
-        "propio",
+        "que",
         106
       ],
       [
-        "garra",
+        "desfalleceír",
         107
       ],
       [
-        "hasta",
+        ".",
         108
       ],
       [
-        "que",
+        "el",
         109
       ],
       [
-        "desfalleceír",
+        "mosquito",
         110
       ],
       [
-        ".",
+        ",",
         111
       ],
       [
-        "el",
+        "luego",
         112
       ],
       [
-        "mosquito",
+        "de",
         113
       ],
       [
-        ",",
+        "vencer",
         114
       ],
       [
-        "luego",
+        "al",
         115
       ],
       [
-        "de",
+        "león",
         116
       ],
       [
-        "vencer",
+        ",",
         117
       ],
       [
-        "al",
+        "volver",
         118
       ],
       [
-        "león",
+        "a",
         119
       ],
       [
-        ",",
+        "hacer",
         120
       ],
       [
-        "volver",
+        "zumbar",
         121
       ],
       [
-        "a",
+        "su",
         122
       ],
       [
-        "hacer",
+        "trompetilla",
         123
       ],
       [
-        "zumbar",
+        "y",
         124
       ],
       [
-        "su",
+        "entonar",
         125
       ],
       [
-        "trompetilla",
+        "uno",
         126
       ],
       [
-        "y",
+        "epinicio",
         127
       ],
       [
-        "entonar",
+        "\"",
         128
       ],
       [
-        "uno",
+        "echar",
         129
       ],
       [
-        "epinicio",
+        "a",
         130
       ],
       [
-        "\"",
+        "volar",
         131
       ],
       [
-        "echar",
+        ";",
         132
       ],
       [
-        "a",
+        "él",
         133
       ],
       [
-        "volar",
+        "enredar",
         134
       ],
       [
-        ";",
+        "con",
         135
       ],
       [
-        "él",
+        "el",
         136
       ],
       [
-        "enredar",
+        "tela",
         137
       ],
       [
-        "con",
+        "de",
         138
       ],
       [
-        "el",
+        "uno",
         139
       ],
       [
-        "tela",
+        "araña",
         140
       ],
       [
-        "de",
+        "y",
         141
       ],
       [
-        "uno",
+        ",",
         142
       ],
       [
-        "araña",
+        "mientras",
         143
       ],
       [
-        "y",
+        "ser",
         144
       ],
       [
-        ",",
+        "devorar",
         145
       ],
       [
-        "mientras",
+        ",",
         146
       ],
       [
-        "ser",
+        "él",
         147
       ],
       [
-        "devorar",
+        "lamentar",
         148
       ],
       [
-        ",",
+        "de",
         149
       ],
       [
-        "él",
+        "cómo",
         150
       ],
       [
-        "lamentar",
+        ",",
         151
       ],
       [
-        "de",
+        "tras",
         152
       ],
       [
-        "cómo",
+        "pelear",
         153
       ],
       [
-        ",",
+        "con",
         154
       ],
       [
-        "tras",
+        "el",
         155
       ],
       [
-        "pelear",
+        "animal",
         156
       ],
       [
-        "con",
+        "más",
         157
       ],
       [
-        "el",
+        "grande",
         158
       ],
       [
-        "animal",
+        ",",
         159
       ],
       [
-        "más",
+        "perecer",
         160
       ],
       [
-        "grande",
+        "por",
         161
       ],
       [
-        ",",
+        "obra",
         162
       ],
       [
-        "perecer",
+        "de",
         163
       ],
       [
-        "por",
+        "uno",
         164
       ],
       [
-        "obra",
+        "animal",
         165
       ],
       [
-        "de",
+        "insignificante",
         166
       ],
       [
-        "uno",
+        ",",
         167
       ],
       [
-        "animal",
+        "el",
         168
       ],
       [
-        "insignificante",
+        "araña",
         169
       ],
       [
-        ",",
-        170
-      ],
-      [
-        "el",
-        171
-      ],
-      [
-        "araña",
-        172
-      ],
-      [
         ".",
-        173
+        170
       ]
     ],
     "pos_tags": [
@@ -10489,20 +10207,8 @@
         "PRON"
       ],
       [
-        "dijo",
-        "VERB"
-      ],
-      [
-        ":",
-        "PUNCT"
-      ],
-      [
-        "\"",
-        "PUNCT"
-      ],
-      [
-        "Ni",
-        "CCONJ"
+        "dijo:\"Ni",
+        "ADJ"
       ],
       [
         "te",
@@ -10514,7 +10220,7 @@
       ],
       [
         "ni",
-        "ADV"
+        "CCONJ"
       ],
       [
         "eres",
@@ -11153,33 +10859,33 @@
       [
         "Yo",
         "PER",
-        53,
-        54
+        50,
+        51
       ],
       [
         "Si quieres",
         "MISC",
-        61,
-        63
+        58,
+        60
       ],
       [
         "Y el león",
         "MISC",
-        97,
-        100
+        94,
+        97
       ],
       [
         "El mosquito",
         "MISC",
-        112,
-        114
+        109,
+        111
       ]
     ],
     "sentences": [
       {
-        "text": "Un mosquito se acercó a un león y le dijo: \"Ni te temo ni eres más fuerte que yo; si no ¿qué fuerza tienes: que arañas con tus garras y muerdes con tus dientes?",
+        "text": "Un mosquito se acercó a un león y le dijo:\"Ni te temo ni eres más fuerte que yo; si no ¿qué fuerza tienes: que arañas con tus garras y muerdes con tus dientes?",
         "start": 0,
-        "end": 40,
+        "end": 37,
         "root": {
           "text": "acercó",
           "pos": "VERB",
@@ -11188,8 +10894,8 @@
       },
       {
         "text": "Eso también lo hace una mujer cuando se pelea con su marido.",
-        "start": 40,
-        "end": 53,
+        "start": 37,
+        "end": 50,
         "root": {
           "text": "hace",
           "pos": "VERB",
@@ -11198,8 +10904,8 @@
       },
       {
         "text": "Yo soy mucho más fuerte que tú.",
-        "start": 53,
-        "end": 61,
+        "start": 50,
+        "end": 58,
         "root": {
           "text": "fuerte",
           "pos": "ADJ",
@@ -11208,8 +10914,8 @@
       },
       {
         "text": "Si quieres, entremos en lucha.",
-        "start": 61,
-        "end": 68,
+        "start": 58,
+        "end": 65,
         "root": {
           "text": "entremos",
           "pos": "VERB",
@@ -11218,8 +10924,8 @@
       },
       {
         "text": "\" Y el mosquito hizo zumbar su trompetilla y le clavó el aguijón, picándole en la parte sin pelo de sus fauces, cerca de las narices.",
-        "start": 68,
-        "end": 97,
+        "start": 65,
+        "end": 94,
         "root": {
           "text": "hizo",
           "pos": "VERB",
@@ -11228,8 +10934,8 @@
       },
       {
         "text": "Y el león se puso a rascarse con sus propias garras hasta que desfalleció.",
-        "start": 97,
-        "end": 112,
+        "start": 94,
+        "end": 109,
         "root": {
           "text": "puso",
           "pos": "VERB",
@@ -11237,9 +10943,9 @@
         }
       },
       {
-        "text": "El mosquito, luego de vencer al león, volvió a hacer zumbar su trompetilla y entonando un epinicio \" echó a volar; se enredó con la tela de una araña y, mientras era devorado, se lamentaba de cómo, tras pelear con los animales más grandes, perecía por obra de un animal insignificante, la araña.",
-        "start": 112,
-        "end": 174,
+        "text": "El mosquito, luego de vencer al león, volvió a hacer zumbar su trompetilla y entonando un epinicio\" echó a volar; se enredó con la tela de una araña y, mientras era devorado, se lamentaba de cómo, tras pelear con los animales más grandes, perecía por obra de un animal insignificante, la araña.",
+        "start": 109,
+        "end": 171,
         "root": {
           "text": "volvió",
           "pos": "VERB",
@@ -11253,18 +10959,18 @@
     "language": "es",
     "source": "Aesop's Original Collection",
     "version": "1",
-    "body": "Una zorra que había caído en un pozo llevaba largo rato en él. Un macho cabrío, forzado por la sed, llegó junto al mismo pozo y al verla le preguntó si era buena el agua. Ella, contenta por la coincidencia, se deshacía en elogios del agua, diciendo que era excelente y le animaba a que bajara. Después que bajó despreocupadamente movido por su deseo, apenas hubo apaciguado la sed, miraba con la zorra la forma de subir. Y la zorra, tomando la palabra, dijo: \"Sé algo útil si lo único que quieres es la salvación de ambos. Así pues, apoya tus patas delanteras en el muro y endereza los cuernos, y yo, luego de trepar por encima, también te sacaré\". Atendió éste a la propuesta de buena gana y la zorra, escalando por sus patas, lomo y cuernos, llegó hasta la boca del pozo y, tras salir, se alejó. Al reprocharle el macho cabrío que había incumplido el pacto, se volvió y le dijo: \"Si tuvierastanta inteligencia como pelos en tu barba, no habrías bajado antes de considerar la forma de subir\".",
+    "body": "Una zorra que había caído en un pozo llevaba largo rato en él. Un macho cabrío, forzado por la sed, llegó junto al mismo pozo y al verla le preguntó si era buena el agua. Ella, contenta por la coincidencia, se deshacía en elogios del agua, diciendo que era excelente y le animaba a que bajara. Después que bajó despreocupadamente movido por su deseo, apenas hubo apaciguado la sed, miraba con la zorra la forma de subir. Y la zorra, tomando la palabra, dijo:\"Sé algo útil si lo único que quieres es la salvación de ambos. Así pues, apoya tus patas delanteras en el muro y endereza los cuernos, y yo, luego de trepar por encima, también te sacaré\". Atendió éste a la propuesta de buena gana y la zorra, escalando por sus patas, lomo y cuernos, llegó hasta la boca del pozo y, tras salir, se alejó. Al reprocharle el macho cabrío que había incumplido el pacto, se volvió y le dijo:\"Si tuvierastanta inteligencia como pelos en tu barba, no habrías bajado antes de considerar la forma de subir\".",
     "id": "",
     "moral": {
       "type": "explicit",
       "text": "Así también, los hombres sensatos deben mirar las consecuencias de sus acciones y luego aplicarse así a ellas."
     },
-    "extracted_body": "Una zorra que había caído en un pozo llevaba largo rato en él. Un macho cabrío, forzado por la sed, llegó junto al mismo pozo y al verla le preguntó si era buena el agua. Ella, contenta por la coincidencia, se deshacía en elogios del agua, diciendo que era excelente y le animaba a que bajara. Después que bajó despreocupadamente movido por su deseo, apenas hubo apaciguado la sed, miraba con la zorra la forma de subir. Y la zorra, tomando la palabra, dijo: \"Sé algo útil si lo único que quieres es la salvación de ambos. Así pues, apoya tus patas delanteras en el muro y endereza los cuernos, y yo, luego de trepar por encima, también te sacaré\". Atendió éste a la propuesta de buena gana y la zorra, escalando por sus patas, lomo y cuernos, llegó hasta la boca del pozo y, tras salir, se alejó. Al reprocharle el macho cabrío que había incumplido el pacto, se volvió y le dijo: \"Si tuvierastanta inteligencia como pelos en tu barba, no habrías bajado antes de considerar la forma de subir\".",
+    "extracted_body": "Una zorra que había caído en un pozo llevaba largo rato en él. Un macho cabrío, forzado por la sed, llegó junto al mismo pozo y al verla le preguntó si era buena el agua. Ella, contenta por la coincidencia, se deshacía en elogios del agua, diciendo que era excelente y le animaba a que bajara. Después que bajó despreocupadamente movido por su deseo, apenas hubo apaciguado la sed, miraba con la zorra la forma de subir. Y la zorra, tomando la palabra, dijo:\"Sé algo útil si lo único que quieres es la salvación de ambos. Así pues, apoya tus patas delanteras en el muro y endereza los cuernos, y yo, luego de trepar por encima, también te sacaré\". Atendió éste a la propuesta de buena gana y la zorra, escalando por sus patas, lomo y cuernos, llegó hasta la boca del pozo y, tras salir, se alejó. Al reprocharle el macho cabrío que había incumplido el pacto, se volvió y le dijo:\"Si tuvierastanta inteligencia como pelos en tu barba, no habrías bajado antes de considerar la forma de subir\".",
     "extracted_moral": {
       "text": "Así también, los hombres sensatos deben mirar las consecuencias de sus acciones y luego aplicarse así a ellas.",
       "type": "explicit"
     },
-    "doc_length": 216,
+    "doc_length": 210,
     "tokens": [
       [
         "Una",
@@ -11651,127 +11357,127 @@
         95
       ],
       [
-        "dijo",
+        "dijo:\"Sé",
         96
       ],
       [
-        ":",
+        "algo",
         97
       ],
       [
-        "\"",
+        "útil",
         98
       ],
       [
-        "Sé",
+        "si",
         99
       ],
       [
-        "algo",
+        "lo",
         100
       ],
       [
-        "útil",
+        "único",
         101
       ],
       [
-        "si",
+        "que",
         102
       ],
       [
-        "lo",
+        "quieres",
         103
       ],
       [
-        "único",
+        "es",
         104
       ],
       [
-        "que",
+        "la",
         105
       ],
       [
-        "quieres",
+        "salvación",
         106
       ],
       [
-        "es",
+        "de",
         107
       ],
       [
-        "la",
+        "ambos",
         108
       ],
       [
-        "salvación",
+        ".",
         109
       ],
       [
-        "de",
+        "Así",
         110
       ],
       [
-        "ambos",
+        "pues",
         111
       ],
       [
-        ".",
+        ",",
         112
       ],
       [
-        "Así",
+        "apoya",
         113
       ],
       [
-        "pues",
+        "tus",
         114
       ],
       [
-        ",",
+        "patas",
         115
       ],
       [
-        "apoya",
+        "delanteras",
         116
       ],
       [
-        "tus",
+        "en",
         117
       ],
       [
-        "patas",
+        "el",
         118
       ],
       [
-        "delanteras",
+        "muro",
         119
       ],
       [
-        "en",
+        "y",
         120
       ],
       [
-        "el",
+        "endereza",
         121
       ],
       [
-        "muro",
+        "los",
         122
       ],
       [
-        "y",
+        "cuernos",
         123
       ],
       [
-        "endereza",
+        ",",
         124
       ],
       [
-        "los",
+        "y",
         125
       ],
       [
-        "cuernos",
+        "yo",
         126
       ],
       [
@@ -11779,171 +11485,171 @@
         127
       ],
       [
-        "y",
+        "luego",
         128
       ],
       [
-        "yo",
+        "de",
         129
       ],
       [
-        ",",
+        "trepar",
         130
       ],
       [
-        "luego",
+        "por",
         131
       ],
       [
-        "de",
+        "encima",
         132
       ],
       [
-        "trepar",
+        ",",
         133
       ],
       [
-        "por",
+        "también",
         134
       ],
       [
-        "encima",
+        "te",
         135
       ],
       [
-        ",",
+        "sacaré",
         136
       ],
       [
-        "también",
+        "\"",
         137
       ],
       [
-        "te",
+        ".",
         138
       ],
       [
-        "sacaré",
+        "Atendió",
         139
       ],
       [
-        "\"",
+        "éste",
         140
       ],
       [
-        ".",
+        "a",
         141
       ],
       [
-        "Atendió",
+        "la",
         142
       ],
       [
-        "éste",
+        "propuesta",
         143
       ],
       [
-        "a",
+        "de",
         144
       ],
       [
-        "la",
+        "buena",
         145
       ],
       [
-        "propuesta",
+        "gana",
         146
       ],
       [
-        "de",
+        "y",
         147
       ],
       [
-        "buena",
+        "la",
         148
       ],
       [
-        "gana",
+        "zorra",
         149
       ],
       [
-        "y",
+        ",",
         150
       ],
       [
-        "la",
+        "escalando",
         151
       ],
       [
-        "zorra",
+        "por",
         152
       ],
       [
-        ",",
+        "sus",
         153
       ],
       [
-        "escalando",
+        "patas",
         154
       ],
       [
-        "por",
+        ",",
         155
       ],
       [
-        "sus",
+        "lomo",
         156
       ],
       [
-        "patas",
+        "y",
         157
       ],
       [
-        ",",
+        "cuernos",
         158
       ],
       [
-        "lomo",
+        ",",
         159
       ],
       [
-        "y",
+        "llegó",
         160
       ],
       [
-        "cuernos",
+        "hasta",
         161
       ],
       [
-        ",",
+        "la",
         162
       ],
       [
-        "llegó",
+        "boca",
         163
       ],
       [
-        "hasta",
+        "del",
         164
       ],
       [
-        "la",
+        "pozo",
         165
       ],
       [
-        "boca",
+        "y",
         166
       ],
       [
-        "del",
+        ",",
         167
       ],
       [
-        "pozo",
+        "tras",
         168
       ],
       [
-        "y",
+        "salir",
         169
       ],
       [
@@ -11951,184 +11657,160 @@
         170
       ],
       [
-        "tras",
+        "se",
         171
       ],
       [
-        "salir",
+        "alejó",
         172
       ],
       [
-        ",",
+        ".",
         173
       ],
       [
-        "se",
+        "Al",
         174
       ],
       [
-        "alejó",
+        "reprocharle",
         175
       ],
       [
-        ".",
+        "el",
         176
       ],
       [
-        "Al",
+        "macho",
         177
       ],
       [
-        "reprocharle",
+        "cabrío",
         178
       ],
       [
-        "el",
+        "que",
         179
       ],
       [
-        "macho",
+        "había",
         180
       ],
       [
-        "cabrío",
+        "incumplido",
         181
       ],
       [
-        "que",
+        "el",
         182
       ],
       [
-        "había",
+        "pacto",
         183
       ],
       [
-        "incumplido",
+        ",",
         184
       ],
       [
-        "el",
+        "se",
         185
       ],
       [
-        "pacto",
+        "volvió",
         186
       ],
       [
-        ",",
+        "y",
         187
       ],
       [
-        "se",
+        "le",
         188
       ],
       [
-        "volvió",
+        "dijo:\"Si",
         189
       ],
       [
-        "y",
+        "tuvierastanta",
         190
       ],
       [
-        "le",
+        "inteligencia",
         191
       ],
       [
-        "dijo",
+        "como",
         192
       ],
       [
-        ":",
+        "pelos",
         193
       ],
       [
-        "\"",
+        "en",
         194
       ],
       [
-        "Si",
+        "tu",
         195
       ],
       [
-        "tuvierastanta",
+        "barba",
         196
       ],
       [
-        "inteligencia",
+        ",",
         197
       ],
       [
-        "como",
+        "no",
         198
       ],
       [
-        "pelos",
+        "habrías",
         199
       ],
       [
-        "en",
+        "bajado",
         200
       ],
       [
-        "tu",
+        "antes",
         201
       ],
       [
-        "barba",
+        "de",
         202
       ],
       [
-        ",",
+        "considerar",
         203
       ],
       [
-        "no",
+        "la",
         204
       ],
       [
-        "habrías",
+        "forma",
         205
       ],
       [
-        "bajado",
+        "de",
         206
       ],
       [
-        "antes",
+        "subir",
         207
       ],
       [
-        "de",
+        "\"",
         208
       ],
       [
-        "considerar",
-        209
-      ],
-      [
-        "la",
-        210
-      ],
-      [
-        "forma",
-        211
-      ],
-      [
-        "de",
-        212
-      ],
-      [
-        "subir",
-        213
-      ],
-      [
-        "\"",
-        214
-      ],
-      [
         ".",
-        215
+        209
       ]
     ],
     "lemmas": [
@@ -12517,127 +12199,127 @@
         95
       ],
       [
-        "decir",
+        "dijo:\"sé",
         96
       ],
       [
-        ":",
+        "algo",
         97
       ],
       [
-        "\"",
+        "útil",
         98
       ],
       [
-        "saber",
+        "si",
         99
       ],
       [
-        "algo",
+        "él",
         100
       ],
       [
-        "útil",
+        "único",
         101
       ],
       [
-        "si",
+        "que",
         102
       ],
       [
-        "él",
+        "querer",
         103
       ],
       [
-        "único",
+        "ser",
         104
       ],
       [
-        "que",
+        "el",
         105
       ],
       [
-        "querer",
+        "salvación",
         106
       ],
       [
-        "ser",
+        "de",
         107
       ],
       [
-        "el",
+        "ambos",
         108
       ],
       [
-        "salvación",
+        ".",
         109
       ],
       [
-        "de",
+        "así",
         110
       ],
       [
-        "ambos",
+        "pues",
         111
       ],
       [
-        ".",
+        ",",
         112
       ],
       [
-        "así",
+        "apoyar",
         113
       ],
       [
-        "pues",
+        "tu",
         114
       ],
       [
-        ",",
+        "pata",
         115
       ],
       [
-        "apoyar",
+        "delantero",
         116
       ],
       [
-        "tu",
+        "en",
         117
       ],
       [
-        "pata",
+        "el",
         118
       ],
       [
-        "delantero",
+        "muro",
         119
       ],
       [
-        "en",
+        "y",
         120
       ],
       [
-        "el",
+        "enderezar",
         121
       ],
       [
-        "muro",
+        "el",
         122
       ],
       [
-        "y",
+        "cuerno",
         123
       ],
       [
-        "enderezar",
+        ",",
         124
       ],
       [
-        "el",
+        "y",
         125
       ],
       [
-        "cuerno",
+        "yo",
         126
       ],
       [
@@ -12645,171 +12327,171 @@
         127
       ],
       [
-        "y",
+        "luego",
         128
       ],
       [
-        "yo",
+        "de",
         129
       ],
       [
-        ",",
+        "trepar",
         130
       ],
       [
-        "luego",
+        "por",
         131
       ],
       [
-        "de",
+        "encima",
         132
       ],
       [
-        "trepar",
+        ",",
         133
       ],
       [
-        "por",
+        "también",
         134
       ],
       [
-        "encima",
+        "tú",
         135
       ],
       [
-        ",",
+        "sacar",
         136
       ],
       [
-        "también",
+        "\"",
         137
       ],
       [
-        "tú",
+        ".",
         138
       ],
       [
-        "sacar",
+        "atender",
         139
       ],
       [
-        "\"",
+        "este",
         140
       ],
       [
-        ".",
+        "a",
         141
       ],
       [
-        "atender",
+        "el",
         142
       ],
       [
-        "este",
+        "propuesta",
         143
       ],
       [
-        "a",
+        "de",
         144
       ],
       [
-        "el",
+        "buen",
         145
       ],
       [
-        "propuesta",
+        "gana",
         146
       ],
       [
-        "de",
+        "y",
         147
       ],
       [
-        "buen",
+        "el",
         148
       ],
       [
-        "gana",
+        "zorra",
         149
       ],
       [
-        "y",
+        ",",
         150
       ],
       [
-        "el",
+        "escalar",
         151
       ],
       [
-        "zorra",
+        "por",
         152
       ],
       [
-        ",",
+        "su",
         153
       ],
       [
-        "escalar",
+        "pata",
         154
       ],
       [
-        "por",
+        ",",
         155
       ],
       [
-        "su",
+        "lomo",
         156
       ],
       [
-        "pata",
+        "y",
         157
       ],
       [
-        ",",
+        "cuerno",
         158
       ],
       [
-        "lomo",
+        ",",
         159
       ],
       [
-        "y",
+        "llegar",
         160
       ],
       [
-        "cuerno",
+        "hasta",
         161
       ],
       [
-        ",",
+        "el",
         162
       ],
       [
-        "llegar",
+        "boca",
         163
       ],
       [
-        "hasta",
+        "del",
         164
       ],
       [
-        "el",
+        "pozo",
         165
       ],
       [
-        "boca",
+        "y",
         166
       ],
       [
-        "del",
+        ",",
         167
       ],
       [
-        "pozo",
+        "tras",
         168
       ],
       [
-        "y",
+        "salir",
         169
       ],
       [
@@ -12817,71 +12499,71 @@
         170
       ],
       [
-        "tras",
+        "él",
         171
       ],
       [
-        "salir",
+        "alejar",
         172
       ],
       [
-        ",",
+        ".",
         173
       ],
       [
-        "él",
+        "al",
         174
       ],
       [
-        "alejar",
+        "reprochar él",
         175
       ],
       [
-        ".",
+        "el",
         176
       ],
       [
-        "al",
+        "macho",
         177
       ],
       [
-        "reprochar él",
+        "cabrío",
         178
       ],
       [
-        "el",
+        "que",
         179
       ],
       [
-        "macho",
+        "haber",
         180
       ],
       [
-        "cabrío",
+        "incumplir",
         181
       ],
       [
-        "que",
+        "el",
         182
       ],
       [
-        "haber",
+        "pacto",
         183
       ],
       [
-        "incumplir",
+        ",",
         184
       ],
       [
-        "el",
+        "él",
         185
       ],
       [
-        "pacto",
+        "volver",
         186
       ],
       [
-        ",",
+        "y",
         187
       ],
       [
@@ -12889,112 +12571,88 @@
         188
       ],
       [
-        "volver",
+        "dijo:\"si",
         189
       ],
       [
-        "y",
+        "tuvierastanto",
         190
       ],
       [
-        "él",
+        "inteligencia",
         191
       ],
       [
-        "decir",
+        "como",
         192
       ],
       [
-        ":",
+        "pelo",
         193
       ],
       [
-        "\"",
+        "en",
         194
       ],
       [
-        "Si",
+        "tu",
         195
       ],
       [
-        "tuvierastanto",
+        "barba",
         196
       ],
       [
-        "inteligencia",
+        ",",
         197
       ],
       [
-        "como",
+        "no",
         198
       ],
       [
-        "pelo",
+        "habriar",
         199
       ],
       [
-        "en",
+        "bajar",
         200
       ],
       [
-        "tu",
+        "antes",
         201
       ],
       [
-        "barba",
+        "de",
         202
       ],
       [
-        ",",
+        "considerar",
         203
       ],
       [
-        "no",
+        "el",
         204
       ],
       [
-        "habriar",
+        "forma",
         205
       ],
       [
-        "bajar",
+        "de",
         206
       ],
       [
-        "antes",
+        "subir",
         207
       ],
       [
-        "de",
+        "\"",
         208
       ],
       [
-        "considerar",
-        209
-      ],
-      [
-        "el",
-        210
-      ],
-      [
-        "forma",
-        211
-      ],
-      [
-        "de",
-        212
-      ],
-      [
-        "subir",
-        213
-      ],
-      [
-        "\"",
-        214
-      ],
-      [
         ".",
-        215
+        209
       ]
     ],
     "pos_tags": [
@@ -13383,19 +13041,7 @@
         "PUNCT"
       ],
       [
-        "dijo",
-        "VERB"
-      ],
-      [
-        ":",
-        "PUNCT"
-      ],
-      [
-        "\"",
-        "PUNCT"
-      ],
-      [
-        "Sé",
+        "dijo:\"Sé",
         "VERB"
       ],
       [
@@ -13767,20 +13413,8 @@
         "PRON"
       ],
       [
-        "dijo",
+        "dijo:\"Si",
         "VERB"
-      ],
-      [
-        ":",
-        "PUNCT"
-      ],
-      [
-        "\"",
-        "PUNCT"
-      ],
-      [
-        "Si",
-        "SCONJ"
       ],
       [
         "tuvierastanta",
@@ -13891,20 +13525,20 @@
       [
         "Así pues, apoya tus patas delanteras en el muro",
         "MISC",
-        113,
-        123
+        110,
+        120
       ],
       [
         "Atendió",
         "PER",
-        142,
-        143
+        139,
+        140
       ],
       [
         "Al reprocharle el macho cabrío",
         "MISC",
-        177,
-        182
+        174,
+        179
       ]
     ],
     "sentences": [
@@ -13949,19 +13583,19 @@
         }
       },
       {
-        "text": "Y la zorra, tomando la palabra, dijo: \"Sé algo útil si lo único que quieres es la salvación de ambos.",
+        "text": "Y la zorra, tomando la palabra, dijo:\"Sé algo útil si lo único que quieres es la salvación de ambos.",
         "start": 88,
-        "end": 113,
+        "end": 110,
         "root": {
-          "text": "dijo",
+          "text": "dijo:\"Sé",
           "pos": "VERB",
           "dep": "ROOT"
         }
       },
       {
         "text": "Así pues, apoya tus patas delanteras en el muro y endereza los cuernos, y yo, luego de trepar por encima, también te sacaré\".",
-        "start": 113,
-        "end": 142,
+        "start": 110,
+        "end": 139,
         "root": {
           "text": "apoya",
           "pos": "VERB",
@@ -13970,8 +13604,8 @@
       },
       {
         "text": "Atendió éste a la propuesta de buena gana y la zorra, escalando por sus patas, lomo y cuernos, llegó hasta la boca del pozo y, tras salir, se alejó.",
-        "start": 142,
-        "end": 177,
+        "start": 139,
+        "end": 174,
         "root": {
           "text": "Atendió",
           "pos": "VERB",
@@ -13979,9 +13613,9 @@
         }
       },
       {
-        "text": "Al reprocharle el macho cabrío que había incumplido el pacto, se volvió y le dijo: \"Si tuvierastanta inteligencia como pelos en tu barba, no habrías bajado antes de considerar la forma de subir\".",
-        "start": 177,
-        "end": 216,
+        "text": "Al reprocharle el macho cabrío que había incumplido el pacto, se volvió y le dijo:\"Si tuvierastanta inteligencia como pelos en tu barba, no habrías bajado antes de considerar la forma de subir\".",
+        "start": 174,
+        "end": 210,
         "root": {
           "text": "volvió",
           "pos": "VERB",
