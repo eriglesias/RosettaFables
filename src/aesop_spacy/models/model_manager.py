@@ -7,7 +7,7 @@ import importlib.util
 # Define language-model mapping
 LANGUAGE_MODELS = {
     'nl': 'nl_core_news_lg',    # Dutch
-    'de': 'de_dep_news_trf',    # German
+    'de': 'de_core_news_lg',    # German
     'en': 'en_core_web_lg',     # English
     'es': 'es_core_news_md',    # Spanish
     'xx': 'xx_sent_ud_sm'       # Multilingual (fallback)
