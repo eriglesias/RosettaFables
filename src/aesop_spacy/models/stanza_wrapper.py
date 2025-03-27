@@ -8,7 +8,7 @@ from typing import List, Optional, Union, Iterator, Any
 
 class Token:
     """Simple class to mimic essential functionality of spaCy's Token class."""
-    
+
     def __init__(self, text: str, pos: Optional[str] = None, 
                 lemma: Optional[str] = None, i: Optional[int] = None):
         self.text = text
@@ -21,27 +21,27 @@ class Token:
         self.is_alpha = text.isalpha() if text else False
         self.dep_ = ""  # Dependency relation
         self.head = self  # Head token (self-reference by default)
-        
+
     def __str__(self) -> str:
         return self.text
-    
+
     def __repr__(self) -> str:
         return f"Token({self.text}, pos={self.pos_}, lemma={self.lemma_})"
 
 
 class Span:
     """Simple class to mimic essential functionality of spaCy's Span class."""
-    
+
     def __init__(self, token_indexes: List[int], text: str, tokens: Optional[List[Token]] = None):
         self.text = text
         self.start = token_indexes[0] if token_indexes else 0
         self.end = token_indexes[-1] + 1 if token_indexes else 0
         self.token_indexes = token_indexes
         self._tokens = tokens  # Optional reference to actual tokens
-        
+
     def __repr__(self) -> str:
         return f"Span({self.text})"
-    
+
     def __iter__(self) -> Iterator[Token]:
         """Iterate through tokens if we have them."""
         if self._tokens:
@@ -52,7 +52,7 @@ class Span:
 
 class CompatibleDoc:
     """Custom document class that mimics essential spaCy Doc functionality."""
-    
+
     def __init__(self, text: str):
         self.text = text
         self.tokens: List[Token] = []  # Will store Token objects
@@ -60,26 +60,26 @@ class CompatibleDoc:
         self.ents: List[Any] = []    # Named entities (empty list as placeholder)
         self.sentence_spans: List[Span] = []  # Will hold sentence spans
         self.vector: List[float] = []  # Empty vector for compatibility
-        
+
         # Make sentences attribute refer to sentence_spans for compatibility
         # with model_manager.py's expectations
         self.sentences = self.sentence_spans
-    
+
     def __len__(self) -> int:
         """Return number of tokens, similar to spaCy's behavior."""
         return len(self.tokens)
-        
+
     def __getitem__(self, key: Union[int, slice]) -> Union[Token, List[Token]]:
         """Support indexing to access tokens."""
         if isinstance(key, slice):
             # Return a list of tokens for slices
             return self.tokens[key]
         return self.tokens[key]
-    
+
     def __iter__(self) -> Iterator[Token]:
         """Make the document iterable over tokens."""
         return iter(self.tokens)
-    
+
     @property
     def sents(self) -> Iterator[Span]:
         """Return an iterator over sentence spans, similar to spaCy."""
@@ -91,14 +91,14 @@ class StanzaDocAdapter:
     Adapter class that converts Stanza documents to a format compatible with 
     our pipeline (mimicking spaCy interface).
     """
-    
+
     def __init__(self):
         self.logger = logging.getLogger(__name__)
-        
+ 
     def convert(self, stanza_doc: Any, text: str) -> CompatibleDoc:
         """Convert Stanza document to a format compatible with existing code."""
         doc = CompatibleDoc(text)
-        
+
         # Extract sentences
         token_idx = 0
         for sent_idx, sent in enumerate(stanza_doc.sentences):
@@ -110,7 +110,7 @@ class StanzaDocAdapter:
                     sent_text = " ".join([w.text for w in sent.words])
                 elif hasattr(sent, 'tokens'):
                     sent_text = " ".join([t.text for t in sent.tokens])
-            
+  
             # Approximate start and end positions
             sent_start = text.find(sent_text) if sent_text else -1
             if sent_start < 0:

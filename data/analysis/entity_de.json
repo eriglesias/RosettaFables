@@ -1,0 +1,42 @@
+{
+  "LOC": {
+    "percentage": 40.0,
+    "count": 14,
+    "examples": [
+      "Landmaus",
+      "Stadtmaus",
+      "Stadt",
+      "Abendschmauses",
+      "Lobsprüche"
+    ]
+  },
+  "MISC": {
+    "percentage": 31.428571428571427,
+    "count": 11,
+    "examples": [
+      "Unverschämter",
+      "sei.\"Du bist",
+      "Frieden",
+      "Wolf,\"du",
+      "Ist es dir nicht Belohnung"
+    ]
+  },
+  "PER": {
+    "percentage": 25.71428571428571,
+    "count": 9,
+    "examples": [
+      "hervorkroch",
+      "Lieber",
+      "Spatz",
+      "Großmütig",
+      "Gierig"
+    ]
+  },
+  "ORG": {
+    "percentage": 2.857142857142857,
+    "count": 1,
+    "examples": [
+      "ihr,\"daß du"
+    ]
+  }
+}
