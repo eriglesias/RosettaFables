@@ -41,7 +41,6 @@ class FablePipeline:
         self.processor = FableProcessor()
         self.serializer = SpacySerializer()
         self.writer = OutputWriter(output_dir)
-   
         self.logger.info("Fable pipeline initialized")
         self.logger.info("Data directory: %s", data_dir)
         self.logger.info("Output directory: %s", output_dir)
