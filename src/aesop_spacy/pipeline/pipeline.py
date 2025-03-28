@@ -51,28 +51,29 @@ class FablePipeline:
         
         Args:
             use_processed: If True, load from processed files when available.
-                          If False, always process from raw files.
+                        If False, always process from raw files.
         
         Returns:
             True if the pipeline completed successfully
         """
         self.logger.info("Starting fable processing pipeline (use_processed=%s)", use_processed)
 
-        if use_processed and self._processed_files_exist():
-            # Load directly from processed files
+        # Check if ALL expected language files exist
+        all_files_exist = use_processed and self._processed_files_exist(check_all_languages=True)
+        
+        if all_files_exist:
+            # All files exist, just load them
             fables_by_language = self._load_from_processed()
- 
             # Log what we found
             total_fables = sum(len(fables) for fables in fables_by_language.values())
             self.logger.info("Loaded %d fables from processed files across %d languages", 
-                             total_fables, len(fables_by_language))
-
+                            total_fables, len(fables_by_language))
             return True
-
-        # Regular processing from raw files
+        
+        # Regular processing with the loader which will handle missing files
         self.logger.info("Processing from raw files")
         fables_by_language = self.loader.load_all()
-
+        
         # Log what we found
         total_fables = sum(len(fables) for fables in fables_by_language.values())
         self.logger.info("Loaded %d fables across %d languages", 
@@ -85,15 +86,32 @@ class FablePipeline:
         self.logger.info("Pipeline execution completed successfully")
         return True
 
-    def _processed_files_exist(self):
-        """Check if processed files already exist."""
+    def _processed_files_exist(self, check_all_languages=True):
+        """
+        Check if processed files already exist.
+        
+        Args:
+            check_all_languages: If True, check that ALL expected language files exist
+                                If False, check if ANY language files exist
+        """
         processed_dir = self.output_dir / "processed"
-
         if not processed_dir.exists():
             return False
-
-        json_files = list(processed_dir.glob("fables_*.json"))
-        return len(json_files) > 0
+            
+        # Expected languages
+        expected_langs = ['en', 'de', 'nl', 'es', 'grc']
+        
+        if check_all_languages:
+            # Check that ALL expected languages exist
+            for lang in expected_langs:
+                if not (processed_dir / f"fables_{lang}.json").exists():
+                    self.logger.info("Missing language file: %s", lang)
+                    return False
+            return True
+        else:
+            # Check if ANY language files exist
+            json_files = list(processed_dir.glob("fables_*.json"))
+            return len(json_files) > 0
 
     def _load_from_processed(self):
         """Load fables directly from processed JSON files."""
