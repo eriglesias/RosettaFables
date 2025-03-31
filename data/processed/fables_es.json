@@ -1,16 +1,76 @@
 [
   {
-    "title": "El lobo y el cordero",
+    "title": "El Lobo y el Cordero",
     "language": "es",
     "source": "Aesop's Original Collection",
     "version": "1",
-    "body": "Un lobo que vio a un cordero beber en un río quiso devorarlo con un pretexto razonable. Por eso, aunque el lobo estaba situado río arriba, le acusó de haber removido el agua y no dejarle beber. El cordero le dijo que bebía con la punta del hocico y que además no era posible, estando él río abajo, remover el agua de arriba; mas el lobo, al fracasar en ese pretexto, dijo:\"El año pasado injuriaste a mi padre\". Sin embargo, el cordero dijo que ni siquiera tenía un año de vida, a lo que el lobo replicó:\"Aunque tengas abundantes justificaciones, no voy a dejar de devorarte\".",
+    "body": "Un Lobo que vio a un Cordero beber en un río quiso devorarlo con un pretexto razonable. Por eso, aunque el Lobo estaba situado río arriba, le acusó de haber removido el agua y no dejarle beber. El Cordero le dijo que bebía con la punta del hocico y que además no era posible, estando él río abajo, remover el agua de arriba; mas el Lobo, al fracasar en ese pretexto, dijo:\"El año pasado injuriaste a mi padre\". Sin embargo, el Cordero dijo que ni siquiera tenía un año de vida, a lo que el Lobo replicó:\"Aunque tengas abundantes justificaciones, no voy a dejar de devorarte\".",
     "id": "1",
     "moral": {
       "type": "unknown",
       "text": "La fábula muestra que no tiene fuerza una defensa justa con quienes tienen la voluntad de hacer daño."
     },
-    "extracted_body": "Un lobo que vio a un cordero beber en un río quiso devorarlo con un pretexto razonable. Por eso, aunque el lobo estaba situado río arriba, le acusó de haber removido el agua y no dejarle beber. El cordero le dijo que bebía con la punta del hocico y que además no era posible, estando él río abajo, remover el agua de arriba; mas el lobo, al fracasar en ese pretexto, dijo:\"El año pasado injuriaste a mi padre\". Sin embargo, el cordero dijo que ni siquiera tenía un año de vida, a lo que el lobo replicó:\"Aunque tengas abundantes justificaciones, no voy a dejar de devorarte\".",
+    "canonical_forms": {
+      "lobo": "Lobo",
+      "cordero": "Cordero",
+      "zorro": "Zorro",
+      "león": "León",
+      "ratón": "Ratón",
+      "grulla": "Grulla",
+      "cabra": "Cabra",
+      "mosquito": "Mosquito",
+      "que": "que",
+      "vio": "vio",
+      "beber": "beber",
+      "río": "río",
+      "quiso": "quiso",
+      "devorarlo": "devorarlo",
+      "con": "con",
+      "pretexto": "pretexto",
+      "razonable": "razonable",
+      "por": "Por",
+      "eso": "eso",
+      "aunque": "Aunque",
+      "estaba": "estaba",
+      "situado": "situado",
+      "arriba": "arriba",
+      "acusó": "acusó",
+      "haber": "haber",
+      "removido": "removido",
+      "agua": "agua",
+      "dejarle": "dejarle",
+      "dijo": "dijo",
+      "bebía": "bebía",
+      "punta": "punta",
+      "del": "del",
+      "hocico": "hocico",
+      "además": "además",
+      "era": "era",
+      "posible": "posible",
+      "estando": "estando",
+      "abajo": "abajo",
+      "remover": "remover",
+      "mas": "mas",
+      "fracasar": "fracasar",
+      "ese": "ese",
+      "año": "año",
+      "pasado": "pasado",
+      "injuriaste": "injuriaste",
+      "padre": "padre",
+      "sin": "Sin",
+      "embargo": "embargo",
+      "siquiera": "siquiera",
+      "tenía": "tenía",
+      "vida": "vida",
+      "replicó": "replicó",
+      "tengas": "tengas",
+      "abundantes": "abundantes",
+      "justificaciones": "justificaciones",
+      "voy": "voy",
+      "dejar": "dejar",
+      "devorarte": "devorarte"
+    },
+    "extracted_body": "Un Lobo que vio a un Cordero beber en un río quiso devorarlo con un pretexto razonable. Por eso, aunque el Lobo estaba situado río arriba, le acusó de haber removido el agua y no dejarle beber. El Cordero le dijo que bebía con la punta del hocico y que además no era posible, estando él río abajo, remover el agua de arriba; mas el Lobo, al fracasar en ese pretexto, dijo:\"El año pasado injuriaste a mi padre\". Sin embargo, el Cordero dijo que ni siquiera tenía un año de vida, a lo que el Lobo replicó:\"Aunque tengas abundantes justificaciones, no voy a dejar de devorarte\".",
     "extracted_moral": {
       "text": "La fábula muestra que no tiene fuerza una defensa justa con quienes tienen la voluntad de hacer daño.",
       "type": "unknown"
@@ -22,7 +82,7 @@
         0
       ],
       [
-        "lobo",
+        "Lobo",
         1
       ],
       [
@@ -42,7 +102,7 @@
         5
       ],
       [
-        "cordero",
+        "Cordero",
         6
       ],
       [
@@ -110,7 +170,7 @@
         22
       ],
       [
-        "lobo",
+        "Lobo",
         23
       ],
       [
@@ -186,7 +246,7 @@
         41
       ],
       [
-        "cordero",
+        "Cordero",
         42
       ],
       [
@@ -306,7 +366,7 @@
         71
       ],
       [
-        "lobo",
+        "Lobo",
         72
       ],
       [
@@ -390,7 +450,7 @@
         92
       ],
       [
-        "cordero",
+        "Cordero",
         93
       ],
       [
@@ -450,7 +510,7 @@
         107
       ],
       [
-        "lobo",
+        "Lobo",
         108
       ],
       [
@@ -512,7 +572,7 @@
         0
       ],
       [
-        "lobo",
+        "Lobo",
         1
       ],
       [
@@ -532,7 +592,7 @@
         5
       ],
       [
-        "cordero",
+        "Cordero",
         6
       ],
       [
@@ -600,7 +660,7 @@
         22
       ],
       [
-        "lobo",
+        "Lobo",
         23
       ],
       [
@@ -676,7 +736,7 @@
         41
       ],
       [
-        "cordero",
+        "Cordero",
         42
       ],
       [
@@ -796,7 +856,7 @@
         71
       ],
       [
-        "lobo",
+        "Lobo",
         72
       ],
       [
@@ -880,7 +940,7 @@
         92
       ],
       [
-        "cordero",
+        "Cordero",
         93
       ],
       [
@@ -940,11 +1000,11 @@
         107
       ],
       [
-        "lobo",
+        "Lobo",
         108
       ],
       [
-        "replicó:\"aunque",
+        "replicó:\"Aunque",
         109
       ],
       [
@@ -1002,8 +1062,8 @@
         "DET"
       ],
       [
-        "lobo",
-        "NOUN"
+        "Lobo",
+        "PROPN"
       ],
       [
         "que",
@@ -1022,8 +1082,8 @@
         "DET"
       ],
       [
-        "cordero",
-        "NOUN"
+        "Cordero",
+        "PROPN"
       ],
       [
         "beber",
@@ -1090,8 +1150,8 @@
         "DET"
       ],
       [
-        "lobo",
-        "NOUN"
+        "Lobo",
+        "PROPN"
       ],
       [
         "estaba",
@@ -1166,8 +1226,8 @@
         "DET"
       ],
       [
-        "cordero",
-        "NOUN"
+        "Cordero",
+        "PROPN"
       ],
       [
         "le",
@@ -1286,8 +1346,8 @@
         "DET"
       ],
       [
-        "lobo",
-        "NOUN"
+        "Lobo",
+        "PROPN"
       ],
       [
         ",",
@@ -1370,8 +1430,8 @@
         "DET"
       ],
       [
-        "cordero",
-        "NOUN"
+        "Cordero",
+        "PROPN"
       ],
       [
         "dijo",
@@ -1430,12 +1490,12 @@
         "DET"
       ],
       [
-        "lobo",
-        "NOUN"
+        "Lobo",
+        "PROPN"
       ],
       [
         "replicó:\"Aunque",
-        "PRON"
+        "SCONJ"
       ],
       [
         "tengas",
@@ -1488,16 +1548,34 @@
     ],
     "entities": [
       [
-        "Por eso, aunque el lobo",
+        "Lobo",
+        "PER",
+        1,
+        2
+      ],
+      [
+        "Cordero",
+        "LOC",
+        6,
+        7
+      ],
+      [
+        "Por eso, aunque el Lobo",
         "MISC",
         18,
         24
       ],
       [
-        "El cordero",
-        "MISC",
+        "El Cordero",
+        "PER",
         41,
         43
+      ],
+      [
+        "Lobo",
+        "MISC",
+        72,
+        73
       ],
       [
         "injuriaste",
@@ -1506,15 +1584,21 @@
         84
       ],
       [
-        "Sin embargo, el cordero",
+        "Sin embargo, el Cordero",
         "MISC",
         89,
         94
+      ],
+      [
+        "Lobo replicó:\"Aunque",
+        "MISC",
+        108,
+        110
       ]
     ],
     "sentences": [
       {
-        "text": "Un lobo que vio a un cordero beber en un río quiso devorarlo con un pretexto razonable.",
+        "text": "Un Lobo que vio a un Cordero beber en un río quiso devorarlo con un pretexto razonable.",
         "start": 0,
         "end": 18,
         "root": {
@@ -1524,7 +1608,7 @@
         }
       },
       {
-        "text": "Por eso, aunque el lobo estaba situado río arriba, le acusó de haber removido el agua y no dejarle beber.",
+        "text": "Por eso, aunque el Lobo estaba situado río arriba, le acusó de haber removido el agua y no dejarle beber.",
         "start": 18,
         "end": 41,
         "root": {
@@ -1534,7 +1618,7 @@
         }
       },
       {
-        "text": "El cordero le dijo que bebía con la punta del hocico y que además no era posible, estando él río abajo, remover el agua de arriba; mas el lobo, al fracasar en ese pretexto, dijo:\"El año pasado injuriaste a mi padre\".",
+        "text": "El Cordero le dijo que bebía con la punta del hocico y que además no era posible, estando él río abajo, remover el agua de arriba; mas el Lobo, al fracasar en ese pretexto, dijo:\"El año pasado injuriaste a mi padre\".",
         "start": 41,
         "end": 89,
         "root": {
@@ -1544,7 +1628,7 @@
         }
       },
       {
-        "text": "Sin embargo, el cordero dijo que ni siquiera tenía un año de vida, a lo que el lobo replicó:\"Aunque tengas abundantes justificaciones, no voy a dejar de devorarte\".",
+        "text": "Sin embargo, el Cordero dijo que ni siquiera tenía un año de vida, a lo que el Lobo replicó:\"Aunque tengas abundantes justificaciones, no voy a dejar de devorarte\".",
         "start": 89,
         "end": 122,
         "root": {
@@ -1688,17 +1772,127 @@
     }
   },
   {
-    "title": "El ratón de campo y el de ciudad",
+    "title": "El Ratón de campo y el de ciudad",
     "language": "es",
     "source": "Aesop's Original Collection",
     "version": "1",
-    "body": "Un ratón de campo era amigo de otro que vivía en una casa. El de la casa, invitado por su amigo, fue primero a cenar al campo. Después de haber comido cebada y trigo, dijo:\"Reconócelo, amigo, llevas la vida de las hormigas, pero, ya que yo tengo multitud de bienes, ven conmigo y disfrutarás de todo\". Y, al instante, los dos se fueron. Y el de la casa le mostró legumbres y trigo, y además dátiles, queso, miel, frutos. Aquél a su vez, admirándole, lo elogiaba vehementemente y maldecía su propia suerte. Cuando se disponían a empezar a comer, de repente un hombre abrió la puerta. Atemorizados por el ruido, los ratones se lanzaron a los agujeros. Cuando quisieron de nuevo coger unos higos secos, llegó otro hombre para retirar algo de lo que había dentro. Al verlo los ratones, de nuevo se precipitaron a ocultarse en un escondrijo. El ratón de campo, sobreponiéndose al hambre, suspiró y dijo al otro:\"Disfruta tú, amigo, con tu comida hasta que te hartes, gozándolo con placer y peligro y mucho miedo; yo, desdichado, viviré despreocupadamente sin temer a nadie, comiendo cebada y trigo\".",
+    "body": "Un Ratón de campo era amigo de otro que vivía en una casa. El de la casa, invitado por su amigo, fue primero a cenar al campo. Después de haber comido cebada y trigo, dijo:\"Reconócelo, amigo, llevas la vida de las hormigas, pero, ya que yo tengo multitud de bienes, ven conmigo y disfrutarás de todo\". Y, al instante, los dos se fueron. Y el de la casa le mostró legumbres y trigo, y además dátiles, queso, miel, frutos. Aquél a su vez, admirándole, lo elogiaba vehementemente y maldecía su propia suerte. Cuando se disponían a empezar a comer, de repente un hombre abrió la puerta. Atemorizados por el ruido, los ratones se lanzaron a los agujeros. Cuando quisieron de nuevo coger unos higos secos, llegó otro hombre para retirar algo de lo que había dentro. Al verlo los ratones, de nuevo se precipitaron a ocultarse en un escondrijo. El Ratón de campo, sobreponiéndose al hambre, suspiró y dijo al otro:\"Disfruta tú, amigo, con tu comida hasta que te hartes, gozándolo con placer y peligro y mucho miedo; yo, desdichado, viviré despreocupadamente sin temer a nadie, comiendo cebada y trigo\".",
     "id": "2",
     "moral": {
       "type": "explicit",
       "text": "La fábula muestra que pasar la vida con sencillez y vivir con tranquilidad está por encima de una vida regalada con miedo y con dolor."
     },
-    "extracted_body": "Un ratón de campo era amigo de otro que vivía en una casa. El de la casa, invitado por su amigo, fue primero a cenar al campo. Después de haber comido cebada y trigo, dijo:\"Reconócelo, amigo, llevas la vida de las hormigas, pero, ya que yo tengo multitud de bienes, ven conmigo y disfrutarás de todo\". Y, al instante, los dos se fueron. Y el de la casa le mostró legumbres y trigo, y además dátiles, queso, miel, frutos. Aquél a su vez, admirándole, lo elogiaba vehementemente y maldecía su propia suerte. Cuando se disponían a empezar a comer, de repente un hombre abrió la puerta. Atemorizados por el ruido, los ratones se lanzaron a los agujeros. Cuando quisieron de nuevo coger unos higos secos, llegó otro hombre para retirar algo de lo que había dentro. Al verlo los ratones, de nuevo se precipitaron a ocultarse en un escondrijo. El ratón de campo, sobreponiéndose al hambre, suspiró y dijo al otro:\"Disfruta tú, amigo, con tu comida hasta que te hartes, gozándolo con placer y peligro y mucho miedo; yo, desdichado, viviré despreocupadamente sin temer a nadie, comiendo cebada y trigo\".",
+    "canonical_forms": {
+      "lobo": "Lobo",
+      "cordero": "Cordero",
+      "zorro": "Zorro",
+      "león": "León",
+      "ratón": "Ratón",
+      "grulla": "Grulla",
+      "cabra": "Cabra",
+      "mosquito": "Mosquito",
+      "campo": "campo",
+      "era": "era",
+      "amigo": "amigo",
+      "otro": "otro",
+      "que": "que",
+      "vivía": "vivía",
+      "una": "una",
+      "casa": "casa",
+      "invitado": "invitado",
+      "por": "por",
+      "fue": "fue",
+      "primero": "primero",
+      "cenar": "cenar",
+      "después": "Después",
+      "haber": "haber",
+      "comido": "comido",
+      "cebada": "cebada",
+      "trigo": "trigo",
+      "dijo": "dijo",
+      "reconócelo": "Reconócelo",
+      "llevas": "llevas",
+      "vida": "vida",
+      "las": "las",
+      "hormigas": "hormigas",
+      "pero": "pero",
+      "tengo": "tengo",
+      "multitud": "multitud",
+      "bienes": "bienes",
+      "ven": "ven",
+      "conmigo": "conmigo",
+      "disfrutarás": "disfrutarás",
+      "todo": "todo",
+      "instante": "instante",
+      "los": "los",
+      "dos": "dos",
+      "fueron": "fueron",
+      "mostró": "mostró",
+      "legumbres": "legumbres",
+      "además": "además",
+      "dátiles": "dátiles",
+      "queso": "queso",
+      "miel": "miel",
+      "frutos": "frutos",
+      "aquél": "Aquél",
+      "vez": "vez",
+      "admirándole": "admirándole",
+      "elogiaba": "elogiaba",
+      "vehementemente": "vehementemente",
+      "maldecía": "maldecía",
+      "propia": "propia",
+      "suerte": "suerte",
+      "cuando": "Cuando",
+      "disponían": "disponían",
+      "empezar": "empezar",
+      "comer": "comer",
+      "repente": "repente",
+      "hombre": "hombre",
+      "abrió": "abrió",
+      "puerta": "puerta",
+      "atemorizados": "Atemorizados",
+      "ruido": "ruido",
+      "ratones": "ratones",
+      "lanzaron": "lanzaron",
+      "agujeros": "agujeros",
+      "quisieron": "quisieron",
+      "nuevo": "nuevo",
+      "coger": "coger",
+      "unos": "unos",
+      "higos": "higos",
+      "secos": "secos",
+      "llegó": "llegó",
+      "para": "para",
+      "retirar": "retirar",
+      "algo": "algo",
+      "había": "había",
+      "dentro": "dentro",
+      "verlo": "verlo",
+      "precipitaron": "precipitaron",
+      "ocultarse": "ocultarse",
+      "escondrijo": "escondrijo",
+      "sobreponiéndose": "sobreponiéndose",
+      "hambre": "hambre",
+      "suspiró": "suspiró",
+      "disfruta": "Disfruta",
+      "con": "con",
+      "comida": "comida",
+      "hasta": "hasta",
+      "hartes": "hartes",
+      "gozándolo": "gozándolo",
+      "placer": "placer",
+      "peligro": "peligro",
+      "mucho": "mucho",
+      "miedo": "miedo",
+      "desdichado": "desdichado",
+      "viviré": "viviré",
+      "despreocupadamente": "despreocupadamente",
+      "sin": "sin",
+      "temer": "temer",
+      "nadie": "nadie",
+      "comiendo": "comiendo"
+    },
+    "extracted_body": "Un Ratón de campo era amigo de otro que vivía en una casa. El de la casa, invitado por su amigo, fue primero a cenar al campo. Después de haber comido cebada y trigo, dijo:\"Reconócelo, amigo, llevas la vida de las hormigas, pero, ya que yo tengo multitud de bienes, ven conmigo y disfrutarás de todo\". Y, al instante, los dos se fueron. Y el de la casa le mostró legumbres y trigo, y además dátiles, queso, miel, frutos. Aquél a su vez, admirándole, lo elogiaba vehementemente y maldecía su propia suerte. Cuando se disponían a empezar a comer, de repente un hombre abrió la puerta. Atemorizados por el ruido, los ratones se lanzaron a los agujeros. Cuando quisieron de nuevo coger unos higos secos, llegó otro hombre para retirar algo de lo que había dentro. Al verlo los ratones, de nuevo se precipitaron a ocultarse en un escondrijo. El Ratón de campo, sobreponiéndose al hambre, suspiró y dijo al otro:\"Disfruta tú, amigo, con tu comida hasta que te hartes, gozándolo con placer y peligro y mucho miedo; yo, desdichado, viviré despreocupadamente sin temer a nadie, comiendo cebada y trigo\".",
     "extracted_moral": {
       "text": "La fábula muestra que pasar la vida con sencillez y vivir con tranquilidad está por encima de una vida regalada con miedo y con dolor.",
       "type": "explicit"
@@ -1710,7 +1904,7 @@
         0
       ],
       [
-        "ratón",
+        "Ratón",
         1
       ],
       [
@@ -2430,7 +2624,7 @@
         180
       ],
       [
-        "ratón",
+        "Ratón",
         181
       ],
       [
@@ -2640,7 +2834,7 @@
         0
       ],
       [
-        "ratón",
+        "Ratón",
         1
       ],
       [
@@ -3360,7 +3554,7 @@
         180
       ],
       [
-        "ratón",
+        "Ratón",
         181
       ],
       [
@@ -3570,8 +3764,8 @@
         "DET"
       ],
       [
-        "ratón",
-        "NOUN"
+        "Ratón",
+        "PROPN"
       ],
       [
         "de",
@@ -4290,8 +4484,8 @@
         "DET"
       ],
       [
-        "ratón",
-        "NOUN"
+        "Ratón",
+        "PROPN"
       ],
       [
         "de",
@@ -4496,6 +4690,12 @@
     ],
     "entities": [
       [
+        "Ratón de campo",
+        "MISC",
+        1,
+        4
+      ],
+      [
         "El de la casa",
         "MISC",
         14,
@@ -4532,7 +4732,7 @@
         169
       ],
       [
-        "El ratón de campo",
+        "El Ratón de campo",
         "MISC",
         180,
         184
@@ -4546,7 +4746,7 @@
     ],
     "sentences": [
       {
-        "text": "Un ratón de campo era amigo de otro que vivía en una casa.",
+        "text": "Un Ratón de campo era amigo de otro que vivía en una casa.",
         "start": 0,
         "end": 14,
         "root": {
@@ -4646,7 +4846,7 @@
         }
       },
       {
-        "text": "El ratón de campo, sobreponiéndose al hambre, suspiró y dijo al otro:\"Disfruta tú, amigo, con tu comida hasta que te hartes, gozándolo con placer y peligro y mucho miedo; yo, desdichado, viviré despreocupadamente sin temer a nadie, comiendo cebada y trigo\".",
+        "text": "El Ratón de campo, sobreponiéndose al hambre, suspiró y dijo al otro:\"Disfruta tú, amigo, con tu comida hasta que te hartes, gozándolo con placer y peligro y mucho miedo; yo, desdichado, viviré despreocupadamente sin temer a nadie, comiendo cebada y trigo\".",
         "start": 180,
         "end": 232,
         "root": {
@@ -4844,6 +5044,34 @@
     "moral": {
       "type": "explicit",
       "text": "Así también algunos hombres, cuando no pueden conseguir las cosas por incompetencia, culpan a las circunstancias."
+    },
+    "canonical_forms": {
+      "lobo": "Lobo",
+      "cordero": "Cordero",
+      "zorro": "Zorro",
+      "león": "León",
+      "ratón": "Ratón",
+      "grulla": "Grulla",
+      "cabra": "Cabra",
+      "mosquito": "Mosquito",
+      "una": "Una",
+      "zorra": "zorra",
+      "hambrienta": "hambrienta",
+      "ver": "ver",
+      "unos": "unos",
+      "racimos": "racimos",
+      "que": "que",
+      "colgaban": "colgaban",
+      "parra": "parra",
+      "quiso": "quiso",
+      "apoderarse": "apoderarse",
+      "ellos": "ellos",
+      "pudo": "pudo",
+      "apartándose": "Apartándose",
+      "dijo": "dijo",
+      "misma": "misma",
+      "están": "Están",
+      "verdes": "verdes"
     },
     "extracted_body": "Una zorra hambrienta, al ver unos racimos que colgaban de una parra, quiso apoderarse de ellos, y no pudo. Apartándose, se dijo a sí misma:\"Están verdes\".",
     "extracted_moral": {
@@ -5415,17 +5643,65 @@
     }
   },
   {
-    "title": "El lobo y la garza",
+    "title": "El Lobo y la garza",
     "language": "es",
     "source": "Aesop's Original Collection",
     "version": "1",
-    "body": "Un lobo que se había atragantado con un hueso iba de un lado a otro buscando a quien lo curara. Al encontrarse con una garza, le pidió que le sacase el hueso a cambio de una retribución. Y aquélla metió su propia cabeza en la garganta del lobo, sacó el hueso y le reclamó la paga acordada. Él, respondiendo, dijo:\"¡Eh tú!, ¿no te contentas con haber sacado sana tu cabeza de la boca del lobo, sino que también pides paga?\".",
+    "body": "Un Lobo que se había atragantado con un hueso iba de un lado a otro buscando a quien lo curara. Al encontrarse con una garza, le pidió que le sacase el hueso a cambio de una retribución. Y aquélla metió su propia cabeza en la garganta del Lobo, sacó el hueso y le reclamó la paga acordada. Él, respondiendo, dijo:\"¡Eh tú!, ¿no te contentas con haber sacado sana tu cabeza de la boca del Lobo, sino que también pides paga?\".",
     "id": "4",
     "moral": {
       "type": "explicit",
       "text": "La fábula muestra que la mayor recompensa por una buena acción a los malvados es que ellos no te hagan daño."
     },
-    "extracted_body": "Un lobo que se había atragantado con un hueso iba de un lado a otro buscando a quien lo curara. Al encontrarse con una garza, le pidió que le sacase el hueso a cambio de una retribución. Y aquélla metió su propia cabeza en la garganta del lobo, sacó el hueso y le reclamó la paga acordada. Él, respondiendo, dijo:\"¡Eh tú!, ¿no te contentas con haber sacado sana tu cabeza de la boca del lobo, sino que también pides paga?\".",
+    "canonical_forms": {
+      "lobo": "Lobo",
+      "cordero": "Cordero",
+      "zorro": "Zorro",
+      "león": "León",
+      "ratón": "Ratón",
+      "grulla": "Grulla",
+      "cabra": "Cabra",
+      "mosquito": "Mosquito",
+      "que": "que",
+      "había": "había",
+      "atragantado": "atragantado",
+      "con": "con",
+      "hueso": "hueso",
+      "iba": "iba",
+      "lado": "lado",
+      "otro": "otro",
+      "buscando": "buscando",
+      "quien": "quien",
+      "curara": "curara",
+      "encontrarse": "encontrarse",
+      "una": "una",
+      "garza": "garza",
+      "pidió": "pidió",
+      "sacase": "sacase",
+      "cambio": "cambio",
+      "retribución": "retribución",
+      "aquélla": "aquélla",
+      "metió": "metió",
+      "propia": "propia",
+      "cabeza": "cabeza",
+      "garganta": "garganta",
+      "del": "del",
+      "sacó": "sacó",
+      "reclamó": "reclamó",
+      "paga": "paga",
+      "acordada": "acordada",
+      "respondiendo": "respondiendo",
+      "dijo": "dijo",
+      "contentas": "contentas",
+      "haber": "haber",
+      "sacado": "sacado",
+      "sana": "sana",
+      "boca": "boca",
+      "sino": "sino",
+      "también": "también",
+      "pides": "pides"
+    },
+    "extracted_body": "Un Lobo que se había atragantado con un hueso iba de un lado a otro buscando a quien lo curara. Al encontrarse con una garza, le pidió que le sacase el hueso a cambio de una retribución. Y aquélla metió su propia cabeza en la garganta del Lobo, sacó el hueso y le reclamó la paga acordada. Él, respondiendo, dijo:\"¡Eh tú!, ¿no te contentas con haber sacado sana tu cabeza de la boca del Lobo, sino que también pides paga?\".",
     "extracted_moral": {
       "text": "La fábula muestra que la mayor recompensa por una buena acción a los malvados es que ellos no te hagan daño.",
       "type": "explicit"
@@ -5437,7 +5713,7 @@
         0
       ],
       [
-        "lobo",
+        "Lobo",
         1
       ],
       [
@@ -5633,7 +5909,7 @@
         49
       ],
       [
-        "lobo",
+        "Lobo",
         50
       ],
       [
@@ -5769,7 +6045,7 @@
         83
       ],
       [
-        "lobo",
+        "Lobo",
         84
       ],
       [
@@ -5815,7 +6091,7 @@
         0
       ],
       [
-        "lobo",
+        "Lobo",
         1
       ],
       [
@@ -6011,7 +6287,7 @@
         49
       ],
       [
-        "lobo",
+        "Lobo",
         50
       ],
       [
@@ -6147,7 +6423,7 @@
         83
       ],
       [
-        "lobo",
+        "Lobo",
         84
       ],
       [
@@ -6193,8 +6469,8 @@
         "DET"
       ],
       [
-        "lobo",
-        "NOUN"
+        "Lobo",
+        "PROPN"
       ],
       [
         "que",
@@ -6389,8 +6665,8 @@
         "ADP"
       ],
       [
-        "lobo",
-        "NOUN"
+        "Lobo",
+        "PROPN"
       ],
       [
         ",",
@@ -6525,8 +6801,8 @@
         "ADP"
       ],
       [
-        "lobo",
-        "NOUN"
+        "Lobo",
+        "PROPN"
       ],
       [
         ",",
@@ -6567,10 +6843,22 @@
     ],
     "entities": [
       [
+        "Lobo",
+        "PER",
+        1,
+        2
+      ],
+      [
         "Al encontrarse con una garza",
         "MISC",
         21,
         26
+      ],
+      [
+        "garganta del Lobo",
+        "LOC",
+        48,
+        51
       ],
       [
         "Él",
@@ -6593,7 +6881,7 @@
     ],
     "sentences": [
       {
-        "text": "Un lobo que se había atragantado con un hueso iba de un lado a otro buscando a quien lo curara.",
+        "text": "Un Lobo que se había atragantado con un hueso iba de un lado a otro buscando a quien lo curara.",
         "start": 0,
         "end": 21,
         "root": {
@@ -6613,7 +6901,7 @@
         }
       },
       {
-        "text": "Y aquélla metió su propia cabeza en la garganta del lobo, sacó el hueso y le reclamó la paga acordada.",
+        "text": "Y aquélla metió su propia cabeza en la garganta del Lobo, sacó el hueso y le reclamó la paga acordada.",
         "start": 40,
         "end": 62,
         "root": {
@@ -6623,7 +6911,7 @@
         }
       },
       {
-        "text": "Él, respondiendo, dijo:\"¡Eh tú!, ¿no te contentas con haber sacado sana tu cabeza de la boca del lobo, sino que también pides paga?\".",
+        "text": "Él, respondiendo, dijo:\"¡Eh tú!, ¿no te contentas con haber sacado sana tu cabeza de la boca del Lobo, sino que también pides paga?\".",
         "start": 62,
         "end": 94,
         "root": {
@@ -6785,17 +7073,91 @@
     }
   },
   {
-    "title": "El león y el ratón agradecido",
+    "title": "El León y el Ratón agradecido",
     "language": "es",
     "source": "Aesop's Original Collection",
     "version": "1",
-    "body": "Un ratón se puso a corretear sobre el cuerpo de un león dormido. Éste se despertó y lo atrapó; y estaba a punto de devorarlo. Pero, como el ratón le pidiera que lo soltase y le dijera que si lo salvaba se lo agradecería, el león, sonriendo, lo dejó libre. Ocurrió que, no mucho después, él se salvó gracias al ratón. Pues, cuando, capturado por unos cazadores, fue atado a un árbol con una soga, el ratón, que había oído sus lamentos, acudió y se puso a roer la soga y, una vez que lo hubo desatado, dijo:\"Te reíste un día de mí, incrédulo de que yo pudiera devolverte el favor, pero ahora sabe bien que también hay agradecimiento de parte de los ratones\".",
+    "body": "Un Ratón se puso a corretear sobre el cuerpo de un León dormido. Éste se despertó y lo atrapó; y estaba a punto de devorarlo. Pero, como el Ratón le pidiera que lo soltase y le dijera que si lo salvaba se lo agradecería, el León, sonriendo, lo dejó libre. Ocurrió que, no mucho después, él se salvó gracias al Ratón. Pues, cuando, capturado por unos cazadores, fue atado a un árbol con una soga, el Ratón, que había oído sus lamentos, acudió y se puso a roer la soga y, una vez que lo hubo desatado, dijo:\"Te reíste un día de mí, incrédulo de que yo pudiera devolverte el favor, pero ahora sabe bien que también hay agradecimiento de parte de los ratones\".",
     "id": "5",
     "moral": {
       "type": "explicit",
       "text": "La fábula muestra que con los cambios de fortuna los que pueden mucho llegan a estar necesitados de los más débiles."
     },
-    "extracted_body": "Un ratón se puso a corretear sobre el cuerpo de un león dormido. Éste se despertó y lo atrapó; y estaba a punto de devorarlo. Pero, como el ratón le pidiera que lo soltase y le dijera que si lo salvaba se lo agradecería, el león, sonriendo, lo dejó libre. Ocurrió que, no mucho después, él se salvó gracias al ratón. Pues, cuando, capturado por unos cazadores, fue atado a un árbol con una soga, el ratón, que había oído sus lamentos, acudió y se puso a roer la soga y, una vez que lo hubo desatado, dijo:\"Te reíste un día de mí, incrédulo de que yo pudiera devolverte el favor, pero ahora sabe bien que también hay agradecimiento de parte de los ratones\".",
+    "canonical_forms": {
+      "lobo": "Lobo",
+      "cordero": "Cordero",
+      "zorro": "Zorro",
+      "león": "León",
+      "ratón": "Ratón",
+      "grulla": "Grulla",
+      "cabra": "Cabra",
+      "mosquito": "Mosquito",
+      "puso": "puso",
+      "corretear": "corretear",
+      "sobre": "sobre",
+      "cuerpo": "cuerpo",
+      "dormido": "dormido",
+      "éste": "Éste",
+      "despertó": "despertó",
+      "atrapó": "atrapó",
+      "estaba": "estaba",
+      "punto": "punto",
+      "devorarlo": "devorarlo",
+      "pero": "Pero",
+      "como": "como",
+      "pidiera": "pidiera",
+      "que": "que",
+      "soltase": "soltase",
+      "dijera": "dijera",
+      "salvaba": "salvaba",
+      "agradecería": "agradecería",
+      "sonriendo": "sonriendo",
+      "dejó": "dejó",
+      "libre": "libre",
+      "ocurrió": "Ocurrió",
+      "mucho": "mucho",
+      "después": "después",
+      "salvó": "salvó",
+      "gracias": "gracias",
+      "pues": "Pues",
+      "cuando": "cuando",
+      "capturado": "capturado",
+      "por": "por",
+      "unos": "unos",
+      "cazadores": "cazadores",
+      "fue": "fue",
+      "atado": "atado",
+      "árbol": "árbol",
+      "con": "con",
+      "una": "una",
+      "soga": "soga",
+      "había": "había",
+      "oído": "oído",
+      "sus": "sus",
+      "lamentos": "lamentos",
+      "acudió": "acudió",
+      "roer": "roer",
+      "vez": "vez",
+      "hubo": "hubo",
+      "desatado": "desatado",
+      "dijo": "dijo",
+      "reíste": "reíste",
+      "día": "día",
+      "incrédulo": "incrédulo",
+      "pudiera": "pudiera",
+      "devolverte": "devolverte",
+      "favor": "favor",
+      "ahora": "ahora",
+      "sabe": "sabe",
+      "bien": "bien",
+      "también": "también",
+      "hay": "hay",
+      "agradecimiento": "agradecimiento",
+      "parte": "parte",
+      "los": "los",
+      "ratones": "ratones"
+    },
+    "extracted_body": "Un Ratón se puso a corretear sobre el cuerpo de un León dormido. Éste se despertó y lo atrapó; y estaba a punto de devorarlo. Pero, como el Ratón le pidiera que lo soltase y le dijera que si lo salvaba se lo agradecería, el León, sonriendo, lo dejó libre. Ocurrió que, no mucho después, él se salvó gracias al Ratón. Pues, cuando, capturado por unos cazadores, fue atado a un árbol con una soga, el Ratón, que había oído sus lamentos, acudió y se puso a roer la soga y, una vez que lo hubo desatado, dijo:\"Te reíste un día de mí, incrédulo de que yo pudiera devolverte el favor, pero ahora sabe bien que también hay agradecimiento de parte de los ratones\".",
     "extracted_moral": {
       "text": "La fábula muestra que con los cambios de fortuna los que pueden mucho llegan a estar necesitados de los más débiles.",
       "type": "explicit"
@@ -6807,7 +7169,7 @@
         0
       ],
       [
-        "ratón",
+        "Ratón",
         1
       ],
       [
@@ -6847,7 +7209,7 @@
         10
       ],
       [
-        "león",
+        "León",
         11
       ],
       [
@@ -6931,7 +7293,7 @@
         31
       ],
       [
-        "ratón",
+        "Ratón",
         32
       ],
       [
@@ -7003,7 +7365,7 @@
         49
       ],
       [
-        "león",
+        "León",
         50
       ],
       [
@@ -7083,7 +7445,7 @@
         69
       ],
       [
-        "ratón",
+        "Ratón",
         70
       ],
       [
@@ -7167,7 +7529,7 @@
         90
       ],
       [
-        "ratón",
+        "Ratón",
         91
       ],
       [
@@ -7397,7 +7759,7 @@
         0
       ],
       [
-        "ratón",
+        "Ratón",
         1
       ],
       [
@@ -7437,7 +7799,7 @@
         10
       ],
       [
-        "león",
+        "León",
         11
       ],
       [
@@ -7521,7 +7883,7 @@
         31
       ],
       [
-        "ratón",
+        "Ratón",
         32
       ],
       [
@@ -7593,7 +7955,7 @@
         49
       ],
       [
-        "león",
+        "León",
         50
       ],
       [
@@ -7673,7 +8035,7 @@
         69
       ],
       [
-        "ratón",
+        "Ratón",
         70
       ],
       [
@@ -7757,7 +8119,7 @@
         90
       ],
       [
-        "ratón",
+        "Ratón",
         91
       ],
       [
@@ -7987,8 +8349,8 @@
         "DET"
       ],
       [
-        "ratón",
-        "NOUN"
+        "Ratón",
+        "PROPN"
       ],
       [
         "se",
@@ -8027,8 +8389,8 @@
         "DET"
       ],
       [
-        "león",
-        "NOUN"
+        "León",
+        "PROPN"
       ],
       [
         "dormido",
@@ -8111,8 +8473,8 @@
         "DET"
       ],
       [
-        "ratón",
-        "NOUN"
+        "Ratón",
+        "PROPN"
       ],
       [
         "le",
@@ -8183,8 +8545,8 @@
         "DET"
       ],
       [
-        "león",
-        "NOUN"
+        "León",
+        "PROPN"
       ],
       [
         ",",
@@ -8263,8 +8625,8 @@
         "DET"
       ],
       [
-        "ratón",
-        "NOUN"
+        "Ratón",
+        "PROPN"
       ],
       [
         ".",
@@ -8347,8 +8709,8 @@
         "DET"
       ],
       [
-        "ratón",
-        "NOUN"
+        "Ratón",
+        "PROPN"
       ],
       [
         ",",
@@ -8573,21 +8935,51 @@
     ],
     "entities": [
       [
+        "Ratón",
+        "MISC",
+        1,
+        2
+      ],
+      [
+        "León",
+        "LOC",
+        11,
+        12
+      ],
+      [
+        "Ratón",
+        "MISC",
+        32,
+        33
+      ],
+      [
+        "León",
+        "LOC",
+        50,
+        51
+      ],
+      [
         "Ocurrió",
         "ORG",
         58,
         59
       ],
       [
-        "Pues",
+        "Ratón.",
         "MISC",
-        72,
-        73
+        70,
+        72
+      ],
+      [
+        "Ratón",
+        "MISC",
+        91,
+        92
       ]
     ],
     "sentences": [
       {
-        "text": "Un ratón se puso a corretear sobre el cuerpo de un león dormido.",
+        "text": "Un Ratón se puso a corretear sobre el cuerpo de un León dormido.",
         "start": 0,
         "end": 14,
         "root": {
@@ -8607,7 +8999,7 @@
         }
       },
       {
-        "text": "Pero, como el ratón le pidiera que lo soltase y le dijera que si lo salvaba se lo agradecería, el león, sonriendo, lo dejó libre.",
+        "text": "Pero, como el Ratón le pidiera que lo soltase y le dijera que si lo salvaba se lo agradecería, el León, sonriendo, lo dejó libre.",
         "start": 28,
         "end": 58,
         "root": {
@@ -8617,7 +9009,7 @@
         }
       },
       {
-        "text": "Ocurrió que, no mucho después, él se salvó gracias al ratón.",
+        "text": "Ocurrió que, no mucho después, él se salvó gracias al Ratón.",
         "start": 58,
         "end": 72,
         "root": {
@@ -8627,11 +9019,11 @@
         }
       },
       {
-        "text": "Pues, cuando, capturado por unos cazadores, fue atado a un árbol con una soga, el ratón, que había oído sus lamentos, acudió y se puso a roer la soga y, una vez que lo hubo desatado, dijo:\"Te reíste un día de mí, incrédulo de que yo pudiera devolverte el favor, pero ahora sabe bien que también hay agradecimiento de parte de los ratones\".",
+        "text": "Pues, cuando, capturado por unos cazadores, fue atado a un árbol con una soga, el Ratón, que había oído sus lamentos, acudió y se puso a roer la soga y, una vez que lo hubo desatado, dijo:\"Te reíste un día de mí, incrédulo de que yo pudiera devolverte el favor, pero ahora sabe bien que también hay agradecimiento de parte de los ratones\".",
         "start": 72,
         "end": 147,
         "root": {
-          "text": "atado",
+          "text": "acudió",
           "pos": "VERB",
           "dep": "ROOT"
         }
@@ -8789,13 +9181,97 @@
     }
   },
   {
-    "title": "El mosquito y el león",
+    "title": "El Mosquito y el León",
     "language": "es",
     "source": "Aesop's Original Collection",
     "version": "1",
-    "body": "Un mosquito se acercó a un león y le dijo:\"Ni te temo ni eres más fuerte que yo; si no ¿qué fuerza tienes: que arañas con tus garras y muerdes con tus dientes? Eso también lo hace una mujer cuando se pelea con su marido. Yo soy mucho más fuerte que tú. Si quieres, entremos en lucha.\" Y el mosquito hizo zumbar su trompetilla y le clavó el aguijón, picándole en la parte sin pelo de sus fauces, cerca de las narices. Y el león se puso a rascarse con sus propias garras hasta que desfalleció. El mosquito, luego de vencer al león, volvió a hacer zumbar su trompetilla y entonando un epinicio\" echó a volar; se enredó con la tela de una araña y, mientras era devorado, se lamentaba de cómo, tras pelear con los animales más grandes, perecía por obra de un animal insignificante, la araña.",
+    "body": "Un Mosquito se acercó a un León y le dijo:\"Ni te temo ni eres más fuerte que yo; si no ¿qué fuerza tienes: que arañas con tus garras y muerdes con tus dientes? Eso también lo hace una mujer cuando se pelea con su marido. Yo soy mucho más fuerte que tú. Si quieres, entremos en lucha.\" Y el Mosquito hizo zumbar su trompetilla y le clavó el aguijón, picándole en la parte sin pelo de sus fauces, cerca de las narices. Y el León se puso a rascarse con sus propias garras hasta que desfalleció. El Mosquito, luego de vencer al León, volvió a hacer zumbar su trompetilla y entonando un epinicio\" echó a volar; se enredó con la tela de una araña y, mientras era devorado, se lamentaba de cómo, tras pelear con los animales más grandes, perecía por obra de un animal insignificante, la araña.",
     "id": "6",
-    "extracted_body": "Un mosquito se acercó a un león y le dijo:\"Ni te temo ni eres más fuerte que yo; si no ¿qué fuerza tienes: que arañas con tus garras y muerdes con tus dientes? Eso también lo hace una mujer cuando se pelea con su marido. Yo soy mucho más fuerte que tú. Si quieres, entremos en lucha.\" Y el mosquito hizo zumbar su trompetilla y le clavó el aguijón, picándole en la parte sin pelo de sus fauces, cerca de las narices. Y el león se puso a rascarse con sus propias garras hasta que desfalleció. El mosquito, luego de vencer al león, volvió a hacer zumbar su trompetilla y entonando un epinicio\" echó a volar; se enredó con la tela de una araña y, mientras era devorado, se lamentaba de cómo, tras pelear con los animales más grandes, perecía por obra de un animal insignificante, la araña.",
+    "canonical_forms": {
+      "lobo": "Lobo",
+      "cordero": "Cordero",
+      "zorro": "Zorro",
+      "león": "León",
+      "ratón": "Ratón",
+      "grulla": "Grulla",
+      "cabra": "Cabra",
+      "mosquito": "Mosquito",
+      "acercó": "acercó",
+      "dijo": "dijo",
+      "temo": "temo",
+      "eres": "eres",
+      "más": "más",
+      "fuerte": "fuerte",
+      "que": "que",
+      "qué": "qué",
+      "fuerza": "fuerza",
+      "tienes": "tienes",
+      "arañas": "arañas",
+      "con": "con",
+      "tus": "tus",
+      "garras": "garras",
+      "muerdes": "muerdes",
+      "dientes": "dientes",
+      "eso": "Eso",
+      "también": "también",
+      "hace": "hace",
+      "una": "una",
+      "mujer": "mujer",
+      "cuando": "cuando",
+      "pelea": "pelea",
+      "marido": "marido",
+      "soy": "soy",
+      "mucho": "mucho",
+      "quieres": "quieres",
+      "entremos": "entremos",
+      "lucha": "lucha",
+      "hizo": "hizo",
+      "zumbar": "zumbar",
+      "trompetilla": "trompetilla",
+      "clavó": "clavó",
+      "aguijón": "aguijón",
+      "picándole": "picándole",
+      "parte": "parte",
+      "sin": "sin",
+      "pelo": "pelo",
+      "sus": "sus",
+      "fauces": "fauces",
+      "cerca": "cerca",
+      "las": "las",
+      "narices": "narices",
+      "puso": "puso",
+      "rascarse": "rascarse",
+      "propias": "propias",
+      "hasta": "hasta",
+      "desfalleció": "desfalleció",
+      "luego": "luego",
+      "vencer": "vencer",
+      "volvió": "volvió",
+      "hacer": "hacer",
+      "entonando": "entonando",
+      "epinicio": "epinicio",
+      "echó": "echó",
+      "volar": "volar",
+      "enredó": "enredó",
+      "tela": "tela",
+      "araña": "araña",
+      "mientras": "mientras",
+      "era": "era",
+      "devorado": "devorado",
+      "lamentaba": "lamentaba",
+      "cómo": "cómo",
+      "tras": "tras",
+      "pelear": "pelear",
+      "los": "los",
+      "animales": "animales",
+      "grandes": "grandes",
+      "perecía": "perecía",
+      "por": "por",
+      "obra": "obra",
+      "animal": "animal",
+      "insignificante": "insignificante"
+    },
+    "extracted_body": "Un Mosquito se acercó a un León y le dijo:\"Ni te temo ni eres más fuerte que yo; si no ¿qué fuerza tienes: que arañas con tus garras y muerdes con tus dientes? Eso también lo hace una mujer cuando se pelea con su marido. Yo soy mucho más fuerte que tú. Si quieres, entremos en lucha.\" Y el Mosquito hizo zumbar su trompetilla y le clavó el aguijón, picándole en la parte sin pelo de sus fauces, cerca de las narices. Y el León se puso a rascarse con sus propias garras hasta que desfalleció. El Mosquito, luego de vencer al León, volvió a hacer zumbar su trompetilla y entonando un epinicio\" echó a volar; se enredó con la tela de una araña y, mientras era devorado, se lamentaba de cómo, tras pelear con los animales más grandes, perecía por obra de un animal insignificante, la araña.",
     "doc_length": 171,
     "tokens": [
       [
@@ -8803,7 +9279,7 @@
         0
       ],
       [
-        "mosquito",
+        "Mosquito",
         1
       ],
       [
@@ -8823,7 +9299,7 @@
         5
       ],
       [
-        "león",
+        "León",
         6
       ],
       [
@@ -9071,7 +9547,7 @@
         67
       ],
       [
-        "mosquito",
+        "Mosquito",
         68
       ],
       [
@@ -9183,7 +9659,7 @@
         95
       ],
       [
-        "león",
+        "León",
         96
       ],
       [
@@ -9239,7 +9715,7 @@
         109
       ],
       [
-        "mosquito",
+        "Mosquito",
         110
       ],
       [
@@ -9263,7 +9739,7 @@
         115
       ],
       [
-        "león",
+        "León",
         116
       ],
       [
@@ -9489,7 +9965,7 @@
         0
       ],
       [
-        "mosquito",
+        "Mosquito",
         1
       ],
       [
@@ -9509,7 +9985,7 @@
         5
       ],
       [
-        "león",
+        "León",
         6
       ],
       [
@@ -9757,7 +10233,7 @@
         67
       ],
       [
-        "mosquito",
+        "Mosquito",
         68
       ],
       [
@@ -9869,7 +10345,7 @@
         95
       ],
       [
-        "león",
+        "León",
         96
       ],
       [
@@ -9925,7 +10401,7 @@
         109
       ],
       [
-        "mosquito",
+        "Mosquito",
         110
       ],
       [
@@ -9949,7 +10425,7 @@
         115
       ],
       [
-        "león",
+        "León",
         116
       ],
       [
@@ -10175,8 +10651,8 @@
         "DET"
       ],
       [
-        "mosquito",
-        "NOUN"
+        "Mosquito",
+        "PROPN"
       ],
       [
         "se",
@@ -10195,8 +10671,8 @@
         "DET"
       ],
       [
-        "león",
-        "NOUN"
+        "León",
+        "PROPN"
       ],
       [
         "y",
@@ -10443,8 +10919,8 @@
         "DET"
       ],
       [
-        "mosquito",
-        "NOUN"
+        "Mosquito",
+        "PROPN"
       ],
       [
         "hizo",
@@ -10555,8 +11031,8 @@
         "DET"
       ],
       [
-        "león",
-        "NOUN"
+        "León",
+        "PROPN"
       ],
       [
         "se",
@@ -10611,8 +11087,8 @@
         "DET"
       ],
       [
-        "mosquito",
-        "NOUN"
+        "Mosquito",
+        "PROPN"
       ],
       [
         ",",
@@ -10635,8 +11111,8 @@
         "ADP"
       ],
       [
-        "león",
-        "NOUN"
+        "León",
+        "PROPN"
       ],
       [
         ",",
@@ -10857,6 +11333,18 @@
     ],
     "entities": [
       [
+        "Un Mosquito",
+        "MISC",
+        0,
+        2
+      ],
+      [
+        "León",
+        "LOC",
+        6,
+        7
+      ],
+      [
         "Yo",
         "PER",
         50,
@@ -10869,21 +11357,33 @@
         60
       ],
       [
-        "Y el león",
+        "Mosquito",
+        "MISC",
+        68,
+        69
+      ],
+      [
+        "Y el León",
         "MISC",
         94,
         97
       ],
       [
-        "El mosquito",
+        "El Mosquito",
         "MISC",
         109,
         111
+      ],
+      [
+        "León",
+        "LOC",
+        116,
+        117
       ]
     ],
     "sentences": [
       {
-        "text": "Un mosquito se acercó a un león y le dijo:\"Ni te temo ni eres más fuerte que yo; si no ¿qué fuerza tienes: que arañas con tus garras y muerdes con tus dientes?",
+        "text": "Un Mosquito se acercó a un León y le dijo:\"Ni te temo ni eres más fuerte que yo; si no ¿qué fuerza tienes: que arañas con tus garras y muerdes con tus dientes?",
         "start": 0,
         "end": 37,
         "root": {
@@ -10923,7 +11423,7 @@
         }
       },
       {
-        "text": "\" Y el mosquito hizo zumbar su trompetilla y le clavó el aguijón, picándole en la parte sin pelo de sus fauces, cerca de las narices.",
+        "text": "\" Y el Mosquito hizo zumbar su trompetilla y le clavó el aguijón, picándole en la parte sin pelo de sus fauces, cerca de las narices.",
         "start": 65,
         "end": 94,
         "root": {
@@ -10933,7 +11433,7 @@
         }
       },
       {
-        "text": "Y el león se puso a rascarse con sus propias garras hasta que desfalleció.",
+        "text": "Y el León se puso a rascarse con sus propias garras hasta que desfalleció.",
         "start": 94,
         "end": 109,
         "root": {
@@ -10943,7 +11443,7 @@
         }
       },
       {
-        "text": "El mosquito, luego de vencer al león, volvió a hacer zumbar su trompetilla y entonando un epinicio\" echó a volar; se enredó con la tela de una araña y, mientras era devorado, se lamentaba de cómo, tras pelear con los animales más grandes, perecía por obra de un animal insignificante, la araña.",
+        "text": "El Mosquito, luego de vencer al León, volvió a hacer zumbar su trompetilla y entonando un epinicio\" echó a volar; se enredó con la tela de una araña y, mientras era devorado, se lamentaba de cómo, tras pelear con los animales más grandes, perecía por obra de un animal insignificante, la araña.",
         "start": 109,
         "end": 171,
         "root": {
@@ -10964,6 +11464,109 @@
     "moral": {
       "type": "explicit",
       "text": "Así también, los hombres sensatos deben mirar las consecuencias de sus acciones y luego aplicarse así a ellas."
+    },
+    "canonical_forms": {
+      "lobo": "Lobo",
+      "cordero": "Cordero",
+      "zorro": "Zorro",
+      "león": "León",
+      "ratón": "Ratón",
+      "grulla": "Grulla",
+      "cabra": "Cabra",
+      "mosquito": "Mosquito",
+      "una": "Una",
+      "zorra": "zorra",
+      "que": "que",
+      "había": "había",
+      "caído": "caído",
+      "pozo": "pozo",
+      "llevaba": "llevaba",
+      "largo": "largo",
+      "rato": "rato",
+      "macho": "macho",
+      "cabrío": "cabrío",
+      "forzado": "forzado",
+      "por": "por",
+      "sed": "sed",
+      "llegó": "llegó",
+      "junto": "junto",
+      "mismo": "mismo",
+      "verla": "verla",
+      "preguntó": "preguntó",
+      "era": "era",
+      "buena": "buena",
+      "agua": "agua",
+      "ella": "Ella",
+      "contenta": "contenta",
+      "coincidencia": "coincidencia",
+      "deshacía": "deshacía",
+      "elogios": "elogios",
+      "del": "del",
+      "diciendo": "diciendo",
+      "excelente": "excelente",
+      "animaba": "animaba",
+      "bajara": "bajara",
+      "después": "Después",
+      "bajó": "bajó",
+      "despreocupadamente": "despreocupadamente",
+      "movido": "movido",
+      "deseo": "deseo",
+      "apenas": "apenas",
+      "hubo": "hubo",
+      "apaciguado": "apaciguado",
+      "miraba": "miraba",
+      "con": "con",
+      "forma": "forma",
+      "subir": "subir",
+      "tomando": "tomando",
+      "palabra": "palabra",
+      "dijo": "dijo",
+      "algo": "algo",
+      "útil": "útil",
+      "único": "único",
+      "quieres": "quieres",
+      "salvación": "salvación",
+      "ambos": "ambos",
+      "así": "Así",
+      "pues": "pues",
+      "apoya": "apoya",
+      "tus": "tus",
+      "patas": "patas",
+      "delanteras": "delanteras",
+      "muro": "muro",
+      "endereza": "endereza",
+      "los": "los",
+      "cuernos": "cuernos",
+      "luego": "luego",
+      "trepar": "trepar",
+      "encima": "encima",
+      "también": "también",
+      "sacaré": "sacaré",
+      "atendió": "Atendió",
+      "éste": "éste",
+      "propuesta": "propuesta",
+      "gana": "gana",
+      "escalando": "escalando",
+      "sus": "sus",
+      "lomo": "lomo",
+      "hasta": "hasta",
+      "boca": "boca",
+      "tras": "tras",
+      "salir": "salir",
+      "alejó": "alejó",
+      "reprocharle": "reprocharle",
+      "incumplido": "incumplido",
+      "pacto": "pacto",
+      "volvió": "volvió",
+      "tuvierastanta": "tuvierastanta",
+      "inteligencia": "inteligencia",
+      "como": "como",
+      "pelos": "pelos",
+      "barba": "barba",
+      "habrías": "habrías",
+      "bajado": "bajado",
+      "antes": "antes",
+      "considerar": "considerar"
     },
     "extracted_body": "Una zorra que había caído en un pozo llevaba largo rato en él. Un macho cabrío, forzado por la sed, llegó junto al mismo pozo y al verla le preguntó si era buena el agua. Ella, contenta por la coincidencia, se deshacía en elogios del agua, diciendo que era excelente y le animaba a que bajara. Después que bajó despreocupadamente movido por su deseo, apenas hubo apaciguado la sed, miraba con la zorra la forma de subir. Y la zorra, tomando la palabra, dijo:\"Sé algo útil si lo único que quieres es la salvación de ambos. Así pues, apoya tus patas delanteras en el muro y endereza los cuernos, y yo, luego de trepar por encima, también te sacaré\". Atendió éste a la propuesta de buena gana y la zorra, escalando por sus patas, lomo y cuernos, llegó hasta la boca del pozo y, tras salir, se alejó. Al reprocharle el macho cabrío que había incumplido el pacto, se volvió y le dijo:\"Si tuvierastanta inteligencia como pelos en tu barba, no habrías bajado antes de considerar la forma de subir\".",
     "extracted_moral": {

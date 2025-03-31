@@ -10,7 +10,7 @@ from aesop_spacy.preprocessing.cleaner import TextCleaner
 from aesop_spacy.preprocessing.extractor import ContentExtractor
 from aesop_spacy.preprocessing.processor import FableProcessor
 from aesop_spacy.models.model_manager import get_model
-
+from aesop_spacy.preprocessing.entity_recognizer import EntityRecognizer
 
 class FablePipeline:
     """Coordinates the entire fable processing pipeline."""
@@ -40,6 +40,7 @@ class FablePipeline:
         self.extractor = ContentExtractor()
         self.processor = FableProcessor()
         self.serializer = SpacySerializer()
+        self.recognizer = EntityRecognizer()
         self.writer = OutputWriter(output_dir)
         self.logger.info("Fable pipeline initialized")
         self.logger.info("Data directory: %s", data_dir)

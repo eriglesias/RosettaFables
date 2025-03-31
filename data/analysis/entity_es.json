@@ -1,37 +1,39 @@
 {
   "MISC": {
-    "percentage": 70.0,
-    "count": 21,
+    "percentage": 60.86956521739131,
+    "count": 28,
     "examples": [
-      "Por eso, aunque el lobo",
-      "El cordero",
-      "Sin embargo, el cordero",
-      "El de la casa",
-      "Después"
-    ]
-  },
-  "PER": {
-    "percentage": 16.666666666666664,
-    "count": 5,
-    "examples": [
-      "Aquél",
-      "Él",
-      "pides",
-      "Yo",
-      "Atendió"
+      "Por eso, aunque el Lobo",
+      "Lobo",
+      "Sin embargo, el Cordero",
+      "Lobo replicó:\"Aunque",
+      "Ratón de campo"
     ]
   },
   "LOC": {
-    "percentage": 10.0,
-    "count": 3,
+    "percentage": 19.565217391304348,
+    "count": 9,
     "examples": [
+      "Cordero",
       "injuriaste",
       "Apartándose",
-      "Después"
+      "garganta del Lobo",
+      "León"
+    ]
+  },
+  "PER": {
+    "percentage": 17.391304347826086,
+    "count": 8,
+    "examples": [
+      "Lobo",
+      "El Cordero",
+      "Aquél",
+      "Él",
+      "pides"
     ]
   },
   "ORG": {
-    "percentage": 3.3333333333333335,
+    "percentage": 2.1739130434782608,
     "count": 1,
     "examples": [
       "Ocurrió"

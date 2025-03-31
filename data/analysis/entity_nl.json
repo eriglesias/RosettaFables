@@ -1,77 +1,62 @@
 {
-  "FAC": {
-    "percentage": 22.5,
-    "count": 9,
+  "PERSON": {
+    "percentage": 58.333333333333336,
+    "count": 35,
     "examples": [
+      "Wolf",
+      "mijnheer Wolf",
       "Veldmuis",
       "Stadsmuis:\"Je",
-      "Leeuw riep:\"Ga"
+      "Vos"
     ]
   },
   "ORG": {
-    "percentage": 20.0,
-    "count": 8,
+    "percentage": 18.333333333333332,
+    "count": 11,
     "examples": [
       "Stadsmuis",
-      "Stadsmuis at",
+      "Veldmuis",
       "trekken.\"Ik",
       "Leeuw:\"Je"
     ]
   },
-  "PERSON": {
-    "percentage": 17.5,
-    "count": 7,
+  "GPE": {
+    "percentage": 8.333333333333332,
+    "count": 5,
     "examples": [
-      "Wolf",
-      "Muis",
-      "Razend",
-      "Vos"
+      "opeten.\"Alstublieft",
+      "arme Muis",
+      "Leeuw"
     ]
   },
   "WORK_OF_ART": {
-    "percentage": 12.5,
-    "count": 5,
+    "percentage": 6.666666666666667,
+    "count": 4,
     "examples": [
-      "De wolf",
-      "De Kraanvogel",
+      "Kraanvogel had weinig",
       "Alstublieft, laat mij gaan",
       "De grote Leeuw",
       "De dorstige Geit"
     ]
   },
-  "LOC": {
-    "percentage": 12.5,
-    "count": 5,
-    "examples": [
-      "Kraanvogel",
-      "Leeuw"
-    ]
-  },
-  "GPE": {
-    "percentage": 5.0,
-    "count": 2,
-    "examples": [
-      "opeten.\"Alstublieft",
-      "arme Muis"
-    ]
-  },
   "DATE": {
     "percentage": 5.0,
-    "count": 2,
+    "count": 3,
     "examples": [
       "volgende morgen",
+      "Veldmuis",
       "Enkele dagen"
     ]
   },
   "ORDINAL": {
-    "percentage": 2.5,
+    "percentage": 1.6666666666666667,
     "count": 1,
     "examples": [
       "eerste"
     ]
   },
   "CARDINAL": {
-    "percentage": 2.5,
+    "percentage": 1.6666666666666667,
     "count": 1,
     "examples": [
       "één"

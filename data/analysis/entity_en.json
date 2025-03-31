@@ -1,40 +1,32 @@
 {
-  "ORG": {
-    "percentage": 38.46153846153847,
-    "count": 5,
+  "PERSON": {
+    "percentage": 80.3921568627451,
+    "count": 41,
     "examples": [
-      "The lamb answered,'It",
-      "fox"
+      "Wolf",
+      "Lamb",
+      "Lamb said,'No",
+      "City Mouse",
+      "Country Mouse"
+    ]
+  },
+  "ORG": {
+    "percentage": 13.725490196078432,
+    "count": 7,
+    "examples": [
+      "Lamb answered,'It",
+      "Fox remarked,'Oh",
+      "Crane",
+      "Lion",
+      "Fox"
     ]
   },
   "DATE": {
-    "percentage": 23.076923076923077,
+    "percentage": 5.88235294117647,
     "count": 3,
     "examples": [
       "last year",
       "a year old"
-    ]
-  },
-  "PERSON": {
-    "percentage": 23.076923076923077,
-    "count": 3,
-    "examples": [
-      "said,'No",
-      "wolf"
-    ]
-  },
-  "GPE": {
-    "percentage": 7.6923076923076925,
-    "count": 1,
-    "examples": [
-      "insisted,'My"
-    ]
-  },
-  "FAC": {
-    "percentage": 7.6923076923076925,
-    "count": 1,
-    "examples": [
-      "the fox remarked,'Oh"
     ]
   }
 }
