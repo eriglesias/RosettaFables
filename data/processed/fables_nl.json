@@ -4582,22 +4582,28 @@
     ],
     "entities": [
       [
+        "Geitje",
+        "ANIMAL_CHAR",
+        5,
+        6
+      ],
+      [
+        "Geit",
+        "ANIMAL_CHAR",
+        20,
+        21
+      ],
+      [
+        "geiten",
+        "ANIMAL_CHAR",
+        37,
+        38
+      ],
+      [
         "Wolf",
-        "PERSON",
+        "ANIMAL_CHAR",
         164,
         165
-      ],
-      [
-        "Wolf",
-        "PERSON",
-        194,
-        195
-      ],
-      [
-        "Wolf",
-        "PERSON",
-        205,
-        206
       ],
       [
         "opeten.\"Alstublieft",
@@ -4606,28 +4612,10 @@
         209
       ],
       [
-        "mijnheer Wolf",
-        "PERSON",
-        210,
-        212
-      ],
-      [
-        "Wolf",
-        "PERSON",
-        250,
-        251
-      ],
-      [
-        "Wolf",
-        "PERSON",
-        311,
-        312
-      ],
-      [
-        "Wolf",
-        "PERSON",
-        322,
-        323
+        "honden",
+        "ANIMAL_CHAR",
+        300,
+        301
       ]
     ],
     "sentences": [
@@ -9664,27 +9652,15 @@
     "entities": [
       [
         "Stadsmuis",
-        "ORG",
+        "ANIMAL_CHAR",
         0,
         1
       ],
       [
-        "Stadsmuis",
-        "ORG",
-        40,
-        41
-      ],
-      [
-        "Stadsmuis",
-        "ORG",
-        84,
-        85
-      ],
-      [
         "Veldmuis",
-        "ORG",
-        96,
-        97
+        "ANIMAL_CHAR",
+        19,
+        20
       ],
       [
         "volgende morgen",
@@ -9693,46 +9669,22 @@
         121
       ],
       [
-        "Veldmuis",
-        "ORG",
-        126,
-        127
+        "muizen",
+        "ANIMAL_CHAR",
+        216,
+        217
       ],
       [
-        "Stadsmuis",
-        "ORG",
-        129,
-        130
+        "een Kat",
+        "ANIMAL_CHAR",
+        231,
+        233
       ],
       [
-        "Stadsmuis",
-        "ORG",
-        141,
-        142
-      ],
-      [
-        "Stadsmuis",
-        "ORG",
-        149,
-        150
-      ],
-      [
-        "Veldmuis",
-        "ORG",
-        161,
-        162
-      ],
-      [
-        "Veldmuis",
-        "DATE",
-        223,
-        224
-      ],
-      [
-        "Veldmuis",
-        "PERSON",
-        328,
-        329
+        "de hond",
+        "ANIMAL_CHAR",
+        295,
+        297
       ],
       [
         "Stadsmuis:\"Je",
@@ -12402,15 +12354,9 @@
     "entities": [
       [
         "Vos",
-        "PERSON",
+        "ANIMAL_CHAR",
         4,
         5
-      ],
-      [
-        "Vos",
-        "PERSON",
-        45,
-        46
       ],
       [
         "eerste",
@@ -14850,19 +14796,13 @@
     "entities": [
       [
         "Wolf",
-        "PERSON",
+        "ANIMAL_CHAR",
         0,
         1
       ],
       [
-        "Wolf",
-        "PERSON",
-        37,
-        38
-      ],
-      [
         "Kraanvogel",
-        "PERSON",
+        "ANIMAL_CHAR",
         43,
         44
       ],
@@ -14871,48 +14811,6 @@
         "ORG",
         72,
         73
-      ],
-      [
-        "Wolf",
-        "PERSON",
-        79,
-        80
-      ],
-      [
-        "Kraanvogel had weinig",
-        "WORK_OF_ART",
-        91,
-        94
-      ],
-      [
-        "Wolf",
-        "PERSON",
-        102,
-        103
-      ],
-      [
-        "Wolf",
-        "PERSON",
-        116,
-        117
-      ],
-      [
-        "Wolf",
-        "PERSON",
-        120,
-        121
-      ],
-      [
-        "Kraanvogel",
-        "PERSON",
-        142,
-        143
-      ],
-      [
-        "Wolf",
-        "PERSON",
-        148,
-        149
       ]
     ],
     "sentences": [
@@ -18517,22 +18415,16 @@
     ],
     "entities": [
       [
+        "Leeuw",
+        "ANIMAL_CHAR",
+        0,
+        1
+      ],
+      [
         "Muis",
-        "PERSON",
+        "ANIMAL_CHAR",
         20,
         21
-      ],
-      [
-        "Leeuw",
-        "PERSON",
-        29,
-        30
-      ],
-      [
-        "arme Muis",
-        "GPE",
-        87,
-        89
       ],
       [
         "Alstublieft, laat mij gaan",
@@ -18541,16 +18433,10 @@
         95
       ],
       [
-        "De grote Leeuw",
+        "De grote",
         "WORK_OF_ART",
         106,
-        109
-      ],
-      [
-        "Muis",
-        "PERSON",
-        131,
-        132
+        108
       ],
       [
         "Enkele dagen",
@@ -18559,34 +18445,10 @@
         136
       ],
       [
-        "Leeuw",
-        "PERSON",
-        147,
-        148
-      ],
-      [
-        "Muis",
-        "PERSON",
-        176,
-        177
-      ],
-      [
-        "Leeuw",
-        "PERSON",
-        188,
-        189
-      ],
-      [
         "één",
         "CARDINAL",
         203,
         204
-      ],
-      [
-        "Leeuw",
-        "PERSON",
-        234,
-        235
       ],
       [
         "Leeuw:\"Je",
@@ -21258,34 +21120,22 @@
     ],
     "entities": [
       [
-        "Leeuw",
-        "GPE",
-        6,
-        7
+        "Mug",
+        "ANIMAL_CHAR",
+        0,
+        1
       ],
       [
         "Leeuw",
-        "GPE",
-        50,
-        51
+        "ANIMAL_CHAR",
+        6,
+        7
       ],
       [
         "Razend",
         "PERSON",
         58,
         59
-      ],
-      [
-        "Leeuw",
-        "PERSON",
-        61,
-        62
-      ],
-      [
-        "Leeuw",
-        "GPE",
-        82,
-        83
       ]
     ],
     "sentences": [
@@ -23889,45 +23739,21 @@
     "entities": [
       [
         "Vos",
-        "PERSON",
+        "ANIMAL_CHAR",
         0,
         1
       ],
       [
-        "Vos",
-        "PERSON",
-        16,
-        17
+        "Geit",
+        "ANIMAL_CHAR",
+        35,
+        36
       ],
       [
-        "Vos",
-        "PERSON",
-        41,
-        42
-      ],
-      [
-        "De dorstige Geit",
+        "De dorstige",
         "WORK_OF_ART",
         90,
-        93
-      ],
-      [
-        "Vos",
-        "PERSON",
-        103,
-        104
-      ],
-      [
-        "Vos",
-        "PERSON",
-        134,
-        135
-      ],
-      [
-        "Vos",
-        "PERSON",
-        141,
-        142
+        92
       ]
     ],
     "sentences": [

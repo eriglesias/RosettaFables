@@ -1,0 +1,216 @@
+{
+  "animals": {
+    "Wolf": {
+      "mentions": 4,
+      "documents": 2
+    },
+    "Fox": {
+      "mentions": 3,
+      "documents": 3
+    },
+    "Mouse": {
+      "mentions": 2,
+      "documents": 2
+    },
+    "Ein Wolf": {
+      "mentions": 2,
+      "documents": 2
+    },
+    "Der Fuchs": {
+      "mentions": 2,
+      "documents": 2
+    },
+    "Geit": {
+      "mentions": 2,
+      "documents": 2
+    },
+    "Vos": {
+      "mentions": 2,
+      "documents": 2
+    },
+    "Leeuw": {
+      "mentions": 2,
+      "documents": 2
+    },
+    "Un Lobo": {
+      "mentions": 2,
+      "documents": 2
+    },
+    "ratones": {
+      "mentions": 2,
+      "documents": 2
+    },
+    "un León": {
+      "mentions": 2,
+      "documents": 2
+    },
+    "el León": {
+      "mentions": 2,
+      "documents": 2
+    },
+    "Lamb": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "City Mouse": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Country Mouse": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Crane": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Lion": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Goat": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Der Wolf": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Eine Landmaus": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Eine Stadtmaus": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Die Landmaus": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Die Stadtmaus": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Eine Maus": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Fuchs": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Die Maus": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Der Kranich": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Der Löwe": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Eine Mücke": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Die Mücke": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Ein Fuchs": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Geitje": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "geiten": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "honden": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Stadsmuis": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Veldmuis": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "muizen": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "een Kat": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "de hond": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Kraanvogel": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Muis": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Mug": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "un Cordero": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "el Lobo": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "El Cordero": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Ratón de campo": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Lobo": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Un Ratón": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "el Ratón": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Ratón": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "Un Mosquito": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "El Mosquito": {
+      "mentions": 1,
+      "documents": 1
+    },
+    "León": {
+      "mentions": 1,
+      "documents": 1
+    }
+  }
+}

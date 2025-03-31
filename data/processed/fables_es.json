@@ -1548,34 +1548,34 @@
     ],
     "entities": [
       [
-        "Lobo",
-        "PER",
-        1,
+        "Un Lobo",
+        "ANIMAL_CHAR",
+        0,
         2
       ],
       [
-        "Cordero",
-        "LOC",
-        6,
+        "un Cordero",
+        "ANIMAL_CHAR",
+        5,
         7
       ],
       [
-        "Por eso, aunque el Lobo",
+        "Por eso, aunque",
         "MISC",
         18,
+        22
+      ],
+      [
+        "el Lobo",
+        "ANIMAL_CHAR",
+        22,
         24
       ],
       [
         "El Cordero",
-        "PER",
+        "ANIMAL_CHAR",
         41,
         43
-      ],
-      [
-        "Lobo",
-        "MISC",
-        72,
-        73
       ],
       [
         "injuriaste",
@@ -1584,16 +1584,10 @@
         84
       ],
       [
-        "Sin embargo, el Cordero",
+        "Sin embargo,",
         "MISC",
         89,
-        94
-      ],
-      [
-        "Lobo replicó:\"Aunque",
-        "MISC",
-        108,
-        110
+        92
       ]
     ],
     "sentences": [
@@ -4691,7 +4685,7 @@
     "entities": [
       [
         "Ratón de campo",
-        "MISC",
+        "ANIMAL_CHAR",
         1,
         4
       ],
@@ -4726,16 +4720,16 @@
         135
       ],
       [
-        "Al verlo los ratones",
-        "MISC",
-        165,
-        169
+        "ratones",
+        "ANIMAL_CHAR",
+        137,
+        138
       ],
       [
-        "El Ratón de campo",
+        "Al verlo los",
         "MISC",
-        180,
-        184
+        165,
+        168
       ],
       [
         "otro:\"Disfruta",
@@ -6843,9 +6837,9 @@
     ],
     "entities": [
       [
-        "Lobo",
-        "PER",
-        1,
+        "Un Lobo",
+        "ANIMAL_CHAR",
+        0,
         2
       ],
       [
@@ -6855,9 +6849,15 @@
         26
       ],
       [
-        "garganta del Lobo",
+        "garganta del",
         "LOC",
         48,
+        50
+      ],
+      [
+        "Lobo",
+        "ANIMAL_CHAR",
+        50,
         51
       ],
       [
@@ -8935,27 +8935,27 @@
     ],
     "entities": [
       [
-        "Ratón",
-        "MISC",
-        1,
+        "Un Ratón",
+        "ANIMAL_CHAR",
+        0,
         2
       ],
       [
-        "León",
-        "LOC",
-        11,
+        "un León",
+        "ANIMAL_CHAR",
+        10,
         12
       ],
       [
-        "Ratón",
-        "MISC",
-        32,
+        "el Ratón",
+        "ANIMAL_CHAR",
+        31,
         33
       ],
       [
-        "León",
-        "LOC",
-        50,
+        "el León",
+        "ANIMAL_CHAR",
+        49,
         51
       ],
       [
@@ -8965,16 +8965,16 @@
         59
       ],
       [
-        "Ratón.",
-        "MISC",
+        "Ratón",
+        "ANIMAL_CHAR",
         70,
-        72
+        71
       ],
       [
-        "Ratón",
-        "MISC",
-        91,
-        92
+        "ratones",
+        "ANIMAL_CHAR",
+        144,
+        145
       ]
     ],
     "sentences": [
@@ -11334,14 +11334,14 @@
     "entities": [
       [
         "Un Mosquito",
-        "MISC",
+        "ANIMAL_CHAR",
         0,
         2
       ],
       [
-        "León",
-        "LOC",
-        6,
+        "un León",
+        "ANIMAL_CHAR",
+        5,
         7
       ],
       [
@@ -11357,26 +11357,20 @@
         60
       ],
       [
-        "Mosquito",
-        "MISC",
-        68,
-        69
-      ],
-      [
-        "Y el León",
-        "MISC",
-        94,
+        "el León",
+        "ANIMAL_CHAR",
+        95,
         97
       ],
       [
         "El Mosquito",
-        "MISC",
+        "ANIMAL_CHAR",
         109,
         111
       ],
       [
         "León",
-        "LOC",
+        "ANIMAL_CHAR",
         116,
         117
       ]

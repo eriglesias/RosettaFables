@@ -2754,7 +2754,7 @@
     "entities": [
       [
         "Ein Wolf",
-        "MISC",
+        "ANIMAL_CHAR",
         19,
         21
       ],
@@ -2765,10 +2765,10 @@
         172
       ],
       [
-        "Der Wolf mit erheuchelter Wut",
-        "MISC",
+        "Der Wolf",
+        "ANIMAL_CHAR",
         176,
-        181
+        178
       ]
     ],
     "sentences": [
@@ -8077,27 +8077,27 @@
     ],
     "entities": [
       [
-        "Landmaus",
-        "LOC",
-        1,
+        "Eine Landmaus",
+        "ANIMAL_CHAR",
+        0,
         2
       ],
       [
-        "Stadtmaus",
-        "LOC",
-        7,
+        "Eine Stadtmaus",
+        "ANIMAL_CHAR",
+        6,
         8
       ],
       [
-        "Landmaus",
-        "LOC",
-        66,
+        "Die Landmaus",
+        "ANIMAL_CHAR",
+        65,
         67
       ],
       [
-        "Stadtmaus",
-        "LOC",
-        91,
+        "Die Stadtmaus",
+        "ANIMAL_CHAR",
+        90,
         92
       ],
       [
@@ -8125,28 +8125,10 @@
         180
       ],
       [
-        "Landmaus",
-        "LOC",
-        192,
-        193
-      ],
-      [
         "Abendschmauses",
         "LOC",
         241,
         242
-      ],
-      [
-        "Stadtmaus",
-        "LOC",
-        245,
-        246
-      ],
-      [
-        "Landmaus",
-        "LOC",
-        280,
-        281
       ],
       [
         "Lobsprüche",
@@ -8159,12 +8141,6 @@
         "LOC",
         320,
         321
-      ],
-      [
-        "Landmaus",
-        "LOC",
-        333,
-        334
       ],
       [
         "hervorkroch",
@@ -11619,6 +11595,12 @@
     ],
     "entities": [
       [
+        "Eine Maus",
+        "ANIMAL_CHAR",
+        0,
+        2
+      ],
+      [
         "Spatz",
         "PER",
         20,
@@ -11626,7 +11608,7 @@
       ],
       [
         "Der Fuchs",
-        "MISC",
+        "ANIMAL_CHAR",
         26,
         28
       ],
@@ -11635,6 +11617,18 @@
         "PER",
         164,
         165
+      ],
+      [
+        "Fuchs",
+        "ANIMAL_CHAR",
+        179,
+        180
+      ],
+      [
+        "Die Maus",
+        "ANIMAL_CHAR",
+        188,
+        190
       ]
     ],
     "sentences": [
@@ -13064,6 +13058,18 @@
       ]
     ],
     "entities": [
+      [
+        "Ein Wolf",
+        "ANIMAL_CHAR",
+        0,
+        2
+      ],
+      [
+        "Der Kranich",
+        "ANIMAL_CHAR",
+        39,
+        41
+      ],
       [
         "Wolf,\"du",
         "MISC",
@@ -15045,6 +15051,12 @@
     ],
     "entities": [
       [
+        "Der Löwe",
+        "ANIMAL_CHAR",
+        8,
+        10
+      ],
+      [
         "Mäuschen,\"meine",
         "MISC",
         23,
@@ -15061,12 +15073,6 @@
         "MISC",
         70,
         72
-      ],
-      [
-        "Der Löwe",
-        "MISC",
-        117,
-        119
       ]
     ],
     "sentences": [
@@ -17558,6 +17564,12 @@
     ],
     "entities": [
       [
+        "Eine Mücke",
+        "ANIMAL_CHAR",
+        0,
+        2
+      ],
+      [
         "Tapfern",
         "MISC",
         69,
@@ -17565,7 +17577,7 @@
       ],
       [
         "Die Mücke",
-        "MISC",
+        "ANIMAL_CHAR",
         126,
         128
       ],
@@ -17586,12 +17598,6 @@
         "LOC",
         160,
         161
-      ],
-      [
-        "Die Mücke",
-        "MISC",
-        162,
-        164
       ]
     ],
     "sentences": [
@@ -20361,27 +20367,21 @@
     "entities": [
       [
         "Ein Fuchs",
-        "MISC",
+        "ANIMAL_CHAR",
         3,
         5
+      ],
+      [
+        "Der Fuchs",
+        "ANIMAL_CHAR",
+        63,
+        65
       ],
       [
         "retten!\"Der Bock",
         "PER",
         123,
         125
-      ],
-      [
-        "Der Fuchs",
-        "MISC",
-        135,
-        137
-      ],
-      [
-        "Der Fuchs Abschied",
-        "MISC",
-        157,
-        160
       ],
       [
         "sagte:\"Ich",

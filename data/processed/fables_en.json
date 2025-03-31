@@ -2202,39 +2202,21 @@
     "entities": [
       [
         "Wolf",
-        "PERSON",
+        "ANIMAL_CHAR",
         0,
         1
       ],
       [
         "Lamb",
-        "PERSON",
+        "ANIMAL_CHAR",
         3,
         4
-      ],
-      [
-        "Lamb",
-        "PERSON",
-        19,
-        20
       ],
       [
         "last year",
         "DATE",
         40,
         42
-      ],
-      [
-        "Wolf",
-        "PERSON",
-        50,
-        51
-      ],
-      [
-        "Lamb",
-        "PERSON",
-        52,
-        53
       ],
       [
         "last year",
@@ -2247,48 +2229,6 @@
         "DATE",
         66,
         69
-      ],
-      [
-        "Wolf",
-        "PERSON",
-        71,
-        72
-      ],
-      [
-        "Lamb said,'No",
-        "PERSON",
-        89,
-        91
-      ],
-      [
-        "Wolf",
-        "PERSON",
-        109,
-        110
-      ],
-      [
-        "Lamb answered,'It",
-        "ORG",
-        124,
-        126
-      ],
-      [
-        "Wolf",
-        "PERSON",
-        138,
-        139
-      ],
-      [
-        "Lamb",
-        "PERSON",
-        141,
-        142
-      ],
-      [
-        "Wolf",
-        "PERSON",
-        154,
-        155
       ]
     ],
     "sentences": [
@@ -5357,87 +5297,21 @@
     "entities": [
       [
         "City Mouse",
-        "PERSON",
+        "ANIMAL_CHAR",
         1,
         3
       ],
       [
         "Country Mouse",
-        "PERSON",
+        "ANIMAL_CHAR",
         13,
         15
       ],
       [
-        "City Mouse",
-        "PERSON",
-        25,
-        27
-      ],
-      [
-        "Country Mouse",
-        "PERSON",
-        42,
-        44
-      ],
-      [
-        "City Mouse",
-        "PERSON",
-        51,
-        53
-      ],
-      [
-        "Country Mouse",
-        "PERSON",
-        55,
-        57
-      ],
-      [
-        "City Mouse",
-        "PERSON",
-        80,
-        82
-      ],
-      [
-        "Country Mouse",
-        "PERSON",
-        95,
-        97
-      ],
-      [
-        "City Mouse",
-        "PERSON",
-        132,
-        134
-      ],
-      [
-        "Country Mouse",
-        "PERSON",
-        136,
-        138
-      ],
-      [
-        "Country Mouse",
-        "PERSON",
-        145,
-        147
-      ],
-      [
         "Mouse",
-        "PERSON",
-        181,
-        182
-      ],
-      [
-        "City Mouse",
-        "PERSON",
-        187,
-        189
-      ],
-      [
-        "Mouse maintained,'so",
-        "PERSON",
-        216,
-        218
+        "ANIMAL_CHAR",
+        88,
+        89
       ]
     ],
     "sentences": [
@@ -6455,15 +6329,9 @@
     "entities": [
       [
         "Fox",
-        "PERSON",
+        "ANIMAL_CHAR",
         4,
         5
-      ],
-      [
-        "Fox remarked,'Oh",
-        "ORG",
-        38,
-        40
       ]
     ],
     "sentences": [
@@ -8087,57 +7955,15 @@
     "entities": [
       [
         "Wolf",
-        "PERSON",
+        "ANIMAL_CHAR",
         1,
         2
       ],
       [
-        "Wolf",
-        "PERSON",
-        18,
-        19
-      ],
-      [
-        "Wolf",
-        "PERSON",
-        38,
-        39
-      ],
-      [
         "Crane",
-        "ORG",
+        "ANIMAL_CHAR",
         52,
         53
-      ],
-      [
-        "Wolf",
-        "PERSON",
-        56,
-        57
-      ],
-      [
-        "Wolf",
-        "PERSON",
-        66,
-        67
-      ],
-      [
-        "Crane",
-        "ORG",
-        71,
-        72
-      ],
-      [
-        "Crane",
-        "ORG",
-        80,
-        81
-      ],
-      [
-        "Wolf",
-        "PERSON",
-        86,
-        87
       ]
     ],
     "sentences": [
@@ -9609,39 +9435,21 @@
     "entities": [
       [
         "Lion",
-        "PERSON",
+        "ANIMAL_CHAR",
         1,
         2
       ],
       [
         "Mouse",
-        "PERSON",
+        "ANIMAL_CHAR",
         5,
         6
       ],
       [
-        "Lion",
-        "PERSON",
-        14,
-        15
-      ],
-      [
         "Fox",
-        "PERSON",
+        "ANIMAL_CHAR",
         33,
         34
-      ],
-      [
-        "Lion",
-        "ORG",
-        40,
-        41
-      ],
-      [
-        "Lion",
-        "PERSON",
-        54,
-        55
       ]
     ],
     "sentences": [
@@ -11179,33 +10987,21 @@
     "entities": [
       [
         "Fox",
-        "ORG",
+        "ANIMAL_CHAR",
         0,
         1
       ],
       [
-        "Fox",
-        "PERSON",
-        31,
-        32
+        "Goat",
+        "ANIMAL_CHAR",
+        20,
+        21
       ],
       [
-        "Fox",
-        "PERSON",
-        40,
-        41
-      ],
-      [
-        "Fox",
-        "PERSON",
-        55,
-        56
-      ],
-      [
-        "billy-Goat",
+        "billy-",
         "PERSON",
         75,
-        78
+        77
       ]
     ],
     "sentences": [

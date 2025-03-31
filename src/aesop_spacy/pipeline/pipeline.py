@@ -1,4 +1,20 @@
 # src/aesop_spacy/pipeline/pipeline.py
+"""
+Main pipeline module for processing and analyzing Aesop's fables.
+
+This module orchestrates the complete fable processing pipeline including:
+- Loading fables from files
+- Cleaning and normalizing text
+- Extracting relevant content
+- Processing with NLP models
+- Recognizing custom entities
+- Analyzing linguistic features
+- Generating output files
+
+The pipeline supports multiple languages and provides comparison
+capabilities across translations of the same fable.
+"""
+
 from typing import Dict, List, Any
 from pathlib import Path
 import logging
@@ -165,6 +181,26 @@ class FablePipeline:
         if hasattr(model, 'meta'):
             # This is a spaCy model
             model_name = model.meta.get('name', 'unknown')
+            
+            # First process a sample fable to get canonical forms
+            if fables and (not hasattr(self.cleaner, 'canonical_forms') or not self.cleaner.canonical_forms):
+                # Process first fable to get canonical forms
+                sample_fable = fables[0]
+                cleaned_sample = self.cleaner.clean_fable(sample_fable)
+                # Now cleaner should have canonical_forms available
+            
+            # Get canonical forms from cleaner
+            canonical_forms = {}
+            if hasattr(self.cleaner, 'canonical_forms'):
+                canonical_forms = self.cleaner.canonical_forms
+                
+            # Add entity patterns to enhance the model
+            self.recognizer.add_entity_patterns(model, language, canonical_forms)
+            
+            # Add character consolidation component to normalize entity mentions
+            self.recognizer.add_character_consolidation(model)
+            
+            self.logger.info("Enhanced model %s with custom entity recognition", model_name)
         elif hasattr(model, 'nlp'):
             # This is likely a StanzaWrapper
             model_name = f"StanzaWrapper({language})"
@@ -176,7 +212,7 @@ class FablePipeline:
 
         # Process each fable
         processed_fables = []
-        for fable in fables:
+        for i, fable in enumerate(fables):
             try:
                 # Clean the text
                 cleaned_fable = self.cleaner.clean_fable(fable)
@@ -189,10 +225,17 @@ class FablePipeline:
                 # Process with NLP
                 processed_fable = self.processor.process_fable(extracted_fable, model)
                 self.logger.debug("Processed fable: %s", processed_fable.get('title', 'Untitled'))
+                
+                # Track entities if they exist (for statistics)
+                document_id = fable.get('id', f"{language}_{i}")
+                if 'entities' in processed_fable:
+                    for entity_data in processed_fable['entities']:
+                        if len(entity_data) >= 2:  # Ensure we have at least [text, label]
+                            entity_text, entity_label = entity_data[0], entity_data[1]
+                            self.recognizer.track_entity(entity_text, entity_label, document_id)
 
                 # Serialize spaCy objects to JSON-compatible format
                 serialized_fable = self.serializer.serialize(processed_fable)
-
                 processed_fables.append(serialized_fable)
 
             except ValueError as e:
@@ -212,6 +255,12 @@ class FablePipeline:
         if processed_fables:
             output_file = self.writer.save_processed_fables(processed_fables, language)
             self.logger.info("Saved %d processed fables to %s", len(processed_fables), output_file)
+            
+        # Save entity statistics 
+        entity_stats = self.recognizer.get_entity_statistics()
+        if entity_stats:
+            self.writer.save_analysis_results(entity_stats, language, 'entity_stats')
+            self.logger.info("Saved entity statistics for %s", language)
 
     def analyze(self, analysis_types=None):
         """
@@ -227,7 +276,7 @@ class FablePipeline:
 
         # Default to all analysis types if none specified
         if analysis_types is None:
-            analysis_types = ['pos', 'entity', 'moral', 'comparison']
+            analysis_types = ['pos', 'entity', 'moral', 'comparison', 'character']
             
         # Results container
         results = {}
@@ -268,6 +317,13 @@ class FablePipeline:
                 if dist:
                     self.writer.save_analysis_results(dist, lang, 'entity')
         
+        # Character analysis using the tracked entities from EntityRecognizer
+        if 'character' in analysis_types:
+            character_results = self._analyze_character_distribution()
+            if character_results:
+                results['character_distribution'] = character_results
+                self.writer.save_analysis_results(character_results, 'all', 'character')
+        
         # Cross-language fable comparison
         if 'comparison' in analysis_types:
             comparison_results = {}
@@ -286,6 +342,47 @@ class FablePipeline:
         
         self.logger.info("Analysis completed successfully")
         return results
+    
+    def _analyze_character_distribution(self) -> Dict[str, Any]:
+        """
+        Analyze character distribution using the EntityRecognizer's tracked entities.
+        
+        Returns:
+            Dictionary with character statistics
+        """
+        # Get entity statistics from the recognizer
+        entity_stats = self.recognizer.get_entity_statistics()
+        
+        # If no stats, return empty dict
+        if not entity_stats:
+            return {}
+            
+        # Extract character information
+        character_stats = {}
+        
+        # Look for animal characters (label "ANIMAL_CHAR")
+        if "ANIMAL_CHAR" in entity_stats:
+            animal_chars = entity_stats["ANIMAL_CHAR"]
+            
+            # Sort characters by mention count
+            sorted_chars = sorted(
+                animal_chars.items(),
+                key=lambda x: x[1]["mentions"],
+                reverse=True
+            )
+            
+            character_stats["animals"] = {
+                char: {
+                    "mentions": data["mentions"],
+                    "documents": data["document_count"]
+                }
+                for char, data in sorted_chars
+            }
+            
+            # Calculate co-occurrence statistics (for future implementation)
+            # This would require tracking co-occurrences in EntityRecognizer
+            
+        return character_stats
     
     def _analyze_pos_distribution(self, language: str) -> Dict[str, float]:
         """
