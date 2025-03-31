@@ -57,7 +57,7 @@ class FableLoader:
         """Initialize the loader with a root data directory."""
         self.data_dir = data_dir
         self.logger = logging.getLogger(__name__)
-        
+      
         # Configure logging if not already configured
         if not self.logger.handlers:
             logging.basicConfig(
@@ -73,12 +73,12 @@ class FableLoader:
             Dictionary mapping language codes to lists of fable dictionaries
         """
         fables_by_language = defaultdict(list)
-        
+  
         # Check for expected language files
         expected_langs = ['en', 'de', 'nl', 'es', 'grc']
         processed_dir = self.data_dir / "processed"
         missing_langs = []
-        
+  
         # Determine which language files are missing
         if processed_dir.exists():
             for lang in expected_langs:
@@ -90,19 +90,19 @@ class FableLoader:
             # If processed directory doesn't exist, all languages need processing
             missing_langs = expected_langs.copy()
             self.logger.info("Processed directory not found, will process all languages")
-        
+    
         # First load existing JSON files
         existing_fables = self.load_json_files()
         for lang, fables in existing_fables.items():
             fables_by_language[lang].extend(fables)
-        
+   
         # Then process missing languages if needed
         if missing_langs:
             # Load markdown files first to get raw data
             markdown_file = self.data_dir / "raw" / "fables" / "initial_fables.md"
             if markdown_file.exists():
                 markdown_fables = self.load_from_markdown(markdown_file)
-                
+          
                 # Only process languages that are missing
                 for lang in missing_langs:
                     if lang in markdown_fables:
@@ -111,15 +111,15 @@ class FableLoader:
                         self.logger.warning("Language %s not found in markdown data", lang)
             else:
                 self.logger.warning("Markdown file not found: %s", markdown_file)
-            
+     
             # Fix language codes and validate fables
             self._fix_language_codes(fables_by_language)
-            
+     
             # Create processed directory if it doesn't exist
             if missing_langs and not processed_dir.exists():
                 processed_dir.mkdir(parents=True, exist_ok=True)
                 self.logger.info("Created processed directory: %s", processed_dir)
-            
+      
             # Save processed files for missing languages
             for lang in missing_langs:
                 if lang in fables_by_language:
@@ -132,34 +132,34 @@ class FableLoader:
                         self.logger.info("Created processed file for language %s: %s", lang, output_file)
                     except Exception as e:
                         self.logger.error("Error saving %s: %s", output_file, e)
-        
+  
         return dict(fables_by_language)
 
     def load_json_files(self) -> Dict[str, List[Dict[str, Any]]]:
         """Load fables from JSON files in the processed directory."""
         fables_by_language = defaultdict(list)
         processed_dir = self.data_dir / "processed"
-        
+  
         if not processed_dir.exists():
             self.logger.warning("Processed directory not found: %s", processed_dir)
             return {}
-        
+ 
         for json_file in processed_dir.glob("fables*.json"):
             lang = self._extract_language_from_filename(json_file)
-            
+      
             try:
                 fables = json.loads(json_file.read_text(encoding='utf-8'))
-                
+          
                 if not isinstance(fables, list):
                     self.logger.warning("Expected list but got %s in %s", type(fables), json_file)
                     continue
-                    
+             
                 self.logger.info("Loaded %d fables from %s", len(fables), json_file.name)
                 fables_by_language[lang].extend(fables)
-                
+         
             except Exception as e:
                 self.logger.error("Error loading %s: %s: %s", json_file.name, type(e).__name__, e)
-        
+   
         return dict(fables_by_language)
 
     def load_from_markdown(self, markdown_file: Path) -> Dict[str, List[Dict[str, Any]]]:
@@ -169,26 +169,26 @@ class FableLoader:
         except Exception as e:
             self.logger.error("Error reading markdown file %s: %s: %s", markdown_file, type(e).__name__, e)
             return {}
-        
+      
         fables_by_language = defaultdict(list)
-        
+      
         # Find language version sections
         language_sections = re.findall(
             r'#{3}\s+(.*?)\s+Version\s*\n(.*?)(?=#{3}|\Z)', 
             content, re.DOTALL
         )
-        
+     
         fable_count = 0
-        
+     
         for language_name, fable_content in language_sections:
             # Extract language code
             lang_match = re.search(r'<language>(.*?)</language>', fable_content)
             if not lang_match:
                 self.logger.warning("No language tag found for %s version", language_name)
                 continue
-                
+             
             lang = lang_match.group(1)
-            
+         
             # Extract fable data
             fable = {
                 'title': self._extract_tag(fable_content, 'title', ''),
@@ -198,13 +198,13 @@ class FableLoader:
                 'body': self._extract_tag(fable_content, 'body', ''),
                 'id': self._extract_tag(fable_content, 'fable_id', '')
             }
-            
+         
             # Handle moral
             moral_match = re.search(
                 r'<moral\s+type="(.*?)">(.*?)</moral>', 
                 fable_content, re.DOTALL
             )
-            
+          
             if moral_match:
                 fable['moral'] = {
                     'type': moral_match.group(1),
@@ -217,14 +217,14 @@ class FableLoader:
                         'type': 'unknown',
                         'text': moral_text
                     }
-            
+       
             fables_by_language[lang].append(fable)
             fable_count += 1
-        
+    
         total_fables = sum(len(fables) for fables in fables_by_language.values())
         self.logger.info("Loaded %d fables from markdown across %d languages", 
                          total_fables, len(fables_by_language))
-        
+     
         return dict(fables_by_language)
 
     def _detect_language(self, fable: Dict[str, Any]) -> Optional[str]:
@@ -236,33 +236,31 @@ class FableLoader:
         source = unicodedata.normalize('NFC', fable.get('source', '').lower())
         title = unicodedata.normalize('NFC', fable.get('title', '').lower())
         body = unicodedata.normalize('NFC', fable.get('body', '').lower())
-        
         # Combine text for analysis
         all_text = f"{title} {body} {source}"
-        
         # Check for explicit language markers in source
         if "laura gibbs" in source or "oxford" in source:
             return 'en'
-        
+   
         if "gutenberg" in source and any(word in title for word in ['der', 'das', 'die']):
             return 'de'
-        
+  
         if "koen van den bruele" in source:
             return 'nl'
-        
+  
         # Character set analysis (fastest check)
         for lang, chars in self.CHAR_INDICATORS.items():
             for char in chars:
                 if char in all_text:
                     return lang
-        
+    
         # Greek alphabet check (reliable indicator for Ancient Greek)
         if re.search(r'[\u0370-\u03FF]', all_text):
             return 'grc'
-        
+    
         # Check for language-specific patterns (more CPU intensive)
         lang_scores = {}
-        
+   
         for lang, (pattern, keywords) in self.LANG_PATTERNS.items():
             # Ensure pattern is a compiled regex
             if hasattr(pattern, 'findall'):
@@ -272,23 +270,23 @@ class FableLoader:
                 # Pattern is a string, compile it first
                 compiled_pattern = re.compile(pattern)
                 pattern_matches = len(compiled_pattern.findall(all_text))
-            
+   
             # Count keyword matches
             keyword_matches = sum(keyword in all_text for keyword in keywords)
-            
+     
             # Calculate weighted score
             lang_scores[lang] = pattern_matches * 2 + keyword_matches * 5
-        
+ 
         # Return language with highest score if it exceeds threshold
         best_lang = max(lang_scores.items(), key=lambda x: x[1], default=(None, 0))
-        
+  
         if best_lang[1] >= 5:  # Require minimum score threshold
             return best_lang[0]
-        
+     
         # Default to 'en' for Aesop Collection if nothing else matched
         if "aesop" in source and "collection" in source:
             return 'en'
-        
+     
         return None
 
     def _fix_language_codes(self, fables_by_language: Dict[str, List[Dict[str, Any]]]) -> None:
