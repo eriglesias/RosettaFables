@@ -1,0 +1,53 @@
+{
+  "ANIMAL_CHAR": {
+    "percentage": 38.63636363636363,
+    "count": 17,
+    "examples": [
+      "Ein Wolf",
+      "Der Wolf",
+      "Eine Landmaus",
+      "Eine Stadtmaus",
+      "Die Landmaus"
+    ]
+  },
+  "MISC": {
+    "percentage": 25.0,
+    "count": 11,
+    "examples": [
+      "Unverschämter",
+      "sei.\"Du bist",
+      "Frieden",
+      "Wolf,\"du",
+      "Ist es dir nicht Belohnung"
+    ]
+  },
+  "PER": {
+    "percentage": 18.181818181818183,
+    "count": 8,
+    "examples": [
+      "hervorkroch",
+      "Lieber",
+      "Spatz",
+      "Großmütig",
+      "Gierig"
+    ]
+  },
+  "LOC": {
+    "percentage": 15.909090909090908,
+    "count": 7,
+    "examples": [
+      "Stadt",
+      "Abendschmauses",
+      "Lobsprüche",
+      "Mahles",
+      "Wolfes"
+    ]
+  },
+  "ORG": {
+    "percentage": 2.272727272727273,
+    "count": 1,
+    "examples": [
+      "ihr,\"daß du"
+    ]
+  }
+}

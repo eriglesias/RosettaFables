@@ -1,0 +1,28 @@
+{
+  "ANIMAL_CHAR": {
+    "percentage": 76.47058823529412,
+    "count": 13,
+    "examples": [
+      "Wolf",
+      "Lamb",
+      "City Mouse",
+      "Country Mouse",
+      "Mouse"
+    ]
+  },
+  "DATE": {
+    "percentage": 17.647058823529413,
+    "count": 3,
+    "examples": [
+      "last year",
+      "a year old"
+    ]
+  },
+  "PERSON": {
+    "percentage": 5.88235294117647,
+    "count": 1,
+    "examples": [
+      "billy-"
+    ]
+  }
+}

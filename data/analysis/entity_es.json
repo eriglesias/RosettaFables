@@ -1,0 +1,52 @@
+{
+  "ANIMAL_CHAR": {
+    "percentage": 42.22222222222222,
+    "count": 19,
+    "examples": [
+      "Un Lobo",
+      "un Cordero",
+      "el Lobo",
+      "El Cordero",
+      "Ratón de campo"
+    ]
+  },
+  "MISC": {
+    "percentage": 35.55555555555556,
+    "count": 16,
+    "examples": [
+      "Por eso, aunque",
+      "Sin embargo,",
+      "El de la casa",
+      "Después",
+      "Y el de la casa"
+    ]
+  },
+  "PER": {
+    "percentage": 11.11111111111111,
+    "count": 5,
+    "examples": [
+      "Aquél",
+      "Él",
+      "pides",
+      "Yo",
+      "Atendió"
+    ]
+  },
+  "LOC": {
+    "percentage": 8.88888888888889,
+    "count": 4,
+    "examples": [
+      "injuriaste",
+      "Apartándose",
+      "garganta del",
+      "Después"
+    ]
+  },
+  "ORG": {
+    "percentage": 2.2222222222222223,
+    "count": 1,
+    "examples": [
+      "Ocurrió"
+    ]
+  }
+}

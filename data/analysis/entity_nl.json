@@ -1,0 +1,67 @@
+{
+  "ANIMAL_CHAR": {
+    "percentage": 61.29032258064516,
+    "count": 19,
+    "examples": [
+      "Geitje",
+      "Geit",
+      "geiten",
+      "Wolf",
+      "honden"
+    ]
+  },
+  "WORK_OF_ART": {
+    "percentage": 9.67741935483871,
+    "count": 3,
+    "examples": [
+      "Alstublieft, laat mij gaan",
+      "De grote",
+      "De dorstige"
+    ]
+  },
+  "DATE": {
+    "percentage": 6.451612903225806,
+    "count": 2,
+    "examples": [
+      "volgende morgen",
+      "Enkele dagen"
+    ]
+  },
+  "PERSON": {
+    "percentage": 6.451612903225806,
+    "count": 2,
+    "examples": [
+      "Stadsmuis:\"Je",
+      "Razend"
+    ]
+  },
+  "ORG": {
+    "percentage": 6.451612903225806,
+    "count": 2,
+    "examples": [
+      "trekken.\"Ik",
+      "Leeuw:\"Je"
+    ]
+  },
+  "GPE": {
+    "percentage": 3.225806451612903,
+    "count": 1,
+    "examples": [
+      "opeten.\"Alstublieft"
+    ]
+  },
+  "ORDINAL": {
+    "percentage": 3.225806451612903,
+    "count": 1,
+    "examples": [
+      "eerste"
+    ]
+  },
+  "CARDINAL": {
+    "percentage": 3.225806451612903,
+    "count": 1,
+    "examples": [
+      "één"
+    ]
+  }
+}
