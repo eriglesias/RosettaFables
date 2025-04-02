@@ -1,98 +1,102 @@
-from ..core.figure_builder import FigureBuilder
-import pandas as pd
-import numpy as np
+"""
+Figure building utilities for data visualization.
+
+This module provides base classes and utilities for creating standardized
+data visualizations from analysis results. It handles loading data, applying
+consistent styling, and saving figures to the appropriate directory.
+"""
+
+import json
+import os
+from pathlib import Path
+import logging
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-class POSComparisonPlot(FigureBuilder):
-    """Creates visualizations comparing POS tag distributions across languages."""
+
+
+class FigureBuilder:
+    """Base class for creating visualizations of analysis results."""
     
-    def __init__(self, analysis_file='comparison_1.json', theme='default', fig_size=(12, 8)):
-        super().__init__(theme=theme, fig_size=fig_size)
-        self.data = self.load_analysis_data(analysis_file)
+    def __init__(self, theme='default', fig_size=(10, 6)):
+        self.logger = logging.getLogger(__name__)
+        self.theme = theme
+        self.fig_size = fig_size
         
-        # Define linguistic terminology for more professional labels
-        self.pos_full_names = {
-            'NOUN': 'Nouns',
-            'VERB': 'Verbs',
-            'ADJ': 'Adjectives',
-            'ADV': 'Adverbs',
-            'PRON': 'Pronouns',
-            'DET': 'Determiners',
-            'ADP': 'Adpositions',
-            'NUM': 'Numerals',
-            'CCONJ': 'Coordinating Conjunctions',
-            'SCONJ': 'Subordinating Conjunctions',
-            'INTJ': 'Interjections',
-            'PROPN': 'Proper Nouns',
-            'PUNCT': 'Punctuation',
-            'SYM': 'Symbols',
-            'X': 'Other',
-            'AUX': 'Auxiliary Verbs',
-            'PART': 'Particles'
+        # Simple, direct palette definitions
+        self.palettes = {
+            'languages': sns.color_palette('colorblind', 10),
+            'categories': sns.color_palette('Set2', 10),
+            'sequential': sns.color_palette('Blues', 10),
+            'diverging': sns.color_palette('RdBu_r', 10)
         }
+        
+        self._apply_theme()
     
-    def plot_pos_distribution(self, languages=None, top_n=8):
-        """Create a bar chart comparing POS distributions across languages.
+    def _apply_theme(self):
+        """Apply theme settings to matplotlib."""
+        themes = {
+            'default': lambda: (
+                sns.set_style('whitegrid'),
+                setattr(plt.rcParams, 'axes.facecolor', 'white'),
+                setattr(plt.rcParams, 'figure.facecolor', 'white')
+            ),
+            'dark': lambda: (
+                sns.set_style('darkgrid'),
+                setattr(plt.rcParams, 'axes.facecolor', '#2E3440'),
+                setattr(plt.rcParams, 'figure.facecolor', '#2E3440'),
+                setattr(plt.rcParams, 'text.color', 'white'),
+                setattr(plt.rcParams, 'axes.labelcolor', 'white'),
+                setattr(plt.rcParams, 'xtick.color', 'white'),
+                setattr(plt.rcParams, 'ytick.color', 'white')
+            ),
+            'paper': lambda: (
+                sns.set_style('ticks'),
+                setattr(plt.rcParams, 'font.family', 'serif')
+            )
+        }
         
-        Args:
-            languages: List of language codes to include. If None, use all languages.
-            top_n: Number of POS categories to show (most frequent)
-            
-        Returns:
-            tuple: (figure, axes) The created matplotlib figure and axes
-        """
-        # Prepare the data
-        pos_data = self.data['pos_distribution']
-        if languages is None:
-            languages = list(pos_data.keys())
+        # Apply theme if it exists, otherwise use default
+        themes.get(self.theme, themes['default'])()
+    
+    def create_figure(self, figsize=None):
+        """Create a matplotlib figure with the configured styling."""
+        return plt.subplots(figsize=figsize or self.fig_size)
+    
+    def load_analysis_data(self, filename):
+        """Load analysis JSON data from the analysis directory."""
+        # Get project root in a cleaner way
+        project_dir = Path(__file__).resolve().parents[3]
+        file_path = project_dir / 'data' / 'analysis' / filename
         
-        # Determine which POS tags to include (take the top_n most common across languages)
-        all_pos_freqs = {}
-        for pos_tag in set().union(*[set(pos_data[lang].keys()) for lang in languages]):
-            all_pos_freqs[pos_tag] = sum(pos_data[lang].get(pos_tag, 0) for lang in languages)
+        if not file_path.exists():
+            self.logger.warning("File not found: %s", file_path)
+            return {}
         
-        top_pos = sorted(all_pos_freqs.keys(), key=lambda x: all_pos_freqs[x], reverse=True)[:top_n]
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except json.JSONDecodeError as e:
+            self.logger.error("Invalid JSON in %s: %s", file_path, e)
+            return {}
+        except IOError as e:
+            self.logger.error("IO error reading %s: %s", file_path, e)
+            return {}
+    
+    def save_figure(self, fig, filename, dpi=300):
+        """Save figure to the figures directory."""
+        project_dir = Path(__file__).resolve().parents[3]
+        figures_dir = project_dir / 'data' / 'figures'
         
-        # Create DataFrame for easier plotting
-        plot_data = []
-        for lang in languages:
-            for pos in top_pos:
-                plot_data.append({
-                    'Language': lang,
-                    'POS': pos,
-                    'Full POS Name': self.pos_full_names.get(pos, pos),
-                    'Frequency (%)': pos_data[lang].get(pos, 0)
-                })
+        # Create directory if needed
+        os.makedirs(figures_dir, exist_ok=True)
         
-        df = pd.DataFrame(plot_data)
-        
-        # Create the figure with a larger size for this specific visualization
-        fig, ax = self.create_figure(figsize=(14, 8))
-        
-        # Create a grouped bar chart
-        sns.barplot(
-            x='Full POS Name', 
-            y='Frequency (%)', 
-            hue='Language', 
-            data=df,
-            palette=self.palettes['languages'][:len(languages)],
-            ax=ax
-        )
-        
-        # Enhance the visualization
-        ax.set_title('Part-of-Speech Distribution Across Languages', fontsize=18, pad=20)
-        ax.set_xlabel('Part of Speech', fontsize=14, labelpad=10)
-        ax.set_ylabel('Frequency (%)', fontsize=14, labelpad=10)
-        
-        # Improve readability
-        plt.xticks(rotation=45, ha='right')
-        ax.legend(title='Language', title_fontsize=12, bbox_to_anchor=(1.02, 1), loc='upper left')
-        
-        # Add a subtle grid only on the y-axis for readability
-        ax.grid(axis='y', alpha=0.3)
-        
-        # Ensure layout fits everything
-        plt.tight_layout()
-        
-        return fig, ax
+        # Save the figure
+        output_path = figures_dir / filename
+        try:
+            fig.savefig(output_path, dpi=dpi, bbox_inches='tight')
+            self.logger.info("Figure saved: %s", output_path)
+            return True
+        except (ValueError, IOError) as e:
+            self.logger.error("Error saving figure to %s: %s", output_path, e)
+            return False
