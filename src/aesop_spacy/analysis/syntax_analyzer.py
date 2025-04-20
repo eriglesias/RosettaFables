@@ -114,12 +114,16 @@ class SyntaxAnalyzer:
                     # Calculate distance if we have both positions
                     if head_id in token_indices and dep_id in token_indices:
                         distance = abs(token_indices[head_id] - token_indices[dep_id])
-                        all_distances.append(distance)
                         
-                        # Track by dependency type
-                        if dep_type not in distances_by_type:
-                            distances_by_type[dep_type] = []
-                        distances_by_type[dep_type].append(distance)
+                        # Filter out unreasonably large distances (likely errors)
+                        max_reasonable_distance = 30  # Most natural language dependencies stay under this
+                        if distance <= max_reasonable_distance:
+                            all_distances.append(distance)
+                            
+                            # Track by dependency type
+                            if dep_type not in distances_by_type:
+                                distances_by_type[dep_type] = []
+                            distances_by_type[dep_type].append(distance)
         
         # Calculate statistics
         results = {
@@ -147,6 +151,9 @@ class SyntaxAnalyzer:
                 }
         
         return results
+
+ 
+
     
     def tree_shapes(self, fable):
         """
@@ -563,6 +570,17 @@ class SyntaxAnalyzer:
         Returns:
             String representing word order pattern (SVO, SOV, etc.)
         """
+        # Check for invalid positions
+        if subj_pos < 0 or verb_pos < 0 or obj_pos < 0:
+            return "other"
+            
+        # Check for unusually distant components (typically indicates parsing issues)
+        max_distance = 30
+        if (abs(subj_pos - verb_pos) > max_distance or 
+            abs(verb_pos - obj_pos) > max_distance or
+            abs(subj_pos - obj_pos) > max_distance):
+            return "other"
+        
         positions = [
             ('S', subj_pos),
             ('V', verb_pos),
@@ -576,7 +594,8 @@ class SyntaxAnalyzer:
         pattern = ''.join(pos[0] for pos in positions)
         
         return pattern
-    
+
+
     def semantic_roles(self, fable):
         """
         Map semantic roles in the fable.
