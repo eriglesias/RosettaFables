@@ -154,21 +154,10 @@ class StyleAnalyzer:
         # Get language for language-specific processing
         language = fable.get('language', 'en')
         
-        # Tokenize appropriately based on available data
+        # IMPORTANT: Always tokenize from full text FIRST
         tokens = [t.lower() for t in full_text.split() if t.strip()]
-        tokens = [t for t in tokens if t and len(t) > 1 and not all(c in '.,;:!?"\'()[]{}' for c in t)]
         
-        # If lemmas are available, use them for better normalization
-        if 'lemmas' in fable and isinstance(fable['lemmas'], list):
-            # Lemmas normalize word forms (running -> run)
-            tokens = [lemma[0].lower() for lemma in fable['lemmas'] if isinstance(lemma, list) and lemma]
-        elif 'tokens' in fable and isinstance(fable['tokens'], list):
-            tokens = [token[0].lower() for token in fable['tokens'] if isinstance(token, list) and token]
-        else:
-            # Simple tokenization as fallback (not ideal but works)
-            tokens = [t.lower() for t in full_text.split() if t.strip()]
-        
-        # Filter out punctuation and very short tokens (if appropriate for the language)
+        # Filter out punctuation and very short tokens
         tokens = [t for t in tokens if t and len(t) > 1 and not all(c in '.,;:!?"\'()[]{}' for c in t)]
         
         # Calculate basic counts
