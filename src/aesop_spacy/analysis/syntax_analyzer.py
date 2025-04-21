@@ -735,9 +735,9 @@ class SyntaxAnalyzer:
         
         if language in language_notes:
             results['language_notes'] = language_notes[language]
-        
         return results
-    
+
+
     def save_analysis(self, fable_id, language, analysis_type, results):
         """
         Save analysis results to file.
