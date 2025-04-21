@@ -7,13 +7,13 @@
     "es"
   ],
   "fables_compared": [
+    "7",
     "1",
     "6",
     "4",
-    "3",
-    "7",
+    "5",
     "2",
-    "5"
+    "3"
   ],
   "analysis_types": [
     "pos_distribution",

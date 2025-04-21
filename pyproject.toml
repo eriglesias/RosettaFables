@@ -16,6 +16,9 @@ stanza = "^1.10.1"
 pandas = "^2.2.3"
 ipython = "^9.0.2"
 seaborn = "^0.13.2"
+scikit-learn = "^1.6.1"
+nltk = "^3.9.1"
+sentence-transformers = "^4.1.0"
 
 
 [tool.poetry.group.dev.dependencies]
