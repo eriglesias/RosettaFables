@@ -10,9 +10,7 @@ This module provides:
 """
 
 import logging
-from pathlib import Path
-import json
-from typing import Dict, List, Optional, Any
+from typing import Dict, List, Any
 import re
 import statistics
 
@@ -114,16 +112,25 @@ class SentimentAnalyzer:
             results['sentiment']['body'] = self.transformer_manager.classify_sentiment(body)
             
             # Also analyze emotions in the body
-            results['emotions'] = self._detect_emotions_transformer(body, language)
+            try:
+                results['emotions'] = self._detect_emotions_transformer(body, language)
+            except (RuntimeError, ValueError) as e:
+                self.logger.warning("Error detecting emotions with transformer: %s", e)
+                # Fall back to keyword-based analysis
+                results['emotions'] = self._detect_emotions_keyword(body, language)
         
         if moral:
             results['sentiment']['moral'] = self.transformer_manager.classify_sentiment(moral)
         
         # Calculate overall sentiment (weighted average of body and moral)
-        if results['sentiment']['body'] is not None:
-            body_score = results['sentiment']['body']['score']
-            moral_score = results['sentiment']['moral']['score'] if results['sentiment']['moral'] else None
+        # Fix the unsubscriptable issue with proper checks
+        body_result = results['sentiment'].get('body', {})
+        body_score = body_result.get('score') if isinstance(body_result, dict) else None
+        
+        moral_result = results['sentiment'].get('moral', {})
+        moral_score = moral_result.get('score') if isinstance(moral_result, dict) else None
             
+        if body_score is not None:
             if moral_score is not None:
                 # Weight body 70%, moral 30%
                 overall_score = (body_score * 0.7) + (moral_score * 0.3)
@@ -207,9 +214,12 @@ class SentimentAnalyzer:
             
             return emotion_scores
             
-        except Exception as e:
-            self.logger.error(f"Error detecting emotions with transformer: {str(e)}")
+        except RuntimeError as e:
+            self.logger.error("Runtime error detecting emotions with transformer: %s", e)
             # Fall back to keyword-based approach
+            return self._detect_emotions_keyword(text, language)
+        except ValueError as e:
+            self.logger.error("Value error detecting emotions with transformer: %s", e)
             return self._detect_emotions_keyword(text, language)
     
     def _detect_emotions_keyword(self, text: str, language: str) -> Dict[str, float]:
@@ -298,7 +308,7 @@ class SentimentAnalyzer:
                 
                 # Collect data for consistency analysis
                 overall_sentiment = analysis['sentiment'].get('overall', {})
-                if overall_sentiment and 'label' in overall_sentiment:
+                if overall_sentiment and isinstance(overall_sentiment, dict) and 'label' in overall_sentiment:
                     all_sentiments.append(overall_sentiment['label'])
                 
                 # Collect emotion data
@@ -311,28 +321,31 @@ class SentimentAnalyzer:
             if all_sentiments:
                 from collections import Counter
                 sentiment_counter = Counter(all_sentiments)
-                most_common = sentiment_counter.most_common(1)[0]
-                consistency = most_common[1] / len(all_sentiments)
-                
-                sentiment_comparison['consistency']['sentiment'] = {
-                    'dominant_sentiment': most_common[0],
-                    'consistency_score': consistency
-                }
+                if sentiment_counter:  # Make sure it's not empty
+                    most_common = sentiment_counter.most_common(1)[0]
+                    consistency = most_common[1] / len(all_sentiments)
+                    
+                    sentiment_comparison['consistency']['sentiment'] = {
+                        'dominant_sentiment': most_common[0],
+                        'consistency_score': consistency
+                    }
             
             # Calculate dominant emotion
             if all_emotions:
                 # Average each emotion's score across languages
                 avg_emotions = {}
                 for emotion, scores in all_emotions.items():
-                    avg_emotions[emotion] = statistics.mean(scores)
+                    if scores:  # Make sure we're not calculating mean of an empty sequence
+                        avg_emotions[emotion] = statistics.mean(scores)
                 
                 # Find the dominant emotion
-                dominant_emotion = max(avg_emotions.items(), key=lambda x: x[1])
-                
-                sentiment_comparison['consistency']['dominant_emotion'] = {
-                    'emotion': dominant_emotion[0],
-                    'average_score': dominant_emotion[1]
-                }
+                if avg_emotions:
+                    dominant_emotion = max(avg_emotions.items(), key=lambda x: x[1])
+                    
+                    sentiment_comparison['consistency']['dominant_emotion'] = {
+                        'emotion': dominant_emotion[0],
+                        'average_score': dominant_emotion[1]
+                    }
             
             comparison[fable_id] = sentiment_comparison
         
@@ -367,9 +380,21 @@ class SentimentAnalyzer:
         
         # Count fables by moral type and sentiment
         for fable in fables:
+            # Extract values with proper checks
             moral_type = fable.get('moral_type', 'implicit')
-            sentiment = fable.get('sentiment', {}).get('overall', {}).get('label', 'neutral')
             
+            # Safely extract sentiment
+            sentiment_data = fable.get('sentiment', {})
+            if isinstance(sentiment_data, dict):
+                overall_sentiment = sentiment_data.get('overall', {})
+                if isinstance(overall_sentiment, dict):
+                    sentiment = overall_sentiment.get('label', 'neutral')
+                else:
+                    sentiment = 'neutral'
+            else:
+                sentiment = 'neutral'
+            
+            # Increment counters
             if moral_type == 'explicit':
                 results['explicit_morals'][sentiment] += 1
                 results['explicit_morals']['total'] += 1

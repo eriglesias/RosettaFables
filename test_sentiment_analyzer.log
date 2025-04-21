@@ -1,0 +1,2 @@
+2025-04-21 11:39:14,421 - src.aesop_spacy.analysis.sentiment_analyzer - WARNING - Error detecting emotions with transformer: Simulated error
+2025-04-21 11:40:23,505 - src.aesop_spacy.analysis.sentiment_analyzer - WARNING - Error detecting emotions with transformer: Simulated error
