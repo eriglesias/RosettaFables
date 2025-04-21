@@ -11,7 +11,6 @@ This module provides:
 
 from pathlib import Path
 import re
-import json
 import logging
 from collections import Counter
 
@@ -42,21 +41,30 @@ class MoralDetector:
         self.moral_indicators = {
             'en': ['moral', 'lesson', 'teaches us', 'shows that', 'reminds us'],
             'de': ['Moral', 'Lehre', 'zeigt uns', 'erinnert uns'],
-            'es': ['moraleja', 'enseña', 'muestra que', 'nos recuerda'],
+            'es': ['moraleja', 'enseña', 'muestra que', 'nos recuerda', 'fábula muestra'],
             'nl': ['moraal', 'les', 'leert ons', 'toont dat'],
             'grc': ['ὁ λόγος δηλοῖ', 'ὁ μῦθος δηλοῖ']
         }
         
-        # Common moral themes/categories
+        # Common moral themes/categories - expanded with multilingual keywords
         self.moral_categories = {
-            'prudence': ['caution', 'careful', 'think', 'consider', 'wisdom', 'plan'],
-            'honesty': ['truth', 'honest', 'lie', 'deceive', 'integrity'],
-            'perseverance': ['persist', 'effort', 'continue', 'try', 'overcome'],
-            'kindness': ['kind', 'help', 'assist', 'care', 'compassion'],
-            'humility': ['humble', 'pride', 'arrogance', 'modest'],
-            'gratitude': ['grateful', 'thank', 'appreciate', 'recognition'],
-            'moderation': ['moderate', 'excess', 'enough', 'content'],
-            'justice': ['fair', 'justice', 'punish', 'reward', 'deserve']
+            'prudence': ['caution', 'careful', 'think', 'consider', 'wisdom', 'plan', 'prudente', 'precaución', 'sabiduría'],
+            'honesty': ['truth', 'honest', 'lie', 'deceive', 'integrity', 'verdad', 'honesto', 'mentira', 'engaño'],
+            'perseverance': ['persist', 'effort', 'continue', 'try', 'overcome', 'persistir', 'esfuerzo', 'continuar'],
+            'kindness': ['kind', 'help', 'assist', 'care', 'compassion', 'amable', 'ayudar', 'cuidar', 'compasión'],
+            'humility': ['humble', 'pride', 'arrogance', 'modest', 'humilde', 'orgullo', 'modesto', 'arrogancia'],
+            'gratitude': ['grateful', 'thank', 'appreciate', 'recognition', 'agradecido', 'gracias', 'apreciar'],
+            'moderation': ['moderate', 'excess', 'enough', 'content', 'moderado', 'exceso', 'suficiente', 'contenido'],
+            'justice': ['fair', 'justice', 'punish', 'reward', 'deserve', 'justicia', 'justo', 'defensa', 'daño', 'fuerza', 'injusticia', 'castigar']
+        }
+        
+        # Common stopwords for character detection
+        self.stopwords_by_lang = {
+            'en': ['the', 'a', 'an', 'this', 'that', 'these', 'those', 'he', 'she', 'it', 'they', 'we', 'i', 'you', 'my', 'your'],
+            'es': ['el', 'la', 'los', 'las', 'un', 'una', 'unos', 'unas', 'este', 'esta', 'por', 'para', 'sin', 'con', 'su', 'sus', 'le', 'les', 'mas'],
+            'de': ['der', 'die', 'das', 'ein', 'eine', 'einen', 'auf', 'zu', 'aus', 'mit', 'und', 'oder', 'aber', 'wenn'],
+            'nl': ['de', 'het', 'een', 'met', 'voor', 'op', 'in', 'uit', 'aan', 'bij', 'van', 'door'],
+            'grc': []  # Add Ancient Greek stopwords if needed
         }
         
     def detect_explicit_moral(self, fable):
@@ -87,7 +95,7 @@ class MoralDetector:
         moral_tag = fable.get('moral', None)
         moral_type = fable.get('moral_type', None)
         
-        if moral_tag and moral_tag.strip():
+        if moral_tag and isinstance(moral_tag, str) and moral_tag.strip():
             results['has_explicit_moral'] = True
             results['moral_text'] = moral_tag.strip()
             results['detection_method'] = 'xml_tag'
@@ -98,7 +106,7 @@ class MoralDetector:
                 results['moral_type'] = moral_type
                 
             return results
-            
+        
         # Method 2: Look for common moral-indicating phrases
         if body:
             sentences = self._extract_sentences(body, language)
@@ -185,6 +193,10 @@ class MoralDetector:
         """
         Classify the moral into predefined categories.
         
+        Args:
+            moral_text: Text of the moral to classify
+            language: Language code (e.g., 'en', 'es') for language-specific handling
+            
         Returns:
             Dict with theme categories and confidence scores
         """
@@ -389,13 +401,40 @@ class MoralDetector:
         return comparison
     
     def _extract_sentences(self, text, language):
-        """Extract sentences from text with language-specific handling."""
+        """
+        Extract sentences from text with language-specific handling.
+        
+        Args:
+            text: Text to extract sentences from
+            language: Language code for language-specific handling
+            
+        Returns:
+            List of sentences
+        """
         # Simple sentence splitting for demonstration
-        # In a real implementation, use language-specific sentence tokenizers
-        return re.split(r'[.!?]+', text)
+        if language == 'es':
+            # For Spanish text, handle special cases like «...»
+            text = re.sub(r'([.!?])\s*[«»]', r'\1 «', text)
+            
+        # Split by sentence ending punctuation
+        sentences = re.split(r'[.!?]+', text)
+        
+        # Remove empty sentences and strip whitespace
+        sentences = [s.strip() for s in sentences if s.strip()]
+        
+        return sentences
     
     def _extract_keywords(self, text, language):
-        """Extract important keywords from text."""
+        """
+        Extract important keywords from text.
+        
+        Args:
+            text: Text to extract keywords from
+            language: Language code for language-specific handling
+            
+        Returns:
+            List of keyword dictionaries with terms and scores
+        """
         # Simple TF-IDF based keyword extraction
         try:
             # Get stopwords for the language if available
@@ -404,10 +443,15 @@ class MoralDetector:
             # Fallback to empty set if language not supported
             stop_words = set()
         
+        # Add custom stopwords from our dictionary
+        if language in self.stopwords_by_lang:
+            stop_words.update(self.stopwords_by_lang[language])
+        
         # Create TF-IDF vectorizer
         vectorizer = TfidfVectorizer(
             max_features=20,
-            stop_words=stop_words if stop_words else None
+            stop_words=stop_words if stop_words else None,
+            min_df=1  # Include terms that appear at least once
         )
         
         # Apply vectorizer to text
@@ -425,15 +469,25 @@ class MoralDetector:
             sorted_scores = sorted(scores, key=lambda x: x[1], reverse=True)
             
             return [
-                {'term': term, 'score': score}
+                {'term': term, 'score': float(score)}  # Convert to float for JSON serialization
                 for term, score in sorted_scores
             ]
-        except:
+        except Exception as e:
             # Fallback if vectorization fails
+            self.logger.warning(f"Keyword extraction failed: {e}")
             return []
     
     def _apply_topic_modeling(self, text, language):
-        """Apply topic modeling to extract latent themes."""
+        """
+        Apply topic modeling to extract latent themes.
+        
+        Args:
+            text: Text to model
+            language: Language code for language-specific handling
+            
+        Returns:
+            List of topic dictionaries
+        """
         # Simplified topic modeling
         try:
             # Get stopwords for the language if available
@@ -441,6 +495,10 @@ class MoralDetector:
         except:
             # Fallback to empty set if language not supported
             stop_words = set()
+        
+        # Add custom stopwords
+        if language in self.stopwords_by_lang:
+            stop_words.update(self.stopwords_by_lang[language])
         
         # Create TF-IDF vectorizer
         vectorizer = TfidfVectorizer(
@@ -453,9 +511,14 @@ class MoralDetector:
             tfidf_matrix = vectorizer.fit_transform([text])
             feature_names = vectorizer.get_feature_names_out()
             
+            # Check if we have enough features for topic modeling
+            if len(feature_names) < 5:
+                return []
+            
             # Apply LDA
+            n_topics = min(3, len(feature_names) // 3)  # Adjust topics based on text length
             lda = LatentDirichletAllocation(
-                n_components=3,  # Extract 3 topics
+                n_components=n_topics,
                 random_state=42
             )
             
@@ -473,14 +536,26 @@ class MoralDetector:
                 })
             
             return topics
-        except:
+        except Exception as e:
             # Fallback if topic modeling fails
+            self.logger.warning(f"Topic modeling failed: {e}")
             return []
     
     def _extract_characters(self, fable):
-        """Extract main characters from the fable."""
-        # In a real implementation, use NER to extract characters
-        # For demonstration, we'll use a simple approach
+        """
+        Extract main characters from the fable.
+        
+        Args:
+            fable: Fable dictionary
+            
+        Returns:
+            List of character dictionaries
+        """
+        # Get language
+        language = fable.get('language', 'en')
+        
+        # Get stopwords for this language
+        stopwords = self.stopwords_by_lang.get(language, [])
         
         # Get named entities if available
         entities = fable.get('entities', [])
@@ -495,26 +570,61 @@ class MoralDetector:
             if person_entities:
                 # Count frequency and return top entities
                 counter = Counter(person_entities)
-                return [
+                char_list = [
                     {'name': name, 'count': count}
                     for name, count in counter.most_common(5)
+                    if name.lower() not in stopwords and len(name) > 2
                 ]
+                if char_list:
+                    return char_list
         
         # Fallback: look for capitalized words that might be characters
         body = fable.get('body', '')
         words = re.findall(r'\b[A-Z][a-z]+\b', body)
         
         if words:
-            counter = Counter(words)
-            return [
-                {'name': name, 'count': count}
-                for name, count in counter.most_common(5)
-            ]
+            # Filter out common stopwords and short words
+            filtered_words = [w for w in words if w.lower() not in stopwords and len(w) > 2]
+            
+            # For Spanish and similar languages, look for common character indicators
+            if language in ['es', 'en', 'de', 'nl']:
+                animal_indicators = {
+                    'es': ['lobo', 'cordero', 'zorro', 'león', 'ratón', 'perro', 'gato'],
+                    'en': ['wolf', 'lamb', 'fox', 'lion', 'mouse', 'dog', 'cat'],
+                    'de': ['Wolf', 'Lamm', 'Fuchs', 'Löwe', 'Maus', 'Hund', 'Katze'],
+                    'nl': ['wolf', 'lam', 'vos', 'leeuw', 'muis', 'hond', 'kat']
+                }
+                
+                # Get animal terms for this language
+                animals = animal_indicators.get(language, [])
+                
+                # Look for these animal names in the text
+                for animal in animals:
+                    # Look for capitalized and lowercase versions
+                    matches = re.findall(rf'\b{animal}\b', body, re.IGNORECASE)
+                    if matches:
+                        filtered_words.extend([animal.capitalize()] * len(matches))
+            
+            if filtered_words:
+                counter = Counter(filtered_words)
+                return [
+                    {'name': name, 'count': count}
+                    for name, count in counter.most_common(5)
+                ]
         
         return []
     
     def _analyze_character_actions(self, fable, characters):
-        """Analyze actions associated with each character."""
+        """
+        Analyze actions associated with each character.
+        
+        Args:
+            fable: Fable dictionary
+            characters: List of character dictionaries
+            
+        Returns:
+            Dictionary mapping characters to their actions
+        """
         # This would require detailed parsing in a real implementation
         # For demonstration, we'll return a simplified structure
         
@@ -539,7 +649,18 @@ class MoralDetector:
         return actions
     
     def _generate_potential_morals(self, keywords, topics, character_actions, language):
-        """Generate potential moral statements from analysis results."""
+        """
+        Generate potential moral statements from analysis results.
+        
+        Args:
+            keywords: List of keyword dictionaries
+            topics: List of topic dictionaries
+            character_actions: Dictionary of character actions
+            language: Language code
+            
+        Returns:
+            List of potential moral dictionaries
+        """
         # In a real implementation, this would use templates or generative models
         # For demonstration, we'll use a basic approach
         
@@ -547,52 +668,66 @@ class MoralDetector:
         
         # 1. Keyword-based potential morals
         if keywords:
-            top_keywords = [kw['term'] for kw in keywords[:5]]
+            top_keywords = [kw['term'] for kw in keywords[:5] if 'term' in kw]
             
-            # Simple template-based generation
-            templates = {
-                'en': [
-                    "The moral is to {verb} {object}.",
-                    "One should always {verb} {object}.",
-                    "It's important to {verb} when dealing with {object}."
-                ],
-                'de': [
-                    "Die Moral ist, {object} zu {verb}.",
-                    "Man sollte immer {object} {verb}."
-                ],
-                'es': [
-                    "La moraleja es {verb} {object}.",
-                    "Uno siempre debe {verb} {object}."
-                ],
-                'nl': [
-                    "De moraal is om {object} te {verb}.",
-                    "Men moet altijd {object} {verb}."
-                ]
-            }
-            
-            # Use English templates as fallback
-            lang_templates = templates.get(language, templates['en'])
-            
-            # Generate simple moral statements
-            for i in range(min(3, len(top_keywords))):
-                template = lang_templates[i % len(lang_templates)]
-                moral = template.format(
-                    verb=top_keywords[i],
-                    object=top_keywords[(i+1) % len(top_keywords)]
-                )
+            if len(top_keywords) >= 2:
+                # Simple template-based generation
+                templates = {
+                    'en': [
+                        "The moral is to {verb} {object}.",
+                        "One should always {verb} {object}.",
+                        "It's important to {verb} when dealing with {object}."
+                    ],
+                    'de': [
+                        "Die Moral ist, {object} zu {verb}.",
+                        "Man sollte immer {object} {verb}."
+                    ],
+                    'es': [
+                        "La moraleja es {verb} {object}.",
+                        "Uno siempre debe {verb} {object}."
+                    ],
+                    'nl': [
+                        "De moraal is om {object} te {verb}.",
+                        "Men moet altijd {object} {verb}."
+                    ]
+                }
                 
-                potential_morals.append({
-                    'text': moral,
-                    'source': 'keyword_template',
-                    'keywords': top_keywords[:2]
-                })
+                # Use English templates as fallback
+                lang_templates = templates.get(language, templates['en'])
+                
+                # Generate simple moral statements
+                for i in range(min(3, len(top_keywords) - 1)):
+                    template = lang_templates[i % len(lang_templates)]
+                    try:
+                        moral = template.format(
+                            verb=top_keywords[i],
+                            object=top_keywords[i+1]
+                        )
+                        
+                        potential_morals.append({
+                            'text': moral,
+                            'source': 'keyword_template',
+                            'keywords': top_keywords[:2]
+                        })
+                    except IndexError:
+                        # Skip if we don't have enough keywords
+                        continue
         
         # 2. Topic-based potential morals
         if topics:
             for topic in topics:
                 top_words = topic.get('top_words', [])[:3]
                 if top_words:
-                    moral = f"The moral concerns {', '.join(top_words)}."
+                    # Language-specific topic templates
+                    topic_templates = {
+                        'en': "The moral concerns {topics}.",
+                        'es': "La moraleja trata de {topics}.",
+                        'de': "Die Moral befasst sich mit {topics}.",
+                        'nl': "De moraal gaat over {topics}."
+                    }
+                    
+                    template = topic_templates.get(language, topic_templates['en'])
+                    moral = template.format(topics=', '.join(top_words))
                     
                     potential_morals.append({
                         'text': moral,
@@ -602,10 +737,20 @@ class MoralDetector:
         
         # 3. Character-action based morals
         if character_actions:
+            # Language-specific character templates
+            char_templates = {
+                'en': "The story of {character} teaches us about consequences of our actions.",
+                'es': "La historia de {character} nos enseña sobre las consecuencias de nuestras acciones.",
+                'de': "Die Geschichte von {character} lehrt uns über die Konsequenzen unserer Handlungen.",
+                'nl': "Het verhaal van {character} leert ons over de gevolgen van onze acties."
+            }
+            
+            template = char_templates.get(language, char_templates['en'])
+            
             for character, actions in character_actions.items():
                 sample = actions.get('sample_sentences', [])
                 if sample:
-                    moral = f"The story of {character} teaches us about consequences of our actions."
+                    moral = template.format(character=character)
                     
                     potential_morals.append({
                         'text': moral,
@@ -616,17 +761,48 @@ class MoralDetector:
         return potential_morals
     
     def _rank_morals(self, potential_morals, body, language):
-        """Rank and filter potential morals based on relevance to the fable."""
+        """
+        Rank and filter potential morals based on relevance to the fable.
+        
+        Args:
+            potential_morals: List of potential moral dictionaries
+            body: Text body of the fable
+            language: Language code for language-specific handling
+            
+        Returns:
+            List of ranked moral dictionaries
+        """
         # In a real implementation, this would use semantic similarity
         # For demonstration, we'll use a simple word overlap approach
         
         ranked_morals = []
-        body_words = set(re.findall(r'\b\w+\b', body.lower()))
+        
+        # Get relevant words from the body text (excluding stopwords)
+        try:
+            # Get stopwords for the language if available
+            stop_words = set(stopwords.words(self._map_language_code(language)))
+        except:
+            # Fallback to empty set if language not supported
+            stop_words = set()
+            
+        # Add custom stopwords
+        if language in self.stopwords_by_lang:
+            stop_words.update(self.stopwords_by_lang[language])
+        
+        # Get all words from body, excluding stopwords
+        body_words = set(w.lower() for w in re.findall(r'\b\w+\b', body.lower()) 
+                        if w.lower() not in stop_words and len(w) > 2)
         
         for moral in potential_morals:
             moral_text = moral.get('text', '')
-            moral_words = set(re.findall(r'\b\w+\b', moral_text.lower()))
             
+            # Get all words from moral, excluding stopwords
+            moral_words = set(w.lower() for w in re.findall(r'\b\w+\b', moral_text.lower()) 
+                            if w.lower() not in stop_words and len(w) > 2)
+            
+            if not moral_words:
+                continue
+                
             # Calculate simple overlap score
             overlap = len(moral_words.intersection(body_words))
             score = overlap / len(moral_words) if moral_words else 0
@@ -646,7 +822,15 @@ class MoralDetector:
         return ranked_morals[:3]  # Top 3 morals
     
     def _map_language_code(self, language):
-        """Map ISO language codes to NLTK language codes."""
+        """
+        Map ISO language codes to NLTK language codes.
+        
+        Args:
+            language: ISO language code (e.g., 'en', 'es')
+            
+        Returns:
+            NLTK language code
+        """
         mapping = {
             'en': 'english',
             'de': 'german',
