@@ -9,24 +9,19 @@ This module provides:
 - Visualization utilities for cluster analysis
 """
 
-import numpy as np
+
 import json
 from pathlib import Path
 import logging
 from collections import defaultdict
-import string
-import re
-
+import numpy as np
 # For clustering
-from sklearn.cluster import KMeans, DBSCAN, AgglomerativeClustering
+from sklearn.cluster import KMeans, DBSCAN
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import PCA, TruncatedSVD
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import silhouette_score, calinski_harabasz_score
-from scipy.cluster.hierarchy import dendrogram, linkage, fcluster
-
-# For visualization support (not for direct plotting)
-import matplotlib.pyplot as plt
+from scipy.cluster.hierarchy import linkage, fcluster
 
 class ClusteringAnalyzer:
     """
@@ -323,9 +318,12 @@ class ClusteringAnalyzer:
         # Get cluster labels
         cluster_labels = kmeans.fit_predict(features)
         
+        # Convert sparse matrix to dense array for evaluation metrics
+        features_array = features.toarray() if hasattr(features, 'toarray') else features
+        
         # Evaluate clustering quality
-        silhouette = silhouette_score(features, cluster_labels) if len(set(cluster_labels)) > 1 else 0
-        calinski = calinski_harabasz_score(features, cluster_labels) if len(set(cluster_labels)) > 1 else 0
+        silhouette = silhouette_score(features_array, cluster_labels) if len(set(cluster_labels)) > 1 else 0
+        calinski = calinski_harabasz_score(features_array, cluster_labels) if len(set(cluster_labels)) > 1 else 0
         
         # Get cluster centers
         cluster_centers = kmeans.cluster_centers_
@@ -424,19 +422,17 @@ class ClusteringAnalyzer:
             }
         
         # Convert sparse matrix to dense if needed
-        if hasattr(features, 'toarray'):
-            features = features.toarray()
+        features_dense = features.toarray() if hasattr(features, 'toarray') else features
         
         # Compute linkage matrix
         linkage_method = kwargs.get('linkage_method', 'ward')
-        linkage_matrix = linkage(features, method=linkage_method)
+        linkage_matrix = linkage(features_dense, method=linkage_method)
         
         # Determine optimal number of clusters if not specified
         if n_clusters is None:
             # Use the elbow method with inertia
             max_clusters = min(10, len(fable_ids) - 1)
-            if max_clusters <= 1:
-                max_clusters = 2
+            max_clusters = max(2, max_clusters)
                 
             inertias = []
             for k in range(1, max_clusters + 1):
@@ -448,7 +444,7 @@ class ClusteringAnalyzer:
                 for cluster_id in range(1, k + 1):  # fcluster uses 1-indexed labels
                     cluster_indices = np.where(cluster_labels == cluster_id)[0]
                     if len(cluster_indices) > 0:
-                        cluster_points = features[cluster_indices]
+                        cluster_points = features_dense[cluster_indices]
                         centroid = np.mean(cluster_points, axis=0)
                         inertia += np.sum((cluster_points - centroid) ** 2)
                 
@@ -472,8 +468,9 @@ class ClusteringAnalyzer:
         cluster_labels = cluster_labels - 1
         
         # Evaluate clustering quality
-        silhouette = silhouette_score(features, cluster_labels) if len(set(cluster_labels)) > 1 else 0
-        calinski = calinski_harabasz_score(features, cluster_labels) if len(set(cluster_labels)) > 1 else 0
+        features_array = features.toarray() if hasattr(features, 'toarray') else features
+        silhouette = silhouette_score(features_array, cluster_labels) if len(set(cluster_labels)) > 1 else 0
+        calinski = calinski_harabasz_score(features_array, cluster_labels) if len(set(cluster_labels)) > 1 else 0
         
         # Create cluster information
         clusters = {}
@@ -484,7 +481,7 @@ class ClusteringAnalyzer:
             cluster_languages = [fable_languages[idx] for idx in cluster_indices]
             
             # Get the most important features for this cluster
-            cluster_features = features[cluster_indices]
+            cluster_features = features_dense[cluster_indices]
             cluster_center = np.mean(cluster_features, axis=0)
             
             # Get top features
@@ -510,7 +507,6 @@ class ClusteringAnalyzer:
             }
         
         # Prepare dendrogram data
-        # This will be a simplified representation that can be used to recreate the dendrogram
         dendrogram_data = {
             'linkage_matrix': linkage_matrix.tolist(),
             'fable_ids': fable_ids,
@@ -584,12 +580,18 @@ class ClusteringAnalyzer:
             non_noise_indices = np.where(cluster_labels != -1)[0]
             if len(non_noise_indices) > n_clusters:
                 non_noise_features = features[non_noise_indices]
+                # Convert sparse matrix to dense if needed
+                if hasattr(non_noise_features, 'toarray'):
+                    non_noise_features = non_noise_features.toarray()
                 non_noise_labels = cluster_labels[non_noise_indices]
                 
                 quality = {
                     'silhouette_score': silhouette_score(non_noise_features, non_noise_labels),
                     'calinski_harabasz_score': calinski_harabasz_score(non_noise_features, non_noise_labels)
                 }
+        
+        # Convert features to dense array for cluster analysis
+        features_array = features.toarray() if hasattr(features, 'toarray') else features
         
         # Create cluster information
         clusters = {}
@@ -604,10 +606,7 @@ class ClusteringAnalyzer:
             cluster_languages = [fable_languages[idx] for idx in cluster_indices]
             
             # Get the most important features for this cluster
-            cluster_features = features[cluster_indices]
-            if hasattr(cluster_features, 'toarray'):
-                cluster_features = cluster_features.toarray()
-                
+            cluster_features = features_array[cluster_indices]
             cluster_center = np.mean(cluster_features, axis=0)
             
             # Get top features
@@ -626,10 +625,7 @@ class ClusteringAnalyzer:
                 language_counts[lang] += 1
             
             # Handle noise cluster differently
-            if i == -1:
-                cluster_name = 'noise'
-            else:
-                cluster_name = f"cluster_{i}"
+            cluster_name = 'noise' if i == -1 else f"cluster_{i}"
                 
             clusters[cluster_name] = {
                 'size': len(cluster_fable_ids),
@@ -818,8 +814,10 @@ class ClusteringAnalyzer:
         
         # Limit max_clusters to the number of fables
         max_clusters = min(max_clusters, len(fable_ids) - 1)
-        if max_clusters < 2:
-            max_clusters = 2
+        max_clusters = max(2, max_clusters)
+        
+        # Convert to dense array for metrics
+        features_array = features.toarray() if hasattr(features, 'toarray') else features
         
         # Calculate scores for different numbers of clusters
         scores = []
@@ -835,8 +833,8 @@ class ClusteringAnalyzer:
             cluster_labels = kmeans.fit_predict(features)
             
             # Calculate evaluation metrics
-            silhouette = silhouette_score(features, cluster_labels)
-            calinski = calinski_harabasz_score(features, cluster_labels)
+            silhouette = silhouette_score(features_array, cluster_labels)
+            calinski = calinski_harabasz_score(features_array, cluster_labels)
             
             # Calculate inertia (sum of squared distances to centers)
             inertia = kmeans.inertia_
@@ -903,6 +901,6 @@ class ClusteringAnalyzer:
         try:
             with open(output_path, 'w', encoding='utf-8') as f:
                 json.dump(results, f, ensure_ascii=False, indent=2)
-            self.logger.info(f"Saved {analysis_type} clustering for fable {fable_id} to {output_path}")
-        except Exception as e:
-            self.logger.error(f"Error saving analysis: {e}")
+            self.logger.info("Saved %s clustering for fable %s to %s", analysis_type, fable_id, output_path)
+        except (IOError, OSError) as e:
+            self.logger.error("Error saving analysis: %s", e)

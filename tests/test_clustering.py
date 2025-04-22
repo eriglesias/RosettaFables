@@ -3,15 +3,23 @@ import json
 import numpy as np
 from pathlib import Path
 import logging
+import sys
+import os
+
+
+project_root = str(Path(__file__).parent.parent)
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
 
 # Import the modules to test
 try:
     from src.aesop_spacy.analysis.clustering import ClusteringAnalyzer
     SKLEARN_AVAILABLE = True
-except ImportError:
+except ImportError as e:
+    print(f"Import error: {e}")
     SKLEARN_AVAILABLE = False
-
-@unittest.skipIf(not SKLEARN_AVAILABLE, "scikit-learn not available")
+    
+@unittest.skipIf(not SKLEARN_AVAILABLE, "Module import failed or scikit-learn not available")
 class TestClusteringAnalyzer(unittest.TestCase):
     """Test cases for ClusteringAnalyzer class."""
     
@@ -179,7 +187,6 @@ class TestClusteringAnalyzer(unittest.TestCase):
         self.assertIn('optimal_clusters', result)
         self.assertIn('recommendation', result)
     
-
 
 if __name__ == '__main__':
     unittest.main()
