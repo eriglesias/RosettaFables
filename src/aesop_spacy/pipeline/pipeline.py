@@ -27,7 +27,15 @@ from aesop_spacy.preprocessing.extractor import ContentExtractor
 from aesop_spacy.preprocessing.processor import FableProcessor
 from aesop_spacy.models.model_manager import get_model
 from aesop_spacy.preprocessing.entity_recognizer import EntityRecognizer
-
+# ----- imports from analysis folder
+from aesop_spacy.analysis.clustering import ClusteringAnalyzer
+from aesop_spacy.analysis.entity_analyzer import EntityAnalyzer
+from aesop_spacy.analysis.moral_detector import MoralDetector
+from aesop_spacy.analysis.nlp_techniques import NLPTechniques
+from aesop_spacy.analysis.sentiment_analyzer import SentimentAnalyzer
+from aesop_spacy.analysis.stats_analyzer import StatsAnalyzer
+from aesop_spacy.analysis.style_analyzer import StyleAnalyzer
+from aesop_spacy.analysis.syntax_analyzer import SyntaxAnalyzer
 class FablePipeline:
     """Coordinates the entire fable processing pipeline."""
 
