@@ -49,8 +49,9 @@ class FablePipeline:
         """
         self.data_dir = data_dir
         self.output_dir = output_dir
+        self.analysis_dir = output_dir / "analysis"
         self.logger = logging.getLogger(__name__)
-  
+
         # Configure logging if not already configured
         if not self.logger.handlers:
             logging.basicConfig(
@@ -66,6 +67,16 @@ class FablePipeline:
         self.serializer = SpacySerializer()
         self.recognizer = EntityRecognizer()
         self.writer = OutputWriter(output_dir)
+        self.clustering_analyzer = ClusteringAnalyzer(self.analysis_dir)
+        self.entity_analyzer = EntityAnalyzer(self.analysis_dir)
+        self.moral_dector = MoralDetector(self.analysis_dir)
+        self.nlp_techniques = NLPTechniques(self.analysis_dir)
+        self.sentiment_analyzer = SentimentAnalyzer() #needing analysis_dir?
+        self.stats_analyzer = StatsAnalyzer(self.analysis_dir)
+        self.style_analyzer = StyleAnalyzer(self.analysis_dir)
+        self.syntax_analyzer = SyntaxAnalyzer(self.analysis_dir)
+        
+        # printing logging 
         self.logger.info("Fable pipeline initialized")
         self.logger.info("Data directory: %s", data_dir)
         self.logger.info("Output directory: %s", output_dir)
@@ -76,7 +87,7 @@ class FablePipeline:
         
         Args:
             use_processed: If True, load from processed files when available.
-                        If False, always process from raw files.
+            If False, always process from raw files.
         
         Returns:
             True if the pipeline completed successfully
@@ -282,20 +293,75 @@ class FablePipeline:
         """
         self.logger.info("Starting fable analysis")
 
+        all_analysis_types = [
+            
+            'pos', 'entity', 'moral', 'comparison', 'character', 'clustering', 'sentiment',
+            'style', 'syntax', 'nlp_techniques', 'stats', 'cross_language'
+        ]
+
         # Default to all analysis types if none specified
         if analysis_types is None:
-            analysis_types = ['pos', 'entity', 'moral', 'comparison', 'character']
-            
+            analysis_types = all_analysis_types       
+        
+
         # Results container
         results = {}
         
+
         # Load processed fables for each language
         languages = []
         for lang_file in (self.output_dir / "processed").glob("fables_*.json"):
             lang = lang_file.stem.split('_')[1]
-            languages.append(lang)
-        
+            languages.append(lang)  
         self.logger.info("Found processed data for languages: %s", ', '.join(languages))
+        
+        
+        # Loading fables by language for analysis
+        fables_by_language = self._load_processed_fables(languages)
+        
+        # Skip if no data
+        if not fables_by_language:
+            self.logger.warning("No processed fables found for anaylsis")
+            return results
+        
+        if any(analysis_type in analysis_types for analysis_type in ['pos', 'entity', 'moral', 'comparison', 'charachter']):
+            basic_results = self._run_basic_analysis(fables_by_language, analysis_types)
+            results.update(basic_results)
+        # Running the analysis from directory
+
+        # Clustering analysis
+        if 'clustering' in analysis_types:
+            clustering_results = self._run_clustering_analysis(fables_by_language)
+            results['clustering'] = clustering_results
+
+        # Sentiment analysis
+        if 'sentiment' in analysis_types:
+            sentiment_results = self.run_sentiment_analysis(fables_by_language)
+            results['sentiment'] = sentiment_results
+
+          # Syntax analysis
+        if 'syntax' in analysis_types:
+            syntax_results = self._run_syntax_analysis(fables_by_language)
+            results['syntax'] = syntax_results
+        
+        # NLP techniques analysis
+        if 'nlp_techniques' in analysis_types:
+            nlp_results = self._run_nlp_techniques_analysis(fables_by_language)
+            results['nlp_techniques'] = nlp_results
+        
+        # Statistical analysis
+        if 'stats' in analysis_types:
+            stats_results = self._run_stats_analysis(fables_by_language)
+            results['stats'] = stats_results
+        
+        # Cross-language analysis
+        if 'cross_language' in analysis_types:
+            cross_lang_results = self._run_cross_language_analysis(fables_by_language)
+            results['cross_language'] = cross_lang_results
+        
+        self.logger.info("Analysis completed successfully")
+        return results
+
         
         # POS tag distribution analysis
         if 'pos' in analysis_types:
