@@ -1,0 +1,233 @@
+{
+  "total_word_count": 106,
+  "unique_word_count": 81,
+  "top_words": [
+    {
+      "word": "se",
+      "count": 5,
+      "relative_freq": 0.04716981132075472
+    },
+    {
+      "word": "que",
+      "count": 4,
+      "relative_freq": 0.03773584905660377
+    },
+    {
+      "word": "mosquito",
+      "count": 3,
+      "relative_freq": 0.02830188679245283
+    },
+    {
+      "word": "león",
+      "count": 3,
+      "relative_freq": 0.02830188679245283
+    },
+    {
+      "word": "más",
+      "count": 3,
+      "relative_freq": 0.02830188679245283
+    },
+    {
+      "word": "su",
+      "count": 3,
+      "relative_freq": 0.02830188679245283
+    },
+    {
+      "word": "le",
+      "count": 2,
+      "relative_freq": 0.018867924528301886
+    },
+    {
+      "word": "fuerte",
+      "count": 2,
+      "relative_freq": 0.018867924528301886
+    },
+    {
+      "word": "yo",
+      "count": 2,
+      "relative_freq": 0.018867924528301886
+    },
+    {
+      "word": "si",
+      "count": 2,
+      "relative_freq": 0.018867924528301886
+    },
+    {
+      "word": "tus",
+      "count": 2,
+      "relative_freq": 0.018867924528301886
+    },
+    {
+      "word": "garras",
+      "count": 2,
+      "relative_freq": 0.018867924528301886
+    },
+    {
+      "word": "zumbar",
+      "count": 2,
+      "relative_freq": 0.018867924528301886
+    },
+    {
+      "word": "trompetilla",
+      "count": 2,
+      "relative_freq": 0.018867924528301886
+    },
+    {
+      "word": "sus",
+      "count": 2,
+      "relative_freq": 0.018867924528301886
+    },
+    {
+      "word": "araña",
+      "count": 2,
+      "relative_freq": 0.018867924528301886
+    },
+    {
+      "word": "acercó",
+      "count": 1,
+      "relative_freq": 0.009433962264150943
+    },
+    {
+      "word": "dijoni",
+      "count": 1,
+      "relative_freq": 0.009433962264150943
+    },
+    {
+      "word": "te",
+      "count": 1,
+      "relative_freq": 0.009433962264150943
+    },
+    {
+      "word": "temo",
+      "count": 1,
+      "relative_freq": 0.009433962264150943
+    }
+  ],
+  "hapax_legomena_count": 65,
+  "hapax_legomena_ratio": 0.8024691358024691,
+  "dis_legomena_count": 10,
+  "entropy": 6.174814883968004,
+  "zipf_data": [
+    {
+      "rank": 1,
+      "word": "se",
+      "count": 5,
+      "expected_zipf": 106.0
+    },
+    {
+      "rank": 2,
+      "word": "que",
+      "count": 4,
+      "expected_zipf": 53.0
+    },
+    {
+      "rank": 3,
+      "word": "mosquito",
+      "count": 3,
+      "expected_zipf": 35.333333333333336
+    },
+    {
+      "rank": 4,
+      "word": "león",
+      "count": 3,
+      "expected_zipf": 26.5
+    },
+    {
+      "rank": 5,
+      "word": "más",
+      "count": 3,
+      "expected_zipf": 21.2
+    },
+    {
+      "rank": 6,
+      "word": "su",
+      "count": 3,
+      "expected_zipf": 17.666666666666668
+    },
+    {
+      "rank": 7,
+      "word": "le",
+      "count": 2,
+      "expected_zipf": 15.142857142857142
+    },
+    {
+      "rank": 8,
+      "word": "fuerte",
+      "count": 2,
+      "expected_zipf": 13.25
+    },
+    {
+      "rank": 9,
+      "word": "yo",
+      "count": 2,
+      "expected_zipf": 11.777777777777779
+    },
+    {
+      "rank": 10,
+      "word": "si",
+      "count": 2,
+      "expected_zipf": 10.6
+    },
+    {
+      "rank": 11,
+      "word": "tus",
+      "count": 2,
+      "expected_zipf": 9.636363636363637
+    },
+    {
+      "rank": 12,
+      "word": "garras",
+      "count": 2,
+      "expected_zipf": 8.833333333333334
+    },
+    {
+      "rank": 13,
+      "word": "zumbar",
+      "count": 2,
+      "expected_zipf": 8.153846153846153
+    },
+    {
+      "rank": 14,
+      "word": "trompetilla",
+      "count": 2,
+      "expected_zipf": 7.571428571428571
+    },
+    {
+      "rank": 15,
+      "word": "sus",
+      "count": 2,
+      "expected_zipf": 7.066666666666666
+    },
+    {
+      "rank": 16,
+      "word": "araña",
+      "count": 2,
+      "expected_zipf": 6.625
+    },
+    {
+      "rank": 17,
+      "word": "acercó",
+      "count": 1,
+      "expected_zipf": 6.235294117647059
+    },
+    {
+      "rank": 18,
+      "word": "dijoni",
+      "count": 1,
+      "expected_zipf": 5.888888888888889
+    },
+    {
+      "rank": 19,
+      "word": "te",
+      "count": 1,
+      "expected_zipf": 5.578947368421052
+    },
+    {
+      "rank": 20,
+      "word": "temo",
+      "count": 1,
+      "expected_zipf": 5.3
+    }
+  ],
+  "fable_id": "6"
+}

@@ -1,0 +1,233 @@
+{
+  "total_word_count": 89,
+  "unique_word_count": 67,
+  "top_words": [
+    {
+      "word": "que",
+      "count": 7,
+      "relative_freq": 0.07865168539325842
+    },
+    {
+      "word": "lo",
+      "count": 6,
+      "relative_freq": 0.06741573033707865
+    },
+    {
+      "word": "se",
+      "count": 5,
+      "relative_freq": 0.056179775280898875
+    },
+    {
+      "word": "ratón",
+      "count": 4,
+      "relative_freq": 0.0449438202247191
+    },
+    {
+      "word": "puso",
+      "count": 2,
+      "relative_freq": 0.02247191011235955
+    },
+    {
+      "word": "león",
+      "count": 2,
+      "relative_freq": 0.02247191011235955
+    },
+    {
+      "word": "le",
+      "count": 2,
+      "relative_freq": 0.02247191011235955
+    },
+    {
+      "word": "soga",
+      "count": 2,
+      "relative_freq": 0.02247191011235955
+    },
+    {
+      "word": "corretear",
+      "count": 1,
+      "relative_freq": 0.011235955056179775
+    },
+    {
+      "word": "cuerpo",
+      "count": 1,
+      "relative_freq": 0.011235955056179775
+    },
+    {
+      "word": "dormido",
+      "count": 1,
+      "relative_freq": 0.011235955056179775
+    },
+    {
+      "word": "éste",
+      "count": 1,
+      "relative_freq": 0.011235955056179775
+    },
+    {
+      "word": "despertó",
+      "count": 1,
+      "relative_freq": 0.011235955056179775
+    },
+    {
+      "word": "atrapó",
+      "count": 1,
+      "relative_freq": 0.011235955056179775
+    },
+    {
+      "word": "estaba",
+      "count": 1,
+      "relative_freq": 0.011235955056179775
+    },
+    {
+      "word": "punto",
+      "count": 1,
+      "relative_freq": 0.011235955056179775
+    },
+    {
+      "word": "devorarlo",
+      "count": 1,
+      "relative_freq": 0.011235955056179775
+    },
+    {
+      "word": "pidiera",
+      "count": 1,
+      "relative_freq": 0.011235955056179775
+    },
+    {
+      "word": "soltase",
+      "count": 1,
+      "relative_freq": 0.011235955056179775
+    },
+    {
+      "word": "dijera",
+      "count": 1,
+      "relative_freq": 0.011235955056179775
+    }
+  ],
+  "hapax_legomena_count": 59,
+  "hapax_legomena_ratio": 0.8805970149253731,
+  "dis_legomena_count": 4,
+  "entropy": 5.770442420481375,
+  "zipf_data": [
+    {
+      "rank": 1,
+      "word": "que",
+      "count": 7,
+      "expected_zipf": 89.0
+    },
+    {
+      "rank": 2,
+      "word": "lo",
+      "count": 6,
+      "expected_zipf": 44.5
+    },
+    {
+      "rank": 3,
+      "word": "se",
+      "count": 5,
+      "expected_zipf": 29.666666666666668
+    },
+    {
+      "rank": 4,
+      "word": "ratón",
+      "count": 4,
+      "expected_zipf": 22.25
+    },
+    {
+      "rank": 5,
+      "word": "puso",
+      "count": 2,
+      "expected_zipf": 17.8
+    },
+    {
+      "rank": 6,
+      "word": "león",
+      "count": 2,
+      "expected_zipf": 14.833333333333334
+    },
+    {
+      "rank": 7,
+      "word": "le",
+      "count": 2,
+      "expected_zipf": 12.714285714285714
+    },
+    {
+      "rank": 8,
+      "word": "soga",
+      "count": 2,
+      "expected_zipf": 11.125
+    },
+    {
+      "rank": 9,
+      "word": "corretear",
+      "count": 1,
+      "expected_zipf": 9.88888888888889
+    },
+    {
+      "rank": 10,
+      "word": "cuerpo",
+      "count": 1,
+      "expected_zipf": 8.9
+    },
+    {
+      "rank": 11,
+      "word": "dormido",
+      "count": 1,
+      "expected_zipf": 8.090909090909092
+    },
+    {
+      "rank": 12,
+      "word": "éste",
+      "count": 1,
+      "expected_zipf": 7.416666666666667
+    },
+    {
+      "rank": 13,
+      "word": "despertó",
+      "count": 1,
+      "expected_zipf": 6.846153846153846
+    },
+    {
+      "rank": 14,
+      "word": "atrapó",
+      "count": 1,
+      "expected_zipf": 6.357142857142857
+    },
+    {
+      "rank": 15,
+      "word": "estaba",
+      "count": 1,
+      "expected_zipf": 5.933333333333334
+    },
+    {
+      "rank": 16,
+      "word": "punto",
+      "count": 1,
+      "expected_zipf": 5.5625
+    },
+    {
+      "rank": 17,
+      "word": "devorarlo",
+      "count": 1,
+      "expected_zipf": 5.235294117647059
+    },
+    {
+      "rank": 18,
+      "word": "pidiera",
+      "count": 1,
+      "expected_zipf": 4.944444444444445
+    },
+    {
+      "rank": 19,
+      "word": "soltase",
+      "count": 1,
+      "expected_zipf": 4.684210526315789
+    },
+    {
+      "rank": 20,
+      "word": "dijera",
+      "count": 1,
+      "expected_zipf": 4.45
+    }
+  ],
+  "fable_id": "5"
+}

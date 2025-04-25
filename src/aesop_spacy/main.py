@@ -24,6 +24,7 @@ Options:
 
 Example:
     python main.py --data-dir ./my_fables --output-dir ./results --debug
+    poetry run python -m aesop_spacy.main --debug 
 
 Dependencies:
     - pathlib: For cross-platform path handling

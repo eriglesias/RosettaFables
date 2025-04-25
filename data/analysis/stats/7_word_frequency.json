@@ -1,0 +1,233 @@
+{
+  "total_word_count": 71,
+  "unique_word_count": 62,
+  "top_words": [
+    {
+      "word": "fox",
+      "count": 3,
+      "relative_freq": 0.04225352112676056
+    },
+    {
+      "word": "had",
+      "count": 2,
+      "relative_freq": 0.028169014084507043
+    },
+    {
+      "word": "down",
+      "count": 2,
+      "relative_freq": 0.028169014084507043
+    },
+    {
+      "word": "well",
+      "count": 2,
+      "relative_freq": 0.028169014084507043
+    },
+    {
+      "word": "inside",
+      "count": 2,
+      "relative_freq": 0.028169014084507043
+    },
+    {
+      "word": "goat",
+      "count": 2,
+      "relative_freq": 0.028169014084507043
+    },
+    {
+      "word": "his",
+      "count": 2,
+      "relative_freq": 0.028169014084507043
+    },
+    {
+      "word": "water",
+      "count": 2,
+      "relative_freq": 0.028169014084507043
+    },
+    {
+      "word": "unwittingly",
+      "count": 1,
+      "relative_freq": 0.014084507042253521
+    },
+    {
+      "word": "fallen",
+      "count": 1,
+      "relative_freq": 0.014084507042253521
+    },
+    {
+      "word": "found",
+      "count": 1,
+      "relative_freq": 0.014084507042253521
+    },
+    {
+      "word": "herself",
+      "count": 1,
+      "relative_freq": 0.014084507042253521
+    },
+    {
+      "word": "trapped",
+      "count": 1,
+      "relative_freq": 0.014084507042253521
+    },
+    {
+      "word": "its",
+      "count": 1,
+      "relative_freq": 0.014084507042253521
+    },
+    {
+      "word": "high",
+      "count": 1,
+      "relative_freq": 0.014084507042253521
+    },
+    {
+      "word": "walls",
+      "count": 1,
+      "relative_freq": 0.014084507042253521
+    },
+    {
+      "word": "meanwhile",
+      "count": 1,
+      "relative_freq": 0.014084507042253521
+    },
+    {
+      "word": "thirsty",
+      "count": 1,
+      "relative_freq": 0.014084507042253521
+    },
+    {
+      "word": "made",
+      "count": 1,
+      "relative_freq": 0.014084507042253521
+    },
+    {
+      "word": "way",
+      "count": 1,
+      "relative_freq": 0.014084507042253521
+    }
+  ],
+  "hapax_legomena_count": 54,
+  "hapax_legomena_ratio": 0.8709677419354839,
+  "dis_legomena_count": 7,
+  "entropy": 5.885593774403788,
+  "zipf_data": [
+    {
+      "rank": 1,
+      "word": "fox",
+      "count": 3,
+      "expected_zipf": 71.0
+    },
+    {
+      "rank": 2,
+      "word": "had",
+      "count": 2,
+      "expected_zipf": 35.5
+    },
+    {
+      "rank": 3,
+      "word": "down",
+      "count": 2,
+      "expected_zipf": 23.666666666666668
+    },
+    {
+      "rank": 4,
+      "word": "well",
+      "count": 2,
+      "expected_zipf": 17.75
+    },
+    {
+      "rank": 5,
+      "word": "inside",
+      "count": 2,
+      "expected_zipf": 14.2
+    },
+    {
+      "rank": 6,
+      "word": "goat",
+      "count": 2,
+      "expected_zipf": 11.833333333333334
+    },
+    {
+      "rank": 7,
+      "word": "his",
+      "count": 2,
+      "expected_zipf": 10.142857142857142
+    },
+    {
+      "rank": 8,
+      "word": "water",
+      "count": 2,
+      "expected_zipf": 8.875
+    },
+    {
+      "rank": 9,
+      "word": "unwittingly",
+      "count": 1,
+      "expected_zipf": 7.888888888888889
+    },
+    {
+      "rank": 10,
+      "word": "fallen",
+      "count": 1,
+      "expected_zipf": 7.1
+    },
+    {
+      "rank": 11,
+      "word": "found",
+      "count": 1,
+      "expected_zipf": 6.454545454545454
+    },
+    {
+      "rank": 12,
+      "word": "herself",
+      "count": 1,
+      "expected_zipf": 5.916666666666667
+    },
+    {
+      "rank": 13,
+      "word": "trapped",
+      "count": 1,
+      "expected_zipf": 5.461538461538462
+    },
+    {
+      "rank": 14,
+      "word": "its",
+      "count": 1,
+      "expected_zipf": 5.071428571428571
+    },
+    {
+      "rank": 15,
+      "word": "high",
+      "count": 1,
+      "expected_zipf": 4.733333333333333
+    },
+    {
+      "rank": 16,
+      "word": "walls",
+      "count": 1,
+      "expected_zipf": 4.4375
+    },
+    {
+      "rank": 17,
+      "word": "meanwhile",
+      "count": 1,
+      "expected_zipf": 4.176470588235294
+    },
+    {
+      "rank": 18,
+      "word": "thirsty",
+      "count": 1,
+      "expected_zipf": 3.9444444444444446
+    },
+    {
+      "rank": 19,
+      "word": "made",
+      "count": 1,
+      "expected_zipf": 3.736842105263158
+    },
+    {
+      "rank": 20,
+      "word": "way",
+      "count": 1,
+      "expected_zipf": 3.55
+    }
+  ],
+  "fable_id": "7"
+}

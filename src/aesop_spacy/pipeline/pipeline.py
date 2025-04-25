@@ -70,9 +70,9 @@ class FablePipeline:
         self.writer = OutputWriter(output_dir)
         self.clustering_analyzer = ClusteringAnalyzer(self.analysis_dir)
         self.entity_analyzer = EntityAnalyzer(self.analysis_dir)
-        self.moral_detector = MoralDetector(self.analysis_dir)  # Fixed typo in variable name
+        self.moral_detector = MoralDetector(self.analysis_dir)
         self.nlp_techniques = NLPTechniques(self.analysis_dir)
-        self.sentiment_analyzer = SentimentAnalyzer()  # This analyzer might not need analysis_dir
+        self.sentiment_analyzer = SentimentAnalyzer()
         self.stats_analyzer = StatsAnalyzer(self.analysis_dir)
         self.style_analyzer = StyleAnalyzer(self.analysis_dir)
         self.syntax_analyzer = SyntaxAnalyzer(self.analysis_dir)
@@ -322,7 +322,9 @@ class FablePipeline:
             return results
         
         # Run basic analysis if any of those types are requested
-        
+        if any(analysis_type in analysis_types for analysis_type in ['pos', 'entity', 'moral', 'comparison', 'character']):
+            basic_results = self._run_basic_analysis(fables_by_language, analysis_types)
+            results.update(basic_results)
             
         # Clustering analysis
         if 'clustering' in analysis_types:
@@ -331,7 +333,7 @@ class FablePipeline:
 
         # Sentiment analysis
         if 'sentiment' in analysis_types:
-            sentiment_results = self._run_sentiment_analysis(fables_by_language)  # Fixed method name
+            sentiment_results = self._run_sentiment_analysis(fables_by_language)
             results['sentiment'] = sentiment_results
 
         # Style analysis
@@ -483,7 +485,202 @@ class FablePipeline:
                             language, e, type(e).__name__)
             return {}
 
-   
+    def _analyze_entity_distribution(self, language: str) -> Dict[str, Dict[str, float]]:
+        """
+        Analyze named entity distribution for a language.
+        
+        Args:
+            language: Language code
+            
+        Returns:
+            Dictionary with entity type frequencies and examples
+        """
+        # Use the entity_analyzer to do the work
+        return self.entity_analyzer.analyze_entity_distribution(language)
+
+    def _analyze_character_distribution(self) -> Dict[str, Any]:
+        """
+        Analyze character distribution using the EntityRecognizer's tracked entities.
+        
+        Returns:
+            Dictionary with character statistics
+        """
+        # Get entity statistics from the recognizer
+        entity_stats = self.recognizer.get_entity_statistics()
+        
+        # If no stats, return empty dict
+        if not entity_stats:
+            return {}
+            
+        # Extract character information
+        character_stats = {}
+        
+        # Look for animal characters (label "ANIMAL_CHAR")
+        if "ANIMAL_CHAR" in entity_stats:
+            animal_chars = entity_stats["ANIMAL_CHAR"]
+            
+            # Sort characters by mention count
+            sorted_chars = sorted(
+                animal_chars.items(),
+                key=lambda x: x[1]["mentions"],
+                reverse=True
+            )
+            
+            character_stats["animals"] = {
+                char: {
+                    "mentions": data["mentions"],
+                    "documents": data["document_count"]
+                }
+                for char, data in sorted_chars
+            }
+        
+        return character_stats
+
+    def _find_common_fable_ids(self, languages: List[str]) -> List[str]:
+        """
+        Find fable IDs that appear in multiple languages.
+        
+        Args:
+            languages: List of language codes
+            
+        Returns:
+            List of fable IDs that appear in multiple languages
+        """
+        # We can use self.fables_by_id directly since it's already built in _load_processed_fables
+        common_ids = []
+        
+        for fable_id, lang_fables in self.fables_by_id.items():
+            if len(lang_fables) >= 2:  # Only include fables that appear in at least 2 languages
+                common_ids.append(fable_id)
+        
+        return common_ids
+
+    def _compare_fable(self, fable_id: str, languages: List[str]) -> Dict[str, Any]:
+        """
+        Compare the same fable across different languages.
+        
+        Args:
+            fable_id: Fable ID to compare
+            languages: List of language codes to check
+            
+        Returns:
+            Comparison data dictionary or None if not found in multiple languages
+        """
+        # Use the fables_by_id dictionary that was created in _load_processed_fables
+        if fable_id not in self.fables_by_id or len(self.fables_by_id[fable_id]) < 2:
+            return None
+            
+        comparison = {
+            'fable_id': fable_id,
+            'languages': list(self.fables_by_id[fable_id].keys()),
+            'title': {},
+            'token_counts': {},
+            'sentence_counts': {},
+            'entity_counts': {},
+            'pos_distribution': {},
+            'has_moral': {},
+            'moral_length': {},
+        }
+        
+        # Extract comparison data for each language version
+        for lang, fable in self.fables_by_id[fable_id].items():
+            # Basic statistics
+            comparison['title'][lang] = fable.get('title', '')
+            comparison['token_counts'][lang] = len(fable.get('tokens', []))
+            comparison['sentence_counts'][lang] = len(fable.get('sentences', []))
+            comparison['entity_counts'][lang] = len(fable.get('entities', []))
+            
+            # Calculate POS distribution
+            pos_counts = {}
+            for token_pos in fable.get('pos_tags', []):
+                if isinstance(token_pos, list) and len(token_pos) >= 2:
+                    pos = token_pos[1]  # Only use the POS tag, ignore token
+                    pos_counts[pos] = pos_counts.get(pos, 0) + 1
+                
+            total_tokens = sum(pos_counts.values())
+            if total_tokens > 0:
+                comparison['pos_distribution'][lang] = {
+                    pos: count / total_tokens * 100 
+                    for pos, count in pos_counts.items()
+                }
+            
+            # Check moral
+            moral = fable.get('moral', {})
+            if isinstance(moral, dict):
+                has_moral = bool(moral.get('text', ''))
+                comparison['has_moral'][lang] = has_moral
+                
+                if has_moral:
+                    moral_text = moral.get('text', '')
+                    comparison['moral_length'][lang] = len(moral_text.split())
+        
+        return comparison
+
+    def _run_basic_analysis(self, fables_by_language: Dict[str, List[Dict[str, Any]]], analysis_types: List[str]) -> Dict[str, Any]:
+        """
+        Run the original basic analysis types.
+        
+        Args:
+            fables_by_language: Dictionary mapping language codes to fable lists
+            analysis_types: List of analysis types to run
+            
+        Returns:
+            Dictionary of analysis results
+        """
+        results = {}
+        
+        # POS tag distribution analysis
+        if 'pos' in analysis_types:
+            pos_results = {}
+            for lang in fables_by_language.keys():
+                pos_dist = self._analyze_pos_distribution(lang)
+                pos_results[lang] = pos_dist
+            
+            results['pos_distribution'] = pos_results
+            
+            # Save analysis results
+            for lang, dist in pos_results.items():
+                if dist:
+                    self.writer.save_analysis_results(dist, lang, 'pos')
+        
+        # Entity analysis
+        if 'entity' in analysis_types:
+            entity_results = {}
+            for lang in fables_by_language.keys():
+                entity_dist = self._analyze_entity_distribution(lang)
+                entity_results[lang] = entity_dist
+            
+            results['entity_distribution'] = entity_results
+            
+            # Save analysis results
+            for lang, dist in entity_results.items():
+                if dist:
+                    self.writer.save_analysis_results(dist, lang, 'entity')
+        
+        # Character analysis using the tracked entities from EntityRecognizer
+        if 'character' in analysis_types:
+            character_results = self._analyze_character_distribution()
+            if character_results:
+                results['character_distribution'] = character_results
+                self.writer.save_analysis_results(character_results, 'all', 'character')
+        
+        # Cross-language fable comparison
+        if 'comparison' in analysis_types:
+            comparison_results = {}
+            
+            # Identify fable IDs that appear in multiple languages
+            fable_ids = self._find_common_fable_ids(list(fables_by_language.keys()))
+            self.logger.info("Found %d fables with content in multiple languages", len(fable_ids))
+            
+            for fable_id in fable_ids:
+                comparison = self._compare_fable(fable_id, list(fables_by_language.keys()))
+                if comparison:
+                    comparison_results[fable_id] = comparison
+                    self.writer.save_comparison_results(comparison, fable_id)
+            
+            results['fable_comparisons'] = comparison_results
+        
+        return results
 
     def _run_clustering_analysis(self, fables_by_language: Dict[str, List[Dict[str, Any]]]) -> Dict[str, Any]:
         """

@@ -1,0 +1,12 @@
+{
+  "average_branching_factor": 0,
+  "max_branching_factor": 0,
+  "width_depth_ratios": [],
+  "average_width_depth_ratio": 0,
+  "non_projective_count": 0,
+  "sentence_count": 6,
+  "language_insights": {
+    "typical_branching": "Right-branching dominant in English",
+    "typical_width_depth": "English tends toward wider, shallower trees than SOV languages"
+  }
+}
