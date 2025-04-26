@@ -22,6 +22,8 @@ from sklearn.decomposition import PCA, TruncatedSVD
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import silhouette_score, calinski_harabasz_score
 from scipy.cluster.hierarchy import linkage, fcluster
+from aesop_spacy.io.writer import NumpyEncoder
+
 
 class ClusteringAnalyzer:
     """
@@ -900,7 +902,8 @@ class ClusteringAnalyzer:
         # Save to JSON file
         try:
             with open(output_path, 'w', encoding='utf-8') as f:
-                json.dump(results, f, ensure_ascii=False, indent=2)
-            self.logger.info("Saved %s clustering for fable %s to %s", analysis_type, fable_id, output_path)
+                json.dump(results, f, cls=NumpyEncoder, ensure_ascii=False, indent=2)
+            self.logger.info("Saved %s clustering for fable %s to %s",
+                       analysis_type, fable_id, output_path)
         except (IOError, OSError) as e:
             self.logger.error("Error saving analysis: %s", e)

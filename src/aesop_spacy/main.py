@@ -108,7 +108,12 @@ def print_analysis_summary(logger, results):
             logger.info("\nFable %s comparison across %d languages:", 
                        fable_id, len(comparison['languages']))
             logger.info("  Languages: %s", ', '.join(comparison['languages']))
-            logger.info("  Token counts: %s", comparison['token_counts'])
+            
+            # Safely access token_counts
+            if 'token_counts' in comparison:
+                logger.info("  Token counts: %s", comparison['token_counts'])
+            else:
+                logger.info("  Token counts: Not available")
 
 
 def save_analysis_summary(output_dir, results):

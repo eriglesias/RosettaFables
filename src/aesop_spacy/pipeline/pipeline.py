@@ -36,6 +36,9 @@ from aesop_spacy.analysis.sentiment_analyzer import SentimentAnalyzer
 from aesop_spacy.analysis.stats_analyzer import StatsAnalyzer
 from aesop_spacy.analysis.style_analyzer import StyleAnalyzer
 from aesop_spacy.analysis.syntax_analyzer import SyntaxAnalyzer
+from aesop_spacy.analysis.pos_analyzer import POSAnalyzer
+from aesop_spacy.analysis.comparison_analyzer import ComparisonAnalyzer
+from aesop_spacy.models.transformer_manager import TransformerManager
 
 class FablePipeline:
     """Coordinates the entire fable processing pipeline."""
@@ -52,6 +55,7 @@ class FablePipeline:
         self.output_dir = output_dir
         self.analysis_dir = output_dir / "analysis"
         self.logger = logging.getLogger(__name__)
+        self.transformer_manager = TransformerManager()
 
         # Configure logging if not already configured
         if not self.logger.handlers:
@@ -72,11 +76,13 @@ class FablePipeline:
         self.entity_analyzer = EntityAnalyzer(self.analysis_dir)
         self.moral_detector = MoralDetector(self.analysis_dir)
         self.nlp_techniques = NLPTechniques(self.analysis_dir)
-        self.sentiment_analyzer = SentimentAnalyzer()
+        self.sentiment_analyzer = SentimentAnalyzer(transformer_manager=self.transformer_manager)
         self.stats_analyzer = StatsAnalyzer(self.analysis_dir)
         self.style_analyzer = StyleAnalyzer(self.analysis_dir)
         self.syntax_analyzer = SyntaxAnalyzer(self.analysis_dir)
-        
+        self.pos_analyzer = POSAnalyzer(self.analysis_dir)
+        self.comparison_analyzer = ComparisonAnalyzer(self.analysis_dir)
+
         # printing logging 
         self.logger.info("Fable pipeline initialized")
         self.logger.info("Data directory: %s", data_dir)
@@ -295,7 +301,7 @@ class FablePipeline:
         self.logger.info("Starting fable analysis")
 
         all_analysis_types = [
-            'pos', 'entity', 'moral', 'comparison', 'character', 'clustering', 'sentiment',
+            'pos', 'entity', 'moral', 'comparison', 'clustering', 'sentiment',
             'style', 'syntax', 'nlp_techniques', 'stats', 'cross_language'
         ]
 
@@ -322,7 +328,7 @@ class FablePipeline:
             return results
         
         # Run basic analysis if any of those types are requested
-        if any(analysis_type in analysis_types for analysis_type in ['pos', 'entity', 'moral', 'comparison', 'character']):
+        if any(analysis_type in analysis_types for analysis_type in ['pos', 'entity', 'moral', 'comparison']):
             basic_results = self._run_basic_analysis(fables_by_language, analysis_types)
             results.update(basic_results)
             
@@ -401,6 +407,9 @@ class FablePipeline:
             except Exception as e:
                 self.logger.error("Error loading processed data for %s: %s", lang, e)
         
+        # Store fables_by_language as instance attribute (THIS IS THE FIX)
+        self.fables_by_language = fables_by_language
+        
         # Also prepare a fables_by_id dictionary for cross-language analysis
         fables_by_id = {}
         for lang, fables in fables_by_language.items():
@@ -412,12 +421,12 @@ class FablePipeline:
                     fables_by_id[fable_id][lang] = fable
         
         self.fables_by_id = fables_by_id 
-        
+    
         return fables_by_language
 
     def _analyze_pos_distribution(self, language: str) -> Dict[str, float]:
         """
-        Analyze part-of-speech distribution for a language.
+        Analyze part-of-speech distribution for a language using POSAnalyzer.
         
         Args:
             language: Language code
@@ -425,65 +434,7 @@ class FablePipeline:
         Returns:
             Dictionary with POS tag frequencies as percentages
         """
-        try:
-            # Load processed fables
-            processed_file = self.output_dir / "processed" / f"fables_{language}.json"
-            
-            if not processed_file.exists():
-                self.logger.warning("No processed data for %s", language)
-                return {}
-                
-            with open(processed_file, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-                
-                # Ensure data is in the expected format
-                if not isinstance(data, list):
-                    self.logger.warning("Data for %s is not in expected list format", language)
-                    return {}
-                
-                fables = data
-                
-            # Count POS tags
-            pos_counts = {}
-            total_tokens = 0
-            
-            for fable in fables:
-                if not isinstance(fable, dict):
-                    continue
-                    
-                for token_pos in fable.get('pos_tags', []):
-                    if isinstance(token_pos, list) and len(token_pos) >= 2:
-                        pos = token_pos[1]  # Only use the POS tag, ignore token
-                        pos_counts[pos] = pos_counts.get(pos, 0) + 1
-                        total_tokens += 1
-            
-            # Convert to percentages
-            if total_tokens > 0:
-                pos_distribution = {pos: (count / total_tokens * 100) 
-                                for pos, count in pos_counts.items()}
-                
-                # Sort by frequency (descending)
-                pos_distribution = dict(sorted(pos_distribution.items(), 
-                                            key=lambda x: x[1], 
-                                            reverse=True))
-                
-                self.logger.info("Analyzed POS distribution for %s: %d tags from %d tokens", 
-                                language, len(pos_distribution), total_tokens)
-                return pos_distribution
-            else:
-                self.logger.warning("No tokens found for %s", language)
-                return {}
-                
-        except FileNotFoundError:
-            self.logger.error("File not found for %s", language)
-            return {}
-        except json.JSONDecodeError as e:
-            self.logger.error("Invalid JSON for %s: %s", language, e)
-            return {}
-        except Exception as e:
-            self.logger.error("Error analyzing POS distribution for %s: %s (%s)", 
-                            language, e, type(e).__name__)
-            return {}
+        return self.pos_analyzer.analyze_pos_distribution(language)
 
     def _analyze_entity_distribution(self, language: str) -> Dict[str, Dict[str, float]]:
         """
@@ -498,47 +449,9 @@ class FablePipeline:
         # Use the entity_analyzer to do the work
         return self.entity_analyzer.analyze_entity_distribution(language)
 
-    def _analyze_character_distribution(self) -> Dict[str, Any]:
-        """
-        Analyze character distribution using the EntityRecognizer's tracked entities.
-        
-        Returns:
-            Dictionary with character statistics
-        """
-        # Get entity statistics from the recognizer
-        entity_stats = self.recognizer.get_entity_statistics()
-        
-        # If no stats, return empty dict
-        if not entity_stats:
-            return {}
-            
-        # Extract character information
-        character_stats = {}
-        
-        # Look for animal characters (label "ANIMAL_CHAR")
-        if "ANIMAL_CHAR" in entity_stats:
-            animal_chars = entity_stats["ANIMAL_CHAR"]
-            
-            # Sort characters by mention count
-            sorted_chars = sorted(
-                animal_chars.items(),
-                key=lambda x: x[1]["mentions"],
-                reverse=True
-            )
-            
-            character_stats["animals"] = {
-                char: {
-                    "mentions": data["mentions"],
-                    "documents": data["document_count"]
-                }
-                for char, data in sorted_chars
-            }
-        
-        return character_stats
-
     def _find_common_fable_ids(self, languages: List[str]) -> List[str]:
         """
-        Find fable IDs that appear in multiple languages.
+        Find fable IDs that appear in multiple languages using ComparisonAnalyzer.
         
         Args:
             languages: List of language codes
@@ -546,75 +459,19 @@ class FablePipeline:
         Returns:
             List of fable IDs that appear in multiple languages
         """
-        # We can use self.fables_by_id directly since it's already built in _load_processed_fables
-        common_ids = []
-        
-        for fable_id, lang_fables in self.fables_by_id.items():
-            if len(lang_fables) >= 2:  # Only include fables that appear in at least 2 languages
-                common_ids.append(fable_id)
-        
-        return common_ids
+        return self.comparison_analyzer.find_common_fable_ids(fables_by_language=self.fables_by_language)
 
-    def _compare_fable(self, fable_id: str, languages: List[str]) -> Dict[str, Any]:
+    def _compare_fable(self, fable_id: str) -> Dict[str, Any]:
         """
-        Compare the same fable across different languages.
+        Compare the same fable across different languages using ComparisonAnalyzer.
         
         Args:
             fable_id: Fable ID to compare
-            languages: List of language codes to check
             
         Returns:
             Comparison data dictionary or None if not found in multiple languages
         """
-        # Use the fables_by_id dictionary that was created in _load_processed_fables
-        if fable_id not in self.fables_by_id or len(self.fables_by_id[fable_id]) < 2:
-            return None
-            
-        comparison = {
-            'fable_id': fable_id,
-            'languages': list(self.fables_by_id[fable_id].keys()),
-            'title': {},
-            'token_counts': {},
-            'sentence_counts': {},
-            'entity_counts': {},
-            'pos_distribution': {},
-            'has_moral': {},
-            'moral_length': {},
-        }
-        
-        # Extract comparison data for each language version
-        for lang, fable in self.fables_by_id[fable_id].items():
-            # Basic statistics
-            comparison['title'][lang] = fable.get('title', '')
-            comparison['token_counts'][lang] = len(fable.get('tokens', []))
-            comparison['sentence_counts'][lang] = len(fable.get('sentences', []))
-            comparison['entity_counts'][lang] = len(fable.get('entities', []))
-            
-            # Calculate POS distribution
-            pos_counts = {}
-            for token_pos in fable.get('pos_tags', []):
-                if isinstance(token_pos, list) and len(token_pos) >= 2:
-                    pos = token_pos[1]  # Only use the POS tag, ignore token
-                    pos_counts[pos] = pos_counts.get(pos, 0) + 1
-                
-            total_tokens = sum(pos_counts.values())
-            if total_tokens > 0:
-                comparison['pos_distribution'][lang] = {
-                    pos: count / total_tokens * 100 
-                    for pos, count in pos_counts.items()
-                }
-            
-            # Check moral
-            moral = fable.get('moral', {})
-            if isinstance(moral, dict):
-                has_moral = bool(moral.get('text', ''))
-                comparison['has_moral'][lang] = has_moral
-                
-                if has_moral:
-                    moral_text = moral.get('text', '')
-                    comparison['moral_length'][lang] = len(moral_text.split())
-        
-        return comparison
+        return self.comparison_analyzer.compare_fable(fable_id, self.fables_by_id)
 
     def _run_basic_analysis(self, fables_by_language: Dict[str, List[Dict[str, Any]]], analysis_types: List[str]) -> Dict[str, Any]:
         """
@@ -633,7 +490,7 @@ class FablePipeline:
         if 'pos' in analysis_types:
             pos_results = {}
             for lang in fables_by_language.keys():
-                pos_dist = self._analyze_pos_distribution(lang)
+                pos_dist = self.pos_analyzer.analyze_pos_distribution(lang)
                 pos_results[lang] = pos_dist
             
             results['pos_distribution'] = pos_results
@@ -647,7 +504,7 @@ class FablePipeline:
         if 'entity' in analysis_types:
             entity_results = {}
             for lang in fables_by_language.keys():
-                entity_dist = self._analyze_entity_distribution(lang)
+                entity_dist = self.entity_analyzer.analyze_entity_distribution(lang)
                 entity_results[lang] = entity_dist
             
             results['entity_distribution'] = entity_results
@@ -657,23 +514,16 @@ class FablePipeline:
                 if dist:
                     self.writer.save_analysis_results(dist, lang, 'entity')
         
-        # Character analysis using the tracked entities from EntityRecognizer
-        if 'character' in analysis_types:
-            character_results = self._analyze_character_distribution()
-            if character_results:
-                results['character_distribution'] = character_results
-                self.writer.save_analysis_results(character_results, 'all', 'character')
-        
         # Cross-language fable comparison
         if 'comparison' in analysis_types:
             comparison_results = {}
             
             # Identify fable IDs that appear in multiple languages
-            fable_ids = self._find_common_fable_ids(list(fables_by_language.keys()))
+            fable_ids = self.comparison_analyzer.find_common_fable_ids(fables_by_language)
             self.logger.info("Found %d fables with content in multiple languages", len(fable_ids))
             
             for fable_id in fable_ids:
-                comparison = self._compare_fable(fable_id, list(fables_by_language.keys()))
+                comparison = self.comparison_analyzer.compare_fable(fable_id, self.fables_by_id)
                 if comparison:
                     comparison_results[fable_id] = comparison
                     self.writer.save_comparison_results(comparison, fable_id)
@@ -681,7 +531,7 @@ class FablePipeline:
             results['fable_comparisons'] = comparison_results
         
         return results
-
+    
     def _run_clustering_analysis(self, fables_by_language: Dict[str, List[Dict[str, Any]]]) -> Dict[str, Any]:
         """
         Run clustering analysis using the ClusteringAnalyzer.
@@ -1038,15 +888,9 @@ class FablePipeline:
             self.logger.error("Error in statistical analysis: %s", e)
             return {'error': str(e)}
 
-    def _run_cross_language_analysis(self, fables_by_language: Dict[str, List[Dict[str, Any]]]) -> Dict[str, Any]:
+    def _run_cross_language_analysis(self, fables_by_language):
         """
         Run cross-language analysis comparing the same fable across languages.
-        
-        Args:
-            fables_by_language: Dictionary mapping language codes to fable lists
-            
-        Returns:
-            Dictionary of cross-language analysis results
         """
         try:
             # Use the MoralDetector to compare morals across languages
@@ -1061,7 +905,7 @@ class FablePipeline:
             # Compare word usage across languages
             word_usage_comparison = {}
             for fable_id, lang_fables in self.fables_by_id.items():
-                if len(lang_fables) >= 2:
+                if isinstance(lang_fables, dict) and len(lang_fables) >= 2:
                     usage_result = self.stats_analyzer.compare_word_usage(lang_fables)
                     word_usage_comparison[fable_id] = usage_result
             

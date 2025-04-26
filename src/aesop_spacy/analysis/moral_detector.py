@@ -334,6 +334,16 @@ class MoralDetector:
             Dict with comparison results
         """
         comparison = {}
+
+        if not isinstance(fables_by_id, dict):
+            self.logger.warning(f"Expected dict for fables_by_id, got {type(fables_by_id)}")
+            return comparison
+    
+        for fable_id, lang_fables in fables_by_id.items():
+            # Ensure lang_fables is a dictionary
+            if not isinstance(lang_fables, dict):
+                self.logger.warning(f"Expected dict for fable_id {fable_id}, got {type(lang_fables)}")
+                continue
         
         for fable_id, lang_fables in fables_by_id.items():
             # Store results for each language version
