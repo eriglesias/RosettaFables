@@ -1,3 +1,4 @@
+#pos_analyzer.py
 """
 Analyzes part-of-speech distributions in fables across languages.
 

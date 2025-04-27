@@ -15,7 +15,6 @@ import numpy as np
 from pathlib import Path
 import logging
 from scipy import stats
-import re
 import string
 
 class StatsAnalyzer:

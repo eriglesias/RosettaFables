@@ -339,14 +339,14 @@ class MoralDetector:
             self.logger.warning(f"Expected dict for fables_by_id, got {type(fables_by_id)}")
             return comparison
     
+        # ONE LOOP to handle all fable processing
         for fable_id, lang_fables in fables_by_id.items():
-            # Ensure lang_fables is a dictionary
+            # Skip this fable if lang_fables isn't a dictionary
             if not isinstance(lang_fables, dict):
                 self.logger.warning(f"Expected dict for fable_id {fable_id}, got {type(lang_fables)}")
                 continue
-        
-        for fable_id, lang_fables in fables_by_id.items():
-            # Store results for each language version
+            
+            # Now it's safe to proceed with this fable
             moral_comparison = {
                 'languages': list(lang_fables.keys()),
                 'morals': {},
@@ -421,6 +421,7 @@ class MoralDetector:
         
         return comparison
     
+    # Rest of the helper methods remain unchanged
     def _extract_sentences(self, text, language):
         """
         Extract sentences from text with language-specific handling.
