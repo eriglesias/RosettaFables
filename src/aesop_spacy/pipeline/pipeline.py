@@ -29,6 +29,8 @@ from aesop_spacy.preprocessing.processor import FableProcessor
 from aesop_spacy.models.model_manager import get_model
 from aesop_spacy.preprocessing.entity_recognizer import EntityRecognizer
 
+# fables by id?
+
 class FablePipeline:
     """Coordinates the entire fable processing pipeline."""
 
