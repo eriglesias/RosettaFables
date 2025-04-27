@@ -7,6 +7,16 @@
     "en",
     "es"
   ],
+  "token_counts": {
+    "grc": 200,
+    "nl": 375,
+    "de": 407,
+    "en": 228,
+    "es": 232
+  },
+  "common_entities": [],
+  "sentiment_scores": {},
+  "complexity_scores": {},
   "basic_metrics": {
     "title": {
       "grc": "Μῦς ἀρουραῖος καὶ μῦς ἀστικός",
@@ -14,13 +24,6 @@
       "de": "Die Stadt und Die Landmaus",
       "en": "City Mouse and Country Mouse",
       "es": "El Ratón de campo y el de ciudad"
-    },
-    "token_counts": {
-      "grc": 200,
-      "nl": 375,
-      "de": 407,
-      "en": 228,
-      "es": 232
     },
     "word_counts": {
       "grc": 178,

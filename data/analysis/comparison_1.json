@@ -7,6 +7,16 @@
     "en",
     "es"
   ],
+  "token_counts": {
+    "grc": 90,
+    "nl": 367,
+    "de": 224,
+    "en": 174,
+    "es": 122
+  },
+  "common_entities": [],
+  "sentiment_scores": {},
+  "complexity_scores": {},
   "basic_metrics": {
     "title": {
       "grc": "Λύκος καὶ ἀρήν",
@@ -14,13 +24,6 @@
       "de": "Das Lamm und Der Wolf",
       "en": "Wolf and Lamb",
       "es": "El Lobo y el Cordero"
-    },
-    "token_counts": {
-      "grc": 90,
-      "nl": 367,
-      "de": 224,
-      "en": 174,
-      "es": 122
     },
     "word_counts": {
       "grc": 80,

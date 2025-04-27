@@ -10,7 +10,7 @@ This module enables:
 
 import json
 import logging
-from collections import Counter, defaultdict
+from collections import Counter
 from pathlib import Path
 from typing import Dict, Any, List, Tuple
 
@@ -26,6 +26,7 @@ class ComparisonAnalyzer:
         """
         self.analysis_dir = analysis_dir
         self.logger = logging.getLogger(__name__)
+        
     
     def find_common_fable_ids(self, fables_by_language: Dict[str, List[Dict[str, Any]]]) -> List[str]:
         """
@@ -62,51 +63,89 @@ class ComparisonAnalyzer:
         Compare the same fable across different languages.
         
         Args:
-            fable_id: Fable ID to compare
-            fables_by_id: Dict mapping fable IDs to language-specific versions
+            fable_id: ID of the fable to compare
+            fables_by_id: Dictionary mapping fable IDs to language-specific fable data
             
         Returns:
             Comparison data dictionary
         """
-        # Check if the fable exists in multiple languages
-        if fable_id not in fables_by_id or len(fables_by_id[fable_id]) < 2:
-            self.logger.warning("Fable %s is not available in multiple languages", fable_id)
+        if fable_id not in fables_by_id:
+            self.logger.warning("Fable ID %s not found in the dataset", fable_id)
             return None
-            
-        comparison = {
+        
+        lang_fables = fables_by_id[fable_id]
+        if not isinstance(lang_fables, dict):
+            self.logger.error("Expected dictionary for fable %s but got %s", 
+                             fable_id, type(lang_fables).__name__)
+            return None
+        
+        result = {
             'fable_id': fable_id,
-            'languages': list(fables_by_id[fable_id].keys()),
-            'basic_metrics': {
-                'title': {},
-                'token_counts': {},
-                'word_counts': {},
-                'character_counts': {},
-                'sentence_counts': {},
-                'entity_counts': {},
-                'avg_sentence_length': {}
-            },
-            'content': {
-                'pos_distribution': {},
-                'has_moral': {},
-                'moral_length': {},
-                'shared_entities': [],
-                'unique_entities': {}
-            },
-            'similarity': {
-                'structural_similarity': {},
-                'content_similarity': {},
-                'lexical_similarity': {}
-            }
+            'languages': list(lang_fables.keys()),
+            'token_counts': {},  # Initialize token counts dictionary
+            'common_entities': [],
+            'sentiment_scores': {},
+            'complexity_scores': {}
+        }
+        
+        # Calculate token counts for each language
+        for lang, fable in lang_fables.items():
+            # Get content for tokenization
+            content = fable.get('content', '')
+            if not content and 'text' in fable:  # Try alternative field name
+                content = fable.get('text', '')
+            
+            # Calculate token count - using a simple whitespace split as fallback
+            tokens = []
+            token_count = 0
+            
+            # First try to get tokens from the 'tokens' field
+            if 'tokens' in fable:
+                tokens = fable['tokens']
+                if isinstance(tokens, list):
+                    # Different token formats
+                    if tokens:
+                        if isinstance(tokens[0], str):
+                            token_count = len(tokens)
+                        elif isinstance(tokens[0], dict) and 'text' in tokens[0]:
+                            token_count = len(tokens)
+                        elif isinstance(tokens[0], list) and tokens[0]:
+                            token_count = len(tokens)
+            
+            # If tokens not available, try to tokenize the content
+            if token_count == 0 and isinstance(content, str):
+                # Simple tokenization by whitespace
+                tokens = content.split()
+                token_count = len(tokens)
+            
+            # Save token count
+            result['token_counts'][lang] = token_count
+        
+        # Extract basic metrics and content analysis
+        basic_metrics = {
+            'title': {},
+            'word_counts': {},
+            'character_counts': {},
+            'sentence_counts': {},
+            'entity_counts': {},
+            'avg_sentence_length': {}
+        }
+        
+        content = {
+            'pos_distribution': {},
+            'has_moral': {},
+            'moral_length': {},
+            'shared_entities': [],
+            'unique_entities': {}
         }
         
         # Extract language-specific information
         all_entities = {}
         all_tokens = {}
         
-        for lang, fable in fables_by_id[fable_id].items():
+        for lang, fable in lang_fables.items():
             # Basic metrics
-            comparison['basic_metrics']['title'][lang] = fable.get('title', '')
-            comparison['basic_metrics']['token_counts'][lang] = len(fable.get('tokens', []))
+            basic_metrics['title'][lang] = fable.get('title', '')
             
             # Calculate word count (based on tokenized text)
             tokens = fable.get('tokens', [])
@@ -120,7 +159,7 @@ class ComparisonAnalyzer:
                 elif isinstance(tokens[0], list) and len(tokens[0]) > 0:
                     word_tokens = [t[0] for t in tokens if t and not all(c in '.,;:!?"-()[]{}' for c in t[0])]
                     
-                comparison['basic_metrics']['word_counts'][lang] = len(word_tokens)
+                basic_metrics['word_counts'][lang] = len(word_tokens)
                 all_tokens[lang] = word_tokens
                 
                 # Character count (without whitespace)
@@ -131,15 +170,15 @@ class ComparisonAnalyzer:
                     body = ' '.join(s.get('text', '') for s in sentences)
                     
                 char_count = sum(1 for c in body if c.strip())
-                comparison['basic_metrics']['character_counts'][lang] = char_count
+                basic_metrics['character_counts'][lang] = char_count
             
             # Sentence metrics
             sentences = fable.get('sentences', [])
-            comparison['basic_metrics']['sentence_counts'][lang] = len(sentences)
+            basic_metrics['sentence_counts'][lang] = len(sentences)
             
-            if sentences and comparison['basic_metrics']['word_counts'].get(lang, 0) > 0:
-                avg_len = comparison['basic_metrics']['word_counts'][lang] / len(sentences)
-                comparison['basic_metrics']['avg_sentence_length'][lang] = avg_len
+            if sentences and basic_metrics['word_counts'].get(lang, 0) > 0:
+                avg_len = basic_metrics['word_counts'][lang] / len(sentences)
+                basic_metrics['avg_sentence_length'][lang] = avg_len
             
             # Entity analysis
             entity_list = []
@@ -165,7 +204,7 @@ class ComparisonAnalyzer:
                             'type': entity_type
                         })
                 
-                comparison['basic_metrics']['entity_counts'][lang] = len(entity_list)
+                basic_metrics['entity_counts'][lang] = len(entity_list)
                 all_entities[lang] = entity_list
             
             # Calculate POS distribution
@@ -177,7 +216,7 @@ class ComparisonAnalyzer:
                 
             total_tokens = sum(pos_counts.values())
             if total_tokens > 0:
-                comparison['content']['pos_distribution'][lang] = {
+                content['pos_distribution'][lang] = {
                     pos: count / total_tokens * 100 
                     for pos, count in pos_counts.items()
                 }
@@ -186,11 +225,15 @@ class ComparisonAnalyzer:
             moral = fable.get('moral', {})
             if isinstance(moral, dict):
                 has_moral = bool(moral.get('text', ''))
-                comparison['content']['has_moral'][lang] = has_moral
+                content['has_moral'][lang] = has_moral
                 
                 if has_moral:
                     moral_text = moral.get('text', '')
-                    comparison['content']['moral_length'][lang] = len(moral_text.split())
+                    content['moral_length'][lang] = len(moral_text.split())
+        
+        # Add basic metrics to result
+        result['basic_metrics'] = basic_metrics
+        result['content'] = content
         
         # Find shared entities across languages
         if all_entities:
@@ -211,7 +254,7 @@ class ComparisonAnalyzer:
                             shared_entities.add(entity1)
             
             # Format shared entities
-            comparison['content']['shared_entities'] = list(shared_entities)
+            result['content']['shared_entities'] = list(shared_entities)
             
             # Find unique entities for each language
             for lang, entities in norm_entities.items():
@@ -221,26 +264,32 @@ class ComparisonAnalyzer:
                     if e not in shared_entities
                 ]
                 if unique:
-                    comparison['content']['unique_entities'][lang] = unique
+                    result['content']['unique_entities'][lang] = unique
         
         # Calculate similarities between languages
-        language_pairs = self._get_language_pairs(comparison['languages'])
+        similarity = {
+            'structural_similarity': {},
+            'content_similarity': {},
+            'lexical_similarity': {}
+        }
+        
+        language_pairs = self._get_language_pairs(result['languages'])
         for lang1, lang2 in language_pairs:
             pair_key = f"{lang1}-{lang2}"
             
             # Calculate structural similarity based on relative metrics
             struct_sim = self._calculate_structural_similarity(
-                fables_by_id[fable_id][lang1],
-                fables_by_id[fable_id][lang2]
+                lang_fables[lang1],
+                lang_fables[lang2]
             )
-            comparison['similarity']['structural_similarity'][pair_key] = struct_sim
+            similarity['structural_similarity'][pair_key] = struct_sim
             
             # Calculate content-based similarity
             content_sim = self._calculate_content_similarity(
-                fables_by_id[fable_id][lang1],
-                fables_by_id[fable_id][lang2]
+                lang_fables[lang1],
+                lang_fables[lang2]
             )
-            comparison['similarity']['content_similarity'][pair_key] = content_sim
+            similarity['content_similarity'][pair_key] = content_sim
             
             # Calculate lexical similarity (word frequencies and distributions)
             if lang1 in all_tokens and lang2 in all_tokens:
@@ -248,9 +297,24 @@ class ComparisonAnalyzer:
                     all_tokens[lang1],
                     all_tokens[lang2]
                 )
-                comparison['similarity']['lexical_similarity'][pair_key] = lex_sim
+                similarity['lexical_similarity'][pair_key] = lex_sim
         
-        return comparison
+        # Add similarity to result
+        result['similarity'] = similarity
+        
+        # Save the comparison results to file
+        self.output_dir = self.analysis_dir
+        self.output_dir.mkdir(parents=True, exist_ok=True)
+        output_file = self.output_dir / f"comparison_{fable_id}.json"
+        
+        try:
+            with open(output_file, 'w', encoding='utf-8') as f:
+                json.dump(result, f, ensure_ascii=False, indent=2)
+            self.logger.debug("Saved comparison results for fable %s", fable_id)
+        except Exception as e:
+            self.logger.error("Error saving comparison for fable %s: %s", fable_id, e)
+        
+        return result
     
     def _calculate_structural_similarity(self, fable1: Dict[str, Any], fable2: Dict[str, Any]) -> float:
         """
@@ -442,6 +506,9 @@ class ComparisonAnalyzer:
         # Calculate relative frequencies
         total1 = sum(freq1.values())
         total2 = sum(freq2.values())
+        
+        if total1 == 0 or total2 == 0:
+            return 0.0
         
         rel_freq1 = {word: count / total1 for word, count in freq1.items()}
         rel_freq2 = {word: count / total2 for word, count in freq2.items()}

@@ -7,6 +7,16 @@
     "en",
     "es"
   ],
+  "token_counts": {
+    "grc": 62,
+    "nl": 173,
+    "de": 100,
+    "en": 109,
+    "es": 94
+  },
+  "common_entities": [],
+  "sentiment_scores": {},
+  "complexity_scores": {},
   "basic_metrics": {
     "title": {
       "grc": "Λύκος καὶ ἐρωδιός",
@@ -14,13 +24,6 @@
       "de": "Der Wolf und Der Kranich",
       "en": "Wolf and Crane",
       "es": "El Lobo y la garza"
-    },
-    "token_counts": {
-      "grc": 62,
-      "nl": 173,
-      "de": 100,
-      "en": 109,
-      "es": 94
     },
     "word_counts": {
       "grc": 55,

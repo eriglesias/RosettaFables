@@ -6,18 +6,21 @@
     "de",
     "en"
   ],
+  "token_counts": {
+    "grc": 195,
+    "nl": 188,
+    "de": 213,
+    "en": 108
+  },
+  "common_entities": [],
+  "sentiment_scores": {},
+  "complexity_scores": {},
   "basic_metrics": {
     "title": {
       "grc": "Ἀλώπηξ καὶ τράγος",
       "nl": "Vos en Geit",
       "de": "Der Fuchs und der Bock",
       "en": "Fox and Goat in the Well"
-    },
-    "token_counts": {
-      "grc": 195,
-      "nl": 188,
-      "de": 213,
-      "en": 108
     },
     "word_counts": {
       "grc": 177,

@@ -1,4 +1,3 @@
-# src/aesop_spacy/pipeline/pipeline.py
 """
 Main pipeline module for processing and analyzing Aesop's fables.
 
@@ -207,22 +206,22 @@ class FablePipeline:
         if hasattr(model, 'meta'):
             # This is a spaCy model
             model_name = model.meta.get('name', 'unknown')
-            
+          
             # First process a sample fable to get canonical forms
             if fables and (not hasattr(self.cleaner, 'canonical_forms') or not self.cleaner.canonical_forms):
                 # Process first fable to get canonical forms
                 sample_fable = fables[0]
                 cleaned_sample = self.cleaner.clean_fable(sample_fable)
                 # Now cleaner should have canonical_forms available
-            
+          
             # Get canonical forms from cleaner
             canonical_forms = {}
             if hasattr(self.cleaner, 'canonical_forms'):
                 canonical_forms = self.cleaner.canonical_forms
-                
+               
             # Add entity patterns to enhance the model
             self.recognizer.add_entity_patterns(model, language, canonical_forms)
-            
+           
             # Add character consolidation component to normalize entity mentions
             self.recognizer.add_character_consolidation(model)
             
@@ -251,7 +250,7 @@ class FablePipeline:
                 # Process with NLP
                 processed_fable = self.processor.process_fable(extracted_fable, model)
                 self.logger.debug("Processed fable: %s", processed_fable.get('title', 'Untitled'))
-                
+
                 # Track entities if they exist (for statistics)
                 document_id = fable.get('id', f"{language}_{i}")
                 if 'entities' in processed_fable:
@@ -281,7 +280,7 @@ class FablePipeline:
         if processed_fables:
             output_file = self.writer.save_processed_fables(processed_fables, language)
             self.logger.info("Saved %d processed fables to %s", len(processed_fables), output_file)
-            
+          
         # Save entity statistics 
         entity_stats = self.recognizer.get_entity_statistics()
         if entity_stats:
@@ -308,30 +307,30 @@ class FablePipeline:
         # Default to all analysis types if none specified
         if analysis_types is None:
             analysis_types = all_analysis_types       
-        
+      
         # Results container
         results = {}
-        
+      
         # Load processed fables for each language
         languages = []
         for lang_file in (self.output_dir / "processed").glob("fables_*.json"):
             lang = lang_file.stem.split('_')[1]
             languages.append(lang)  
         self.logger.info("Found processed data for languages: %s", ', '.join(languages))
-        
+      
         # Loading fables by language for analysis
         fables_by_language = self._load_processed_fables(languages)
-        
+      
         # Skip if no data
         if not fables_by_language:
             self.logger.warning("No processed fables found for analysis")
             return results
-        
+       
         # Run basic analysis if any of those types are requested
         if any(analysis_type in analysis_types for analysis_type in ['pos', 'entity', 'moral', 'comparison']):
             basic_results = self._run_basic_analysis(fables_by_language, analysis_types)
             results.update(basic_results)
-            
+           
         # Clustering analysis
         if 'clustering' in analysis_types:
             clustering_results = self._run_clustering_analysis(fables_by_language)
@@ -407,7 +406,6 @@ class FablePipeline:
             except Exception as e:
                 self.logger.error("Error loading processed data for %s: %s", lang, e)
         
-        # Store fables_by_language as instance attribute (THIS IS THE FIX)
         self.fables_by_language = fables_by_language
         
         # Also prepare a fables_by_id dictionary for cross-language analysis
@@ -893,21 +891,57 @@ class FablePipeline:
         Run cross-language analysis comparing the same fable across languages.
         """
         try:
-            # Use the MoralDetector to compare morals across languages
-            moral_comparison = self.moral_detector.compare_morals(self.fables_by_id)
-            
-            # Use the entity analyzer to compare entity distributions
+            # Check if fables_by_id is properly initialized
+            if not hasattr(self, 'fables_by_id') or not self.fables_by_id:
+                # Rebuild fables_by_id dictionary if needed
+                self.fables_by_id = {}
+                for lang, fables in fables_by_language.items():
+                    for fable in fables:
+                        if isinstance(fable, dict) and 'id' in fable:
+                            fable_id = fable['id']
+                            if fable_id not in self.fables_by_id:
+                                self.fables_by_id[fable_id] = {}
+                            self.fables_by_id[fable_id][lang] = fable
+
+            # Initialize result containers
+            moral_comparison = {}
             entity_results = {}
-            for lang in fables_by_language.keys():
-                entity_dist = self.entity_analyzer.analyze_entity_distribution(lang)
-                entity_results[lang] = entity_dist
-            
-            # Compare word usage across languages
             word_usage_comparison = {}
+
+            # 1. Use the MoralDetector to compare morals across languages - with error handling
+            try:
+                moral_comparison = self.moral_detector.compare_morals(self.fables_by_id)
+            except Exception as moral_e:
+                self.logger.warning(f"Error in moral comparison: {moral_e}")
+                moral_comparison = {"error": str(moral_e)}
+            
+            # 2. Use the entity analyzer to compare entity distributions - with error handling
+            for lang in fables_by_language.keys():
+                try:
+                    entity_dist = self.entity_analyzer.analyze_entity_distribution(lang)
+                    entity_results[lang] = entity_dist
+                except Exception as entity_e:
+                    self.logger.warning(f"Error analyzing entity distribution for language {lang}: {entity_e}")
+                    entity_results[lang] = {"error": str(entity_e)}
+            
+            # 3. Compare word usage across languages - with enhanced defensive programming
             for fable_id, lang_fables in self.fables_by_id.items():
-                if isinstance(lang_fables, dict) and len(lang_fables) >= 2:
+                # Skip if not a dictionary or not enough languages
+                if not isinstance(lang_fables, dict) or len(lang_fables) < 2:
+                    continue
+                    
+                # Make sure all items in lang_fables are also dictionaries
+                all_dicts = all(isinstance(fable, dict) for fable in lang_fables.values())
+                if not all_dicts:
+                    self.logger.warning(f"Skipping word usage comparison for fable {fable_id}: not all language entries are dictionaries")
+                    continue
+                    
+                try:
                     usage_result = self.stats_analyzer.compare_word_usage(lang_fables)
                     word_usage_comparison[fable_id] = usage_result
+                except Exception as word_e:
+                    self.logger.warning(f"Error comparing word usage for fable {fable_id}: {word_e}")
+                    # Continue with other fables rather than failing entire analysis
             
             # Combine results
             results = {

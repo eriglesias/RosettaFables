@@ -6,18 +6,21 @@
     "de",
     "es"
   ],
+  "token_counts": {
+    "grc": 115,
+    "nl": 189,
+    "de": 186,
+    "es": 171
+  },
+  "common_entities": [],
+  "sentiment_scores": {},
+  "complexity_scores": {},
   "basic_metrics": {
     "title": {
       "grc": "Κώνωψ καὶ λέων",
       "nl": "Leeuw en Mug",
       "de": "Der Löwe und Die Mücke",
       "es": "El Mosquito y el León"
-    },
-    "token_counts": {
-      "grc": 115,
-      "nl": 189,
-      "de": 186,
-      "es": 171
     },
     "word_counts": {
       "grc": 99,
