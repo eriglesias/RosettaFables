@@ -90,54 +90,63 @@ class MoralDetector:
             'confidence': 0.0
         }
         
-        # Get language and text
-        language = fable.get('language', 'en')
-        body = fable.get('body', '')
-        
-        # Method 1: Look for moral tag in the original text - fix for explicit detection
-        moral_tag = fable.get('moral', None)
-        moral_type = fable.get('moral_type', None)
-        
-        if moral_tag and isinstance(moral_tag, str) and moral_tag.strip():
-            results['has_explicit_moral'] = True
-            results['moral_text'] = moral_tag.strip()
-            results['detection_method'] = 'xml_tag'
-            results['confidence'] = 1.0
-            
-            # If we have information about moral type (explicit/implicit)
-            if moral_type:
-                results['moral_type'] = moral_type
-                
+        if not isinstance(fable, dict):
+            self.logger.error(f"Invalid fable type: expected dict, got {type(fable)}")
             return results
         
-        # Method 2: Look for common moral-indicating phrases
-        if body:
-            sentences = self._extract_sentences(body, language)
+        try: 
+            # Get language and text
+            language = fable.get('language', 'en')
+            body = fable.get('body', '')
             
-            # Check the last 3 sentences for moral indicators
-            indicators = self.moral_indicators.get(language, self.moral_indicators['en'])
+            # Method 1: Look for moral tag in the original text - fix for explicit detection
+            moral_tag = fable.get('moral', None)
+            moral_type = fable.get('moral_type', None)
             
-            for i, sentence in enumerate(sentences[-3:]):
-                sentence_lower = sentence.lower()
+            if moral_tag and isinstance(moral_tag, str) and moral_tag.strip():
+                results['has_explicit_moral'] = True
+                results['moral_text'] = moral_tag.strip()
+                results['detection_method'] = 'xml_tag'
+                results['confidence'] = 1.0
                 
-                # Fix: Only match full words, not partial matches
-                for indicator in indicators:
-                    # Use word boundary check for more accurate matching
-                    indicator_pattern = r'\b' + re.escape(indicator.lower()) + r'\b'
-                    if re.search(indicator_pattern, sentence_lower):
-                        results['has_explicit_moral'] = True
-                        results['moral_text'] = sentence.strip()
-                        results['moral_location'] = 'end'
-                        results['detection_method'] = 'indicator_phrase'
-                        results['confidence'] = 0.8
-                        return results
+                # If we have information about moral type (explicit/implicit)
+                if moral_type:
+                    results['moral_type'] = moral_type
                     
-                # Special case for test fable - check if this is just a test sentence
-                if 'test fable' in sentence_lower and len(sentences) <= 2:
-                    # Don't mark test sentences as morals
-                    continue
+                return results
+
         
-        # No explicit moral found
+            # Method 2: Look for common moral-indicating phrases
+            if body:
+                sentences = self._extract_sentences(body, language)
+                
+                # Check the last 3 sentences for moral indicators
+                indicators = self.moral_indicators.get(language, self.moral_indicators['en'])
+                
+                for i, sentence in enumerate(sentences[-3:]):
+                    sentence_lower = sentence.lower()
+                    
+                    # Fix: Only match full words, not partial matches
+                    for indicator in indicators:
+                        # Use word boundary check for more accurate matching
+                        indicator_pattern = r'\b' + re.escape(indicator.lower()) + r'\b'
+                        if re.search(indicator_pattern, sentence_lower):
+                            results['has_explicit_moral'] = True
+                            results['moral_text'] = sentence.strip()
+                            results['moral_location'] = 'end'
+                            results['detection_method'] = 'indicator_phrase'
+                            results['confidence'] = 0.8
+                            return results
+                        
+                    # Special case for test fable - check if this is just a test sentence
+                    if 'test fable' in sentence_lower and len(sentences) <= 2:
+                        # Don't mark test sentences as morals
+                        continue
+        except AttributeError as e:
+            self.logger.error(f"Error accessing fable attributes: {e}, fable type: {type(fable)}")
+        except Exception as e:
+            self.logger.error(f"Unexpected error in detect_explicit_moral: {e}")
+       
         return results
     
     def infer_implicit_moral(self, fable, explicit_moral_results=None):
@@ -338,15 +347,13 @@ class MoralDetector:
         if not isinstance(fables_by_id, dict):
             self.logger.warning(f"Expected dict for fables_by_id, got {type(fables_by_id)}")
             return comparison
-    
-        # ONE LOOP to handle all fable processing
+
         for fable_id, lang_fables in fables_by_id.items():
             # Skip this fable if lang_fables isn't a dictionary
             if not isinstance(lang_fables, dict):
                 self.logger.warning(f"Expected dict for fable_id {fable_id}, got {type(lang_fables)}")
                 continue
             
-            # Now it's safe to proceed with this fable
             moral_comparison = {
                 'languages': list(lang_fables.keys()),
                 'morals': {},
@@ -356,6 +363,11 @@ class MoralDetector:
             
             # Extract morals for each language
             for lang, fable in lang_fables.items():
+                # skip if this fable isn't a dictionary
+                if not isinstance(fable, dict):
+                    self.logger.error(f"Fable for {lang} in fable_id {fable_id} is not a dictionary, got {type(fable)}")
+                    continue
+                
                 # Detect explicit moral
                 explicit_results = self.detect_explicit_moral(fable)
                 

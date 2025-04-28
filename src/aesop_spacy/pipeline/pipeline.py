@@ -57,6 +57,10 @@ class FablePipeline:
         self.logger = logging.getLogger(__name__)
         self.transformer_manager = TransformerManager()
 
+        # initializing empty dictionaries
+        self.fables_by_language = {}
+        self.fables_by_id = {}
+
         # Configure logging if not already configured
         if not self.logger.handlers:
             logging.basicConfig(
@@ -372,7 +376,7 @@ class FablePipeline:
         
     def _load_processed_fables(self, languages: List[str]) -> Dict[str, List[Dict[str, Any]]]:
         """
-        Load processed fables for all languages.
+        Load processed fables for all languages with validation.
         
         Args:
             languages: List of language codes
@@ -395,8 +399,16 @@ class FablePipeline:
                     
                     # Ensure we have a list of fables
                     if isinstance(fables, list):
-                        fables_by_language[lang] = fables
-                        self.logger.info("Loaded %d fables for %s", len(fables), lang)
+                        # Filter out non-dictionary items
+                        valid_fables = []
+                        for fable in fables:
+                            if isinstance(fable, dict):
+                                valid_fables.append(fable)
+                            else:
+                                self.logger.warning(f"Skipping invalid fable in {lang}: expected dict, got {type(fable)}")
+                        
+                        fables_by_language[lang] = valid_fables
+                        self.logger.info("Loaded %d valid fables for %s", len(valid_fables), lang)
                     else:
                         self.logger.warning("Data for %s is not in expected list format", lang)
                         
@@ -409,18 +421,21 @@ class FablePipeline:
         
         self.fables_by_language = fables_by_language
         
-        # Also prepare a fables_by_id dictionary for cross-language analysis
+        # Prepare fables_by_id dictionary with validation
         fables_by_id = {}
         for lang, fables in fables_by_language.items():
             for fable in fables:
-                if isinstance(fable, dict) and 'id' in fable:
-                    fable_id = fable['id']
-                    if fable_id not in fables_by_id:
-                        fables_by_id[fable_id] = {}
-                    fables_by_id[fable_id][lang] = fable
+                # Only add fables with a valid ID
+                if 'id' not in fable:
+                    self.logger.warning(f"Skipping fable in {lang} with no 'id': {fable}")
+                    continue
+                    
+                fable_id = fable['id']
+                if fable_id not in fables_by_id:
+                    fables_by_id[fable_id] = {}
+                fables_by_id[fable_id][lang] = fable
         
-        self.fables_by_id = fables_by_id 
-    
+        self.fables_by_id = fables_by_id
         return fables_by_language
 
     def _analyze_pos_distribution(self, language: str) -> Dict[str, float]:
@@ -895,6 +910,7 @@ class FablePipeline:
             # Check if fables_by_id is properly initialized
             if not hasattr(self, 'fables_by_id') or not self.fables_by_id:
                 # Rebuild fables_by_id dictionary if needed
+                self.logger.info("Rebuilding fables_by_id dictionary for cross-language analysis")
                 self.fables_by_id = {}
                 for lang, fables in fables_by_language.items():
                     for fable in fables:
@@ -904,17 +920,26 @@ class FablePipeline:
                                 self.fables_by_id[fable_id] = {}
                             self.fables_by_id[fable_id][lang] = fable
 
+            self.logger.info("fables_by_id structure: %s", type(self.fables_by_id))
+            for fable_id, lang_fables in self.fables_by_id.items():
+                self.logger.info("Fable %s languages: %s", fable_id, list(lang_fables.keys()))
+                for lang, fable in lang_fables.items():
+                    self.logger.info("Fable %s in %s: type=%s", fable_id, lang, type(fable))
             # Initialize result containers
             moral_comparison = {}
             entity_results = {}
             word_usage_comparison = {}
 
-            # 1. Use the MoralDetector to compare morals across languages - with error handling
-            try:
-                moral_comparison = self.moral_detector.compare_morals(self.fables_by_id)
-            except Exception as moral_e:
-                self.logger.warning(f"Error in moral comparison: {moral_e}")
-                moral_comparison = {"error": str(moral_e)}
+            # 1. Use the MoralDetector to compare morals across languages - with explicit type checking
+            if isinstance(self.fables_by_id, dict):
+                try:
+                    moral_comparison = self.moral_detector.compare_morals(self.fables_by_id)
+                except Exception as moral_e:
+                    self.logger.warning(f"Error in moral comparison: {moral_e}")
+                    moral_comparison = {"error": str(moral_e)}
+            else:
+                self.logger.warning(f"Cannot perform moral comparison: fables_by_id is not a dictionary (type: {type(self.fables_by_id).__name__})")
+                moral_comparison = {"error": "Invalid data structure for moral comparison"}
             
             # 2. Use the entity analyzer to compare entity distributions - with error handling
             for lang in fables_by_language.keys():
