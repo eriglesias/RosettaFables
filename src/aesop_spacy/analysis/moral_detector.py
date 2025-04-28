@@ -92,6 +92,8 @@ class MoralDetector:
         
         # Get language and text
         language = fable.get('language', 'en')
+        
+        # get? 
         body = fable.get('body', '')
         
         # Method 1: Look for moral tag in the original text - fix for explicit detection
