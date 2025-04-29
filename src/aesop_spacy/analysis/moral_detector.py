@@ -90,8 +90,11 @@ class MoralDetector:
             'confidence': 0.0
         }
         
+
         if not isinstance(fable, dict):
             self.logger.error("Invalid fable type: expected dict, got %s", type(fable))
+                
+
             return results
 
         try: 

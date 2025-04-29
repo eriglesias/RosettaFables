@@ -11,6 +11,7 @@ This module orchestrates the complete fable processing pipeline including:
 - Analyzing linguistic features
 - Generating output files
 
+
 The pipeline supports multiple languages and provides comparison
 capabilities across translations of the same fable.
 """
@@ -39,6 +40,8 @@ from aesop_spacy.analysis.syntax_analyzer import SyntaxAnalyzer
 from aesop_spacy.analysis.pos_analyzer import POSAnalyzer
 from aesop_spacy.analysis.comparison_analyzer import ComparisonAnalyzer
 from aesop_spacy.models.transformer_manager import TransformerManager
+
+# fables by id?
 
 class FablePipeline:
     """Coordinates the entire fable processing pipeline."""
