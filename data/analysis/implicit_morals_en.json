@@ -1,0 +1,787 @@
+[
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "One should always wolf drink.",
+        "relevance_score": 0.75,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "lamb",
+            "wolf"
+          ]
+        }
+      },
+      {
+        "text": "The moral is to lamb wolf.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "lamb",
+            "wolf"
+          ]
+        }
+      },
+      {
+        "text": "The moral concerns year, said, drink.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "year",
+            "said",
+            "drink"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "lamb",
+        "score": 0.5242224339966227
+      },
+      {
+        "term": "wolf",
+        "score": 0.5242224339966227
+      },
+      {
+        "term": "drink",
+        "score": 0.26211121699831136
+      },
+      {
+        "term": "even",
+        "score": 0.26211121699831136
+      },
+      {
+        "term": "said",
+        "score": 0.26211121699831136
+      },
+      {
+        "term": "year",
+        "score": 0.26211121699831136
+      },
+      {
+        "term": "grass",
+        "score": 0.1747408113322076
+      },
+      {
+        "term": "insulted",
+        "score": 0.1747408113322076
+      },
+      {
+        "term": "last",
+        "score": 0.1747408113322076
+      },
+      {
+        "term": "justify",
+        "score": 0.0873704056661038
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "year",
+          "said",
+          "drink",
+          "even",
+          "wolf",
+          "lamb",
+          "grass",
+          "last",
+          "insulted",
+          "small"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "year",
+          "said",
+          "drink",
+          "even",
+          "wolf",
+          "lamb",
+          "grass",
+          "last",
+          "insulted",
+          "small"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "wolf",
+          "lamb",
+          "year",
+          "said",
+          "drink",
+          "even",
+          "grass",
+          "last",
+          "insulted",
+          "small"
+        ]
+      }
+    ],
+    "fable_id": "1"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "The moral is to mouse country.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "mouse",
+            "country"
+          ]
+        }
+      },
+      {
+        "text": "The moral concerns city, country, mouse.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "city",
+            "country",
+            "mouse"
+          ]
+        }
+      },
+      {
+        "text": "The moral concerns city, country, mouse.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "city",
+            "country",
+            "mouse"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "mouse",
+        "score": 0.784062560233975
+      },
+      {
+        "term": "country",
+        "score": 0.41816669879145335
+      },
+      {
+        "term": "city",
+        "score": 0.31362502409359
+      },
+      {
+        "term": "acorns",
+        "score": 0.10454167469786334
+      },
+      {
+        "term": "butler",
+        "score": 0.10454167469786334
+      },
+      {
+        "term": "could",
+        "score": 0.10454167469786334
+      },
+      {
+        "term": "door",
+        "score": 0.10454167469786334
+      },
+      {
+        "term": "food",
+        "score": 0.10454167469786334
+      },
+      {
+        "term": "house",
+        "score": 0.10454167469786334
+      },
+      {
+        "term": "pay",
+        "score": 0.10454167469786334
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "city",
+          "country",
+          "mouse",
+          "pay",
+          "acorns",
+          "butler",
+          "could",
+          "door",
+          "food",
+          "house"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "city",
+          "country",
+          "mouse",
+          "pay",
+          "acorns",
+          "butler",
+          "could",
+          "door",
+          "food",
+          "house"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "mouse",
+          "country",
+          "city",
+          "pay",
+          "acorns",
+          "butler",
+          "could",
+          "door",
+          "food",
+          "house"
+        ]
+      }
+    ],
+    "fable_id": "2"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "The moral is to grapes fox.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "grapes",
+            "fox"
+          ]
+        }
+      },
+      {
+        "text": "The moral concerns fox, reach, grapes.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "fox",
+            "reach",
+            "grapes"
+          ]
+        }
+      },
+      {
+        "text": "The moral concerns grapes, fox, reach.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "grapes",
+            "fox",
+            "reach"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "grapes",
+        "score": 0.5144957554275265
+      },
+      {
+        "term": "fox",
+        "score": 0.34299717028501764
+      },
+      {
+        "term": "reach",
+        "score": 0.34299717028501764
+      },
+      {
+        "term": "although",
+        "score": 0.17149858514250882
+      },
+      {
+        "term": "away",
+        "score": 0.17149858514250882
+      },
+      {
+        "term": "driven",
+        "score": 0.17149858514250882
+      },
+      {
+        "term": "even",
+        "score": 0.17149858514250882
+      },
+      {
+        "term": "hanging",
+        "score": 0.17149858514250882
+      },
+      {
+        "term": "high",
+        "score": 0.17149858514250882
+      },
+      {
+        "term": "hunger",
+        "score": 0.17149858514250882
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "fox",
+          "reach",
+          "grapes",
+          "yet",
+          "leaped",
+          "away",
+          "driven",
+          "even",
+          "hanging",
+          "high"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "grapes",
+          "fox",
+          "reach",
+          "yet",
+          "leaped",
+          "away",
+          "driven",
+          "even",
+          "hanging",
+          "high"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "fox",
+          "reach",
+          "grapes",
+          "yet",
+          "leaped",
+          "away",
+          "driven",
+          "even",
+          "hanging",
+          "high"
+        ]
+      }
+    ],
+    "fable_id": "3"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "The moral is to wolf crane.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "wolf",
+            "crane"
+          ]
+        }
+      },
+      {
+        "text": "The moral concerns reward, crane, wolf.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "reward",
+            "crane",
+            "wolf"
+          ]
+        }
+      },
+      {
+        "text": "The moral concerns reward, crane, wolf.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "reward",
+            "crane",
+            "wolf"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "wolf",
+        "score": 0.7120689949163119
+      },
+      {
+        "term": "crane",
+        "score": 0.35603449745815596
+      },
+      {
+        "term": "reward",
+        "score": 0.35603449745815596
+      },
+      {
+        "term": "accursed",
+        "score": 0.11867816581938533
+      },
+      {
+        "term": "maw",
+        "score": 0.11867816581938533
+      },
+      {
+        "term": "mouth",
+        "score": 0.11867816581938533
+      },
+      {
+        "term": "pain",
+        "score": 0.11867816581938533
+      },
+      {
+        "term": "promised",
+        "score": 0.11867816581938533
+      },
+      {
+        "term": "promises",
+        "score": 0.11867816581938533
+      },
+      {
+        "term": "remove",
+        "score": 0.11867816581938533
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "reward",
+          "crane",
+          "wolf",
+          "yet",
+          "dangerous",
+          "head",
+          "got",
+          "gaping",
+          "finally",
+          "extracted"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "reward",
+          "crane",
+          "wolf",
+          "yet",
+          "dangerous",
+          "head",
+          "got",
+          "gaping",
+          "finally",
+          "extracted"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "wolf",
+          "reward",
+          "crane",
+          "yet",
+          "dangerous",
+          "head",
+          "got",
+          "gaping",
+          "finally",
+          "extracted"
+        ]
+      }
+    ],
+    "fable_id": "4"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "The moral is to lion mane.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "lion",
+            "mane"
+          ]
+        }
+      },
+      {
+        "text": "The moral concerns mouse, mane, fox.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "mouse",
+            "mane",
+            "fox"
+          ]
+        }
+      },
+      {
+        "text": "The moral concerns lion, mouse, mane.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "lion",
+            "mouse",
+            "mane"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "lion",
+        "score": 0.5443310539518174
+      },
+      {
+        "term": "mane",
+        "score": 0.408248290463863
+      },
+      {
+        "term": "mouse",
+        "score": 0.408248290463863
+      },
+      {
+        "term": "fox",
+        "score": 0.2721655269759087
+      },
+      {
+        "term": "afraid",
+        "score": 0.13608276348795434
+      },
+      {
+        "term": "fun",
+        "score": 0.13608276348795434
+      },
+      {
+        "term": "hairs",
+        "score": 0.13608276348795434
+      },
+      {
+        "term": "insolent",
+        "score": 0.13608276348795434
+      },
+      {
+        "term": "king",
+        "score": 0.13608276348795434
+      },
+      {
+        "term": "leaped",
+        "score": 0.13608276348795434
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "mouse",
+          "mane",
+          "fox",
+          "lion",
+          "worried",
+          "insolent",
+          "angered",
+          "animals",
+          "answered",
+          "away"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "lion",
+          "mouse",
+          "mane",
+          "fox",
+          "worried",
+          "insolent",
+          "angered",
+          "animals",
+          "answered",
+          "away"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "mouse",
+          "mane",
+          "fox",
+          "lion",
+          "worried",
+          "insolent",
+          "angered",
+          "animals",
+          "answered",
+          "away"
+        ]
+      }
+    ],
+    "fable_id": "5"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "The moral is to fox goat.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "fox",
+            "goat"
+          ]
+        }
+      },
+      {
+        "text": "The moral concerns goat, well, inside.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "goat",
+            "well",
+            "inside"
+          ]
+        }
+      },
+      {
+        "text": "The moral concerns goat, well, inside.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "goat",
+            "well",
+            "inside"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "fox",
+        "score": 0.5547001962252291
+      },
+      {
+        "term": "goat",
+        "score": 0.41602514716892186
+      },
+      {
+        "term": "inside",
+        "score": 0.2773500981126146
+      },
+      {
+        "term": "water",
+        "score": 0.2773500981126146
+      },
+      {
+        "term": "well",
+        "score": 0.2773500981126146
+      },
+      {
+        "term": "asked",
+        "score": 0.1386750490563073
+      },
+      {
+        "term": "made",
+        "score": 0.1386750490563073
+      },
+      {
+        "term": "meanwhile",
+        "score": 0.1386750490563073
+      },
+      {
+        "term": "place",
+        "score": 0.1386750490563073
+      },
+      {
+        "term": "plentiful",
+        "score": 0.1386750490563073
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "goat",
+          "well",
+          "inside",
+          "water",
+          "fox",
+          "whether",
+          "fresh",
+          "horns",
+          "hole",
+          "high"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "goat",
+          "well",
+          "inside",
+          "water",
+          "fox",
+          "whether",
+          "fresh",
+          "horns",
+          "hole",
+          "high"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "fox",
+          "goat",
+          "well",
+          "inside",
+          "water",
+          "whether",
+          "fresh",
+          "horns",
+          "hole",
+          "high"
+        ]
+      }
+    ],
+    "fable_id": "7"
+  }
+]

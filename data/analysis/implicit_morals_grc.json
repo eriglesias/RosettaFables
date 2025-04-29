@@ -1,0 +1,784 @@
+[
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "The moral is to λύκος αἰτίας.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "λύκος",
+            "αἰτίας"
+          ]
+        }
+      },
+      {
+        "text": "One should always αἰτίας αὐτὸν.",
+        "relevance_score": 0.5,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "λύκος",
+            "αἰτίας"
+          ]
+        }
+      },
+      {
+        "text": "It's important to αὐτὸν when dealing with δὲ.",
+        "relevance_score": 0.3333333333333333,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "λύκος",
+            "αἰτίας"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "λύκος",
+        "score": 0.40451991747794525
+      },
+      {
+        "term": "αἰτίας",
+        "score": 0.26967994498529685
+      },
+      {
+        "term": "αὐτὸν",
+        "score": 0.26967994498529685
+      },
+      {
+        "term": "δὲ",
+        "score": 0.26967994498529685
+      },
+      {
+        "term": "καὶ",
+        "score": 0.26967994498529685
+      },
+      {
+        "term": "τινος",
+        "score": 0.26967994498529685
+      },
+      {
+        "term": "τὸ",
+        "score": 0.26967994498529685
+      },
+      {
+        "term": "ἔφη",
+        "score": 0.26967994498529685
+      },
+      {
+        "term": "ὕδωρ",
+        "score": 0.26967994498529685
+      },
+      {
+        "term": "ὡς",
+        "score": 0.26967994498529685
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "λύκος",
+          "ὡς",
+          "τὸ",
+          "αὐτὸν",
+          "δὲ",
+          "καὶ",
+          "τινος",
+          "ὕδωρ",
+          "αἰτίας",
+          "ἔφη"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "λύκος",
+          "ὡς",
+          "τὸ",
+          "αὐτὸν",
+          "δὲ",
+          "καὶ",
+          "τινος",
+          "ὕδωρ",
+          "αἰτίας",
+          "ἔφη"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "λύκος",
+          "ὡς",
+          "τὸ",
+          "αὐτὸν",
+          "δὲ",
+          "καὶ",
+          "τινος",
+          "ὕδωρ",
+          "αἰτίας",
+          "ἔφη"
+        ]
+      }
+    ],
+    "fable_id": "1"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "The moral is to τὴν ὀστοῦν.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "τὴν",
+            "ὀστοῦν"
+          ]
+        }
+      },
+      {
+        "text": "The moral concerns ὀστοῦν, τὴν, κεφαλὴν.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "ὀστοῦν",
+            "τὴν",
+            "κεφαλὴν"
+          ]
+        }
+      },
+      {
+        "text": "The moral concerns ὀστοῦν, τὴν, κεφαλὴν.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "ὀστοῦν",
+            "τὴν",
+            "κεφαλὴν"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "τὴν",
+        "score": 0.408248290463863
+      },
+      {
+        "term": "ὀστοῦν",
+        "score": 0.408248290463863
+      },
+      {
+        "term": "δὲ",
+        "score": 0.2721655269759087
+      },
+      {
+        "term": "καὶ",
+        "score": 0.2721655269759087
+      },
+      {
+        "term": "κεφαλὴν",
+        "score": 0.2721655269759087
+      },
+      {
+        "term": "μισθὸν",
+        "score": 0.2721655269759087
+      },
+      {
+        "term": "τὸ",
+        "score": 0.2721655269759087
+      },
+      {
+        "term": "τὸν",
+        "score": 0.2721655269759087
+      },
+      {
+        "term": "αὐτοῦ",
+        "score": 0.13608276348795434
+      },
+      {
+        "term": "φάρυγγα",
+        "score": 0.13608276348795434
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "ὀστοῦν",
+          "τὴν",
+          "κεφαλὴν",
+          "δὲ",
+          "τὸ",
+          "τὸν",
+          "καὶ",
+          "μισθὸν",
+          "λύκος",
+          "οὗτος"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "ὀστοῦν",
+          "τὴν",
+          "κεφαλὴν",
+          "δὲ",
+          "τὸ",
+          "τὸν",
+          "καὶ",
+          "μισθὸν",
+          "λύκος",
+          "οὗτος"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "ὀστοῦν",
+          "τὴν",
+          "κεφαλὴν",
+          "δὲ",
+          "τὸ",
+          "τὸν",
+          "καὶ",
+          "μισθὸν",
+          "λύκος",
+          "οὗτος"
+        ]
+      }
+    ],
+    "fable_id": "3"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "The moral is to τὴν ὀστοῦν.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "τὴν",
+            "ὀστοῦν"
+          ]
+        }
+      },
+      {
+        "text": "The moral concerns ὀστοῦν, τὴν, κεφαλὴν.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "ὀστοῦν",
+            "τὴν",
+            "κεφαλὴν"
+          ]
+        }
+      },
+      {
+        "text": "The moral concerns ὀστοῦν, τὴν, κεφαλὴν.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "ὀστοῦν",
+            "τὴν",
+            "κεφαλὴν"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "τὴν",
+        "score": 0.408248290463863
+      },
+      {
+        "term": "ὀστοῦν",
+        "score": 0.408248290463863
+      },
+      {
+        "term": "δὲ",
+        "score": 0.2721655269759087
+      },
+      {
+        "term": "καὶ",
+        "score": 0.2721655269759087
+      },
+      {
+        "term": "κεφαλὴν",
+        "score": 0.2721655269759087
+      },
+      {
+        "term": "μισθὸν",
+        "score": 0.2721655269759087
+      },
+      {
+        "term": "τὸ",
+        "score": 0.2721655269759087
+      },
+      {
+        "term": "τὸν",
+        "score": 0.2721655269759087
+      },
+      {
+        "term": "αὐτοῦ",
+        "score": 0.13608276348795434
+      },
+      {
+        "term": "φάρυγγα",
+        "score": 0.13608276348795434
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "ὀστοῦν",
+          "τὴν",
+          "κεφαλὴν",
+          "δὲ",
+          "τὸ",
+          "τὸν",
+          "καὶ",
+          "μισθὸν",
+          "λύκος",
+          "οὗτος"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "ὀστοῦν",
+          "τὴν",
+          "κεφαλὴν",
+          "δὲ",
+          "τὸ",
+          "τὸν",
+          "καὶ",
+          "μισθὸν",
+          "λύκος",
+          "οὗτος"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "ὀστοῦν",
+          "τὴν",
+          "κεφαλὴν",
+          "δὲ",
+          "τὸ",
+          "τὸν",
+          "καὶ",
+          "μισθὸν",
+          "λύκος",
+          "οὗτος"
+        ]
+      }
+    ],
+    "fable_id": "4"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "The moral is to αὐτὸν δὲ.",
+        "relevance_score": 0.5,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "αὐτὸν",
+            "δὲ"
+          ]
+        }
+      },
+      {
+        "text": "It's important to καὶ when dealing with μῦς.",
+        "relevance_score": 0.5,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "αὐτὸν",
+            "δὲ"
+          ]
+        }
+      },
+      {
+        "text": "The moral concerns αὐτὸν, δὲ, καὶ.",
+        "relevance_score": 0.5,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "αὐτὸν",
+            "δὲ",
+            "καὶ"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "αὐτὸν",
+        "score": 0.46499055497527714
+      },
+      {
+        "term": "δὲ",
+        "score": 0.46499055497527714
+      },
+      {
+        "term": "καὶ",
+        "score": 0.46499055497527714
+      },
+      {
+        "term": "μῦς",
+        "score": 0.23249527748763857
+      },
+      {
+        "term": "τοῦ",
+        "score": 0.23249527748763857
+      },
+      {
+        "term": "ὅτι",
+        "score": 0.23249527748763857
+      },
+      {
+        "term": "αὐτοῦ",
+        "score": 0.11624763874381928
+      },
+      {
+        "term": "συνέβη",
+        "score": 0.11624763874381928
+      },
+      {
+        "term": "σωθεὶς",
+        "score": 0.11624763874381928
+      },
+      {
+        "term": "σὺ",
+        "score": 0.11624763874381928
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "αὐτὸν",
+          "δὲ",
+          "καὶ",
+          "ὅτι",
+          "μῦς",
+          "τοῦ",
+          "σώματι",
+          "σὺ",
+          "σωθεὶς",
+          "συνέβη"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "αὐτὸν",
+          "δὲ",
+          "καὶ",
+          "ὅτι",
+          "μῦς",
+          "τοῦ",
+          "σώματι",
+          "σὺ",
+          "σωθεὶς",
+          "συνέβη"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "αὐτὸν",
+          "δὲ",
+          "καὶ",
+          "ὅτι",
+          "μῦς",
+          "τοῦ",
+          "σώματι",
+          "σὺ",
+          "σωθεὶς",
+          "συνέβη"
+        ]
+      }
+    ],
+    "fable_id": "5"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "The moral is to καὶ δὲ.",
+        "relevance_score": 0.5,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "καὶ",
+            "δὲ"
+          ]
+        }
+      },
+      {
+        "text": "It's important to κώνωψ when dealing with τοῖς.",
+        "relevance_score": 0.5,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "καὶ",
+            "δὲ"
+          ]
+        }
+      },
+      {
+        "text": "The moral concerns δὲ, τοῖς, κώνωψ.",
+        "relevance_score": 0.5,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "δὲ",
+            "τοῖς",
+            "κώνωψ"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "καὶ",
+        "score": 0.647150228929434
+      },
+      {
+        "term": "δὲ",
+        "score": 0.3698001308168194
+      },
+      {
+        "term": "κώνωψ",
+        "score": 0.2773500981126145
+      },
+      {
+        "term": "τοῖς",
+        "score": 0.2773500981126145
+      },
+      {
+        "term": "εἰ",
+        "score": 0.1849000654084097
+      },
+      {
+        "term": "λέοντα",
+        "score": 0.1849000654084097
+      },
+      {
+        "term": "οὔτε",
+        "score": 0.1849000654084097
+      },
+      {
+        "term": "σαλπίσας",
+        "score": 0.1849000654084097
+      },
+      {
+        "term": "ἀράχνης",
+        "score": 0.1849000654084097
+      },
+      {
+        "term": "ὄνυξι",
+        "score": 0.1849000654084097
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "δὲ",
+          "τοῖς",
+          "κώνωψ",
+          "καὶ",
+          "λέοντα",
+          "ὄνυξι",
+          "ἀράχνης",
+          "εἰ",
+          "σαλπίσας",
+          "οὔτε"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "δὲ",
+          "τοῖς",
+          "κώνωψ",
+          "καὶ",
+          "λέοντα",
+          "ὄνυξι",
+          "ἀράχνης",
+          "εἰ",
+          "σαλπίσας",
+          "οὔτε"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "καὶ",
+          "δὲ",
+          "τοῖς",
+          "κώνωψ",
+          "λέοντα",
+          "ὄνυξι",
+          "ἀράχνης",
+          "εἰ",
+          "σαλπίσας",
+          "οὔτε"
+        ]
+      }
+    ],
+    "fable_id": "6"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "The moral concerns τῶν, καὶ, τὴν.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "τῶν",
+            "καὶ",
+            "τὴν"
+          ]
+        }
+      },
+      {
+        "text": "The moral concerns τῶν, καὶ, τὴν.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "τῶν",
+            "καὶ",
+            "τὴν"
+          ]
+        }
+      },
+      {
+        "text": "The moral is to δὲ καὶ.",
+        "relevance_score": 0.5,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "δὲ",
+            "καὶ"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "δὲ",
+        "score": 0.4681645887845223
+      },
+      {
+        "term": "καὶ",
+        "score": 0.409644015186457
+      },
+      {
+        "term": "τὴν",
+        "score": 0.409644015186457
+      },
+      {
+        "term": "τῶν",
+        "score": 0.2926028679903264
+      },
+      {
+        "term": "τοῦ",
+        "score": 0.23408229439226114
+      },
+      {
+        "term": "τὸ",
+        "score": 0.23408229439226114
+      },
+      {
+        "term": "τῷ",
+        "score": 0.23408229439226114
+      },
+      {
+        "term": "ἀλώπηξ",
+        "score": 0.17556172079419585
+      },
+      {
+        "term": "αὐτὴν",
+        "score": 0.11704114719613057
+      },
+      {
+        "term": "διὰ",
+        "score": 0.11704114719613057
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "τῶν",
+          "καὶ",
+          "τὴν",
+          "τοῦ",
+          "τῷ",
+          "τὸ",
+          "δὲ",
+          "ἀλώπηξ",
+          "ἄνοδον",
+          "φρέαρ"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "τῶν",
+          "καὶ",
+          "τὴν",
+          "τοῦ",
+          "τῷ",
+          "τὸ",
+          "δὲ",
+          "ἀλώπηξ",
+          "ἄνοδον",
+          "φρέαρ"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "δὲ",
+          "καὶ",
+          "τὴν",
+          "τῶν",
+          "τοῦ",
+          "τῷ",
+          "τὸ",
+          "ἀλώπηξ",
+          "ἄνοδον",
+          "φρέαρ"
+        ]
+      }
+    ],
+    "fable_id": "7"
+  }
+]

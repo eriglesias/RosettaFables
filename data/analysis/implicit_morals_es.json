@@ -1,0 +1,912 @@
+[
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "La moraleja es lobo cordero.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "lobo",
+            "cordero"
+          ]
+        }
+      },
+      {
+        "text": "La moraleja es dijo río.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "lobo",
+            "cordero"
+          ]
+        }
+      },
+      {
+        "text": "La moraleja trata de dijo, río, cordero.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "dijo",
+            "río",
+            "cordero"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "lobo",
+        "score": 0.46499055497527714
+      },
+      {
+        "term": "cordero",
+        "score": 0.34874291623145787
+      },
+      {
+        "term": "dijo",
+        "score": 0.34874291623145787
+      },
+      {
+        "term": "río",
+        "score": 0.34874291623145787
+      },
+      {
+        "term": "agua",
+        "score": 0.23249527748763857
+      },
+      {
+        "term": "arriba",
+        "score": 0.23249527748763857
+      },
+      {
+        "term": "año",
+        "score": 0.23249527748763857
+      },
+      {
+        "term": "beber",
+        "score": 0.23249527748763857
+      },
+      {
+        "term": "pretexto",
+        "score": 0.23249527748763857
+      },
+      {
+        "term": "abajo",
+        "score": 0.11624763874381928
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "dijo",
+          "río",
+          "cordero",
+          "lobo",
+          "agua",
+          "arriba",
+          "año",
+          "beber",
+          "pretexto",
+          "voy"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "lobo",
+          "dijo",
+          "río",
+          "cordero",
+          "agua",
+          "arriba",
+          "año",
+          "beber",
+          "pretexto",
+          "voy"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "dijo",
+          "río",
+          "cordero",
+          "lobo",
+          "agua",
+          "arriba",
+          "año",
+          "beber",
+          "pretexto",
+          "voy"
+        ]
+      }
+    ],
+    "fable_id": "1"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "La moraleja es amigo campo.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "amigo",
+            "campo"
+          ]
+        }
+      },
+      {
+        "text": "La moraleja es casa trigo.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "amigo",
+            "campo"
+          ]
+        }
+      },
+      {
+        "text": "La moraleja trata de campo, casa, trigo.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "campo",
+            "casa",
+            "trigo"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "amigo",
+        "score": 0.4558423058385518
+      },
+      {
+        "term": "campo",
+        "score": 0.3418817293789138
+      },
+      {
+        "term": "casa",
+        "score": 0.3418817293789138
+      },
+      {
+        "term": "trigo",
+        "score": 0.3418817293789138
+      },
+      {
+        "term": "cebada",
+        "score": 0.2279211529192759
+      },
+      {
+        "term": "dijo",
+        "score": 0.2279211529192759
+      },
+      {
+        "term": "hombre",
+        "score": 0.2279211529192759
+      },
+      {
+        "term": "nuevo",
+        "score": 0.2279211529192759
+      },
+      {
+        "term": "ratones",
+        "score": 0.2279211529192759
+      },
+      {
+        "term": "ratón",
+        "score": 0.2279211529192759
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "campo",
+          "casa",
+          "trigo",
+          "amigo",
+          "dijo",
+          "hombre",
+          "ratones",
+          "ratón",
+          "nuevo",
+          "cebada"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "amigo",
+          "campo",
+          "casa",
+          "trigo",
+          "dijo",
+          "hombre",
+          "ratones",
+          "ratón",
+          "nuevo",
+          "cebada"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "campo",
+          "casa",
+          "trigo",
+          "amigo",
+          "dijo",
+          "hombre",
+          "ratones",
+          "ratón",
+          "nuevo",
+          "cebada"
+        ]
+      }
+    ],
+    "fable_id": "2"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "La moraleja es apartándose apoderarse.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "apartándose",
+            "apoderarse"
+          ]
+        }
+      },
+      {
+        "text": "La moraleja es colgaban dijo.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "apartándose",
+            "apoderarse"
+          ]
+        }
+      },
+      {
+        "text": "La moraleja trata de zorra, verdes, ver.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "zorra",
+            "verdes",
+            "ver"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "apartándose",
+        "score": 0.2773500981126146
+      },
+      {
+        "term": "apoderarse",
+        "score": 0.2773500981126146
+      },
+      {
+        "term": "colgaban",
+        "score": 0.2773500981126146
+      },
+      {
+        "term": "dijo",
+        "score": 0.2773500981126146
+      },
+      {
+        "term": "hambrienta",
+        "score": 0.2773500981126146
+      },
+      {
+        "term": "misma",
+        "score": 0.2773500981126146
+      },
+      {
+        "term": "parra",
+        "score": 0.2773500981126146
+      },
+      {
+        "term": "pudo",
+        "score": 0.2773500981126146
+      },
+      {
+        "term": "quiso",
+        "score": 0.2773500981126146
+      },
+      {
+        "term": "racimos",
+        "score": 0.2773500981126146
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "zorra",
+          "verdes",
+          "ver",
+          "pudo",
+          "parra",
+          "misma",
+          "hambrienta",
+          "colgaban",
+          "apoderarse",
+          "apartándose"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "zorra",
+          "verdes",
+          "misma",
+          "ver",
+          "racimos",
+          "quiso",
+          "pudo",
+          "parra",
+          "hambrienta",
+          "dijo"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "racimos",
+          "quiso",
+          "parra",
+          "dijo",
+          "apoderarse",
+          "zorra",
+          "ver",
+          "pudo",
+          "hambrienta",
+          "colgaban"
+        ]
+      }
+    ],
+    "fable_id": "3"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "La moraleja es hueso lobo.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "hueso",
+            "lobo"
+          ]
+        }
+      },
+      {
+        "text": "La moraleja es cabeza paga.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "hueso",
+            "lobo"
+          ]
+        }
+      },
+      {
+        "text": "La moraleja trata de hueso, lobo, cabeza.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "hueso",
+            "lobo",
+            "cabeza"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "hueso",
+        "score": 0.4629100498862757
+      },
+      {
+        "term": "lobo",
+        "score": 0.4629100498862757
+      },
+      {
+        "term": "cabeza",
+        "score": 0.3086066999241838
+      },
+      {
+        "term": "paga",
+        "score": 0.3086066999241838
+      },
+      {
+        "term": "acordada",
+        "score": 0.1543033499620919
+      },
+      {
+        "term": "encontrarse",
+        "score": 0.1543033499620919
+      },
+      {
+        "term": "garganta",
+        "score": 0.1543033499620919
+      },
+      {
+        "term": "garza",
+        "score": 0.1543033499620919
+      },
+      {
+        "term": "haber",
+        "score": 0.1543033499620919
+      },
+      {
+        "term": "iba",
+        "score": 0.1543033499620919
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "hueso",
+          "lobo",
+          "cabeza",
+          "paga",
+          "garza",
+          "aquélla",
+          "atragantado",
+          "boca",
+          "buscando",
+          "cambio"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "cabeza",
+          "paga",
+          "hueso",
+          "lobo",
+          "garza",
+          "aquélla",
+          "atragantado",
+          "boca",
+          "buscando",
+          "cambio"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "cabeza",
+          "paga",
+          "hueso",
+          "lobo",
+          "garza",
+          "aquélla",
+          "atragantado",
+          "boca",
+          "buscando",
+          "cambio"
+        ]
+      }
+    ],
+    "fable_id": "4"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "La moraleja es ratón león.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "ratón",
+            "león"
+          ]
+        }
+      },
+      {
+        "text": "La moraleja es puso soga.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "ratón",
+            "león"
+          ]
+        }
+      },
+      {
+        "text": "La moraleja trata de león, soga, puso.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "león",
+            "soga",
+            "puso"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "ratón",
+        "score": 0.6030226891555273
+      },
+      {
+        "term": "león",
+        "score": 0.30151134457776363
+      },
+      {
+        "term": "puso",
+        "score": 0.30151134457776363
+      },
+      {
+        "term": "soga",
+        "score": 0.30151134457776363
+      },
+      {
+        "term": "acudió",
+        "score": 0.15075567228888181
+      },
+      {
+        "term": "libre",
+        "score": 0.15075567228888181
+      },
+      {
+        "term": "ocurrió",
+        "score": 0.15075567228888181
+      },
+      {
+        "term": "oído",
+        "score": 0.15075567228888181
+      },
+      {
+        "term": "parte",
+        "score": 0.15075567228888181
+      },
+      {
+        "term": "pidiera",
+        "score": 0.15075567228888181
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "león",
+          "soga",
+          "puso",
+          "ratón",
+          "éste",
+          "cuerpo",
+          "dijo",
+          "dijera",
+          "devorarlo",
+          "devolverte"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "león",
+          "soga",
+          "puso",
+          "ratón",
+          "éste",
+          "cuerpo",
+          "dijo",
+          "dijera",
+          "devorarlo",
+          "devolverte"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "ratón",
+          "león",
+          "soga",
+          "puso",
+          "éste",
+          "cuerpo",
+          "dijo",
+          "dijera",
+          "devorarlo",
+          "devolverte"
+        ]
+      }
+    ],
+    "fable_id": "5"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "La moraleja es león mosquito.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "león",
+            "mosquito"
+          ]
+        }
+      },
+      {
+        "text": "La moraleja es araña fuerte.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "león",
+            "mosquito"
+          ]
+        }
+      },
+      {
+        "text": "La moraleja trata de león, mosquito, araña.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "león",
+            "mosquito",
+            "araña"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "león",
+        "score": 0.42008402520840293
+      },
+      {
+        "term": "mosquito",
+        "score": 0.42008402520840293
+      },
+      {
+        "term": "araña",
+        "score": 0.28005601680560194
+      },
+      {
+        "term": "fuerte",
+        "score": 0.28005601680560194
+      },
+      {
+        "term": "garras",
+        "score": 0.28005601680560194
+      },
+      {
+        "term": "trompetilla",
+        "score": 0.28005601680560194
+      },
+      {
+        "term": "zumbar",
+        "score": 0.28005601680560194
+      },
+      {
+        "term": "lucha",
+        "score": 0.14002800840280097
+      },
+      {
+        "term": "luego",
+        "score": 0.14002800840280097
+      },
+      {
+        "term": "marido",
+        "score": 0.14002800840280097
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "león",
+          "mosquito",
+          "araña",
+          "fuerte",
+          "garras",
+          "zumbar",
+          "trompetilla",
+          "rascarse",
+          "fuerza",
+          "vencer"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "león",
+          "mosquito",
+          "araña",
+          "fuerte",
+          "garras",
+          "zumbar",
+          "trompetilla",
+          "rascarse",
+          "fuerza",
+          "vencer"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "león",
+          "mosquito",
+          "araña",
+          "fuerte",
+          "garras",
+          "zumbar",
+          "trompetilla",
+          "rascarse",
+          "fuerza",
+          "vencer"
+        ]
+      }
+    ],
+    "fable_id": "6"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "La moraleja es zorra pozo.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "zorra",
+            "pozo"
+          ]
+        }
+      },
+      {
+        "text": "La moraleja es agua buena.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "zorra",
+            "pozo"
+          ]
+        }
+      },
+      {
+        "text": "La moraleja trata de pozo, zorra, agua.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "pozo",
+            "zorra",
+            "agua"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "zorra",
+        "score": 0.4588314677411235
+      },
+      {
+        "term": "pozo",
+        "score": 0.3441236008058426
+      },
+      {
+        "term": "agua",
+        "score": 0.22941573387056174
+      },
+      {
+        "term": "buena",
+        "score": 0.22941573387056174
+      },
+      {
+        "term": "cabrío",
+        "score": 0.22941573387056174
+      },
+      {
+        "term": "cuernos",
+        "score": 0.22941573387056174
+      },
+      {
+        "term": "dijo",
+        "score": 0.22941573387056174
+      },
+      {
+        "term": "forma",
+        "score": 0.22941573387056174
+      },
+      {
+        "term": "llegó",
+        "score": 0.22941573387056174
+      },
+      {
+        "term": "macho",
+        "score": 0.22941573387056174
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "pozo",
+          "zorra",
+          "agua",
+          "buena",
+          "llegó",
+          "patas",
+          "forma",
+          "dijo",
+          "cuernos",
+          "cabrío"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "pozo",
+          "zorra",
+          "agua",
+          "buena",
+          "llegó",
+          "patas",
+          "forma",
+          "dijo",
+          "cuernos",
+          "cabrío"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "zorra",
+          "pozo",
+          "agua",
+          "buena",
+          "llegó",
+          "patas",
+          "forma",
+          "dijo",
+          "cuernos",
+          "cabrío"
+        ]
+      }
+    ],
+    "fable_id": "es_7"
+  }
+]

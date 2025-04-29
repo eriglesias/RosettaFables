@@ -366,6 +366,9 @@ class FablePipeline:
             stats_results = self._run_stats_analysis(fables_by_language)
             results['stats'] = stats_results
         
+        if 'moral' in analysis_types:
+            moral_results = self._run_moral_analysis(fables_by_language)
+            results['moral'] = moral_results
         # Cross-language analysis
         if 'cross_language' in analysis_types:
             cross_lang_results = self._run_cross_language_analysis(fables_by_language)
@@ -384,8 +387,11 @@ class FablePipeline:
         Returns:
             Dictionary mapping language codes to fable lists
         """
-        fables_by_language = {}
+        # Clear existing data structures
+        self.fables_by_language = {}
+        self.fables_by_id = {}
         
+        # Process each language
         for lang in languages:
             processed_file = self.output_dir / "processed" / f"fables_{lang}.json"
             
@@ -399,15 +405,26 @@ class FablePipeline:
                     
                     # Ensure we have a list of fables
                     if isinstance(fables, list):
-                        # Filter out non-dictionary items
+                        # Filter out non-dictionary items and ensure each has a valid ID
                         valid_fables = []
-                        for fable in fables:
-                            if isinstance(fable, dict):
-                                valid_fables.append(fable)
-                            else:
+                        for i, fable in enumerate(fables):
+                            if not isinstance(fable, dict):
                                 self.logger.warning(f"Skipping invalid fable in {lang}: expected dict, got {type(fable)}")
+                                continue
+                            
+                            # Check if fable has a valid ID, assign one if not
+                            if 'id' not in fable or not fable['id']:
+                                # Generate a unique ID using index - this ensures we don't have empty IDs
+                                fable['id'] = f"{lang}_{i+1}"
+                                self.logger.warning(f"Assigned generated ID '{fable['id']}' to fable in {lang}")
+                            
+                            # Ensure language field exists
+                            if 'language' not in fable:
+                                fable['language'] = lang
+                                
+                            valid_fables.append(fable)
                         
-                        fables_by_language[lang] = valid_fables
+                        self.fables_by_language[lang] = valid_fables
                         self.logger.info("Loaded %d valid fables for %s", len(valid_fables), lang)
                     else:
                         self.logger.warning("Data for %s is not in expected list format", lang)
@@ -419,24 +436,15 @@ class FablePipeline:
             except Exception as e:
                 self.logger.error("Error loading processed data for %s: %s", lang, e)
         
-        self.fables_by_language = fables_by_language
-        
         # Prepare fables_by_id dictionary with validation
-        fables_by_id = {}
-        for lang, fables in fables_by_language.items():
+        for lang, fables in self.fables_by_language.items():
             for fable in fables:
-                # Only add fables with a valid ID
-                if 'id' not in fable:
-                    self.logger.warning(f"Skipping fable in {lang} with no 'id': {fable}")
-                    continue
-                    
-                fable_id = fable['id']
-                if fable_id not in fables_by_id:
-                    fables_by_id[fable_id] = {}
-                fables_by_id[fable_id][lang] = fable
+                fable_id = fable['id']  # We ensured this exists above
+                if fable_id not in self.fables_by_id:
+                    self.fables_by_id[fable_id] = {}
+                self.fables_by_id[fable_id][lang] = fable
         
-        self.fables_by_id = fables_by_id
-        return fables_by_language
+        return self.fables_by_language
 
     def _analyze_pos_distribution(self, language: str) -> Dict[str, float]:
         """
@@ -981,4 +989,102 @@ class FablePipeline:
             
         except Exception as e:
             self.logger.error("Error in cross-language analysis: %s", e)
+            return {'error': str(e)}
+        
+
+    def _run_moral_analysis(self, fables_by_language):
+        """
+        Run moral analysis using the MoralDetector.
+        
+        Args:
+            fables_by_language: Dictionary mapping language codes to fable lists
+            
+        Returns:
+            Dictionary of moral analysis results
+        """
+        try:
+            # Initialize results containers
+            explicit_morals = {}
+            implicit_morals = {}
+            moral_themes = {}
+            
+            # Process each language
+            for lang, fables in fables_by_language.items():
+                lang_explicit = []
+                lang_implicit = []
+                lang_themes = []
+                
+                for fable in fables:
+                    # Skip if not a dictionary
+                    if not isinstance(fable, dict):
+                        self.logger.warning("Skipping non-dictionary fable in %s", lang)
+                        continue
+                        
+                    fable_id = fable.get('id', 'unknown')
+                    
+                    # Detect explicit moral
+                    explicit_result = self.moral_detector.detect_explicit_moral(fable)
+                    if explicit_result.get('has_explicit_moral'):
+                        explicit_result['fable_id'] = fable_id
+                        lang_explicit.append(explicit_result)
+                    
+                    # Infer implicit moral
+                    implicit_result = self.moral_detector.infer_implicit_moral(fable, explicit_result)
+                    if implicit_result.get('has_inferred_moral'):
+                        implicit_result['fable_id'] = fable_id
+                        lang_implicit.append(implicit_result)
+                    
+                    # Classify moral theme
+                    moral_text = None
+                    if explicit_result.get('has_explicit_moral'):
+                        moral_text = explicit_result.get('moral_text')
+                    elif implicit_result.get('has_inferred_moral'):
+                        inferred = implicit_result.get('inferred_morals', [])
+                        if inferred:
+                            moral_text = inferred[0].get('text')
+                    
+                    if moral_text:
+                        theme_result = self.moral_detector.classify_moral_theme(moral_text, lang)
+                        theme_result['fable_id'] = fable_id
+                        theme_result['moral_text'] = moral_text
+                        lang_themes.append(theme_result)
+                
+                # Store results for this language
+                explicit_morals[lang] = lang_explicit
+                implicit_morals[lang] = lang_implicit
+                moral_themes[lang] = lang_themes
+            
+            # Cross-language moral comparison 
+            moral_comparison = self.moral_detector.compare_morals(self.fables_by_id)
+            
+            # Combine results
+            results = {
+                'explicit_morals': explicit_morals,
+                'implicit_morals': implicit_morals,
+                'moral_themes': moral_themes,
+                'cross_language_comparison': moral_comparison
+            }
+            
+            # Save results
+            for lang, morals in explicit_morals.items():
+                if morals:
+                    self.writer.save_analysis_results(morals, lang, 'explicit_morals')
+            
+            for lang, morals in implicit_morals.items():
+                if morals:
+                    self.writer.save_analysis_results(morals, lang, 'implicit_morals')
+            
+            for lang, themes in moral_themes.items():
+                if themes:
+                    self.writer.save_analysis_results(themes, lang, 'moral_themes')
+            
+            # Save cross-language comparison
+            if moral_comparison:
+                self.writer.save_analysis_results(moral_comparison, 'all', 'moral_comparison')
+            
+            self.logger.info("Completed moral analysis")
+            return results
+            
+        except Exception as e:
+            self.logger.error("Error in moral analysis: %s", e)
             return {'error': str(e)}

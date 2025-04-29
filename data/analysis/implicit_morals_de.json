@@ -1,0 +1,907 @@
+[
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "Die Moral ist, tot zu lämmchen.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "lämmchen",
+            "tot"
+          ]
+        }
+      },
+      {
+        "text": "Die Moral befasst sich mit tot, vater, wolf.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "tot",
+            "vater",
+            "wolf"
+          ]
+        }
+      },
+      {
+        "text": "Die Moral befasst sich mit tot, vater, wolf.",
+        "relevance_score": 0.6,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "tot",
+            "vater",
+            "wolf"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "lämmchen",
+        "score": 0.625
+      },
+      {
+        "term": "tot",
+        "score": 0.375
+      },
+      {
+        "term": "ja",
+        "score": 0.25
+      },
+      {
+        "term": "vater",
+        "score": 0.25
+      },
+      {
+        "term": "wasser",
+        "score": 0.25
+      },
+      {
+        "term": "wolf",
+        "score": 0.25
+      },
+      {
+        "term": "nie",
+        "score": 0.125
+      },
+      {
+        "term": "näher",
+        "score": 0.125
+      },
+      {
+        "term": "oben",
+        "score": 0.125
+      },
+      {
+        "term": "quelle",
+        "score": 0.125
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "tot",
+          "vater",
+          "wolf",
+          "wasser",
+          "ja",
+          "lämmchen",
+          "monaten",
+          "schmähen",
+          "rächen",
+          "quelle"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "tot",
+          "vater",
+          "wolf",
+          "wasser",
+          "ja",
+          "lämmchen",
+          "monaten",
+          "schmähen",
+          "rächen",
+          "quelle"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "lämmchen",
+          "tot",
+          "vater",
+          "wolf",
+          "wasser",
+          "ja",
+          "monaten",
+          "schmähen",
+          "rächen",
+          "quelle"
+        ]
+      }
+    ],
+    "fable_id": "1"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "Die Moral ist, freundin zu landmaus.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "landmaus",
+            "freundin"
+          ]
+        }
+      },
+      {
+        "text": "Man sollte immer speisen freundin.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "landmaus",
+            "freundin"
+          ]
+        }
+      },
+      {
+        "text": "Die Moral ist, stadt zu speisen.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "landmaus",
+            "freundin"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "landmaus",
+        "score": 0.4833682445228318
+      },
+      {
+        "term": "freundin",
+        "score": 0.3866945956182654
+      },
+      {
+        "term": "speisen",
+        "score": 0.29002094671369905
+      },
+      {
+        "term": "stadt",
+        "score": 0.29002094671369905
+      },
+      {
+        "term": "stadtmaus",
+        "score": 0.29002094671369905
+      },
+      {
+        "term": "führte",
+        "score": 0.1933472978091327
+      },
+      {
+        "term": "lassen",
+        "score": 0.1933472978091327
+      },
+      {
+        "term": "leben",
+        "score": 0.1933472978091327
+      },
+      {
+        "term": "merken",
+        "score": 0.1933472978091327
+      },
+      {
+        "term": "sprach",
+        "score": 0.1933472978091327
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "freundin",
+          "stadt",
+          "stadtmaus",
+          "speisen",
+          "landmaus",
+          "führte",
+          "zitternd",
+          "lassen",
+          "wenig",
+          "städterin"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "landmaus",
+          "freundin",
+          "stadt",
+          "stadtmaus",
+          "speisen",
+          "führte",
+          "zitternd",
+          "lassen",
+          "wenig",
+          "städterin"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "freundin",
+          "stadt",
+          "stadtmaus",
+          "speisen",
+          "landmaus",
+          "führte",
+          "zitternd",
+          "lassen",
+          "wenig",
+          "städterin"
+        ]
+      }
+    ],
+    "fable_id": "2"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "Die Moral ist, fuchs zu trauben.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "trauben",
+            "fuchs"
+          ]
+        }
+      },
+      {
+        "text": "Man sollte immer spatz fuchs.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "trauben",
+            "fuchs"
+          ]
+        }
+      },
+      {
+        "text": "Die Moral ist, hingen zu spatz.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "trauben",
+            "fuchs"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "trauben",
+        "score": 0.5423261445466404
+      },
+      {
+        "term": "fuchs",
+        "score": 0.4338609156373123
+      },
+      {
+        "term": "spatz",
+        "score": 0.32539568672798425
+      },
+      {
+        "term": "hingen",
+        "score": 0.21693045781865616
+      },
+      {
+        "term": "hoch",
+        "score": 0.21693045781865616
+      },
+      {
+        "term": "maus",
+        "score": 0.21693045781865616
+      },
+      {
+        "term": "versteck",
+        "score": 0.21693045781865616
+      },
+      {
+        "term": "weinstock",
+        "score": 0.21693045781865616
+      },
+      {
+        "term": "zurück",
+        "score": 0.21693045781865616
+      },
+      {
+        "term": "beherrschen",
+        "score": 0.10846522890932808
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "spatz",
+          "fuchs",
+          "trauben",
+          "hoch",
+          "maus",
+          "weinstock",
+          "zurück",
+          "hingen",
+          "versteck",
+          "schoß"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "spatz",
+          "fuchs",
+          "trauben",
+          "hoch",
+          "maus",
+          "weinstock",
+          "zurück",
+          "hingen",
+          "versteck",
+          "schoß"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "trauben",
+          "fuchs",
+          "spatz",
+          "hoch",
+          "maus",
+          "weinstock",
+          "zurück",
+          "hingen",
+          "versteck",
+          "schoß"
+        ]
+      }
+    ],
+    "fable_id": "3"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "Die Moral ist, rachen zu belohnung.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "belohnung",
+            "rachen"
+          ]
+        }
+      },
+      {
+        "text": "Man sollte immer wolf rachen.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "belohnung",
+            "rachen"
+          ]
+        }
+      },
+      {
+        "text": "Die Moral ist, befreien zu wolf.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "belohnung",
+            "rachen"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "belohnung",
+        "score": 0.5144957554275265
+      },
+      {
+        "term": "rachen",
+        "score": 0.34299717028501764
+      },
+      {
+        "term": "wolf",
+        "score": 0.34299717028501764
+      },
+      {
+        "term": "befreien",
+        "score": 0.17149858514250882
+      },
+      {
+        "term": "herbei",
+        "score": 0.17149858514250882
+      },
+      {
+        "term": "kam",
+        "score": 0.17149858514250882
+      },
+      {
+        "term": "knochen",
+        "score": 0.17149858514250882
+      },
+      {
+        "term": "kopf",
+        "score": 0.17149858514250882
+      },
+      {
+        "term": "kranich",
+        "score": 0.17149858514250882
+      },
+      {
+        "term": "kur",
+        "score": 0.17149858514250882
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "rachen",
+          "wolf",
+          "belohnung",
+          "beschwerde",
+          "demjenigen",
+          "erbeutet",
+          "forderte",
+          "gehe",
+          "gelang",
+          "herbei"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "rachen",
+          "wolf",
+          "belohnung",
+          "beschwerde",
+          "demjenigen",
+          "erbeutet",
+          "forderte",
+          "gehe",
+          "gelang",
+          "herbei"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "belohnung",
+          "rachen",
+          "wolf",
+          "beschwerde",
+          "demjenigen",
+          "erbeutet",
+          "forderte",
+          "gehe",
+          "gelang",
+          "herbei"
+        ]
+      }
+    ],
+    "fable_id": "4"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "Die Moral ist, löwen zu mäuschen.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "mäuschen",
+            "löwen"
+          ]
+        }
+      },
+      {
+        "text": "Man sollte immer dankbar löwen.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "mäuschen",
+            "löwen"
+          ]
+        }
+      },
+      {
+        "text": "Die Moral ist, lief zu dankbar.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "mäuschen",
+            "löwen"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "mäuschen",
+        "score": 0.625
+      },
+      {
+        "term": "löwen",
+        "score": 0.375
+      },
+      {
+        "term": "dankbar",
+        "score": 0.25
+      },
+      {
+        "term": "lief",
+        "score": 0.25
+      },
+      {
+        "term": "löwe",
+        "score": 0.25
+      },
+      {
+        "term": "tatzen",
+        "score": 0.25
+      },
+      {
+        "term": "netze",
+        "score": 0.125
+      },
+      {
+        "term": "netzes",
+        "score": 0.125
+      },
+      {
+        "term": "neugierig",
+        "score": 0.125
+      },
+      {
+        "term": "sagte",
+        "score": 0.125
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "löwen",
+          "dankbar",
+          "lief",
+          "löwe",
+          "tatzen",
+          "mäuschen",
+          "zerreißen",
+          "gebrüll",
+          "hörte",
+          "herzu"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "löwen",
+          "dankbar",
+          "lief",
+          "löwe",
+          "tatzen",
+          "mäuschen",
+          "zerreißen",
+          "gebrüll",
+          "hörte",
+          "herzu"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "mäuschen",
+          "löwen",
+          "dankbar",
+          "lief",
+          "löwe",
+          "tatzen",
+          "zerreißen",
+          "gebrüll",
+          "hörte",
+          "herzu"
+        ]
+      }
+    ],
+    "fable_id": "5"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "Die Moral ist, spinne zu mücke.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "mücke",
+            "spinne"
+          ]
+        }
+      },
+      {
+        "text": "Man sollte immer flog spinne.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "mücke",
+            "spinne"
+          ]
+        }
+      },
+      {
+        "text": "Die Moral ist, löwen zu flog.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "mücke",
+            "spinne"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "mücke",
+        "score": 0.4472135954999579
+      },
+      {
+        "term": "spinne",
+        "score": 0.4472135954999579
+      },
+      {
+        "term": "flog",
+        "score": 0.29814239699997197
+      },
+      {
+        "term": "löwen",
+        "score": 0.29814239699997197
+      },
+      {
+        "term": "worten",
+        "score": 0.29814239699997197
+      },
+      {
+        "term": "auszuposaunen",
+        "score": 0.14907119849998599
+      },
+      {
+        "term": "sieg",
+        "score": 0.14907119849998599
+      },
+      {
+        "term": "sog",
+        "score": 0.14907119849998599
+      },
+      {
+        "term": "sollst",
+        "score": 0.14907119849998599
+      },
+      {
+        "term": "stach",
+        "score": 0.14907119849998599
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "mücke",
+          "spinne",
+          "löwen",
+          "worten",
+          "flog",
+          "übersah",
+          "fürchte",
+          "nichtigkeit",
+          "hast",
+          "großes"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "mücke",
+          "spinne",
+          "löwen",
+          "worten",
+          "flog",
+          "übersah",
+          "fürchte",
+          "nichtigkeit",
+          "hast",
+          "großes"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "mücke",
+          "spinne",
+          "löwen",
+          "worten",
+          "flog",
+          "übersah",
+          "fürchte",
+          "nichtigkeit",
+          "hast",
+          "großes"
+        ]
+      }
+    ],
+    "fable_id": "6"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "Die Moral ist, fuchs zu bock.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "bock",
+            "fuchs"
+          ]
+        }
+      },
+      {
+        "text": "Man sollte immer bedenken fuchs.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "bock",
+            "fuchs"
+          ]
+        }
+      },
+      {
+        "text": "Die Moral ist, brunnen zu bedenken.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "bock",
+            "fuchs"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "bock",
+        "score": 0.4472135954999579
+      },
+      {
+        "term": "fuchs",
+        "score": 0.4472135954999579
+      },
+      {
+        "term": "bedenken",
+        "score": 0.22360679774997896
+      },
+      {
+        "term": "brunnen",
+        "score": 0.22360679774997896
+      },
+      {
+        "term": "durst",
+        "score": 0.22360679774997896
+      },
+      {
+        "term": "endlich",
+        "score": 0.22360679774997896
+      },
+      {
+        "term": "freund",
+        "score": 0.22360679774997896
+      },
+      {
+        "term": "ganz",
+        "score": 0.22360679774997896
+      },
+      {
+        "term": "herauskommen",
+        "score": 0.22360679774997896
+      },
+      {
+        "term": "recht",
+        "score": 0.22360679774997896
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "bock",
+          "fuchs",
+          "herauskommen",
+          "bedenken",
+          "brunnen",
+          "durst",
+          "endlich",
+          "retten",
+          "sagte",
+          "freund"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "bock",
+          "fuchs",
+          "herauskommen",
+          "bedenken",
+          "brunnen",
+          "durst",
+          "endlich",
+          "retten",
+          "sagte",
+          "freund"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "bock",
+          "fuchs",
+          "herauskommen",
+          "bedenken",
+          "brunnen",
+          "durst",
+          "endlich",
+          "retten",
+          "sagte",
+          "freund"
+        ]
+      }
+    ],
+    "fable_id": "7"
+  }
+]
