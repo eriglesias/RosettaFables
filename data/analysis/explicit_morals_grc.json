@@ -1,0 +1,10 @@
+[
+  {
+    "has_explicit_moral": true,
+    "moral_text": "Ὁ μῦθος δηλοῖ ὅτι τὸ λιτῶς διάγειν καὶ ζῆν ἀταράχως ὑπὲρ τὸ τρυφᾶν ἐν φόβῳ μετ' ὀδύνης",
+    "moral_location": "end",
+    "detection_method": "indicator_phrase",
+    "confidence": 0.8,
+    "fable_id": "2"
+  }
+]

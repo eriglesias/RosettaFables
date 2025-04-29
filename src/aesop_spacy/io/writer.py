@@ -3,6 +3,7 @@ from typing import Dict, List, Any, Optional
 from pathlib import Path
 import json
 import logging
+import numpy as np
 
 
 class OutputWriter:
@@ -111,3 +112,14 @@ class OutputWriter:
         except Exception as e:
             self.logger.error(f"Error saving comparison for fable {comparison_id}: {e}")
             return None
+        
+class NumpyEncoder(json.JSONEncoder):
+    """Custom encoder for NumPy data types."""
+    def default(self, obj):
+        if isinstance(obj, np.integer):
+            return int(obj)
+        elif isinstance(obj, np.floating):
+            return float(obj)
+        elif isinstance(obj, np.ndarray):
+            return obj.tolist()
+        return super().default(obj)

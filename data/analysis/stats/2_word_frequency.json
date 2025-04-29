@@ -1,0 +1,233 @@
+{
+  "total_word_count": 132,
+  "unique_word_count": 102,
+  "top_words": [
+    {
+      "word": "al",
+      "count": 5,
+      "relative_freq": 0.03787878787878788
+    },
+    {
+      "word": "amigo",
+      "count": 4,
+      "relative_freq": 0.030303030303030304
+    },
+    {
+      "word": "que",
+      "count": 4,
+      "relative_freq": 0.030303030303030304
+    },
+    {
+      "word": "se",
+      "count": 4,
+      "relative_freq": 0.030303030303030304
+    },
+    {
+      "word": "campo",
+      "count": 3,
+      "relative_freq": 0.022727272727272728
+    },
+    {
+      "word": "casa",
+      "count": 3,
+      "relative_freq": 0.022727272727272728
+    },
+    {
+      "word": "su",
+      "count": 3,
+      "relative_freq": 0.022727272727272728
+    },
+    {
+      "word": "trigo",
+      "count": 3,
+      "relative_freq": 0.022727272727272728
+    },
+    {
+      "word": "ratón",
+      "count": 2,
+      "relative_freq": 0.015151515151515152
+    },
+    {
+      "word": "otro",
+      "count": 2,
+      "relative_freq": 0.015151515151515152
+    },
+    {
+      "word": "cebada",
+      "count": 2,
+      "relative_freq": 0.015151515151515152
+    },
+    {
+      "word": "yo",
+      "count": 2,
+      "relative_freq": 0.015151515151515152
+    },
+    {
+      "word": "lo",
+      "count": 2,
+      "relative_freq": 0.015151515151515152
+    },
+    {
+      "word": "cuando",
+      "count": 2,
+      "relative_freq": 0.015151515151515152
+    },
+    {
+      "word": "hombre",
+      "count": 2,
+      "relative_freq": 0.015151515151515152
+    },
+    {
+      "word": "ratones",
+      "count": 2,
+      "relative_freq": 0.015151515151515152
+    },
+    {
+      "word": "nuevo",
+      "count": 2,
+      "relative_freq": 0.015151515151515152
+    },
+    {
+      "word": "era",
+      "count": 1,
+      "relative_freq": 0.007575757575757576
+    },
+    {
+      "word": "vivía",
+      "count": 1,
+      "relative_freq": 0.007575757575757576
+    },
+    {
+      "word": "invitado",
+      "count": 1,
+      "relative_freq": 0.007575757575757576
+    }
+  ],
+  "hapax_legomena_count": 85,
+  "hapax_legomena_ratio": 0.8333333333333334,
+  "dis_legomena_count": 9,
+  "entropy": 6.49417297933504,
+  "zipf_data": [
+    {
+      "rank": 1,
+      "word": "al",
+      "count": 5,
+      "expected_zipf": 132.0
+    },
+    {
+      "rank": 2,
+      "word": "amigo",
+      "count": 4,
+      "expected_zipf": 66.0
+    },
+    {
+      "rank": 3,
+      "word": "que",
+      "count": 4,
+      "expected_zipf": 44.0
+    },
+    {
+      "rank": 4,
+      "word": "se",
+      "count": 4,
+      "expected_zipf": 33.0
+    },
+    {
+      "rank": 5,
+      "word": "campo",
+      "count": 3,
+      "expected_zipf": 26.4
+    },
+    {
+      "rank": 6,
+      "word": "casa",
+      "count": 3,
+      "expected_zipf": 22.0
+    },
+    {
+      "rank": 7,
+      "word": "su",
+      "count": 3,
+      "expected_zipf": 18.857142857142858
+    },
+    {
+      "rank": 8,
+      "word": "trigo",
+      "count": 3,
+      "expected_zipf": 16.5
+    },
+    {
+      "rank": 9,
+      "word": "ratón",
+      "count": 2,
+      "expected_zipf": 14.666666666666666
+    },
+    {
+      "rank": 10,
+      "word": "otro",
+      "count": 2,
+      "expected_zipf": 13.2
+    },
+    {
+      "rank": 11,
+      "word": "cebada",
+      "count": 2,
+      "expected_zipf": 12.0
+    },
+    {
+      "rank": 12,
+      "word": "yo",
+      "count": 2,
+      "expected_zipf": 11.0
+    },
+    {
+      "rank": 13,
+      "word": "lo",
+      "count": 2,
+      "expected_zipf": 10.153846153846153
+    },
+    {
+      "rank": 14,
+      "word": "cuando",
+      "count": 2,
+      "expected_zipf": 9.428571428571429
+    },
+    {
+      "rank": 15,
+      "word": "hombre",
+      "count": 2,
+      "expected_zipf": 8.8
+    },
+    {
+      "rank": 16,
+      "word": "ratones",
+      "count": 2,
+      "expected_zipf": 8.25
+    },
+    {
+      "rank": 17,
+      "word": "nuevo",
+      "count": 2,
+      "expected_zipf": 7.764705882352941
+    },
+    {
+      "rank": 18,
+      "word": "era",
+      "count": 1,
+      "expected_zipf": 7.333333333333333
+    },
+    {
+      "rank": 19,
+      "word": "vivía",
+      "count": 1,
+      "expected_zipf": 6.947368421052632
+    },
+    {
+      "rank": 20,
+      "word": "invitado",
+      "count": 1,
+      "expected_zipf": 6.6
+    }
+  ],
+  "fable_id": "2"
+}

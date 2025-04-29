@@ -239,8 +239,8 @@ class TransformerManager:
             
 
     def classify_sentiment(self, 
-                          text: str, 
-                          model_name: str = "nlptown/bert-base-multilingual-uncased-sentiment"):
+                      text: str, 
+                      model_name: str = "nlptown/bert-base-multilingual-uncased-sentiment"):
         """
         Classify the sentiment of a text.
         
@@ -254,11 +254,32 @@ class TransformerManager:
         try:
             import torch.nn.functional as F
             
+            # Handle non-string inputs
+            if text is None:
+                self.logger.warning("Received None text input, returning neutral sentiment")
+                return {'label': 'neutral', 'score': 0.5}
+                
+            # Ensure text is a string (convert if possible, otherwise handle error)
+            if not isinstance(text, str):
+                # Try to convert dictionary's 'text' field if available
+                if isinstance(text, dict) and 'text' in text:
+                    text = text['text']
+                    if not isinstance(text, str):
+                        self.logger.warning(f"Text field is not a string: {type(text)}")
+                        return {'label': 'neutral', 'score': 0.5}
+                # Try to convert to string as a fallback for simple types
+                elif isinstance(text, (int, float, bool)):
+                    text = str(text)
+                else:
+                    self.logger.warning(f"Cannot process input of type: {type(text)}")
+                    return {'label': 'neutral', 'score': 0.5}
+            
+            # Now text should be a string, continue with normal processing
             tokenizer, model = self.get_classification_model(model_name)
             
             if tokenizer is None or model is None:
                 return {'label': 'neutral', 'score': 0.5}
-                
+                    
             # Encode the text
             inputs = tokenizer(text, return_tensors="pt", truncation=True, max_length=512)
             inputs = {k: v.to(self.device) for k, v in inputs.items()}

@@ -1,0 +1,4944 @@
+{
+  "1": {
+    "languages": [
+      "grc",
+      "nl",
+      "de",
+      "en",
+      "es"
+    ],
+    "morals": {
+      "grc": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "The moral is to λύκος αἰτίας.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "λύκος",
+                  "αἰτίας"
+                ]
+              }
+            },
+            {
+              "text": "One should always αἰτίας αὐτὸν.",
+              "relevance_score": 0.5,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "λύκος",
+                  "αἰτίας"
+                ]
+              }
+            },
+            {
+              "text": "It's important to αὐτὸν when dealing with δὲ.",
+              "relevance_score": 0.3333333333333333,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "λύκος",
+                  "αἰτίας"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "λύκος",
+              "score": 0.40451991747794525
+            },
+            {
+              "term": "αἰτίας",
+              "score": 0.26967994498529685
+            },
+            {
+              "term": "αὐτὸν",
+              "score": 0.26967994498529685
+            },
+            {
+              "term": "δὲ",
+              "score": 0.26967994498529685
+            },
+            {
+              "term": "καὶ",
+              "score": 0.26967994498529685
+            },
+            {
+              "term": "τινος",
+              "score": 0.26967994498529685
+            },
+            {
+              "term": "τὸ",
+              "score": 0.26967994498529685
+            },
+            {
+              "term": "ἔφη",
+              "score": 0.26967994498529685
+            },
+            {
+              "term": "ὕδωρ",
+              "score": 0.26967994498529685
+            },
+            {
+              "term": "ὡς",
+              "score": 0.26967994498529685
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "λύκος",
+                "ὡς",
+                "τὸ",
+                "αὐτὸν",
+                "δὲ",
+                "καὶ",
+                "τινος",
+                "ὕδωρ",
+                "αἰτίας",
+                "ἔφη"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "λύκος",
+                "ὡς",
+                "τὸ",
+                "αὐτὸν",
+                "δὲ",
+                "καὶ",
+                "τινος",
+                "ὕδωρ",
+                "αἰτίας",
+                "ἔφη"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "λύκος",
+                "ὡς",
+                "τὸ",
+                "αὐτὸν",
+                "δὲ",
+                "καὶ",
+                "τινος",
+                "ὕδωρ",
+                "αἰτίας",
+                "ἔφη"
+              ]
+            }
+          ]
+        },
+        "final_moral": "The moral is to λύκος αἰτίας.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      },
+      "nl": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "Men moet altijd liedje wolf.",
+              "relevance_score": 1.0,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "geitje",
+                  "wolf"
+                ]
+              }
+            },
+            {
+              "text": "De moraal gaat over liedje, wolf, geitje.",
+              "relevance_score": 0.8,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "liedje",
+                  "wolf",
+                  "geitje"
+                ]
+              }
+            },
+            {
+              "text": "De moraal gaat over liedje, wolf, geitje.",
+              "relevance_score": 0.8,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "liedje",
+                  "wolf",
+                  "geitje"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "geitje",
+              "score": 0.4375
+            },
+            {
+              "term": "wolf",
+              "score": 0.4375
+            },
+            {
+              "term": "liedje",
+              "score": 0.375
+            },
+            {
+              "term": "geiten",
+              "score": 0.25
+            },
+            {
+              "term": "moeder",
+              "score": 0.25
+            },
+            {
+              "term": "begon",
+              "score": 0.1875
+            },
+            {
+              "term": "blokfluit",
+              "score": 0.1875
+            },
+            {
+              "term": "eerst",
+              "score": 0.1875
+            },
+            {
+              "term": "liep",
+              "score": 0.1875
+            },
+            {
+              "term": "opeten",
+              "score": 0.1875
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "liedje",
+                "wolf",
+                "geitje",
+                "moeder",
+                "geiten",
+                "wei",
+                "blokfluit",
+                "begon",
+                "liep",
+                "opeten"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "liedje",
+                "wolf",
+                "geitje",
+                "moeder",
+                "geiten",
+                "wei",
+                "blokfluit",
+                "begon",
+                "liep",
+                "opeten"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "wolf",
+                "geitje",
+                "liedje",
+                "moeder",
+                "geiten",
+                "wei",
+                "blokfluit",
+                "begon",
+                "liep",
+                "opeten"
+              ]
+            }
+          ]
+        },
+        "final_moral": "Men moet altijd liedje wolf.",
+        "themes": {
+          "categories": [
+            {
+              "name": "honesty",
+              "score": 1
+            }
+          ],
+          "dominant_category": "honesty"
+        }
+      },
+      "de": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "Die Moral ist, tot zu lämmchen.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "lämmchen",
+                  "tot"
+                ]
+              }
+            },
+            {
+              "text": "Die Moral befasst sich mit tot, vater, wolf.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "tot",
+                  "vater",
+                  "wolf"
+                ]
+              }
+            },
+            {
+              "text": "Die Moral befasst sich mit tot, vater, wolf.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "tot",
+                  "vater",
+                  "wolf"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "lämmchen",
+              "score": 0.625
+            },
+            {
+              "term": "tot",
+              "score": 0.375
+            },
+            {
+              "term": "ja",
+              "score": 0.25
+            },
+            {
+              "term": "vater",
+              "score": 0.25
+            },
+            {
+              "term": "wasser",
+              "score": 0.25
+            },
+            {
+              "term": "wolf",
+              "score": 0.25
+            },
+            {
+              "term": "nie",
+              "score": 0.125
+            },
+            {
+              "term": "näher",
+              "score": 0.125
+            },
+            {
+              "term": "oben",
+              "score": 0.125
+            },
+            {
+              "term": "quelle",
+              "score": 0.125
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "tot",
+                "vater",
+                "wolf",
+                "wasser",
+                "ja",
+                "lämmchen",
+                "monaten",
+                "schmähen",
+                "rächen",
+                "quelle"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "tot",
+                "vater",
+                "wolf",
+                "wasser",
+                "ja",
+                "lämmchen",
+                "monaten",
+                "schmähen",
+                "rächen",
+                "quelle"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "lämmchen",
+                "tot",
+                "vater",
+                "wolf",
+                "wasser",
+                "ja",
+                "monaten",
+                "schmähen",
+                "rächen",
+                "quelle"
+              ]
+            }
+          ]
+        },
+        "final_moral": "Die Moral ist, tot zu lämmchen.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      },
+      "en": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "One should always wolf drink.",
+              "relevance_score": 0.75,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "lamb",
+                  "wolf"
+                ]
+              }
+            },
+            {
+              "text": "The moral is to lamb wolf.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "lamb",
+                  "wolf"
+                ]
+              }
+            },
+            {
+              "text": "The moral concerns year, said, drink.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "year",
+                  "said",
+                  "drink"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "lamb",
+              "score": 0.5242224339966227
+            },
+            {
+              "term": "wolf",
+              "score": 0.5242224339966227
+            },
+            {
+              "term": "drink",
+              "score": 0.26211121699831136
+            },
+            {
+              "term": "even",
+              "score": 0.26211121699831136
+            },
+            {
+              "term": "said",
+              "score": 0.26211121699831136
+            },
+            {
+              "term": "year",
+              "score": 0.26211121699831136
+            },
+            {
+              "term": "grass",
+              "score": 0.1747408113322076
+            },
+            {
+              "term": "insulted",
+              "score": 0.1747408113322076
+            },
+            {
+              "term": "last",
+              "score": 0.1747408113322076
+            },
+            {
+              "term": "justify",
+              "score": 0.0873704056661038
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "year",
+                "said",
+                "drink",
+                "even",
+                "wolf",
+                "lamb",
+                "grass",
+                "last",
+                "insulted",
+                "small"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "year",
+                "said",
+                "drink",
+                "even",
+                "wolf",
+                "lamb",
+                "grass",
+                "last",
+                "insulted",
+                "small"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "wolf",
+                "lamb",
+                "year",
+                "said",
+                "drink",
+                "even",
+                "grass",
+                "last",
+                "insulted",
+                "small"
+              ]
+            }
+          ]
+        },
+        "final_moral": "One should always wolf drink.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      },
+      "es": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "La moraleja es lobo cordero.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "lobo",
+                  "cordero"
+                ]
+              }
+            },
+            {
+              "text": "La moraleja es dijo río.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "lobo",
+                  "cordero"
+                ]
+              }
+            },
+            {
+              "text": "La moraleja trata de dijo, río, cordero.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "dijo",
+                  "río",
+                  "cordero"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "lobo",
+              "score": 0.46499055497527714
+            },
+            {
+              "term": "cordero",
+              "score": 0.34874291623145787
+            },
+            {
+              "term": "dijo",
+              "score": 0.34874291623145787
+            },
+            {
+              "term": "río",
+              "score": 0.34874291623145787
+            },
+            {
+              "term": "agua",
+              "score": 0.23249527748763857
+            },
+            {
+              "term": "arriba",
+              "score": 0.23249527748763857
+            },
+            {
+              "term": "año",
+              "score": 0.23249527748763857
+            },
+            {
+              "term": "beber",
+              "score": 0.23249527748763857
+            },
+            {
+              "term": "pretexto",
+              "score": 0.23249527748763857
+            },
+            {
+              "term": "abajo",
+              "score": 0.11624763874381928
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "dijo",
+                "río",
+                "cordero",
+                "lobo",
+                "agua",
+                "arriba",
+                "año",
+                "beber",
+                "pretexto",
+                "voy"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "lobo",
+                "dijo",
+                "río",
+                "cordero",
+                "agua",
+                "arriba",
+                "año",
+                "beber",
+                "pretexto",
+                "voy"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "dijo",
+                "río",
+                "cordero",
+                "lobo",
+                "agua",
+                "arriba",
+                "año",
+                "beber",
+                "pretexto",
+                "voy"
+              ]
+            }
+          ]
+        },
+        "final_moral": "La moraleja es lobo cordero.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      }
+    },
+    "theme_consistency": {
+      "dominant_theme": "honesty",
+      "consistency_score": 1.0
+    },
+    "semantic_similarity": {
+      "similarities": {
+        "grc-nl": 0.5659928917884827,
+        "grc-de": 0.5906645059585571,
+        "grc-en": 0.4864771068096161,
+        "grc-es": 0.8237934708595276,
+        "nl-de": 0.2673969864845276,
+        "nl-en": 0.7837969660758972,
+        "nl-es": 0.5755074620246887,
+        "de-en": 0.2007395625114441,
+        "de-es": 0.5239861607551575,
+        "en-es": 0.5287421941757202
+      },
+      "method": "multilingual_embeddings",
+      "model": "paraphrase-multilingual-MiniLM-L12-v2"
+    }
+  },
+  "2": {
+    "languages": [
+      "grc",
+      "nl",
+      "de",
+      "en",
+      "es"
+    ],
+    "morals": {
+      "grc": {
+        "explicit": {
+          "has_explicit_moral": true,
+          "moral_text": "Ὁ μῦθος δηλοῖ ὅτι τὸ λιτῶς διάγειν καὶ ζῆν ἀταράχως ὑπὲρ τὸ τρυφᾶν ἐν φόβῳ μετ' ὀδύνης",
+          "moral_location": "end",
+          "detection_method": "indicator_phrase",
+          "confidence": 0.8
+        },
+        "implicit": {},
+        "final_moral": "Ὁ μῦθος δηλοῖ ὅτι τὸ λιτῶς διάγειν καὶ ζῆν ἀταράχως ὑπὲρ τὸ τρυφᾶν ἐν φόβῳ μετ' ὀδύνης",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      },
+      "nl": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "Men moet altijd eten veldmuis.",
+              "relevance_score": 1.0,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "stadsmuis",
+                  "veldmuis"
+                ]
+              }
+            },
+            {
+              "text": "De moraal is om veldmuis te stadsmuis.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "stadsmuis",
+                  "veldmuis"
+                ]
+              }
+            },
+            {
+              "text": "De moraal is om heel te eten.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "stadsmuis",
+                  "veldmuis"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "stadsmuis",
+              "score": 0.4925182813112043
+            },
+            {
+              "term": "veldmuis",
+              "score": 0.4925182813112043
+            },
+            {
+              "term": "eten",
+              "score": 0.2814390178921167
+            },
+            {
+              "term": "heel",
+              "score": 0.21107926341908756
+            },
+            {
+              "term": "luxe",
+              "score": 0.21107926341908756
+            },
+            {
+              "term": "stad",
+              "score": 0.21107926341908756
+            },
+            {
+              "term": "tafel",
+              "score": 0.21107926341908756
+            },
+            {
+              "term": "erbij",
+              "score": 0.14071950894605836
+            },
+            {
+              "term": "ging",
+              "score": 0.14071950894605836
+            },
+            {
+              "term": "gingen",
+              "score": 0.14071950894605836
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "eten",
+                "veldmuis",
+                "stadsmuis",
+                "luxe",
+                "heel",
+                "stad",
+                "tafel",
+                "hond",
+                "huis",
+                "binnen"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "eten",
+                "veldmuis",
+                "stadsmuis",
+                "luxe",
+                "heel",
+                "stad",
+                "tafel",
+                "hond",
+                "huis",
+                "binnen"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "veldmuis",
+                "stadsmuis",
+                "eten",
+                "luxe",
+                "heel",
+                "stad",
+                "tafel",
+                "hond",
+                "huis",
+                "binnen"
+              ]
+            }
+          ]
+        },
+        "final_moral": "Men moet altijd eten veldmuis.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      },
+      "de": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "Die Moral ist, freundin zu landmaus.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "landmaus",
+                  "freundin"
+                ]
+              }
+            },
+            {
+              "text": "Man sollte immer speisen freundin.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "landmaus",
+                  "freundin"
+                ]
+              }
+            },
+            {
+              "text": "Die Moral ist, stadt zu speisen.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "landmaus",
+                  "freundin"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "landmaus",
+              "score": 0.4833682445228318
+            },
+            {
+              "term": "freundin",
+              "score": 0.3866945956182654
+            },
+            {
+              "term": "speisen",
+              "score": 0.29002094671369905
+            },
+            {
+              "term": "stadt",
+              "score": 0.29002094671369905
+            },
+            {
+              "term": "stadtmaus",
+              "score": 0.29002094671369905
+            },
+            {
+              "term": "führte",
+              "score": 0.1933472978091327
+            },
+            {
+              "term": "lassen",
+              "score": 0.1933472978091327
+            },
+            {
+              "term": "leben",
+              "score": 0.1933472978091327
+            },
+            {
+              "term": "merken",
+              "score": 0.1933472978091327
+            },
+            {
+              "term": "sprach",
+              "score": 0.1933472978091327
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "freundin",
+                "stadt",
+                "stadtmaus",
+                "speisen",
+                "landmaus",
+                "führte",
+                "zitternd",
+                "lassen",
+                "wenig",
+                "städterin"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "landmaus",
+                "freundin",
+                "stadt",
+                "stadtmaus",
+                "speisen",
+                "führte",
+                "zitternd",
+                "lassen",
+                "wenig",
+                "städterin"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "freundin",
+                "stadt",
+                "stadtmaus",
+                "speisen",
+                "landmaus",
+                "führte",
+                "zitternd",
+                "lassen",
+                "wenig",
+                "städterin"
+              ]
+            }
+          ]
+        },
+        "final_moral": "Die Moral ist, freundin zu landmaus.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      },
+      "en": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "The moral is to mouse country.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "mouse",
+                  "country"
+                ]
+              }
+            },
+            {
+              "text": "The moral concerns city, country, mouse.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "city",
+                  "country",
+                  "mouse"
+                ]
+              }
+            },
+            {
+              "text": "The moral concerns city, country, mouse.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "city",
+                  "country",
+                  "mouse"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "mouse",
+              "score": 0.784062560233975
+            },
+            {
+              "term": "country",
+              "score": 0.41816669879145335
+            },
+            {
+              "term": "city",
+              "score": 0.31362502409359
+            },
+            {
+              "term": "acorns",
+              "score": 0.10454167469786334
+            },
+            {
+              "term": "butler",
+              "score": 0.10454167469786334
+            },
+            {
+              "term": "could",
+              "score": 0.10454167469786334
+            },
+            {
+              "term": "door",
+              "score": 0.10454167469786334
+            },
+            {
+              "term": "food",
+              "score": 0.10454167469786334
+            },
+            {
+              "term": "house",
+              "score": 0.10454167469786334
+            },
+            {
+              "term": "pay",
+              "score": 0.10454167469786334
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "city",
+                "country",
+                "mouse",
+                "pay",
+                "acorns",
+                "butler",
+                "could",
+                "door",
+                "food",
+                "house"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "city",
+                "country",
+                "mouse",
+                "pay",
+                "acorns",
+                "butler",
+                "could",
+                "door",
+                "food",
+                "house"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "mouse",
+                "country",
+                "city",
+                "pay",
+                "acorns",
+                "butler",
+                "could",
+                "door",
+                "food",
+                "house"
+              ]
+            }
+          ]
+        },
+        "final_moral": "The moral is to mouse country.",
+        "themes": {
+          "categories": [
+            {
+              "name": "perseverance",
+              "score": 1
+            }
+          ],
+          "dominant_category": "perseverance"
+        }
+      },
+      "es": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "La moraleja es amigo campo.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "amigo",
+                  "campo"
+                ]
+              }
+            },
+            {
+              "text": "La moraleja es casa trigo.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "amigo",
+                  "campo"
+                ]
+              }
+            },
+            {
+              "text": "La moraleja trata de campo, casa, trigo.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "campo",
+                  "casa",
+                  "trigo"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "amigo",
+              "score": 0.4558423058385518
+            },
+            {
+              "term": "campo",
+              "score": 0.3418817293789138
+            },
+            {
+              "term": "casa",
+              "score": 0.3418817293789138
+            },
+            {
+              "term": "trigo",
+              "score": 0.3418817293789138
+            },
+            {
+              "term": "cebada",
+              "score": 0.2279211529192759
+            },
+            {
+              "term": "dijo",
+              "score": 0.2279211529192759
+            },
+            {
+              "term": "hombre",
+              "score": 0.2279211529192759
+            },
+            {
+              "term": "nuevo",
+              "score": 0.2279211529192759
+            },
+            {
+              "term": "ratones",
+              "score": 0.2279211529192759
+            },
+            {
+              "term": "ratón",
+              "score": 0.2279211529192759
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "campo",
+                "casa",
+                "trigo",
+                "amigo",
+                "dijo",
+                "hombre",
+                "ratones",
+                "ratón",
+                "nuevo",
+                "cebada"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "amigo",
+                "campo",
+                "casa",
+                "trigo",
+                "dijo",
+                "hombre",
+                "ratones",
+                "ratón",
+                "nuevo",
+                "cebada"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "campo",
+                "casa",
+                "trigo",
+                "amigo",
+                "dijo",
+                "hombre",
+                "ratones",
+                "ratón",
+                "nuevo",
+                "cebada"
+              ]
+            }
+          ]
+        },
+        "final_moral": "La moraleja es amigo campo.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      }
+    },
+    "theme_consistency": {
+      "dominant_theme": "perseverance",
+      "consistency_score": 1.0
+    },
+    "semantic_similarity": {
+      "similarities": {
+        "grc-nl": -0.03848734498023987,
+        "grc-de": 0.10586586594581604,
+        "grc-en": 0.1255715936422348,
+        "grc-es": 0.0956965833902359,
+        "nl-de": 0.3127073049545288,
+        "nl-en": 0.2524607181549072,
+        "nl-es": 0.23901930451393127,
+        "de-en": 0.6342845559120178,
+        "de-es": 0.7761335968971252,
+        "en-es": 0.5461534857749939
+      },
+      "method": "multilingual_embeddings",
+      "model": "paraphrase-multilingual-MiniLM-L12-v2"
+    }
+  },
+  "3": {
+    "languages": [
+      "grc",
+      "nl",
+      "de",
+      "en",
+      "es"
+    ],
+    "morals": {
+      "grc": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "The moral is to τὴν ὀστοῦν.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "τὴν",
+                  "ὀστοῦν"
+                ]
+              }
+            },
+            {
+              "text": "The moral concerns ὀστοῦν, τὴν, κεφαλὴν.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "ὀστοῦν",
+                  "τὴν",
+                  "κεφαλὴν"
+                ]
+              }
+            },
+            {
+              "text": "The moral concerns ὀστοῦν, τὴν, κεφαλὴν.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "ὀστοῦν",
+                  "τὴν",
+                  "κεφαλὴν"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "τὴν",
+              "score": 0.408248290463863
+            },
+            {
+              "term": "ὀστοῦν",
+              "score": 0.408248290463863
+            },
+            {
+              "term": "δὲ",
+              "score": 0.2721655269759087
+            },
+            {
+              "term": "καὶ",
+              "score": 0.2721655269759087
+            },
+            {
+              "term": "κεφαλὴν",
+              "score": 0.2721655269759087
+            },
+            {
+              "term": "μισθὸν",
+              "score": 0.2721655269759087
+            },
+            {
+              "term": "τὸ",
+              "score": 0.2721655269759087
+            },
+            {
+              "term": "τὸν",
+              "score": 0.2721655269759087
+            },
+            {
+              "term": "αὐτοῦ",
+              "score": 0.13608276348795434
+            },
+            {
+              "term": "φάρυγγα",
+              "score": 0.13608276348795434
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "ὀστοῦν",
+                "τὴν",
+                "κεφαλὴν",
+                "δὲ",
+                "τὸ",
+                "τὸν",
+                "καὶ",
+                "μισθὸν",
+                "λύκος",
+                "οὗτος"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "ὀστοῦν",
+                "τὴν",
+                "κεφαλὴν",
+                "δὲ",
+                "τὸ",
+                "τὸν",
+                "καὶ",
+                "μισθὸν",
+                "λύκος",
+                "οὗτος"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "ὀστοῦν",
+                "τὴν",
+                "κεφαλὴν",
+                "δὲ",
+                "τὸ",
+                "τὸν",
+                "καὶ",
+                "μισθὸν",
+                "λύκος",
+                "οὗτος"
+              ]
+            }
+          ]
+        },
+        "final_moral": "The moral is to τὴν ὀστοῦν.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      },
+      "nl": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "Men moet altijd sprong hoog.",
+              "relevance_score": 1.0,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "druiven",
+                  "hoog"
+                ]
+              }
+            },
+            {
+              "text": "De moraal is om hoog te druiven.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "druiven",
+                  "hoog"
+                ]
+              }
+            },
+            {
+              "text": "De moraal is om heel te sprong.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "druiven",
+                  "hoog"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "druiven",
+              "score": 0.7213357077339458
+            },
+            {
+              "term": "hoog",
+              "score": 0.2705008904002297
+            },
+            {
+              "term": "sprong",
+              "score": 0.2705008904002297
+            },
+            {
+              "term": "heel",
+              "score": 0.18033392693348646
+            },
+            {
+              "term": "hingen",
+              "score": 0.18033392693348646
+            },
+            {
+              "term": "keek",
+              "score": 0.18033392693348646
+            },
+            {
+              "term": "moe",
+              "score": 0.18033392693348646
+            },
+            {
+              "term": "opnieuw",
+              "score": 0.18033392693348646
+            },
+            {
+              "term": "rijp",
+              "score": 0.18033392693348646
+            },
+            {
+              "term": "springen",
+              "score": 0.18033392693348646
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "hoog",
+                "sprong",
+                "druiven",
+                "moe",
+                "keek",
+                "hingen",
+                "vos",
+                "heel",
+                "opnieuw",
+                "rijp"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "druiven",
+                "hoog",
+                "sprong",
+                "moe",
+                "keek",
+                "hingen",
+                "vos",
+                "heel",
+                "opnieuw",
+                "rijp"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "hoog",
+                "sprong",
+                "druiven",
+                "moe",
+                "keek",
+                "hingen",
+                "vos",
+                "heel",
+                "opnieuw",
+                "rijp"
+              ]
+            }
+          ]
+        },
+        "final_moral": "Men moet altijd sprong hoog.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      },
+      "de": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "Die Moral ist, fuchs zu trauben.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "trauben",
+                  "fuchs"
+                ]
+              }
+            },
+            {
+              "text": "Man sollte immer spatz fuchs.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "trauben",
+                  "fuchs"
+                ]
+              }
+            },
+            {
+              "text": "Die Moral ist, hingen zu spatz.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "trauben",
+                  "fuchs"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "trauben",
+              "score": 0.5423261445466404
+            },
+            {
+              "term": "fuchs",
+              "score": 0.4338609156373123
+            },
+            {
+              "term": "spatz",
+              "score": 0.32539568672798425
+            },
+            {
+              "term": "hingen",
+              "score": 0.21693045781865616
+            },
+            {
+              "term": "hoch",
+              "score": 0.21693045781865616
+            },
+            {
+              "term": "maus",
+              "score": 0.21693045781865616
+            },
+            {
+              "term": "versteck",
+              "score": 0.21693045781865616
+            },
+            {
+              "term": "weinstock",
+              "score": 0.21693045781865616
+            },
+            {
+              "term": "zurück",
+              "score": 0.21693045781865616
+            },
+            {
+              "term": "beherrschen",
+              "score": 0.10846522890932808
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "spatz",
+                "fuchs",
+                "trauben",
+                "hoch",
+                "maus",
+                "weinstock",
+                "zurück",
+                "hingen",
+                "versteck",
+                "schoß"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "spatz",
+                "fuchs",
+                "trauben",
+                "hoch",
+                "maus",
+                "weinstock",
+                "zurück",
+                "hingen",
+                "versteck",
+                "schoß"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "trauben",
+                "fuchs",
+                "spatz",
+                "hoch",
+                "maus",
+                "weinstock",
+                "zurück",
+                "hingen",
+                "versteck",
+                "schoß"
+              ]
+            }
+          ]
+        },
+        "final_moral": "Die Moral ist, fuchs zu trauben.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      },
+      "en": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "The moral is to grapes fox.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "grapes",
+                  "fox"
+                ]
+              }
+            },
+            {
+              "text": "The moral concerns fox, reach, grapes.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "fox",
+                  "reach",
+                  "grapes"
+                ]
+              }
+            },
+            {
+              "text": "The moral concerns grapes, fox, reach.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "grapes",
+                  "fox",
+                  "reach"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "grapes",
+              "score": 0.5144957554275265
+            },
+            {
+              "term": "fox",
+              "score": 0.34299717028501764
+            },
+            {
+              "term": "reach",
+              "score": 0.34299717028501764
+            },
+            {
+              "term": "although",
+              "score": 0.17149858514250882
+            },
+            {
+              "term": "away",
+              "score": 0.17149858514250882
+            },
+            {
+              "term": "driven",
+              "score": 0.17149858514250882
+            },
+            {
+              "term": "even",
+              "score": 0.17149858514250882
+            },
+            {
+              "term": "hanging",
+              "score": 0.17149858514250882
+            },
+            {
+              "term": "high",
+              "score": 0.17149858514250882
+            },
+            {
+              "term": "hunger",
+              "score": 0.17149858514250882
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "fox",
+                "reach",
+                "grapes",
+                "yet",
+                "leaped",
+                "away",
+                "driven",
+                "even",
+                "hanging",
+                "high"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "grapes",
+                "fox",
+                "reach",
+                "yet",
+                "leaped",
+                "away",
+                "driven",
+                "even",
+                "hanging",
+                "high"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "fox",
+                "reach",
+                "grapes",
+                "yet",
+                "leaped",
+                "away",
+                "driven",
+                "even",
+                "hanging",
+                "high"
+              ]
+            }
+          ]
+        },
+        "final_moral": "The moral is to grapes fox.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      },
+      "es": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "La moraleja es apartándose apoderarse.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "apartándose",
+                  "apoderarse"
+                ]
+              }
+            },
+            {
+              "text": "La moraleja es colgaban dijo.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "apartándose",
+                  "apoderarse"
+                ]
+              }
+            },
+            {
+              "text": "La moraleja trata de zorra, verdes, ver.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "zorra",
+                  "verdes",
+                  "ver"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "apartándose",
+              "score": 0.2773500981126146
+            },
+            {
+              "term": "apoderarse",
+              "score": 0.2773500981126146
+            },
+            {
+              "term": "colgaban",
+              "score": 0.2773500981126146
+            },
+            {
+              "term": "dijo",
+              "score": 0.2773500981126146
+            },
+            {
+              "term": "hambrienta",
+              "score": 0.2773500981126146
+            },
+            {
+              "term": "misma",
+              "score": 0.2773500981126146
+            },
+            {
+              "term": "parra",
+              "score": 0.2773500981126146
+            },
+            {
+              "term": "pudo",
+              "score": 0.2773500981126146
+            },
+            {
+              "term": "quiso",
+              "score": 0.2773500981126146
+            },
+            {
+              "term": "racimos",
+              "score": 0.2773500981126146
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "zorra",
+                "verdes",
+                "ver",
+                "pudo",
+                "parra",
+                "misma",
+                "hambrienta",
+                "colgaban",
+                "apoderarse",
+                "apartándose"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "zorra",
+                "verdes",
+                "misma",
+                "ver",
+                "racimos",
+                "quiso",
+                "pudo",
+                "parra",
+                "hambrienta",
+                "dijo"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "racimos",
+                "quiso",
+                "parra",
+                "dijo",
+                "apoderarse",
+                "zorra",
+                "ver",
+                "pudo",
+                "hambrienta",
+                "colgaban"
+              ]
+            }
+          ]
+        },
+        "final_moral": "La moraleja es apartándose apoderarse.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      }
+    },
+    "theme_consistency": null,
+    "semantic_similarity": {
+      "similarities": {
+        "grc-nl": 0.13766072690486908,
+        "grc-de": 0.6607877016067505,
+        "grc-en": 0.5547695755958557,
+        "grc-es": 0.6947969794273376,
+        "nl-de": 0.27268436551094055,
+        "nl-en": 0.15432244539260864,
+        "nl-es": 0.1591101884841919,
+        "de-en": 0.4538273215293884,
+        "de-es": 0.7989793419837952,
+        "en-es": 0.4934363067150116
+      },
+      "method": "multilingual_embeddings",
+      "model": "paraphrase-multilingual-MiniLM-L12-v2"
+    }
+  },
+  "4": {
+    "languages": [
+      "grc",
+      "nl",
+      "de",
+      "en",
+      "es"
+    ],
+    "morals": {
+      "grc": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "The moral is to τὴν ὀστοῦν.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "τὴν",
+                  "ὀστοῦν"
+                ]
+              }
+            },
+            {
+              "text": "The moral concerns ὀστοῦν, τὴν, κεφαλὴν.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "ὀστοῦν",
+                  "τὴν",
+                  "κεφαλὴν"
+                ]
+              }
+            },
+            {
+              "text": "The moral concerns ὀστοῦν, τὴν, κεφαλὴν.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "ὀστοῦν",
+                  "τὴν",
+                  "κεφαλὴν"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "τὴν",
+              "score": 0.408248290463863
+            },
+            {
+              "term": "ὀστοῦν",
+              "score": 0.408248290463863
+            },
+            {
+              "term": "δὲ",
+              "score": 0.2721655269759087
+            },
+            {
+              "term": "καὶ",
+              "score": 0.2721655269759087
+            },
+            {
+              "term": "κεφαλὴν",
+              "score": 0.2721655269759087
+            },
+            {
+              "term": "μισθὸν",
+              "score": 0.2721655269759087
+            },
+            {
+              "term": "τὸ",
+              "score": 0.2721655269759087
+            },
+            {
+              "term": "τὸν",
+              "score": 0.2721655269759087
+            },
+            {
+              "term": "αὐτοῦ",
+              "score": 0.13608276348795434
+            },
+            {
+              "term": "φάρυγγα",
+              "score": 0.13608276348795434
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "ὀστοῦν",
+                "τὴν",
+                "κεφαλὴν",
+                "δὲ",
+                "τὸ",
+                "τὸν",
+                "καὶ",
+                "μισθὸν",
+                "λύκος",
+                "οὗτος"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "ὀστοῦν",
+                "τὴν",
+                "κεφαλὴν",
+                "δὲ",
+                "τὸ",
+                "τὸν",
+                "καὶ",
+                "μισθὸν",
+                "λύκος",
+                "οὗτος"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "ὀστοῦν",
+                "τὴν",
+                "κεφαλὴν",
+                "δὲ",
+                "τὸ",
+                "τὸν",
+                "καὶ",
+                "μισθὸν",
+                "λύκος",
+                "οὗτος"
+              ]
+            }
+          ]
+        },
+        "final_moral": "The moral is to τὴν ὀστοῦν.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      },
+      "nl": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "Men moet altijd beloning beentje.",
+              "relevance_score": 1.0,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "wolf",
+                  "beentje"
+                ]
+              }
+            },
+            {
+              "text": "De moraal is om beentje te wolf.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "wolf",
+                  "beentje"
+                ]
+              }
+            },
+            {
+              "text": "De moraal is om kraanvogel te beloning.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "wolf",
+                  "beentje"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "wolf",
+              "score": 0.6735753140545634
+            },
+            {
+              "term": "beentje",
+              "score": 0.3849001794597505
+            },
+            {
+              "term": "beloning",
+              "score": 0.28867513459481287
+            },
+            {
+              "term": "kraanvogel",
+              "score": 0.28867513459481287
+            },
+            {
+              "term": "lange",
+              "score": 0.19245008972987526
+            },
+            {
+              "term": "liep",
+              "score": 0.19245008972987526
+            },
+            {
+              "term": "steken",
+              "score": 0.19245008972987526
+            },
+            {
+              "term": "afgebeten",
+              "score": 0.09622504486493763
+            },
+            {
+              "term": "omdraaide",
+              "score": 0.09622504486493763
+            },
+            {
+              "term": "ookniet",
+              "score": 0.09622504486493763
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "beentje",
+                "kraanvogel",
+                "beloning",
+                "wolf",
+                "lange",
+                "steken",
+                "liep",
+                "kip",
+                "keel",
+                "jij"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "wolf",
+                "beentje",
+                "kraanvogel",
+                "beloning",
+                "lange",
+                "steken",
+                "liep",
+                "kip",
+                "keel",
+                "jij"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "beentje",
+                "kraanvogel",
+                "beloning",
+                "wolf",
+                "lange",
+                "steken",
+                "liep",
+                "kip",
+                "keel",
+                "jij"
+              ]
+            }
+          ]
+        },
+        "final_moral": "Men moet altijd beloning beentje.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      },
+      "de": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "Die Moral ist, rachen zu belohnung.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "belohnung",
+                  "rachen"
+                ]
+              }
+            },
+            {
+              "text": "Man sollte immer wolf rachen.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "belohnung",
+                  "rachen"
+                ]
+              }
+            },
+            {
+              "text": "Die Moral ist, befreien zu wolf.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "belohnung",
+                  "rachen"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "belohnung",
+              "score": 0.5144957554275265
+            },
+            {
+              "term": "rachen",
+              "score": 0.34299717028501764
+            },
+            {
+              "term": "wolf",
+              "score": 0.34299717028501764
+            },
+            {
+              "term": "befreien",
+              "score": 0.17149858514250882
+            },
+            {
+              "term": "herbei",
+              "score": 0.17149858514250882
+            },
+            {
+              "term": "kam",
+              "score": 0.17149858514250882
+            },
+            {
+              "term": "knochen",
+              "score": 0.17149858514250882
+            },
+            {
+              "term": "kopf",
+              "score": 0.17149858514250882
+            },
+            {
+              "term": "kranich",
+              "score": 0.17149858514250882
+            },
+            {
+              "term": "kur",
+              "score": 0.17149858514250882
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "rachen",
+                "wolf",
+                "belohnung",
+                "beschwerde",
+                "demjenigen",
+                "erbeutet",
+                "forderte",
+                "gehe",
+                "gelang",
+                "herbei"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "rachen",
+                "wolf",
+                "belohnung",
+                "beschwerde",
+                "demjenigen",
+                "erbeutet",
+                "forderte",
+                "gehe",
+                "gelang",
+                "herbei"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "belohnung",
+                "rachen",
+                "wolf",
+                "beschwerde",
+                "demjenigen",
+                "erbeutet",
+                "forderte",
+                "gehe",
+                "gelang",
+                "herbei"
+              ]
+            }
+          ]
+        },
+        "final_moral": "Die Moral ist, rachen zu belohnung.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      },
+      "en": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "The moral is to wolf crane.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "wolf",
+                  "crane"
+                ]
+              }
+            },
+            {
+              "text": "The moral concerns reward, crane, wolf.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "reward",
+                  "crane",
+                  "wolf"
+                ]
+              }
+            },
+            {
+              "text": "The moral concerns reward, crane, wolf.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "reward",
+                  "crane",
+                  "wolf"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "wolf",
+              "score": 0.7120689949163119
+            },
+            {
+              "term": "crane",
+              "score": 0.35603449745815596
+            },
+            {
+              "term": "reward",
+              "score": 0.35603449745815596
+            },
+            {
+              "term": "accursed",
+              "score": 0.11867816581938533
+            },
+            {
+              "term": "maw",
+              "score": 0.11867816581938533
+            },
+            {
+              "term": "mouth",
+              "score": 0.11867816581938533
+            },
+            {
+              "term": "pain",
+              "score": 0.11867816581938533
+            },
+            {
+              "term": "promised",
+              "score": 0.11867816581938533
+            },
+            {
+              "term": "promises",
+              "score": 0.11867816581938533
+            },
+            {
+              "term": "remove",
+              "score": 0.11867816581938533
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "reward",
+                "crane",
+                "wolf",
+                "yet",
+                "dangerous",
+                "head",
+                "got",
+                "gaping",
+                "finally",
+                "extracted"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "reward",
+                "crane",
+                "wolf",
+                "yet",
+                "dangerous",
+                "head",
+                "got",
+                "gaping",
+                "finally",
+                "extracted"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "wolf",
+                "reward",
+                "crane",
+                "yet",
+                "dangerous",
+                "head",
+                "got",
+                "gaping",
+                "finally",
+                "extracted"
+              ]
+            }
+          ]
+        },
+        "final_moral": "The moral is to wolf crane.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      },
+      "es": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "La moraleja es hueso lobo.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "hueso",
+                  "lobo"
+                ]
+              }
+            },
+            {
+              "text": "La moraleja es cabeza paga.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "hueso",
+                  "lobo"
+                ]
+              }
+            },
+            {
+              "text": "La moraleja trata de hueso, lobo, cabeza.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "hueso",
+                  "lobo",
+                  "cabeza"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "hueso",
+              "score": 0.4629100498862757
+            },
+            {
+              "term": "lobo",
+              "score": 0.4629100498862757
+            },
+            {
+              "term": "cabeza",
+              "score": 0.3086066999241838
+            },
+            {
+              "term": "paga",
+              "score": 0.3086066999241838
+            },
+            {
+              "term": "acordada",
+              "score": 0.1543033499620919
+            },
+            {
+              "term": "encontrarse",
+              "score": 0.1543033499620919
+            },
+            {
+              "term": "garganta",
+              "score": 0.1543033499620919
+            },
+            {
+              "term": "garza",
+              "score": 0.1543033499620919
+            },
+            {
+              "term": "haber",
+              "score": 0.1543033499620919
+            },
+            {
+              "term": "iba",
+              "score": 0.1543033499620919
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "hueso",
+                "lobo",
+                "cabeza",
+                "paga",
+                "garza",
+                "aquélla",
+                "atragantado",
+                "boca",
+                "buscando",
+                "cambio"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "cabeza",
+                "paga",
+                "hueso",
+                "lobo",
+                "garza",
+                "aquélla",
+                "atragantado",
+                "boca",
+                "buscando",
+                "cambio"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "cabeza",
+                "paga",
+                "hueso",
+                "lobo",
+                "garza",
+                "aquélla",
+                "atragantado",
+                "boca",
+                "buscando",
+                "cambio"
+              ]
+            }
+          ]
+        },
+        "final_moral": "La moraleja es hueso lobo.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      }
+    },
+    "theme_consistency": null,
+    "semantic_similarity": {
+      "similarities": {
+        "grc-nl": 0.2698248028755188,
+        "grc-de": 0.7170891165733337,
+        "grc-en": 0.428292840719223,
+        "grc-es": 0.7242007255554199,
+        "nl-de": 0.6332078576087952,
+        "nl-en": 0.30472174286842346,
+        "nl-es": 0.31103822588920593,
+        "de-en": 0.4705983102321625,
+        "de-es": 0.6319354772567749,
+        "en-es": 0.6408180594444275
+      },
+      "method": "multilingual_embeddings",
+      "model": "paraphrase-multilingual-MiniLM-L12-v2"
+    }
+  },
+  "5": {
+    "languages": [
+      "grc",
+      "nl",
+      "de",
+      "en",
+      "es"
+    ],
+    "morals": {
+      "grc": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "The moral is to αὐτὸν δὲ.",
+              "relevance_score": 0.5,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "αὐτὸν",
+                  "δὲ"
+                ]
+              }
+            },
+            {
+              "text": "It's important to καὶ when dealing with μῦς.",
+              "relevance_score": 0.5,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "αὐτὸν",
+                  "δὲ"
+                ]
+              }
+            },
+            {
+              "text": "The moral concerns αὐτὸν, δὲ, καὶ.",
+              "relevance_score": 0.5,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "αὐτὸν",
+                  "δὲ",
+                  "καὶ"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "αὐτὸν",
+              "score": 0.46499055497527714
+            },
+            {
+              "term": "δὲ",
+              "score": 0.46499055497527714
+            },
+            {
+              "term": "καὶ",
+              "score": 0.46499055497527714
+            },
+            {
+              "term": "μῦς",
+              "score": 0.23249527748763857
+            },
+            {
+              "term": "τοῦ",
+              "score": 0.23249527748763857
+            },
+            {
+              "term": "ὅτι",
+              "score": 0.23249527748763857
+            },
+            {
+              "term": "αὐτοῦ",
+              "score": 0.11624763874381928
+            },
+            {
+              "term": "συνέβη",
+              "score": 0.11624763874381928
+            },
+            {
+              "term": "σωθεὶς",
+              "score": 0.11624763874381928
+            },
+            {
+              "term": "σὺ",
+              "score": 0.11624763874381928
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "αὐτὸν",
+                "δὲ",
+                "καὶ",
+                "ὅτι",
+                "μῦς",
+                "τοῦ",
+                "σώματι",
+                "σὺ",
+                "σωθεὶς",
+                "συνέβη"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "αὐτὸν",
+                "δὲ",
+                "καὶ",
+                "ὅτι",
+                "μῦς",
+                "τοῦ",
+                "σώματι",
+                "σὺ",
+                "σωθεὶς",
+                "συνέβη"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "αὐτὸν",
+                "δὲ",
+                "καὶ",
+                "ὅτι",
+                "μῦς",
+                "τοῦ",
+                "σώματι",
+                "σὺ",
+                "σωθεὶς",
+                "συνέβη"
+              ]
+            }
+          ]
+        },
+        "final_moral": "The moral is to αὐτὸν δὲ.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      },
+      "nl": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "Men moet altijd kleine muis.",
+              "relevance_score": 1.0,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "leeuw",
+                  "muis"
+                ]
+              }
+            },
+            {
+              "text": "De moraal is om muis te leeuw.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "leeuw",
+                  "muis"
+                ]
+              }
+            },
+            {
+              "text": "De moraal is om grote te kleine.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "leeuw",
+                  "muis"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "leeuw",
+              "score": 0.6085806194501846
+            },
+            {
+              "term": "muis",
+              "score": 0.48686449556014766
+            },
+            {
+              "term": "kleine",
+              "score": 0.3042903097250923
+            },
+            {
+              "term": "grote",
+              "score": 0.24343224778007383
+            },
+            {
+              "term": "net",
+              "score": 0.24343224778007383
+            },
+            {
+              "term": "bos",
+              "score": 0.18257418583505539
+            },
+            {
+              "term": "helpen",
+              "score": 0.18257418583505539
+            },
+            {
+              "term": "gaan",
+              "score": 0.12171612389003691
+            },
+            {
+              "term": "lachte",
+              "score": 0.12171612389003691
+            },
+            {
+              "term": "rende",
+              "score": 0.12171612389003691
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "kleine",
+                "net",
+                "grote",
+                "muis",
+                "leeuw",
+                "bos",
+                "helpen",
+                "zag",
+                "zei",
+                "gaan"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "kleine",
+                "net",
+                "grote",
+                "muis",
+                "leeuw",
+                "bos",
+                "helpen",
+                "zag",
+                "zei",
+                "gaan"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "leeuw",
+                "muis",
+                "kleine",
+                "net",
+                "grote",
+                "bos",
+                "helpen",
+                "zag",
+                "zei",
+                "gaan"
+              ]
+            }
+          ]
+        },
+        "final_moral": "Men moet altijd kleine muis.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      },
+      "de": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "Die Moral ist, löwen zu mäuschen.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "mäuschen",
+                  "löwen"
+                ]
+              }
+            },
+            {
+              "text": "Man sollte immer dankbar löwen.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "mäuschen",
+                  "löwen"
+                ]
+              }
+            },
+            {
+              "text": "Die Moral ist, lief zu dankbar.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "mäuschen",
+                  "löwen"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "mäuschen",
+              "score": 0.625
+            },
+            {
+              "term": "löwen",
+              "score": 0.375
+            },
+            {
+              "term": "dankbar",
+              "score": 0.25
+            },
+            {
+              "term": "lief",
+              "score": 0.25
+            },
+            {
+              "term": "löwe",
+              "score": 0.25
+            },
+            {
+              "term": "tatzen",
+              "score": 0.25
+            },
+            {
+              "term": "netze",
+              "score": 0.125
+            },
+            {
+              "term": "netzes",
+              "score": 0.125
+            },
+            {
+              "term": "neugierig",
+              "score": 0.125
+            },
+            {
+              "term": "sagte",
+              "score": 0.125
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "löwen",
+                "dankbar",
+                "lief",
+                "löwe",
+                "tatzen",
+                "mäuschen",
+                "zerreißen",
+                "gebrüll",
+                "hörte",
+                "herzu"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "löwen",
+                "dankbar",
+                "lief",
+                "löwe",
+                "tatzen",
+                "mäuschen",
+                "zerreißen",
+                "gebrüll",
+                "hörte",
+                "herzu"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "mäuschen",
+                "löwen",
+                "dankbar",
+                "lief",
+                "löwe",
+                "tatzen",
+                "zerreißen",
+                "gebrüll",
+                "hörte",
+                "herzu"
+              ]
+            }
+          ]
+        },
+        "final_moral": "Die Moral ist, löwen zu mäuschen.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      },
+      "en": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "The moral is to lion mane.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "lion",
+                  "mane"
+                ]
+              }
+            },
+            {
+              "text": "The moral concerns mouse, mane, fox.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "mouse",
+                  "mane",
+                  "fox"
+                ]
+              }
+            },
+            {
+              "text": "The moral concerns lion, mouse, mane.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "lion",
+                  "mouse",
+                  "mane"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "lion",
+              "score": 0.5443310539518174
+            },
+            {
+              "term": "mane",
+              "score": 0.408248290463863
+            },
+            {
+              "term": "mouse",
+              "score": 0.408248290463863
+            },
+            {
+              "term": "fox",
+              "score": 0.2721655269759087
+            },
+            {
+              "term": "afraid",
+              "score": 0.13608276348795434
+            },
+            {
+              "term": "fun",
+              "score": 0.13608276348795434
+            },
+            {
+              "term": "hairs",
+              "score": 0.13608276348795434
+            },
+            {
+              "term": "insolent",
+              "score": 0.13608276348795434
+            },
+            {
+              "term": "king",
+              "score": 0.13608276348795434
+            },
+            {
+              "term": "leaped",
+              "score": 0.13608276348795434
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "mouse",
+                "mane",
+                "fox",
+                "lion",
+                "worried",
+                "insolent",
+                "angered",
+                "animals",
+                "answered",
+                "away"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "lion",
+                "mouse",
+                "mane",
+                "fox",
+                "worried",
+                "insolent",
+                "angered",
+                "animals",
+                "answered",
+                "away"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "mouse",
+                "mane",
+                "fox",
+                "lion",
+                "worried",
+                "insolent",
+                "angered",
+                "animals",
+                "answered",
+                "away"
+              ]
+            }
+          ]
+        },
+        "final_moral": "The moral is to lion mane.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      },
+      "es": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "La moraleja es ratón león.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "ratón",
+                  "león"
+                ]
+              }
+            },
+            {
+              "text": "La moraleja es puso soga.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "ratón",
+                  "león"
+                ]
+              }
+            },
+            {
+              "text": "La moraleja trata de león, soga, puso.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "león",
+                  "soga",
+                  "puso"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "ratón",
+              "score": 0.6030226891555273
+            },
+            {
+              "term": "león",
+              "score": 0.30151134457776363
+            },
+            {
+              "term": "puso",
+              "score": 0.30151134457776363
+            },
+            {
+              "term": "soga",
+              "score": 0.30151134457776363
+            },
+            {
+              "term": "acudió",
+              "score": 0.15075567228888181
+            },
+            {
+              "term": "libre",
+              "score": 0.15075567228888181
+            },
+            {
+              "term": "ocurrió",
+              "score": 0.15075567228888181
+            },
+            {
+              "term": "oído",
+              "score": 0.15075567228888181
+            },
+            {
+              "term": "parte",
+              "score": 0.15075567228888181
+            },
+            {
+              "term": "pidiera",
+              "score": 0.15075567228888181
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "león",
+                "soga",
+                "puso",
+                "ratón",
+                "éste",
+                "cuerpo",
+                "dijo",
+                "dijera",
+                "devorarlo",
+                "devolverte"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "león",
+                "soga",
+                "puso",
+                "ratón",
+                "éste",
+                "cuerpo",
+                "dijo",
+                "dijera",
+                "devorarlo",
+                "devolverte"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "ratón",
+                "león",
+                "soga",
+                "puso",
+                "éste",
+                "cuerpo",
+                "dijo",
+                "dijera",
+                "devorarlo",
+                "devolverte"
+              ]
+            }
+          ]
+        },
+        "final_moral": "La moraleja es ratón león.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      }
+    },
+    "theme_consistency": null,
+    "semantic_similarity": {
+      "similarities": {
+        "grc-nl": 0.13516287505626678,
+        "grc-de": 0.6240161061286926,
+        "grc-en": 0.6146483421325684,
+        "grc-es": 0.5916095972061157,
+        "nl-de": 0.40660759806632996,
+        "nl-en": 0.3667140305042267,
+        "nl-es": 0.6063780784606934,
+        "de-en": 0.9059553742408752,
+        "de-es": 0.767726719379425,
+        "en-es": 0.7933684587478638
+      },
+      "method": "multilingual_embeddings",
+      "model": "paraphrase-multilingual-MiniLM-L12-v2"
+    }
+  },
+  "6": {
+    "languages": [
+      "grc",
+      "nl",
+      "de",
+      "es"
+    ],
+    "morals": {
+      "grc": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "The moral is to καὶ δὲ.",
+              "relevance_score": 0.5,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "καὶ",
+                  "δὲ"
+                ]
+              }
+            },
+            {
+              "text": "It's important to κώνωψ when dealing with τοῖς.",
+              "relevance_score": 0.5,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "καὶ",
+                  "δὲ"
+                ]
+              }
+            },
+            {
+              "text": "The moral concerns δὲ, τοῖς, κώνωψ.",
+              "relevance_score": 0.5,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "δὲ",
+                  "τοῖς",
+                  "κώνωψ"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "καὶ",
+              "score": 0.647150228929434
+            },
+            {
+              "term": "δὲ",
+              "score": 0.3698001308168194
+            },
+            {
+              "term": "κώνωψ",
+              "score": 0.2773500981126145
+            },
+            {
+              "term": "τοῖς",
+              "score": 0.2773500981126145
+            },
+            {
+              "term": "εἰ",
+              "score": 0.1849000654084097
+            },
+            {
+              "term": "λέοντα",
+              "score": 0.1849000654084097
+            },
+            {
+              "term": "οὔτε",
+              "score": 0.1849000654084097
+            },
+            {
+              "term": "σαλπίσας",
+              "score": 0.1849000654084097
+            },
+            {
+              "term": "ἀράχνης",
+              "score": 0.1849000654084097
+            },
+            {
+              "term": "ὄνυξι",
+              "score": 0.1849000654084097
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "δὲ",
+                "τοῖς",
+                "κώνωψ",
+                "καὶ",
+                "λέοντα",
+                "ὄνυξι",
+                "ἀράχνης",
+                "εἰ",
+                "σαλπίσας",
+                "οὔτε"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "δὲ",
+                "τοῖς",
+                "κώνωψ",
+                "καὶ",
+                "λέοντα",
+                "ὄνυξι",
+                "ἀράχνης",
+                "εἰ",
+                "σαλπίσας",
+                "οὔτε"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "καὶ",
+                "δὲ",
+                "τοῖς",
+                "κώνωψ",
+                "λέοντα",
+                "ὄνυξι",
+                "ἀράχνης",
+                "εἰ",
+                "σαλπίσας",
+                "οὔτε"
+              ]
+            }
+          ]
+        },
+        "final_moral": "The moral is to καὶ δὲ.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      },
+      "nl": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "Men moet altijd vloog mug.",
+              "relevance_score": 1.0,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "leeuw",
+                  "mug"
+                ]
+              }
+            },
+            {
+              "text": "De moraal is om mug te leeuw.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "leeuw",
+                  "mug"
+                ]
+              }
+            },
+            {
+              "text": "De moraal is om weg te vloog.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "leeuw",
+                  "mug"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "leeuw",
+              "score": 0.6810052246069989
+            },
+            {
+              "term": "mug",
+              "score": 0.4256282653793743
+            },
+            {
+              "term": "vloog",
+              "score": 0.2553769592276246
+            },
+            {
+              "term": "weg",
+              "score": 0.2553769592276246
+            },
+            {
+              "term": "alleen",
+              "score": 0.17025130615174972
+            },
+            {
+              "term": "eigen",
+              "score": 0.17025130615174972
+            },
+            {
+              "term": "liet",
+              "score": 0.17025130615174972
+            },
+            {
+              "term": "neus",
+              "score": 0.17025130615174972
+            },
+            {
+              "term": "prikte",
+              "score": 0.17025130615174972
+            },
+            {
+              "term": "overdekt",
+              "score": 0.08512565307587486
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "mug",
+                "weg",
+                "vloog",
+                "leeuw",
+                "alleen",
+                "neus",
+                "eigen",
+                "liet",
+                "prikte",
+                "ga"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "mug",
+                "weg",
+                "vloog",
+                "leeuw",
+                "alleen",
+                "neus",
+                "eigen",
+                "liet",
+                "prikte",
+                "ga"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "leeuw",
+                "mug",
+                "weg",
+                "vloog",
+                "alleen",
+                "neus",
+                "eigen",
+                "liet",
+                "prikte",
+                "ga"
+              ]
+            }
+          ]
+        },
+        "final_moral": "Men moet altijd vloog mug.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      },
+      "de": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "Die Moral ist, spinne zu mücke.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "mücke",
+                  "spinne"
+                ]
+              }
+            },
+            {
+              "text": "Man sollte immer flog spinne.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "mücke",
+                  "spinne"
+                ]
+              }
+            },
+            {
+              "text": "Die Moral ist, löwen zu flog.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "mücke",
+                  "spinne"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "mücke",
+              "score": 0.4472135954999579
+            },
+            {
+              "term": "spinne",
+              "score": 0.4472135954999579
+            },
+            {
+              "term": "flog",
+              "score": 0.29814239699997197
+            },
+            {
+              "term": "löwen",
+              "score": 0.29814239699997197
+            },
+            {
+              "term": "worten",
+              "score": 0.29814239699997197
+            },
+            {
+              "term": "auszuposaunen",
+              "score": 0.14907119849998599
+            },
+            {
+              "term": "sieg",
+              "score": 0.14907119849998599
+            },
+            {
+              "term": "sog",
+              "score": 0.14907119849998599
+            },
+            {
+              "term": "sollst",
+              "score": 0.14907119849998599
+            },
+            {
+              "term": "stach",
+              "score": 0.14907119849998599
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "mücke",
+                "spinne",
+                "löwen",
+                "worten",
+                "flog",
+                "übersah",
+                "fürchte",
+                "nichtigkeit",
+                "hast",
+                "großes"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "mücke",
+                "spinne",
+                "löwen",
+                "worten",
+                "flog",
+                "übersah",
+                "fürchte",
+                "nichtigkeit",
+                "hast",
+                "großes"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "mücke",
+                "spinne",
+                "löwen",
+                "worten",
+                "flog",
+                "übersah",
+                "fürchte",
+                "nichtigkeit",
+                "hast",
+                "großes"
+              ]
+            }
+          ]
+        },
+        "final_moral": "Die Moral ist, spinne zu mücke.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      },
+      "es": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "La moraleja es león mosquito.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "león",
+                  "mosquito"
+                ]
+              }
+            },
+            {
+              "text": "La moraleja es araña fuerte.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "león",
+                  "mosquito"
+                ]
+              }
+            },
+            {
+              "text": "La moraleja trata de león, mosquito, araña.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "león",
+                  "mosquito",
+                  "araña"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "león",
+              "score": 0.42008402520840293
+            },
+            {
+              "term": "mosquito",
+              "score": 0.42008402520840293
+            },
+            {
+              "term": "araña",
+              "score": 0.28005601680560194
+            },
+            {
+              "term": "fuerte",
+              "score": 0.28005601680560194
+            },
+            {
+              "term": "garras",
+              "score": 0.28005601680560194
+            },
+            {
+              "term": "trompetilla",
+              "score": 0.28005601680560194
+            },
+            {
+              "term": "zumbar",
+              "score": 0.28005601680560194
+            },
+            {
+              "term": "lucha",
+              "score": 0.14002800840280097
+            },
+            {
+              "term": "luego",
+              "score": 0.14002800840280097
+            },
+            {
+              "term": "marido",
+              "score": 0.14002800840280097
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "león",
+                "mosquito",
+                "araña",
+                "fuerte",
+                "garras",
+                "zumbar",
+                "trompetilla",
+                "rascarse",
+                "fuerza",
+                "vencer"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "león",
+                "mosquito",
+                "araña",
+                "fuerte",
+                "garras",
+                "zumbar",
+                "trompetilla",
+                "rascarse",
+                "fuerza",
+                "vencer"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "león",
+                "mosquito",
+                "araña",
+                "fuerte",
+                "garras",
+                "zumbar",
+                "trompetilla",
+                "rascarse",
+                "fuerza",
+                "vencer"
+              ]
+            }
+          ]
+        },
+        "final_moral": "La moraleja es león mosquito.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      }
+    },
+    "theme_consistency": null,
+    "semantic_similarity": {
+      "similarities": {
+        "grc-nl": 0.1680469512939453,
+        "grc-de": 0.6578876972198486,
+        "grc-es": 0.6132895946502686,
+        "nl-de": 0.3498835861682892,
+        "nl-es": 0.488980233669281,
+        "de-es": 0.6877413988113403
+      },
+      "method": "multilingual_embeddings",
+      "model": "paraphrase-multilingual-MiniLM-L12-v2"
+    }
+  },
+  "7": {
+    "languages": [
+      "grc",
+      "nl",
+      "de",
+      "en"
+    ],
+    "morals": {
+      "grc": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "The moral concerns τῶν, καὶ, τὴν.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "τῶν",
+                  "καὶ",
+                  "τὴν"
+                ]
+              }
+            },
+            {
+              "text": "The moral concerns τῶν, καὶ, τὴν.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "τῶν",
+                  "καὶ",
+                  "τὴν"
+                ]
+              }
+            },
+            {
+              "text": "The moral is to δὲ καὶ.",
+              "relevance_score": 0.5,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "δὲ",
+                  "καὶ"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "δὲ",
+              "score": 0.4681645887845223
+            },
+            {
+              "term": "καὶ",
+              "score": 0.409644015186457
+            },
+            {
+              "term": "τὴν",
+              "score": 0.409644015186457
+            },
+            {
+              "term": "τῶν",
+              "score": 0.2926028679903264
+            },
+            {
+              "term": "τοῦ",
+              "score": 0.23408229439226114
+            },
+            {
+              "term": "τὸ",
+              "score": 0.23408229439226114
+            },
+            {
+              "term": "τῷ",
+              "score": 0.23408229439226114
+            },
+            {
+              "term": "ἀλώπηξ",
+              "score": 0.17556172079419585
+            },
+            {
+              "term": "αὐτὴν",
+              "score": 0.11704114719613057
+            },
+            {
+              "term": "διὰ",
+              "score": 0.11704114719613057
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "τῶν",
+                "καὶ",
+                "τὴν",
+                "τοῦ",
+                "τῷ",
+                "τὸ",
+                "δὲ",
+                "ἀλώπηξ",
+                "ἄνοδον",
+                "φρέαρ"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "τῶν",
+                "καὶ",
+                "τὴν",
+                "τοῦ",
+                "τῷ",
+                "τὸ",
+                "δὲ",
+                "ἀλώπηξ",
+                "ἄνοδον",
+                "φρέαρ"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "δὲ",
+                "καὶ",
+                "τὴν",
+                "τῶν",
+                "τοῦ",
+                "τῷ",
+                "τὸ",
+                "ἀλώπηξ",
+                "ἄνοδον",
+                "φρέαρ"
+              ]
+            }
+          ]
+        },
+        "final_moral": "The moral concerns τῶν, καὶ, τὴν.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      },
+      "nl": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "Men moet altijd put geit.",
+              "relevance_score": 1.0,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "vos",
+                  "geit"
+                ]
+              }
+            },
+            {
+              "text": "De moraal is om geit te vos.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "vos",
+                  "geit"
+                ]
+              }
+            },
+            {
+              "text": "De moraal is om sprong te put.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "vos",
+                  "geit"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "vos",
+              "score": 0.6024640760767093
+            },
+            {
+              "term": "geit",
+              "score": 0.43033148291193524
+            },
+            {
+              "term": "put",
+              "score": 0.34426518632954817
+            },
+            {
+              "term": "sprong",
+              "score": 0.25819888974716115
+            },
+            {
+              "term": "water",
+              "score": 0.25819888974716115
+            },
+            {
+              "term": "dorstige",
+              "score": 0.17213259316477408
+            },
+            {
+              "term": "drinken",
+              "score": 0.17213259316477408
+            },
+            {
+              "term": "waterput",
+              "score": 0.17213259316477408
+            },
+            {
+              "term": "wel",
+              "score": 0.17213259316477408
+            },
+            {
+              "term": "alhoewel",
+              "score": 0.08606629658238704
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "put",
+                "geit",
+                "sprong",
+                "water",
+                "vos",
+                "waterput",
+                "wel",
+                "dorstige",
+                "drinken",
+                "gevallen"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "put",
+                "geit",
+                "sprong",
+                "water",
+                "vos",
+                "waterput",
+                "wel",
+                "dorstige",
+                "drinken",
+                "gevallen"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "vos",
+                "geit",
+                "put",
+                "water",
+                "sprong",
+                "waterput",
+                "wel",
+                "dorstige",
+                "drinken",
+                "gevallen"
+              ]
+            }
+          ]
+        },
+        "final_moral": "Men moet altijd put geit.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      },
+      "de": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "Die Moral ist, fuchs zu bock.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "bock",
+                  "fuchs"
+                ]
+              }
+            },
+            {
+              "text": "Man sollte immer bedenken fuchs.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "bock",
+                  "fuchs"
+                ]
+              }
+            },
+            {
+              "text": "Die Moral ist, brunnen zu bedenken.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "bock",
+                  "fuchs"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "bock",
+              "score": 0.4472135954999579
+            },
+            {
+              "term": "fuchs",
+              "score": 0.4472135954999579
+            },
+            {
+              "term": "bedenken",
+              "score": 0.22360679774997896
+            },
+            {
+              "term": "brunnen",
+              "score": 0.22360679774997896
+            },
+            {
+              "term": "durst",
+              "score": 0.22360679774997896
+            },
+            {
+              "term": "endlich",
+              "score": 0.22360679774997896
+            },
+            {
+              "term": "freund",
+              "score": 0.22360679774997896
+            },
+            {
+              "term": "ganz",
+              "score": 0.22360679774997896
+            },
+            {
+              "term": "herauskommen",
+              "score": 0.22360679774997896
+            },
+            {
+              "term": "recht",
+              "score": 0.22360679774997896
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "bock",
+                "fuchs",
+                "herauskommen",
+                "bedenken",
+                "brunnen",
+                "durst",
+                "endlich",
+                "retten",
+                "sagte",
+                "freund"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "bock",
+                "fuchs",
+                "herauskommen",
+                "bedenken",
+                "brunnen",
+                "durst",
+                "endlich",
+                "retten",
+                "sagte",
+                "freund"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "bock",
+                "fuchs",
+                "herauskommen",
+                "bedenken",
+                "brunnen",
+                "durst",
+                "endlich",
+                "retten",
+                "sagte",
+                "freund"
+              ]
+            }
+          ]
+        },
+        "final_moral": "Die Moral ist, fuchs zu bock.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      },
+      "en": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "The moral is to fox goat.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "fox",
+                  "goat"
+                ]
+              }
+            },
+            {
+              "text": "The moral concerns goat, well, inside.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "goat",
+                  "well",
+                  "inside"
+                ]
+              }
+            },
+            {
+              "text": "The moral concerns goat, well, inside.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "goat",
+                  "well",
+                  "inside"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "fox",
+              "score": 0.5547001962252291
+            },
+            {
+              "term": "goat",
+              "score": 0.41602514716892186
+            },
+            {
+              "term": "inside",
+              "score": 0.2773500981126146
+            },
+            {
+              "term": "water",
+              "score": 0.2773500981126146
+            },
+            {
+              "term": "well",
+              "score": 0.2773500981126146
+            },
+            {
+              "term": "asked",
+              "score": 0.1386750490563073
+            },
+            {
+              "term": "made",
+              "score": 0.1386750490563073
+            },
+            {
+              "term": "meanwhile",
+              "score": 0.1386750490563073
+            },
+            {
+              "term": "place",
+              "score": 0.1386750490563073
+            },
+            {
+              "term": "plentiful",
+              "score": 0.1386750490563073
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "goat",
+                "well",
+                "inside",
+                "water",
+                "fox",
+                "whether",
+                "fresh",
+                "horns",
+                "hole",
+                "high"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "goat",
+                "well",
+                "inside",
+                "water",
+                "fox",
+                "whether",
+                "fresh",
+                "horns",
+                "hole",
+                "high"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "fox",
+                "goat",
+                "well",
+                "inside",
+                "water",
+                "whether",
+                "fresh",
+                "horns",
+                "hole",
+                "high"
+              ]
+            }
+          ]
+        },
+        "final_moral": "The moral is to fox goat.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      }
+    },
+    "theme_consistency": null,
+    "semantic_similarity": {
+      "similarities": {
+        "grc-nl": 0.11028733849525452,
+        "grc-de": 0.6392281651496887,
+        "grc-en": 0.4983610212802887,
+        "nl-de": 0.3637705147266388,
+        "nl-en": 0.32868194580078125,
+        "de-en": 0.543798565864563
+      },
+      "method": "multilingual_embeddings",
+      "model": "paraphrase-multilingual-MiniLM-L12-v2"
+    }
+  },
+  "es_7": {
+    "languages": [
+      "es"
+    ],
+    "morals": {
+      "es": {
+        "explicit": {
+          "has_explicit_moral": false,
+          "moral_text": null,
+          "moral_location": null,
+          "detection_method": null,
+          "confidence": 0.0
+        },
+        "implicit": {
+          "has_inferred_moral": true,
+          "inferred_morals": [
+            {
+              "text": "La moraleja es zorra pozo.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "zorra",
+                  "pozo"
+                ]
+              }
+            },
+            {
+              "text": "La moraleja es agua buena.",
+              "relevance_score": 0.6666666666666666,
+              "source": "keyword_template",
+              "metadata": {
+                "keywords": [
+                  "zorra",
+                  "pozo"
+                ]
+              }
+            },
+            {
+              "text": "La moraleja trata de pozo, zorra, agua.",
+              "relevance_score": 0.6,
+              "source": "topic_modeling",
+              "metadata": {
+                "topic_words": [
+                  "pozo",
+                  "zorra",
+                  "agua"
+                ]
+              }
+            }
+          ],
+          "method": "combined_nlp_inference",
+          "keywords": [
+            {
+              "term": "zorra",
+              "score": 0.4588314677411235
+            },
+            {
+              "term": "pozo",
+              "score": 0.3441236008058426
+            },
+            {
+              "term": "agua",
+              "score": 0.22941573387056174
+            },
+            {
+              "term": "buena",
+              "score": 0.22941573387056174
+            },
+            {
+              "term": "cabrío",
+              "score": 0.22941573387056174
+            },
+            {
+              "term": "cuernos",
+              "score": 0.22941573387056174
+            },
+            {
+              "term": "dijo",
+              "score": 0.22941573387056174
+            },
+            {
+              "term": "forma",
+              "score": 0.22941573387056174
+            },
+            {
+              "term": "llegó",
+              "score": 0.22941573387056174
+            },
+            {
+              "term": "macho",
+              "score": 0.22941573387056174
+            }
+          ],
+          "topics": [
+            {
+              "id": 0,
+              "top_words": [
+                "pozo",
+                "zorra",
+                "agua",
+                "buena",
+                "llegó",
+                "patas",
+                "forma",
+                "dijo",
+                "cuernos",
+                "cabrío"
+              ]
+            },
+            {
+              "id": 1,
+              "top_words": [
+                "pozo",
+                "zorra",
+                "agua",
+                "buena",
+                "llegó",
+                "patas",
+                "forma",
+                "dijo",
+                "cuernos",
+                "cabrío"
+              ]
+            },
+            {
+              "id": 2,
+              "top_words": [
+                "zorra",
+                "pozo",
+                "agua",
+                "buena",
+                "llegó",
+                "patas",
+                "forma",
+                "dijo",
+                "cuernos",
+                "cabrío"
+              ]
+            }
+          ]
+        },
+        "final_moral": "La moraleja es zorra pozo.",
+        "themes": {
+          "categories": [],
+          "dominant_category": null
+        }
+      }
+    },
+    "theme_consistency": null,
+    "semantic_similarity": {}
+  }
+}

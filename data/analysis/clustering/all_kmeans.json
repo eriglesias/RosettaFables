@@ -1,0 +1,300 @@
+{
+  "method": "kmeans",
+  "n_clusters": 5,
+  "feature_type": "tfidf",
+  "feature_count": 200,
+  "fable_count": 34,
+  "quality": {
+    "silhouette_score": 0.28356581474192255,
+    "calinski_harabasz_score": 7.627315744830042
+  },
+  "clusters": {
+    "cluster_0": {
+      "size": 7,
+      "fable_ids": [
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown"
+      ],
+      "languages": {
+        "nl": 7
+      },
+      "top_features": [
+        {
+          "name": "en",
+          "weight": 0.25266928417286
+        },
+        {
+          "name": "de",
+          "weight": 0.23535204930999962
+        },
+        {
+          "name": "een",
+          "weight": 0.2163003592997573
+        },
+        {
+          "name": "hij",
+          "weight": 0.2011299690204901
+        },
+        {
+          "name": "het",
+          "weight": 0.18944462641087084
+        },
+        {
+          "name": "van",
+          "weight": 0.15122196448938954
+        },
+        {
+          "name": "ze",
+          "weight": 0.15085122542283727
+        },
+        {
+          "name": "leeuw",
+          "weight": 0.1379890188818911
+        },
+        {
+          "name": "dat",
+          "weight": 0.13157429394596404
+        },
+        {
+          "name": "maar",
+          "weight": 0.1279751564268104
+        }
+      ]
+    },
+    "cluster_1": {
+      "size": 7,
+      "fable_ids": [
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown"
+      ],
+      "languages": {
+        "es": 7
+      },
+      "top_features": [
+        {
+          "name": "de",
+          "weight": 0.3234224796884715
+        },
+        {
+          "name": "que",
+          "weight": 0.3147424022912521
+        },
+        {
+          "name": "el",
+          "weight": 0.2727581656023801
+        },
+        {
+          "name": "la",
+          "weight": 0.22534404977826902
+        },
+        {
+          "name": "un",
+          "weight": 0.22218258553897421
+        },
+        {
+          "name": "se",
+          "weight": 0.21623348332908696
+        },
+        {
+          "name": "una",
+          "weight": 0.16972692269080017
+        },
+        {
+          "name": "con",
+          "weight": 0.16524236395777034
+        },
+        {
+          "name": "le",
+          "weight": 0.1393067683839766
+        },
+        {
+          "name": "dijo",
+          "weight": 0.13476465978503493
+        }
+      ]
+    },
+    "cluster_2": {
+      "size": 7,
+      "fable_ids": [
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown"
+      ],
+      "languages": {
+        "grc": 7
+      },
+      "top_features": [
+        {
+          "name": "καὶ",
+          "weight": 0.4530627139268815
+        },
+        {
+          "name": "δὲ",
+          "weight": 0.36252946468154196
+        },
+        {
+          "name": "τὴν",
+          "weight": 0.2191987648798833
+        },
+        {
+          "name": "τὸ",
+          "weight": 0.19173988351603263
+        },
+        {
+          "name": "αὐτὸν",
+          "weight": 0.1719318128019989
+        },
+        {
+          "name": "τὸν",
+          "weight": 0.17057959649399518
+        },
+        {
+          "name": "τοῦ",
+          "weight": 0.16283624066796687
+        },
+        {
+          "name": "ὀστοῦν",
+          "weight": 0.15584661985385023
+        },
+        {
+          "name": "λύκος",
+          "weight": 0.12817910236466543
+        },
+        {
+          "name": "μισθὸν",
+          "weight": 0.10389774656923349
+        }
+      ]
+    },
+    "cluster_3": {
+      "size": 7,
+      "fable_ids": [
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown"
+      ],
+      "languages": {
+        "de": 7
+      },
+      "top_features": [
+        {
+          "name": "und",
+          "weight": 0.3644912720635795
+        },
+        {
+          "name": "der",
+          "weight": 0.22733880717875593
+        },
+        {
+          "name": "die",
+          "weight": 0.20177398106151606
+        },
+        {
+          "name": "du",
+          "weight": 0.18530505708469722
+        },
+        {
+          "name": "das",
+          "weight": 0.16387145364801808
+        },
+        {
+          "name": "sie",
+          "weight": 0.14444279638350807
+        },
+        {
+          "name": "ich",
+          "weight": 0.13491753290382627
+        },
+        {
+          "name": "ein",
+          "weight": 0.1331885477927992
+        },
+        {
+          "name": "mit",
+          "weight": 0.13226276143674606
+        },
+        {
+          "name": "zu",
+          "weight": 0.12795689734827156
+        }
+      ]
+    },
+    "cluster_4": {
+      "size": 6,
+      "fable_ids": [
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown"
+      ],
+      "languages": {
+        "en": 6
+      },
+      "top_features": [
+        {
+          "name": "the",
+          "weight": 0.3810646113766552
+        },
+        {
+          "name": "to",
+          "weight": 0.22384346966759464
+        },
+        {
+          "name": "fox",
+          "weight": 0.20315653571847384
+        },
+        {
+          "name": "you",
+          "weight": 0.1844479695227782
+        },
+        {
+          "name": "and",
+          "weight": 0.16904009274301837
+        },
+        {
+          "name": "mouse",
+          "weight": 0.15782861092311248
+        },
+        {
+          "name": "wolf",
+          "weight": 0.1556938446724914
+        },
+        {
+          "name": "his",
+          "weight": 0.12759799088667553
+        },
+        {
+          "name": "of",
+          "weight": 0.12283630841684134
+        },
+        {
+          "name": "that",
+          "weight": 0.1190782238338497
+        }
+      ]
+    }
+  },
+  "fable_clusters": {
+    "unknown": 1
+  }
+}

@@ -274,6 +274,23 @@ files = [
 numpy = {version = ">=1.19.0,<3.0.0", markers = "python_version >= \"3.9\""}
 
 [[package]]
+name = "calmap"
+version = "0.0.11"
+description = "Calendar heatmaps from Pandas time series data"
+optional = false
+python-versions = "*"
+groups = ["main"]
+files = [
+    {file = "calmap-0.0.11-py2.py3-none-any.whl", hash = "sha256:4200ba7308c13dc5d94e444823334a10c396638bc03af2f6fce7c1cc45f20cf5"},
+    {file = "calmap-0.0.11.tar.gz", hash = "sha256:270ddedd9b470d3aef4328887ed60e1e3d3ac4fc8d3335874663d8d178d5b9bc"},
+]
+
+[package.dependencies]
+matplotlib = "*"
+numpy = "*"
+pandas = "*"
+
+[[package]]
 name = "catalogue"
 version = "2.0.10"
 description = "Super lightweight function registries for your library"
@@ -4833,4 +4850,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12,<3.13"
-content-hash = "49922d77b6d72c00dbccab92995b5aaf58213335a4a498943d5dc56bf2c132d7"
+content-hash = "2eecbf79fe33491d2126677e1e70f2932d4ea355fade239bbfc9d01c52e14cfb"

@@ -1,0 +1,43 @@
+[
+  {
+    "categories": [],
+    "dominant_category": null,
+    "fable_id": "1",
+    "moral_text": "One should always wolf drink."
+  },
+  {
+    "categories": [
+      {
+        "name": "perseverance",
+        "score": 1
+      }
+    ],
+    "dominant_category": "perseverance",
+    "fable_id": "2",
+    "moral_text": "The moral is to mouse country."
+  },
+  {
+    "categories": [],
+    "dominant_category": null,
+    "fable_id": "3",
+    "moral_text": "The moral is to grapes fox."
+  },
+  {
+    "categories": [],
+    "dominant_category": null,
+    "fable_id": "4",
+    "moral_text": "The moral is to wolf crane."
+  },
+  {
+    "categories": [],
+    "dominant_category": null,
+    "fable_id": "5",
+    "moral_text": "The moral is to lion mane."
+  },
+  {
+    "categories": [],
+    "dominant_category": null,
+    "fable_id": "7",
+    "moral_text": "The moral is to fox goat."
+  }
+]
