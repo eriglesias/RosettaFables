@@ -2,3 +2,7 @@ project_notes.md
 questions.md
 project_outline.md
 issues_to_be_fixed.md
+# Python bytecode files
+__pycache__/
+*.py[cod]
+*$py.class
