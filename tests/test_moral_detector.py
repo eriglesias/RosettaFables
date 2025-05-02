@@ -2,13 +2,13 @@
 """
 Tests for the moral_detector.py module.
 """
-
 import unittest
 from pathlib import Path
-
-# Import the MoralDetector class
 from aesop_spacy.analysis.moral_detector import MoralDetector
 
+
+
+# Import the MoralDetector class
 class TestMoralDetector(unittest.TestCase):
     """Tests for the MoralDetector class."""
     

@@ -1,8 +1,6 @@
 import unittest
 import json
 from pathlib import Path
-import sys
-import os
 from aesop_spacy.analysis.stats_analyzer import StatsAnalyzer
 
 
