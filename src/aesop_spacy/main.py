@@ -72,26 +72,30 @@ def setup_logging(debug_mode=False):
 def setup_directories(data_dir, output_dir, logger):
     """Ensure required directories exist and return validated paths"""
     # Create absolute paths if relative paths provided
-    data_dir = Path(data_dir) if data_dir else project_root / "data"
-    output_dir = Path(output_dir) if output_dir else project_root / "data"
+    base_dir = Path(data_dir) if data_dir else project_root / "data"
+    
+    # Define input and output paths based on your structure
+    input_dir = base_dir / "data_raw"
+    output_dir = Path(output_dir) if output_dir else base_dir / "data_handled"
 
-    logger.info("Using data directory: %s", data_dir)
+    logger.info("Using input directory: %s", input_dir)
     logger.info("Using output directory: %s", output_dir)
 
     # Ensure directories exist
-    for subdir in ["raw/fables", "processed", "analysis"]:
-        (data_dir / subdir).mkdir(parents=True, exist_ok=True)
+    (input_dir / "fables").mkdir(parents=True, exist_ok=True)
+    (output_dir / "processed").mkdir(parents=True, exist_ok=True)
+    (output_dir / "analysis").mkdir(parents=True, exist_ok=True)
 
     # Verify fable source file
-    fable_md_path = data_dir / "raw" / "fables" / "initial_fables.md"
-    logger.info("Looking for fables at: %s (exists: %s)", 
-              fable_md_path, fable_md_path.exists())
+    fable_md_path = input_dir / "fables" / "initial_fables.md"
+    logger.info("Looking for fables at: %s (exists: %s)",fable_md_path, fable_md_path.exists())
 
     # Check processed files
-    json_files = list((data_dir / "processed").glob("*.json"))
+    json_files = list((output_dir / "processed").glob("*.json"))
     logger.info("Found %d JSON files in processed directory", len(json_files))
 
-    return data_dir, output_dir
+    # Return both input and output paths
+    return input_dir, output_dir
 
 
 def print_analysis_summary(logger, results):
@@ -123,9 +127,9 @@ def save_analysis_summary(output_dir, results):
         }, f, indent=2)
 
 
-def run_pipeline(args, data_dir, output_dir, logger):
+def run_pipeline(args, input_dir, output_dir, logger):
     """Run the fable processing pipeline based on command line arguments"""
-    pipeline = FablePipeline(data_dir, output_dir)
+    pipeline = FablePipeline(input_dir, output_dir)
 
     if args.only_analyze:
         logger.info("Running analysis only")
