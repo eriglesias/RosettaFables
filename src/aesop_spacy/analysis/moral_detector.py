@@ -90,54 +90,76 @@ class MoralDetector:
             'confidence': 0.0
         }
         
-        # Get language and text
-        language = fable.get('language', 'en')
-        body = fable.get('body', '')
-        
-        # Method 1: Look for moral tag in the original text - fix for explicit detection
-        moral_tag = fable.get('moral', None)
-        moral_type = fable.get('moral_type', None)
-        
-        if moral_tag and isinstance(moral_tag, str) and moral_tag.strip():
-            results['has_explicit_moral'] = True
-            results['moral_text'] = moral_tag.strip()
-            results['detection_method'] = 'xml_tag'
-            results['confidence'] = 1.0
-            
-            # If we have information about moral type (explicit/implicit)
-            if moral_type:
-                results['moral_type'] = moral_type
+
+        if not isinstance(fable, dict):
+            self.logger.error("Invalid fable type: expected dict, got %s", type(fable))
                 
+
             return results
+
+        try: 
+            # Get language and text
+            language = fable.get('language', 'en')
+            body = fable.get('body', '')
+
+            # Method 1: Look for moral tag in the original text - fix for explicit detection
+            moral_tag = fable.get('moral', None)
+            moral_type = fable.get('moral_type', None)
+
+            # Extra check: Handle case where moral_tag is a list or other non-string
+            if isinstance(moral_tag, list):
+                self.logger.warning("Found moral as list instead of string: %s", moral_tag)
+                # Try to extract text from the first item if possible
+                if moral_tag and isinstance(moral_tag[0], dict) and 'text' in moral_tag[0]:
+                    moral_tag = moral_tag[0]['text']
+                elif moral_tag and isinstance(moral_tag[0], str):
+                    moral_tag = moral_tag[0]
+                else:
+                    moral_tag = None
+            
+            if moral_tag and isinstance(moral_tag, str) and moral_tag.strip():
+                results['has_explicit_moral'] = True
+                results['moral_text'] = moral_tag.strip()
+                results['detection_method'] = 'xml_tag'
+                results['confidence'] = 1.0
+
+                # If we have information about moral type (explicit/implicit)
+                if moral_type:
+                    results['moral_type'] = moral_type        
+                return results
+
         
-        # Method 2: Look for common moral-indicating phrases
-        if body:
-            sentences = self._extract_sentences(body, language)
-            
-            # Check the last 3 sentences for moral indicators
-            indicators = self.moral_indicators.get(language, self.moral_indicators['en'])
-            
-            for i, sentence in enumerate(sentences[-3:]):
-                sentence_lower = sentence.lower()
+            # Method 2: Look for common moral-indicating phrases
+            if body:
+                sentences = self._extract_sentences(body, language)
                 
-                # Fix: Only match full words, not partial matches
-                for indicator in indicators:
-                    # Use word boundary check for more accurate matching
-                    indicator_pattern = r'\b' + re.escape(indicator.lower()) + r'\b'
-                    if re.search(indicator_pattern, sentence_lower):
-                        results['has_explicit_moral'] = True
-                        results['moral_text'] = sentence.strip()
-                        results['moral_location'] = 'end'
-                        results['detection_method'] = 'indicator_phrase'
-                        results['confidence'] = 0.8
-                        return results
+                # Check the last 3 sentences for moral indicators
+                indicators = self.moral_indicators.get(language, self.moral_indicators['en'])
+                
+                for sentence in sentences[-3:]:
+                    sentence_lower = sentence.lower()
                     
-                # Special case for test fable - check if this is just a test sentence
-                if 'test fable' in sentence_lower and len(sentences) <= 2:
-                    # Don't mark test sentences as morals
-                    continue
-        
-        # No explicit moral found
+                    # Fix: Only match full words, not partial matches
+                    for indicator in indicators:
+                        # Use word boundary check for more accurate matching
+                        indicator_pattern = r'\b' + re.escape(indicator.lower()) + r'\b'
+                        if re.search(indicator_pattern, sentence_lower):
+                            results['has_explicit_moral'] = True
+                            results['moral_text'] = sentence.strip()
+                            results['moral_location'] = 'end'
+                            results['detection_method'] = 'indicator_phrase'
+                            results['confidence'] = 0.8
+                            return results
+                        
+                    # Special case for test fable - check if this is just a test sentence
+                    if 'test fable' in sentence_lower and len(sentences) <= 2:
+                        # Don't mark test sentences as morals
+                        continue
+        except AttributeError as e:
+            self.logger.error("Error accessing fable attributes: %s, fable type: %s", e, type(fable))
+        except Exception as e:
+            self.logger.error("Unexpected error in detect_explicit_moral: %s", e)
+       
         return results
     
     def infer_implicit_moral(self, fable, explicit_moral_results=None):
@@ -160,44 +182,60 @@ class MoralDetector:
                     'inferred_morals': [],
                     'method': 'skipped_due_to_explicit_moral'
                 }
-        
-        # Get language and text
-        language = fable.get('language', 'en')
-        body = fable.get('body', '')
-        
-        if not body:
+        # Verify fable is a dictionary
+        if not isinstance(fable, dict):
+            self.logger.error("Invalid fable type in infer_implicit_moral: expected dict, got %s", type(fable))
             return {
                 'has_inferred_moral': False,
                 'inferred_morals': [],
-                'method': None
+                'method': 'error_invalid_fable_type'
             }
+        
+        try:
+            # Get language and text
+            language = fable.get('language', 'en')
+            body = fable.get('body', '')
             
-        # Step 1: Extract keywords and important terms
-        keywords = self._extract_keywords(body, language)
+            if not body:
+                return {
+                    'has_inferred_moral': False,
+                    'inferred_morals': [],
+                    'method': None
+                }
+                
+            # Step 1: Extract keywords and important terms
+            keywords = self._extract_keywords(body, language)
+            
+            # Step 2: Apply topic modeling
+            topics = self._apply_topic_modeling(body, language)
+            
+            # Step 3: Analyze character relationships and actions
+            characters = self._extract_characters(fable)
+            character_actions = self._analyze_character_actions(fable, characters)
+            
+            # Step 4: Generate potential morals from the combined analysis
+            potential_morals = self._generate_potential_morals(
+                keywords, topics, character_actions, language
+            )
+            
+            # Step 5: Rank and filter the potential morals
+            ranked_morals = self._rank_morals(potential_morals, body, language)
+            
+            results = {
+                'has_inferred_moral': len(ranked_morals) > 0,
+                'inferred_morals': ranked_morals,
+                'method': 'combined_nlp_inference',
+                'keywords': keywords[:10],  # Include top keywords for reference
+                'topics': topics
+            }
         
-        # Step 2: Apply topic modeling
-        topics = self._apply_topic_modeling(body, language)
-        
-        # Step 3: Analyze character relationships and actions
-        characters = self._extract_characters(fable)
-        character_actions = self._analyze_character_actions(fable, characters)
-        
-        # Step 4: Generate potential morals from the combined analysis
-        potential_morals = self._generate_potential_morals(
-            keywords, topics, character_actions, language
-        )
-        
-        # Step 5: Rank and filter the potential morals
-        ranked_morals = self._rank_morals(potential_morals, body, language)
-        
-        results = {
-            'has_inferred_moral': len(ranked_morals) > 0,
-            'inferred_morals': ranked_morals,
-            'method': 'combined_nlp_inference',
-            'keywords': keywords[:10],  # Include top keywords for reference
-            'topics': topics
-        }
-        
+        except Exception as e:
+            self.logger.error("Error in infer_implicit_moral: %s", e)
+            return {
+                'has_inferred_moral': False,
+                'inferred_morals': [],
+                'method': f'error_{type(e).__name__}'
+            }
         return results
     
     def classify_moral_theme(self, moral_text, language='en'):
@@ -223,6 +261,7 @@ class MoralDetector:
         # Score each category based on keyword presence
         category_scores = {}
         
+        # Use language-specific keywords when available
         for category, keywords in self.moral_categories.items():
             score = 0
             for keyword in keywords:
@@ -334,9 +373,22 @@ class MoralDetector:
             Dict with comparison results
         """
         comparison = {}
-        
+
+        if not isinstance(fables_by_id, dict):
+            self.logger.warning("Expected dict for fables_by_id, got %s", type(fables_by_id))
+            return comparison
+
         for fable_id, lang_fables in fables_by_id.items():
-            # Store results for each language version
+
+            # Skip fables with empty ID
+            if not fable_id:
+                self.logger.warning("Skipping fable with empty ID")
+                continue
+    
+            if not isinstance(lang_fables, dict):
+                self.logger.warning("Expected dict for fable_id %s, got %s", fable_id, type(lang_fables))
+                continue
+            
             moral_comparison = {
                 'languages': list(lang_fables.keys()),
                 'morals': {},
@@ -346,71 +398,81 @@ class MoralDetector:
             
             # Extract morals for each language
             for lang, fable in lang_fables.items():
-                # Detect explicit moral
-                explicit_results = self.detect_explicit_moral(fable)
-                
-                # Infer implicit moral if needed
-                implicit_results = {}
-                if not explicit_results.get('has_explicit_moral'):
-                    implicit_results = self.infer_implicit_moral(fable)
-                
-                # Determine the final moral text
-                moral_text = None
-                if explicit_results.get('has_explicit_moral'):
-                    moral_text = explicit_results.get('moral_text')
-                elif implicit_results.get('has_inferred_moral'):
-                    # Use the top inferred moral
-                    inferred = implicit_results.get('inferred_morals', [])
-                    if inferred:
-                        moral_text = inferred[0].get('text')
-                
-                # Classify the moral if we have one
-                theme_results = {}
-                if moral_text:
-                    theme_results = self.classify_moral_theme(moral_text, lang)
-                
-                # Store all results for this language
-                moral_comparison['morals'][lang] = {
-                    'explicit': explicit_results,
-                    'implicit': implicit_results,
-                    'final_moral': moral_text,
-                    'themes': theme_results
-                }
-            
-            # Analyze theme consistency across languages
-            all_themes = []
-            for lang, results in moral_comparison['morals'].items():
-                dominant = results.get('themes', {}).get('dominant_category')
-                if dominant:
-                    all_themes.append(dominant)
-            
-            # Calculate theme consistency
-            if all_themes:
-                theme_counter = Counter(all_themes)
-                most_common = theme_counter.most_common(1)[0]
-                consistency = most_common[1] / len(all_themes)
-                
-                moral_comparison['theme_consistency'] = {
-                    'dominant_theme': most_common[0],
-                    'consistency_score': consistency
-                }
-            
-            # Calculate semantic similarity between morals
-            moral_texts = {}
-            for lang, results in moral_comparison['morals'].items():
-                moral_text = results.get('final_moral')
-                if moral_text:
-                    moral_texts[lang] = moral_text
+                # skip if this fable isn't a dictionary
+                if not isinstance(fable, dict):
+                    self.logger.error("Fable for %s in fable_id %s is not a dictionary, got %s", lang, fable_id, type(fable))
+                    continue
 
-            # Only calculate similarity if we have morals in multiple languages
-            if len(moral_texts) >= 2:
-                similarity_results = self.calculate_moral_similarity(moral_texts)
-                moral_comparison['semantic_similarity'] = similarity_results
-            
+                try:
+                
+                    # Detect explicit moral
+                    explicit_results = self.detect_explicit_moral(fable)
+                    
+                    # Infer implicit moral if needed
+                    implicit_results = {}
+                    if not explicit_results.get('has_explicit_moral'):
+                        implicit_results = self.infer_implicit_moral(fable)
+                    
+                    # Determine the final moral text
+                    moral_text = None
+                    if explicit_results.get('has_explicit_moral'):
+                        moral_text = explicit_results.get('moral_text')
+                    elif implicit_results.get('has_inferred_moral'):
+                        # Use the top inferred moral
+                        inferred = implicit_results.get('inferred_morals', [])
+                        if inferred:
+                            moral_text = inferred[0].get('text')
+                    
+                    # Classify the moral if we have one
+                    theme_results = {}
+                    if moral_text:
+                        theme_results = self.classify_moral_theme(moral_text, lang)
+                    
+                    # Store all results for this language
+                    moral_comparison['morals'][lang] = {
+                        'explicit': explicit_results,
+                        'implicit': implicit_results,
+                        'final_moral': moral_text,
+                        'themes': theme_results
+                    }
+                
+                    # Analyze theme consistency across languages
+                    all_themes = []
+                    for lang, results in moral_comparison['morals'].items():
+                        dominant = results.get('themes', {}).get('dominant_category')
+                        if dominant:
+                            all_themes.append(dominant)
+                    
+                    # Calculate theme consistency
+                    if all_themes:
+                        theme_counter = Counter(all_themes)
+                        most_common = theme_counter.most_common(1)[0]
+                        consistency = most_common[1] / len(all_themes)
+                        
+                        moral_comparison['theme_consistency'] = {
+                            'dominant_theme': most_common[0],
+                            'consistency_score': consistency
+                        }
+                    
+                    # Calculate semantic similarity between morals
+                    moral_texts = {}
+                    for lang, results in moral_comparison['morals'].items():
+                        moral_text = results.get('final_moral')
+                        if moral_text:
+                            moral_texts[lang] = moral_text
+
+                    # Only calculate similarity if we have morals in multiple languages
+                    if len(moral_texts) >= 2:
+                        similarity_results = self.calculate_moral_similarity(moral_texts)
+                        moral_comparison['semantic_similarity'] = similarity_results
+                    
+                    comparison[fable_id] = moral_comparison
+                except Exception as e:
+                    self.logger.error("Error processing moral for fable %s in %s: %s", fable_id, lang, e)
             comparison[fable_id] = moral_comparison
-        
         return comparison
     
+    # Rest of the helper methods remain unchanged
     def _extract_sentences(self, text, language):
         """
         Extract sentences from text with language-specific handling.
@@ -451,8 +513,9 @@ class MoralDetector:
             # Get stopwords for the language if available
             try:
                 stop_words = list(stopwords.words(self._map_language_code(language)))
-            except:
+            except (ValueError, LookupError) as e:
                 # Fallback to empty list if language not supported
+                self.logger.warning("Stopwords not available for language %s: %s", language, e)
                 stop_words = []
             
             # Add custom stopwords from our dictionary
@@ -485,10 +548,10 @@ class MoralDetector:
                     for term, score in sorted_scores
                 ]
             except Exception as e:
-                self.logger.warning(f"Keyword extraction TF-IDF failed: {e}")
+                self.logger.warning("Keyword extraction TF-IDF failed: %s", e)
                 return []
         except Exception as e:
-            self.logger.warning(f"Keyword extraction failed: {e}")
+            self.logger.warning("Keyword extraction failed: %s", e)
             return []
     
     def _apply_topic_modeling(self, text, language):
@@ -507,8 +570,9 @@ class MoralDetector:
             # Get stopwords for the language if available
             try:
                 stop_words = list(stopwords.words(self._map_language_code(language)))
-            except:
+            except (ValueError, LookupError) as e:
                 # Fallback to empty list if language not supported
+                self.logger.warning("Stopwords not available for language %s: %s", language, e)
                 stop_words = []
             
             # Add custom stopwords - fix: use list instead of set
@@ -552,15 +616,15 @@ class MoralDetector:
                 
                 return topics
             except Exception as e:
-                self.logger.warning(f"Topic modeling LDA failed: {e}")
+                self.logger.warning("Topic modeling LDA failed: %s", e)
                 return []
         except Exception as e:
-            self.logger.warning(f"Topic modeling failed: {e}")
+            self.logger.warning("Topic modeling failed: %s", e)
             return []
     
     def _extract_characters(self, fable):
         """
-        Extract main characters from the fable.
+        Extract main characters from the fable with comprehensive error handling.
         
         Args:
             fable: Fable dictionary
@@ -568,105 +632,158 @@ class MoralDetector:
         Returns:
             List of character dictionaries
         """
-        # Get language
-        language = fable.get('language', 'en')
-        
-        # Get stopwords for this language
-        stopwords_list = self.stopwords_by_lang.get(language, [])
-        
-        # Get named entities if available
-        entities = fable.get('entities', [])
-        if entities:
-            # Filter for PERSON, ANIMAL, or equivalent entities
-            person_entities = [
-                e.get('text') 
-                for e in entities 
-                if e.get('label') in ['PERSON', 'ANIMAL', 'ORG']
-            ]
+        # Safety check for fable type
+        if not isinstance(fable, dict):
+            self.logger.warning("Invalid fable type in _extract_characters: %s", type(fable))
+            return []
             
-            if person_entities:
-                # Count frequency and return top entities
-                counter = Counter(person_entities)
-                char_list = [
-                    {'name': name, 'count': count}
-                    for name, count in counter.most_common(5)
-                    if name.lower() not in stopwords_list and len(name) > 2
-                ]
-                if char_list:
-                    return char_list
-        
-        # Fallback: look for capitalized words that might be characters
-        body = fable.get('body', '')
-        words = re.findall(r'\b[A-Z][a-z]+\b', body)
-        
-        if words:
-            # Filter out common stopwords and short words
-            # Fix: better filtering for Spanish connectors and other non-character terms
-            filtered_words = [w for w in words if w.lower() not in stopwords_list and len(w) > 2]
+        try:
+            # Get language
+            language = fable.get('language', 'en')
             
-            # For Spanish and similar languages, look for common character indicators
-            if language in ['es', 'en', 'de', 'nl']:
-                animal_indicators = {
-                    'es': ['lobo', 'cordero', 'zorro', 'león', 'ratón', 'perro', 'gato', 'oveja'],
-                    'en': ['wolf', 'lamb', 'fox', 'lion', 'mouse', 'dog', 'cat', 'sheep'],
-                    'de': ['Wolf', 'Lamm', 'Fuchs', 'Löwe', 'Maus', 'Hund', 'Katze', 'Schaf'],
-                    'nl': ['wolf', 'lam', 'vos', 'leeuw', 'muis', 'hond', 'kat', 'schaap']
-                }
+            # Get stopwords for this language
+            stopwords_list = self.stopwords_by_lang.get(language, [])
+            
+            # Get named entities if available - with careful type checking
+            entities = []
+            if 'entities' in fable:
+                raw_entities = fable['entities']
+                if isinstance(raw_entities, list):
+                    # Handle list of entities
+                    person_entities = []
+                    for entity in raw_entities:
+                        # Handle different entity formats based on type
+                        if isinstance(entity, dict) and 'text' in entity and 'label' in entity:
+                            # Dictionary format: {'text': 'Wolf', 'label': 'PERSON'}
+                            if entity['label'] in ['PERSON', 'ANIMAL', 'ORG']:
+                                person_entities.append(entity['text'])
+                        elif isinstance(entity, list) and len(entity) >= 2:
+                            # List format: ['Wolf', 'PERSON']
+                            if entity[1] in ['PERSON', 'ANIMAL', 'ORG']:
+                                person_entities.append(entity[0])
+                        elif isinstance(entity, tuple) and len(entity) >= 2:
+                            # Tuple format: ('Wolf', 'PERSON')
+                            if entity[1] in ['PERSON', 'ANIMAL', 'ORG']:
+                                person_entities.append(entity[0])
+                    
+                    if person_entities:
+                        # Count frequency and return top entities
+                        counter = Counter(person_entities)
+                        char_list = [
+                            {'name': name, 'count': count}
+                            for name, count in counter.most_common(5)
+                            if name.lower() not in stopwords_list and len(name) > 2
+                        ]
+                        if char_list:
+                            return char_list
+                else:
+                    self.logger.warning("Entities is not a list: %s", type(raw_entities))
+            
+            # Fallback: look for capitalized words that might be characters
+            body = fable.get('body', '')
+            if not isinstance(body, str):
+                self.logger.warning("Body is not a string: %s", type(body))
+                return []
                 
-                # Get animal terms for this language
-                animals = animal_indicators.get(language, [])
-                
-                # Look for these animal names in the text
-                for animal in animals:
-                    # Look for capitalized and lowercase versions
-                    matches = re.findall(rf'\b{animal}\b', body, re.IGNORECASE)
-                    if matches:
-                        filtered_words.extend([animal.capitalize()] * len(matches))
+            words = re.findall(r'\b[A-Z][a-z]+\b', body)
             
-            if filtered_words:
-                counter = Counter(filtered_words)
-                # Double-check to make sure words like "Aunque" are not included
-                return [
-                    {'name': name, 'count': count}
-                    for name, count in counter.most_common(5)
-                    if name.lower() not in [word.lower() for word in stopwords_list]
-                ]
-        
-        return []
+            if words:
+                # Filter out common stopwords and short words
+                filtered_words = [w for w in words if w.lower() not in stopwords_list and len(w) > 2]
+                
+                # For Spanish and similar languages, look for common character indicators
+                if language in ['es', 'en', 'de', 'nl']:
+                    animal_indicators = {
+                        'es': ['lobo', 'cordero', 'zorro', 'león', 'ratón', 'perro', 'gato', 'oveja'],
+                        'en': ['wolf', 'lamb', 'fox', 'lion', 'mouse', 'dog', 'cat', 'sheep'],
+                        'de': ['Wolf', 'Lamm', 'Fuchs', 'Löwe', 'Maus', 'Hund', 'Katze', 'Schaf'],
+                        'nl': ['wolf', 'lam', 'vos', 'leeuw', 'muis', 'hond', 'kat', 'schaap']
+                    }
+                    
+                    # Get animal terms for this language
+                    animals = animal_indicators.get(language, [])
+                    
+                    # Look for these animal names in the text
+                    for animal in animals:
+                        # Look for capitalized and lowercase versions
+                        matches = re.findall(rf'\b{animal}\b', body, re.IGNORECASE)
+                        if matches:
+                            filtered_words.extend([animal.capitalize()] * len(matches))
+                
+                if filtered_words:
+                    counter = Counter(filtered_words)
+                    # Double-check to make sure words like "Aunque" are not included
+                    return [
+                        {'name': name, 'count': count}
+                        for name, count in counter.most_common(5)
+                        if name.lower() not in [word.lower() for word in stopwords_list]
+                    ]
+            
+            return []
+        except Exception as e:
+            self.logger.error("Error extracting characters: %s", e)
+            return []
     
     def _analyze_character_actions(self, fable, characters):
         """
-        Analyze actions associated with each character.
+        Analyze actions performed by characters in the fable.
         
         Args:
             fable: Fable dictionary
             characters: List of character dictionaries
             
         Returns:
-            Dictionary mapping characters to their actions
+            Dict mapping character names to action information
         """
-        # This would require detailed parsing in a real implementation
-        # For demonstration, we'll return a simplified structure
-        
-        actions = {}
-        body = fable.get('body', '')
-        
-        for character in characters:
-            name = character.get('name', '')
-            if name:
-                # Find sentences containing this character
-                sentences = [
-                    s for s in re.split(r'[.!?]+', body)
-                    if name in s
-                ]
+        if not isinstance(fable, dict) or not isinstance(characters, list):
+            self.logger.error("Invalid fable or characters type in _analyze_character_actions")
+            return {}
+            
+        try:
+            # Get language and text
+            language = fable.get('language', 'en')
+            body = fable.get('body', '')
+            
+            if not body or not characters:
+                return {}
                 
-                # Simplified "action" extraction
-                actions[name] = {
-                    'sentence_count': len(sentences),
-                    'sample_sentences': sentences[:2]  # First two sentences
+            character_actions = {}
+            
+            # Process each character
+            for char_dict in characters:
+                char_name = char_dict.get('name')
+                if not char_name:
+                    continue
+                    
+                # Find sentences containing this character
+                sentences = self._extract_sentences(body, language)
+                character_sentences = []
+                
+                for sentence in sentences:
+                    # Check for character name (case-insensitive)
+                    if re.search(rf'\b{re.escape(char_name)}\b', sentence, re.IGNORECASE):
+                        character_sentences.append(sentence)
+                
+                if not character_sentences:
+                    continue
+                    
+                # Extract verbs (simple approach - would be more sophisticated in practice)
+                actions = []
+                for sent in character_sentences:
+                    # Look for basic verb patterns
+                    verb_pattern = rf'\b{re.escape(char_name)}\b\s+(\w+ed|\w+s|\w+ing)'
+                    matches = re.findall(verb_pattern, sent, re.IGNORECASE)
+                    actions.extend(matches)
+                
+                character_actions[char_name] = {
+                    'sample_sentences': character_sentences[:3],
+                    'verbs': actions[:5] if actions else []
                 }
-        
-        return actions
+            
+            return character_actions
+        except Exception as e:
+            self.logger.error("Error analyzing character actions: %s", e)
+            return {}
     
     def _generate_potential_morals(self, keywords, topics, character_actions, language):
         """
@@ -806,8 +923,9 @@ class MoralDetector:
             # Get stopwords for the language if available - fix: use list
             try:
                 stop_words = list(stopwords.words(self._map_language_code(language)))
-            except:
+            except (ValueError, LookupError) as e:
                 # Fallback to empty list if language not supported
+                self.logger.warning("Stopwords not available for language %s: %s", language, e)
                 stop_words = []
                 
             # Add custom stopwords
@@ -847,7 +965,7 @@ class MoralDetector:
             return ranked_morals[:3]  # Top 3 morals
             
         except Exception as e:
-            self.logger.warning(f"Moral ranking failed: {e}")
+            self.logger.warning("Moral ranking failed: %s", e)
             return []
     
     def _map_language_code(self, language):

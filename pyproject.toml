@@ -19,6 +19,7 @@ seaborn = "^0.13.2"
 scikit-learn = "^1.6.1"
 nltk = "^3.9.1"
 sentence-transformers = "^4.1.0"
+calmap = "^0.0.11"
 
 
 [tool.poetry.group.dev.dependencies]
