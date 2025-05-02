@@ -1,0 +1,233 @@
+{
+  "total_word_count": 77,
+  "unique_word_count": 57,
+  "top_words": [
+    {
+      "word": "que",
+      "count": 5,
+      "relative_freq": 0.06493506493506493
+    },
+    {
+      "word": "lobo",
+      "count": 4,
+      "relative_freq": 0.05194805194805195
+    },
+    {
+      "word": "cordero",
+      "count": 3,
+      "relative_freq": 0.03896103896103896
+    },
+    {
+      "word": "río",
+      "count": 3,
+      "relative_freq": 0.03896103896103896
+    },
+    {
+      "word": "no",
+      "count": 3,
+      "relative_freq": 0.03896103896103896
+    },
+    {
+      "word": "beber",
+      "count": 2,
+      "relative_freq": 0.025974025974025976
+    },
+    {
+      "word": "pretexto",
+      "count": 2,
+      "relative_freq": 0.025974025974025976
+    },
+    {
+      "word": "arriba",
+      "count": 2,
+      "relative_freq": 0.025974025974025976
+    },
+    {
+      "word": "le",
+      "count": 2,
+      "relative_freq": 0.025974025974025976
+    },
+    {
+      "word": "agua",
+      "count": 2,
+      "relative_freq": 0.025974025974025976
+    },
+    {
+      "word": "dijo",
+      "count": 2,
+      "relative_freq": 0.025974025974025976
+    },
+    {
+      "word": "año",
+      "count": 2,
+      "relative_freq": 0.025974025974025976
+    },
+    {
+      "word": "vio",
+      "count": 1,
+      "relative_freq": 0.012987012987012988
+    },
+    {
+      "word": "quiso",
+      "count": 1,
+      "relative_freq": 0.012987012987012988
+    },
+    {
+      "word": "devorarlo",
+      "count": 1,
+      "relative_freq": 0.012987012987012988
+    },
+    {
+      "word": "razonable",
+      "count": 1,
+      "relative_freq": 0.012987012987012988
+    },
+    {
+      "word": "eso",
+      "count": 1,
+      "relative_freq": 0.012987012987012988
+    },
+    {
+      "word": "aunque",
+      "count": 1,
+      "relative_freq": 0.012987012987012988
+    },
+    {
+      "word": "estaba",
+      "count": 1,
+      "relative_freq": 0.012987012987012988
+    },
+    {
+      "word": "situado",
+      "count": 1,
+      "relative_freq": 0.012987012987012988
+    }
+  ],
+  "hapax_legomena_count": 45,
+  "hapax_legomena_ratio": 0.7894736842105263,
+  "dis_legomena_count": 7,
+  "entropy": 5.645042346137405,
+  "zipf_data": [
+    {
+      "rank": 1,
+      "word": "que",
+      "count": 5,
+      "expected_zipf": 77.0
+    },
+    {
+      "rank": 2,
+      "word": "lobo",
+      "count": 4,
+      "expected_zipf": 38.5
+    },
+    {
+      "rank": 3,
+      "word": "cordero",
+      "count": 3,
+      "expected_zipf": 25.666666666666668
+    },
+    {
+      "rank": 4,
+      "word": "río",
+      "count": 3,
+      "expected_zipf": 19.25
+    },
+    {
+      "rank": 5,
+      "word": "no",
+      "count": 3,
+      "expected_zipf": 15.4
+    },
+    {
+      "rank": 6,
+      "word": "beber",
+      "count": 2,
+      "expected_zipf": 12.833333333333334
+    },
+    {
+      "rank": 7,
+      "word": "pretexto",
+      "count": 2,
+      "expected_zipf": 11.0
+    },
+    {
+      "rank": 8,
+      "word": "arriba",
+      "count": 2,
+      "expected_zipf": 9.625
+    },
+    {
+      "rank": 9,
+      "word": "le",
+      "count": 2,
+      "expected_zipf": 8.555555555555555
+    },
+    {
+      "rank": 10,
+      "word": "agua",
+      "count": 2,
+      "expected_zipf": 7.7
+    },
+    {
+      "rank": 11,
+      "word": "dijo",
+      "count": 2,
+      "expected_zipf": 7.0
+    },
+    {
+      "rank": 12,
+      "word": "año",
+      "count": 2,
+      "expected_zipf": 6.416666666666667
+    },
+    {
+      "rank": 13,
+      "word": "vio",
+      "count": 1,
+      "expected_zipf": 5.923076923076923
+    },
+    {
+      "rank": 14,
+      "word": "quiso",
+      "count": 1,
+      "expected_zipf": 5.5
+    },
+    {
+      "rank": 15,
+      "word": "devorarlo",
+      "count": 1,
+      "expected_zipf": 5.133333333333334
+    },
+    {
+      "rank": 16,
+      "word": "razonable",
+      "count": 1,
+      "expected_zipf": 4.8125
+    },
+    {
+      "rank": 17,
+      "word": "eso",
+      "count": 1,
+      "expected_zipf": 4.529411764705882
+    },
+    {
+      "rank": 18,
+      "word": "aunque",
+      "count": 1,
+      "expected_zipf": 4.277777777777778
+    },
+    {
+      "rank": 19,
+      "word": "estaba",
+      "count": 1,
+      "expected_zipf": 4.052631578947368
+    },
+    {
+      "rank": 20,
+      "word": "situado",
+      "count": 1,
+      "expected_zipf": 3.85
+    }
+  ],
+  "fable_id": "1"
+}

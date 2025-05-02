@@ -1,0 +1,233 @@
+{
+  "total_word_count": 130,
+  "unique_word_count": 100,
+  "top_words": [
+    {
+      "word": "que",
+      "count": 6,
+      "relative_freq": 0.046153846153846156
+    },
+    {
+      "word": "zorra",
+      "count": 4,
+      "relative_freq": 0.03076923076923077
+    },
+    {
+      "word": "pozo",
+      "count": 3,
+      "relative_freq": 0.023076923076923078
+    },
+    {
+      "word": "al",
+      "count": 3,
+      "relative_freq": 0.023076923076923078
+    },
+    {
+      "word": "le",
+      "count": 3,
+      "relative_freq": 0.023076923076923078
+    },
+    {
+      "word": "se",
+      "count": 3,
+      "relative_freq": 0.023076923076923078
+    },
+    {
+      "word": "había",
+      "count": 2,
+      "relative_freq": 0.015384615384615385
+    },
+    {
+      "word": "macho",
+      "count": 2,
+      "relative_freq": 0.015384615384615385
+    },
+    {
+      "word": "cabrío",
+      "count": 2,
+      "relative_freq": 0.015384615384615385
+    },
+    {
+      "word": "sed",
+      "count": 2,
+      "relative_freq": 0.015384615384615385
+    },
+    {
+      "word": "llegó",
+      "count": 2,
+      "relative_freq": 0.015384615384615385
+    },
+    {
+      "word": "si",
+      "count": 2,
+      "relative_freq": 0.015384615384615385
+    },
+    {
+      "word": "era",
+      "count": 2,
+      "relative_freq": 0.015384615384615385
+    },
+    {
+      "word": "buena",
+      "count": 2,
+      "relative_freq": 0.015384615384615385
+    },
+    {
+      "word": "agua",
+      "count": 2,
+      "relative_freq": 0.015384615384615385
+    },
+    {
+      "word": "del",
+      "count": 2,
+      "relative_freq": 0.015384615384615385
+    },
+    {
+      "word": "forma",
+      "count": 2,
+      "relative_freq": 0.015384615384615385
+    },
+    {
+      "word": "subir",
+      "count": 2,
+      "relative_freq": 0.015384615384615385
+    },
+    {
+      "word": "patas",
+      "count": 2,
+      "relative_freq": 0.015384615384615385
+    },
+    {
+      "word": "cuernos",
+      "count": 2,
+      "relative_freq": 0.015384615384615385
+    }
+  ],
+  "hapax_legomena_count": 80,
+  "hapax_legomena_ratio": 0.8,
+  "dis_legomena_count": 14,
+  "entropy": 6.479834543697833,
+  "zipf_data": [
+    {
+      "rank": 1,
+      "word": "que",
+      "count": 6,
+      "expected_zipf": 130.0
+    },
+    {
+      "rank": 2,
+      "word": "zorra",
+      "count": 4,
+      "expected_zipf": 65.0
+    },
+    {
+      "rank": 3,
+      "word": "pozo",
+      "count": 3,
+      "expected_zipf": 43.333333333333336
+    },
+    {
+      "rank": 4,
+      "word": "al",
+      "count": 3,
+      "expected_zipf": 32.5
+    },
+    {
+      "rank": 5,
+      "word": "le",
+      "count": 3,
+      "expected_zipf": 26.0
+    },
+    {
+      "rank": 6,
+      "word": "se",
+      "count": 3,
+      "expected_zipf": 21.666666666666668
+    },
+    {
+      "rank": 7,
+      "word": "había",
+      "count": 2,
+      "expected_zipf": 18.571428571428573
+    },
+    {
+      "rank": 8,
+      "word": "macho",
+      "count": 2,
+      "expected_zipf": 16.25
+    },
+    {
+      "rank": 9,
+      "word": "cabrío",
+      "count": 2,
+      "expected_zipf": 14.444444444444445
+    },
+    {
+      "rank": 10,
+      "word": "sed",
+      "count": 2,
+      "expected_zipf": 13.0
+    },
+    {
+      "rank": 11,
+      "word": "llegó",
+      "count": 2,
+      "expected_zipf": 11.818181818181818
+    },
+    {
+      "rank": 12,
+      "word": "si",
+      "count": 2,
+      "expected_zipf": 10.833333333333334
+    },
+    {
+      "rank": 13,
+      "word": "era",
+      "count": 2,
+      "expected_zipf": 10.0
+    },
+    {
+      "rank": 14,
+      "word": "buena",
+      "count": 2,
+      "expected_zipf": 9.285714285714286
+    },
+    {
+      "rank": 15,
+      "word": "agua",
+      "count": 2,
+      "expected_zipf": 8.666666666666666
+    },
+    {
+      "rank": 16,
+      "word": "del",
+      "count": 2,
+      "expected_zipf": 8.125
+    },
+    {
+      "rank": 17,
+      "word": "forma",
+      "count": 2,
+      "expected_zipf": 7.647058823529412
+    },
+    {
+      "rank": 18,
+      "word": "subir",
+      "count": 2,
+      "expected_zipf": 7.222222222222222
+    },
+    {
+      "rank": 19,
+      "word": "patas",
+      "count": 2,
+      "expected_zipf": 6.842105263157895
+    },
+    {
+      "rank": 20,
+      "word": "cuernos",
+      "count": 2,
+      "expected_zipf": 6.5
+    }
+  ],
+  "fable_id": "es_7"
+}

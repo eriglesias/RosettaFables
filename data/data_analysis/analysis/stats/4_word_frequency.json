@@ -1,0 +1,233 @@
+{
+  "total_word_count": 58,
+  "unique_word_count": 47,
+  "top_words": [
+    {
+      "word": "lobo",
+      "count": 3,
+      "relative_freq": 0.05172413793103448
+    },
+    {
+      "word": "que",
+      "count": 3,
+      "relative_freq": 0.05172413793103448
+    },
+    {
+      "word": "hueso",
+      "count": 3,
+      "relative_freq": 0.05172413793103448
+    },
+    {
+      "word": "le",
+      "count": 3,
+      "relative_freq": 0.05172413793103448
+    },
+    {
+      "word": "cabeza",
+      "count": 2,
+      "relative_freq": 0.034482758620689655
+    },
+    {
+      "word": "del",
+      "count": 2,
+      "relative_freq": 0.034482758620689655
+    },
+    {
+      "word": "paga",
+      "count": 2,
+      "relative_freq": 0.034482758620689655
+    },
+    {
+      "word": "se",
+      "count": 1,
+      "relative_freq": 0.017241379310344827
+    },
+    {
+      "word": "había",
+      "count": 1,
+      "relative_freq": 0.017241379310344827
+    },
+    {
+      "word": "atragantado",
+      "count": 1,
+      "relative_freq": 0.017241379310344827
+    },
+    {
+      "word": "iba",
+      "count": 1,
+      "relative_freq": 0.017241379310344827
+    },
+    {
+      "word": "lado",
+      "count": 1,
+      "relative_freq": 0.017241379310344827
+    },
+    {
+      "word": "otro",
+      "count": 1,
+      "relative_freq": 0.017241379310344827
+    },
+    {
+      "word": "buscando",
+      "count": 1,
+      "relative_freq": 0.017241379310344827
+    },
+    {
+      "word": "quien",
+      "count": 1,
+      "relative_freq": 0.017241379310344827
+    },
+    {
+      "word": "lo",
+      "count": 1,
+      "relative_freq": 0.017241379310344827
+    },
+    {
+      "word": "curara",
+      "count": 1,
+      "relative_freq": 0.017241379310344827
+    },
+    {
+      "word": "al",
+      "count": 1,
+      "relative_freq": 0.017241379310344827
+    },
+    {
+      "word": "encontrarse",
+      "count": 1,
+      "relative_freq": 0.017241379310344827
+    },
+    {
+      "word": "garza",
+      "count": 1,
+      "relative_freq": 0.017241379310344827
+    }
+  ],
+  "hapax_legomena_count": 40,
+  "hapax_legomena_ratio": 0.851063829787234,
+  "dis_legomena_count": 3,
+  "entropy": 5.426609443254229,
+  "zipf_data": [
+    {
+      "rank": 1,
+      "word": "lobo",
+      "count": 3,
+      "expected_zipf": 58.0
+    },
+    {
+      "rank": 2,
+      "word": "que",
+      "count": 3,
+      "expected_zipf": 29.0
+    },
+    {
+      "rank": 3,
+      "word": "hueso",
+      "count": 3,
+      "expected_zipf": 19.333333333333332
+    },
+    {
+      "rank": 4,
+      "word": "le",
+      "count": 3,
+      "expected_zipf": 14.5
+    },
+    {
+      "rank": 5,
+      "word": "cabeza",
+      "count": 2,
+      "expected_zipf": 11.6
+    },
+    {
+      "rank": 6,
+      "word": "del",
+      "count": 2,
+      "expected_zipf": 9.666666666666666
+    },
+    {
+      "rank": 7,
+      "word": "paga",
+      "count": 2,
+      "expected_zipf": 8.285714285714286
+    },
+    {
+      "rank": 8,
+      "word": "se",
+      "count": 1,
+      "expected_zipf": 7.25
+    },
+    {
+      "rank": 9,
+      "word": "había",
+      "count": 1,
+      "expected_zipf": 6.444444444444445
+    },
+    {
+      "rank": 10,
+      "word": "atragantado",
+      "count": 1,
+      "expected_zipf": 5.8
+    },
+    {
+      "rank": 11,
+      "word": "iba",
+      "count": 1,
+      "expected_zipf": 5.2727272727272725
+    },
+    {
+      "rank": 12,
+      "word": "lado",
+      "count": 1,
+      "expected_zipf": 4.833333333333333
+    },
+    {
+      "rank": 13,
+      "word": "otro",
+      "count": 1,
+      "expected_zipf": 4.461538461538462
+    },
+    {
+      "rank": 14,
+      "word": "buscando",
+      "count": 1,
+      "expected_zipf": 4.142857142857143
+    },
+    {
+      "rank": 15,
+      "word": "quien",
+      "count": 1,
+      "expected_zipf": 3.8666666666666667
+    },
+    {
+      "rank": 16,
+      "word": "lo",
+      "count": 1,
+      "expected_zipf": 3.625
+    },
+    {
+      "rank": 17,
+      "word": "curara",
+      "count": 1,
+      "expected_zipf": 3.411764705882353
+    },
+    {
+      "rank": 18,
+      "word": "al",
+      "count": 1,
+      "expected_zipf": 3.2222222222222223
+    },
+    {
+      "rank": 19,
+      "word": "encontrarse",
+      "count": 1,
+      "expected_zipf": 3.0526315789473686
+    },
+    {
+      "rank": 20,
+      "word": "garza",
+      "count": 1,
+      "expected_zipf": 2.9
+    }
+  ],
+  "fable_id": "4"
+}

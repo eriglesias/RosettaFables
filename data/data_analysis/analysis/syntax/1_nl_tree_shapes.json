@@ -1,0 +1,12 @@
+{
+  "average_branching_factor": 0,
+  "max_branching_factor": 0,
+  "width_depth_ratios": [],
+  "average_width_depth_ratio": 0,
+  "non_projective_count": 0,
+  "sentence_count": 25,
+  "language_insights": {
+    "typical_branching": "Dutch mixes left and right branching like German",
+    "typical_width_depth": "Dutch verb-final structures create deeper trees"
+  }
+}

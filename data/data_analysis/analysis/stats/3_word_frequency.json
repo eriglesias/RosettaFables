@@ -1,0 +1,222 @@
+{
+  "total_word_count": 19,
+  "unique_word_count": 19,
+  "top_words": [
+    {
+      "word": "zorra",
+      "count": 1,
+      "relative_freq": 0.05263157894736842
+    },
+    {
+      "word": "hambrienta",
+      "count": 1,
+      "relative_freq": 0.05263157894736842
+    },
+    {
+      "word": "al",
+      "count": 1,
+      "relative_freq": 0.05263157894736842
+    },
+    {
+      "word": "ver",
+      "count": 1,
+      "relative_freq": 0.05263157894736842
+    },
+    {
+      "word": "racimos",
+      "count": 1,
+      "relative_freq": 0.05263157894736842
+    },
+    {
+      "word": "que",
+      "count": 1,
+      "relative_freq": 0.05263157894736842
+    },
+    {
+      "word": "colgaban",
+      "count": 1,
+      "relative_freq": 0.05263157894736842
+    },
+    {
+      "word": "parra",
+      "count": 1,
+      "relative_freq": 0.05263157894736842
+    },
+    {
+      "word": "quiso",
+      "count": 1,
+      "relative_freq": 0.05263157894736842
+    },
+    {
+      "word": "apoderarse",
+      "count": 1,
+      "relative_freq": 0.05263157894736842
+    },
+    {
+      "word": "ellos",
+      "count": 1,
+      "relative_freq": 0.05263157894736842
+    },
+    {
+      "word": "no",
+      "count": 1,
+      "relative_freq": 0.05263157894736842
+    },
+    {
+      "word": "pudo",
+      "count": 1,
+      "relative_freq": 0.05263157894736842
+    },
+    {
+      "word": "apartándose",
+      "count": 1,
+      "relative_freq": 0.05263157894736842
+    },
+    {
+      "word": "se",
+      "count": 1,
+      "relative_freq": 0.05263157894736842
+    },
+    {
+      "word": "dijo",
+      "count": 1,
+      "relative_freq": 0.05263157894736842
+    },
+    {
+      "word": "sí",
+      "count": 1,
+      "relative_freq": 0.05263157894736842
+    },
+    {
+      "word": "mismaestán",
+      "count": 1,
+      "relative_freq": 0.05263157894736842
+    },
+    {
+      "word": "verdes",
+      "count": 1,
+      "relative_freq": 0.05263157894736842
+    }
+  ],
+  "hapax_legomena_count": 19,
+  "hapax_legomena_ratio": 1.0,
+  "dis_legomena_count": 0,
+  "entropy": 4.247927513443585,
+  "zipf_data": [
+    {
+      "rank": 1,
+      "word": "zorra",
+      "count": 1,
+      "expected_zipf": 19.0
+    },
+    {
+      "rank": 2,
+      "word": "hambrienta",
+      "count": 1,
+      "expected_zipf": 9.5
+    },
+    {
+      "rank": 3,
+      "word": "al",
+      "count": 1,
+      "expected_zipf": 6.333333333333333
+    },
+    {
+      "rank": 4,
+      "word": "ver",
+      "count": 1,
+      "expected_zipf": 4.75
+    },
+    {
+      "rank": 5,
+      "word": "racimos",
+      "count": 1,
+      "expected_zipf": 3.8
+    },
+    {
+      "rank": 6,
+      "word": "que",
+      "count": 1,
+      "expected_zipf": 3.1666666666666665
+    },
+    {
+      "rank": 7,
+      "word": "colgaban",
+      "count": 1,
+      "expected_zipf": 2.7142857142857144
+    },
+    {
+      "rank": 8,
+      "word": "parra",
+      "count": 1,
+      "expected_zipf": 2.375
+    },
+    {
+      "rank": 9,
+      "word": "quiso",
+      "count": 1,
+      "expected_zipf": 2.111111111111111
+    },
+    {
+      "rank": 10,
+      "word": "apoderarse",
+      "count": 1,
+      "expected_zipf": 1.9
+    },
+    {
+      "rank": 11,
+      "word": "ellos",
+      "count": 1,
+      "expected_zipf": 1.7272727272727273
+    },
+    {
+      "rank": 12,
+      "word": "no",
+      "count": 1,
+      "expected_zipf": 1.5833333333333333
+    },
+    {
+      "rank": 13,
+      "word": "pudo",
+      "count": 1,
+      "expected_zipf": 1.4615384615384615
+    },
+    {
+      "rank": 14,
+      "word": "apartándose",
+      "count": 1,
+      "expected_zipf": 1.3571428571428572
+    },
+    {
+      "rank": 15,
+      "word": "se",
+      "count": 1,
+      "expected_zipf": 1.2666666666666666
+    },
+    {
+      "rank": 16,
+      "word": "dijo",
+      "count": 1,
+      "expected_zipf": 1.1875
+    },
+    {
+      "rank": 17,
+      "word": "sí",
+      "count": 1,
+      "expected_zipf": 1.1176470588235294
+    },
+    {
+      "rank": 18,
+      "word": "mismaestán",
+      "count": 1,
+      "expected_zipf": 1.0555555555555556
+    },
+    {
+      "rank": 19,
+      "word": "verdes",
+      "count": 1,
+      "expected_zipf": 1.0
+    }
+  ],
+  "fable_id": "3"
+}

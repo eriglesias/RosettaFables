@@ -1,0 +1,334 @@
+{
+  "fable_id": "2",
+  "languages": [
+    "grc",
+    "nl",
+    "de",
+    "en",
+    "es"
+  ],
+  "token_counts": {
+    "grc": 200,
+    "nl": 375,
+    "de": 407,
+    "en": 228,
+    "es": 232
+  },
+  "common_entities": [],
+  "sentiment_scores": {},
+  "complexity_scores": {},
+  "basic_metrics": {
+    "title": {
+      "grc": "Μῦς ἀρουραῖος καὶ μῦς ἀστικός",
+      "nl": "Stadsmuis en Veldmuis",
+      "de": "Die Stadt und Die Landmaus",
+      "en": "City Mouse and Country Mouse",
+      "es": "El Ratón de campo y el de ciudad"
+    },
+    "word_counts": {
+      "grc": 178,
+      "nl": 343,
+      "de": 356,
+      "en": 206,
+      "es": 190
+    },
+    "character_counts": {
+      "grc": 867,
+      "nl": 1627,
+      "de": 1998,
+      "en": 938,
+      "es": 905
+    },
+    "sentence_counts": {
+      "grc": 14,
+      "nl": 20,
+      "de": 19,
+      "en": 13,
+      "es": 11
+    },
+    "entity_counts": {
+      "grc": 0,
+      "nl": 7,
+      "de": 14,
+      "en": 3,
+      "es": 9
+    },
+    "avg_sentence_length": {
+      "grc": 12.714285714285714,
+      "nl": 17.15,
+      "de": 18.736842105263158,
+      "en": 15.846153846153847,
+      "es": 17.272727272727273
+    }
+  },
+  "content": {
+    "pos_distribution": {
+      "grc": {
+        "NOUN": 21.0,
+        "ADJ": 11.5,
+        "DET": 14.000000000000002,
+        "ADP": 5.0,
+        "VERB": 15.5,
+        "PUNCT": 12.5,
+        "ADV": 9.0,
+        "CCONJ": 5.0,
+        "PRON": 4.5,
+        "AUX": 0.5,
+        "SCONJ": 1.0,
+        "PART": 0.5
+      },
+      "nl": {
+        "PROPN": 4.0,
+        "VERB": 14.133333333333335,
+        "ADP": 12.266666666666666,
+        "NOUN": 15.2,
+        "DET": 10.4,
+        "PUNCT": 8.799999999999999,
+        "PRON": 7.733333333333333,
+        "CCONJ": 6.4,
+        "ADV": 8.533333333333333,
+        "ADJ": 7.733333333333333,
+        "AUX": 1.866666666666667,
+        "SCONJ": 2.666666666666667,
+        "INTJ": 0.26666666666666666
+      },
+      "de": {
+        "DET": 12.039312039312039,
+        "NOUN": 16.953316953316953,
+        "AUX": 3.6855036855036856,
+        "PUNCT": 12.530712530712531,
+        "ADP": 7.616707616707617,
+        "PRON": 8.845208845208845,
+        "VERB": 10.81081081081081,
+        "CCONJ": 4.668304668304668,
+        "ADV": 13.513513513513514,
+        "ADJ": 4.176904176904177,
+        "SCONJ": 2.7027027027027026,
+        "PART": 1.9656019656019657,
+        "PROPN": 0.4914004914004914
+      },
+      "en": {
+        "PUNCT": 11.403508771929824,
+        "PROPN": 13.157894736842104,
+        "ADV": 5.263157894736842,
+        "VERB": 11.842105263157894,
+        "PART": 2.631578947368421,
+        "DET": 7.456140350877193,
+        "NOUN": 11.842105263157894,
+        "ADP": 8.771929824561402,
+        "SCONJ": 2.631578947368421,
+        "PRON": 10.964912280701753,
+        "AUX": 6.140350877192982,
+        "ADJ": 5.701754385964912,
+        "CCONJ": 1.7543859649122806,
+        "INTJ": 0.43859649122807015
+      },
+      "es": {
+        "DET": 10.775862068965516,
+        "PROPN": 1.293103448275862,
+        "ADP": 14.655172413793101,
+        "NOUN": 16.810344827586206,
+        "AUX": 1.7241379310344827,
+        "PRON": 8.189655172413794,
+        "VERB": 12.5,
+        "PUNCT": 18.103448275862068,
+        "ADJ": 4.741379310344827,
+        "ADV": 3.4482758620689653,
+        "CCONJ": 5.172413793103448,
+        "INTJ": 0.43103448275862066,
+        "SCONJ": 1.7241379310344827,
+        "NUM": 0.43103448275862066
+      }
+    },
+    "has_moral": {
+      "grc": false,
+      "nl": true,
+      "de": true,
+      "en": true,
+      "es": true
+    },
+    "moral_length": {
+      "nl": 17,
+      "de": 12,
+      "en": 17,
+      "es": 25
+    },
+    "shared_entities": [],
+    "unique_entities": {
+      "nl": [
+        {
+          "text": "Stadsmuis",
+          "type": "ANIMAL_CHAR"
+        },
+        {
+          "text": "Veldmuis",
+          "type": "ANIMAL_CHAR"
+        },
+        {
+          "text": "volgende morgen",
+          "type": "DATE"
+        },
+        {
+          "text": "muizen",
+          "type": "ANIMAL_CHAR"
+        },
+        {
+          "text": "een Kat",
+          "type": "ANIMAL_CHAR"
+        },
+        {
+          "text": "de hond",
+          "type": "ANIMAL_CHAR"
+        },
+        {
+          "text": "Stadsmuis:\"Je",
+          "type": "PERSON"
+        }
+      ],
+      "de": [
+        {
+          "text": "Eine Landmaus",
+          "type": "ANIMAL_CHAR"
+        },
+        {
+          "text": "Eine Stadtmaus",
+          "type": "ANIMAL_CHAR"
+        },
+        {
+          "text": "Die Landmaus",
+          "type": "ANIMAL_CHAR"
+        },
+        {
+          "text": "Die Stadtmaus",
+          "type": "ANIMAL_CHAR"
+        },
+        {
+          "text": "sei.\"Du bist",
+          "type": "MISC"
+        },
+        {
+          "text": "ihr,\"daß du",
+          "type": "ORG"
+        },
+        {
+          "text": "Stadt",
+          "type": "LOC"
+        },
+        {
+          "text": "Abendschmauses",
+          "type": "LOC"
+        },
+        {
+          "text": "Lobsprüche",
+          "type": "LOC"
+        },
+        {
+          "text": "Mahles",
+          "type": "LOC"
+        },
+        {
+          "text": "hervorkroch",
+          "type": "PER"
+        },
+        {
+          "text": "Lieber",
+          "type": "PER"
+        },
+        {
+          "text": "Frieden",
+          "type": "MISC"
+        }
+      ],
+      "en": [
+        {
+          "text": "City Mouse",
+          "type": "ANIMAL_CHAR"
+        },
+        {
+          "text": "Country Mouse",
+          "type": "ANIMAL_CHAR"
+        },
+        {
+          "text": "Mouse",
+          "type": "ANIMAL_CHAR"
+        }
+      ],
+      "es": [
+        {
+          "text": "Ratón de campo",
+          "type": "ANIMAL_CHAR"
+        },
+        {
+          "text": "El de la casa",
+          "type": "MISC"
+        },
+        {
+          "text": "Después",
+          "type": "MISC"
+        },
+        {
+          "text": "Y el de la casa",
+          "type": "MISC"
+        },
+        {
+          "text": "Aquél",
+          "type": "PER"
+        },
+        {
+          "text": "Atemorizados por el ruido",
+          "type": "MISC"
+        },
+        {
+          "text": "ratones",
+          "type": "ANIMAL_CHAR"
+        },
+        {
+          "text": "Al verlo los",
+          "type": "MISC"
+        },
+        {
+          "text": "otro:\"Disfruta",
+          "type": "MISC"
+        }
+      ]
+    }
+  },
+  "similarity": {
+    "structural_similarity": {
+      "grc-nl": 0.6358517284464806,
+      "grc-de": 0.6304511278195488,
+      "grc-en": 0.8775312066574202,
+      "grc-es": 0.8362406015037595,
+      "nl-de": 0.9484550561797752,
+      "nl-en": 0.6850280331912986,
+      "nl-es": 0.6401532913917447,
+      "de-en": 0.6742892234908794,
+      "de-es": 0.6294339014031505,
+      "en-es": 0.8908753586730083
+    },
+    "content_similarity": {
+      "grc-nl": 0.2813657571841431,
+      "grc-de": 0.28165716772415134,
+      "grc-en": 0.24135721018210599,
+      "grc-es": 0.27005352413294675,
+      "nl-de": 0.466375470489626,
+      "nl-en": 0.4698506260626514,
+      "nl-es": 0.46305370552562175,
+      "de-en": 0.43864969337150234,
+      "de-es": 0.44388233110510417,
+      "en-es": 0.4407661929506519
+    },
+    "lexical_similarity": {
+      "grc-nl": 0.0,
+      "grc-de": 0.0,
+      "grc-en": 0.0,
+      "grc-es": 0.0,
+      "nl-de": 0.0698418059311575,
+      "nl-en": 0.040667909648807773,
+      "nl-es": 0.3035912135328681,
+      "de-en": 0.04127849773365369,
+      "de-es": 0.0,
+      "en-es": 0.058008836431663914
+    }
+  }
+}

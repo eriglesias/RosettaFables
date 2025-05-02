@@ -1,0 +1,49 @@
+[
+  {
+    "categories": [
+      {
+        "name": "honesty",
+        "score": 1
+      }
+    ],
+    "dominant_category": "honesty",
+    "fable_id": "1",
+    "moral_text": "Men moet altijd liedje wolf."
+  },
+  {
+    "categories": [],
+    "dominant_category": null,
+    "fable_id": "2",
+    "moral_text": "Men moet altijd eten veldmuis."
+  },
+  {
+    "categories": [],
+    "dominant_category": null,
+    "fable_id": "3",
+    "moral_text": "Men moet altijd sprong hoog."
+  },
+  {
+    "categories": [],
+    "dominant_category": null,
+    "fable_id": "4",
+    "moral_text": "Men moet altijd beloning beentje."
+  },
+  {
+    "categories": [],
+    "dominant_category": null,
+    "fable_id": "5",
+    "moral_text": "Men moet altijd kleine muis."
+  },
+  {
+    "categories": [],
+    "dominant_category": null,
+    "fable_id": "6",
+    "moral_text": "Men moet altijd vloog mug."
+  },
+  {
+    "categories": [],
+    "dominant_category": null,
+    "fable_id": "7",
+    "moral_text": "Men moet altijd put geit."
+  }
+]

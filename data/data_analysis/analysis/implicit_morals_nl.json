@@ -1,0 +1,907 @@
+[
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "Men moet altijd liedje wolf.",
+        "relevance_score": 1.0,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "geitje",
+            "wolf"
+          ]
+        }
+      },
+      {
+        "text": "De moraal gaat over liedje, wolf, geitje.",
+        "relevance_score": 0.8,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "liedje",
+            "wolf",
+            "geitje"
+          ]
+        }
+      },
+      {
+        "text": "De moraal gaat over liedje, wolf, geitje.",
+        "relevance_score": 0.8,
+        "source": "topic_modeling",
+        "metadata": {
+          "topic_words": [
+            "liedje",
+            "wolf",
+            "geitje"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "geitje",
+        "score": 0.4375
+      },
+      {
+        "term": "wolf",
+        "score": 0.4375
+      },
+      {
+        "term": "liedje",
+        "score": 0.375
+      },
+      {
+        "term": "geiten",
+        "score": 0.25
+      },
+      {
+        "term": "moeder",
+        "score": 0.25
+      },
+      {
+        "term": "begon",
+        "score": 0.1875
+      },
+      {
+        "term": "blokfluit",
+        "score": 0.1875
+      },
+      {
+        "term": "eerst",
+        "score": 0.1875
+      },
+      {
+        "term": "liep",
+        "score": 0.1875
+      },
+      {
+        "term": "opeten",
+        "score": 0.1875
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "liedje",
+          "wolf",
+          "geitje",
+          "moeder",
+          "geiten",
+          "wei",
+          "blokfluit",
+          "begon",
+          "liep",
+          "opeten"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "liedje",
+          "wolf",
+          "geitje",
+          "moeder",
+          "geiten",
+          "wei",
+          "blokfluit",
+          "begon",
+          "liep",
+          "opeten"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "wolf",
+          "geitje",
+          "liedje",
+          "moeder",
+          "geiten",
+          "wei",
+          "blokfluit",
+          "begon",
+          "liep",
+          "opeten"
+        ]
+      }
+    ],
+    "fable_id": "1"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "Men moet altijd eten veldmuis.",
+        "relevance_score": 1.0,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "stadsmuis",
+            "veldmuis"
+          ]
+        }
+      },
+      {
+        "text": "De moraal is om veldmuis te stadsmuis.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "stadsmuis",
+            "veldmuis"
+          ]
+        }
+      },
+      {
+        "text": "De moraal is om heel te eten.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "stadsmuis",
+            "veldmuis"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "stadsmuis",
+        "score": 0.4925182813112043
+      },
+      {
+        "term": "veldmuis",
+        "score": 0.4925182813112043
+      },
+      {
+        "term": "eten",
+        "score": 0.2814390178921167
+      },
+      {
+        "term": "heel",
+        "score": 0.21107926341908756
+      },
+      {
+        "term": "luxe",
+        "score": 0.21107926341908756
+      },
+      {
+        "term": "stad",
+        "score": 0.21107926341908756
+      },
+      {
+        "term": "tafel",
+        "score": 0.21107926341908756
+      },
+      {
+        "term": "erbij",
+        "score": 0.14071950894605836
+      },
+      {
+        "term": "ging",
+        "score": 0.14071950894605836
+      },
+      {
+        "term": "gingen",
+        "score": 0.14071950894605836
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "eten",
+          "veldmuis",
+          "stadsmuis",
+          "luxe",
+          "heel",
+          "stad",
+          "tafel",
+          "hond",
+          "huis",
+          "binnen"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "eten",
+          "veldmuis",
+          "stadsmuis",
+          "luxe",
+          "heel",
+          "stad",
+          "tafel",
+          "hond",
+          "huis",
+          "binnen"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "veldmuis",
+          "stadsmuis",
+          "eten",
+          "luxe",
+          "heel",
+          "stad",
+          "tafel",
+          "hond",
+          "huis",
+          "binnen"
+        ]
+      }
+    ],
+    "fable_id": "2"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "Men moet altijd sprong hoog.",
+        "relevance_score": 1.0,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "druiven",
+            "hoog"
+          ]
+        }
+      },
+      {
+        "text": "De moraal is om hoog te druiven.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "druiven",
+            "hoog"
+          ]
+        }
+      },
+      {
+        "text": "De moraal is om heel te sprong.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "druiven",
+            "hoog"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "druiven",
+        "score": 0.7213357077339458
+      },
+      {
+        "term": "hoog",
+        "score": 0.2705008904002297
+      },
+      {
+        "term": "sprong",
+        "score": 0.2705008904002297
+      },
+      {
+        "term": "heel",
+        "score": 0.18033392693348646
+      },
+      {
+        "term": "hingen",
+        "score": 0.18033392693348646
+      },
+      {
+        "term": "keek",
+        "score": 0.18033392693348646
+      },
+      {
+        "term": "moe",
+        "score": 0.18033392693348646
+      },
+      {
+        "term": "opnieuw",
+        "score": 0.18033392693348646
+      },
+      {
+        "term": "rijp",
+        "score": 0.18033392693348646
+      },
+      {
+        "term": "springen",
+        "score": 0.18033392693348646
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "hoog",
+          "sprong",
+          "druiven",
+          "moe",
+          "keek",
+          "hingen",
+          "vos",
+          "heel",
+          "opnieuw",
+          "rijp"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "druiven",
+          "hoog",
+          "sprong",
+          "moe",
+          "keek",
+          "hingen",
+          "vos",
+          "heel",
+          "opnieuw",
+          "rijp"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "hoog",
+          "sprong",
+          "druiven",
+          "moe",
+          "keek",
+          "hingen",
+          "vos",
+          "heel",
+          "opnieuw",
+          "rijp"
+        ]
+      }
+    ],
+    "fable_id": "3"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "Men moet altijd beloning beentje.",
+        "relevance_score": 1.0,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "wolf",
+            "beentje"
+          ]
+        }
+      },
+      {
+        "text": "De moraal is om beentje te wolf.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "wolf",
+            "beentje"
+          ]
+        }
+      },
+      {
+        "text": "De moraal is om kraanvogel te beloning.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "wolf",
+            "beentje"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "wolf",
+        "score": 0.6735753140545634
+      },
+      {
+        "term": "beentje",
+        "score": 0.3849001794597505
+      },
+      {
+        "term": "beloning",
+        "score": 0.28867513459481287
+      },
+      {
+        "term": "kraanvogel",
+        "score": 0.28867513459481287
+      },
+      {
+        "term": "lange",
+        "score": 0.19245008972987526
+      },
+      {
+        "term": "liep",
+        "score": 0.19245008972987526
+      },
+      {
+        "term": "steken",
+        "score": 0.19245008972987526
+      },
+      {
+        "term": "afgebeten",
+        "score": 0.09622504486493763
+      },
+      {
+        "term": "omdraaide",
+        "score": 0.09622504486493763
+      },
+      {
+        "term": "ookniet",
+        "score": 0.09622504486493763
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "beentje",
+          "kraanvogel",
+          "beloning",
+          "wolf",
+          "lange",
+          "steken",
+          "liep",
+          "kip",
+          "keel",
+          "jij"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "wolf",
+          "beentje",
+          "kraanvogel",
+          "beloning",
+          "lange",
+          "steken",
+          "liep",
+          "kip",
+          "keel",
+          "jij"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "beentje",
+          "kraanvogel",
+          "beloning",
+          "wolf",
+          "lange",
+          "steken",
+          "liep",
+          "kip",
+          "keel",
+          "jij"
+        ]
+      }
+    ],
+    "fable_id": "4"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "Men moet altijd kleine muis.",
+        "relevance_score": 1.0,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "leeuw",
+            "muis"
+          ]
+        }
+      },
+      {
+        "text": "De moraal is om muis te leeuw.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "leeuw",
+            "muis"
+          ]
+        }
+      },
+      {
+        "text": "De moraal is om grote te kleine.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "leeuw",
+            "muis"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "leeuw",
+        "score": 0.6085806194501846
+      },
+      {
+        "term": "muis",
+        "score": 0.48686449556014766
+      },
+      {
+        "term": "kleine",
+        "score": 0.3042903097250923
+      },
+      {
+        "term": "grote",
+        "score": 0.24343224778007383
+      },
+      {
+        "term": "net",
+        "score": 0.24343224778007383
+      },
+      {
+        "term": "bos",
+        "score": 0.18257418583505539
+      },
+      {
+        "term": "helpen",
+        "score": 0.18257418583505539
+      },
+      {
+        "term": "gaan",
+        "score": 0.12171612389003691
+      },
+      {
+        "term": "lachte",
+        "score": 0.12171612389003691
+      },
+      {
+        "term": "rende",
+        "score": 0.12171612389003691
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "kleine",
+          "net",
+          "grote",
+          "muis",
+          "leeuw",
+          "bos",
+          "helpen",
+          "zag",
+          "zei",
+          "gaan"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "kleine",
+          "net",
+          "grote",
+          "muis",
+          "leeuw",
+          "bos",
+          "helpen",
+          "zag",
+          "zei",
+          "gaan"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "leeuw",
+          "muis",
+          "kleine",
+          "net",
+          "grote",
+          "bos",
+          "helpen",
+          "zag",
+          "zei",
+          "gaan"
+        ]
+      }
+    ],
+    "fable_id": "5"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "Men moet altijd vloog mug.",
+        "relevance_score": 1.0,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "leeuw",
+            "mug"
+          ]
+        }
+      },
+      {
+        "text": "De moraal is om mug te leeuw.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "leeuw",
+            "mug"
+          ]
+        }
+      },
+      {
+        "text": "De moraal is om weg te vloog.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "leeuw",
+            "mug"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "leeuw",
+        "score": 0.6810052246069989
+      },
+      {
+        "term": "mug",
+        "score": 0.4256282653793743
+      },
+      {
+        "term": "vloog",
+        "score": 0.2553769592276246
+      },
+      {
+        "term": "weg",
+        "score": 0.2553769592276246
+      },
+      {
+        "term": "alleen",
+        "score": 0.17025130615174972
+      },
+      {
+        "term": "eigen",
+        "score": 0.17025130615174972
+      },
+      {
+        "term": "liet",
+        "score": 0.17025130615174972
+      },
+      {
+        "term": "neus",
+        "score": 0.17025130615174972
+      },
+      {
+        "term": "prikte",
+        "score": 0.17025130615174972
+      },
+      {
+        "term": "overdekt",
+        "score": 0.08512565307587486
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "mug",
+          "weg",
+          "vloog",
+          "leeuw",
+          "alleen",
+          "neus",
+          "eigen",
+          "liet",
+          "prikte",
+          "ga"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "mug",
+          "weg",
+          "vloog",
+          "leeuw",
+          "alleen",
+          "neus",
+          "eigen",
+          "liet",
+          "prikte",
+          "ga"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "leeuw",
+          "mug",
+          "weg",
+          "vloog",
+          "alleen",
+          "neus",
+          "eigen",
+          "liet",
+          "prikte",
+          "ga"
+        ]
+      }
+    ],
+    "fable_id": "6"
+  },
+  {
+    "has_inferred_moral": true,
+    "inferred_morals": [
+      {
+        "text": "Men moet altijd put geit.",
+        "relevance_score": 1.0,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "vos",
+            "geit"
+          ]
+        }
+      },
+      {
+        "text": "De moraal is om geit te vos.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "vos",
+            "geit"
+          ]
+        }
+      },
+      {
+        "text": "De moraal is om sprong te put.",
+        "relevance_score": 0.6666666666666666,
+        "source": "keyword_template",
+        "metadata": {
+          "keywords": [
+            "vos",
+            "geit"
+          ]
+        }
+      }
+    ],
+    "method": "combined_nlp_inference",
+    "keywords": [
+      {
+        "term": "vos",
+        "score": 0.6024640760767093
+      },
+      {
+        "term": "geit",
+        "score": 0.43033148291193524
+      },
+      {
+        "term": "put",
+        "score": 0.34426518632954817
+      },
+      {
+        "term": "sprong",
+        "score": 0.25819888974716115
+      },
+      {
+        "term": "water",
+        "score": 0.25819888974716115
+      },
+      {
+        "term": "dorstige",
+        "score": 0.17213259316477408
+      },
+      {
+        "term": "drinken",
+        "score": 0.17213259316477408
+      },
+      {
+        "term": "waterput",
+        "score": 0.17213259316477408
+      },
+      {
+        "term": "wel",
+        "score": 0.17213259316477408
+      },
+      {
+        "term": "alhoewel",
+        "score": 0.08606629658238704
+      }
+    ],
+    "topics": [
+      {
+        "id": 0,
+        "top_words": [
+          "put",
+          "geit",
+          "sprong",
+          "water",
+          "vos",
+          "waterput",
+          "wel",
+          "dorstige",
+          "drinken",
+          "gevallen"
+        ]
+      },
+      {
+        "id": 1,
+        "top_words": [
+          "put",
+          "geit",
+          "sprong",
+          "water",
+          "vos",
+          "waterput",
+          "wel",
+          "dorstige",
+          "drinken",
+          "gevallen"
+        ]
+      },
+      {
+        "id": 2,
+        "top_words": [
+          "vos",
+          "geit",
+          "put",
+          "water",
+          "sprong",
+          "waterput",
+          "wel",
+          "dorstige",
+          "drinken",
+          "gevallen"
+        ]
+      }
+    ],
+    "fable_id": "7"
+  }
+]
