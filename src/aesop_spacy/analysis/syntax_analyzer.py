@@ -11,7 +11,6 @@ This module provides analysis of:
 """
 
 from pathlib import Path
-import statistics
 from collections import Counter, defaultdict
 import logging
 import json
@@ -38,31 +37,51 @@ class SyntaxAnalyzer:
         """
         # Get sentences from the fable
         sentences = fable.get('sentences', [])
-
+        self.logger.info("Processing %d sentences for dependency frequency analysis", len(sentences))
+        
         # Initialize counters
         dep_counts = {}
         dep_examples = {}
         total_deps = 0
         
         # Process each sentence
-        for sentence in sentences:
+        for i, sentence in enumerate(sentences):
             # Get dependency information if available
-            if 'dependencies' in sentence:
-                deps = sentence['dependencies']
-                for dep in deps:
-                    # Extract dependency type, head word, and dependent word
-                    dep_type = dep.get('dep')
-                    head = dep.get('head_text', '')
-                    dependent = dep.get('dependent_text', '')
+            if 'dependencies' not in sentence:
+                self.logger.debug("Sentence %d missing dependencies key", i)
+                continue
+                
+            deps = sentence['dependencies']
+            if not deps:
+                self.logger.debug("Sentence %d has empty dependencies", i)
+                continue
+                
+            self.logger.debug("Sentence %d has %d dependencies", i, len(deps))
+            
+            # Log a sample dependency to help debug structure issues
+            if deps and i == 0:
+                self.logger.debug("Sample dependency structure: %s", deps[0])
+            
+            for dep in deps:
+                # Extract dependency type, head word, and dependent word
+                dep_type = dep.get('dep')
+                head = dep.get('head_text', '')
+                dependent = dep.get('dependent_text', '')
+                
+                if not dep_type:
+                    self.logger.debug("Missing dependency type in: %s", dep)
+                    continue
                     
-                    if dep_type:
-                        # Update counts
-                        dep_counts[dep_type] = dep_counts.get(dep_type, 0) + 1
-                        total_deps += 1
-                        
-                        # Store an example
-                        if dep_type not in dep_examples and head and dependent:
-                            dep_examples[dep_type] = f"{dependent} → {head}"
+                # Update counts
+                dep_counts[dep_type] = dep_counts.get(dep_type, 0) + 1
+                total_deps += 1
+                
+                # Store an example
+                if dep_type not in dep_examples and head and dependent:
+                    dep_examples[dep_type] = f"{dependent} → {head}"
+        
+        self.logger.info("Found %d total dependencies across %d sentences", 
+                        total_deps, len(sentences))
         
         # Calculate percentages
         results = {
@@ -748,21 +767,32 @@ class SyntaxAnalyzer:
             analysis_type: Type of analysis (e.g., 'dependency', 'tree_shape')
             results: Analysis results to save
         """
-        # Create directory if it doesn't exist
-        output_dir = self.analysis_dir / 'syntax'
-        output_dir.mkdir(exist_ok=True, parents=True)
-        
-        # Create filename
-        filename = f"{fable_id}_{language}_{analysis_type}.json"
-        output_path = output_dir / filename
-        
-        # Save to JSON file
         try:
+            # Create directory if it doesn't exist
+            output_dir = self.analysis_dir / 'syntax'
+            output_dir.mkdir(exist_ok=True, parents=True)
+            
+            # Create filename
+            filename = f"{fable_id}_{language}_{analysis_type}.json"
+            output_path = output_dir / filename
+            
+            # Save to JSON file
             with open(output_path, 'w', encoding='utf-8') as f:
                 json.dump(results, f, ensure_ascii=False, indent=2)
-            self.logger.info(f"Saved {analysis_type} analysis for fable {fable_id} ({language}) to {output_path}")
+            
+            self.logger.info("Saved %s analysis for fable %s (%s) to %s",
+                            analysis_type, fable_id, language, output_path)
+                            
+        except FileNotFoundError as e:
+            self.logger.error("File path error when saving analysis: %s", e)
+        except PermissionError as e:
+            self.logger.error("Permission error when saving analysis: %s", e)
+        except json.JSONDecodeError as e:
+            self.logger.error("JSON encoding error when saving analysis: %s", e)
         except Exception as e:
-            self.logger.error(f"Error saving analysis: {e}")
+            # Keep one general exception at the end as a fallback
+            self.logger.error("Unexpected error when saving analysis: %s (%s)", 
+                            e, type(e).__name__)
     
     def compare_fables(self, fables_by_id, analysis_type):
         """
