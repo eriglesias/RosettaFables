@@ -143,7 +143,7 @@ def run_pipeline(args, input_dir, output_dir, logger):
 
     elif args.only_process:
         logger.info("Running processing only")
-        pipeline.run()
+        pipeline.run(use_processed=False)
         return None, False
 
     else:

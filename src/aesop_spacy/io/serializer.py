@@ -174,3 +174,42 @@ class SpacySerializer:
             'end': span.end,
             'label': span.label_,
         }
+    
+
+    def serialize_sentence(self, sentence_data):
+        """
+        Serialize a sentence dictionary with special handling for dependencies.
+        """
+        serialized = {}
+        
+        # Copy basic sentence fields
+        for key in ['text', 'start', 'end']:
+            if key in sentence_data:
+                serialized[key] = sentence_data[key]
+        
+        # Handle tokens and POS tags
+        if 'tokens' in sentence_data:
+            serialized['tokens'] = self.serialize(sentence_data['tokens'])
+        if 'pos_tags' in sentence_data:
+            serialized['pos_tags'] = self.serialize(sentence_data['pos_tags'])
+        
+        # Special handling for dependency structure
+        if 'dependencies' in sentence_data:
+            self.logger.debug(f"Serializing {len(sentence_data['dependencies'])} dependencies for sentence")
+            serialized['dependencies'] = []
+            for dep in sentence_data['dependencies']:
+                if isinstance(dep, dict):
+                    serialized_dep = {
+                        'dep': dep.get('dep', ''),
+                        'head_id': dep.get('head_id'),
+                        'dependent_id': dep.get('dependent_id'),
+                        'head_text': dep.get('head_text', ''),
+                        'dependent_text': dep.get('dependent_text', '')
+                    }
+                    serialized['dependencies'].append(serialized_dep)
+        
+        # Handle root information
+        if 'root' in sentence_data:
+            serialized['root'] = self.serialize(sentence_data['root'])
+        
+        return serialized

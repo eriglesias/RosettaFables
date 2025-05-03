@@ -52,6 +52,7 @@ class FableProcessor:
             'pos_tags': self._extract_pos_tags(doc),
             'entities': self._extract_entities(doc),
             'sentences': self._extract_sentences(doc),
+            'dependencies': self._extract_dependencies(doc)
         })
 
         # Process moral if present
@@ -78,7 +79,7 @@ class FableProcessor:
         return [(ent.text, ent.label_, ent.start, ent.end) for ent in doc.ents]
 
     def _extract_sentences(self, doc) -> List[Dict[str, Any]]:
-        """Extract sentences with their metadata."""
+        """Extract sentences with their metadata and dependencies."""
         sentences = []
 
         # Check if this is a spaCy doc or a Stanza doc
@@ -87,16 +88,42 @@ class FableProcessor:
         if is_stanza:
             # Handle Stanza document
             for sent in doc.sentences:
+                # Extract dependencies for Stanza
+                dependencies = []
+                self.logger.debug(f"Extracted {len(dependencies)} dependencies for sentence: {sent.text[:30]}...")
+                for word in sent.words:
+                    if word.head > 0:  # Skip root (head=0)
+                        dependencies.append({
+                            'dep': word.deprel,
+                            'head_id': word.head,
+                            'dependent_id': word.id,
+                            'head_text': sent.words[word.head-1].text if word.head <= len(sent.words) else '',
+                            'dependent_text': word.text
+                        })
+                
                 sentence_data = {
                     'text': sent.text,
                     'start': sent.tokens[0].id if sent.tokens else 0,
                     'end': sent.tokens[-1].id if sent.tokens else 0,
+                    'dependencies': dependencies
                 }
                 sentences.append(sentence_data)
         else:
             # Handle spaCy document
             for sent in doc.sents:
                 try:
+                    # Extract dependencies for spaCy
+                    dependencies = []
+                    for token in sent:
+                        if token.dep_ != '':  # Skip tokens without dependency relation
+                            dependencies.append({
+                                'dep': token.dep_,
+                                'head_id': token.head.i,
+                                'dependent_id': token.i,
+                                'head_text': token.head.text,
+                                'dependent_text': token.text
+                            })
+                    
                     # Some spans might not have root attribute
                     root_data = {
                         'text': sent.root.text if hasattr(sent, 'root') else "",
@@ -106,12 +133,14 @@ class FableProcessor:
                 except AttributeError:
                     # Fallback if there's any issue
                     root_data = {'text': "", 'pos': "", 'dep': ""}
+                    dependencies = []
 
                 sentence_data = {
                     'text': sent.text,
                     'start': sent.start,
                     'end': sent.end,
-                    'root': root_data
+                    'root': root_data,
+                    'dependencies': dependencies
                 }
                 sentences.append(sentence_data)
         
@@ -148,3 +177,34 @@ class FableProcessor:
         unique_keywords = [kw for kw in keywords if not (kw in seen or seen.add(kw))]
 
         return unique_keywords
+    
+    def _extract_dependencies(self, doc) -> List[Dict[str, Any]]:
+        """Extract all dependency relations from the document."""
+        dependencies = []
+        
+        # Check if this is a spaCy doc
+        if hasattr(doc, 'sents'):
+            # spaCy document
+            for token in doc:
+                if token.dep_ and token.dep_ != '':  # Skip tokens without dependency relation
+                    dependencies.append({
+                        'dep': token.dep_,
+                        'head_id': token.head.i,
+                        'dependent_id': token.i,
+                        'head_text': token.head.text,
+                        'dependent_text': token.text
+                    })
+        else:
+            # Assume Stanza document
+            for sent in doc.sentences:
+                for word in sent.words:
+                    if word.head > 0:  # Skip root (head=0)
+                        dependencies.append({
+                            'dep': word.deprel,
+                            'head_id': word.head,
+                            'dependent_id': word.id,
+                            'head_text': sent.words[word.head-1].text if word.head <= len(sent.words) else '',
+                            'dependent_text': word.text
+                        })
+        
+        return dependencies

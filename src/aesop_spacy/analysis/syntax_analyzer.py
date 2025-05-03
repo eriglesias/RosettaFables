@@ -39,11 +39,16 @@ class SyntaxAnalyzer:
         sentences = fable.get('sentences', [])
         self.logger.info("Processing %d sentences for dependency frequency analysis", len(sentences))
         
+        if sentences and len(sentences) > 0:
+            self.logger.debug("Sample sentence keys: %s", list(sentences[0].keys()))
+            if 'dependencies' in fable:
+                self.logger.debug("Found %d dependencies at fable level", len(fable['dependencies']))
+
         # Initialize counters
         dep_counts = {}
         dep_examples = {}
         total_deps = 0
-        
+
         # Process each sentence
         for i, sentence in enumerate(sentences):
             # Get dependency information if available
@@ -113,7 +118,9 @@ class SyntaxAnalyzer:
         distances_by_type = {}
         
         for sentence in sentences:
+            self.logger.debug(f"Dependencies keys in sentence: {list(sentence.keys())}")
             if 'dependencies' in sentence and 'tokens' in sentence:
+                self.logger.debug(f"Found {len(sentence['dependencies'])} dependencies")
                 deps = sentence['dependencies']
                 tokens = sentence['tokens']
                 
