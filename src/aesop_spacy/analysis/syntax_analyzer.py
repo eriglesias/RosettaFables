@@ -17,7 +17,7 @@ import json
 
 class SyntaxAnalyzer:
     """Analyzes syntax structures across languages in fables."""
-    
+
     def __init__(self, analysis_dir):
         """
         Initialize the syntax analyzer.
@@ -27,46 +27,46 @@ class SyntaxAnalyzer:
         """
         self.analysis_dir = Path(analysis_dir)
         self.logger = logging.getLogger(__name__)
-        
+      
+    
     def dependency_frequencies(self, fable):
         """
         Count frequencies of dependency relations in a fable.
-        
-        Returns:
-            Dict mapping dependency types to their frequencies and examples
         """
         # Get sentences from the fable
         sentences = fable.get('sentences', [])
         self.logger.info("Processing %d sentences for dependency frequency analysis", len(sentences))
         
+        # Add diagnostic logging
         if sentences and len(sentences) > 0:
             self.logger.debug("Sample sentence keys: %s", list(sentences[0].keys()))
-            if 'dependencies' in fable:
-                self.logger.debug("Found %d dependencies at fable level", len(fable['dependencies']))
-
+            if 'dependencies' in sentences[0]:
+                self.logger.debug("Found %d dependencies in first sentence", 
+                                len(sentences[0]['dependencies']))
+            else:
+                self.logger.warning("No dependencies key in first sentence")
+        
+        # Check if dependencies exist at document level
+        if 'dependencies' in fable:
+            self.logger.debug("Found %d dependencies at document level", len(fable['dependencies']))
+        
         # Initialize counters
         dep_counts = {}
         dep_examples = {}
         total_deps = 0
-
-        # Process each sentence
+        
+        # First look for sentence-level dependencies
         for i, sentence in enumerate(sentences):
             # Get dependency information if available
-            if 'dependencies' not in sentence:
-                self.logger.debug("Sentence %d missing dependencies key", i)
-                continue
-                
-            deps = sentence['dependencies']
+            deps = sentence.get('dependencies', [])
+            
             if not deps:
-                self.logger.debug("Sentence %d has empty dependencies", i)
+                self.logger.debug("Sentence %d has no dependencies", i)
                 continue
                 
             self.logger.debug("Sentence %d has %d dependencies", i, len(deps))
             
-            # Log a sample dependency to help debug structure issues
-            if deps and i == 0:
-                self.logger.debug("Sample dependency structure: %s", deps[0])
-            
+            # Process each dependency
             for dep in deps:
                 # Extract dependency type, head word, and dependent word
                 dep_type = dep.get('dep')
@@ -84,6 +84,23 @@ class SyntaxAnalyzer:
                 # Store an example
                 if dep_type not in dep_examples and head and dependent:
                     dep_examples[dep_type] = f"{dependent} → {head}"
+        
+        # If no sentence-level dependencies found, try document-level
+        if total_deps == 0 and 'dependencies' in fable:
+            self.logger.info("No sentence-level dependencies, trying document-level")
+            doc_deps = fable.get('dependencies', [])
+            
+            for dep in doc_deps:
+                dep_type = dep.get('dep')
+                head = dep.get('head_text', '')
+                dependent = dep.get('dependent_text', '')
+                
+                if dep_type:
+                    dep_counts[dep_type] = dep_counts.get(dep_type, 0) + 1
+                    total_deps += 1
+                    
+                    if dep_type not in dep_examples and head and dependent:
+                        dep_examples[dep_type] = f"{dependent} → {head}"
         
         self.logger.info("Found %d total dependencies across %d sentences", 
                         total_deps, len(sentences))
@@ -103,6 +120,9 @@ class SyntaxAnalyzer:
             }
         
         return results
+
+
+
         
     def dependency_distances(self, fable):
         """

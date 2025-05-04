@@ -81,16 +81,15 @@ class FableProcessor:
     def _extract_sentences(self, doc) -> List[Dict[str, Any]]:
         """Extract sentences with their metadata and dependencies."""
         sentences = []
-
+        
         # Check if this is a spaCy doc or a Stanza doc
         is_stanza = hasattr(doc, 'sentences') and not hasattr(doc, 'sents')
-
+        
         if is_stanza:
             # Handle Stanza document
             for sent in doc.sentences:
                 # Extract dependencies for Stanza
                 dependencies = []
-                self.logger.debug(f"Extracted {len(dependencies)} dependencies for sentence: {sent.text[:30]}...")
                 for word in sent.words:
                     if word.head > 0:  # Skip root (head=0)
                         dependencies.append({
@@ -100,6 +99,8 @@ class FableProcessor:
                             'head_text': sent.words[word.head-1].text if word.head <= len(sent.words) else '',
                             'dependent_text': word.text
                         })
+                
+                self.logger.debug(f"Extracted {len(dependencies)} dependencies for Stanza sentence")
                 
                 sentence_data = {
                     'text': sent.text,
@@ -124,17 +125,20 @@ class FableProcessor:
                                 'dependent_text': token.text
                             })
                     
+                    self.logger.debug(f"Extracted {len(dependencies)} dependencies for spaCy sentence")
+                    
                     # Some spans might not have root attribute
                     root_data = {
                         'text': sent.root.text if hasattr(sent, 'root') else "",
                         'pos': sent.root.pos_ if hasattr(sent, 'root') else "",
                         'dep': sent.root.dep_ if hasattr(sent, 'root') else ""
                     }
-                except AttributeError:
+                except AttributeError as e:
                     # Fallback if there's any issue
+                    self.logger.warning(f"Error extracting dependencies: {e}")
                     root_data = {'text': "", 'pos': "", 'dep': ""}
                     dependencies = []
-
+                    
                 sentence_data = {
                     'text': sent.text,
                     'start': sent.start,

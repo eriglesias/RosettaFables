@@ -35,6 +35,31 @@ class SpacySerializer:
         # Add this object to the visited set to prevent cycles
         visited.add(obj_id)
         
+        # Special handling for fables with sentences
+        if isinstance(obj, dict) and 'sentences' in obj:
+            self.logger.debug("Serializing a fable with %d sentences", len(obj['sentences']))
+            result = {}
+            for k, v in obj.items():
+                if k != 'sentences':
+                    result[k] = self.serialize(v, visited.copy())
+            
+            # Explicitly use serialize_sentence for each sentence
+            result['sentences'] = []
+            for i, sent in enumerate(obj['sentences']):
+                serialized_sent = self.serialize_sentence(sent)
+                # Check if dependencies were preserved
+                if 'dependencies' in sent and 'dependencies' not in serialized_sent:
+                    self.logger.warning("Dependencies were lost during serialization for sentence %d", i)
+                result['sentences'].append(serialized_sent)
+            
+            # If we have document-level dependencies, copy them to ensure they're not lost
+            if 'dependencies' in obj:
+                result['dependencies'] = self.serialize(obj['dependencies'], visited.copy())
+                self.logger.debug("Serialized %d document-level dependencies", 
+                                 len(obj['dependencies']))
+            
+            return result
+        
         # Handle basic types
         if obj is None or isinstance(obj, (int, float, str, bool)):
             return obj
@@ -175,12 +200,22 @@ class SpacySerializer:
             'label': span.label_,
         }
     
-
     def serialize_sentence(self, sentence_data):
         """
         Serialize a sentence dictionary with special handling for dependencies.
+        
+        Args:
+            sentence_data: A dictionary containing sentence data
+            
+        Returns:
+            A serialized version of the sentence with dependencies preserved
         """
         serialized = {}
+        
+        # Check if we have dependencies to serialize
+        has_dependencies = 'dependencies' in sentence_data and sentence_data['dependencies']
+        if has_dependencies:
+            self.logger.debug(f"Found {len(sentence_data['dependencies'])} dependencies in sentence")
         
         # Copy basic sentence fields
         for key in ['text', 'start', 'end']:
@@ -194,19 +229,31 @@ class SpacySerializer:
             serialized['pos_tags'] = self.serialize(sentence_data['pos_tags'])
         
         # Special handling for dependency structure
-        if 'dependencies' in sentence_data:
-            self.logger.debug(f"Serializing {len(sentence_data['dependencies'])} dependencies for sentence")
+        if has_dependencies:
             serialized['dependencies'] = []
             for dep in sentence_data['dependencies']:
-                if isinstance(dep, dict):
-                    serialized_dep = {
-                        'dep': dep.get('dep', ''),
-                        'head_id': dep.get('head_id'),
-                        'dependent_id': dep.get('dependent_id'),
-                        'head_text': dep.get('head_text', ''),
-                        'dependent_text': dep.get('dependent_text', '')
-                    }
-                    serialized['dependencies'].append(serialized_dep)
+                try:
+                    if isinstance(dep, dict):
+                        serialized_dep = {
+                            'dep': dep.get('dep', ''),
+                            'head_id': dep.get('head_id'),
+                            'dependent_id': dep.get('dependent_id'),
+                            'head_text': dep.get('head_text', ''),
+                            'dependent_text': dep.get('dependent_text', '')
+                        }
+                        serialized['dependencies'].append(serialized_dep)
+                    else:
+                        self.logger.warning(f"Unexpected dependency format: {type(dep)}")
+                        serialized['dependencies'].append(self.serialize(dep))
+                except Exception as e:
+                    self.logger.error(f"Error serializing dependency: {e}")
+                    # Continue with other dependencies rather than failing completely
+                    
+            # Verify dependencies were preserved
+            if not serialized.get('dependencies'):
+                self.logger.warning("Dependencies were lost during serialization!")
+            else:
+                self.logger.debug(f"Successfully serialized {len(serialized['dependencies'])} dependencies")
         
         # Handle root information
         if 'root' in sentence_data:
