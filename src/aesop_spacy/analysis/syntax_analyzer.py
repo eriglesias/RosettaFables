@@ -27,8 +27,8 @@ class SyntaxAnalyzer:
         """
         self.analysis_dir = Path(analysis_dir)
         self.logger = logging.getLogger(__name__)
-      
-    
+
+
     def dependency_frequencies(self, fable):
         """
         Count frequencies of dependency relations in a fable.
@@ -102,6 +102,11 @@ class SyntaxAnalyzer:
                     if dep_type not in dep_examples and head and dependent:
                         dep_examples[dep_type] = f"{dependent} → {head}"
         
+        # If still no dependencies, check if we can recover from raw sentence text
+        if total_deps == 0 and len(sentences) > 0:
+            self.logger.warning("No dependencies found. This might be due to missing dependency parsing in the NLP pipeline.")
+            self.logger.info("Consider reprocessing the fables with a model that includes dependency parsing.")
+        
         self.logger.info("Found %d total dependencies across %d sentences", 
                         total_deps, len(sentences))
         
@@ -120,8 +125,6 @@ class SyntaxAnalyzer:
             }
         
         return results
-
-
 
         
     def dependency_distances(self, fable):
@@ -195,12 +198,10 @@ class SyntaxAnalyzer:
                     'average_distance': sum(distances) / len(distances),
                     'count': len(distances)
                 }
-        
+
         return results
 
- 
 
-    
     def tree_shapes(self, fable):
         """
         Analyze dependency tree structures.
@@ -215,7 +216,7 @@ class SyntaxAnalyzer:
         """
         sentences = fable.get('sentences', [])
         language = fable.get('language', 'en')
-        
+
         results = {
             'average_branching_factor': 0,
             'max_branching_factor': 0,
@@ -225,7 +226,6 @@ class SyntaxAnalyzer:
             'sentence_count': len(sentences),
             'language_insights': {}
         }
-        
         # Skip if no sentences
         if not sentences:
             return results

@@ -200,15 +200,10 @@ class SpacySerializer:
             'label': span.label_,
         }
     
+
     def serialize_sentence(self, sentence_data):
         """
         Serialize a sentence dictionary with special handling for dependencies.
-        
-        Args:
-            sentence_data: A dictionary containing sentence data
-            
-        Returns:
-            A serialized version of the sentence with dependencies preserved
         """
         serialized = {}
         
@@ -216,6 +211,8 @@ class SpacySerializer:
         has_dependencies = 'dependencies' in sentence_data and sentence_data['dependencies']
         if has_dependencies:
             self.logger.debug(f"Found {len(sentence_data['dependencies'])} dependencies in sentence")
+        else:
+            self.logger.debug("No dependencies found in sentence to serialize")
         
         # Copy basic sentence fields
         for key in ['text', 'start', 'end']:
@@ -234,6 +231,7 @@ class SpacySerializer:
             for dep in sentence_data['dependencies']:
                 try:
                     if isinstance(dep, dict):
+                        # Create a complete serialized dependency with fallbacks for missing fields
                         serialized_dep = {
                             'dep': dep.get('dep', ''),
                             'head_id': dep.get('head_id'),
@@ -244,16 +242,20 @@ class SpacySerializer:
                         serialized['dependencies'].append(serialized_dep)
                     else:
                         self.logger.warning(f"Unexpected dependency format: {type(dep)}")
+                        # Try to salvage what we can
                         serialized['dependencies'].append(self.serialize(dep))
                 except Exception as e:
                     self.logger.error(f"Error serializing dependency: {e}")
                     # Continue with other dependencies rather than failing completely
-                    
+            
             # Verify dependencies were preserved
             if not serialized.get('dependencies'):
                 self.logger.warning("Dependencies were lost during serialization!")
             else:
                 self.logger.debug(f"Successfully serialized {len(serialized['dependencies'])} dependencies")
+        else:
+            # Initialize empty dependencies array to ensure the key exists
+            serialized['dependencies'] = []
         
         # Handle root information
         if 'root' in sentence_data:

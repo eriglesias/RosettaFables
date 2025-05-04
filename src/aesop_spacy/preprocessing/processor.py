@@ -78,6 +78,7 @@ class FableProcessor:
         """Extract named entities with their types and positions."""
         return [(ent.text, ent.label_, ent.start, ent.end) for ent in doc.ents]
 
+    
     def _extract_sentences(self, doc) -> List[Dict[str, Any]]:
         """Extract sentences with their metadata and dependencies."""
         sentences = []
@@ -87,20 +88,25 @@ class FableProcessor:
         
         if is_stanza:
             # Handle Stanza document
+            self.logger.debug("Processing Stanza document with %d sentences", len(doc.sentences))
             for sent in doc.sentences:
                 # Extract dependencies for Stanza
                 dependencies = []
-                for word in sent.words:
-                    if word.head > 0:  # Skip root (head=0)
-                        dependencies.append({
-                            'dep': word.deprel,
-                            'head_id': word.head,
-                            'dependent_id': word.id,
-                            'head_text': sent.words[word.head-1].text if word.head <= len(sent.words) else '',
-                            'dependent_text': word.text
-                        })
-                
-                self.logger.debug(f"Extracted {len(dependencies)} dependencies for Stanza sentence")
+                try:
+                    for word in sent.words:
+                        if word.head > 0:  # Skip root (head=0)
+                            dependencies.append({
+                                'dep': word.deprel,
+                                'head_id': word.head,
+                                'dependent_id': word.id,
+                                'head_text': sent.words[word.head-1].text if word.head <= len(sent.words) else '',
+                                'dependent_text': word.text
+                            })
+                    
+                    self.logger.debug(f"Extracted {len(dependencies)} dependencies for Stanza sentence")
+                except Exception as e:
+                    self.logger.warning(f"Failed to extract Stanza dependencies: {e}")
+                    dependencies = []
                 
                 sentence_data = {
                     'text': sent.text,
@@ -110,45 +116,58 @@ class FableProcessor:
                 }
                 sentences.append(sentence_data)
         else:
-            # Handle spaCy document
-            for sent in doc.sents:
-                try:
-                    # Extract dependencies for spaCy
-                    dependencies = []
-                    for token in sent:
-                        if token.dep_ != '':  # Skip tokens without dependency relation
-                            dependencies.append({
-                                'dep': token.dep_,
-                                'head_id': token.head.i,
-                                'dependent_id': token.i,
-                                'head_text': token.head.text,
-                                'dependent_text': token.text
-                            })
+            # Handle spaCy document with improved error handling
+            self.logger.debug("Processing spaCy document")
+            try:
+                for sent in doc.sents:
+                    try:
+                        # Extract dependencies for spaCy
+                        dependencies = []
+                        for token in sent:
+                            if token.dep_ != '':  # Skip tokens without dependency relation
+                                dependencies.append({
+                                    'dep': token.dep_,
+                                    'head_id': token.head.i,
+                                    'dependent_id': token.i,
+                                    'head_text': token.head.text,
+                                    'dependent_text': token.text
+                                })
+                        
+                        self.logger.debug(f"Found {len(dependencies)} dependencies in sentence")
+                        
+                        # Some spans might not have root attribute
+                        root_data = {}
+                        if hasattr(sent, 'root'):
+                            root_data = {
+                                'text': sent.root.text,
+                                'pos': sent.root.pos_,
+                                'dep': sent.root.dep_
+                            }
+                        else:
+                            root_data = {'text': "", 'pos': "", 'dep': ""}
+                    except AttributeError as e:
+                        # Fallback if there's any issue
+                        self.logger.warning(f"Error extracting dependencies for sentence: {e}")
+                        root_data = {'text': "", 'pos': "", 'dep': ""}
+                        dependencies = []
                     
-                    self.logger.debug(f"Extracted {len(dependencies)} dependencies for spaCy sentence")
-                    
-                    # Some spans might not have root attribute
-                    root_data = {
-                        'text': sent.root.text if hasattr(sent, 'root') else "",
-                        'pos': sent.root.pos_ if hasattr(sent, 'root') else "",
-                        'dep': sent.root.dep_ if hasattr(sent, 'root') else ""
+                    sentence_data = {
+                        'text': sent.text,
+                        'start': sent.start,
+                        'end': sent.end,
+                        'root': root_data,
+                        'dependencies': dependencies
                     }
-                except AttributeError as e:
-                    # Fallback if there's any issue
-                    self.logger.warning(f"Error extracting dependencies: {e}")
-                    root_data = {'text': "", 'pos': "", 'dep': ""}
-                    dependencies = []
-                    
-                sentence_data = {
-                    'text': sent.text,
-                    'start': sent.start,
-                    'end': sent.end,
-                    'root': root_data,
-                    'dependencies': dependencies
-                }
-                sentences.append(sentence_data)
+                    sentences.append(sentence_data)
+            except Exception as e:
+                self.logger.warning(f"Error extracting sentences from spaCy doc: {e}")
+        
+        # Log dependency stats
+        total_deps = sum(len(s.get('dependencies', [])) for s in sentences)
+        self.logger.info(f"Extracted {len(sentences)} sentences with {total_deps} total dependencies")
         
         return sentences
+
 
     def _process_moral(self, moral_text: str, nlp_model) -> Dict[str, Any]:
         """Process the moral text to extract linguistic features."""
