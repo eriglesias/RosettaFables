@@ -1,4 +1,5 @@
 #model_manager.py
+""" Handles models"""
 import importlib.util
 from typing import Optional, Any
 import logging

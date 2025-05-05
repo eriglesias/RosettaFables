@@ -1,4 +1,5 @@
-# test_dependencies.py
+#test_dependencies.py
+""" Tests if the modules can extract dependencies"""
 import unittest
 import logging
 import sys
@@ -43,7 +44,7 @@ class TestModelDependencies(unittest.TestCase):
             
             # Skip if model couldn't be loaded
             if nlp is None:
-                self.logger.warning(f"Couldn't load model for {language}, skipping test")
+                self.logger.warning("Couldn't load model for {%s}, skipping test", language)
                 self.skipTest(f"Model for {language} could not be loaded")
             
             # Check if the parser is in the pipeline

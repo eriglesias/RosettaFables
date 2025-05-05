@@ -38,12 +38,16 @@ class FableProcessor:
                 'pos_tags': [],
                 'entities': [],
                 'sentences': [],
+                'dependencies': [],  # Add empty dependencies list
             })
             return processed
 
         # Apply the NLP model
         doc = nlp_model(body)
 
+        # Get document-level dependencies
+        doc_dependencies = self._extract_dependencies(doc)
+        
         # Extract linguistic features
         processed.update({
             'doc_length': len(doc),
@@ -52,8 +56,13 @@ class FableProcessor:
             'pos_tags': self._extract_pos_tags(doc),
             'entities': self._extract_entities(doc),
             'sentences': self._extract_sentences(doc),
-            'dependencies': self._extract_dependencies(doc)
+            'dependencies': doc_dependencies  # Add document-level dependencies
         })
+
+        # Log dependency stats
+        self.logger.info(f"Extracted {len(doc_dependencies)} document-level dependencies")
+        sentence_deps = sum(len(s.get('dependencies', [])) for s in processed['sentences'])
+        self.logger.info(f"Extracted {sentence_deps} sentence-level dependencies across {len(processed['sentences'])} sentences")
 
         # Process moral if present
         if 'extracted_moral' in fable and fable['extracted_moral'].get('text'):
