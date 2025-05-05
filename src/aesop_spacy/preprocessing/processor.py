@@ -45,6 +45,17 @@ class FableProcessor:
         # Apply the NLP model
         doc = nlp_model(body)
 
+        # Check if model has parser component
+        if hasattr(nlp_model, 'pipe_names'):
+            self.logger.info(f"Model pipeline components: {nlp_model.pipe_names}")
+        if 'parser' not in nlp_model.pipe_names:
+            self.logger.warning(f"Model {nlp_model} does not have parser component!")
+
+         # Extract dependencies before serialization and log them
+        sentences = self._extract_sentences(doc)
+        total_deps = sum(len(s.get('dependencies', [])) for s in sentences)
+        self.logger.info(f"Extracted {total_deps} dependencies across {len(sentences)} sentences")
+
         # Get document-level dependencies
         doc_dependencies = self._extract_dependencies(doc)
         
@@ -214,29 +225,34 @@ class FableProcessor:
         """Extract all dependency relations from the document."""
         dependencies = []
         
-        # Check if this is a spaCy doc
-        if hasattr(doc, 'sents'):
-            # spaCy document
-            for token in doc:
-                if token.dep_ and token.dep_ != '':  # Skip tokens without dependency relation
-                    dependencies.append({
-                        'dep': token.dep_,
-                        'head_id': token.head.i,
-                        'dependent_id': token.i,
-                        'head_text': token.head.text,
-                        'dependent_text': token.text
-                    })
-        else:
-            # Assume Stanza document
-            for sent in doc.sentences:
-                for word in sent.words:
-                    if word.head > 0:  # Skip root (head=0)
+        try:
+            # For spaCy doc
+            if hasattr(doc, 'has_annotation') and doc.has_annotation('DEP'):
+                for token in doc:
+                    if token.dep_ and token.dep_ != '':
                         dependencies.append({
-                            'dep': word.deprel,
-                            'head_id': word.head,
-                            'dependent_id': word.id,
-                            'head_text': sent.words[word.head-1].text if word.head <= len(sent.words) else '',
-                            'dependent_text': word.text
+                            'dep': token.dep_,
+                            'head_id': token.head.i,
+                            'dependent_id': token.i,
+                            'head_text': token.head.text,
+                            'dependent_text': token.text
                         })
+            # For Stanza doc
+            elif hasattr(doc, 'sentences'):
+                for sent in doc.sentences:
+                    for word in sent.words:
+                        if word.head > 0:  # Skip root (head=0)
+                            dependencies.append({
+                                'dep': word.deprel,
+                                'head_id': word.head,
+                                'dependent_id': word.id,
+                                'head_text': sent.words[word.head-1].text if word.head <= len(sent.words) else '',
+                                'dependent_text': word.text
+                            })
+            
+            self.logger.info(f"Extracted {len(dependencies)} document-level dependencies")
+        except Exception as e:
+            self.logger.warning(f"Error extracting dependencies: {e}")
+            dependencies = []
         
         return dependencies

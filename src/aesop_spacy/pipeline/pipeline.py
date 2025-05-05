@@ -267,6 +267,13 @@ class FablePipeline:
                             entity_text, entity_label = entity_data[0], entity_data[1]
                             self.recognizer.track_entity(entity_text, entity_label, document_id)
 
+                # Check if dependencies were extracted
+                if 'sentences' in processed_fable:
+                     total_deps = sum(len(s.get('dependencies', [])) for s in processed_fable['sentences'])
+                     if total_deps == 0 and 'dependencies' not in processed_fable:
+                        self.logger.warning(f"No dependencies found in processed fable {fable.get('id', i)}. Check model configuration.")
+
+
                 # Serialize spaCy objects to JSON-compatible format
                 serialized_fable = self.serializer.serialize(processed_fable)
                 processed_fables.append(serialized_fable)
