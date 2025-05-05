@@ -1,5 +1,13 @@
-# src/aesop_spacy/io/serializer.py
-from typing import Any, Dict, List, Set, Optional, Union
+#serializer.py
+"""
+Serializer module for converting spaCy objects to JSON-serializable structures.
+
+This module provides functionality to convert spaCy documents, tokens, spans
+and other objects into JSON-serializable dictionaries, with special handling
+for nested structures, circular references, and dependency information.
+"""
+
+from typing import Any, Dict, Set, Optional
 import logging
 
 
@@ -38,6 +46,11 @@ class SpacySerializer:
         # Special handling for fables with sentences
         if isinstance(obj, dict) and 'sentences' in obj:
             self.logger.debug("Serializing a fable with %d sentences", len(obj['sentences']))
+            
+            # Check for document-level dependencies
+            if 'dependencies' in obj:
+                self.logger.debug("Fable has %d document-level dependencies", len(obj['dependencies']))
+            
             result = {}
             for k, v in obj.items():
                 if k != 'sentences':
@@ -46,17 +59,43 @@ class SpacySerializer:
             # Explicitly use serialize_sentence for each sentence
             result['sentences'] = []
             for i, sent in enumerate(obj['sentences']):
+                # Log before serialization to see if dependencies exist
+                if 'dependencies' in sent:
+                    self.logger.debug("Sentence %d has %d dependencies before serialization", 
+                                     i, len(sent['dependencies']))
+                else:
+                    self.logger.debug("Sentence %d has no dependencies before serialization", i)
+                    
                 serialized_sent = self.serialize_sentence(sent)
-                # Check if dependencies were preserved
-                if 'dependencies' in sent and 'dependencies' not in serialized_sent:
-                    self.logger.warning("Dependencies were lost during serialization for sentence %d", i)
+                
+                # Verify dependencies were preserved
+                if 'dependencies' in sent and not serialized_sent.get('dependencies'):
+                    self.logger.warning("Dependencies lost during serialization for sentence %d", i)
+                    # Try to salvage the dependencies by directly copying
+                    if isinstance(sent['dependencies'], list):
+                        serialized_sent['dependencies'] = []
+                        for dep in sent['dependencies']:
+                            if isinstance(dep, dict):
+                                serialized_sent['dependencies'].append(dep.copy())
+                            else:
+                                serialized_sent['dependencies'].append(self.serialize(dep, visited.copy()))
+                
                 result['sentences'].append(serialized_sent)
             
-            # If we have document-level dependencies, copy them to ensure they're not lost
+            # If we have document-level dependencies, make sure they're preserved
             if 'dependencies' in obj:
-                result['dependencies'] = self.serialize(obj['dependencies'], visited.copy())
-                self.logger.debug("Serialized %d document-level dependencies", 
-                                 len(obj['dependencies']))
+                # Directly preserve dependencies to avoid any potential serialization issues
+                if isinstance(obj['dependencies'], list):
+                    result['dependencies'] = []
+                    for dep in obj['dependencies']:
+                        if isinstance(dep, dict):
+                            result['dependencies'].append(dep.copy())
+                        else:
+                            result['dependencies'].append(self.serialize(dep, visited.copy()))
+                    self.logger.debug("Preserved %d document-level dependencies", 
+                                     len(result['dependencies']))
+                else:
+                    result['dependencies'] = self.serialize(obj['dependencies'], visited.copy())
             
             return result
         
@@ -78,8 +117,11 @@ class SpacySerializer:
             try:
                 dict_repr = obj.to_dict()
                 return self.serialize(dict_repr, visited.copy())
-            except Exception as e:
-                self.logger.warning(f"Error calling to_dict() on {type(obj).__name__}: {e}")
+            except AttributeError as e:
+                self.logger.warning("Error calling to_dict() on %s: %s", type(obj).__name__, e)
+                return str(obj)
+            except ValueError as e:
+                self.logger.warning("Value error in to_dict() on %s: %s", type(obj).__name__, e)
                 return str(obj)
         
         # Handle objects with __dict__ (custom classes)
@@ -98,8 +140,8 @@ class SpacySerializer:
         else:
             try:
                 return str(obj)
-            except Exception as e:
-                self.logger.warning(f"Error converting {type(obj).__name__} to string: {e}")
+            except ValueError as e:
+                self.logger.warning("Error converting %s to string: %s", type(obj).__name__, e)
                 return "<unserializable object>"
 
     def serialize_spacy_object(self, obj: Any, visited: Set[int]) -> Dict[str, Any]:
@@ -150,24 +192,24 @@ class SpacySerializer:
             # For Doc objects, serialize tokens
             if hasattr(obj, 'ents') and hasattr(obj, '__iter__'):
                 # This is likely a Doc object
-                result['tokens'] = [self.serialize_token(token, visited) 
-                                   for token in obj]
-                result['ents'] = [self.serialize_span(ent, visited) 
-                                 for ent in obj.ents]
+                result['tokens'] = [self.serialize_token(token) for token in obj]
+                result['ents'] = [self.serialize_span(ent, visited) for ent in obj.ents]
         
-        except Exception as e:
-            self.logger.warning(f"Error serializing {type(obj).__name__}: {e}")
+        except AttributeError as e:
+            self.logger.warning("Attribute error serializing %s: %s", type(obj).__name__, e)
+            result['error'] = str(e)
+        except ValueError as e:
+            self.logger.warning("Value error serializing %s: %s", type(obj).__name__, e)
             result['error'] = str(e)
         
         return result
     
-    def serialize_token(self, token: Any, visited: Set[int]) -> Dict[str, Any]:
+    def serialize_token(self, token: Any) -> Dict[str, Any]:
         """
         Serialize a spaCy Token object.
         
         Args:
             token: A spaCy Token
-            visited: Set of visited object IDs
             
         Returns:
             Dictionary representation of the token
@@ -200,17 +242,23 @@ class SpacySerializer:
             'label': span.label_,
         }
     
-
     def serialize_sentence(self, sentence_data):
         """
         Serialize a sentence dictionary with special handling for dependencies.
         """
+        # Start with a debug log to see what we're working with
+        self.logger.debug("Serializing sentence: %s...", sentence_data.get('text', '')[:30])
+        
         serialized = {}
         
         # Check if we have dependencies to serialize
         has_dependencies = 'dependencies' in sentence_data and sentence_data['dependencies']
         if has_dependencies:
-            self.logger.debug(f"Found {len(sentence_data['dependencies'])} dependencies in sentence")
+            self.logger.debug("Found %d dependencies in sentence", len(sentence_data['dependencies']))
+            
+            # Log the first dependency to help with debugging
+            if len(sentence_data['dependencies']) > 0:
+                self.logger.debug("Sample dependency: %s", sentence_data['dependencies'][0])
         else:
             self.logger.debug("No dependencies found in sentence to serialize")
         
@@ -225,37 +273,50 @@ class SpacySerializer:
         if 'pos_tags' in sentence_data:
             serialized['pos_tags'] = self.serialize(sentence_data['pos_tags'])
         
-        # Special handling for dependency structure
+        # Special handling for dependency structure - more defensive
+        serialized['dependencies'] = []  # Always initialize the key
+        
         if has_dependencies:
-            serialized['dependencies'] = []
             for dep in sentence_data['dependencies']:
                 try:
                     if isinstance(dep, dict):
-                        # Create a complete serialized dependency with fallbacks for missing fields
-                        serialized_dep = {
-                            'dep': dep.get('dep', ''),
-                            'head_id': dep.get('head_id'),
-                            'dependent_id': dep.get('dependent_id'),
-                            'head_text': dep.get('head_text', ''),
-                            'dependent_text': dep.get('dependent_text', '')
-                        }
+                        # Create a copy to preserve the original structure
+                        serialized_dep = dep.copy()
+                        
+                        # Ensure all required fields have at least default values
+                        if 'dep' not in serialized_dep:
+                            serialized_dep['dep'] = ''
+                        if 'head_id' not in serialized_dep:
+                            serialized_dep['head_id'] = -1
+                        if 'dependent_id' not in serialized_dep:
+                            serialized_dep['dependent_id'] = -1
+                        if 'head_text' not in serialized_dep:
+                            serialized_dep['head_text'] = ''
+                        if 'dependent_text' not in serialized_dep:
+                            serialized_dep['dependent_text'] = ''
+                            
                         serialized['dependencies'].append(serialized_dep)
                     else:
-                        self.logger.warning(f"Unexpected dependency format: {type(dep)}")
-                        # Try to salvage what we can
-                        serialized['dependencies'].append(self.serialize(dep))
-                except Exception as e:
-                    self.logger.error(f"Error serializing dependency: {e}")
+                        self.logger.warning("Unexpected dependency format: %s", type(dep))
+                        # Try to salvage what we can - convert to dict if possible
+                        if hasattr(dep, '__dict__'):
+                            # Convert object to dictionary
+                            dep_dict = {k: v for k, v in dep.__dict__.items() 
+                                       if not k.startswith('_')}
+                            serialized['dependencies'].append(dep_dict)
+                        else:
+                            # Fall back to serialization
+                            serialized['dependencies'].append(self.serialize(dep))
+                except (AttributeError, ValueError, TypeError) as e:
+                    self.logger.error("Error serializing dependency: %s", e)
                     # Continue with other dependencies rather than failing completely
             
             # Verify dependencies were preserved
             if not serialized.get('dependencies'):
                 self.logger.warning("Dependencies were lost during serialization!")
             else:
-                self.logger.debug(f"Successfully serialized {len(serialized['dependencies'])} dependencies")
-        else:
-            # Initialize empty dependencies array to ensure the key exists
-            serialized['dependencies'] = []
+                self.logger.debug("Successfully serialized %d dependencies", 
+                                 len(serialized['dependencies']))
         
         # Handle root information
         if 'root' in sentence_data:
