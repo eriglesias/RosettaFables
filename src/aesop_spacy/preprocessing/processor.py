@@ -51,7 +51,7 @@ class FableProcessor:
         if 'parser' not in nlp_model.pipe_names:
             self.logger.warning(f"Model {nlp_model} does not have parser component!")
 
-         # Extract dependencies before serialization and log them
+        # Extract dependencies before serialization and log them
         sentences = self._extract_sentences(doc)
         total_deps = sum(len(s.get('dependencies', [])) for s in sentences)
         self.logger.info(f"Extracted {total_deps} dependencies across {len(sentences)} sentences")

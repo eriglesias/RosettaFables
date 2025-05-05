@@ -1,4 +1,4 @@
-# syntax_analyzer.py
+#syntax_analyzer.py
 """
 Analyzes syntactic structures across languages in fables.
 
@@ -32,6 +32,9 @@ class SyntaxAnalyzer:
     def dependency_frequencies(self, fable):
         """
         Count frequencies of dependency relations in a fable.
+        
+        Returns:
+            Dict mapping dependency types to their frequencies and examples
         """
         # Get sentences from the fable
         sentences = fable.get('sentences', [])
@@ -174,6 +177,40 @@ class SyntaxAnalyzer:
                                 distances_by_type[dep_type] = []
                             distances_by_type[dep_type].append(distance)
         
+        # Try to recover from document-level dependencies if needed
+        if not all_distances and 'dependencies' in fable and 'tokens' in fable:
+            self.logger.info("Attempting to calculate distances from document-level dependencies")
+            deps = fable.get('dependencies', [])
+            tokens = fable.get('tokens', [])
+            
+            # Create a map of token indices
+            token_indices = {}
+            for i, token in enumerate(tokens):
+                if isinstance(token, (list, tuple)) and len(token) >= 2:
+                    token_id = token[1]  # Assuming (text, id) format
+                    token_indices[token_id] = i
+                elif isinstance(token, dict) and 'id' in token:
+                    token_id = token['id']
+                    token_indices[token_id] = i
+            
+            # Calculate distances
+            for dep in deps:
+                head_id = dep.get('head_id')
+                dep_id = dep.get('dependent_id')
+                dep_type = dep.get('dep')
+                
+                if head_id in token_indices and dep_id in token_indices:
+                    distance = abs(token_indices[head_id] - token_indices[dep_id])
+                    
+                    # Filter out unreasonably large distances
+                    if distance <= 30:
+                        all_distances.append(distance)
+                        
+                        # Track by dependency type
+                        if dep_type not in distances_by_type:
+                            distances_by_type[dep_type] = []
+                        distances_by_type[dep_type].append(distance)
+        
         # Calculate statistics
         results = {
             'overall': {
@@ -226,6 +263,7 @@ class SyntaxAnalyzer:
             'sentence_count': len(sentences),
             'language_insights': {}
         }
+        
         # Skip if no sentences
         if not sentences:
             return results
@@ -234,6 +272,10 @@ class SyntaxAnalyzer:
         branching_factors = []
         
         for sentence in sentences:
+            # Check if we have the necessary dependency information
+            if not ('dependencies' in sentence and sentence['dependencies']):
+                continue
+                
             if 'dependencies' in sentence and 'tokens' in sentence:
                 deps = sentence['dependencies']
                 tokens = sentence['tokens']
@@ -244,8 +286,12 @@ class SyntaxAnalyzer:
                 
                 # Map token IDs to their positions in the sentence
                 for i, token in enumerate(tokens):
-                    token_id = token.get('id')
-                    if token_id is not None:
+                    if isinstance(token, dict) and 'id' in token:
+                        token_id = token['id']
+                        token_positions[token_id] = i
+                    elif isinstance(token, (list, tuple)) and len(token) >= 2:
+                        # Handle (text, id) format
+                        token_id = token[1] if isinstance(token[1], int) else token[0]
                         token_positions[token_id] = i
                 
                 # Build dependency tree structure
@@ -344,11 +390,16 @@ class SyntaxAnalyzer:
         total_width = 0
         
         for child_id in children:
-            child_depth, child_width = self._calculate_tree_dimensions(
-                child_id, head_to_deps, current_depth + 1
-            )
-            max_child_depth = max(max_child_depth, child_depth)
-            total_width += child_width
+            try:
+                child_depth, child_width = self._calculate_tree_dimensions(
+                    child_id, head_to_deps, current_depth + 1
+                )
+                max_child_depth = max(max_child_depth, child_depth)
+                total_width += child_width
+            except RecursionError:
+                # Handle circular dependencies
+                self.logger.warning(f"Detected circular dependency involving node {child_id}")
+                return current_depth + 1, 1
         
         return max_child_depth, max(1, total_width)
     
@@ -465,6 +516,17 @@ class SyntaxAnalyzer:
         if language in language_expectations:
             results['language_expectations'] = language_expectations[language]
         
+        # Only continue if we have the necessary dependency information
+        has_dependencies = False
+        for sentence in sentences:
+            if 'dependencies' in sentence and sentence['dependencies']:
+                has_dependencies = True
+                break
+                
+        if not has_dependencies:
+            self.logger.warning("Cannot analyze dominant constructions: missing dependencies")
+            return results
+        
         # Process each sentence
         for sentence in sentences:
             if 'dependencies' in sentence and 'tokens' in sentence and 'pos_tags' in sentence:
@@ -475,15 +537,24 @@ class SyntaxAnalyzer:
                 # Map token IDs to their POS tags
                 token_id_to_pos = {}
                 for token, pos in zip(tokens, pos_tags):
+                    # Handle different token formats
+                    token_id = None
                     if isinstance(token, dict) and 'id' in token:
                         token_id = token['id']
-                        # Handle different POS tag formats
-                        if isinstance(pos, tuple) and len(pos) >= 2:
-                            token_id_to_pos[token_id] = pos[1]  # (token, POS) format
-                        elif isinstance(pos, dict) and 'pos' in pos:
-                            token_id_to_pos[token_id] = pos['pos']  # {pos: "TAG"} format
-                        else:
-                            token_id_to_pos[token_id] = str(pos)  # Direct POS value
+                    elif isinstance(token, (list, tuple)) and len(token) >= 2:
+                        token_id = token[1] if isinstance(token[1], int) else token[0]
+                        
+                    # Handle different POS tag formats
+                    pos_value = None
+                    if isinstance(pos, tuple) and len(pos) >= 2:
+                        pos_value = pos[1]  # (token, POS) format
+                    elif isinstance(pos, dict) and 'pos' in pos:
+                        pos_value = pos['pos']  # {pos: "TAG"} format
+                    elif isinstance(pos, str):
+                        pos_value = pos  # Direct POS value
+                        
+                    if token_id is not None and pos_value is not None:
+                        token_id_to_pos[token_id] = pos_value
                 
                 # Extract subject-verb-object relationships
                 subjects = []
@@ -496,29 +567,29 @@ class SyntaxAnalyzer:
                     dep_id = dep.get('dependent_id')
                     
                     # Extract subject
-                    if dep_type in ['nsubj', 'nsubjpass', 'csubj', 'csubjpass']:
+                    if dep_type in ['nsubj', 'nsubjpass', 'csubj', 'csubjpass', 'sb']:
                         subjects.append((dep_id, head_id))  # (subject_id, verb_id)
                     
                     # Extract object
-                    elif dep_type in ['dobj', 'obj', 'iobj']:
+                    elif dep_type in ['dobj', 'obj', 'iobj', 'pobj', 'oa', 'da']:
                         objects.append((dep_id, head_id))  # (object_id, verb_id)
                     
-                    # Track verbs
+                    # Track verbs - consider using token_id_to_pos for additional checks
                     elif dep_id in token_id_to_pos and token_id_to_pos[dep_id] in ['VERB', 'AUX']:
                         verbs.append(dep_id)
+                    elif dep_type in ['ROOT', 'root'] and head_id in token_id_to_pos and token_id_to_pos[head_id] in ['VERB', 'AUX']:
+                        verbs.append(head_id)
                 
                 # Analyze clauses with subject, verb, and object
                 for subj, verb_id in subjects:
                     for obj, obj_verb_id in objects:
                         # Only analyze if subject and object belong to the same verb
                         if verb_id == obj_verb_id:
-                            # Get positions
-                            subj_pos = next((i for i, t in enumerate(tokens) if t.get('id') == subj), -1)
-                            verb_pos = next((i for i, t in enumerate(tokens) if t.get('id') == verb_id), -1)
-                            obj_pos = next((i for i, t in enumerate(tokens) if t.get('id') == obj), -1)
-                            
-                            # Only continue if we found all positions
-                            if subj_pos >= 0 and verb_pos >= 0 and obj_pos >= 0:
+                            # Get positions of all elements
+                            positions = self._get_token_positions(tokens, [subj, verb_id, obj])
+                            if None not in positions:
+                                subj_pos, verb_pos, obj_pos = positions
+                                
                                 # Determine word order pattern
                                 pattern = self._get_word_order(subj_pos, verb_pos, obj_pos)
                                 if pattern in results['word_order_patterns']:
@@ -530,15 +601,15 @@ class SyntaxAnalyzer:
                 
                 # Analyze adjective positions
                 for dep in deps:
-                    if dep.get('dep') == 'amod':  # Adjectival modifier
+                    if dep.get('dep') in ['amod', 'nk']:  # Adjectival modifier
                         adj_id = dep.get('dependent_id')
                         noun_id = dep.get('head_id')
                         
                         # Get positions
-                        adj_pos = next((i for i, t in enumerate(tokens) if t.get('id') == adj_id), -1)
-                        noun_pos = next((i for i, t in enumerate(tokens) if t.get('id') == noun_id), -1)
-                        
-                        if adj_pos >= 0 and noun_pos >= 0:
+                        positions = self._get_token_positions(tokens, [adj_id, noun_id])
+                        if None not in positions:
+                            adj_pos, noun_pos = positions
+                            
                             if adj_pos < noun_pos:
                                 results['adjective_positions']['before_noun'] += 1
                             else:
@@ -548,15 +619,15 @@ class SyntaxAnalyzer:
                 
                 # Analyze adposition patterns
                 for dep in deps:
-                    if dep.get('dep') in ['case', 'prep', 'mark']:  # Adpositions
+                    if dep.get('dep') in ['case', 'prep', 'mark', 'mnr']:  # Adpositions
                         adp_id = dep.get('dependent_id')
                         obj_id = dep.get('head_id')
                         
                         # Get positions
-                        adp_pos = next((i for i, t in enumerate(tokens) if t.get('id') == adp_id), -1)
-                        obj_pos = next((i for i, t in enumerate(tokens) if t.get('id') == obj_id), -1)
-                        
-                        if adp_pos >= 0 and obj_pos >= 0:
+                        positions = self._get_token_positions(tokens, [adp_id, obj_id])
+                        if None not in positions:
+                            adp_pos, obj_pos = positions
+                            
                             if adp_pos < obj_pos:
                                 results['adposition_positions']['preposition'] += 1
                             else:
@@ -603,6 +674,37 @@ class SyntaxAnalyzer:
             results['dominant_adposition'] = dominant[0]
         
         return results
+        
+    def _get_token_positions(self, tokens, ids):
+        """
+        Get positions of tokens by their IDs, handling different token formats.
+        
+        Args:
+            tokens: List of tokens
+            ids: List of token IDs to find positions for
+            
+        Returns:
+            List of positions in the same order as ids (None for any not found)
+        """
+        positions = []
+        for token_id in ids:
+            position = None
+            
+            for i, token in enumerate(tokens):
+                # Handle different token formats
+                cur_id = None
+                if isinstance(token, dict) and 'id' in token:
+                    cur_id = token['id']
+                elif isinstance(token, (list, tuple)) and len(token) >= 2:
+                    cur_id = token[1] if isinstance(token[1], int) else token[0]
+                    
+                if cur_id == token_id:
+                    position = i
+                    break
+                    
+            positions.append(position)
+            
+        return positions
     
     def _get_word_order(self, subj_pos, verb_pos, obj_pos):
         """
@@ -675,6 +777,17 @@ class SyntaxAnalyzer:
             'total_roles': 0
         }
         
+        # Check if we have the necessary dependency information
+        has_dependencies = False
+        for sentence in sentences:
+            if 'dependencies' in sentence and sentence['dependencies']:
+                has_dependencies = True
+                break
+                
+        if not has_dependencies:
+            self.logger.warning("Cannot analyze semantic roles: missing dependencies")
+            return results
+        
         # Simple mapping from dependency types to semantic roles
         # This is a simplification; proper semantic role labeling would require more context
         dep_to_role = {
@@ -687,15 +800,24 @@ class SyntaxAnalyzer:
             'nmod': 'Location',  # Could be various roles
             'advmod': 'Manner',
             'xcomp': 'Purpose',
-            'advcl': 'Cause'
+            'advcl': 'Cause',
+            # Add German-specific mappings
+            'sb': 'Agent',      # Subject in German
+            'oa': 'Patient',    # Accusative object in German
+            'da': 'Recipient',  # Dative object in German
+            'mo': 'Manner',     # Modifier in German
+            # Add Dutch-specific mappings
+            'su': 'Agent',      # Subject in Dutch
+            'obj1': 'Patient',  # Direct object in Dutch
+            'obj2': 'Recipient' # Indirect object in Dutch
         }
         
         # Language-specific dependency mappings
         language_deps = {
             'en': {'nsubj': 'Agent', 'dobj': 'Patient'},
             'es': {'nsubj': 'Agent', 'obj': 'Patient'},
-            'de': {'nsubj': 'Agent', 'obj': 'Patient', 'iobj': 'Recipient'},
-            'nl': {'nsubj': 'Agent', 'obj': 'Patient', 'iobj': 'Recipient'},
+            'de': {'sb': 'Agent', 'oa': 'Patient', 'da': 'Recipient'},
+            'nl': {'su': 'Agent', 'obj1': 'Patient', 'obj2': 'Recipient'},
             'grc': {'nsubj': 'Agent', 'obj': 'Patient'}
         }
         
@@ -717,11 +839,17 @@ class SyntaxAnalyzer:
                 # Map token IDs to token text
                 token_id_to_text = {}
                 for token in tokens:
+                    # Handle different token formats
                     if isinstance(token, dict) and 'id' in token and 'text' in token:
                         token_id_to_text[token['id']] = token['text']
                     elif isinstance(token, (list, tuple)) and len(token) >= 2:
-                        # Handle (id, text) tuple format
-                        token_id_to_text[token[0]] = token[1]
+                        # Handle (id, text) or (text, id) tuple format
+                        if isinstance(token[0], str):
+                            # (text, id) format
+                            token_id_to_text[token[1]] = token[0]
+                        else:
+                            # (id, text) format
+                            token_id_to_text[token[0]] = token[1]
                 
                 # Process each dependency
                 for dep in deps:

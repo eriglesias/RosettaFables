@@ -269,8 +269,8 @@ class FablePipeline:
 
                 # Check if dependencies were extracted
                 if 'sentences' in processed_fable:
-                     total_deps = sum(len(s.get('dependencies', [])) for s in processed_fable['sentences'])
-                     if total_deps == 0 and 'dependencies' not in processed_fable:
+                    total_deps = sum(len(s.get('dependencies', [])) for s in processed_fable['sentences'])
+                    if total_deps == 0 and 'dependencies' not in processed_fable:
                         self.logger.warning(f"No dependencies found in processed fable {fable.get('id', i)}. Check model configuration.")
 
 
