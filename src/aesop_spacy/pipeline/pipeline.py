@@ -26,7 +26,7 @@ from aesop_spacy.preprocessing.extractor import ContentExtractor
 from aesop_spacy.preprocessing.processor import FableProcessor
 from aesop_spacy.models.model_manager import get_model
 from aesop_spacy.preprocessing.entity_recognizer import EntityRecognizer
-from aesop_spacy.utils.log_utils import section_header, subsection_header, log_timing, wrap_analysis_result, format_count, format_percentage
+from aesop_spacy.utils.log_utils import section_header, subsection_header, log_timing, wrap_analysis_result, format_count
 
 
 class FablePipeline:
@@ -197,7 +197,7 @@ class FablePipeline:
         Returns:
             True if the pipeline completed successfully
         """
-        section_header("FABLE PROCESSING PIPELINE", logger=self.logger)
+        self.logger.info(section_header("FABLE PROCESSING PIPELINE"))
         self.logger.info("Starting pipeline (use_processed=%s)", use_processed)
 
         # Check if ALL expected language files exist
@@ -205,7 +205,7 @@ class FablePipeline:
         
         if all_files_exist:
             # All files exist, just load them
-            subsection_header("LOADING PROCESSED FILES", logger=self.logger)
+            self.logger.info(subsection_header("LOADING PROCESSED FILES"))
             fables_by_language = self._load_from_processed()
             # Log what we found
             total_fables = sum(len(fables) for fables in fables_by_language.values())
@@ -215,7 +215,7 @@ class FablePipeline:
             return True
         
         # Regular processing with the loader which will handle missing files
-        subsection_header("PROCESSING RAW FILES", logger=self.logger)
+        self.logger.info(subsection_header("PROCESSING RAW FILES"))
         fables_by_language = self.loader.load_all()
         
         # Log what we found
@@ -226,7 +226,7 @@ class FablePipeline:
 
         # Process each language
         for lang, fables in fables_by_language.items():
-            subsection_header(f"PROCESSING {lang.upper()} FABLES", logger=self.logger)
+            self.logger.info(subsection_header(f"PROCESSING {lang.upper()} FABLES"))
             self._process_language(lang, fables)
 
         self.logger.info("Pipeline execution completed successfully")
@@ -368,7 +368,8 @@ class FablePipeline:
                 if 'sentences' in processed_fable:
                     total_deps = sum(len(s.get('dependencies', [])) for s in processed_fable['sentences'])
                     if total_deps == 0 and 'dependencies' not in processed_fable:
-                        self.logger.warning(f"No dependencies found in processed fable {fable.get('id', i)}. Check model configuration.")
+                        self.logger.warning("No dependencies found in processed fable %s. Check model configuration.", 
+                                          fable.get('id', i))
 
                 # Serialize spaCy objects to JSON-compatible format
                 serialized_fable = self.serializer.serialize(processed_fable)
@@ -409,7 +410,7 @@ class FablePipeline:
         Returns:
             Dictionary of analysis results
         """
-        section_header("FABLE ANALYSIS", logger=self.logger)
+        self.logger.info(section_header("FABLE ANALYSIS"))
 
         all_analysis_types = [
             'pos', 'entity', 'moral', 'comparison', 'clustering', 'sentiment',
@@ -419,21 +420,21 @@ class FablePipeline:
         # Default to all analysis types if none specified
         if analysis_types is None:
             analysis_types = all_analysis_types
-            self.logger.info(f"Running all {len(all_analysis_types)} analysis types")
+            self.logger.info("Running all %d analysis types", len(all_analysis_types))
         else:
-            self.logger.info(f"Running {len(analysis_types)} specified analysis types: {', '.join(analysis_types)}")
+            self.logger.info("Running %d specified analysis types: %s", len(analysis_types), ', '.join(analysis_types))
           
         # Results container
         results = {}
       
         # Load processed fables for each language
-        subsection_header("LOADING DATA", logger=self.logger)
+        self.logger.info(subsection_header("LOADING DATA"))
         languages = []
         for lang_file in (self.output_dir / "processed").glob("fables_*.json"):
             lang = lang_file.stem.split('_')[1]
             languages.append(lang)
         
-        self.logger.info(f"Found processed data for languages: {', '.join(languages)}")
+        self.logger.info("Found processed data for languages: %s", ', '.join(languages))
       
         # Loading fables by language for analysis
         fables_by_language = self._load_processed_fables(languages)
@@ -445,13 +446,13 @@ class FablePipeline:
        
         # Run analyses based on requested types
         if any(analysis_type in analysis_types for analysis_type in ['pos', 'entity', 'moral', 'comparison']):
-            subsection_header("BASIC LINGUISTIC ANALYSIS", logger=self.logger)
+            self.logger.info(subsection_header("BASIC LINGUISTIC ANALYSIS"))
             basic_results = self._run_basic_analysis(fables_by_language, analysis_types)
             results.update(basic_results)
            
         # Clustering analysis
         if 'clustering' in analysis_types:
-            subsection_header("CLUSTERING ANALYSIS", logger=self.logger)
+            self.logger.info(subsection_header("CLUSTERING ANALYSIS"))
             self.logger.info("Grouping similar fables across languages...")
             clustering_results = self._run_clustering_analysis(fables_by_language)
             results['clustering'] = wrap_analysis_result(
@@ -459,7 +460,7 @@ class FablePipeline:
 
         # Sentiment analysis
         if 'sentiment' in analysis_types:
-            subsection_header("SENTIMENT ANALYSIS", logger=self.logger)
+            self.logger.info(subsection_header("SENTIMENT ANALYSIS"))
             self.logger.info("Analyzing emotional tone of fables...")
             sentiment_results = self._run_sentiment_analysis(fables_by_language)
             results['sentiment'] = wrap_analysis_result(
@@ -467,7 +468,7 @@ class FablePipeline:
 
         # Style analysis
         if 'style' in analysis_types:
-            subsection_header("STYLE ANALYSIS", logger=self.logger)
+            self.logger.info(subsection_header("STYLE ANALYSIS"))
             self.logger.info("Analyzing writing style features...")
             style_results = self._run_style_analysis(fables_by_language)
             results['style'] = wrap_analysis_result(
@@ -475,7 +476,7 @@ class FablePipeline:
 
         # Syntax analysis
         if 'syntax' in analysis_types:
-            subsection_header("SYNTAX ANALYSIS", logger=self.logger)
+            self.logger.info(subsection_header("SYNTAX ANALYSIS"))
             self.logger.info("Analyzing grammatical structures...")
             syntax_results = self._run_syntax_analysis(fables_by_language)
             results['syntax'] = wrap_analysis_result(
@@ -483,7 +484,7 @@ class FablePipeline:
         
         # NLP techniques analysis
         if 'nlp_techniques' in analysis_types:
-            subsection_header("ADVANCED NLP TECHNIQUES", logger=self.logger)
+            self.logger.info(subsection_header("ADVANCED NLP TECHNIQUES"))
             self.logger.info("Applying TF-IDF, topic modeling, and word embeddings...")
             nlp_results = self._run_nlp_techniques_analysis(fables_by_language)
             results['nlp_techniques'] = wrap_analysis_result(
@@ -491,7 +492,7 @@ class FablePipeline:
         
         # Statistical analysis
         if 'stats' in analysis_types:
-            subsection_header("STATISTICAL ANALYSIS", logger=self.logger)
+            self.logger.info(subsection_header("STATISTICAL ANALYSIS"))
             self.logger.info("Computing statistical measures of text...")
             stats_results = self._run_stats_analysis(fables_by_language)
             results['stats'] = wrap_analysis_result(
@@ -499,7 +500,7 @@ class FablePipeline:
         
         # Moral analysis
         if 'moral' in analysis_types:
-            subsection_header("MORAL ANALYSIS", logger=self.logger)
+            self.logger.info(subsection_header("MORAL ANALYSIS"))
             self.logger.info("Analyzing moral themes and lessons...")
             moral_results = self._run_moral_analysis(fables_by_language)
             results['moral'] = wrap_analysis_result(
@@ -507,17 +508,19 @@ class FablePipeline:
             
         # Cross-language analysis
         if 'cross_language' in analysis_types:
-            subsection_header("CROSS-LANGUAGE ANALYSIS", logger=self.logger)
+            self.logger.info(subsection_header("CROSS-LANGUAGE ANALYSIS"))
             self.logger.info("Comparing fables across different languages...")
             cross_lang_results = self._run_cross_language_analysis(fables_by_language)
             results['cross_language'] = wrap_analysis_result(
                 cross_lang_results, "Cross-language", self.logger)
         
-        section_header("ANALYSIS SUMMARY", logger=self.logger)
+        self.logger.info(section_header("ANALYSIS SUMMARY"))
         completed_analyses = [k for k, v in results.items() 
                              if isinstance(v, dict) and 'error' not in v]
-        self.logger.info(f"Successfully completed {len(completed_analyses)} analyses")
-        self.logger.info(f"Analyzed {sum(len(fables) for fables in fables_by_language.values())} fables across {len(fables_by_language)} languages")
+        self.logger.info("Successfully completed %d analyses", len(completed_analyses))
+        self.logger.info("Analyzed %d fables across %d languages", 
+                        sum(len(fables) for fables in fables_by_language.values()), 
+                        len(fables_by_language))
         
         return results
 
@@ -553,14 +556,16 @@ class FablePipeline:
                         valid_fables = []
                         for i, fable in enumerate(fables):
                             if not isinstance(fable, dict):
-                                self.logger.warning(f"Skipping invalid fable in {lang}: expected dict, got {type(fable)}")
+                                self.logger.warning("Skipping invalid fable in %s: expected dict, got %s", 
+                                                  lang, type(fable))
                                 continue
                             
                             # Check if fable has a valid ID, assign one if not
                             if 'id' not in fable or not fable['id']:
                                 # Generate a unique ID using index - this ensures we don't have empty IDs
                                 fable['id'] = f"{lang}_{i+1}"
-                                self.logger.warning(f"Assigned generated ID '{fable['id']}' to fable in {lang}")
+                                self.logger.warning("Assigned generated ID '%s' to fable in %s", 
+                                                  fable['id'], lang)
                             
                             # Ensure language field exists
                             if 'language' not in fable:
@@ -609,7 +614,7 @@ class FablePipeline:
             self.logger.info("Analyzing part-of-speech distributions...")
             pos_results = {}
             for lang in fables_by_language.keys():
-                self.logger.info(f"  Processing {lang} POS tags...")
+                self.logger.info("  Processing %s POS tags...", lang)
                 pos_dist = self.pos_analyzer.analyze_pos_distribution(lang)
                 pos_results[lang] = pos_dist
                 
@@ -617,7 +622,7 @@ class FablePipeline:
                 if pos_dist:
                     top_tags = sorted(pos_dist.items(), key=lambda x: x[1], reverse=True)[:3]
                     top_tags_str = ", ".join([f"{tag}: {pct:.1f}%" for tag, pct in top_tags])
-                    self.logger.info(f"  {lang}: Top POS tags are {top_tags_str}")
+                    self.logger.info("  %s: Top POS tags are %s", lang, top_tags_str)
             
             results['pos_distribution'] = pos_results
             
@@ -638,7 +643,7 @@ class FablePipeline:
                 if entity_dist:
                     entity_count = sum(1 for entity in entity_dist.values() 
                                      if isinstance(entity, dict) and 'count' in entity)
-                    self.logger.info(f"  {lang}: Found {entity_count} entity types")
+                    self.logger.info("  %s: Found %d entity types", lang, entity_count)
             
             results['entity_distribution'] = entity_results
             
@@ -654,14 +659,14 @@ class FablePipeline:
             
             # Identify fable IDs that appear in multiple languages
             fable_ids = self.comparison_analyzer.find_common_fable_ids(fables_by_language)
-            self.logger.info(f"Found {len(fable_ids)} fables with content in multiple languages")
+            self.logger.info("Found %d fables with content in multiple languages", len(fable_ids))
             
             for i, fable_id in enumerate(fable_ids):
-                self.logger.info(f"  Comparing fable {fable_id} [{i+1}/{len(fable_ids)}]...")
+                self.logger.info("  Comparing fable %s [%d/%d]...", fable_id, i+1, len(fable_ids))
                 comparison = self.comparison_analyzer.compare_fable(fable_id, self.fables_by_id)
                 if comparison:
                     languages = comparison.get('languages', [])
-                    self.logger.info(f"    Available in {len(languages)} languages: {', '.join(languages)}")
+                    self.logger.info("    Available in %d languages: %s", len(languages), ', '.join(languages))
                     comparison_results[fable_id] = comparison
                     self.writer.save_comparison_results(comparison, fable_id)
             
@@ -689,7 +694,7 @@ class FablePipeline:
                         fable['language'] = lang
                     all_fables.append(fable)
             
-            self.logger.info(f"Preparing to cluster {len(all_fables)} fables...")
+            self.logger.info("Preparing to cluster %d fables...", len(all_fables))
             
             # Run K-means clustering
             self.logger.info("Running K-means clustering...")
@@ -763,11 +768,11 @@ class FablePipeline:
             
             # Analyze sentiment for each language
             for lang, fables in fables_by_language.items():
-                self.logger.info(f"Analyzing sentiment for {lang} fables...")
+                self.logger.info("Analyzing sentiment for %s fables...", lang)
                 lang_results = []
                 
                 for i, fable in enumerate(fables):
-                    self.logger.debug(f"  Processing fable {i+1}/{len(fables)}: {fable.get('title', 'Untitled')}")
+                    self.logger.debug("  Processing fable %d/%d: %s", i+1, len(fables), fable.get('title', 'Untitled'))
                     sentiment_result = self.sentiment_analyzer.analyze_sentiment(fable)
                     
                     # Add fable ID for reference
@@ -777,7 +782,7 @@ class FablePipeline:
                     lang_results.append(sentiment_result)
                 
                 sentiment_by_language[lang] = lang_results
-                self.logger.info(f"Completed sentiment analysis for {len(lang_results)} {lang} fables")
+                self.logger.info("Completed sentiment analysis for %d %s fables", len(lang_results), lang)
             
             # Compare sentiment across languages for the same fables
             self.logger.info("Comparing sentiment across languages...")
@@ -823,14 +828,14 @@ class FablePipeline:
             
             # Analyze style for each language
             for lang, fables in fables_by_language.items():
-                self.logger.info(f"Analyzing writing style for {lang} fables...")
+                self.logger.info("Analyzing writing style for %s fables...", lang)
                 lang_results = []
                 
                 for i, fable in enumerate(fables):
                     # Get fable ID for reference
                     fable_id = fable.get('id', 'unknown')
                     title = fable.get('title', 'Untitled')
-                    self.logger.debug(f"  Processing fable {i+1}/{len(fables)}: {title}")
+                    self.logger.debug("  Processing fable %d/%d: %s", i+1, len(fables), title)
                     
                     # Analyze sentence complexity
                     complexity_result = self.style_analyzer.sentence_complexity(fable)
@@ -853,7 +858,7 @@ class FablePipeline:
                     lang_results.append(fable_result)
                 
                 style_by_language[lang] = lang_results
-                self.logger.info(f"Completed style analysis for {len(lang_results)} {lang} fables")
+                self.logger.info("Completed style analysis for %d %s fables", len(lang_results), lang)
             
             return style_by_language
             
@@ -876,33 +881,33 @@ class FablePipeline:
             
             # Analyze syntax for each language
             for lang, fables in fables_by_language.items():
-                self.logger.info(f"Analyzing syntactic structures for {lang} fables...")
+                self.logger.info("Analyzing syntactic structures for %s fables...", lang)
                 lang_results = []
                 
                 for i, fable in enumerate(fables):
                     # Get fable ID for reference
                     fable_id = fable.get('id', 'unknown')
                     title = fable.get('title', 'Untitled')
-                    self.logger.debug(f"  Processing fable {i+1}/{len(fables)}: {title}")
+                    self.logger.debug("  Processing fable %d/%d: %s", i+1, len(fables), title)
                     
                     # Analyze dependency frequencies
-                    self.logger.debug(f"    Analyzing dependency frequencies...")
+                    self.logger.debug("    Analyzing dependency frequencies...")
                     dep_freq_result = self.syntax_analyzer.dependency_frequencies(fable)
                     
                     # Analyze dependency distances
-                    self.logger.debug(f"    Analyzing dependency distances...")
+                    self.logger.debug("    Analyzing dependency distances...")
                     dep_dist_result = self.syntax_analyzer.dependency_distances(fable)
                     
                     # Analyze tree shapes
-                    self.logger.debug(f"    Analyzing syntactic tree shapes...")
+                    self.logger.debug("    Analyzing syntactic tree shapes...")
                     tree_result = self.syntax_analyzer.tree_shapes(fable)
                     
                     # Analyze dominant constructions
-                    self.logger.debug(f"    Analyzing dominant constructions...")
+                    self.logger.debug("    Analyzing dominant constructions...")
                     const_result = self.syntax_analyzer.dominant_constructions(fable)
                     
                     # Analyze semantic roles
-                    self.logger.debug(f"    Analyzing semantic roles...")
+                    self.logger.debug("    Analyzing semantic roles...")
                     roles_result = self.syntax_analyzer.semantic_roles(fable)
                     
                     # Combine results for this fable
@@ -923,7 +928,7 @@ class FablePipeline:
                     lang_results.append(fable_result)
                 
                 syntax_by_language[lang] = lang_results
-                self.logger.info(f"Completed syntax analysis for {len(lang_results)} {lang} fables")
+                self.logger.info("Completed syntax analysis for %d %s fables", len(lang_results), lang)
             
             # Run cross-fable comparison
             self.logger.info("Comparing syntactic structures across fables...")
@@ -1006,14 +1011,14 @@ class FablePipeline:
             # Analyze word frequency for each language
             self.logger.info("Analyzing word frequencies...")
             for lang, fables in fables_by_language.items():
-                self.logger.info(f"Processing {lang} fables...")
+                self.logger.info("Processing %s fables...", lang)
                 lang_results = []
                 
                 for i, fable in enumerate(fables):
                     # Get fable ID for reference
                     fable_id = fable.get('id', 'unknown')
                     title = fable.get('title', 'Untitled')
-                    self.logger.debug(f"  Processing fable {i+1}/{len(fables)}: {title}")
+                    self.logger.debug("  Processing fable %d/%d: %s", i+1, len(fables), title)
                     
                     # Analyze word frequency
                     freq_result = self.stats_analyzer.word_frequency(fable)
@@ -1028,7 +1033,7 @@ class FablePipeline:
                     self.stats_analyzer.save_analysis(fable_id, 'word_frequency', freq_result)
                 
                 word_freq_by_language[lang] = lang_results
-                self.logger.info(f"Completed word frequency analysis for {len(lang_results)} {lang} fables")
+                self.logger.info("Completed word frequency analysis for %d %s fables", len(lang_results), lang)
             
             # Run chi-square test for POS distribution
             self.logger.info("Running chi-square tests on POS distributions...")
@@ -1076,7 +1081,7 @@ class FablePipeline:
             
             # Process each language
             for lang, fables in fables_by_language.items():
-                self.logger.info(f"Analyzing morals in {lang} fables...")
+                self.logger.info("Analyzing morals in %s fables...", lang)
                 lang_explicit = []
                 lang_implicit = []
                 lang_themes = []
@@ -1084,33 +1089,33 @@ class FablePipeline:
                 for i, fable in enumerate(fables):
                     # Skip if not a dictionary
                     if not isinstance(fable, dict):
-                        self.logger.warning(f"Skipping non-dictionary fable in {lang}")
+                        self.logger.warning("Skipping non-dictionary fable in %s", lang)
                         continue
                         
                     fable_id = fable.get('id', 'unknown')
                     title = fable.get('title', 'Untitled')
-                    self.logger.debug(f"  Processing fable {i+1}/{len(fables)}: {title}")
+                    self.logger.debug("  Processing fable %d/%d: %s", i+1, len(fables), title)
                     
                     # Detect explicit moral
-                    self.logger.debug(f"    Detecting explicit moral...")
+                    self.logger.debug("    Detecting explicit moral...")
                     explicit_result = self.moral_detector.detect_explicit_moral(fable)
                     if explicit_result.get('has_explicit_moral'):
                         explicit_result['fable_id'] = fable_id
                         explicit_result['title'] = title
                         lang_explicit.append(explicit_result)
-                        self.logger.debug(f"    Found explicit moral")
+                        self.logger.debug("    Found explicit moral")
                     
                     # Infer implicit moral
-                    self.logger.debug(f"    Inferring implicit moral...")
+                    self.logger.debug("    Inferring implicit moral...")
                     implicit_result = self.moral_detector.infer_implicit_moral(fable, explicit_result)
                     if implicit_result.get('has_inferred_moral'):
                         implicit_result['fable_id'] = fable_id
                         implicit_result['title'] = title
                         lang_implicit.append(implicit_result)
-                        self.logger.debug(f"    Inferred implicit moral")
+                        self.logger.debug("    Inferred implicit moral")
                     
                     # Classify moral theme
-                    self.logger.debug(f"    Classifying moral theme...")
+                    self.logger.debug("    Classifying moral theme...")
                     moral_text = None
                     if explicit_result.get('has_explicit_moral'):
                         moral_text = explicit_result.get('moral_text')
@@ -1125,14 +1130,15 @@ class FablePipeline:
                         theme_result['title'] = title
                         theme_result['moral_text'] = moral_text
                         lang_themes.append(theme_result)
-                        self.logger.debug(f"    Classified moral theme")
+                        self.logger.debug("    Classified moral theme")
                 
                 # Store results for this language
                 explicit_morals[lang] = lang_explicit
                 implicit_morals[lang] = lang_implicit
                 moral_themes[lang] = lang_themes
                 
-                self.logger.info(f"Found {len(lang_explicit)} explicit and {len(lang_implicit)} implicit morals in {lang} fables")
+                self.logger.info("Found %d explicit and %d implicit morals in %s fables", 
+                                len(lang_explicit), len(lang_implicit), lang)
             
             # Cross-language moral comparison 
             self.logger.info("Comparing morals across languages...")
@@ -1187,7 +1193,7 @@ class FablePipeline:
                                 self.fables_by_id[fable_id] = {}
                             self.fables_by_id[fable_id][lang] = fable
 
-            self.logger.debug(f"fables_by_id structure contains {len(self.fables_by_id)} unique fable IDs")
+            self.logger.debug("fables_by_id structure contains %d unique fable IDs", len(self.fables_by_id))
             
             # Initialize result containers
             moral_comparison = {}
@@ -1199,12 +1205,12 @@ class FablePipeline:
             if isinstance(self.fables_by_id, dict):
                 try:
                     moral_comparison = self.moral_detector.compare_morals(self.fables_by_id)
-                    self.logger.info(f"Successfully compared morals across languages")
+                    self.logger.info("Successfully compared morals across languages")
                 except Exception as moral_e:
-                    self.logger.warning(f"Error in moral comparison: {moral_e}")
+                    self.logger.warning("Error in moral comparison: %s", moral_e)
                     moral_comparison = {"error": str(moral_e)}
             else:
-                self.logger.warning(f"Cannot perform moral comparison: fables_by_id is not a dictionary")
+                self.logger.warning("Cannot perform moral comparison: fables_by_id is not a dictionary")
                 moral_comparison = {"error": "Invalid data structure for moral comparison"}
             
             # 2. Use the entity analyzer to compare entity distributions
@@ -1215,9 +1221,9 @@ class FablePipeline:
                     entity_results[lang] = entity_dist
                     if entity_dist:
                         entity_count = sum(1 for v in entity_dist.values() if isinstance(v, dict))
-                        self.logger.info(f"  {lang}: Found {entity_count} entity types")
+                        self.logger.info("  %s: Found %d entity types", lang, entity_count)
                 except Exception as entity_e:
-                    self.logger.warning(f"Error analyzing entity distribution for language {lang}: {entity_e}")
+                    self.logger.warning("Error analyzing entity distribution for language %s: %s", lang, entity_e)
                     entity_results[lang] = {"error": str(entity_e)}
             
             # 3. Compare word usage across languages
@@ -1230,15 +1236,15 @@ class FablePipeline:
                 # Make sure all items in lang_fables are also dictionaries
                 all_dicts = all(isinstance(fable, dict) for fable in lang_fables.values())
                 if not all_dicts:
-                    self.logger.warning(f"Skipping word usage comparison for fable {fable_id}: not all language entries are dictionaries")
+                    self.logger.warning("Skipping word usage comparison for fable %s: not all language entries are dictionaries", fable_id)
                     continue
                     
                 try:
                     usage_result = self.stats_analyzer.compare_word_usage(lang_fables)
                     word_usage_comparison[fable_id] = usage_result
-                    self.logger.debug(f"Compared word usage for fable {fable_id} across {len(lang_fables)} languages")
+                    self.logger.debug("Compared word usage for fable %s across %d languages", fable_id, len(lang_fables))
                 except Exception as word_e:
-                    self.logger.warning(f"Error comparing word usage for fable {fable_id}: {word_e}")
+                    self.logger.warning("Error comparing word usage for fable %s: %s", fable_id, word_e)
                     # Continue with other fables rather than failing entire analysis
             
             # Combine results
