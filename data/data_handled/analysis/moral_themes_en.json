@@ -3,6 +3,7 @@
     "categories": [],
     "dominant_category": null,
     "fable_id": "1",
+    "title": "Wolf and Lamb",
     "moral_text": "One should always wolf drink."
   },
   {
@@ -14,30 +15,35 @@
     ],
     "dominant_category": "perseverance",
     "fable_id": "2",
+    "title": "City Mouse and Country Mouse",
     "moral_text": "The moral is to mouse country."
   },
   {
     "categories": [],
     "dominant_category": null,
     "fable_id": "3",
+    "title": "Fox and the Grapes",
     "moral_text": "The moral is to grapes fox."
   },
   {
     "categories": [],
     "dominant_category": null,
     "fable_id": "4",
+    "title": "Wolf and Crane",
     "moral_text": "The moral is to wolf crane."
   },
   {
     "categories": [],
     "dominant_category": null,
     "fable_id": "5",
+    "title": "Lion and Mouse on His Mane",
     "moral_text": "The moral is to lion mane."
   },
   {
     "categories": [],
     "dominant_category": null,
     "fable_id": "7",
+    "title": "Fox and Goat in the Well",
     "moral_text": "The moral is to fox goat."
   }
 ]

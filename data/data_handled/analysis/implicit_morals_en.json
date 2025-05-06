@@ -127,7 +127,8 @@
         ]
       }
     ],
-    "fable_id": "1"
+    "fable_id": "1",
+    "title": "Wolf and Lamb"
   },
   {
     "has_inferred_moral": true,
@@ -258,7 +259,8 @@
         ]
       }
     ],
-    "fable_id": "2"
+    "fable_id": "2",
+    "title": "City Mouse and Country Mouse"
   },
   {
     "has_inferred_moral": true,
@@ -389,7 +391,8 @@
         ]
       }
     ],
-    "fable_id": "3"
+    "fable_id": "3",
+    "title": "Fox and the Grapes"
   },
   {
     "has_inferred_moral": true,
@@ -520,7 +523,8 @@
         ]
       }
     ],
-    "fable_id": "4"
+    "fable_id": "4",
+    "title": "Wolf and Crane"
   },
   {
     "has_inferred_moral": true,
@@ -651,7 +655,8 @@
         ]
       }
     ],
-    "fable_id": "5"
+    "fable_id": "5",
+    "title": "Lion and Mouse on His Mane"
   },
   {
     "has_inferred_moral": true,
@@ -782,6 +787,7 @@
         ]
       }
     ],
-    "fable_id": "7"
+    "fable_id": "7",
+    "title": "Fox and Goat in the Well"
   }
 ]

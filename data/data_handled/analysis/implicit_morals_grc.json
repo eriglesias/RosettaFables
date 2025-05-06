@@ -126,7 +126,8 @@
         ]
       }
     ],
-    "fable_id": "1"
+    "fable_id": "1",
+    "title": "Λύκος καὶ ἀρήν"
   },
   {
     "has_inferred_moral": true,
@@ -257,7 +258,8 @@
         ]
       }
     ],
-    "fable_id": "3"
+    "fable_id": "3",
+    "title": "Λύκος καὶ ἐρωδιός"
   },
   {
     "has_inferred_moral": true,
@@ -388,7 +390,8 @@
         ]
       }
     ],
-    "fable_id": "4"
+    "fable_id": "4",
+    "title": "Λύκος καὶ ἐρωδιός"
   },
   {
     "has_inferred_moral": true,
@@ -518,7 +521,8 @@
         ]
       }
     ],
-    "fable_id": "5"
+    "fable_id": "5",
+    "title": "Λέων κιὰ μῦς ἀντευεργέτης"
   },
   {
     "has_inferred_moral": true,
@@ -648,7 +652,8 @@
         ]
       }
     ],
-    "fable_id": "6"
+    "fable_id": "6",
+    "title": "Κώνωψ καὶ λέων"
   },
   {
     "has_inferred_moral": true,
@@ -779,6 +784,7 @@
         ]
       }
     ],
-    "fable_id": "7"
+    "fable_id": "7",
+    "title": "Ἀλώπηξ καὶ τράγος"
   }
 ]

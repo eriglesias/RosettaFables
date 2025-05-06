@@ -127,7 +127,8 @@
         ]
       }
     ],
-    "fable_id": "1"
+    "fable_id": "1",
+    "title": "El Lobo y el Cordero"
   },
   {
     "has_inferred_moral": true,
@@ -257,7 +258,8 @@
         ]
       }
     ],
-    "fable_id": "2"
+    "fable_id": "2",
+    "title": "El Ratón de campo y el de ciudad"
   },
   {
     "has_inferred_moral": true,
@@ -387,7 +389,8 @@
         ]
       }
     ],
-    "fable_id": "3"
+    "fable_id": "3",
+    "title": "La zorra y las uvas"
   },
   {
     "has_inferred_moral": true,
@@ -517,7 +520,8 @@
         ]
       }
     ],
-    "fable_id": "4"
+    "fable_id": "4",
+    "title": "El Lobo y la garza"
   },
   {
     "has_inferred_moral": true,
@@ -647,7 +651,8 @@
         ]
       }
     ],
-    "fable_id": "5"
+    "fable_id": "5",
+    "title": "El León y el Ratón agradecido"
   },
   {
     "has_inferred_moral": true,
@@ -777,7 +782,8 @@
         ]
       }
     ],
-    "fable_id": "6"
+    "fable_id": "6",
+    "title": "El Mosquito y el León"
   },
   {
     "has_inferred_moral": true,
@@ -907,6 +913,7 @@
         ]
       }
     ],
-    "fable_id": "es_7"
+    "fable_id": "es_7",
+    "title": "La zorra y el macho cabrío"
   }
 ]

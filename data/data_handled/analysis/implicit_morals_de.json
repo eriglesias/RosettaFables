@@ -128,7 +128,8 @@
         ]
       }
     ],
-    "fable_id": "1"
+    "fable_id": "1",
+    "title": "Das Lamm und Der Wolf"
   },
   {
     "has_inferred_moral": true,
@@ -257,7 +258,8 @@
         ]
       }
     ],
-    "fable_id": "2"
+    "fable_id": "2",
+    "title": "Die Stadt und Die Landmaus"
   },
   {
     "has_inferred_moral": true,
@@ -386,7 +388,8 @@
         ]
       }
     ],
-    "fable_id": "3"
+    "fable_id": "3",
+    "title": "Der Fuchs und die Trauben"
   },
   {
     "has_inferred_moral": true,
@@ -515,7 +518,8 @@
         ]
       }
     ],
-    "fable_id": "4"
+    "fable_id": "4",
+    "title": "Der Wolf und Der Kranich"
   },
   {
     "has_inferred_moral": true,
@@ -644,7 +648,8 @@
         ]
       }
     ],
-    "fable_id": "5"
+    "fable_id": "5",
+    "title": "Der Löwe und das Mäuschen"
   },
   {
     "has_inferred_moral": true,
@@ -773,7 +778,8 @@
         ]
       }
     ],
-    "fable_id": "6"
+    "fable_id": "6",
+    "title": "Der Löwe und Die Mücke"
   },
   {
     "has_inferred_moral": true,
@@ -902,6 +908,7 @@
         ]
       }
     ],
-    "fable_id": "7"
+    "fable_id": "7",
+    "title": "Der Fuchs und der Bock"
   }
 ]

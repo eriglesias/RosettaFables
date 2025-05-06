@@ -8,42 +8,49 @@
     ],
     "dominant_category": "honesty",
     "fable_id": "1",
+    "title": "Wolf en Geitje",
     "moral_text": "Men moet altijd liedje wolf."
   },
   {
     "categories": [],
     "dominant_category": null,
     "fable_id": "2",
+    "title": "Stadsmuis en Veldmuis",
     "moral_text": "Men moet altijd eten veldmuis."
   },
   {
     "categories": [],
     "dominant_category": null,
     "fable_id": "3",
+    "title": "Vos en de druiven",
     "moral_text": "Men moet altijd sprong hoog."
   },
   {
     "categories": [],
     "dominant_category": null,
     "fable_id": "4",
+    "title": "Wolf en Kraanvogel",
     "moral_text": "Men moet altijd beloning beentje."
   },
   {
     "categories": [],
     "dominant_category": null,
     "fable_id": "5",
+    "title": "Leeuw en Muis",
     "moral_text": "Men moet altijd kleine muis."
   },
   {
     "categories": [],
     "dominant_category": null,
     "fable_id": "6",
+    "title": "Leeuw en Mug",
     "moral_text": "Men moet altijd vloog mug."
   },
   {
     "categories": [],
     "dominant_category": null,
     "fable_id": "7",
+    "title": "Vos en Geit",
     "moral_text": "Men moet altijd put geit."
   }
 ]

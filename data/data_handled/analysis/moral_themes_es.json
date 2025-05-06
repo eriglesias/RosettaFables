@@ -3,42 +3,49 @@
     "categories": [],
     "dominant_category": null,
     "fable_id": "1",
+    "title": "El Lobo y el Cordero",
     "moral_text": "La moraleja es lobo cordero."
   },
   {
     "categories": [],
     "dominant_category": null,
     "fable_id": "2",
+    "title": "El Ratón de campo y el de ciudad",
     "moral_text": "La moraleja es amigo campo."
   },
   {
     "categories": [],
     "dominant_category": null,
     "fable_id": "3",
+    "title": "La zorra y las uvas",
     "moral_text": "La moraleja es apartándose apoderarse."
   },
   {
     "categories": [],
     "dominant_category": null,
     "fable_id": "4",
+    "title": "El Lobo y la garza",
     "moral_text": "La moraleja es hueso lobo."
   },
   {
     "categories": [],
     "dominant_category": null,
     "fable_id": "5",
+    "title": "El León y el Ratón agradecido",
     "moral_text": "La moraleja es ratón león."
   },
   {
     "categories": [],
     "dominant_category": null,
     "fable_id": "6",
+    "title": "El Mosquito y el León",
     "moral_text": "La moraleja es león mosquito."
   },
   {
     "categories": [],
     "dominant_category": null,
     "fable_id": "es_7",
+    "title": "La zorra y el macho cabrío",
     "moral_text": "La moraleja es zorra pozo."
   }
 ]

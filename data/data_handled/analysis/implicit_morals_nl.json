@@ -128,7 +128,8 @@
         ]
       }
     ],
-    "fable_id": "1"
+    "fable_id": "1",
+    "title": "Wolf en Geitje"
   },
   {
     "has_inferred_moral": true,
@@ -257,7 +258,8 @@
         ]
       }
     ],
-    "fable_id": "2"
+    "fable_id": "2",
+    "title": "Stadsmuis en Veldmuis"
   },
   {
     "has_inferred_moral": true,
@@ -386,7 +388,8 @@
         ]
       }
     ],
-    "fable_id": "3"
+    "fable_id": "3",
+    "title": "Vos en de druiven"
   },
   {
     "has_inferred_moral": true,
@@ -515,7 +518,8 @@
         ]
       }
     ],
-    "fable_id": "4"
+    "fable_id": "4",
+    "title": "Wolf en Kraanvogel"
   },
   {
     "has_inferred_moral": true,
@@ -644,7 +648,8 @@
         ]
       }
     ],
-    "fable_id": "5"
+    "fable_id": "5",
+    "title": "Leeuw en Muis"
   },
   {
     "has_inferred_moral": true,
@@ -773,7 +778,8 @@
         ]
       }
     ],
-    "fable_id": "6"
+    "fable_id": "6",
+    "title": "Leeuw en Mug"
   },
   {
     "has_inferred_moral": true,
@@ -902,6 +908,7 @@
         ]
       }
     ],
-    "fable_id": "7"
+    "fable_id": "7",
+    "title": "Vos en Geit"
   }
 ]
