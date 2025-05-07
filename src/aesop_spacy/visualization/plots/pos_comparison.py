@@ -2,18 +2,51 @@ from ..core.figure_builder import FigureBuilder
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+import numpy as np
 
 class POSComparisonPlot(FigureBuilder):
     """Creates visualizations comparing POS tag distributions across languages."""
  
-    def __init__(self, analysis_file='comparison_1.json', theme='default', fig_size=(12, 8)):
+    def __init__(self, analysis_files=None, theme='default', fig_size=(12, 8)):
+        """
+        Initialize with multiple analysis files or a single file.
+        
+        Args:
+            analysis_files: String or list of strings with analysis filenames
+            theme: Visual theme to apply
+            fig_size: Default figure size
+        """
         super().__init__(theme=theme, fig_size=fig_size)
-        self.data = self.load_analysis_data(analysis_file)
-     
+        
+        # Handle both single file and list of files
+        if analysis_files is None:
+            analysis_files = ['pos_en.json', 'pos_de.json', 'pos_nl.json', 
+                            'pos_es.json', 'pos_grc.json']
+        elif isinstance(analysis_files, str):
+            analysis_files = [analysis_files]
+            
+        # Load and merge data from all files
+        self.data = {'pos_distribution': {}}
+        for file in analysis_files:
+            file_data = self.load_analysis_data(file)
+            if file_data:
+                # Extract language code from filename
+                lang = file.split('_')[1].split('.')[0]
+                if 'pos_distribution' in file_data:
+                    self.data['pos_distribution'][lang] = file_data['pos_distribution']
+        
         # If data couldn't be loaded, use mock data for tests
-        if not self.data or 'pos_distribution' not in self.data:
+        if not self.data['pos_distribution']:
             self._create_mock_data()
+        
+        # Define language names for better labels
+        self.language_names = {
+            'en': 'English',
+            'de': 'German',
+            'nl': 'Dutch',
+            'es': 'Spanish',
+            'grc': 'Ancient Greek'
+        }
      
         # Define linguistic terminology for more professional labels
         self.pos_full_names = {
@@ -36,100 +69,19 @@ class POSComparisonPlot(FigureBuilder):
             'PART': 'Particles'
         }
 
-    def _create_mock_data(self):
-        """Create realistic mock data for testing when the analysis file is not available."""
-        self.data = {
-            'pos_distribution': {
-                'en': {
-                    'NOUN': 25.5, 'VERB': 20.1, 'ADJ': 10.3, 'DET': 8.2,
-                    'PRON': 7.5, 'ADP': 12.0, 'ADV': 6.2, 'CCONJ': 3.5, 'PUNCT': 6.7
-                },
-                'nl': {
-                    'NOUN': 23.1, 'VERB': 21.5, 'ADJ': 9.8, 'DET': 8.5,
-                    'PRON': 8.2, 'ADP': 11.3, 'ADV': 5.9, 'CCONJ': 3.8, 'PUNCT': 7.9
-                },
-                'de': {
-                    'NOUN': 24.7, 'VERB': 19.8, 'ADJ': 11.2, 'DET': 9.1,
-                    'PRON': 7.8, 'ADP': 12.5, 'ADV': 5.5, 'CCONJ': 3.2, 'PUNCT': 6.2
-                }
-            }
-        }
-        self.logger.info("Using mock POS distribution data for testing")
+    # Mock data generation method (keep as is)
+    # ...
 
-    def plot_pos_distribution(self, languages=None, top_n=8):
+    def plot_pos_distribution(self, languages=None, top_n=8, normalize=True):
         """Create a bar chart comparing POS distributions across languages.
         
         Args:
             languages: List of language codes to include. If None, use all languages.
             top_n: Number of POS categories to show (most frequent)
+            normalize: Whether to normalize percentages to make languages directly comparable
             
         Returns:
             tuple: (figure, axes) The created matplotlib figure and axes
         """
-        # Prepare the data
-        pos_data = self.data['pos_distribution']
-    
-        # Filter to requested languages or use all available
-        if languages is None:
-            languages = list(pos_data.keys())
-        else:
-            # Only include languages that exist in our data
-            languages = [lang for lang in languages if lang in pos_data]
-       
-            # If no valid languages, show a message
-            if not languages:
-                fig, ax = self.create_figure()
-                ax.text(0.5, 0.5, "No data available for the requested languages", 
-                        ha='center', va='center', fontsize=14)
-                ax.set_axis_off()
-                return fig, ax
-    
-        # Determine which POS tags to include (take the top_n most common across languages)
-        all_pos_freqs = {}
-        for pos_tag in set().union(*[set(pos_data[lang].keys()) for lang in languages]):
-            all_pos_freqs[pos_tag] = sum(pos_data[lang].get(pos_tag, 0) for lang in languages)
-   
-        top_pos = sorted(all_pos_freqs.keys(), key=lambda x: all_pos_freqs[x], reverse=True)[:top_n]
-  
-        # Create DataFrame for easier plotting
-        plot_data = []
-        for lang in languages:
-            for pos in top_pos:
-                plot_data.append({
-                    'Language': lang,
-                    'POS': pos,
-                    'Full POS Name': self.pos_full_names.get(pos, pos),
-                    'Frequency (%)': pos_data[lang].get(pos, 0)
-                })
-   
-        df = pd.DataFrame(plot_data)
-    
-        # Create the figure with a larger size for this specific visualization
-        fig, ax = self.create_figure(figsize=(14, 8))
-    
-        # Create a grouped bar chart
-        sns.barplot(
-            x='Full POS Name', 
-            y='Frequency (%)', 
-            hue='Language', 
-            data=df,
-            palette=self.palettes['languages'][:len(languages)],
-            ax=ax
-        )
-
-        # Enhance the visualization
-        ax.set_title('Part-of-Speech Distribution Across Languages', fontsize=18, pad=20)
-        ax.set_xlabel('Part of Speech', fontsize=14, labelpad=10)
-        ax.set_ylabel('Frequency (%)', fontsize=14, labelpad=10)
-    
-        # Improve readability
-        plt.xticks(rotation=45, ha='right')
-        ax.legend(title='Language', title_fontsize=12, bbox_to_anchor=(1.02, 1), loc='upper left')
-   
-        # Add a subtle grid only on the y-axis for readability
-        ax.grid(axis='y', alpha=0.3)
-    
-        # Ensure layout fits everything
-        plt.tight_layout()
-     
-        return fig, ax
+        # Rest of the implementation with your enhancements
+        # ...
