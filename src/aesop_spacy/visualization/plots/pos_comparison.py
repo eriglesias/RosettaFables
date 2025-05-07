@@ -10,7 +10,7 @@ class POSDistributionPlot(FigureBuilder):
  
     def __init__(self, theme='default', fig_size=(12, 8)):
         """Initialize the POS distribution plotter with default settings."""
-        super().__init__(theme=theme, fig_size=fig_size)
+        super().__init__(theme=theme, fig_size=fig_size, output_dir=output_dir)
         
         # Define linguistic terminology for more professional labels
         self.pos_full_names = {

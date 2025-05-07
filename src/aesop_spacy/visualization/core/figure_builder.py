@@ -18,7 +18,7 @@ import seaborn as sns
 class FigureBuilder:
     """Base class for creating visualizations of analysis results."""
   
-    def __init__(self, theme='default', fig_size=(10, 6), use_mock_data=True):
+    def __init__(self, theme='default', fig_size=(10, 6), use_mock_data=True, output_dir=None):
         self.logger = logging.getLogger(__name__)
         self.theme = theme
         self.fig_size = fig_size
@@ -167,43 +167,36 @@ class FigureBuilder:
         Returns:
             Boolean indicating success
         """
-        # Try multiple potential paths for output
-        potential_dirs = [
-            # Try from project root
-            Path(__file__).resolve().parents[3] / 'data' / 'figures',
-            Path(__file__).resolve().parents[3] / 'data_handled' / 'figures',
-            Path(__file__).resolve().parents[3] / 'data' / 'data_handled' / 'figures',
-            
-            # Try from current directory
-            Path("data_handled/figures"),
-            Path("data/data_handled/figures"),
-            Path("data/figures"),
-            
-            # Default to current directory if all else fails
-            Path(".")
-        ]
-        
-        # Use the first directory that exists or can be created
-        figures_dir = None
-        for dir_path in potential_dirs:
+        # If an explicit output directory was provided, use it
+        if self.output_dir is not None:
             try:
-                os.makedirs(dir_path, exist_ok=True)
-                figures_dir = dir_path
-                break
-            except (IOError, PermissionError):
-                continue
+                os.makedirs(self.output_dir, exist_ok=True)
+                output_path = Path(self.output_dir) / filename
+                fig.savefig(output_path, dpi=dpi, bbox_inches='tight')
+                self.logger.info(f"Figure saved: {output_path}")
+                return True
+            except (ValueError, IOError) as e:
+                self.logger.error(f"Error saving to explicit path {output_path}: {e}")
+                # Fall through to use fallback paths
         
-        # Fall back to current directory if all paths failed
-        if figures_dir is None:
-            figures_dir = Path(".")
-            os.makedirs(figures_dir, exist_ok=True)
-        
-        # Save the figure
-        output_path = figures_dir / filename
+        # Fallback to other paths if output_dir wasn't specified or failed
+        # Try standard path first
+        standard_path = Path("/Users/enriqueviv/Coding/coding_projects/data_science_projects/ds_sandbox/nlp_sandbox/aesop_spacy/data/data_handled/figures")
         try:
+            os.makedirs(standard_path, exist_ok=True)
+            output_path = standard_path / filename
             fig.savefig(output_path, dpi=dpi, bbox_inches='tight')
-            self.logger.info(f"Figure saved: {output_path}")
+            self.logger.info(f"Figure saved to standard path: {output_path}")
             return True
         except (ValueError, IOError) as e:
-            self.logger.error(f"Error saving figure to {output_path}: {e}")
-            return False
+            self.logger.error(f"Error saving to standard path: {e}")
+            
+            # Last resort: save to current directory
+            try:
+                output_path = Path('.') / filename
+                fig.savefig(output_path, dpi=dpi, bbox_inches='tight')
+                self.logger.info(f"Figure saved to current directory: {output_path}")
+                return True
+            except (ValueError, IOError) as e:
+                self.logger.error(f"Failed to save figure to any location: {e}")
+                return False
