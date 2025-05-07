@@ -39,6 +39,7 @@ import json
 import sys
 from pathlib import Path
 from aesop_spacy.pipeline.pipeline import FablePipeline
+from aesop_spacy.visualization.plots.pos_comparison import POSDistributionPlot
 
 # Add project root to path for absolute imports
 project_root = Path(__file__).resolve().parent.parent.parent
@@ -152,6 +153,44 @@ def run_pipeline(args, input_dir, output_dir, logger):
         results = pipeline.analyze()
         return results, True
 
+def run_visualizations(output_dir, logger):
+    """Run visualizations on analysis results"""    
+    logger.info("Running visualizations...")
+    
+    # Create visualization directory if it doesn't exist
+    vis_dir = output_dir / "figures"
+    vis_dir.mkdir(exist_ok=True)
+    
+    # Create POS distribution visualizations
+    pos_plotter = POSDistributionPlot()
+    
+    # Create single language visualizations
+    for lang in ['en', 'de', 'nl', 'es', 'grc']:
+        try:
+            logger.info("Creating POS distribution plot for %s", lang)
+            fig, ax = pos_plotter.plot_single_language(lang, top_n=10)
+            pos_plotter.save_figure(fig, f'pos_distribution_{lang}.png')
+        except Exception as e:
+            logger.error("Error creating POS plot for %s: %s", lang, e)
+    
+    # Create comparison visualizations
+    try:
+        logger.info("Creating POS comparison plot")
+        fig, ax = pos_plotter.plot_language_comparison()
+        pos_plotter.save_figure(fig, 'pos_comparison_all_languages.png')
+    except Exception as e:
+        logger.error("Error creating POS comparison plot: %s", e)
+    
+    # Create heatmap visualization
+    try:
+        logger.info("Creating POS heatmap")
+        fig, ax = pos_plotter.plot_pos_heatmap()
+        pos_plotter.save_figure(fig, 'pos_heatmap_all_languages.png')
+    except Exception as e:
+        logger.error("Error creating POS heatmap: %s", e)
+    
+    logger.info("Visualizations complete")
+
 
 def main():
     """Main entry point for Aesop fable analysis"""
@@ -172,7 +211,7 @@ def main():
 
             if save_results:
                 save_analysis_summary(output_dir, analysis_results)
-
+            run_visualizations(output_dir, logger)
         logger.info("Aesop fable processing complete")
 
     except FileNotFoundError as e:

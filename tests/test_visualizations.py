@@ -1,40 +1,50 @@
-# test_visualizations.py
-import os
+"""
+Test visualization components with unittest framework.
+"""
+
+import unittest
 import sys
-import pytest
-import matplotlib.pyplot as plt
-from src.aesop_spacy.visualization.plots.pos_comparison import POSComparisonPlot
+from pathlib import Path
 
-# Add the project root to the Python path
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-sys.path.insert(0, project_root)
+# Add project root to path
+project_root = Path(__file__).resolve().parent.parent
+sys.path.append(str(project_root))
+
+# Update this import path if you've saved the class in pos_distribution.py
+from src.aesop_spacy.visualization.plots.pos_comparison import POSDistributionPlot
 
 
-@pytest.fixture
-def pos_plotter():
-    """Create a POSComparisonPlot instance for testing."""
-    return POSComparisonPlot(analysis_file='comparison_1.json')
+class TestVisualizations(unittest.TestCase):
+    """Test visualization components"""
+    
+    def test_single_language_plots(self):
+        """Test POS distribution for single languages"""
+        pos_plotter = POSDistributionPlot()
+        
+        for lang in ['en', 'de', 'nl', 'es', 'grc']:
+            with self.subTest(language=lang):
+                fig, ax = pos_plotter.plot_single_language(lang)
+                self.assertIsNotNone(fig)
+                self.assertIsNotNone(ax)
+                # Clean up figure to avoid memory leaks
+                fig.clear()
+    
+    def test_language_comparison(self):
+        """Test POS language comparison plot"""
+        pos_plotter = POSDistributionPlot()
+        fig, ax = pos_plotter.plot_language_comparison()
+        self.assertIsNotNone(fig)
+        self.assertIsNotNone(ax)
+        fig.clear()
+    
+    def test_heatmap(self):
+        """Test POS heatmap visualization"""
+        pos_plotter = POSDistributionPlot()
+        fig, ax = pos_plotter.plot_pos_heatmap()
+        self.assertIsNotNone(fig)
+        self.assertIsNotNone(ax)
+        fig.clear()
 
-def test_pos_comparison_creation(pos_plotter):
-    """Test that the POS comparison plot can be created without errors."""
-    fig, ax = pos_plotter.plot_pos_distribution()
 
-    # Check basic properties
-    assert fig is not None
-    assert ax is not None
-    assert 'Part-of-Speech Distribution' in ax.get_title()
-
-    # Clean up
-    plt.close(fig)
-
-def test_pos_comparison_languages(pos_plotter):
-    """Test that the POS comparison plot works with specific languages."""
-    # Test with a subset of languages
-    fig, ax = pos_plotter.plot_pos_distribution(languages=['en', 'nl'])
-
-    # Check that only the specified languages are in the legend
-    legend_texts = [text.get_text() for text in ax.get_legend().get_texts()]
-    assert set(legend_texts) == {'en', 'nl'}
-
-    # Clean up
-    plt.close(fig)
+if __name__ == "__main__":
+    unittest.main()
