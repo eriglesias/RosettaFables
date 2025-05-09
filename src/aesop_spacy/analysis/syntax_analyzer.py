@@ -39,97 +39,66 @@ class SyntaxAnalyzer:
         # Get sentences from the fable
         sentences = fable.get('sentences', [])
         self.logger.info("Processing %d sentences for dependency frequency analysis", len(sentences))
-        
         # Add diagnostic logging
         if sentences and len(sentences) > 0:
             self.logger.debug("Sample sentence keys: %s", list(sentences[0].keys()))
             if 'dependencies' in sentences[0]:
-                self.logger.debug("Found %d dependencies in first sentence", 
-                                len(sentences[0]['dependencies']))
+                self.logger.debug("Found %d dependencies in first sentence",len(sentences[0]['dependencies']))
             else:
                 self.logger.warning("No dependencies key in first sentence")
-        
         # Check if dependencies exist at document level
         if 'dependencies' in fable:
             self.logger.debug("Found %d dependencies at document level", len(fable['dependencies']))
         
         # Initialize counters
         dep_counts = {}
-        dep_examples = {}
         total_deps = 0
-        
         # First look for sentence-level dependencies
         for i, sentence in enumerate(sentences):
             # Get dependency information if available
             deps = sentence.get('dependencies', [])
-            
             if not deps:
                 self.logger.debug("Sentence %d has no dependencies", i)
                 continue
-                
-            self.logger.debug("Sentence %d has %d dependencies", i, len(deps))
-            
             # Process each dependency
             for dep in deps:
                 # Extract dependency type, head word, and dependent word
                 dep_type = dep.get('dep')
                 head = dep.get('head_text', '')
                 dependent = dep.get('dependent_text', '')
-                
                 if not dep_type:
                     self.logger.debug("Missing dependency type in: %s", dep)
                     continue
-                    
                 # Update counts
                 dep_counts[dep_type] = dep_counts.get(dep_type, 0) + 1
                 total_deps += 1
-                
-                # Store an example
-                if dep_type not in dep_examples and head and dependent:
-                    dep_examples[dep_type] = f"{dependent} → {head}"
-        
         # If no sentence-level dependencies found, try document-level
         if total_deps == 0 and 'dependencies' in fable:
             self.logger.info("No sentence-level dependencies, trying document-level")
             doc_deps = fable.get('dependencies', [])
-            
             for dep in doc_deps:
                 dep_type = dep.get('dep')
                 head = dep.get('head_text', '')
                 dependent = dep.get('dependent_text', '')
-                
                 if dep_type:
                     dep_counts[dep_type] = dep_counts.get(dep_type, 0) + 1
                     total_deps += 1
-                    
-                    if dep_type not in dep_examples and head and dependent:
-                        dep_examples[dep_type] = f"{dependent} → {head}"
-        
-        # If still no dependencies, check if we can recover from raw sentence text
-        if total_deps == 0 and len(sentences) > 0:
-            self.logger.warning("No dependencies found. This might be due to missing dependency parsing in the NLP pipeline.")
-            self.logger.info("Consider reprocessing the fables with a model that includes dependency parsing.")
-        
-        self.logger.info("Found %d total dependencies across %d sentences", 
-                        total_deps, len(sentences))
-        
         # Calculate percentages
         results = {
             'total_dependencies': total_deps,
-            'frequencies': {},
-            'examples': dep_examples
+            'frequencies': {}
         }
-        
+
         # Convert counts to percentages
         if total_deps > 0:
             results['frequencies'] = {
                 dep: (count / total_deps) * 100
                 for dep, count in dep_counts.items()
             }
-        
+
         return results
 
-        
+
     def dependency_distances(self, fable):
         """
         Calculate average dependency distances (how far apart connected words are).
@@ -138,51 +107,46 @@ class SyntaxAnalyzer:
             Dict with average distances and distribution statistics
         """
         sentences = fable.get('sentences', [])
-        
+
         # Track all distances
         all_distances = []
         distances_by_type = {}
-        
+
         for sentence in sentences:
-            self.logger.debug(f"Dependencies keys in sentence: {list(sentence.keys())}")
             if 'dependencies' in sentence and 'tokens' in sentence:
-                self.logger.debug(f"Found {len(sentence['dependencies'])} dependencies")
                 deps = sentence['dependencies']
                 tokens = sentence['tokens']
-                
+
                 # Create a map of token indices
                 token_indices = {}
                 for i, token in enumerate(tokens):
                     token_id = token.get('id')
                     if token_id is not None:
                         token_indices[token_id] = i
-                
+
                 # Calculate distances
                 for dep in deps:
                     head_id = dep.get('head_id')
                     dep_id = dep.get('dependent_id')
                     dep_type = dep.get('dep')
-                    
+
                     # Calculate distance if we have both positions
                     if head_id in token_indices and dep_id in token_indices:
                         distance = abs(token_indices[head_id] - token_indices[dep_id])
-                        
                         # Filter out unreasonably large distances (likely errors)
-                        max_reasonable_distance = 30  # Most natural language dependencies stay under this
+                        max_reasonable_distance = 30
                         if distance <= max_reasonable_distance:
                             all_distances.append(distance)
-                            
                             # Track by dependency type
                             if dep_type not in distances_by_type:
                                 distances_by_type[dep_type] = []
                             distances_by_type[dep_type].append(distance)
-        
+
         # Try to recover from document-level dependencies if needed
         if not all_distances and 'dependencies' in fable and 'tokens' in fable:
             self.logger.info("Attempting to calculate distances from document-level dependencies")
             deps = fable.get('dependencies', [])
             tokens = fable.get('tokens', [])
-            
             # Create a map of token indices
             token_indices = {}
             for i, token in enumerate(tokens):
@@ -192,25 +156,20 @@ class SyntaxAnalyzer:
                 elif isinstance(token, dict) and 'id' in token:
                     token_id = token['id']
                     token_indices[token_id] = i
-            
             # Calculate distances
             for dep in deps:
                 head_id = dep.get('head_id')
                 dep_id = dep.get('dependent_id')
                 dep_type = dep.get('dep')
-                
                 if head_id in token_indices and dep_id in token_indices:
                     distance = abs(token_indices[head_id] - token_indices[dep_id])
-                    
                     # Filter out unreasonably large distances
                     if distance <= 30:
                         all_distances.append(distance)
-                        
                         # Track by dependency type
                         if dep_type not in distances_by_type:
                             distances_by_type[dep_type] = []
                         distances_by_type[dep_type].append(distance)
-        
         # Calculate statistics
         results = {
             'overall': {
@@ -221,13 +180,11 @@ class SyntaxAnalyzer:
             },
             'by_dependency_type': {}
         }
-        
         # Overall statistics
         if all_distances:
             results['overall']['average_distance'] = sum(all_distances) / len(all_distances)
             results['overall']['max_distance'] = max(all_distances)
             results['overall']['min_distance'] = min(all_distances)
-        
         # By dependency type
         for dep_type, distances in distances_by_type.items():
             if distances:
@@ -263,27 +220,21 @@ class SyntaxAnalyzer:
             'sentence_count': len(sentences),
             'language_insights': {}
         }
-        
         # Skip if no sentences
         if not sentences:
             return results
-            
         # Analyze each sentence's tree
         branching_factors = []
-        
         for sentence in sentences:
             # Check if we have the necessary dependency information
             if not ('dependencies' in sentence and sentence['dependencies']):
                 continue
-                
             if 'dependencies' in sentence and 'tokens' in sentence:
                 deps = sentence['dependencies']
                 tokens = sentence['tokens']
-                
                 # Create a dependency map (which tokens depend on which head)
                 head_to_deps = defaultdict(list)
                 token_positions = {}
-                
                 # Map token IDs to their positions in the sentence
                 for i, token in enumerate(tokens):
                     if isinstance(token, dict) and 'id' in token:
@@ -293,53 +244,42 @@ class SyntaxAnalyzer:
                         # Handle (text, id) format
                         token_id = token[1] if isinstance(token[1], int) else token[0]
                         token_positions[token_id] = i
-                
                 # Build dependency tree structure
                 for dep in deps:
                     head_id = dep.get('head_id')
                     dep_id = dep.get('dependent_id')
-                    
                     if head_id is not None and dep_id is not None:
                         head_to_deps[head_id].append(dep_id)
-                
                 # Calculate branching factor for each head
                 head_branching = [len(dependents) for head, dependents in head_to_deps.items()]
                 if head_branching:
                     avg_branching = sum(head_branching) / len(head_branching)
                     max_branching = max(head_branching)
                     branching_factors.append(avg_branching)
-                    
                     if max_branching > results['max_branching_factor']:
                         results['max_branching_factor'] = max_branching
-                
                 # Find root node (token with head=0 or similar root convention)
                 root_id = None
                 for dep in deps:
                     if dep.get('dep') == 'ROOT' or dep.get('head_id') == 0:
                         root_id = dep.get('dependent_id')
                         break
-                
                 if root_id is not None:
                     # Calculate tree depth and width
                     max_depth, tree_width = self._calculate_tree_dimensions(root_id, head_to_deps)
-                    
                     # Calculate width-to-depth ratio if depth > 0
                     if max_depth > 0:
                         width_depth_ratio = tree_width / max_depth
                         results['width_depth_ratios'].append(width_depth_ratio)
-                
                 # Check for crossing dependencies (non-projectivity)
                 crossings = self._count_crossing_dependencies(deps, token_positions)
                 if crossings > 0:
                     results['non_projective_count'] += 1
-        
         # Calculate averages across all sentences
         if branching_factors:
             results['average_branching_factor'] = sum(branching_factors) / len(branching_factors)
-        
         if results['width_depth_ratios']:
             results['average_width_depth_ratio'] = sum(results['width_depth_ratios']) / len(results['width_depth_ratios'])
-        
         # Add language-specific insights
         language_insights = {
             'en': {
@@ -363,12 +303,11 @@ class SyntaxAnalyzer:
                 'typical_width_depth': 'Flexible word order allows for deeper trees'
             }
         }
-        
         if language in language_insights:
             results['language_insights'] = language_insights[language]
-        
         return results
-    
+
+
     def _calculate_tree_dimensions(self, node_id, head_to_deps, current_depth=1):
         """
         Recursively calculate the depth and width of a tree.
@@ -384,11 +323,10 @@ class SyntaxAnalyzer:
         if node_id not in head_to_deps or not head_to_deps[node_id]:
             # Leaf node
             return current_depth, 1
-        
         children = head_to_deps[node_id]
         max_child_depth = current_depth
         total_width = 0
-        
+
         for child_id in children:
             try:
                 child_depth, child_width = self._calculate_tree_dimensions(
@@ -400,9 +338,10 @@ class SyntaxAnalyzer:
                 # Handle circular dependencies
                 self.logger.warning(f"Detected circular dependency involving node {child_id}")
                 return current_depth + 1, 1
-        
+
         return max_child_depth, max(1, total_width)
-    
+
+
     def _count_crossing_dependencies(self, deps, token_positions):
         """
         Count crossing dependencies (non-projective edges).
@@ -442,7 +381,8 @@ class SyntaxAnalyzer:
                     crossings += 1
         
         return crossings
-    
+
+
     def dominant_constructions(self, fable):
         """
         Identify common word order patterns in the fable.
@@ -674,7 +614,8 @@ class SyntaxAnalyzer:
             results['dominant_adposition'] = dominant[0]
         
         return results
-        
+
+
     def _get_token_positions(self, tokens, ids):
         """
         Get positions of tokens by their IDs, handling different token formats.
@@ -689,7 +630,6 @@ class SyntaxAnalyzer:
         positions = []
         for token_id in ids:
             position = None
-            
             for i, token in enumerate(tokens):
                 # Handle different token formats
                 cur_id = None
@@ -697,15 +637,13 @@ class SyntaxAnalyzer:
                     cur_id = token['id']
                 elif isinstance(token, (list, tuple)) and len(token) >= 2:
                     cur_id = token[1] if isinstance(token[1], int) else token[0]
-                    
                 if cur_id == token_id:
                     position = i
                     break
-                    
             positions.append(position)
-            
         return positions
-    
+
+
     def _get_word_order(self, subj_pos, verb_pos, obj_pos):
         """
         Determine word order pattern from positions.
@@ -811,7 +749,7 @@ class SyntaxAnalyzer:
             'obj1': 'Patient',  # Direct object in Dutch
             'obj2': 'Recipient' # Indirect object in Dutch
         }
-        
+
         # Language-specific dependency mappings
         language_deps = {
             'en': {'nsubj': 'Agent', 'dobj': 'Patient'},
@@ -820,22 +758,19 @@ class SyntaxAnalyzer:
             'nl': {'su': 'Agent', 'obj1': 'Patient', 'obj2': 'Recipient'},
             'grc': {'nsubj': 'Agent', 'obj': 'Patient'}
         }
-        
+
         # Use language-specific mappings if available
         if language in language_deps:
             for dep, role in language_deps[language].items():
                 dep_to_role[dep] = role
-        
         # Process each sentence
         role_counts = Counter()
         agent_counts = Counter()
         patient_counts = Counter()
-        
         for sentence in sentences:
             if 'dependencies' in sentence and 'tokens' in sentence:
                 deps = sentence['dependencies']
                 tokens = sentence['tokens']
-                
                 # Map token IDs to token text
                 token_id_to_text = {}
                 for token in tokens:
@@ -850,54 +785,47 @@ class SyntaxAnalyzer:
                         else:
                             # (id, text) format
                             token_id_to_text[token[0]] = token[1]
-                
                 # Process each dependency
                 for dep in deps:
                     dep_type = dep.get('dep', '')
                     dependent_id = dep.get('dependent_id')
                     head_id = dep.get('head_id')
-                    
                     # Skip if we're missing information
                     if not dep_type or dependent_id not in token_id_to_text:
                         continue
-                    
                     # Map to semantic role
                     if dep_type in dep_to_role:
                         role = dep_to_role[dep_type]
                         term = token_id_to_text[dependent_id]
-                        
                         # Add to appropriate role list
                         if role in results['roles']:
                             results['roles'][role].append(term)
-                        
                         # Track counts
                         role_counts[role] += 1
                         results['total_roles'] += 1
-                        
                         # Track agents and patients specifically
                         if role == 'Agent':
                             agent_counts[term.lower()] += 1
                         elif role == 'Patient':
                             patient_counts[term.lower()] += 1
-        
         # Calculate most frequent agents and patients
         results['frequent_agents'] = [
             {'term': term, 'count': count}
             for term, count in agent_counts.most_common(5)
         ]
-        
+
         results['frequent_patients'] = [
             {'term': term, 'count': count}
             for term, count in patient_counts.most_common(5)
         ]
-        
+
         # Calculate role distribution
         if results['total_roles'] > 0:
             results['role_distribution'] = {
                 role: (count / results['total_roles'] * 100)
                 for role, count in role_counts.items()
             }
-        
+
         # Add language-specific notes
         language_notes = {
             'en': 'English typically shows Agent-Verb-Patient ordering',
@@ -906,10 +834,49 @@ class SyntaxAnalyzer:
             'nl': 'Dutch, like German, uses case marking but with different patterns',
             'grc': 'Ancient Greek used extensive case marking for semantic roles'
         }
-        
+
         if language in language_notes:
             results['language_notes'] = language_notes[language]
         return results
+
+
+    def compare_fables(self, fables_by_id, analysis_type):
+        """
+        Compare syntax across different language versions of the same fable.
+            
+        Args:
+            fables_by_id: Dict mapping fable IDs to language-specific fables
+            analysis_type: Type of analysis to compare
+                
+        Returns:
+         Dict with comparison results
+        """
+        comparison = {}
+        for fable_id, lang_fables in fables_by_id.items():
+                fable_comparison = {
+                    'languages': list(lang_fables.keys()),
+                    'results': {}
+                }
+         for lang, fable in lang_fables.items():
+             # Run the requested analysis
+            if analysis_type == 'dependency_frequencies':
+                results = self.dependency_frequencies(fable)
+                    elif analysis_type == 'dependency_distances':
+                        results = self.dependency_distances(fable)
+                    elif analysis_type == 'tree_shapes':
+                        results = self.tree_shapes(fable)
+                    elif analysis_type == 'dominant_constructions':
+                        results = self.dominant_constructions(fable)
+                    elif analysis_type == 'semantic_roles':
+                        results = self.semantic_roles(fable)
+                    else:
+                        results = {'error': f'Unknown analysis type: {analysis_type}'}
+                    
+                    fable_comparison['results'][lang] = results
+                
+                comparison[fable_id] = fable_comparison
+            
+            return comparison
 
 
     def save_analysis(self, fable_id, language, analysis_type, results):
@@ -926,18 +893,14 @@ class SyntaxAnalyzer:
             # Create directory if it doesn't exist
             output_dir = self.analysis_dir / 'syntax'
             output_dir.mkdir(exist_ok=True, parents=True)
-            
             # Create filename
             filename = f"{fable_id}_{language}_{analysis_type}.json"
             output_path = output_dir / filename
-            
             # Save to JSON file
             with open(output_path, 'w', encoding='utf-8') as f:
                 json.dump(results, f, ensure_ascii=False, indent=2)
-            
             self.logger.info("Saved %s analysis for fable %s (%s) to %s",
                             analysis_type, fable_id, language, output_path)
-                            
         except FileNotFoundError as e:
             self.logger.error("File path error when saving analysis: %s", e)
         except PermissionError as e:
@@ -946,45 +909,7 @@ class SyntaxAnalyzer:
             self.logger.error("JSON encoding error when saving analysis: %s", e)
         except Exception as e:
             # Keep one general exception at the end as a fallback
-            self.logger.error("Unexpected error when saving analysis: %s (%s)", 
+            self.logger.error("Unexpected error when saving analysis: %s (%s)",
                             e, type(e).__name__)
-    
-    def compare_fables(self, fables_by_id, analysis_type):
-        """
-        Compare syntax across different language versions of the same fable.
-        
-        Args:
-            fables_by_id: Dict mapping fable IDs to language-specific fables
-            analysis_type: Type of analysis to compare
-            
-        Returns:
-            Dict with comparison results
-        """
-        comparison = {}
-        
-        for fable_id, lang_fables in fables_by_id.items():
-            fable_comparison = {
-                'languages': list(lang_fables.keys()),
-                'results': {}
-            }
-            
-            for lang, fable in lang_fables.items():
-                # Run the requested analysis
-                if analysis_type == 'dependency_frequencies':
-                    results = self.dependency_frequencies(fable)
-                elif analysis_type == 'dependency_distances':
-                    results = self.dependency_distances(fable)
-                elif analysis_type == 'tree_shapes':
-                    results = self.tree_shapes(fable)
-                elif analysis_type == 'dominant_constructions':
-                    results = self.dominant_constructions(fable)
-                elif analysis_type == 'semantic_roles':
-                    results = self.semantic_roles(fable)
-                else:
-                    results = {'error': f'Unknown analysis type: {analysis_type}'}
-                
-                fable_comparison['results'][lang] = results
-            
-            comparison[fable_id] = fable_comparison
-        
-        return comparison
+
+

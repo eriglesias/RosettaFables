@@ -1,10 +1,9 @@
+#test_clustering.py
+"""does something"""
 import unittest
-import json
-import numpy as np
 from pathlib import Path
 import logging
 import sys
-import os
 
 
 project_root = str(Path(__file__).parent.parent)
