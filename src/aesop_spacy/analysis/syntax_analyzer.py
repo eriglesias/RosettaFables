@@ -49,7 +49,7 @@ class SyntaxAnalyzer:
         # Check if dependencies exist at document level
         if 'dependencies' in fable:
             self.logger.debug("Found %d dependencies at document level", len(fable['dependencies']))
-        
+
         # Initialize counters
         dep_counts = {}
         total_deps = 0
@@ -336,7 +336,7 @@ class SyntaxAnalyzer:
                 total_width += child_width
             except RecursionError:
                 # Handle circular dependencies
-                self.logger.warning(f"Detected circular dependency involving node {child_id}")
+                self.logger.warning("Detected circular dependency involving node {%s}", child_id)
                 return current_depth + 1, 1
 
         return max_child_depth, max(1, total_width)
@@ -357,29 +357,25 @@ class SyntaxAnalyzer:
             Number of crossing dependencies
         """
         crossings = 0
-        
+
         # Only check if we have position information
         if not token_positions:
             return 0
-        
         # Get all arcs (as position pairs)
         arcs = []
         for dep in deps:
             head_id = dep.get('head_id')
             dep_id = dep.get('dependent_id')
-            
             if head_id in token_positions and dep_id in token_positions:
                 head_pos = token_positions[head_id]
                 dep_pos = token_positions[dep_id]
                 arcs.append((min(head_pos, dep_pos), max(head_pos, dep_pos)))
-        
         # Check every pair of arcs for crossings
         for i, (start1, end1) in enumerate(arcs):
             for start2, end2 in arcs[i+1:]:
                 # Crossing condition: one arc starts inside another and ends outside
                 if (start1 < start2 < end1 < end2) or (start2 < start1 < end2 < end1):
                     crossings += 1
-        
         return crossings
 
 
@@ -397,7 +393,7 @@ class SyntaxAnalyzer:
         """
         sentences = fable.get('sentences', [])
         language = fable.get('language', 'en')
-        
+
         # Initialize results
         results = {
             'word_order_patterns': {
@@ -423,7 +419,7 @@ class SyntaxAnalyzer:
             'total_adj_noun_pairs': 0,
             'total_adpositions': 0
         }
-        
+
         # Language-specific expectations
         language_expectations = {
             'en': {
@@ -452,28 +448,28 @@ class SyntaxAnalyzer:
                 'expected_adposition': 'preposition'
             }
         }
-        
+
         if language in language_expectations:
             results['language_expectations'] = language_expectations[language]
-        
+
         # Only continue if we have the necessary dependency information
         has_dependencies = False
         for sentence in sentences:
             if 'dependencies' in sentence and sentence['dependencies']:
                 has_dependencies = True
                 break
-                
+
         if not has_dependencies:
             self.logger.warning("Cannot analyze dominant constructions: missing dependencies")
             return results
-        
+
         # Process each sentence
         for sentence in sentences:
             if 'dependencies' in sentence and 'tokens' in sentence and 'pos_tags' in sentence:
                 deps = sentence['dependencies']
                 tokens = sentence['tokens']
                 pos_tags = sentence['pos_tags']
-                
+
                 # Map token IDs to their POS tags
                 token_id_to_pos = {}
                 for token, pos in zip(tokens, pos_tags):
@@ -483,7 +479,7 @@ class SyntaxAnalyzer:
                         token_id = token['id']
                     elif isinstance(token, (list, tuple)) and len(token) >= 2:
                         token_id = token[1] if isinstance(token[1], int) else token[0]
-                        
+
                     # Handle different POS tag formats
                     pos_value = None
                     if isinstance(pos, tuple) and len(pos) >= 2:
@@ -492,34 +488,34 @@ class SyntaxAnalyzer:
                         pos_value = pos['pos']  # {pos: "TAG"} format
                     elif isinstance(pos, str):
                         pos_value = pos  # Direct POS value
-                        
+
                     if token_id is not None and pos_value is not None:
                         token_id_to_pos[token_id] = pos_value
-                
+
                 # Extract subject-verb-object relationships
                 subjects = []
                 objects = []
                 verbs = []
-                
+
                 for dep in deps:
                     dep_type = dep.get('dep', '')
                     head_id = dep.get('head_id')
                     dep_id = dep.get('dependent_id')
-                    
+
                     # Extract subject
                     if dep_type in ['nsubj', 'nsubjpass', 'csubj', 'csubjpass', 'sb']:
                         subjects.append((dep_id, head_id))  # (subject_id, verb_id)
-                    
+
                     # Extract object
                     elif dep_type in ['dobj', 'obj', 'iobj', 'pobj', 'oa', 'da']:
                         objects.append((dep_id, head_id))  # (object_id, verb_id)
-                    
+
                     # Track verbs - consider using token_id_to_pos for additional checks
                     elif dep_id in token_id_to_pos and token_id_to_pos[dep_id] in ['VERB', 'AUX']:
                         verbs.append(dep_id)
                     elif dep_type in ['ROOT', 'root'] and head_id in token_id_to_pos and token_id_to_pos[head_id] in ['VERB', 'AUX']:
                         verbs.append(head_id)
-                
+
                 # Analyze clauses with subject, verb, and object
                 for subj, verb_id in subjects:
                     for obj, obj_verb_id in objects:
@@ -659,26 +655,23 @@ class SyntaxAnalyzer:
         # Check for invalid positions
         if subj_pos < 0 or verb_pos < 0 or obj_pos < 0:
             return "other"
-            
         # Check for unusually distant components (typically indicates parsing issues)
         max_distance = 30
-        if (abs(subj_pos - verb_pos) > max_distance or 
+        if (abs(subj_pos - verb_pos) > max_distance or
             abs(verb_pos - obj_pos) > max_distance or
             abs(subj_pos - obj_pos) > max_distance):
             return "other"
-        
+
         positions = [
             ('S', subj_pos),
             ('V', verb_pos),
             ('O', obj_pos)
         ]
-        
         # Sort by position
         positions.sort(key=lambda x: x[1])
-        
         # Build pattern string
         pattern = ''.join(pos[0] for pos in positions)
-        
+
         return pattern
 
 
@@ -695,7 +688,6 @@ class SyntaxAnalyzer:
         """
         sentences = fable.get('sentences', [])
         language = fable.get('language', 'en')
-        
         # Initialize results
         results = {
             'roles': {
@@ -714,20 +706,17 @@ class SyntaxAnalyzer:
             'role_distribution': {},
             'total_roles': 0
         }
-        
         # Check if we have the necessary dependency information
         has_dependencies = False
         for sentence in sentences:
             if 'dependencies' in sentence and sentence['dependencies']:
                 has_dependencies = True
                 break
-                
         if not has_dependencies:
             self.logger.warning("Cannot analyze semantic roles: missing dependencies")
             return results
-        
+
         # Simple mapping from dependency types to semantic roles
-        # This is a simplification; proper semantic role labeling would require more context
         dep_to_role = {
             'nsubj': 'Agent',
             'agent': 'Agent',
@@ -849,34 +838,34 @@ class SyntaxAnalyzer:
             analysis_type: Type of analysis to compare
                 
         Returns:
-         Dict with comparison results
+            Dict with comparison results
         """
         comparison = {}
         for fable_id, lang_fables in fables_by_id.items():
-                fable_comparison = {
-                    'languages': list(lang_fables.keys()),
-                    'results': {}
-                }
-         for lang, fable in lang_fables.items():
-             # Run the requested analysis
-            if analysis_type == 'dependency_frequencies':
-                results = self.dependency_frequencies(fable)
-                    elif analysis_type == 'dependency_distances':
-                        results = self.dependency_distances(fable)
-                    elif analysis_type == 'tree_shapes':
-                        results = self.tree_shapes(fable)
-                    elif analysis_type == 'dominant_constructions':
-                        results = self.dominant_constructions(fable)
-                    elif analysis_type == 'semantic_roles':
-                        results = self.semantic_roles(fable)
-                    else:
-                        results = {'error': f'Unknown analysis type: {analysis_type}'}
-                    
-                    fable_comparison['results'][lang] = results
-                
-                comparison[fable_id] = fable_comparison
-            
-            return comparison
+            fable_comparison = {
+                'languages': list(lang_fables.keys()),
+                'results': {}
+            }
+            for lang, fable in lang_fables.items():
+                # Run the requested analysis
+                if analysis_type == 'dependency_frequencies':
+                    results = self.dependency_frequencies(fable)
+                elif analysis_type == 'dependency_distances':
+                    results = self.dependency_distances(fable)
+                elif analysis_type == 'tree_shapes':
+                    results = self.tree_shapes(fable)
+                elif analysis_type == 'dominant_constructions':
+                    results = self.dominant_constructions(fable)
+                elif analysis_type == 'semantic_roles':
+                    results = self.semantic_roles(fable)
+                else:
+                    results = {'error': f'Unknown analysis type: {analysis_type}'}
+                # Store results for this language
+                fable_comparison['results'][lang] = results
+            # Add completed fable comparison to results
+            comparison[fable_id] = fable_comparison
+        return comparison
+
 
 
     def save_analysis(self, fable_id, language, analysis_type, results):

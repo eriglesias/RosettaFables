@@ -1,155 +1,12 @@
 {
   "1": {
     "languages": [
-      "grc",
       "nl",
       "de",
       "en",
       "es"
     ],
     "morals": {
-      "grc": {
-        "explicit": {
-          "has_explicit_moral": false,
-          "moral_text": null,
-          "moral_location": null,
-          "detection_method": null,
-          "confidence": 0.0
-        },
-        "implicit": {
-          "has_inferred_moral": true,
-          "inferred_morals": [
-            {
-              "text": "The moral is to λύκος αἰτίας.",
-              "relevance_score": 0.6666666666666666,
-              "source": "keyword_template",
-              "metadata": {
-                "keywords": [
-                  "λύκος",
-                  "αἰτίας"
-                ]
-              }
-            },
-            {
-              "text": "One should always αἰτίας αὐτὸν.",
-              "relevance_score": 0.5,
-              "source": "keyword_template",
-              "metadata": {
-                "keywords": [
-                  "λύκος",
-                  "αἰτίας"
-                ]
-              }
-            },
-            {
-              "text": "It's important to αὐτὸν when dealing with δὲ.",
-              "relevance_score": 0.3333333333333333,
-              "source": "keyword_template",
-              "metadata": {
-                "keywords": [
-                  "λύκος",
-                  "αἰτίας"
-                ]
-              }
-            }
-          ],
-          "method": "combined_nlp_inference",
-          "keywords": [
-            {
-              "term": "λύκος",
-              "score": 0.40451991747794525
-            },
-            {
-              "term": "αἰτίας",
-              "score": 0.26967994498529685
-            },
-            {
-              "term": "αὐτὸν",
-              "score": 0.26967994498529685
-            },
-            {
-              "term": "δὲ",
-              "score": 0.26967994498529685
-            },
-            {
-              "term": "καὶ",
-              "score": 0.26967994498529685
-            },
-            {
-              "term": "τινος",
-              "score": 0.26967994498529685
-            },
-            {
-              "term": "τὸ",
-              "score": 0.26967994498529685
-            },
-            {
-              "term": "ἔφη",
-              "score": 0.26967994498529685
-            },
-            {
-              "term": "ὕδωρ",
-              "score": 0.26967994498529685
-            },
-            {
-              "term": "ὡς",
-              "score": 0.26967994498529685
-            }
-          ],
-          "topics": [
-            {
-              "id": 0,
-              "top_words": [
-                "λύκος",
-                "ὡς",
-                "τὸ",
-                "αὐτὸν",
-                "δὲ",
-                "καὶ",
-                "τινος",
-                "ὕδωρ",
-                "αἰτίας",
-                "ἔφη"
-              ]
-            },
-            {
-              "id": 1,
-              "top_words": [
-                "λύκος",
-                "ὡς",
-                "τὸ",
-                "αὐτὸν",
-                "δὲ",
-                "καὶ",
-                "τινος",
-                "ὕδωρ",
-                "αἰτίας",
-                "ἔφη"
-              ]
-            },
-            {
-              "id": 2,
-              "top_words": [
-                "λύκος",
-                "ὡς",
-                "τὸ",
-                "αὐτὸν",
-                "δὲ",
-                "καὶ",
-                "τινος",
-                "ὕδωρ",
-                "αἰτίας",
-                "ἔφη"
-              ]
-            }
-          ]
-        },
-        "final_moral": "The moral is to λύκος αἰτίας.",
-        "themes": {
-          "categories": [],
-          "dominant_category": null
-        }
-      },
       "nl": {
         "explicit": {
           "has_explicit_moral": false,
@@ -736,10 +593,6 @@
     },
     "semantic_similarity": {
       "similarities": {
-        "grc-nl": 0.5659928917884827,
-        "grc-de": 0.5906645059585571,
-        "grc-en": 0.4864771068096161,
-        "grc-es": 0.8237934708595276,
         "nl-de": 0.2673969864845276,
         "nl-en": 0.7837969660758972,
         "nl-es": 0.5755074620246887,
@@ -753,28 +606,12 @@
   },
   "2": {
     "languages": [
-      "grc",
       "nl",
       "de",
       "en",
       "es"
     ],
     "morals": {
-      "grc": {
-        "explicit": {
-          "has_explicit_moral": true,
-          "moral_text": "Ὁ μῦθος δηλοῖ ὅτι τὸ λιτῶς διάγειν καὶ ζῆν ἀταράχως ὑπὲρ τὸ τρυφᾶν ἐν φόβῳ μετ' ὀδύνης",
-          "moral_location": "end",
-          "detection_method": "indicator_phrase",
-          "confidence": 0.8
-        },
-        "implicit": {},
-        "final_moral": "Ὁ μῦθος δηλοῖ ὅτι τὸ λιτῶς διάγειν καὶ ζῆν ἀταράχως ὑπὲρ τὸ τρυφᾶν ἐν φόβῳ μετ' ὀδύνης",
-        "themes": {
-          "categories": [],
-          "dominant_category": null
-        }
-      },
       "nl": {
         "explicit": {
           "has_explicit_moral": false,
@@ -1358,10 +1195,6 @@
     },
     "semantic_similarity": {
       "similarities": {
-        "grc-nl": -0.03848734498023987,
-        "grc-de": 0.10586586594581604,
-        "grc-en": 0.1255715936422348,
-        "grc-es": 0.0956965833902359,
         "nl-de": 0.3127073049545288,
         "nl-en": 0.2524607181549072,
         "nl-es": 0.23901930451393127,
@@ -1375,157 +1208,12 @@
   },
   "3": {
     "languages": [
-      "grc",
       "nl",
       "de",
       "en",
       "es"
     ],
     "morals": {
-      "grc": {
-        "explicit": {
-          "has_explicit_moral": false,
-          "moral_text": null,
-          "moral_location": null,
-          "detection_method": null,
-          "confidence": 0.0
-        },
-        "implicit": {
-          "has_inferred_moral": true,
-          "inferred_morals": [
-            {
-              "text": "The moral is to τὴν ὀστοῦν.",
-              "relevance_score": 0.6666666666666666,
-              "source": "keyword_template",
-              "metadata": {
-                "keywords": [
-                  "τὴν",
-                  "ὀστοῦν"
-                ]
-              }
-            },
-            {
-              "text": "The moral concerns ὀστοῦν, τὴν, κεφαλὴν.",
-              "relevance_score": 0.6,
-              "source": "topic_modeling",
-              "metadata": {
-                "topic_words": [
-                  "ὀστοῦν",
-                  "τὴν",
-                  "κεφαλὴν"
-                ]
-              }
-            },
-            {
-              "text": "The moral concerns ὀστοῦν, τὴν, κεφαλὴν.",
-              "relevance_score": 0.6,
-              "source": "topic_modeling",
-              "metadata": {
-                "topic_words": [
-                  "ὀστοῦν",
-                  "τὴν",
-                  "κεφαλὴν"
-                ]
-              }
-            }
-          ],
-          "method": "combined_nlp_inference",
-          "keywords": [
-            {
-              "term": "τὴν",
-              "score": 0.408248290463863
-            },
-            {
-              "term": "ὀστοῦν",
-              "score": 0.408248290463863
-            },
-            {
-              "term": "δὲ",
-              "score": 0.2721655269759087
-            },
-            {
-              "term": "καὶ",
-              "score": 0.2721655269759087
-            },
-            {
-              "term": "κεφαλὴν",
-              "score": 0.2721655269759087
-            },
-            {
-              "term": "μισθὸν",
-              "score": 0.2721655269759087
-            },
-            {
-              "term": "τὸ",
-              "score": 0.2721655269759087
-            },
-            {
-              "term": "τὸν",
-              "score": 0.2721655269759087
-            },
-            {
-              "term": "αὐτοῦ",
-              "score": 0.13608276348795434
-            },
-            {
-              "term": "φάρυγγα",
-              "score": 0.13608276348795434
-            }
-          ],
-          "topics": [
-            {
-              "id": 0,
-              "top_words": [
-                "ὀστοῦν",
-                "τὴν",
-                "κεφαλὴν",
-                "δὲ",
-                "τὸ",
-                "τὸν",
-                "καὶ",
-                "μισθὸν",
-                "λύκος",
-                "οὗτος"
-              ]
-            },
-            {
-              "id": 1,
-              "top_words": [
-                "ὀστοῦν",
-                "τὴν",
-                "κεφαλὴν",
-                "δὲ",
-                "τὸ",
-                "τὸν",
-                "καὶ",
-                "μισθὸν",
-                "λύκος",
-                "οὗτος"
-              ]
-            },
-            {
-              "id": 2,
-              "top_words": [
-                "ὀστοῦν",
-                "τὴν",
-                "κεφαλὴν",
-                "δὲ",
-                "τὸ",
-                "τὸν",
-                "καὶ",
-                "μισθὸν",
-                "λύκος",
-                "οὗτος"
-              ]
-            }
-          ]
-        },
-        "final_moral": "The moral is to τὴν ὀστοῦν.",
-        "themes": {
-          "categories": [],
-          "dominant_category": null
-        }
-      },
       "nl": {
         "explicit": {
           "has_explicit_moral": false,
@@ -2101,10 +1789,6 @@
     "theme_consistency": null,
     "semantic_similarity": {
       "similarities": {
-        "grc-nl": 0.13766072690486908,
-        "grc-de": 0.6607877016067505,
-        "grc-en": 0.5547695755958557,
-        "grc-es": 0.6947969794273376,
         "nl-de": 0.27268436551094055,
         "nl-en": 0.15432244539260864,
         "nl-es": 0.1591101884841919,
@@ -2118,157 +1802,12 @@
   },
   "4": {
     "languages": [
-      "grc",
       "nl",
       "de",
       "en",
       "es"
     ],
     "morals": {
-      "grc": {
-        "explicit": {
-          "has_explicit_moral": false,
-          "moral_text": null,
-          "moral_location": null,
-          "detection_method": null,
-          "confidence": 0.0
-        },
-        "implicit": {
-          "has_inferred_moral": true,
-          "inferred_morals": [
-            {
-              "text": "The moral is to τὴν ὀστοῦν.",
-              "relevance_score": 0.6666666666666666,
-              "source": "keyword_template",
-              "metadata": {
-                "keywords": [
-                  "τὴν",
-                  "ὀστοῦν"
-                ]
-              }
-            },
-            {
-              "text": "The moral concerns ὀστοῦν, τὴν, κεφαλὴν.",
-              "relevance_score": 0.6,
-              "source": "topic_modeling",
-              "metadata": {
-                "topic_words": [
-                  "ὀστοῦν",
-                  "τὴν",
-                  "κεφαλὴν"
-                ]
-              }
-            },
-            {
-              "text": "The moral concerns ὀστοῦν, τὴν, κεφαλὴν.",
-              "relevance_score": 0.6,
-              "source": "topic_modeling",
-              "metadata": {
-                "topic_words": [
-                  "ὀστοῦν",
-                  "τὴν",
-                  "κεφαλὴν"
-                ]
-              }
-            }
-          ],
-          "method": "combined_nlp_inference",
-          "keywords": [
-            {
-              "term": "τὴν",
-              "score": 0.408248290463863
-            },
-            {
-              "term": "ὀστοῦν",
-              "score": 0.408248290463863
-            },
-            {
-              "term": "δὲ",
-              "score": 0.2721655269759087
-            },
-            {
-              "term": "καὶ",
-              "score": 0.2721655269759087
-            },
-            {
-              "term": "κεφαλὴν",
-              "score": 0.2721655269759087
-            },
-            {
-              "term": "μισθὸν",
-              "score": 0.2721655269759087
-            },
-            {
-              "term": "τὸ",
-              "score": 0.2721655269759087
-            },
-            {
-              "term": "τὸν",
-              "score": 0.2721655269759087
-            },
-            {
-              "term": "αὐτοῦ",
-              "score": 0.13608276348795434
-            },
-            {
-              "term": "φάρυγγα",
-              "score": 0.13608276348795434
-            }
-          ],
-          "topics": [
-            {
-              "id": 0,
-              "top_words": [
-                "ὀστοῦν",
-                "τὴν",
-                "κεφαλὴν",
-                "δὲ",
-                "τὸ",
-                "τὸν",
-                "καὶ",
-                "μισθὸν",
-                "λύκος",
-                "οὗτος"
-              ]
-            },
-            {
-              "id": 1,
-              "top_words": [
-                "ὀστοῦν",
-                "τὴν",
-                "κεφαλὴν",
-                "δὲ",
-                "τὸ",
-                "τὸν",
-                "καὶ",
-                "μισθὸν",
-                "λύκος",
-                "οὗτος"
-              ]
-            },
-            {
-              "id": 2,
-              "top_words": [
-                "ὀστοῦν",
-                "τὴν",
-                "κεφαλὴν",
-                "δὲ",
-                "τὸ",
-                "τὸν",
-                "καὶ",
-                "μισθὸν",
-                "λύκος",
-                "οὗτος"
-              ]
-            }
-          ]
-        },
-        "final_moral": "The moral is to τὴν ὀστοῦν.",
-        "themes": {
-          "categories": [],
-          "dominant_category": null
-        }
-      },
       "nl": {
         "explicit": {
           "has_explicit_moral": false,
@@ -2844,10 +2383,6 @@
     "theme_consistency": null,
     "semantic_similarity": {
       "similarities": {
-        "grc-nl": 0.2698248028755188,
-        "grc-de": 0.7170891165733337,
-        "grc-en": 0.428292840719223,
-        "grc-es": 0.7242007255554199,
         "nl-de": 0.6332078576087952,
         "nl-en": 0.30472174286842346,
         "nl-es": 0.31103822588920593,
@@ -2861,156 +2396,12 @@
   },
   "5": {
     "languages": [
-      "grc",
       "nl",
       "de",
       "en",
       "es"
     ],
     "morals": {
-      "grc": {
-        "explicit": {
-          "has_explicit_moral": false,
-          "moral_text": null,
-          "moral_location": null,
-          "detection_method": null,
-          "confidence": 0.0
-        },
-        "implicit": {
-          "has_inferred_moral": true,
-          "inferred_morals": [
-            {
-              "text": "The moral is to αὐτὸν δὲ.",
-              "relevance_score": 0.5,
-              "source": "keyword_template",
-              "metadata": {
-                "keywords": [
-                  "αὐτὸν",
-                  "δὲ"
-                ]
-              }
-            },
-            {
-              "text": "It's important to καὶ when dealing with μῦς.",
-              "relevance_score": 0.5,
-              "source": "keyword_template",
-              "metadata": {
-                "keywords": [
-                  "αὐτὸν",
-                  "δὲ"
-                ]
-              }
-            },
-            {
-              "text": "The moral concerns αὐτὸν, δὲ, καὶ.",
-              "relevance_score": 0.5,
-              "source": "topic_modeling",
-              "metadata": {
-                "topic_words": [
-                  "αὐτὸν",
-                  "δὲ",
-                  "καὶ"
-                ]
-              }
-            }
-          ],
-          "method": "combined_nlp_inference",
-          "keywords": [
-            {
-              "term": "αὐτὸν",
-              "score": 0.46499055497527714
-            },
-            {
-              "term": "δὲ",
-              "score": 0.46499055497527714
-            },
-            {
-              "term": "καὶ",
-              "score": 0.46499055497527714
-            },
-            {
-              "term": "μῦς",
-              "score": 0.23249527748763857
-            },
-            {
-              "term": "τοῦ",
-              "score": 0.23249527748763857
-            },
-            {
-              "term": "ὅτι",
-              "score": 0.23249527748763857
-            },
-            {
-              "term": "αὐτοῦ",
-              "score": 0.11624763874381928
-            },
-            {
-              "term": "συνέβη",
-              "score": 0.11624763874381928
-            },
-            {
-              "term": "σωθεὶς",
-              "score": 0.11624763874381928
-            },
-            {
-              "term": "σὺ",
-              "score": 0.11624763874381928
-            }
-          ],
-          "topics": [
-            {
-              "id": 0,
-              "top_words": [
-                "αὐτὸν",
-                "δὲ",
-                "καὶ",
-                "ὅτι",
-                "μῦς",
-                "τοῦ",
-                "σώματι",
-                "σὺ",
-                "σωθεὶς",
-                "συνέβη"
-              ]
-            },
-            {
-              "id": 1,
-              "top_words": [
-                "αὐτὸν",
-                "δὲ",
-                "καὶ",
-                "ὅτι",
-                "μῦς",
-                "τοῦ",
-                "σώματι",
-                "σὺ",
-                "σωθεὶς",
-                "συνέβη"
-              ]
-            },
-            {
-              "id": 2,
-              "top_words": [
-                "αὐτὸν",
-                "δὲ",
-                "καὶ",
-                "ὅτι",
-                "μῦς",
-                "τοῦ",
-                "σώματι",
-                "σὺ",
-                "σωθεὶς",
-                "συνέβη"
-              ]
-            }
-          ]
-        },
-        "final_moral": "The moral is to αὐτὸν δὲ.",
-        "themes": {
-          "categories": [],
-          "dominant_category": null
-        }
-      },
       "nl": {
         "explicit": {
           "has_explicit_moral": false,
@@ -3586,10 +2977,6 @@
     "theme_consistency": null,
     "semantic_similarity": {
       "similarities": {
-        "grc-nl": 0.13516287505626678,
-        "grc-de": 0.6240161061286926,
-        "grc-en": 0.6146483421325684,
-        "grc-es": 0.5916095972061157,
         "nl-de": 0.40660759806632996,
         "nl-en": 0.3667140305042267,
         "nl-es": 0.6063780784606934,
@@ -3603,155 +2990,11 @@
   },
   "6": {
     "languages": [
-      "grc",
       "nl",
       "de",
       "es"
     ],
     "morals": {
-      "grc": {
-        "explicit": {
-          "has_explicit_moral": false,
-          "moral_text": null,
-          "moral_location": null,
-          "detection_method": null,
-          "confidence": 0.0
-        },
-        "implicit": {
-          "has_inferred_moral": true,
-          "inferred_morals": [
-            {
-              "text": "The moral is to καὶ δὲ.",
-              "relevance_score": 0.5,
-              "source": "keyword_template",
-              "metadata": {
-                "keywords": [
-                  "καὶ",
-                  "δὲ"
-                ]
-              }
-            },
-            {
-              "text": "It's important to κώνωψ when dealing with τοῖς.",
-              "relevance_score": 0.5,
-              "source": "keyword_template",
-              "metadata": {
-                "keywords": [
-                  "καὶ",
-                  "δὲ"
-                ]
-              }
-            },
-            {
-              "text": "The moral concerns δὲ, τοῖς, κώνωψ.",
-              "relevance_score": 0.5,
-              "source": "topic_modeling",
-              "metadata": {
-                "topic_words": [
-                  "δὲ",
-                  "τοῖς",
-                  "κώνωψ"
-                ]
-              }
-            }
-          ],
-          "method": "combined_nlp_inference",
-          "keywords": [
-            {
-              "term": "καὶ",
-              "score": 0.647150228929434
-            },
-            {
-              "term": "δὲ",
-              "score": 0.3698001308168194
-            },
-            {
-              "term": "κώνωψ",
-              "score": 0.2773500981126145
-            },
-            {
-              "term": "τοῖς",
-              "score": 0.2773500981126145
-            },
-            {
-              "term": "εἰ",
-              "score": 0.1849000654084097
-            },
-            {
-              "term": "λέοντα",
-              "score": 0.1849000654084097
-            },
-            {
-              "term": "οὔτε",
-              "score": 0.1849000654084097
-            },
-            {
-              "term": "σαλπίσας",
-              "score": 0.1849000654084097
-            },
-            {
-              "term": "ἀράχνης",
-              "score": 0.1849000654084097
-            },
-            {
-              "term": "ὄνυξι",
-              "score": 0.1849000654084097
-            }
-          ],
-          "topics": [
-            {
-              "id": 0,
-              "top_words": [
-                "δὲ",
-                "τοῖς",
-                "κώνωψ",
-                "καὶ",
-                "λέοντα",
-                "ὄνυξι",
-                "ἀράχνης",
-                "εἰ",
-                "σαλπίσας",
-                "οὔτε"
-              ]
-            },
-            {
-              "id": 1,
-              "top_words": [
-                "δὲ",
-                "τοῖς",
-                "κώνωψ",
-                "καὶ",
-                "λέοντα",
-                "ὄνυξι",
-                "ἀράχνης",
-                "εἰ",
-                "σαλπίσας",
-                "οὔτε"
-              ]
-            },
-            {
-              "id": 2,
-              "top_words": [
-                "καὶ",
-                "δὲ",
-                "τοῖς",
-                "κώνωψ",
-                "λέοντα",
-                "ὄνυξι",
-                "ἀράχνης",
-                "εἰ",
-                "σαλπίσας",
-                "οὔτε"
-              ]
-            }
-          ]
-        },
-        "final_moral": "The moral is to καὶ δὲ.",
-        "themes": {
-          "categories": [],
-          "dominant_category": null
-        }
-      },
       "nl": {
         "explicit": {
           "has_explicit_moral": false,
@@ -4183,9 +3426,6 @@
     "theme_consistency": null,
     "semantic_similarity": {
       "similarities": {
-        "grc-nl": 0.1680469512939453,
-        "grc-de": 0.6578876972198486,
-        "grc-es": 0.6132895946502686,
         "nl-de": 0.3498835861682892,
         "nl-es": 0.488980233669281,
         "de-es": 0.6877413988113403
@@ -4196,156 +3436,11 @@
   },
   "7": {
     "languages": [
-      "grc",
       "nl",
       "de",
       "en"
     ],
     "morals": {
-      "grc": {
-        "explicit": {
-          "has_explicit_moral": false,
-          "moral_text": null,
-          "moral_location": null,
-          "detection_method": null,
-          "confidence": 0.0
-        },
-        "implicit": {
-          "has_inferred_moral": true,
-          "inferred_morals": [
-            {
-              "text": "The moral concerns τῶν, καὶ, τὴν.",
-              "relevance_score": 0.6,
-              "source": "topic_modeling",
-              "metadata": {
-                "topic_words": [
-                  "τῶν",
-                  "καὶ",
-                  "τὴν"
-                ]
-              }
-            },
-            {
-              "text": "The moral concerns τῶν, καὶ, τὴν.",
-              "relevance_score": 0.6,
-              "source": "topic_modeling",
-              "metadata": {
-                "topic_words": [
-                  "τῶν",
-                  "καὶ",
-                  "τὴν"
-                ]
-              }
-            },
-            {
-              "text": "The moral is to δὲ καὶ.",
-              "relevance_score": 0.5,
-              "source": "keyword_template",
-              "metadata": {
-                "keywords": [
-                  "δὲ",
-                  "καὶ"
-                ]
-              }
-            }
-          ],
-          "method": "combined_nlp_inference",
-          "keywords": [
-            {
-              "term": "δὲ",
-              "score": 0.4681645887845223
-            },
-            {
-              "term": "καὶ",
-              "score": 0.409644015186457
-            },
-            {
-              "term": "τὴν",
-              "score": 0.409644015186457
-            },
-            {
-              "term": "τῶν",
-              "score": 0.2926028679903264
-            },
-            {
-              "term": "τοῦ",
-              "score": 0.23408229439226114
-            },
-            {
-              "term": "τὸ",
-              "score": 0.23408229439226114
-            },
-            {
-              "term": "τῷ",
-              "score": 0.23408229439226114
-            },
-            {
-              "term": "ἀλώπηξ",
-              "score": 0.17556172079419585
-            },
-            {
-              "term": "αὐτὴν",
-              "score": 0.11704114719613057
-            },
-            {
-              "term": "διὰ",
-              "score": 0.11704114719613057
-            }
-          ],
-          "topics": [
-            {
-              "id": 0,
-              "top_words": [
-                "τῶν",
-                "καὶ",
-                "τὴν",
-                "τοῦ",
-                "τῷ",
-                "τὸ",
-                "δὲ",
-                "ἀλώπηξ",
-                "ἄνοδον",
-                "φρέαρ"
-              ]
-            },
-            {
-              "id": 1,
-              "top_words": [
-                "τῶν",
-                "καὶ",
-                "τὴν",
-                "τοῦ",
-                "τῷ",
-                "τὸ",
-                "δὲ",
-                "ἀλώπηξ",
-                "ἄνοδον",
-                "φρέαρ"
-              ]
-            },
-            {
-              "id": 2,
-              "top_words": [
-                "δὲ",
-                "καὶ",
-                "τὴν",
-                "τῶν",
-                "τοῦ",
-                "τῷ",
-                "τὸ",
-                "ἀλώπηξ",
-                "ἄνοδον",
-                "φρέαρ"
-              ]
-            }
-          ]
-        },
-        "final_moral": "The moral concerns τῶν, καὶ, τὴν.",
-        "themes": {
-          "categories": [],
-          "dominant_category": null
-        }
-      },
       "nl": {
         "explicit": {
           "has_explicit_moral": false,
@@ -4778,9 +3873,6 @@
     "theme_consistency": null,
     "semantic_similarity": {
       "similarities": {
-        "grc-nl": 0.11028733849525452,
-        "grc-de": 0.6392281651496887,
-        "grc-en": 0.4983610212802887,
         "nl-de": 0.3637705147266388,
         "nl-en": 0.32868194580078125,
         "de-en": 0.543798565864563

@@ -251,8 +251,9 @@ class FableLoader:
             fables_by_language: Dictionary to store loaded fables
             missing_langs: List of language codes that need processing
         """
+
         # Load and parse markdown file
-        markdown_file = self.data_dir / "raw" / "fables" / "initial_fables.md"
+        markdown_file = self.data_dir / "fables" / "initial_fables.md"
         if not markdown_file.exists():
             self.logger.warning("Markdown file not found: %s", markdown_file)
             return

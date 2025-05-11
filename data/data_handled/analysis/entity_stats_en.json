@@ -1,0 +1,56 @@
+{
+  "ANIMAL_CHAR": {
+    "Wolf": {
+      "mentions": 2,
+      "document_count": 2
+    },
+    "Lamb": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "City Mouse": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Country Mouse": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Mouse": {
+      "mentions": 2,
+      "document_count": 2
+    },
+    "Fox": {
+      "mentions": 3,
+      "document_count": 3
+    },
+    "Crane": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Lion": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Goat": {
+      "mentions": 1,
+      "document_count": 1
+    }
+  },
+  "DATE": {
+    "last year": {
+      "mentions": 2,
+      "document_count": 1
+    },
+    "a year old": {
+      "mentions": 1,
+      "document_count": 1
+    }
+  },
+  "PERSON": {
+    "billy-": {
+      "mentions": 1,
+      "document_count": 1
+    }
+  }
+}

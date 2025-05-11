@@ -1,4 +1,5 @@
-# src/aesop_spacy/preprocessing/processor.py
+#processor.py
+"""processes"""
 from typing import Dict, List, Any, Tuple
 import logging
 
@@ -30,7 +31,7 @@ class FableProcessor:
         body = fable.get('extracted_body', fable.get('body', ''))
 
         if not body:
-            self.logger.warning(f"No content to process for fable: {fable.get('title')}")
+            self.logger.warning("No content to process for fable: %s", fable.get('title'))
             processed.update({
                 'doc_length': 0,
                 'tokens': [],
@@ -38,7 +39,7 @@ class FableProcessor:
                 'pos_tags': [],
                 'entities': [],
                 'sentences': [],
-                'dependencies': [],  # Add empty dependencies list
+                'dependencies': [],  
             })
             return processed
 
@@ -47,14 +48,14 @@ class FableProcessor:
 
         # Check if model has parser component
         if hasattr(nlp_model, 'pipe_names'):
-            self.logger.info(f"Model pipeline components: {nlp_model.pipe_names}")
+            self.logger.info("Model pipeline components: %s", nlp_model.pipe_names)
         if 'parser' not in nlp_model.pipe_names:
-            self.logger.warning(f"Model {nlp_model} does not have parser component!")
+            self.logger.warning("Model %s does not have parser component!", nlp_model)
 
         # Extract dependencies before serialization and log them
         sentences = self._extract_sentences(doc)
         total_deps = sum(len(s.get('dependencies', [])) for s in sentences)
-        self.logger.info(f"Extracted {total_deps} dependencies across {len(sentences)} sentences")
+        self.logger.info("Extracted %d dependencies across %d sentences", total_deps, len(sentences))
 
         # Get document-level dependencies
         doc_dependencies = self._extract_dependencies(doc)
@@ -71,9 +72,10 @@ class FableProcessor:
         })
 
         # Log dependency stats
-        self.logger.info(f"Extracted {len(doc_dependencies)} document-level dependencies")
+        self.logger.info("Extracted %d document-level dependencies", len(doc_dependencies))
         sentence_deps = sum(len(s.get('dependencies', [])) for s in processed['sentences'])
-        self.logger.info(f"Extracted {sentence_deps} sentence-level dependencies across {len(processed['sentences'])} sentences")
+        self.logger.info("Extracted %d sentence-level dependencies across %d sentences", 
+                         sentence_deps, len(processed['sentences']))
 
         # Process moral if present
         if 'extracted_moral' in fable and fable['extracted_moral'].get('text'):
@@ -98,14 +100,12 @@ class FableProcessor:
         """Extract named entities with their types and positions."""
         return [(ent.text, ent.label_, ent.start, ent.end) for ent in doc.ents]
 
-    
     def _extract_sentences(self, doc) -> List[Dict[str, Any]]:
         """Extract sentences with their metadata and dependencies."""
         sentences = []
-        
+
         # Check if this is a spaCy doc or a Stanza doc
         is_stanza = hasattr(doc, 'sentences') and not hasattr(doc, 'sents')
-        
         if is_stanza:
             # Handle Stanza document
             self.logger.debug("Processing Stanza document with %d sentences", len(doc.sentences))
@@ -123,9 +123,9 @@ class FableProcessor:
                                 'dependent_text': word.text
                             })
                     
-                    self.logger.debug(f"Extracted {len(dependencies)} dependencies for Stanza sentence")
+                    self.logger.debug("Extracted %d dependencies for Stanza sentence", len(dependencies))
                 except Exception as e:
-                    self.logger.warning(f"Failed to extract Stanza dependencies: {e}")
+                    self.logger.warning("Failed to extract Stanza dependencies: %s", e)
                     dependencies = []
                 
                 sentence_data = {
@@ -153,7 +153,7 @@ class FableProcessor:
                                     'dependent_text': token.text
                                 })
                         
-                        self.logger.debug(f"Found {len(dependencies)} dependencies in sentence")
+                        self.logger.debug("Found %d dependencies in sentence", len(dependencies))
                         
                         # Some spans might not have root attribute
                         root_data = {}
@@ -167,7 +167,7 @@ class FableProcessor:
                             root_data = {'text': "", 'pos': "", 'dep': ""}
                     except AttributeError as e:
                         # Fallback if there's any issue
-                        self.logger.warning(f"Error extracting dependencies for sentence: {e}")
+                        self.logger.warning("Error extracting dependencies for sentence: %s", e)
                         root_data = {'text': "", 'pos': "", 'dep': ""}
                         dependencies = []
                     
@@ -180,14 +180,13 @@ class FableProcessor:
                     }
                     sentences.append(sentence_data)
             except Exception as e:
-                self.logger.warning(f"Error extracting sentences from spaCy doc: {e}")
+                self.logger.warning("Error extracting sentences from spaCy doc: %s", e)
         
         # Log dependency stats
         total_deps = sum(len(s.get('dependencies', [])) for s in sentences)
-        self.logger.info(f"Extracted {len(sentences)} sentences with {total_deps} total dependencies")
+        self.logger.info("Extracted %d sentences with %d total dependencies", len(sentences), total_deps)
         
         return sentences
-
 
     def _process_moral(self, moral_text: str, nlp_model) -> Dict[str, Any]:
         """Process the moral text to extract linguistic features."""
@@ -250,9 +249,9 @@ class FableProcessor:
                                 'dependent_text': word.text
                             })
             
-            self.logger.info(f"Extracted {len(dependencies)} document-level dependencies")
+            self.logger.info("Extracted %d document-level dependencies", len(dependencies))
         except Exception as e:
-            self.logger.warning(f"Error extracting dependencies: {e}")
+            self.logger.warning("Error extracting dependencies: %s", e)
             dependencies = []
         
         return dependencies

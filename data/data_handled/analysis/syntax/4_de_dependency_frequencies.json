@@ -1,5 +1,27 @@
 {
-  "total_dependencies": 0,
-  "frequencies": {},
-  "examples": {}
+  "total_dependencies": 100,
+  "frequencies": {
+    "nk": 21.0,
+    "sb": 10.0,
+    "ROOT": 9.0,
+    "oa": 8.0,
+    "oc": 3.0,
+    "cd": 3.0,
+    "cj": 3.0,
+    "mo": 9.0,
+    "punct": 13.0,
+    "cp": 3.0,
+    "da": 4.0,
+    "mnr": 2.0,
+    "cc": 1.0,
+    "svp": 3.0,
+    "op": 1.0,
+    "rc": 1.0,
+    "pnc": 1.0,
+    "ng": 1.0,
+    "pd": 1.0,
+    "ag": 1.0,
+    "og": 1.0,
+    "re": 1.0
+  }
 }

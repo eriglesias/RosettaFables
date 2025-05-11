@@ -1,0 +1,82 @@
+[
+  {
+    "title": "El lobo y el cordero",
+    "language": "es",
+    "source": "Aesop's Original Collection",
+    "version": "1",
+    "body": "Un lobo que vio a un cordero beber en un río quiso devorarlo con un pretexto razonable. Por eso, aunque el lobo estaba situado río arriba, le acusó de haber removido el agua y no dejarle beber. El cordero le dijo que bebía con la punta del hocico y que además no era posible, estando él río abajo, remover el agua de arriba; mas el lobo, al fracasar en ese pretexto, dijo: «El año pasado injuriaste a mi padre». Sin embargo, el cordero dijo que ni siquiera tenía un año de vida, a lo que el lobo replicó: «Aunque tengas abundantes justificaciones, no voy a dejar de devorarte».",
+    "id": "1",
+    "moral": {
+      "type": "unknown",
+      "text": "La fábula muestra que no tiene fuerza una defensa justa con quienes tienen la voluntad de hacer daño."
+    }
+  },
+  {
+    "title": "El ratón de campo y el de ciudad",
+    "language": "es",
+    "source": "Aesop's Original Collection",
+    "version": "1",
+    "body": "Un ratón de campo era amigo de otro que vivía en una casa. El de la casa, invitado por su amigo, fue primero a cenar al campo. Después de haber comido cebada y trigo, dijo: «Reconócelo, amigo, llevas la vida de las hormigas, pero, ya que yo tengo multitud de bienes, ven conmigo y disfrutarás de todo». Y, al instante, los dos se fueron. Y el de la casa le mostró legumbres y trigo, y además dátiles, queso, miel, frutos. Aquél a su vez, admirándole, lo elogiaba vehementemente y maldecía su propia suerte. Cuando se disponían a empezar a comer, de repente un hombre abrió la puerta. Atemorizados por el ruido, los ratones se lanzaron a los agujeros. Cuando quisieron de nuevo coger unos higos secos, llegó otro hombre para retirar algo de lo que había dentro. Al verlo los ratones, de nuevo se precipitaron a ocultarse en un escondrijo. El ratón de campo, sobreponiéndose al hambre, suspiró y dijo al otro: «Disfruta tú, amigo, con tu comida hasta que te hartes, gozándolo con placer y peligro y mucho miedo; yo, desdichado, viviré despreocupadamente sin temer a nadie, comiendo cebada y trigo».",
+    "id": "2",
+    "moral": {
+      "type": "explicit",
+      "text": "La fábula muestra que pasar la vida con sencillez y vivir con tranquilidad está por encima de una vida regalada con miedo y con dolor."
+    }
+  },
+  {
+    "title": "La zorra y las uvas",
+    "language": "es",
+    "source": "Aesop's Original Collection",
+    "version": "1",
+    "body": "Una zorra hambrienta, al ver unos racimos que colgaban de una parra, quiso apoderarse de ellos, y no\npudo. Apartándose, se dijo a sí misma: «Están verdes».",
+    "id": "3",
+    "moral": {
+      "type": "explicit",
+      "text": "Así también algunos hombres, cuando no pueden conseguir las cosas por incompetencia, culpan a las circunstancias."
+    }
+  },
+  {
+    "title": "El lobo y la garza",
+    "language": "es",
+    "source": "Aesop's Original Collection",
+    "version": "1",
+    "body": "Un lobo que se había atragantado con un hueso iba de un lado a otro buscando a quien lo curara. Al encontrarse con una garza, le pidió que le sacase el hueso a cambio de una retribución. Y aquélla metió su propia cabeza en la garganta del lobo, sacó el hueso y\nle reclamó la paga acordada. Él, respondiendo, dijo: «¡Eh tú!, ¿no te contentas con haber sacado sana tu cabeza de la boca del lobo, sino que también pides paga?».",
+    "id": "4",
+    "moral": {
+      "type": "explicit",
+      "text": "La fábula muestra que la mayor recompensa por una buena acción a los malvados es que ellos no te hagan daño."
+    }
+  },
+  {
+    "title": "El león y el ratón agradecido",
+    "language": "es",
+    "source": "Aesop's Original Collection",
+    "version": "1",
+    "body": "Un ratón se puso a corretear sobre el cuerpo de un león dormido. Éste se despertó y lo atrapó; y estaba a punto de devorarlo. Pero, como el ratón le pidiera que lo soltase y le dijera que si lo salvaba se lo agradecería, el león, sonriendo, lo dejó libre. Ocurrió que, no mucho después, él se salvó gracias al ratón. Pues, cuando, capturado por unos cazadores, fue atado a un árbol con una soga, el ratón, que había oído sus lamentos, acudió y se puso a roer la soga y, una vez que lo hubo desatado, dijo: «Te reíste un día de mí, incrédulo de que yo pudiera devolverte el favor, pero ahora sabe bien que también hay agradecimiento de parte de los ratones».",
+    "id": "5",
+    "moral": {
+      "type": "explicit",
+      "text": "La fábula muestra que con los cambios de fortuna los que pueden mucho llegan a estar necesitados de los más débiles."
+    }
+  },
+  {
+    "title": "El mosquito y el león",
+    "language": "es",
+    "source": "Aesop's Original Collection",
+    "version": "1",
+    "body": "Un mosquito se acercó a un león y le dijo: «Ni te temo ni eres más fuerte que yo; si no ¿qué fuerza\ntienes: que arañas con tus garras y muerdes con tus dientes? Eso también lo hace una mujer cuando se\npelea con su marido. Yo soy mucho más fuerte que tú. Si quieres, entremos en lucha.» Y el mosquito hizo\nzumbar su trompetilla y le clavó el aguijón, picándole en la parte sin pelo de sus fauces, cerca de las narices.\nY el león se puso a rascarse con sus propias garras hasta que desfalleció. El mosquito, luego de vencer al\nleón, volvió a hacer zumbar su trompetilla y entonando un epinicio \" echó a volar; se enredó con la tela de una\naraña y, mientras era devorado, se lamentaba de cómo, tras pelear con los animales más grandes, perecía por\nobra de un animal insignificante, la araña.",
+    "id": "6"
+  },
+  {
+    "title": "La zorra y el macho cabrío",
+    "language": "es",
+    "source": "Aesop's Original Collection",
+    "version": "1",
+    "body": "Una zorra que había caído en un pozo llevaba largo rato en él. Un macho cabrío, forzado por la sed, llegó junto al mismo pozo y al verla le preguntó si era buena el agua. Ella, contenta por la coincidencia, se deshacía en elogios del agua, diciendo que era excelente y le animaba a que bajara. Después que bajó despreocupadamente movido por su deseo, apenas hubo apaciguado la sed, miraba con la zorra la forma de subir. Y la zorra, tomando la palabra, dijo: «Sé algo útil si lo único que quieres es la salvación de ambos.\nAsí pues, apoya tus patas delanteras en el muro y endereza los cuernos, y yo, luego de trepar por encima, también te sacaré». Atendió éste a la propuesta de buena gana y la zorra, escalando por sus patas, lomo y cuernos, llegó hasta la boca del pozo y, tras salir, se\nalejó. Al reprocharle el macho cabrío que había incumplido el pacto, se volvió y le dijo: «Si tuvierastanta inteligencia como pelos en tu barba, no habrías bajado antes de considerar la forma de subir».",
+    "id": "",
+    "moral": {
+      "type": "explicit",
+      "text": "Así también, los hombres sensatos deben mirar las consecuencias de sus acciones y luego aplicarse así a\nellas."
+    }
+  }
+]

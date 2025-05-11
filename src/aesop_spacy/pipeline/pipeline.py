@@ -68,7 +68,6 @@ class FablePipeline:
 
         # Initialize transformer manager early if needed for multiple components
         self._transformer_manager = None
-        
         # Lazy-loaded components - will be initialized on first use
         self._clustering_analyzer = None
         self._entity_analyzer = None
@@ -85,7 +84,7 @@ class FablePipeline:
         self.logger.info("Fable pipeline initialized")
         self.logger.info("Data directory: %s", data_dir)
         self.logger.info("Output directory: %s", output_dir)
-    
+
     # Lazy-loaded property getters
     @property
     def transformer_manager(self):
@@ -95,7 +94,8 @@ class FablePipeline:
             self.logger.debug("Initializing TransformerManager")
             self._transformer_manager = TransformerManager()
         return self._transformer_manager
-    
+
+
     @property
     def clustering_analyzer(self):
         """Lazily load the clustering analyzer"""
@@ -104,7 +104,8 @@ class FablePipeline:
             self.logger.debug("Initializing ClusteringAnalyzer")
             self._clustering_analyzer = ClusteringAnalyzer(self.analysis_dir)
         return self._clustering_analyzer
-    
+
+
     @property
     def entity_analyzer(self):
         """Lazily load the entity analyzer"""
@@ -114,6 +115,7 @@ class FablePipeline:
             self._entity_analyzer = EntityAnalyzer(self.analysis_dir)
         return self._entity_analyzer
     
+
     @property
     def moral_detector(self):
         """Lazily load the moral detector"""
@@ -123,6 +125,7 @@ class FablePipeline:
             self._moral_detector = MoralDetector(self.analysis_dir)
         return self._moral_detector
     
+
     @property
     def nlp_techniques(self):
         """Lazily load the NLP techniques analyzer"""
@@ -131,7 +134,8 @@ class FablePipeline:
             self.logger.debug("Initializing NLPTechniques")
             self._nlp_techniques = NLPTechniques(self.analysis_dir)
         return self._nlp_techniques
-    
+
+
     @property
     def sentiment_analyzer(self):
         """Lazily load the sentiment analyzer"""
@@ -141,6 +145,7 @@ class FablePipeline:
             self._sentiment_analyzer = SentimentAnalyzer(transformer_manager=self.transformer_manager)
         return self._sentiment_analyzer
     
+
     @property
     def stats_analyzer(self):
         """Lazily load the stats analyzer"""
@@ -150,6 +155,7 @@ class FablePipeline:
             self._stats_analyzer = StatsAnalyzer(self.analysis_dir)
         return self._stats_analyzer
     
+
     @property
     def style_analyzer(self):
         """Lazily load the style analyzer"""
@@ -159,6 +165,7 @@ class FablePipeline:
             self._style_analyzer = StyleAnalyzer(self.analysis_dir)
         return self._style_analyzer
     
+
     @property
     def syntax_analyzer(self):
         """Lazily load the syntax analyzer"""
@@ -168,6 +175,7 @@ class FablePipeline:
             self._syntax_analyzer = SyntaxAnalyzer(self.analysis_dir)
         return self._syntax_analyzer
     
+
     @property
     def pos_analyzer(self):
         """Lazily load the POS analyzer"""
@@ -177,6 +185,7 @@ class FablePipeline:
             self._pos_analyzer = POSAnalyzer(self.analysis_dir)
         return self._pos_analyzer
     
+
     @property
     def comparison_analyzer(self):
         """Lazily load the comparison analyzer"""
@@ -186,6 +195,7 @@ class FablePipeline:
             self._comparison_analyzer = ComparisonAnalyzer(self.analysis_dir)
         return self._comparison_analyzer
     
+
     @log_timing
     def run(self, use_processed=True):
         """
@@ -203,7 +213,7 @@ class FablePipeline:
 
         # Check if ALL expected language files exist
         all_files_exist = use_processed and self._processed_files_exist(check_all_languages=True)
-        
+
         if all_files_exist:
             # All files exist, just load them
             self.logger.info(subsection_header("LOADING PROCESSED FILES"))
@@ -315,13 +325,13 @@ class FablePipeline:
         if hasattr(model, 'meta'):
             # This is a spaCy model
             model_name = model.meta.get('name', 'unknown')
-          
+
             # Initialize canonical forms if needed
             if fables and (not hasattr(self.cleaner, 'canonical_forms') or not self.cleaner.canonical_forms):
                 # Process first fable to populate canonical forms in the cleaner
                 sample_fable = fables[0]
                 self.cleaner.clean_fable(sample_fable)  # Result is used to update self.cleaner.canonical_forms
-          
+
             # Get canonical forms from cleaner
             canonical_forms = {}
             if hasattr(self.cleaner, 'canonical_forms'):
