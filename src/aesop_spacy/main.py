@@ -211,7 +211,7 @@ def main():
 
             if save_results:
                 save_analysis_summary(output_dir, analysis_results)
-            run_visualizations(output_dir, logger)
+            #run_visualizations(output_dir, logger)
         logger.info("Aesop fable processing complete")
 
     except FileNotFoundError as e:

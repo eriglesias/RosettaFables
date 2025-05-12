@@ -18,5 +18,24 @@
     "rc": 0.7352941176470588,
     "svp": 0.7352941176470588,
     "cp": 0.7352941176470588
+  },
+  "examples": {
+    "nk": "Ein → Mäuschen",
+    "sb": "Mäuschen → lief",
+    "ROOT": "lief → lief",
+    "mo": "über → lief",
+    "punct": ". → lief",
+    "oc": "erwachte → flehte",
+    "cd": "und → erwachte",
+    "cj": "ergriff → und",
+    "oa": "es → ergriff",
+    "da": "mir → ergriff",
+    "pd": "dankbar → sein",
+    "ng": "nicht → wollen",
+    "mnr": "darauf → Zeit",
+    "ag": "Löwen → Gebrüll",
+    "rc": "kam → lief",
+    "svp": "herzu → eilte",
+    "cp": "daß → konnte"
   }
 }

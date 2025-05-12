@@ -23,5 +23,29 @@
     "conj": 2.127659574468085,
     "amod": 1.0638297872340425,
     "appos": 2.127659574468085
+  },
+  "examples": {
+    "det": "Un → Lobo",
+    "nsubj": "Lobo → iba",
+    "expl:pv": "se → atragantado",
+    "aux": "había → atragantado",
+    "acl": "atragantado → Lobo",
+    "case": "con → hueso",
+    "obl": "hueso → atragantado",
+    "ROOT": "iba → iba",
+    "xcomp": "buscando → iba",
+    "mark": "a → curara",
+    "obj": "lo → curara",
+    "ccomp": "curara → buscando",
+    "punct": ". → iba",
+    "advcl": "encontrarse → pidió",
+    "iobj": "le → pidió",
+    "fixed": "cambio → a",
+    "advmod": "Y → metió",
+    "nmod": "Lobo → garganta",
+    "cc": "y → reclamó",
+    "conj": "reclamó → metió",
+    "amod": "acordada → paga",
+    "appos": "respondiendo → Él"
   }
 }

@@ -24,5 +24,30 @@
     "neg": 0.9259259259259258,
     "advcl": 0.9259259259259258,
     "csubj": 0.9259259259259258
+  },
+  "examples": {
+    "nsubj": "Fox → fallen",
+    "aux": "had → fallen",
+    "advmod": "unwittingly → fallen",
+    "ROOT": "fallen → fallen",
+    "prt": "down → fallen",
+    "det": "a → well",
+    "cc": "and → fallen",
+    "conj": "found → fallen",
+    "ccomp": "trapped → found",
+    "prep": "inside → trapped",
+    "poss": "its → walls",
+    "amod": "high → walls",
+    "pobj": "walls → inside",
+    "punct": ". → fallen",
+    "dobj": "way → made",
+    "mark": "whether → was",
+    "acomp": "fresh → was",
+    "pcomp": "laying → about",
+    "npadvmod": "friend → 'Come",
+    "compound": "'The → water",
+    "neg": "not → get",
+    "advcl": "leaped → lowered",
+    "csubj": "leaving → stuck"
   }
 }

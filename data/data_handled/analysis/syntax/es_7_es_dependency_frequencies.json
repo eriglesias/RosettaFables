@@ -26,5 +26,32 @@
     "nummod": 0.4761904761904762,
     "fixed": 0.9523809523809524,
     "expl:pv": 0.9523809523809524
+  },
+  "examples": {
+    "det": "Una → zorra",
+    "nsubj": "zorra → llevaba",
+    "aux": "había → caído",
+    "acl": "caído → zorra",
+    "case": "en → pozo",
+    "obl": "pozo → caído",
+    "ROOT": "llevaba → llevaba",
+    "amod": "largo → rato",
+    "punct": ". → llevaba",
+    "obj": "sed → forzado",
+    "cc": "y → preguntó",
+    "advcl": "verla → preguntó",
+    "iobj": "le → preguntó",
+    "conj": "preguntó → llegó",
+    "mark": "si → buena",
+    "cop": "era → buena",
+    "ccomp": "buena → preguntó",
+    "expl:pass": "se → deshacía",
+    "nmod": "agua → elogios",
+    "xcomp": "bajara → animaba",
+    "advmod": "Después → miraba",
+    "csubj": "quieres → salvación",
+    "nummod": "ambos → salvación",
+    "fixed": "pues → Así",
+    "expl:pv": "se → alejó"
   }
 }

@@ -24,5 +24,30 @@
     "re": 0.5376344086021506,
     "svp": 0.5376344086021506,
     "app": 0.5376344086021506
+  },
+  "examples": {
+    "nk": "Eine → Mücke",
+    "sb": "Mücke → forderte",
+    "ROOT": "forderte → forderte",
+    "mo": "mit → forderte",
+    "oa": "Löwen → forderte",
+    "oc": "fürchte → rief",
+    "ng": "nicht → fürchte",
+    "punct": ", → fürchte",
+    "cj": "Ungeheuer → fürchte",
+    "da": "ihm → rief",
+    "ju": "oder → nenne",
+    "cp": "wenn → glaubst",
+    "pm": "zu → haben",
+    "mnr": "mit → Raub",
+    "cd": "und → zerreißest",
+    "ep": "es → kämpft",
+    "pd": "stärker → bin",
+    "cm": "als → du",
+    "cc": "du → stärker",
+    "ag": "Nasenlöcher → eines",
+    "re": "auszuposaunen → davon",
+    "svp": "aus → sog",
+    "app": "Spinne → Tiere"
   }
 }

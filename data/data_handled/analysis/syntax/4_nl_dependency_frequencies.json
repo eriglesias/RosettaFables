@@ -26,5 +26,32 @@
     "aux:pass": 0.5780346820809248,
     "flat": 0.5780346820809248,
     "expl:pv": 0.5780346820809248
+  },
+  "examples": {
+    "nsubj": "Wolf → opgegeten",
+    "aux": "had → opgegeten",
+    "advmod": "te → gulzig",
+    "det": "een → kip",
+    "obj": "kip → opgegeten",
+    "ROOT": "opgegeten → opgegeten",
+    "cc": "en → blijven",
+    "amod": "dwars → keel",
+    "case": "in → keel",
+    "nmod:poss": "zijn → keel",
+    "obl": "keel → steken",
+    "conj": "blijven → opgegeten",
+    "xcomp": "steken → blijven",
+    "punct": ". → opgegeten",
+    "cop": "was → erg",
+    "expl": "er → komen",
+    "mark": "dat → komen",
+    "advcl": "komen → zeker",
+    "parataxis": "zei → zeker",
+    "compound:prt": "uit → nemen",
+    "nmod": "Wolf → muil",
+    "ccomp": "verlost → voelde",
+    "aux:pass": "was → verlost",
+    "flat": "Wolf → snauwde",
+    "expl:pv": "zich → omdraaide.\"Jij"
   }
 }

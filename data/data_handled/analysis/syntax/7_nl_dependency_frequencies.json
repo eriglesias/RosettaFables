@@ -24,5 +24,30 @@
     "xcomp": 1.5957446808510638,
     "obj": 2.127659574468085,
     "nmod:poss": 0.5319148936170213
+  },
+  "examples": {
+    "nsubj": "Vos → gevallen",
+    "aux": "was → gevallen",
+    "case": "in → waterput",
+    "det": "een → waterput",
+    "obl": "waterput → gevallen",
+    "ROOT": "gevallen → gevallen",
+    "cc": "en → diep",
+    "mark": "alhoewel → diep",
+    "advmod": "niet → diep",
+    "conj": "diep → gevallen",
+    "cop": "was → diep",
+    "punct": ", → diep",
+    "compound:prt": "uit → kon",
+    "amod": "lange → tijd",
+    "advcl": "zat → kwam",
+    "ccomp": "gesprongen → dacht",
+    "flat": "Vos → slimme",
+    "nmod": "water → slimme",
+    "parataxis": "van → er",
+    "fixed": "dan → meer",
+    "xcomp": "drinken → begon",
+    "obj": "zichzelf → gebracht",
+    "nmod:poss": "je → verstand"
   }
 }

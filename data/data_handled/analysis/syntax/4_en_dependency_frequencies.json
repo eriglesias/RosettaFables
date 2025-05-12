@@ -27,5 +27,33 @@
     "prt": 0.9174311926605505,
     "npadvmod": 0.9174311926605505,
     "nmod": 0.9174311926605505
+  },
+  "examples": {
+    "punct": "' → swallowed",
+    "nsubj": "Wolf → swallowed",
+    "ROOT": "swallowed → swallowed",
+    "det": "a → bone",
+    "dobj": "bone → swallowed",
+    "auxpass": "got → stuck",
+    "relcl": "stuck → bone",
+    "prep": "in → stuck",
+    "poss": "his → throat",
+    "pobj": "throat → in",
+    "ccomp": "was → started",
+    "acomp": "excruciating → was",
+    "advmod": "so → started",
+    "xcomp": "looking → started",
+    "nsubjpass": "who → induced",
+    "aux": "could → induced",
+    "amod": "accursed → thing",
+    "mark": "if → help",
+    "advcl": "help → asked",
+    "cc": "and → asked",
+    "conj": "convinced → asked",
+    "agent": "by → convinced",
+    "case": "'s → Wolf",
+    "prt": "out → carried",
+    "npadvmod": "Wolf → simply",
+    "nmod": "said,'You → creature"
   }
 }

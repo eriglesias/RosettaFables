@@ -17,5 +17,23 @@
     "conj": 3.0303030303030303,
     "expl:pass": 3.0303030303030303,
     "iobj": 3.0303030303030303
+  },
+  "examples": {
+    "det": "Una → zorra",
+    "nsubj": "zorra → quiso",
+    "amod": "hambrienta → zorra",
+    "punct": ", → ver",
+    "case": "al → ver",
+    "advcl": "ver → quiso",
+    "obj": "racimos → ver",
+    "acl": "colgaban → racimos",
+    "obl": "parra → colgaban",
+    "ROOT": "quiso → quiso",
+    "xcomp": "apoderarse → quiso",
+    "cc": "y → pudo",
+    "advmod": "no → pudo",
+    "conj": "pudo → quiso",
+    "expl:pass": "se → dijo",
+    "iobj": "sí → dijo"
   }
 }

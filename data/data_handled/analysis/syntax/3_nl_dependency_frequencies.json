@@ -25,5 +25,31 @@
     "conj": 2.717391304347826,
     "acl:relcl": 0.5434782608695652,
     "nmod:poss": 0.5434782608695652
+  },
+  "examples": {
+    "case": "Op → dag",
+    "det": "een → dag",
+    "obl": "dag → zag",
+    "ROOT": "zag → zag",
+    "nsubj": "Vos → zag",
+    "amod": "mooie → tros",
+    "obj": "tros → hangen",
+    "nmod": "druiven → tros",
+    "xcomp": "hangen → zag",
+    "punct": ". → zag",
+    "mark": "Maar → hingen",
+    "advmod": "heel → hoog",
+    "parataxis": "druivenrank → hingen",
+    "cop": "waren → rijp",
+    "expl": "het → leek",
+    "advcl": "leek → zo",
+    "aux": "kon → uitbrasten",
+    "csubj": "uitbrasten → leek",
+    "compound:prt": "op → eten",
+    "acl": "eten → zin",
+    "cc": "en → keek",
+    "conj": "keek → had",
+    "acl:relcl": "rijp → druiven",
+    "nmod:poss": "zijn → gezicht"
   }
 }

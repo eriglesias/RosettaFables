@@ -22,5 +22,28 @@
     "amod": 1.7543859649122806,
     "aux": 0.5847953216374269,
     "appos": 0.5847953216374269
+  },
+  "examples": {
+    "det": "Un → Mosquito",
+    "nsubj": "Mosquito → acercó",
+    "expl:pv": "se → acercó",
+    "ROOT": "acercó → acercó",
+    "case": "a → León",
+    "obl": "León → acercó",
+    "cc": "y → dijo:\"Ni",
+    "obj": "le → dijo:\"Ni",
+    "advcl": "dijo:\"Ni → temo",
+    "cop": "eres → fuerte",
+    "advmod": "más → fuerte",
+    "conj": "fuerte → temo",
+    "mark": "que → yo",
+    "punct": "; → tienes",
+    "ccomp": "arañas → tienes",
+    "expl:impers": "se → pelea",
+    "xcomp": "zumbar → hizo",
+    "nmod": "pelo → parte",
+    "amod": "propias → garras",
+    "aux": "era → devorado",
+    "appos": "araña → animal"
   }
 }

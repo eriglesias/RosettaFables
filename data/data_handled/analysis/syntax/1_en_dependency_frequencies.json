@@ -27,5 +27,33 @@
     "attr": 0.5747126436781609,
     "dative": 0.5747126436781609,
     "mark": 1.1494252873563218
+  },
+  "examples": {
+    "npadvmod": "Wolf → saw",
+    "advmod": "once → saw",
+    "ROOT": "saw → saw",
+    "dobj": "Lamb → saw",
+    "nsubj": "who → wandered",
+    "aux": "had → wandered",
+    "relcl": "wandered → Lamb",
+    "prep": "from → away",
+    "det": "the → flock",
+    "pobj": "flock → from",
+    "punct": ". → saw",
+    "neg": "not → want",
+    "xcomp": "rush → want",
+    "cc": "and → rush",
+    "conj": "seize → rush",
+    "amod": "reasonable → complaint",
+    "advcl": "justify → sought",
+    "poss": "his → hatred",
+    "ccomp": "insulted → said",
+    "acomp": "small → were",
+    "compound": "Wolf → continued,'Well",
+    "dep": "said,'No → eaten",
+    "case": "'s → mother",
+    "attr": "breast → is",
+    "dative": "me → gives",
+    "mark": "as → chewed"
   }
 }

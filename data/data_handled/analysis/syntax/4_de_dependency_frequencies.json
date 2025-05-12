@@ -23,5 +23,29 @@
     "ag": 1.0,
     "og": 1.0,
     "re": 1.0
+  },
+  "examples": {
+    "nk": "Ein → Wolf",
+    "sb": "Wolf → hatte",
+    "ROOT": "hatte → hatte",
+    "oa": "Schaf → erbeutet",
+    "oc": "erbeutet → hatte",
+    "cd": "und → erbeutet",
+    "cj": "verschlang → und",
+    "mo": "so → gierig",
+    "punct": ", → gierig",
+    "cp": "daß → steckenblieb",
+    "da": "ihm → steckenblieb",
+    "mnr": "im → Knochen",
+    "cc": "steckenblieb → so",
+    "svp": "aus → setzte",
+    "op": "von → befreien",
+    "rc": "würde → Belohnung",
+    "pnc": "Wolf,\"du → Unverschämter",
+    "ng": "nicht → Belohnung",
+    "pd": "Belohnung → Ist",
+    "ag": "Wolfes → Rachen",
+    "og": "Milde → verdanke",
+    "re": "lebest → es"
   }
 }

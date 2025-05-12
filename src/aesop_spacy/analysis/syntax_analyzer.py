@@ -1,4 +1,3 @@
-#syntax_analyzer.py
 """
 Analyzes syntactic structures across languages in fables.
 
@@ -52,7 +51,9 @@ class SyntaxAnalyzer:
 
         # Initialize counters
         dep_counts = {}
+        dep_examples = {}
         total_deps = 0
+        
         # First look for sentence-level dependencies
         for i, sentence in enumerate(sentences):
             # Get dependency information if available
@@ -64,25 +65,43 @@ class SyntaxAnalyzer:
             for dep in deps:
                 # Extract dependency type, head word, and dependent word
                 dep_type = dep.get('dep')
+                head_text = dep.get('head_text', '')
+                dependent_text = dep.get('dependent_text', '')
+                
                 if not dep_type:
                     self.logger.debug("Missing dependency type in: %s", dep)
                     continue
+                
                 # Update counts
                 dep_counts[dep_type] = dep_counts.get(dep_type, 0) + 1
                 total_deps += 1
+                
+                # Store an example if we don't have one yet for this type
+                if dep_type not in dep_examples and head_text and dependent_text:
+                    dep_examples[dep_type] = f"{dependent_text} → {head_text}"
+        
         # If no sentence-level dependencies found, try document-level
         if total_deps == 0 and 'dependencies' in fable:
             self.logger.info("No sentence-level dependencies, trying document-level")
             doc_deps = fable.get('dependencies', [])
             for dep in doc_deps:
                 dep_type = dep.get('dep')
+                head_text = dep.get('head_text', '')
+                dependent_text = dep.get('dependent_text', '')
+                
                 if dep_type:
                     dep_counts[dep_type] = dep_counts.get(dep_type, 0) + 1
                     total_deps += 1
+                    
+                    # Store an example
+                    if dep_type not in dep_examples and head_text and dependent_text:
+                        dep_examples[dep_type] = f"{dependent_text} → {head_text}"
+        
         # Calculate percentages
         results = {
             'total_dependencies': total_deps,
-            'frequencies': {}
+            'frequencies': {},
+            'examples': dep_examples
         }
 
         # Convert counts to percentages
@@ -116,8 +135,17 @@ class SyntaxAnalyzer:
                 # Create a map of token indices
                 token_indices = {}
                 for i, token in enumerate(tokens):
-                    token_id = token.get('id')
-                    if token_id is not None:
+                    if isinstance(token, dict) and 'id' in token:
+                        token_id = token['id']
+                        token_indices[token_id] = i
+                    elif isinstance(token, (list, tuple)) and len(token) >= 2:
+                        # Handle (text, id) format or (id, text) format
+                        if isinstance(token[0], int) or (isinstance(token[1], int) and not isinstance(token[0], int)):
+                            # (id, text) format or second element is numeric
+                            token_id = token[0] if isinstance(token[0], int) else token[1]
+                        else:
+                            # Assume (text, id) format
+                            token_id = token[1]
                         token_indices[token_id] = i
 
                 # Calculate distances
@@ -130,7 +158,7 @@ class SyntaxAnalyzer:
                     if head_id in token_indices and dep_id in token_indices:
                         distance = abs(token_indices[head_id] - token_indices[dep_id])
                         # Filter out unreasonably large distances (likely errors)
-                        max_reasonable_distance = 30
+                        max_reasonable_distance = 30  # Most natural language dependencies stay under this
                         if distance <= max_reasonable_distance:
                             all_distances.append(distance)
                             # Track by dependency type
@@ -143,20 +171,29 @@ class SyntaxAnalyzer:
             self.logger.info("Attempting to calculate distances from document-level dependencies")
             deps = fable.get('dependencies', [])
             tokens = fable.get('tokens', [])
+            
             # Create a map of token indices
             token_indices = {}
             for i, token in enumerate(tokens):
-                if isinstance(token, (list, tuple)) and len(token) >= 2:
-                    token_id = token[1]  # Assuming (text, id) format
-                    token_indices[token_id] = i
-                elif isinstance(token, dict) and 'id' in token:
+                if isinstance(token, dict) and 'id' in token:
                     token_id = token['id']
                     token_indices[token_id] = i
+                elif isinstance(token, (list, tuple)) and len(token) >= 2:
+                    # Handle (text, id) or (id, text) format
+                    if isinstance(token[0], int) or (isinstance(token[1], int) and not isinstance(token[0], int)):
+                        # (id, text) format or second element is numeric
+                        token_id = token[0] if isinstance(token[0], int) else token[1]
+                    else:
+                        # Assume (text, id) format
+                        token_id = token[1]
+                    token_indices[token_id] = i
+            
             # Calculate distances
             for dep in deps:
                 head_id = dep.get('head_id')
                 dep_id = dep.get('dependent_id')
                 dep_type = dep.get('dep')
+                
                 if head_id in token_indices and dep_id in token_indices:
                     distance = abs(token_indices[head_id] - token_indices[dep_id])
                     # Filter out unreasonably large distances
@@ -166,6 +203,7 @@ class SyntaxAnalyzer:
                         if dep_type not in distances_by_type:
                             distances_by_type[dep_type] = []
                         distances_by_type[dep_type].append(distance)
+        
         # Calculate statistics
         results = {
             'overall': {
@@ -176,11 +214,13 @@ class SyntaxAnalyzer:
             },
             'by_dependency_type': {}
         }
+        
         # Overall statistics
         if all_distances:
             results['overall']['average_distance'] = sum(all_distances) / len(all_distances)
             results['overall']['max_distance'] = max(all_distances)
             results['overall']['min_distance'] = min(all_distances)
+        
         # By dependency type
         for dep_type, distances in distances_by_type.items():
             if distances:
@@ -210,10 +250,14 @@ class SyntaxAnalyzer:
         self.logger.info("Processing %d sentences for tree shape analysis", len(sentences))
         if sentences and len(sentences) > 0:
             self.logger.debug("Sample sentence keys: %s", list(sentences[0].keys()))
-        if 'dependencies' in sentences[0]:
-            self.logger.debug("Found %d dependencies in first sentence", len(sentences[0]['dependencies']))
-        else:
-            self.logger.warning("No dependencies key in first sentence")
+            if 'dependencies' in sentences[0]:
+                self.logger.debug("Found %d dependencies in first sentence", len(sentences[0]['dependencies']))
+            else:
+                self.logger.warning("No dependencies key in first sentence")
+        
+        # Check for document-level dependencies
+        if 'dependencies' in fable:
+            self.logger.debug("Found %d document-level dependencies", len(fable.get('dependencies', [])))
 
         results = {
             'average_branching_factor': 0,
@@ -224,36 +268,62 @@ class SyntaxAnalyzer:
             'sentence_count': len(sentences),
             'language_insights': {}
         }
+        
         # Skip if no sentences
         if not sentences:
+            self.logger.warning("No sentences found for tree shape analysis")
             return results
+        
         # Analyze each sentence's tree
         branching_factors = []
-        for sentence in sentences:
+        total_analysis_count = 0
+        
+        for i, sentence in enumerate(sentences):
             # Check if we have the necessary dependency information
             if not ('dependencies' in sentence and sentence['dependencies']):
+                self.logger.debug("Sentence %d missing dependencies, skipping", i)
                 continue
+                
             if 'dependencies' in sentence and 'tokens' in sentence:
+                self.logger.debug("Analyzing tree shape for sentence %d", i)
                 deps = sentence['dependencies']
                 tokens = sentence['tokens']
+                
                 # Create a dependency map (which tokens depend on which head)
                 head_to_deps = defaultdict(list)
                 token_positions = {}
+                
                 # Map token IDs to their positions in the sentence
-                for i, token in enumerate(tokens):
+                for j, token in enumerate(tokens):
                     if isinstance(token, dict) and 'id' in token:
                         token_id = token['id']
-                        token_positions[token_id] = i
+                        token_positions[token_id] = j
                     elif isinstance(token, (list, tuple)) and len(token) >= 2:
-                        # Handle (text, id) format
-                        token_id = token[1] if isinstance(token[1], int) else token[0]
-                        token_positions[token_id] = i
+                        # Handle (text, id) format or (id, text) format
+                        if isinstance(token[0], int) or (isinstance(token[1], int) and not isinstance(token[0], int)):
+                            # (id, text) format or second element is numeric
+                            token_id = token[0] if isinstance(token[0], int) else token[1]
+                        else:
+                            # Assume (text, id) format
+                            token_id = token[1]
+                        token_positions[token_id] = j
+                
+                if not token_positions:
+                    self.logger.warning("Failed to map token IDs to positions for sentence %d", i)
+                    continue
+                
                 # Build dependency tree structure
                 for dep in deps:
                     head_id = dep.get('head_id')
                     dep_id = dep.get('dependent_id')
+                    
+                    # Skip if head_id or dep_id is missing
+                    if head_id is None or dep_id is None:
+                        continue
+                        
                     if head_id is not None and dep_id is not None:
                         head_to_deps[head_id].append(dep_id)
+                
                 # Calculate branching factor for each head
                 head_branching = [len(dependents) for head, dependents in head_to_deps.items()]
                 if head_branching:
@@ -262,28 +332,138 @@ class SyntaxAnalyzer:
                     branching_factors.append(avg_branching)
                     if max_branching > results['max_branching_factor']:
                         results['max_branching_factor'] = max_branching
+                else:
+                    self.logger.debug("No head branching found for sentence %d", i)
+                
                 # Find root node (token with head=0 or similar root convention)
                 root_id = None
                 for dep in deps:
-                    if dep.get('dep') == 'ROOT' or dep.get('head_id') == 0:
+                    dep_type = dep.get('dep', '')
+                    # Try different variations of ROOT marking
+                    if (dep_type.upper() == 'ROOT' or dep.get('head_id') == 0 or 
+                        dep_type == 'root' or dep.get('head_id') == '0'):
                         root_id = dep.get('dependent_id')
                         break
+                
+                # If no explicit root is found, use the first token without a head
+                if root_id is None:
+                    # Find all nodes that are dependents
+                    all_dependents = set()
+                    for dep in deps:
+                        dep_id = dep.get('dependent_id')
+                        if dep_id is not None:
+                            all_dependents.add(dep_id)
+                    
+                    # Find nodes that are heads but not dependents
+                    for dep in deps:
+                        head_id = dep.get('head_id')
+                        if head_id is not None and head_id not in all_dependents:
+                            root_id = head_id
+                            self.logger.debug("Inferred root_id %s for sentence %d", root_id, i)
+                            break
+                
                 if root_id is not None:
                     # Calculate tree depth and width
-                    max_depth, tree_width = self._calculate_tree_dimensions(root_id, head_to_deps)
-                    # Calculate width-to-depth ratio if depth > 0
-                    if max_depth > 0:
-                        width_depth_ratio = tree_width / max_depth
-                        results['width_depth_ratios'].append(width_depth_ratio)
+                    try:
+                        max_depth, tree_width = self._calculate_tree_dimensions(root_id, head_to_deps)
+                        # Calculate width-to-depth ratio if depth > 0
+                        if max_depth > 0:
+                            width_depth_ratio = tree_width / max_depth
+                            results['width_depth_ratios'].append(width_depth_ratio)
+                            self.logger.debug("Tree dimensions for sentence %d: depth=%d, width=%d, ratio=%f", 
+                                             i, max_depth, tree_width, width_depth_ratio)
+                        else:
+                            self.logger.debug("Tree depth is 0 for sentence %d", i)
+                    except RecursionError:
+                        self.logger.warning("RecursionError in tree dimensions for sentence %d", i)
+                        # Skip this sentence
+                        continue
+                    except Exception as e:
+                        self.logger.warning("Error calculating tree dimensions for sentence %d: %s", i, e)
+                        continue
+                else:
+                    self.logger.debug("No root node found for sentence %d", i)
+                
                 # Check for crossing dependencies (non-projectivity)
                 crossings = self._count_crossing_dependencies(deps, token_positions)
                 if crossings > 0:
                     results['non_projective_count'] += 1
+                    self.logger.debug("Found %d crossing dependencies in sentence %d", crossings, i)
+                
+                total_analysis_count += 1
+            else:
+                self.logger.debug("Sentence %d lacks required 'dependencies' or 'tokens'", i)
+        
+        # If we couldn't analyze any sentences with the above approach, try document-level
+        if total_analysis_count == 0 and 'dependencies' in fable and fable['dependencies']:
+            self.logger.info("Attempting tree shape analysis using document-level dependencies")
+            try:
+                deps = fable['dependencies']
+                tokens = fable.get('tokens', [])
+                
+                # Create a dependency map and token positions map
+                head_to_deps = defaultdict(list)
+                token_positions = {}
+                
+                # Map token IDs to positions
+                for i, token in enumerate(tokens):
+                    if isinstance(token, dict) and 'id' in token:
+                        token_id = token['id']
+                        token_positions[token_id] = i
+                    elif isinstance(token, (list, tuple)) and len(token) >= 2:
+                        # Try to determine format and extract ID
+                        if isinstance(token[0], int) or (isinstance(token[1], int) and not isinstance(token[0], int)):
+                            token_id = token[0] if isinstance(token[0], int) else token[1]
+                        else:
+                            token_id = token[1]
+                        token_positions[token_id] = i
+                
+                # Build dependency structure
+                for dep in deps:
+                    head_id = dep.get('head_id')
+                    dep_id = dep.get('dependent_id')
+                    if head_id is not None and dep_id is not None:
+                        head_to_deps[head_id].append(dep_id)
+                
+                # Calculate branching factors
+                head_branching = [len(dependents) for head, dependents in head_to_deps.items()]
+                if head_branching:
+                    avg_branching = sum(head_branching) / len(head_branching)
+                    max_branching = max(head_branching)
+                    branching_factors.append(avg_branching)
+                    results['max_branching_factor'] = max(results['max_branching_factor'], max_branching)
+                
+                # Find root node
+                root_id = None
+                for dep in deps:
+                    if (dep.get('dep', '').upper() == 'ROOT' or dep.get('head_id') == 0 or 
+                        dep.get('dep', '') == 'root' or dep.get('head_id') == '0'):
+                        root_id = dep.get('dependent_id')
+                        break
+                
+                if root_id is not None:
+                    # Calculate tree dimensions
+                    max_depth, tree_width = self._calculate_tree_dimensions(root_id, head_to_deps)
+                    if max_depth > 0:
+                        width_depth_ratio = tree_width / max_depth
+                        results['width_depth_ratios'].append(width_depth_ratio)
+                
+                # Check for crossings
+                crossings = self._count_crossing_dependencies(deps, token_positions)
+                if crossings > 0:
+                    results['non_projective_count'] += 1
+            except Exception as e:
+                self.logger.error("Error in document-level tree analysis: %s", e)
+        
         # Calculate averages across all sentences
         if branching_factors:
             results['average_branching_factor'] = sum(branching_factors) / len(branching_factors)
+            self.logger.info("Average branching factor: %.2f", results['average_branching_factor'])
+        
         if results['width_depth_ratios']:
             results['average_width_depth_ratio'] = sum(results['width_depth_ratios']) / len(results['width_depth_ratios'])
+            self.logger.info("Average width-depth ratio: %.2f", results['average_width_depth_ratio'])
+        
         # Add language-specific insights
         language_insights = {
             'en': {
@@ -307,48 +487,70 @@ class SyntaxAnalyzer:
                 'typical_width_depth': 'Flexible word order allows for deeper trees'
             }
         }
+        
         if language in language_insights:
             results['language_insights'] = language_insights[language]
+        
         return results
 
 
-    def _calculate_tree_dimensions(self, node_id, head_to_deps, current_depth=1):
+    def _calculate_tree_dimensions(self, node_id, head_to_deps, current_depth=1, visited=None):
         """
-        Recursively calculate the depth and width of a tree.
+        Recursively calculate the depth and width of a tree with cycle detection.
         
         Args:
             node_id: Current node ID
             head_to_deps: Mapping of head IDs to dependent IDs
             current_depth: Current depth in the tree
+            visited: Set of visited nodes (for cycle detection)
             
         Returns:
             Tuple of (max_depth, tree_width)
         """
-        if node_id not in head_to_deps or not head_to_deps[node_id]:
-            # Leaf node
+        # Initialize visited set for cycle detection
+        if visited is None:
+            visited = set()
+        
+        # Check for cycles
+        if node_id in visited:
+            self.logger.warning("Detected circular dependency involving node %s", node_id)
             return current_depth, 1
+        
+        # Add current node to visited set
+        visited.add(node_id)
+        
+        # Base case: leaf node
+        if node_id not in head_to_deps or not head_to_deps[node_id]:
+            return current_depth, 1
+        
+        # Recursive case
         children = head_to_deps[node_id]
         max_child_depth = current_depth
         total_width = 0
-
+        
         for child_id in children:
             try:
                 child_depth, child_width = self._calculate_tree_dimensions(
-                    child_id, head_to_deps, current_depth + 1
+                    child_id, head_to_deps, current_depth + 1, visited.copy()
                 )
                 max_child_depth = max(max_child_depth, child_depth)
                 total_width += child_width
             except RecursionError:
                 # Handle circular dependencies
-                self.logger.warning("Detected circular dependency involving node {%s}", child_id)
-                return current_depth + 1, 1
-
+                self.logger.warning("RecursionError for node %s", child_id)
+                # Continue with other children
+                continue
+            except Exception as e:
+                self.logger.warning("Error in tree dimension calculation for node %s: %s", child_id, e)
+                # Continue with other children
+                continue
+        
         return max_child_depth, max(1, total_width)
 
 
     def _count_crossing_dependencies(self, deps, token_positions):
         """
-        Count crossing dependencies (non-projective edges).
+        Count crossing dependencies (non-projective edges) with enhanced error handling.
         
         A dependency is crossing if it creates a non-projective structure:
         When an arc A -> B crosses over another arc C -> D.
@@ -361,26 +563,117 @@ class SyntaxAnalyzer:
             Number of crossing dependencies
         """
         crossings = 0
-
+        
         # Only check if we have position information
         if not token_positions:
+            self.logger.debug("No token positions available for crossing detection")
             return 0
+        
         # Get all arcs (as position pairs)
         arcs = []
         for dep in deps:
             head_id = dep.get('head_id')
             dep_id = dep.get('dependent_id')
-            if head_id in token_positions and dep_id in token_positions:
-                head_pos = token_positions[head_id]
-                dep_pos = token_positions[dep_id]
-                arcs.append((min(head_pos, dep_pos), max(head_pos, dep_pos)))
+            
+            # Skip if we're missing either head or dependent
+            if head_id is None or dep_id is None:
+                continue
+                
+            # Skip if head or dependent is not in token_positions
+            if head_id not in token_positions or dep_id not in token_positions:
+                continue
+                
+            head_pos = token_positions[head_id]
+            dep_pos = token_positions[dep_id]
+            
+            # Create an arc from the leftmost to rightmost position
+            arcs.append((min(head_pos, dep_pos), max(head_pos, dep_pos)))
+        
         # Check every pair of arcs for crossings
         for i, (start1, end1) in enumerate(arcs):
             for start2, end2 in arcs[i+1:]:
                 # Crossing condition: one arc starts inside another and ends outside
                 if (start1 < start2 < end1 < end2) or (start2 < start1 < end2 < end1):
                     crossings += 1
+        
         return crossings
+
+
+    def _get_token_positions(self, tokens, ids):
+        """
+        Get positions of tokens by their IDs, handling different token formats.
+        
+        Args:
+            tokens: List of tokens
+            ids: List of token IDs to find positions for
+            
+        Returns:
+            List of positions in the same order as ids (None for any not found)
+        """
+        positions = []
+        for token_id in ids:
+            position = None
+            for i, token in enumerate(tokens):
+                # Handle different token formats
+                cur_id = None
+                if isinstance(token, dict) and 'id' in token:
+                    cur_id = token['id']
+                elif isinstance(token, (list, tuple)) and len(token) >= 2:
+                    # Try to determine which element is the ID
+                    if isinstance(token[0], int) or (isinstance(token[1], int) and not isinstance(token[0], int)):
+                        cur_id = token[0] if isinstance(token[0], int) else token[1]
+                    else:
+                        cur_id = token[1]
+                
+                # Check if this is the token we're looking for
+                if cur_id == token_id:
+                    position = i
+                    break
+            
+            positions.append(position)
+        
+        return positions
+
+
+    def _get_word_order(self, subj_pos, verb_pos, obj_pos):
+        """
+        Determine word order pattern from positions with improved validation.
+        
+        Args:
+            subj_pos: Position of subject
+            verb_pos: Position of verb
+            obj_pos: Position of object
+            
+        Returns:
+            String representing word order pattern (SVO, SOV, etc.)
+        """
+        # Check for invalid or None positions
+        if subj_pos is None or verb_pos is None or obj_pos is None:
+            return "other"
+            
+        if subj_pos < 0 or verb_pos < 0 or obj_pos < 0:
+            return "other"
+            
+        # Check for unusually distant components (typically indicates parsing issues)
+        max_distance = 30
+        if (abs(subj_pos - verb_pos) > max_distance or
+            abs(verb_pos - obj_pos) > max_distance or
+            abs(subj_pos - obj_pos) > max_distance):
+            return "other"
+
+        positions = [
+            ('S', subj_pos),
+            ('V', verb_pos),
+            ('O', obj_pos)
+        ]
+        
+        # Sort by position
+        positions.sort(key=lambda x: x[1])
+        
+        # Build pattern string
+        pattern = ''.join(pos[0] for pos in positions)
+
+        return pattern
 
 
     def dominant_constructions(self, fable):
@@ -469,21 +762,27 @@ class SyntaxAnalyzer:
 
         # Process each sentence
         for sentence in sentences:
-            if 'dependencies' in sentence and 'tokens' in sentence and 'pos_tags' in sentence:
+            if 'dependencies' in sentence and 'tokens' in sentence:
                 deps = sentence['dependencies']
                 tokens = sentence['tokens']
-                pos_tags = sentence['pos_tags']
+                pos_tags = sentence.get('pos_tags', [])
 
                 # Map token IDs to their POS tags
                 token_id_to_pos = {}
-                for token, pos in zip(tokens, pos_tags):
-                    # Handle different token formats
+                
+                # First try to extract from pos_tags
+                for token, pos in zip(tokens, pos_tags) if len(tokens) == len(pos_tags) else []:
+                    # Try to get token ID
                     token_id = None
                     if isinstance(token, dict) and 'id' in token:
                         token_id = token['id']
                     elif isinstance(token, (list, tuple)) and len(token) >= 2:
-                        token_id = token[1] if isinstance(token[1], int) else token[0]
-
+                        # Handle different formats
+                        if isinstance(token[0], int) or (isinstance(token[1], int) and not isinstance(token[0], int)):
+                            token_id = token[0] if isinstance(token[0], int) else token[1]
+                        else:
+                            token_id = token[1] if isinstance(token[1], int) else None
+                    
                     # Handle different POS tag formats
                     pos_value = None
                     if isinstance(pos, tuple) and len(pos) >= 2:
@@ -506,12 +805,16 @@ class SyntaxAnalyzer:
                     head_id = dep.get('head_id')
                     dep_id = dep.get('dependent_id')
 
+                    # Skip if missing information
+                    if dep_id is None or head_id is None:
+                        continue
+
                     # Extract subject
-                    if dep_type in ['nsubj', 'nsubjpass', 'csubj', 'csubjpass', 'sb']:
+                    if dep_type in ['nsubj', 'nsubjpass', 'csubj', 'csubjpass', 'sb', 'su']:
                         subjects.append((dep_id, head_id))  # (subject_id, verb_id)
 
                     # Extract object
-                    elif dep_type in ['dobj', 'obj', 'iobj', 'pobj', 'oa', 'da']:
+                    elif dep_type in ['dobj', 'obj', 'iobj', 'pobj', 'oa', 'da', 'obj1', 'obj2']:
                         objects.append((dep_id, head_id))  # (object_id, verb_id)
 
                     # Track verbs - consider using token_id_to_pos for additional checks
@@ -527,10 +830,11 @@ class SyntaxAnalyzer:
                         if verb_id == obj_verb_id:
                             # Get positions of all elements
                             positions = self._get_token_positions(tokens, [subj, verb_id, obj])
-                            if len(positions) ==3 and None not in positions:
+                            
+                            # Make sure all positions are valid
+                            if None not in positions:
                                 subj_pos, verb_pos, obj_pos = positions
-                            else:
-                                self.logger.debug("Incomplete positions for SVO pattern: %s", positions)
+                                
                                 # Determine word order pattern
                                 pattern = self._get_word_order(subj_pos, verb_pos, obj_pos)
                                 if pattern in results['word_order_patterns']:
@@ -545,6 +849,10 @@ class SyntaxAnalyzer:
                     if dep.get('dep') in ['amod', 'nk']:  # Adjectival modifier
                         adj_id = dep.get('dependent_id')
                         noun_id = dep.get('head_id')
+                        
+                        # Skip if missing information
+                        if adj_id is None or noun_id is None:
+                            continue
                         
                         # Get positions
                         positions = self._get_token_positions(tokens, [adj_id, noun_id])
@@ -563,6 +871,10 @@ class SyntaxAnalyzer:
                     if dep.get('dep') in ['case', 'prep', 'mark', 'mnr']:  # Adpositions
                         adp_id = dep.get('dependent_id')
                         obj_id = dep.get('head_id')
+                        
+                        # Skip if missing information
+                        if adp_id is None or obj_id is None:
+                            continue
                         
                         # Get positions
                         positions = self._get_token_positions(tokens, [adp_id, obj_id])
@@ -615,69 +927,6 @@ class SyntaxAnalyzer:
             results['dominant_adposition'] = dominant[0]
         
         return results
-
-
-    def _get_token_positions(self, tokens, ids):
-        """
-        Get positions of tokens by their IDs, handling different token formats.
-        
-        Args:
-            tokens: List of tokens
-            ids: List of token IDs to find positions for
-            
-        Returns:
-            List of positions in the same order as ids (None for any not found)
-        """
-        positions = []
-        for token_id in ids:
-            position = None
-            for i, token in enumerate(tokens):
-                # Handle different token formats
-                cur_id = None
-                if isinstance(token, dict) and 'id' in token:
-                    cur_id = token['id']
-                elif isinstance(token, (list, tuple)) and len(token) >= 2:
-                    cur_id = token[1] if isinstance(token[1], int) else token[0]
-                if cur_id == token_id:
-                    position = i
-                    break
-            positions.append(position)
-        return positions
-
-
-    def _get_word_order(self, subj_pos, verb_pos, obj_pos):
-        """
-        Determine word order pattern from positions.
-        
-        Args:
-            subj_pos: Position of subject
-            verb_pos: Position of verb
-            obj_pos: Position of object
-            
-        Returns:
-            String representing word order pattern (SVO, SOV, etc.)
-        """
-        # Check for invalid positions
-        if subj_pos < 0 or verb_pos < 0 or obj_pos < 0:
-            return "other"
-        # Check for unusually distant components (typically indicates parsing issues)
-        max_distance = 30
-        if (abs(subj_pos - verb_pos) > max_distance or
-            abs(verb_pos - obj_pos) > max_distance or
-            abs(subj_pos - obj_pos) > max_distance):
-            return "other"
-
-        positions = [
-            ('S', subj_pos),
-            ('V', verb_pos),
-            ('O', obj_pos)
-        ]
-        # Sort by position
-        positions.sort(key=lambda x: x[1])
-        # Build pattern string
-        pattern = ''.join(pos[0] for pos in positions)
-
-        return pattern
 
 
     def semantic_roles(self, fable):
@@ -904,5 +1153,3 @@ class SyntaxAnalyzer:
             # Keep one general exception at the end as a fallback
             self.logger.error("Unexpected error when saving analysis: %s (%s)",
                             e, type(e).__name__)
-
-

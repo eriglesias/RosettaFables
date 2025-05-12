@@ -1,9 +1,11 @@
 {
-  "average_branching_factor": 0,
-  "max_branching_factor": 0,
-  "width_depth_ratios": [],
-  "average_width_depth_ratio": 0,
-  "non_projective_count": 0,
+  "average_branching_factor": 2.325,
+  "max_branching_factor": 9,
+  "width_depth_ratios": [
+    1.5
+  ],
+  "average_width_depth_ratio": 1.5,
+  "non_projective_count": 1,
   "sentence_count": 13,
   "language_insights": {
     "typical_branching": "German mixes left and right branching",

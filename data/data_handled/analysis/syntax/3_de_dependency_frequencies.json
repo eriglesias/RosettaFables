@@ -20,5 +20,26 @@
     "ng": 1.171875,
     "rc": 0.390625,
     "pd": 0.390625
+  },
+  "examples": {
+    "nk": "Eine → Maus",
+    "sb": "Maus → saßen",
+    "cd": "und → Maus",
+    "cj": "Spatz → und",
+    "ROOT": "saßen → saßen",
+    "mo": "an → saßen",
+    "punct": ". → saßen",
+    "ag": "Freundin → Spatz",
+    "pnc": "zu:\"Versteck → dich",
+    "da": "dich → zirpte",
+    "svp": "hinauf → flog",
+    "oa": "sich → schlich",
+    "mnr": "gegen → Vorderpfoten",
+    "oc": "erwischen → wollte",
+    "ju": "Aber → hingen",
+    "cp": "bis → kollerte",
+    "ng": "Nicht → Blatt",
+    "rc": "hatte → Spatz",
+    "pd": "reif → sind"
   }
 }

@@ -25,5 +25,31 @@
     "ng": 0.8928571428571428,
     "dep": 0.4464285714285714,
     "rs": 0.4464285714285714
+  },
+  "examples": {
+    "nk": "Ein → Lämmchen",
+    "sb": "Lämmchen → löschte",
+    "ROOT": "löschte → löschte",
+    "mo": "an → löschte",
+    "oa": "Durst → löschte",
+    "punct": ". → löschte",
+    "cd": "aber → Fern",
+    "cj": "Quelle → aber",
+    "re": "erblickte → so",
+    "pnc": "trübst → du",
+    "da": "mir → schrie",
+    "oc": "trinken → will",
+    "rc": "will → Wasser",
+    "pd": "möglich → wäre",
+    "ep": "es → kam",
+    "pm": "zu → tun",
+    "dm": "Ei → sieh",
+    "cm": "wie → Vater",
+    "mnr": "vor → Vater",
+    "cp": "daß → warst",
+    "ams": "Wochen → alt",
+    "ng": "nicht → kannte",
+    "dep": "\" → endigt",
+    "rs": "endigt → Unverschämter"
   }
 }

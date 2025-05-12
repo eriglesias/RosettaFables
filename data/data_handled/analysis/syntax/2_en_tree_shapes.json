@@ -1,8 +1,10 @@
 {
-  "average_branching_factor": 0,
-  "max_branching_factor": 0,
-  "width_depth_ratios": [],
-  "average_width_depth_ratio": 0,
+  "average_branching_factor": 2.28,
+  "max_branching_factor": 9,
+  "width_depth_ratios": [
+    1.875
+  ],
+  "average_width_depth_ratio": 1.875,
   "non_projective_count": 0,
   "sentence_count": 13,
   "language_insights": {

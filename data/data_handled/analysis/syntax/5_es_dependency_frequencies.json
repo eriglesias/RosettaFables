@@ -24,5 +24,30 @@
     "aux": 2.7210884353741496,
     "acl": 1.3605442176870748,
     "appos": 0.6802721088435374
+  },
+  "examples": {
+    "det": "Un → Ratón",
+    "nsubj": "Ratón → puso",
+    "obj": "se → puso",
+    "ROOT": "puso → puso",
+    "mark": "a → corretear",
+    "xcomp": "corretear → puso",
+    "case": "sobre → cuerpo",
+    "obl": "cuerpo → puso",
+    "nmod": "León → cuerpo",
+    "amod": "dormido → León",
+    "punct": ". → puso",
+    "expl:pv": "se → despertó",
+    "cc": "y → atrapó",
+    "conj": "atrapó → despertó",
+    "cop": "estaba → devorarlo",
+    "advmod": "a → devorarlo",
+    "fixed": "punto → a",
+    "iobj": "le → pidiera",
+    "ccomp": "soltase → pidiera",
+    "advcl": "salvaba → agradecería",
+    "aux": "fue → atado",
+    "acl": "oído → Ratón",
+    "appos": "incrédulo → mí"
   }
 }

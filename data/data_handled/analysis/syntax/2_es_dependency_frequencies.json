@@ -23,5 +23,29 @@
     "iobj": 0.8620689655172413,
     "xcomp": 2.1551724137931036,
     "flat": 0.43103448275862066
+  },
+  "examples": {
+    "det": "Un → Ratón",
+    "nsubj": "Ratón → amigo",
+    "case": "de → campo",
+    "nmod": "campo → Ratón",
+    "cop": "era → amigo",
+    "ROOT": "amigo → amigo",
+    "acl": "vivía → otro",
+    "obl": "casa → vivía",
+    "punct": ". → amigo",
+    "amod": "invitado → casa",
+    "obj": "amigo → invitado",
+    "mark": "a → cenar",
+    "advmod": "Después → llevas",
+    "aux": "haber → comido",
+    "advcl": "comido → Después",
+    "cc": "y → trigo",
+    "conj": "trigo → cebada",
+    "fixed": "que → ya",
+    "expl:pv": "se → fueron",
+    "iobj": "Aquél → elogiaba",
+    "xcomp": "empezar → disponían",
+    "flat": "tú → otro:\"Disfruta"
   }
 }

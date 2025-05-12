@@ -24,5 +24,30 @@
     "svp": 0.2457002457002457,
     "par": 0.2457002457002457,
     "op": 0.2457002457002457
+  },
+  "examples": {
+    "nk": "Eine → Landmaus",
+    "sb": "Landmaus → hatte",
+    "ROOT": "hatte → hatte",
+    "punct": ", → hatte",
+    "oa": "Stadtmaus → eingeladen",
+    "mo": "zu → eingeladen",
+    "oc": "eingeladen → hatte",
+    "cd": "und → hatte",
+    "cj": "empfing → und",
+    "cp": "Um → lassen",
+    "ag": "Städterin → Mangel",
+    "ng": "nicht → lassen",
+    "pm": "zu → lassen",
+    "rc": "bot → alles",
+    "da": "Freundin → zuzusprechen",
+    "ju": "Aber → stellte",
+    "cm": "als → schmecke",
+    "cc": "schmecke → so",
+    "mnr": "unter → Stadt",
+    "pd": "entschlossen → war",
+    "svp": "vor → legte",
+    "par": "unbekannt → Landmaus",
+    "op": "für → fürchten"
   }
 }
