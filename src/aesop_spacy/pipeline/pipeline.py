@@ -184,7 +184,7 @@ class FablePipeline:
             self.logger.debug("Initializing POSAnalyzer")
             self._pos_analyzer = POSAnalyzer(self.analysis_dir)
         return self._pos_analyzer
-    
+
 
     @property
     def comparison_analyzer(self):
@@ -194,7 +194,7 @@ class FablePipeline:
             self.logger.debug("Initializing ComparisonAnalyzer")
             self._comparison_analyzer = ComparisonAnalyzer(self.analysis_dir)
         return self._comparison_analyzer
-    
+
 
     @log_timing
     def run(self, use_processed=True):
@@ -224,11 +224,11 @@ class FablePipeline:
                             format_count("fable", total_fables), 
                             format_count("language", len(fables_by_language)))
             return True
-        
+
         # Regular processing with the loader which will handle missing files
         self.logger.info(subsection_header("PROCESSING RAW FILES"))
         fables_by_language = self.loader.load_all()
-        
+
         # Log what we found
         total_fables = sum(len(fables) for fables in fables_by_language.values())
         self.logger.info("Loaded %s across %s", 

@@ -64,8 +64,6 @@ class SyntaxAnalyzer:
             for dep in deps:
                 # Extract dependency type, head word, and dependent word
                 dep_type = dep.get('dep')
-                head = dep.get('head_text', '')
-                dependent = dep.get('dependent_text', '')
                 if not dep_type:
                     self.logger.debug("Missing dependency type in: %s", dep)
                     continue
@@ -78,8 +76,6 @@ class SyntaxAnalyzer:
             doc_deps = fable.get('dependencies', [])
             for dep in doc_deps:
                 dep_type = dep.get('dep')
-                head = dep.get('head_text', '')
-                dependent = dep.get('dependent_text', '')
                 if dep_type:
                     dep_counts[dep_type] = dep_counts.get(dep_type, 0) + 1
                     total_deps += 1
@@ -210,6 +206,14 @@ class SyntaxAnalyzer:
         """
         sentences = fable.get('sentences', [])
         language = fable.get('language', 'en')
+
+        self.logger.info("Processing %d sentences for tree shape analysis", len(sentences))
+        if sentences and len(sentences) > 0:
+            self.logger.debug("Sample sentence keys: %s", list(sentences[0].keys()))
+        if 'dependencies' in sentences[0]:
+            self.logger.debug("Found %d dependencies in first sentence", len(sentences[0]['dependencies']))
+        else:
+            self.logger.warning("No dependencies key in first sentence")
 
         results = {
             'average_branching_factor': 0,
@@ -523,9 +527,10 @@ class SyntaxAnalyzer:
                         if verb_id == obj_verb_id:
                             # Get positions of all elements
                             positions = self._get_token_positions(tokens, [subj, verb_id, obj])
-                            if None not in positions:
+                            if len(positions) ==3 and None not in positions:
                                 subj_pos, verb_pos, obj_pos = positions
-                                
+                            else:
+                                self.logger.debug("Incomplete positions for SVO pattern: %s", positions)
                                 # Determine word order pattern
                                 pattern = self._get_word_order(subj_pos, verb_pos, obj_pos)
                                 if pattern in results['word_order_patterns']:
@@ -778,7 +783,6 @@ class SyntaxAnalyzer:
                 for dep in deps:
                     dep_type = dep.get('dep', '')
                     dependent_id = dep.get('dependent_id')
-                    head_id = dep.get('head_id')
                     # Skip if we're missing information
                     if not dep_type or dependent_id not in token_id_to_text:
                         continue
