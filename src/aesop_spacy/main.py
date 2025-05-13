@@ -178,7 +178,7 @@ def run_syntax_visualizations(output_dir, logger):
     logger.info("Running syntax analysis visualizations...")
     
     # Create visualization directory if it doesn't exist
-    vis_dir = output_dir / "data_handled" / "figures" / "syntax"
+    vis_dir = output_dir / "figures"
     vis_dir.mkdir(parents=True, exist_ok=True)
     
     # Create syntax visualization plotter
