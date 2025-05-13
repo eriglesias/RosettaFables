@@ -40,6 +40,7 @@ import sys
 from pathlib import Path
 from aesop_spacy.pipeline.pipeline import FablePipeline
 from aesop_spacy.visualization.plots.pos_comparison import POSDistributionPlot
+from aesop_spacy.visualization.plots.syntax_comparison import  SyntaxAnalysisPlot
 
 # Add project root to path for absolute imports
 project_root = Path(__file__).resolve().parent.parent.parent
@@ -100,25 +101,6 @@ def setup_directories(data_dir, output_dir, logger):
     return input_dir, output_dir
 
 
-def print_analysis_summary(logger, results):
-    """Print a summary of the analysis results to the console"""
-    if 'pos_distribution' in results:
-        for lang, pos_dist in results['pos_distribution'].items():
-            logger.info("\nPOS distribution for %s:", lang)
-            for pos, percentage in list(pos_dist.items())[:5]:  # Top 5
-                logger.info("  %s: %.2f%%", pos, percentage)
-
-    if 'fable_comparisons' in results:
-        for fable_id, comparison in list(results['fable_comparisons'].items())[:3]:
-            logger.info("\nFable %s comparison across %d languages:", 
-                       fable_id, len(comparison['languages']))
-            logger.info("  Languages: %s", ', '.join(comparison['languages']))
-            
-            # Safely access token_counts
-            if 'token_counts' in comparison:
-                logger.info("  Token counts: %s", comparison['token_counts'])
-            else:
-                logger.info("  Token counts: Not available")
 
 
 def save_analysis_summary(output_dir, results):
@@ -162,7 +144,7 @@ def run_visualizations(output_dir, logger):
     vis_dir.mkdir(exist_ok=True)
     
     # Create POS distribution visualizations
-    pos_plotter = POSDistributionPlot()
+    pos_plotter = POSDistributionPlot(output_dir=vis_dir)
     
     # Create single language visualizations
     for lang in ['en', 'de', 'nl', 'es', 'grc']:
@@ -191,6 +173,53 @@ def run_visualizations(output_dir, logger):
     
     logger.info("Visualizations complete")
 
+def run_syntax_visualizations(output_dir, logger):
+    """Run syntax analysis visualizations"""
+    logger.info("Running syntax analysis visualizations...")
+    
+    # Create visualization directory if it doesn't exist
+    vis_dir = output_dir / "data_handled" / "figures" / "syntax"
+    vis_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Create syntax visualization plotter
+    syntax_plotter = SyntaxAnalysisPlot(output_dir=vis_dir)
+    
+    # Define which fable IDs to visualize
+    fable_ids = ['1']  # You can expand this list as needed
+    
+    # Create single language visualizations
+    for fable_id in fable_ids:
+        for lang in ['en', 'de', 'nl', 'es', 'grc']:
+            try:
+                logger.info("Creating dependency plot for fable %s in %s", fable_id, lang)
+                fig, ax = syntax_plotter.plot_dependency_frequencies(fable_id, lang)
+                syntax_plotter.save_figure(fig, f'dependencies_{fable_id}_{lang}.png')
+                
+                logger.info("Creating tree shapes plot for fable %s in %s", fable_id, lang)
+                fig, ax = syntax_plotter.plot_tree_shapes(fable_id, lang)
+                syntax_plotter.save_figure(fig, f'tree_shapes_{fable_id}_{lang}.png')
+            except Exception as e:
+                logger.error("Error creating syntax plots for %s in %s: %s", fable_id, lang, e)
+    
+    # Create comparison visualizations
+    for fable_id in fable_ids:
+        try:
+            logger.info("Creating dependency comparison for fable %s", fable_id)
+            fig, ax = syntax_plotter.plot_dependency_comparison(fable_id)
+            syntax_plotter.save_figure(fig, f'dependency_comparison_{fable_id}.png')
+            
+            logger.info("Creating tree shapes comparison for fable %s", fable_id)
+            fig, ax = syntax_plotter.plot_tree_shapes_comparison(fable_id)
+            syntax_plotter.save_figure(fig, f'tree_shapes_comparison_{fable_id}.png')
+            
+            logger.info("Creating dependency heatmap for fable %s", fable_id)
+            fig, ax = syntax_plotter.plot_dependency_heatmap(fable_id)
+            syntax_plotter.save_figure(fig, f'dependency_heatmap_{fable_id}.png')
+        except Exception as e:
+            logger.error("Error creating syntax comparison for fable %s: %s", fable_id, e)
+    
+    logger.info("Syntax visualizations complete")
+
 
 def main():
     """Main entry point for Aesop fable analysis"""
@@ -205,15 +234,14 @@ def main():
         # Run the pipeline
         analysis_results, save_results = run_pipeline(args, data_dir, output_dir, logger)
 
-        # Handle results if present
-        if analysis_results:
-            print_analysis_summary(logger, analysis_results)
-
-            if save_results:
-                save_analysis_summary(output_dir, analysis_results)
+        if save_results:
+            save_analysis_summary(output_dir, analysis_results)
             #run_visualizations(output_dir, logger)
-        logger.info("Aesop fable processing complete")
+            logger.info("Aesop fable processing complete")
 
+        run_visualizations(output_dir, logger)
+        run_syntax_visualizations(output_dir, logger)
+   
     except FileNotFoundError as e:
         logger.error("Required file not found: %s", e)
     except ImportError as e:

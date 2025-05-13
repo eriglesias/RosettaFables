@@ -6,9 +6,9 @@ import numpy as np
 import pandas as pd
 from ..core.figure_builder import FigureBuilder
 class POSDistributionPlot(FigureBuilder):
-    """Creates visualizations of Part-of-Speech distributions for single languages and comparisons."""
- 
-    def __init__(self, theme='default', fig_size=(12, 8)):
+    """Visualizations of Part-of-Speech distributions for single languages and comparisons."""
+
+    def __init__(self, theme='default', fig_size=(12, 8), output_dir=None):
         """Initialize the POS distribution plotter with default settings."""
         super().__init__(theme=theme, fig_size=fig_size, output_dir=output_dir)
         
@@ -180,7 +180,7 @@ class POSDistributionPlot(FigureBuilder):
         fig, ax = self.create_figure(figsize=(14, 8))
         
         # Create a grouped bar chart
-        g = sns.barplot(
+        sns.barplot(
             x='Full Name', 
             y='Frequency (%)', 
             hue='Language', 
@@ -265,13 +265,13 @@ class POSDistributionPlot(FigureBuilder):
             yticklabels=rows,
             ax=ax
         )
-        
+
         # Enhance the visualization
         ax.set_title('Part-of-Speech Distribution Heatmap', fontsize=18, pad=20)
-        
+
         # Improve readability
         plt.xticks(rotation=45, ha='right')
-        
+
         # Add colorbar title
         cbar = ax.collections[0].colorbar
         cbar.set_label('Frequency (%)', rotation=270, labelpad=20)

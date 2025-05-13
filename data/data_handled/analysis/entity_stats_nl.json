@@ -1,101 +1,5 @@
 {
   "ANIMAL_CHAR": {
-    "Wolf": {
-      "mentions": 4,
-      "document_count": 2
-    },
-    "Lamb": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "City Mouse": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Country Mouse": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Mouse": {
-      "mentions": 2,
-      "document_count": 2
-    },
-    "Fox": {
-      "mentions": 3,
-      "document_count": 3
-    },
-    "Crane": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Lion": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Goat": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Ein Wolf": {
-      "mentions": 2,
-      "document_count": 2
-    },
-    "Der Wolf": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Eine Landmaus": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Eine Stadtmaus": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Die Landmaus": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Die Stadtmaus": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Eine Maus": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Der Fuchs": {
-      "mentions": 2,
-      "document_count": 2
-    },
-    "Fuchs": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Die Maus": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Der Kranich": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Der Löwe": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Eine Mücke": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Die Mücke": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Ein Fuchs": {
-      "mentions": 1,
-      "document_count": 1
-    },
     "Geitje": {
       "mentions": 1,
       "document_count": 1
@@ -107,6 +11,10 @@
     "geiten": {
       "mentions": 1,
       "document_count": 1
+    },
+    "Wolf": {
+      "mentions": 2,
+      "document_count": 2
     },
     "honden": {
       "mentions": 1,
@@ -153,15 +61,13 @@
       "document_count": 1
     }
   },
-  "DATE": {
-    "last year": {
-      "mentions": 2,
-      "document_count": 1
-    },
-    "a year old": {
+  "GPE": {
+    "opeten.\"Alstublieft": {
       "mentions": 1,
       "document_count": 1
-    },
+    }
+  },
+  "DATE": {
     "volgende morgen": {
       "mentions": 1,
       "document_count": 1
@@ -172,10 +78,6 @@
     }
   },
   "PERSON": {
-    "billy-": {
-      "mentions": 1,
-      "document_count": 1
-    },
     "Stadsmuis:\"Je": {
       "mentions": 1,
       "document_count": 1
@@ -185,126 +87,18 @@
       "document_count": 1
     }
   },
-  "MISC": {
-    "Unverschämter": {
-      "mentions": 2,
-      "document_count": 2
-    },
-    "sei.\"Du bist": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Frieden": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Wolf,\"du": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Ist es dir nicht Belohnung": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Gehe heim": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Mäuschen,\"meine": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Kurze Zeit": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Tapfern": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "sagte:\"Ich": {
+  "ORDINAL": {
+    "eerste": {
       "mentions": 1,
       "document_count": 1
     }
   },
   "ORG": {
-    "ihr,\"daß du": {
-      "mentions": 1,
-      "document_count": 1
-    },
     "trekken.\"Ik": {
       "mentions": 1,
       "document_count": 1
     },
     "Leeuw:\"Je": {
-      "mentions": 1,
-      "document_count": 1
-    }
-  },
-  "LOC": {
-    "Stadt": {
-      "mentions": 2,
-      "document_count": 1
-    },
-    "Abendschmauses": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Lobsprüche": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Mahles": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Wolfes": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Sterbend": {
-      "mentions": 1,
-      "document_count": 1
-    }
-  },
-  "PER": {
-    "hervorkroch": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Lieber": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Spatz": {
-      "mentions": 2,
-      "document_count": 1
-    },
-    "Großmütig": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Gierig": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Heldenblut": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "retten!\"Der Bock": {
-      "mentions": 1,
-      "document_count": 1
-    }
-  },
-  "GPE": {
-    "opeten.\"Alstublieft": {
-      "mentions": 1,
-      "document_count": 1
-    }
-  },
-  "ORDINAL": {
-    "eerste": {
       "mentions": 1,
       "document_count": 1
     }

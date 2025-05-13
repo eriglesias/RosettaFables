@@ -1,38 +1,62 @@
 {
   "ANIMAL_CHAR": {
+    "Geitje": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Geit": {
+      "mentions": 2,
+      "document_count": 2
+    },
+    "geiten": {
+      "mentions": 1,
+      "document_count": 1
+    },
     "Wolf": {
       "mentions": 4,
       "document_count": 2
     },
-    "Lamb": {
+    "honden": {
       "mentions": 1,
       "document_count": 1
     },
-    "City Mouse": {
+    "Stadsmuis": {
       "mentions": 1,
       "document_count": 1
     },
-    "Country Mouse": {
+    "Veldmuis": {
       "mentions": 1,
       "document_count": 1
     },
-    "Mouse": {
+    "muizen": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "een Kat": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "de hond": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Vos": {
       "mentions": 2,
       "document_count": 2
     },
-    "Fox": {
-      "mentions": 3,
-      "document_count": 3
-    },
-    "Crane": {
+    "Kraanvogel": {
       "mentions": 1,
       "document_count": 1
     },
-    "Lion": {
+    "Leeuw": {
+      "mentions": 2,
+      "document_count": 2
+    },
+    "Muis": {
       "mentions": 1,
       "document_count": 1
     },
-    "Goat": {
+    "Mug": {
       "mentions": 1,
       "document_count": 1
     },
@@ -96,59 +120,27 @@
       "mentions": 1,
       "document_count": 1
     },
-    "Geitje": {
+    "Lamb": {
       "mentions": 1,
       "document_count": 1
     },
-    "Geit": {
+    "Mouse": {
       "mentions": 2,
       "document_count": 2
     },
-    "geiten": {
+    "Fox": {
+      "mentions": 3,
+      "document_count": 3
+    },
+    "Crane": {
       "mentions": 1,
       "document_count": 1
     },
-    "honden": {
+    "Lion": {
       "mentions": 1,
       "document_count": 1
     },
-    "Stadsmuis": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Veldmuis": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "muizen": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "een Kat": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "de hond": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Vos": {
-      "mentions": 2,
-      "document_count": 2
-    },
-    "Kraanvogel": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Leeuw": {
-      "mentions": 2,
-      "document_count": 2
-    },
-    "Muis": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Mug": {
+    "Goat": {
       "mentions": 1,
       "document_count": 1
     },
@@ -213,15 +205,13 @@
       "document_count": 1
     }
   },
-  "DATE": {
-    "last year": {
-      "mentions": 2,
-      "document_count": 1
-    },
-    "a year old": {
+  "GPE": {
+    "opeten.\"Alstublieft": {
       "mentions": 1,
       "document_count": 1
-    },
+    }
+  },
+  "DATE": {
     "volgende morgen": {
       "mentions": 1,
       "document_count": 1
@@ -229,18 +219,70 @@
     "Enkele dagen": {
       "mentions": 1,
       "document_count": 1
+    },
+    "last year": {
+      "mentions": 2,
+      "document_count": 1
+    },
+    "a year old": {
+      "mentions": 1,
+      "document_count": 1
     }
   },
   "PERSON": {
-    "billy-": {
-      "mentions": 1,
-      "document_count": 1
-    },
     "Stadsmuis:\"Je": {
       "mentions": 1,
       "document_count": 1
     },
     "Razend": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "billy-": {
+      "mentions": 1,
+      "document_count": 1
+    }
+  },
+  "ORDINAL": {
+    "eerste": {
+      "mentions": 1,
+      "document_count": 1
+    }
+  },
+  "ORG": {
+    "trekken.\"Ik": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Leeuw:\"Je": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "ihr,\"daß du": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Ocurrió": {
+      "mentions": 1,
+      "document_count": 1
+    }
+  },
+  "WORK_OF_ART": {
+    "Alstublieft, laat mij gaan": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "De grote": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "De dorstige": {
+      "mentions": 1,
+      "document_count": 1
+    }
+  },
+  "CARDINAL": {
+    "één": {
       "mentions": 1,
       "document_count": 1
     }
@@ -351,24 +393,6 @@
       "document_count": 1
     }
   },
-  "ORG": {
-    "ihr,\"daß du": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "trekken.\"Ik": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Leeuw:\"Je": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "Ocurrió": {
-      "mentions": 1,
-      "document_count": 1
-    }
-  },
   "LOC": {
     "Stadt": {
       "mentions": 2,
@@ -457,38 +481,6 @@
       "document_count": 1
     },
     "Atendió": {
-      "mentions": 1,
-      "document_count": 1
-    }
-  },
-  "GPE": {
-    "opeten.\"Alstublieft": {
-      "mentions": 1,
-      "document_count": 1
-    }
-  },
-  "ORDINAL": {
-    "eerste": {
-      "mentions": 1,
-      "document_count": 1
-    }
-  },
-  "WORK_OF_ART": {
-    "Alstublieft, laat mij gaan": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "De grote": {
-      "mentions": 1,
-      "document_count": 1
-    },
-    "De dorstige": {
-      "mentions": 1,
-      "document_count": 1
-    }
-  },
-  "CARDINAL": {
-    "één": {
       "mentions": 1,
       "document_count": 1
     }

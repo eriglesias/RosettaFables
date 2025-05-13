@@ -43,7 +43,7 @@
     "entity_counts": {
       "nl": 7,
       "de": 14,
-      "en": 3,
+      "en": 1,
       "es": 9
     },
     "avg_sentence_length": {
@@ -217,14 +217,6 @@
         }
       ],
       "en": [
-        {
-          "text": "City Mouse",
-          "type": "ANIMAL_CHAR"
-        },
-        {
-          "text": "Country Mouse",
-          "type": "ANIMAL_CHAR"
-        },
         {
           "text": "Mouse",
           "type": "ANIMAL_CHAR"

@@ -23,7 +23,7 @@ class FigureBuilder:
         self.theme = theme
         self.fig_size = fig_size
         self.use_mock_data = use_mock_data
-        
+        self.output_dir = output_dir
         # Simple, direct palette definitions
         self.palettes = {
             'languages': sns.color_palette('colorblind', 10),
