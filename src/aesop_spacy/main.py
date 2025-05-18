@@ -41,6 +41,8 @@ from pathlib import Path
 from aesop_spacy.pipeline.pipeline import FablePipeline
 from aesop_spacy.visualization.plots.pos_comparison import POSDistributionPlot
 from aesop_spacy.visualization.plots.syntax_comparison import  SyntaxAnalysisPlot
+from aesop_spacy.visualization.plots.clustering_plot import ClusteringPlot
+
 
 # Add project root to path for absolute imports
 project_root = Path(__file__).resolve().parent.parent.parent
@@ -220,6 +222,62 @@ def run_syntax_visualizations(output_dir, logger):
     
     logger.info("Syntax visualizations complete")
 
+def run_clustering_visualizations(output_dir, logger):
+    """Run clustering analysis visualizations"""
+    logger.info("Running clustering analysis visualizations...")
+    
+    # Create visualization directory if it doesn't exist
+    vis_dir = output_dir / "figures"
+    vis_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Create clustering visualization plotter       
+    clustering_plotter = ClusteringPlot(output_dir=vis_dir)
+    
+    # Methods to visualize
+    methods = ['kmeans', 'hierarchical', 'dbscan']
+    
+    for method in methods:
+        try:
+            logger.info(f"Creating cluster distribution plot for {method}")
+            fig, ax = clustering_plotter.plot_cluster_distribution(method)
+            clustering_plotter.save_figure(fig, f'cluster_distribution_{method}.png')
+            
+            logger.info(f"Creating language distribution plot for {method}")
+            fig, ax = clustering_plotter.plot_language_distribution(method)
+            clustering_plotter.save_figure(fig, f'language_distribution_{method}.png')
+            
+            logger.info(f"Creating feature importance plot for {method}")
+            fig, ax = clustering_plotter.plot_feature_importance(method)
+            clustering_plotter.save_figure(fig, f'feature_importance_{method}.png')
+            
+            logger.info(f"Creating 2D cluster projection for {method}")
+            fig, ax = clustering_plotter.plot_2d_cluster_projection(method)
+            clustering_plotter.save_figure(fig, f'cluster_projection_{method}.png')
+            
+            if method == 'kmeans' or method == 'hierarchical':
+                logger.info(f"Creating cluster tendency plot for {method}")
+                fig, ax = clustering_plotter.plot_cluster_tendency(method)
+                clustering_plotter.save_figure(fig, f'cluster_tendency_{method}.png')
+        except Exception as e:
+            logger.error(f"Error creating clustering plots for {method}: {e}")
+    
+    # Special plots for hierarchical clustering
+    try:
+        logger.info("Creating dendrogram plot")
+        fig, ax = clustering_plotter.plot_dendrogram()
+        clustering_plotter.save_figure(fig, 'dendrogram.png')
+    except Exception as e:
+        logger.error(f"Error creating dendrogram plot: {e}")
+    
+    # Compare metrics across methods
+    try:
+        logger.info("Creating clustering metrics comparison plot")
+        fig, ax = clustering_plotter.plot_clustering_metrics()
+        clustering_plotter.save_figure(fig, 'clustering_metrics_comparison.png')
+    except Exception as e:
+        logger.error(f"Error creating clustering metrics plot: {e}")
+    
+    logger.info("Clustering visualizations complete")
 
 def main():
     """Main entry point for Aesop fable analysis"""
@@ -241,6 +299,7 @@ def main():
 
         run_visualizations(output_dir, logger)
         run_syntax_visualizations(output_dir, logger)
+        run_clustering_visualizations(output_dir, logger)
    
     except FileNotFoundError as e:
         logger.error("Required file not found: %s", e)
