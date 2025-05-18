@@ -43,7 +43,7 @@ from aesop_spacy.visualization.plots.pos_comparison import POSDistributionPlot
 from aesop_spacy.visualization.plots.syntax_comparison import  SyntaxAnalysisPlot
 from aesop_spacy.visualization.plots.clustering_plot import ClusteringPlot
 from aesop_spacy.visualization.plots.nlp_techniques_plot import NLPTechniquesPlot
-
+from aesop_spacy.visualization.plots.word_frequency_plot import WordFrequencyPlot
 
 # Add project root to path for absolute imports
 project_root = Path(__file__).resolve().parent.parent.parent
@@ -334,6 +334,53 @@ def run_nlp_visualizations(output_dir, logger):
     
     logger.info("NLP visualizations complete")
 
+def run_word_frequency_visualizations(output_dir, logger):
+    """Run word frequency visualizations"""
+    logger.info("Running word frequency visualizations...")
+    
+    # Create visualization directory if it doesn't exist
+    vis_dir = output_dir / "figures"
+    vis_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Create word frequency plotter
+    word_freq_plotter = WordFrequencyPlot(output_dir=vis_dir)
+    
+    # Define which fable IDs to visualize
+    fable_ids = ['1', '2', '3', '4', '5']  # Adjust based on your data
+    
+    # Create visualizations for each fable
+    for fable_id in fable_ids:
+        try:
+            logger.info(f"Creating top words plot for fable {fable_id}")
+            fig, ax = word_freq_plotter.plot_top_words(fable_id)
+            word_freq_plotter.save_figure(fig, f'top_words_fable_{fable_id}.png')
+            
+            logger.info(f"Creating word frequency heatmap for fable {fable_id}")
+            fig, ax = word_freq_plotter.plot_word_frequency_heatmap(fable_id)
+            word_freq_plotter.save_figure(fig, f'word_freq_heatmap_fable_{fable_id}.png')
+            
+            logger.info(f"Creating shared vocabulary plot for fable {fable_id}")
+            fig, ax = word_freq_plotter.plot_shared_vocabulary(fable_id)
+            word_freq_plotter.save_figure(fig, f'shared_vocab_fable_{fable_id}.png')
+            
+            logger.info(f"Creating word distribution comparison for fable {fable_id}")
+            fig, ax = word_freq_plotter.plot_word_distribution_comparison(fable_id)
+            word_freq_plotter.save_figure(fig, f'word_distrib_fable_{fable_id}.png')
+        except Exception as e:
+            logger.error(f"Error creating word frequency visualizations for fable {fable_id}: {e}")
+    
+    # Create lexical richness comparison across all fables
+    try:
+        logger.info("Creating lexical richness comparison")
+        fig, ax = word_freq_plotter.plot_lexical_richness_comparison(fable_ids)
+        word_freq_plotter.save_figure(fig, 'lexical_richness_comparison.png')
+    except Exception as e:
+        logger.error(f"Error creating lexical richness comparison: {e}")
+    
+    logger.info("Word frequency visualizations complete")
+
+
+
 def main():
     """Main entry point for Aesop fable analysis"""
     # Parse arguments and set up logging
@@ -356,6 +403,7 @@ def main():
         run_syntax_visualizations(output_dir, logger)
         run_clustering_visualizations(output_dir, logger)
         run_nlp_visualizations(output_dir, logger)
+        run_word_frequency_visualizations(output_dir, logger)
    
     except FileNotFoundError as e:
         logger.error("Required file not found: %s", e)
