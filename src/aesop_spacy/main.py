@@ -42,6 +42,7 @@ from aesop_spacy.pipeline.pipeline import FablePipeline
 from aesop_spacy.visualization.plots.pos_comparison import POSDistributionPlot
 from aesop_spacy.visualization.plots.syntax_comparison import  SyntaxAnalysisPlot
 from aesop_spacy.visualization.plots.clustering_plot import ClusteringPlot
+from aesop_spacy.visualization.plots.nlp_techniques_plot import NLPTechniquesPlot
 
 
 # Add project root to path for absolute imports
@@ -279,6 +280,60 @@ def run_clustering_visualizations(output_dir, logger):
     
     logger.info("Clustering visualizations complete")
 
+def run_nlp_visualizations(output_dir, logger):
+    """Run NLP techniques visualizations"""
+    logger.info("Running NLP analysis visualizations...")
+    
+    # Create visualization directory if it doesn't exist
+    vis_dir = output_dir / "figures"
+    vis_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Create NLP visualization plotter
+    nlp_plotter = NLPTechniquesPlot(output_dir=vis_dir)
+    
+    # TF-IDF visualizations
+    try:
+        logger.info("Creating TF-IDF top terms plot")
+        fig, ax = nlp_plotter.plot_tfidf_top_terms()
+        nlp_plotter.save_figure(fig, 'tfidf_top_terms.png')
+        
+        logger.info("Creating language-term heatmap")
+        fig, ax = nlp_plotter.plot_language_term_heatmap()
+        nlp_plotter.save_figure(fig, 'language_term_heatmap.png')
+        
+        # Create document-term matrices for each language
+        for lang in ['en', 'de', 'nl', 'es', 'grc']:
+            logger.info(f"Creating document-term matrix for {lang}")
+            fig, ax = nlp_plotter.plot_document_term_matrix(language=lang)
+            nlp_plotter.save_figure(fig, f'document_term_matrix_{lang}.png')
+    except Exception as e:
+        logger.error(f"Error creating TF-IDF visualizations: {e}")
+    
+    # Topic modeling visualizations
+    try:
+        # Plot each topic's term distribution
+        n_topics = 5  # Adjust based on your data
+        for topic_id in range(n_topics):
+            logger.info(f"Creating term distribution for topic {topic_id}")
+            fig, ax = nlp_plotter.plot_topic_term_distribution(topic_id=topic_id)
+            nlp_plotter.save_figure(fig, f'topic_{topic_id}_terms.png')
+        
+        logger.info("Creating document-topic distribution plot")
+        fig, ax = nlp_plotter.plot_document_topic_distribution()
+        nlp_plotter.save_figure(fig, 'document_topic_distribution.png')
+        
+        logger.info("Creating language-topic distribution plot")
+        fig, ax = nlp_plotter.plot_language_topic_distribution()
+        nlp_plotter.save_figure(fig, 'language_topic_distribution.png')
+        
+        logger.info("Creating topic similarity heatmap")
+        fig, ax = nlp_plotter.plot_topic_similarity_heatmap()
+        nlp_plotter.save_figure(fig, 'topic_similarity_heatmap.png')
+    except Exception as e:
+        logger.error(f"Error creating topic modeling visualizations: {e}")
+    
+    logger.info("NLP visualizations complete")
+
 def main():
     """Main entry point for Aesop fable analysis"""
     # Parse arguments and set up logging
@@ -300,6 +355,7 @@ def main():
         run_visualizations(output_dir, logger)
         run_syntax_visualizations(output_dir, logger)
         run_clustering_visualizations(output_dir, logger)
+        run_nlp_visualizations(output_dir, logger)
    
     except FileNotFoundError as e:
         logger.error("Required file not found: %s", e)
