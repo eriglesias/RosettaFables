@@ -1,0 +1,496 @@
+{
+  "ANIMAL_CHAR": {
+    "Wolf": {
+      "mentions": 4,
+      "document_count": 2
+    },
+    "Lamb": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "City Mouse": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Country Mouse": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Mouse": {
+      "mentions": 2,
+      "document_count": 2
+    },
+    "Fox": {
+      "mentions": 3,
+      "document_count": 3
+    },
+    "Crane": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Lion": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Goat": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Ein Wolf": {
+      "mentions": 2,
+      "document_count": 2
+    },
+    "Der Wolf": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Eine Landmaus": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Eine Stadtmaus": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Die Landmaus": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Die Stadtmaus": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Eine Maus": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Der Fuchs": {
+      "mentions": 2,
+      "document_count": 2
+    },
+    "Fuchs": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Die Maus": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Der Kranich": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Der Löwe": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Eine Mücke": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Die Mücke": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Ein Fuchs": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Geitje": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Geit": {
+      "mentions": 2,
+      "document_count": 2
+    },
+    "geiten": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "honden": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Stadsmuis": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Veldmuis": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "muizen": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "een Kat": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "de hond": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Vos": {
+      "mentions": 2,
+      "document_count": 2
+    },
+    "Kraanvogel": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Leeuw": {
+      "mentions": 2,
+      "document_count": 2
+    },
+    "Muis": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Mug": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Un Lobo": {
+      "mentions": 2,
+      "document_count": 2
+    },
+    "un Cordero": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "el Lobo": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "El Cordero": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Ratón de campo": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "ratones": {
+      "mentions": 2,
+      "document_count": 2
+    },
+    "Lobo": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Un Ratón": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "un León": {
+      "mentions": 2,
+      "document_count": 2
+    },
+    "el Ratón": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "el León": {
+      "mentions": 2,
+      "document_count": 2
+    },
+    "Ratón": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Un Mosquito": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "El Mosquito": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "León": {
+      "mentions": 1,
+      "document_count": 1
+    }
+  },
+  "DATE": {
+    "last year": {
+      "mentions": 2,
+      "document_count": 1
+    },
+    "a year old": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "volgende morgen": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Enkele dagen": {
+      "mentions": 1,
+      "document_count": 1
+    }
+  },
+  "PERSON": {
+    "billy-": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Stadsmuis:\"Je": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Razend": {
+      "mentions": 1,
+      "document_count": 1
+    }
+  },
+  "MISC": {
+    "Unverschämter": {
+      "mentions": 2,
+      "document_count": 2
+    },
+    "sei.\"Du bist": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Frieden": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Wolf,\"du": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Ist es dir nicht Belohnung": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Gehe heim": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Mäuschen,\"meine": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Kurze Zeit": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Tapfern": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "sagte:\"Ich": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Por eso, aunque": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Sin embargo,": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "El de la casa": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Después": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Y el de la casa": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Atemorizados por el ruido": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Al verlo los": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "otro:\"Disfruta": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Al encontrarse con una garza": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "dijo:\"¡Eh tú!": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Si quieres": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Un macho cabrío": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Ella": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Y la zorra": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Así pues, apoya tus patas delanteras en el muro": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Al reprocharle el macho cabrío": {
+      "mentions": 1,
+      "document_count": 1
+    }
+  },
+  "ORG": {
+    "ihr,\"daß du": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "trekken.\"Ik": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Leeuw:\"Je": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Ocurrió": {
+      "mentions": 1,
+      "document_count": 1
+    }
+  },
+  "LOC": {
+    "Stadt": {
+      "mentions": 2,
+      "document_count": 1
+    },
+    "Abendschmauses": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Lobsprüche": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Mahles": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Wolfes": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Sterbend": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "injuriaste": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Apartándose": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "garganta del": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Después": {
+      "mentions": 1,
+      "document_count": 1
+    }
+  },
+  "PER": {
+    "hervorkroch": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Lieber": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Spatz": {
+      "mentions": 2,
+      "document_count": 1
+    },
+    "Großmütig": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Gierig": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Heldenblut": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "retten!\"Der Bock": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Aquél": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Él": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "pides": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Yo": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "Atendió": {
+      "mentions": 1,
+      "document_count": 1
+    }
+  },
+  "GPE": {
+    "opeten.\"Alstublieft": {
+      "mentions": 1,
+      "document_count": 1
+    }
+  },
+  "ORDINAL": {
+    "eerste": {
+      "mentions": 1,
+      "document_count": 1
+    }
+  },
+  "WORK_OF_ART": {
+    "Alstublieft, laat mij gaan": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "De grote": {
+      "mentions": 1,
+      "document_count": 1
+    },
+    "De dorstige": {
+      "mentions": 1,
+      "document_count": 1
+    }
+  },
+  "CARDINAL": {
+    "één": {
+      "mentions": 1,
+      "document_count": 1
+    }
+  }
+}

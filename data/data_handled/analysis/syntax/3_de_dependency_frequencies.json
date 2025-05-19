@@ -1,5 +1,45 @@
 {
-  "total_dependencies": 0,
-  "frequencies": {},
-  "examples": {}
+  "total_dependencies": 256,
+  "frequencies": {
+    "nk": 24.609375,
+    "sb": 10.15625,
+    "cd": 3.90625,
+    "cj": 6.640625,
+    "ROOT": 6.640625,
+    "mo": 17.578125,
+    "punct": 12.890625,
+    "ag": 0.390625,
+    "pnc": 0.390625,
+    "da": 1.171875,
+    "svp": 2.734375,
+    "oa": 6.25,
+    "mnr": 0.390625,
+    "oc": 3.125,
+    "ju": 0.78125,
+    "cp": 0.390625,
+    "ng": 1.171875,
+    "rc": 0.390625,
+    "pd": 0.390625
+  },
+  "examples": {
+    "nk": "Eine → Maus",
+    "sb": "Maus → saßen",
+    "cd": "und → Maus",
+    "cj": "Spatz → und",
+    "ROOT": "saßen → saßen",
+    "mo": "an → saßen",
+    "punct": ". → saßen",
+    "ag": "Freundin → Spatz",
+    "pnc": "zu:\"Versteck → dich",
+    "da": "dich → zirpte",
+    "svp": "hinauf → flog",
+    "oa": "sich → schlich",
+    "mnr": "gegen → Vorderpfoten",
+    "oc": "erwischen → wollte",
+    "ju": "Aber → hingen",
+    "cp": "bis → kollerte",
+    "ng": "Nicht → Blatt",
+    "rc": "hatte → Spatz",
+    "pd": "reif → sind"
+  }
 }

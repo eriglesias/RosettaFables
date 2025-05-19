@@ -1,9 +1,11 @@
 {
-  "average_branching_factor": 0,
-  "max_branching_factor": 0,
-  "width_depth_ratios": [],
-  "average_width_depth_ratio": 0,
-  "non_projective_count": 0,
+  "average_branching_factor": 2.8524590163934427,
+  "max_branching_factor": 10,
+  "width_depth_ratios": [
+    1.0
+  ],
+  "average_width_depth_ratio": 1.0,
+  "non_projective_count": 1,
   "sentence_count": 12,
   "language_insights": {
     "typical_branching": "Right-branching dominant in English",

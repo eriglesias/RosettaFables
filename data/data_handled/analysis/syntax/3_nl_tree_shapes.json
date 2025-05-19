@@ -1,9 +1,11 @@
 {
-  "average_branching_factor": 0,
-  "max_branching_factor": 0,
-  "width_depth_ratios": [],
-  "average_width_depth_ratio": 0,
-  "non_projective_count": 0,
+  "average_branching_factor": 3.1186440677966103,
+  "max_branching_factor": 8,
+  "width_depth_ratios": [
+    2.0
+  ],
+  "average_width_depth_ratio": 2.0,
+  "non_projective_count": 1,
   "sentence_count": 13,
   "language_insights": {
     "typical_branching": "Dutch mixes left and right branching like German",

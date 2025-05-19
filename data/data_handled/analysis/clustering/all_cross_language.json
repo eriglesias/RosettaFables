@@ -3,68 +3,120 @@
   "n_clusters": 8,
   "feature_type": "tfidf",
   "feature_count": 200,
-  "fable_count": 34,
+  "fable_count": 27,
   "quality": {
-    "silhouette_score": 0.24489703825281334,
-    "calinski_harabasz_score": 5.814095130324377
+    "silhouette_score": 0.16507981853864193,
+    "calinski_harabasz_score": 4.2964647221031615
   },
   "clusters": {
     "cluster_0": {
       "size": 5,
       "fable_ids": [
+        "1",
         "2",
         "3",
         "4",
-        "6",
         "7"
       ],
       "languages": {
-        "de": 5
+        "nl": 5
       },
       "top_features": [
         {
-          "name": "und",
-          "weight": 0.4040836349820343
+          "name": "en",
+          "weight": 0.2581249728373226
         },
         {
-          "name": "der",
-          "weight": 0.25502574391157873
+          "name": "de",
+          "weight": 0.2470076192823744
         },
         {
-          "name": "die",
-          "weight": 0.2503158128643465
+          "name": "een",
+          "weight": 0.23726972649224728
         },
         {
-          "name": "du",
-          "weight": 0.2105445392943254
+          "name": "hij",
+          "weight": 0.23685217062141897
         },
         {
-          "name": "sie",
-          "weight": 0.1867942967859511
+          "name": "het",
+          "weight": 0.1753038468664519
         },
         {
-          "name": "sich",
-          "weight": 0.16236635003003896
+          "name": "van",
+          "weight": 0.13129516038750425
         },
         {
-          "name": "mit",
-          "weight": 0.14626097796060822
+          "name": "was",
+          "weight": 0.12369525588293259
         },
         {
-          "name": "ein",
-          "weight": 0.13778057073423247
+          "name": "maar",
+          "weight": 0.12072728103771779
         },
         {
-          "name": "zu",
-          "weight": 0.1352449419500367
+          "name": "dat",
+          "weight": 0.11986076692165064
         },
         {
-          "name": "daß",
-          "weight": 0.1269470521732758
+          "name": "wolf",
+          "weight": 0.11561493273226797
         }
       ]
     },
     "cluster_1": {
+      "size": 2,
+      "fable_ids": [
+        "1",
+        "5"
+      ],
+      "languages": {
+        "de": 2
+      },
+      "top_features": [
+        {
+          "name": "das",
+          "weight": 0.4778236352472415
+        },
+        {
+          "name": "mäuschen",
+          "weight": 0.27421523679572896
+        },
+        {
+          "name": "ich",
+          "weight": 0.2630942418565731
+        },
+        {
+          "name": "und",
+          "weight": 0.2599886818094322
+        },
+        {
+          "name": "lämmchen",
+          "weight": 0.18220502550493464
+        },
+        {
+          "name": "mir",
+          "weight": 0.17833106746913563
+        },
+        {
+          "name": "der",
+          "weight": 0.1556812225355163
+        },
+        {
+          "name": "löwen",
+          "weight": 0.14619724446305582
+        },
+        {
+          "name": "so",
+          "weight": 0.13578228442533608
+        },
+        {
+          "name": "ein",
+          "weight": 0.1197181577069671
+        }
+      ]
+    },
+    "cluster_2": {
       "size": 7,
       "fable_ids": [
         "1",
@@ -80,160 +132,48 @@
       },
       "top_features": [
         {
-          "name": "de",
-          "weight": 0.3234224796884715
+          "name": "que",
+          "weight": 0.31040297741301603
         },
         {
-          "name": "que",
-          "weight": 0.3147424022912521
+          "name": "de",
+          "weight": 0.3071902837368747
         },
         {
           "name": "el",
-          "weight": 0.2727581656023801
+          "weight": 0.26995751979485677
         },
         {
           "name": "la",
-          "weight": 0.22534404977826902
+          "weight": 0.22303687476874665
         },
         {
           "name": "un",
-          "weight": 0.22218258553897421
+          "weight": 0.21934988216647927
         },
         {
           "name": "se",
-          "weight": 0.21623348332908696
+          "weight": 0.21375385623632112
         },
         {
           "name": "una",
-          "weight": 0.16972692269080017
+          "weight": 0.16874619030446164
         },
         {
           "name": "con",
-          "weight": 0.16524236395777034
+          "weight": 0.1623934963478855
         },
         {
           "name": "le",
-          "weight": 0.1393067683839766
+          "weight": 0.13763944494419636
         },
         {
           "name": "dijo",
-          "weight": 0.13476465978503493
-        }
-      ]
-    },
-    "cluster_2": {
-      "size": 5,
-      "fable_ids": [
-        "1",
-        "2",
-        "5",
-        "6",
-        "7"
-      ],
-      "languages": {
-        "grc": 5
-      },
-      "top_features": [
-        {
-          "name": "καὶ",
-          "weight": 0.5301035126320899
-        },
-        {
-          "name": "δὲ",
-          "weight": 0.4033569636886144
-        },
-        {
-          "name": "τοῦ",
-          "weight": 0.22797073693515363
-        },
-        {
-          "name": "αὐτὸν",
-          "weight": 0.18580294413246218
-        },
-        {
-          "name": "τὸ",
-          "weight": 0.15863264934177304
-        },
-        {
-          "name": "ὡς",
-          "weight": 0.13857033572613578
-        },
-        {
-          "name": "ἔφη",
-          "weight": 0.1354207888017001
-        },
-        {
-          "name": "τὸν",
-          "weight": 0.1290082475109206
-        },
-        {
-          "name": "τὴν",
-          "weight": 0.12093574093803705
-        },
-        {
-          "name": "τῷ",
-          "weight": 0.11643478427139806
+          "weight": 0.13327139861678222
         }
       ]
     },
     "cluster_3": {
-      "size": 7,
-      "fable_ids": [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "7"
-      ],
-      "languages": {
-        "nl": 7
-      },
-      "top_features": [
-        {
-          "name": "en",
-          "weight": 0.25266928417286
-        },
-        {
-          "name": "de",
-          "weight": 0.23535204930999962
-        },
-        {
-          "name": "een",
-          "weight": 0.2163003592997573
-        },
-        {
-          "name": "hij",
-          "weight": 0.2011299690204901
-        },
-        {
-          "name": "het",
-          "weight": 0.18944462641087084
-        },
-        {
-          "name": "van",
-          "weight": 0.15122196448938954
-        },
-        {
-          "name": "ze",
-          "weight": 0.15085122542283727
-        },
-        {
-          "name": "leeuw",
-          "weight": 0.1379890188818911
-        },
-        {
-          "name": "dat",
-          "weight": 0.13157429394596404
-        },
-        {
-          "name": "maar",
-          "weight": 0.1279751564268104
-        }
-      ]
-    },
-    "cluster_4": {
       "size": 2,
       "fable_ids": [
         "2",
@@ -245,264 +185,312 @@
       "top_features": [
         {
           "name": "mouse",
-          "weight": 0.47348583276933737
+          "weight": 0.47083534340281197
         },
         {
           "name": "the",
-          "weight": 0.29764854341682556
+          "weight": 0.28908185258430286
         },
         {
           "name": "lion",
-          "weight": 0.2629760220769193
+          "weight": 0.2613522012293828
         },
         {
           "name": "of",
-          "weight": 0.22530345326526544
-        },
-        {
-          "name": "he",
-          "weight": 0.18048878947980307
+          "weight": 0.21690411860147985
         },
         {
           "name": "country",
-          "weight": 0.1769559119546854
+          "weight": 0.17805864599248614
+        },
+        {
+          "name": "he",
+          "weight": 0.17785716975400817
         },
         {
           "name": "his",
-          "weight": 0.1727839919423689
+          "weight": 0.16791442765819317
         },
         {
           "name": "that",
-          "weight": 0.16777997692410868
-        },
-        {
-          "name": "was",
-          "weight": 0.15864098740047958
+          "weight": 0.1643850411154852
         },
         {
           "name": "country mouse",
-          "weight": 0.15483642296034972
+          "weight": 0.15580131524342536
+        },
+        {
+          "name": "was",
+          "weight": 0.14923615686451186
+        }
+      ]
+    },
+    "cluster_4": {
+      "size": 2,
+      "fable_ids": [
+        "3",
+        "7"
+      ],
+      "languages": {
+        "en": 2
+      },
+      "top_features": [
+        {
+          "name": "fox",
+          "weight": 0.4959423711739023
+        },
+        {
+          "name": "the",
+          "weight": 0.49587307509508033
+        },
+        {
+          "name": "to",
+          "weight": 0.2773478651425249
+        },
+        {
+          "name": "and",
+          "weight": 0.20044623417730092
+        },
+        {
+          "name": "on",
+          "weight": 0.17548019472164922
+        },
+        {
+          "name": "that",
+          "weight": 0.16112382936774788
+        },
+        {
+          "name": "even",
+          "weight": 0.14461827388833998
+        },
+        {
+          "name": "as",
+          "weight": 0.13175206136163917
+        },
+        {
+          "name": "all",
+          "weight": 0.13175206136163917
+        },
+        {
+          "name": "water",
+          "weight": 0.11621912422531196
         }
       ]
     },
     "cluster_5": {
-      "size": 4,
+      "size": 2,
       "fable_ids": [
         "1",
-        "3",
-        "4",
-        "7"
+        "4"
       ],
       "languages": {
-        "en": 4
+        "en": 2
       },
       "top_features": [
         {
-          "name": "the",
-          "weight": 0.42277264535657005
-        },
-        {
-          "name": "to",
-          "weight": 0.2803687886556166
-        },
-        {
-          "name": "fox",
-          "weight": 0.25078984048773045
+          "name": "wolf",
+          "weight": 0.43794966165447374
         },
         {
           "name": "you",
-          "weight": 0.23732292403743432
+          "weight": 0.34096604644834705
         },
         {
-          "name": "wolf",
-          "weight": 0.23354076700873708
+          "name": "the",
+          "weight": 0.3143071168460545
         },
         {
-          "name": "and",
-          "weight": 0.18277585231331528
-        },
-        {
-          "name": "even",
-          "weight": 0.12512813418558777
+          "name": "to",
+          "weight": 0.2632592985395342
         },
         {
           "name": "lamb",
-          "weight": 0.11418162060279244
+          "weight": 0.23172537835167073
         },
         {
-          "name": "his",
-          "weight": 0.10500499035882879
+          "name": "for",
+          "weight": 0.19377266079462352
+        },
+        {
+          "name": "and",
+          "weight": 0.15541349581762565
+        },
+        {
+          "name": "not",
+          "weight": 0.14448204183956306
+        },
+        {
+          "name": "said",
+          "weight": 0.14107638879307471
         },
         {
           "name": "from",
-          "weight": 0.09971056918592835
+          "weight": 0.14107638879307471
         }
       ]
     },
     "cluster_6": {
-      "size": 2,
+      "size": 5,
       "fable_ids": [
+        "2",
         "3",
-        "4"
+        "4",
+        "6",
+        "7"
       ],
       "languages": {
-        "grc": 2
+        "de": 5
       },
       "top_features": [
         {
-          "name": "ὀστοῦν",
-          "weight": 0.5454631694884758
+          "name": "und",
+          "weight": 0.39653277638891077
         },
         {
-          "name": "τὴν",
-          "weight": 0.46485632473449906
+          "name": "der",
+          "weight": 0.2488224020010727
         },
         {
-          "name": "μισθὸν",
-          "weight": 0.36364211299231725
+          "name": "die",
+          "weight": 0.24221269929938966
         },
         {
-          "name": "τὸν",
-          "weight": 0.2745079689516816
+          "name": "du",
+          "weight": 0.20794612031415252
         },
         {
-          "name": "τὸ",
-          "weight": 0.2745079689516816
+          "name": "sie",
+          "weight": 0.18631986923940444
         },
         {
-          "name": "δὲ",
-          "weight": 0.2604607171638608
+          "name": "sich",
+          "weight": 0.16211652683713926
         },
         {
-          "name": "καὶ",
-          "weight": 0.2604607171638608
+          "name": "mit",
+          "weight": 0.14443831072447322
         },
         {
-          "name": "λύκος",
-          "weight": 0.166689249558686
+          "name": "ein",
+          "weight": 0.13653465213144728
         },
         {
-          "name": "αὐτοῦ",
-          "weight": 0.14536216551940304
+          "name": "zu",
+          "weight": 0.13305853584545826
         },
         {
-          "name": "αὐτὸν",
-          "weight": 0.1372539844758408
+          "name": "daß",
+          "weight": 0.12592035870967502
         }
       ]
     },
     "cluster_7": {
       "size": 2,
       "fable_ids": [
-        "1",
-        "5"
+        "5",
+        "6"
       ],
       "languages": {
-        "de": 2
+        "nl": 2
       },
       "top_features": [
         {
-          "name": "das",
-          "weight": 0.48146944534780955
+          "name": "leeuw",
+          "weight": 0.47649381351418574
         },
         {
-          "name": "mäuschen",
-          "weight": 0.26947225510676676
+          "name": "ze",
+          "weight": 0.22678581762184535
         },
         {
-          "name": "ich",
-          "weight": 0.2683561123119682
+          "name": "het",
+          "weight": 0.2087064120296767
         },
         {
-          "name": "und",
-          "weight": 0.26551036476744266
+          "name": "zijn",
+          "weight": 0.20715270043789882
         },
         {
-          "name": "lämmchen",
-          "weight": 0.18087630152209985
+          "name": "en",
+          "weight": 0.20111492687508248
         },
         {
-          "name": "mir",
-          "weight": 0.18066857430968125
+          "name": "muis",
+          "weight": 0.19113282453014332
         },
         {
-          "name": "der",
-          "weight": 0.15812146534669871
+          "name": "van",
+          "weight": 0.1889881813515378
         },
         {
-          "name": "löwen",
-          "weight": 0.14470936329747058
+          "name": "mug",
+          "weight": 0.18582879742966546
         },
         {
-          "name": "so",
-          "weight": 0.14104267204052567
+          "name": "de",
+          "weight": 0.16350373655741296
         },
         {
-          "name": "du",
-          "weight": 0.12220635156062679
+          "name": "dat",
+          "weight": 0.15119054508123025
         }
       ]
     }
   },
   "fable_clusters": {
-    "1": 1,
-    "2": 1,
-    "3": 1,
-    "4": 1,
-    "5": 1,
-    "6": 1,
-    "7": 5,
-    "es_7": 1
+    "1": 2,
+    "2": 2,
+    "3": 2,
+    "4": 2,
+    "5": 2,
+    "6": 2,
+    "7": 4,
+    "es_7": 2
   },
   "language_distribution": {
-    "grc": {
-      "cluster_1": 6,
-      "cluster_5": 1
-    },
     "nl": {
-      "cluster_1": 6,
-      "cluster_5": 1
+      "cluster_2": 6,
+      "cluster_4": 1
     },
     "de": {
-      "cluster_1": 6,
-      "cluster_5": 1
+      "cluster_2": 6,
+      "cluster_4": 1
     },
     "en": {
-      "cluster_1": 5,
-      "cluster_5": 1
+      "cluster_2": 5,
+      "cluster_4": 1
     },
     "es": {
-      "cluster_1": 7
+      "cluster_2": 7
     }
   },
   "fable_id_distribution": {
     "1": {
-      "cluster_1": 5
+      "cluster_2": 4
     },
     "2": {
-      "cluster_1": 5
+      "cluster_2": 4
     },
     "3": {
-      "cluster_1": 5
+      "cluster_2": 4
     },
     "4": {
-      "cluster_1": 5
+      "cluster_2": 4
     },
     "5": {
-      "cluster_1": 5
+      "cluster_2": 4
     },
     "6": {
-      "cluster_1": 4
+      "cluster_2": 3
     },
     "7": {
-      "cluster_5": 4
+      "cluster_4": 3
     },
     "es_7": {
-      "cluster_1": 1
+      "cluster_2": 1
     }
   },
   "language_isolation": {
-    "grc": 0.8571428571428571,
     "nl": 0.8571428571428571,
     "de": 0.8571428571428571,
     "en": 0.8333333333333334,
@@ -519,7 +507,7 @@
     "es_7": 1.0
   },
   "cluster_tendency": {
-    "by_language": 0.880952380952381,
+    "by_language": 0.8869047619047619,
     "by_fable_id": 1.0,
     "dominant_factor": "fable_content"
   }

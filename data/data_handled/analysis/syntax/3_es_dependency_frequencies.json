@@ -1,5 +1,39 @@
 {
-  "total_dependencies": 0,
-  "frequencies": {},
-  "examples": {}
+  "total_dependencies": 33,
+  "frequencies": {
+    "det": 9.090909090909092,
+    "nsubj": 9.090909090909092,
+    "amod": 6.0606060606060606,
+    "punct": 21.21212121212121,
+    "case": 12.121212121212121,
+    "advcl": 6.0606060606060606,
+    "obj": 3.0303030303030303,
+    "acl": 3.0303030303030303,
+    "obl": 6.0606060606060606,
+    "ROOT": 6.0606060606060606,
+    "xcomp": 3.0303030303030303,
+    "cc": 3.0303030303030303,
+    "advmod": 3.0303030303030303,
+    "conj": 3.0303030303030303,
+    "expl:pass": 3.0303030303030303,
+    "iobj": 3.0303030303030303
+  },
+  "examples": {
+    "det": "Una → zorra",
+    "nsubj": "zorra → quiso",
+    "amod": "hambrienta → zorra",
+    "punct": ", → ver",
+    "case": "al → ver",
+    "advcl": "ver → quiso",
+    "obj": "racimos → ver",
+    "acl": "colgaban → racimos",
+    "obl": "parra → colgaban",
+    "ROOT": "quiso → quiso",
+    "xcomp": "apoderarse → quiso",
+    "cc": "y → pudo",
+    "advmod": "no → pudo",
+    "conj": "pudo → quiso",
+    "expl:pass": "se → dijo",
+    "iobj": "sí → dijo"
+  }
 }
