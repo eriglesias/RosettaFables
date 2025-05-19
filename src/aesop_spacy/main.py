@@ -44,6 +44,8 @@ from aesop_spacy.visualization.plots.syntax_comparison import  SyntaxAnalysisPlo
 from aesop_spacy.visualization.plots.clustering_plot import ClusteringPlot
 from aesop_spacy.visualization.plots.nlp_techniques_plot import NLPTechniquesPlot
 from aesop_spacy.visualization.plots.word_frequency_plot import WordFrequencyPlot
+from aesop_spacy.visualization.plots.entity_analysis_plot import EntityAnalysisPlot
+from aesop_spacy.visualization.plots.moral_analysis_plot import MoralAnalysisPlot
 
 # Add project root to path for absolute imports
 project_root = Path(__file__).resolve().parent.parent.parent
@@ -379,6 +381,104 @@ def run_word_frequency_visualizations(output_dir, logger):
     
     logger.info("Word frequency visualizations complete")
 
+def run_entity_visualizations(output_dir, logger):
+    """Run entity analysis visualizations"""
+    logger.info("Running entity analysis visualizations...")
+    
+    # Create visualization directory if it doesn't exist
+    vis_dir = output_dir / "figures"
+    vis_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Create entity plotter
+    entity_plotter = EntityAnalysisPlot(output_dir=vis_dir)
+    
+    # Create entity distribution plots for each language
+    for lang in ['en', 'de', 'nl', 'es', 'grc']:
+        try:
+            logger.info(f"Creating entity distribution plot for {lang}")
+            fig, ax = entity_plotter.plot_entity_distribution(lang)
+            entity_plotter.save_figure(fig, f'entity_distribution_{lang}.png')
+            
+            logger.info(f"Creating entity examples visualization for {lang}")
+            fig, ax = entity_plotter.plot_entity_examples(lang)
+            entity_plotter.save_figure(fig, f'entity_examples_{lang}.png')
+        except Exception as e:
+            logger.error(f"Error creating entity plots for {lang}: {e}")
+    
+    # Create comparison visualizations
+    try:
+        logger.info("Creating entity comparison plot")
+        fig, ax = entity_plotter.plot_entity_comparison()
+        entity_plotter.save_figure(fig, 'entity_comparison_all_languages.png')
+        
+        logger.info("Creating entity heatmap")
+        fig, ax = entity_plotter.plot_entity_heatmap()
+        entity_plotter.save_figure(fig, 'entity_heatmap_all_languages.png')
+        
+        logger.info("Creating top entities plot")
+        fig, ax = entity_plotter.plot_top_entities(n=15)
+        entity_plotter.save_figure(fig, 'top_entities_all_languages.png')
+    except Exception as e:
+        logger.error(f"Error creating entity comparison plots: {e}")
+    
+    logger.info("Entity visualizations complete")
+
+def run_moral_visualizations(output_dir, logger):
+    """Run moral analysis visualizations"""
+    logger.info("Running moral analysis visualizations...")
+    
+    # Create visualization directory if it doesn't exist
+    vis_dir = output_dir / "figures"
+    vis_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Create moral plotter
+    moral_plotter = MoralAnalysisPlot(output_dir=vis_dir)
+    
+    # Create moral theme plots for each language
+    for lang in ['en', 'de', 'nl', 'es', 'grc']:
+        try:
+            logger.info(f"Creating moral themes plot for {lang}")
+            fig, ax = moral_plotter.plot_moral_themes(lang)
+            moral_plotter.save_figure(fig, f'moral_themes_{lang}.png')
+            
+            logger.info(f"Creating moral inferences visualization for {lang}")
+            fig, ax = moral_plotter.plot_moral_inferences(lang)
+            moral_plotter.save_figure(fig, f'moral_inferences_{lang}.png')
+            
+            logger.info(f"Creating keywords heatmap for {lang}")
+            fig, ax = moral_plotter.plot_keywords_heatmap(lang)
+            moral_plotter.save_figure(fig, f'moral_keywords_{lang}.png')
+        except Exception as e:
+            logger.error(f"Error creating moral plots for {lang}: {e}")
+    
+    # Create comparison visualizations
+    try:
+        logger.info("Creating moral comparison plot")
+        fig, ax = moral_plotter.plot_moral_comparison()
+        moral_plotter.save_figure(fig, 'moral_comparison_all_languages.png')
+        
+        logger.info("Creating moral similarity heatmap")
+        fig, ax = moral_plotter.plot_moral_similarity_heatmap()
+        moral_plotter.save_figure(fig, 'moral_similarity_heatmap.png')
+        
+        logger.info("Creating theme consistency plot")
+        fig, ax = moral_plotter.plot_theme_consistency()
+        moral_plotter.save_figure(fig, 'moral_theme_consistency.png')
+    except Exception as e:
+        logger.error(f"Error creating moral comparison plots: {e}")
+    
+    # Create individual fable moral comparisons
+    for fable_id in ['1', '2', '3', '4', '5']:  # Adjust based on your data
+        try:
+            logger.info(f"Creating moral comparison for fable {fable_id}")
+            fig, ax = moral_plotter.plot_moral_comparison(fable_id)
+            moral_plotter.save_figure(fig, f'moral_comparison_fable_{fable_id}.png')
+        except Exception as e:
+            logger.error(f"Error creating moral comparison for fable {fable_id}: {e}")
+    
+    logger.info("Moral visualizations complete")
+
+
 
 
 def main():
@@ -404,6 +504,8 @@ def main():
         run_clustering_visualizations(output_dir, logger)
         run_nlp_visualizations(output_dir, logger)
         run_word_frequency_visualizations(output_dir, logger)
+        run_entity_visualizations(output_dir, logger)
+        run_moral_visualizations(output_dir, logger)
    
     except FileNotFoundError as e:
         logger.error("Required file not found: %s", e)
