@@ -1,4 +1,3 @@
-#pipeline.py
 """
 Main pipeline module for processing and analyzing Aesop's fables.
 
@@ -15,7 +14,7 @@ The pipeline supports multiple languages and provides comparison
 capabilities across translations of the same fable.
 """
 
-from typing import Dict, List, Any
+from typing import Dict, List, Any, Set
 from pathlib import Path
 import logging
 import json
@@ -25,7 +24,7 @@ from aesop_spacy.io.serializer import SpacySerializer
 from aesop_spacy.preprocessing.cleaner import TextCleaner
 from aesop_spacy.preprocessing.extractor import ContentExtractor
 from aesop_spacy.preprocessing.processor import FableProcessor
-from aesop_spacy.models.model_manager import get_model
+from aesop_spacy.models.model_manager import get_model, verify_models
 from aesop_spacy.preprocessing.entity_recognizer import EntityRecognizer
 from aesop_spacy.utils.log_utils import section_header, subsection_header, log_timing, wrap_analysis_result, format_count
 
@@ -195,21 +194,84 @@ class FablePipeline:
             self._comparison_analyzer = ComparisonAnalyzer(self.analysis_dir)
         return self._comparison_analyzer
 
+    def _detect_languages(self) -> Set[str]:
+        """
+        Detect language codes from available fable files.
+        
+        Returns:
+            Set of detected language codes
+        """
+        languages = set()
+        
+        # Check the fables directory for .md files
+        fable_dir = self.data_dir / "fables"
+        if not fable_dir.exists():
+            self.logger.warning("Fables directory not found: %s", fable_dir)
+            return languages
+            
+        # Look for language tags in MD files
+        for file_path in fable_dir.glob('*.md'):
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                    
+                    # Extract all language tags
+                    import re
+                    lang_tags = re.findall(r'<language>(.*?)</language>', content)
+                    for lang in lang_tags:
+                        languages.add(lang.strip())
+                        
+            except Exception as e:
+                self.logger.error("Error extracting languages from %s: %s", file_path, e)
+        
+        # If no languages detected, use common defaults
+        if not languages:
+            self.logger.warning("No languages detected in files, using defaults")
+            languages = {'en', 'de', 'nl', 'es', 'grc'}
+            
+        return languages
 
     @log_timing
-    def run(self, use_processed=True):
+    def run(self, use_processed=True, verify_models=True):
         """
         Run the complete pipeline from loading to processing to analysis.
         
         Args:
             use_processed: If True, load from processed files when available.
-            If False, always process from raw files.
-        
+            verify_models: If True, verify required models before processing
+            
         Returns:
             True if the pipeline completed successfully
         """
         self.logger.info(section_header("FABLE PROCESSING PIPELINE"))
-        self.logger.info("Starting pipeline (use_processed=%s)", use_processed)
+        self.logger.info("Starting pipeline (use_processed=%s, verify_models=%s)", 
+                        use_processed, verify_models)
+
+        # Verify models if requested
+        if verify_models and not use_processed:
+            self.logger.info(subsection_header("VERIFYING LANGUAGE MODELS"))
+            
+            # Detect languages from fable files
+            languages = self._detect_languages()
+            self.logger.info("Detected languages: %s", ", ".join(languages))
+            
+            # Verify models for detected languages
+            verification = verify_models(languages=list(languages))
+            
+            # Handle missing models
+            if verification['missing']:
+                self.logger.warning("Missing models for languages: %s", 
+                                  ", ".join(verification['missing']))
+                self.logger.warning("Please install the missing models with:")
+                for cmd in verification['install_commands']:
+                    self.logger.warning("  %s", cmd)
+                
+                # Strict verification - don't continue if models are missing
+                if not use_processed:
+                    self.logger.error("Cannot process raw files without required models")
+                    return False
+            else:
+                self.logger.info("All required language models are installed")
 
         # Check if ALL expected language files exist
         all_files_exist = use_processed and self._processed_files_exist(check_all_languages=True)
@@ -1524,7 +1586,7 @@ class FablePipeline:
                 # Make sure all items in lang_fables are also dictionaries
                 all_dicts = all(isinstance(fable, dict) for fable in lang_fables.values())
                 if not all_dicts:
-                    self.logger.warning("Skipping word usage comparison for fable %s: not all language entries are dictionaries", fable_id)
+                    self.logger.warning(f"Skipping word usage comparison for fable %s: not all language entries are dictionaries", fable_id)
                     continue
                     
                 try:

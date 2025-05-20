@@ -18,6 +18,76 @@ LANGUAGE_MODELS = {
 # Cache loaded models
 _loaded_models = {}
 
+def verify_models(languages=None, check_optional=False):
+    """
+    Verify installed spaCy models for the specified languages.
+    
+    Args:
+        languages: List of language codes to check, or None for default set
+        check_optional: If True, check additional optional models
+        
+    Returns:
+        Dict with verification results
+    """
+    logger = logging.getLogger(__name__)
+    
+    # Default to checking only required languages if none specified
+    if languages is None:
+        languages = list(LANGUAGE_MODELS.keys())
+    
+    # If check_optional, add Greek to the check list
+    if check_optional and 'grc' not in languages:
+        languages.append('grc')
+    
+    logger.info("Verifying models for languages: %s", languages)
+    
+    # Initialize results
+    results = {
+        'installed': [],
+        'missing': [],
+        'install_commands': []
+    }
+    
+    # Check each language
+    for lang in languages:
+        if lang == 'grc':
+            # Special handling for Ancient Greek using Stanza
+            try:
+                greek_processor = _load_greek_processor(logger)
+                if greek_processor:
+                    results['installed'].append(lang)
+                else:
+                    results['missing'].append(lang)
+                    results['install_commands'].append("pip install stanza")
+            except Exception as e:
+                logger.error("Error checking Greek model: %s", e)
+                results['missing'].append(lang)
+                results['install_commands'].append("pip install stanza")
+        else:
+            # Regular spaCy model check
+            model_name = LANGUAGE_MODELS.get(lang)
+            if not model_name:
+                logger.warning("No model defined for language code: %s", lang)
+                continue
+                
+            try:
+                # Attempt to load the model (will be cached if successful)
+                model = spacy.load(model_name)
+                results['installed'].append(lang)
+            except OSError:
+                results['missing'].append(lang)
+                results['install_commands'].append(f"python -m spacy download {model_name}")
+    
+    # Format a verification summary
+    if results['missing']:
+        logger.warning("Missing models for languages: %s", ", ".join(results['missing']))
+        for cmd in results['install_commands']:
+            logger.info("Install command: %s", cmd)
+    else:
+        logger.info("All required models are installed")
+    
+    return results
+
 
 def get_model(language_code: str) -> Optional[Any]:
     """

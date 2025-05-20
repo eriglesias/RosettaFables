@@ -61,6 +61,7 @@ def parse_arguments():
     parser.add_argument('--only-process', action='store_true', help='Only process fables')
     parser.add_argument('--only-analyze', action='store_true', help='Only analyze processed fables')
     parser.add_argument('--debug', action='store_true', help='Enable debug logging')
+    parser.add_argument('--verify-models', action='store_true', help='Verify required models and exit')
 
     return parser.parse_args()
 
@@ -488,7 +489,20 @@ def main():
     logger = setup_logging(args.debug)
 
     try:
-        # Set up directories
+        if args.verify_models:
+            from aesop_spacy.models.model_manager import verify_models
+            logger.info("Verifying required models...")
+            verification = verify_models(check_optional=True)
+
+            if verification['missing']:
+                logger.warning("Missing models detected. Please install with:")
+                for cmd in verification['install_commands']:
+                    logger.warning("  %s", cmd)
+            else:
+                logger.info("All required models are installed.")
+            return 
+        
+        
         data_dir, output_dir = setup_directories(args.data_dir, args.output_dir, logger)
 
         # Run the pipeline
