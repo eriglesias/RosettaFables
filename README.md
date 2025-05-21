@@ -18,6 +18,29 @@ This project analyzes Aesop's fables in multiple languages (English, German, Dut
 - **Explore morals and themes** across cultural tellings
 - **Visualize the results** with colorful, easy-to-understand graphs
 
+## 🔬 Technologies & Linguistic Approaches
+
+This project combines several computational linguistics techniques:
+
+- **Multilingual Processing**: Working with 5 languages including English, German, Dutch, Spanish and Ancient Greek
+- **Part-of-Speech Analysis**: Examining how different grammatical structures work across languages
+- **Dependency Parsing**: Understanding the relationships between words in sentences
+- **Named Entity Recognition**: Identifying characters, locations, and other entities
+- **Semantic Similarity**: Comparing meaning preservation across translations
+- **Sentiment Analysis**: Analyzing emotional tone in different language versions
+- **Stylometric Analysis**: Measuring writing style features like sentence complexity
+- **Topic Modeling**: Discovering themes across multilingual corpus
+- **Vector Embeddings**: Representing words and concepts in mathematical space
+
+Industry-standard NLP libraries are used:
+
+- **spaCy**: For core linguistic analysis
+- **NLTK**: For supplementary text processing
+- **Stanza**: For languages with specific requirements
+- **Hugging Face Transformers**: For advanced multilingual models
+
+
+
 ## 🚀 Getting Started
 
 ### For everyone
