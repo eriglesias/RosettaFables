@@ -86,8 +86,17 @@ class FigureBuilder:
     
     def create_figure(self, figsize=None):
         """Create a matplotlib figure with the configured styling."""
-        return plt.subplots(figsize=figsize or self.fig_size)
-    
+        fig, ax = plt.subplots(figsize=figsize or self.fig_size)
+        # Register for cleanup
+        self._open_figures.append(fig)
+        return fig, ax 
+
+    def cleanup_figures(self):
+        """Close all figures to prevent memory leaks"""
+        for fig in getattr(self, '_open_figures', []):
+            plt.close(fig)
+        self._open_figures = []
+
     def load_analysis_data(self, filename):
         """
         Load analysis JSON data from the analysis directory.

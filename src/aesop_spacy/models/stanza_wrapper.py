@@ -208,8 +208,9 @@ class GreekProcessor:
                                    "might be offline or already downloaded")
             
             # Initialize the Ancient Greek pipeline with processors
-            self.processor = stanza.Pipeline('grc', processors='tokenize,pos,lemma')
+            self.processor = stanza.Pipeline('grc', processors='tokenize,pos,lemma, depparse', download_method=None)
             self.logger.info("Successfully initialized Stanza processor for Ancient Greek")
+            self.pipe_names =['tokenize', 'pos', 'lemma', 'depparse']
             
         except (ImportError, ModuleNotFoundError) as e:
             self.logger.error("Error importing Stanza: %s", e)
