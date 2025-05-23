@@ -1,12 +1,14 @@
 {
   "fable_id": "2",
   "languages": [
+    "grc",
     "nl",
     "de",
     "en",
     "es"
   ],
   "token_counts": {
+    "grc": 200,
     "nl": 375,
     "de": 407,
     "en": 228,
@@ -17,36 +19,42 @@
   "complexity_scores": {},
   "basic_metrics": {
     "title": {
+      "grc": "Μῦς ἀρουραῖος καὶ μῦς ἀστικός",
       "nl": "Stadsmuis en Veldmuis",
       "de": "Die Stadt und Die Landmaus",
       "en": "City Mouse and Country Mouse",
       "es": "El Ratón de campo y el de ciudad"
     },
     "word_counts": {
+      "grc": 178,
       "nl": 343,
       "de": 356,
       "en": 206,
       "es": 190
     },
     "character_counts": {
+      "grc": 867,
       "nl": 1627,
       "de": 1998,
       "en": 938,
       "es": 905
     },
     "sentence_counts": {
+      "grc": 14,
       "nl": 20,
       "de": 19,
       "en": 13,
       "es": 11
     },
     "entity_counts": {
+      "grc": 0,
       "nl": 7,
       "de": 14,
       "en": 1,
       "es": 9
     },
     "avg_sentence_length": {
+      "grc": 12.714285714285714,
       "nl": 17.15,
       "de": 18.736842105263158,
       "en": 15.846153846153847,
@@ -55,6 +63,20 @@
   },
   "content": {
     "pos_distribution": {
+      "grc": {
+        "NOUN": 21.0,
+        "ADJ": 11.5,
+        "DET": 14.000000000000002,
+        "ADP": 5.0,
+        "VERB": 15.5,
+        "PUNCT": 12.5,
+        "ADV": 9.0,
+        "CCONJ": 5.0,
+        "PRON": 4.5,
+        "AUX": 0.5,
+        "SCONJ": 1.0,
+        "PART": 0.5
+      },
       "nl": {
         "PROPN": 4.0,
         "VERB": 14.133333333333335,
@@ -119,6 +141,7 @@
       }
     },
     "has_moral": {
+      "grc": false,
       "nl": true,
       "de": true,
       "en": true,
@@ -264,6 +287,10 @@
   },
   "similarity": {
     "structural_similarity": {
+      "grc-nl": 0.6358517284464806,
+      "grc-de": 0.6304511278195488,
+      "grc-en": 0.8775312066574202,
+      "grc-es": 0.8362406015037595,
       "nl-de": 0.9484550561797752,
       "nl-en": 0.6850280331912986,
       "nl-es": 0.6401532913917447,
@@ -272,6 +299,10 @@
       "en-es": 0.8908753586730083
     },
     "content_similarity": {
+      "grc-nl": 0.2813657571841431,
+      "grc-de": 0.28165716772415134,
+      "grc-en": 0.24135721018210599,
+      "grc-es": 0.27005352413294675,
       "nl-de": 0.466375470489626,
       "nl-en": 0.4698506260626514,
       "nl-es": 0.46305370552562175,
@@ -280,6 +311,10 @@
       "en-es": 0.4407661929506519
     },
     "lexical_similarity": {
+      "grc-nl": 0.0,
+      "grc-de": 0.0,
+      "grc-en": 0.0,
+      "grc-es": 0.0,
       "nl-de": 0.0698418059311575,
       "nl-en": 0.040667909648807773,
       "nl-es": 0.3035912135328681,

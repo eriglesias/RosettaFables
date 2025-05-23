@@ -6,44 +6,44 @@
       "topic_id": 0,
       "top_terms": [
         {
-          "term": "hij",
-          "weight": 20.147738166205936
-        },
-        {
-          "term": "wolf",
-          "weight": 13.722474469696264
-        },
-        {
-          "term": "te",
-          "weight": 10.69816132797916
-        },
-        {
           "term": "sie",
-          "weight": 10.436022840699566
+          "weight": 15.629988875825157
+        },
+        {
+          "term": "du",
+          "weight": 15.129592130260928
         },
         {
           "term": "sich",
-          "weight": 7.479561754474408
+          "weight": 11.818232267078601
         },
         {
-          "term": "geitje",
-          "weight": 5.902758663120469
+          "term": "ich",
+          "weight": 9.77323404564386
         },
         {
-          "term": "druiven",
-          "weight": 5.884455479155178
+          "term": "nicht",
+          "weight": 7.527167047442765
+        },
+        {
+          "term": "es",
+          "weight": 7.524615629851624
+        },
+        {
+          "term": "daß",
+          "weight": 7.422319406012385
+        },
+        {
+          "term": "den",
+          "weight": 7.129458873000672
         },
         {
           "term": "er",
-          "weight": 5.418198140592826
+          "weight": 6.7470124292322895
         },
         {
-          "term": "lamb",
-          "weight": 5.189737236370173
-        },
-        {
-          "term": "naar",
-          "weight": 5.0936875006881595
+          "term": "mir",
+          "weight": 6.388241746981545
         }
       ]
     },
@@ -51,44 +51,44 @@
       "topic_id": 1,
       "top_terms": [
         {
-          "term": "mouse",
-          "weight": 13.20340900085062
+          "term": "καὶ",
+          "weight": 29.163856084190332
         },
         {
-          "term": "country",
-          "weight": 6.748418720190854
+          "term": "δὲ",
+          "weight": 22.746066563124124
         },
         {
-          "term": "city",
-          "weight": 5.125529165409833
+          "term": "τὴν",
+          "weight": 12.342453842913828
         },
         {
-          "term": "lion",
-          "weight": 3.602211274695437
+          "term": "τοῦ",
+          "weight": 10.827267664164433
         },
         {
-          "term": "mane",
-          "weight": 2.7791329273883445
+          "term": "τὸ",
+          "weight": 10.771513300909348
         },
         {
-          "term": "house",
-          "weight": 1.9863203317507048
+          "term": "τὸν",
+          "weight": 9.177993738489018
         },
         {
-          "term": "pay",
-          "weight": 1.9803870950945301
+          "term": "αὐτὸν",
+          "weight": 8.415451265294546
         },
         {
-          "term": "visit",
-          "weight": 1.9786270885761372
+          "term": "εἰς",
+          "weight": 5.189134608853151
         },
         {
-          "term": "door",
-          "weight": 1.9574653400950317
+          "term": "τῶν",
+          "weight": 5.16541205626737
         },
         {
-          "term": "butler",
-          "weight": 1.9554429656549226
+          "term": "τῷ",
+          "weight": 5.163231798026144
         }
       ]
     },
@@ -96,44 +96,44 @@
       "topic_id": 2,
       "top_terms": [
         {
-          "term": "ze",
-          "weight": 22.689923617750686
-        },
-        {
-          "term": "leeuw",
-          "weight": 12.904020532037567
-        },
-        {
           "term": "hij",
-          "weight": 10.326838728655478
+          "weight": 29.745908985259184
         },
         {
           "term": "er",
-          "weight": 9.376008290988977
-        },
-        {
-          "term": "niet",
-          "weight": 9.192224423856452
-        },
-        {
-          "term": "je",
-          "weight": 9.081983434503355
+          "weight": 19.440149815275273
         },
         {
           "term": "te",
-          "weight": 8.246620510358653
+          "weight": 18.189377551444245
+        },
+        {
+          "term": "ze",
+          "weight": 14.471268990048252
+        },
+        {
+          "term": "leeuw",
+          "weight": 12.899812955556392
+        },
+        {
+          "term": "je",
+          "weight": 12.031779349996716
+        },
+        {
+          "term": "niet",
+          "weight": 11.240539768447178
+        },
+        {
+          "term": "wolf",
+          "weight": 9.057036577543585
         },
         {
           "term": "naar",
-          "weight": 8.044766650064936
+          "weight": 8.78414804876191
         },
         {
-          "term": "haar",
-          "weight": 7.931182033317095
-        },
-        {
-          "term": "toen",
-          "weight": 6.410518848610431
+          "term": "kon",
+          "weight": 8.076854191396116
         }
       ]
     },
@@ -142,43 +142,43 @@
       "top_terms": [
         {
           "term": "que",
-          "weight": 22.945655081327697
+          "weight": 16.118560747136268
+        },
+        {
+          "term": "mouse",
+          "weight": 11.6443021892619
         },
         {
           "term": "se",
-          "weight": 13.828542198097995
+          "weight": 11.520041525896303
         },
         {
-          "term": "le",
-          "weight": 10.518553042898743
+          "term": "ze",
+          "weight": 10.5992328820825
         },
         {
           "term": "al",
-          "weight": 10.027799617003152
+          "weight": 8.718572954322251
         },
         {
           "term": "lo",
-          "weight": 9.446315702800348
+          "weight": 7.796010751251803
         },
         {
-          "term": "lobo",
-          "weight": 5.968188832124792
+          "term": "country",
+          "weight": 6.824916946982832
         },
         {
-          "term": "vos",
-          "weight": 5.9242186741489995
+          "term": "wolf",
+          "weight": 6.81647750456488
         },
         {
-          "term": "su",
-          "weight": 5.526467921029226
+          "term": "le",
+          "weight": 6.038305359426445
         },
         {
-          "term": "te",
-          "weight": 4.928117376926565
-        },
-        {
-          "term": "ratón",
-          "weight": 4.352437966227275
+          "term": "veldmuis",
+          "weight": 5.810075416299756
         }
       ]
     },
@@ -186,44 +186,44 @@
       "topic_id": 4,
       "top_terms": [
         {
-          "term": "du",
-          "weight": 13.635607313577149
+          "term": "que",
+          "weight": 4.377301528900613
         },
         {
-          "term": "er",
-          "weight": 13.475589319039782
+          "term": "lobo",
+          "weight": 3.5708620046618016
         },
         {
-          "term": "sich",
-          "weight": 8.334590790908418
+          "term": "mäuschen",
+          "weight": 3.565261731900846
         },
         {
-          "term": "ich",
-          "weight": 8.26039398136567
+          "term": "río",
+          "weight": 2.7706027593396403
         },
         {
-          "term": "den",
-          "weight": 7.416719070059299
+          "term": "cordero",
+          "weight": 2.753986891520289
         },
         {
-          "term": "daß",
-          "weight": 7.191467467633034
+          "term": "löwen",
+          "weight": 2.6478449573381266
         },
         {
-          "term": "sie",
-          "weight": 6.854908876706729
+          "term": "löwe",
+          "weight": 1.9895729173316383
         },
         {
-          "term": "es",
-          "weight": 6.445550757949553
+          "term": "beber",
+          "weight": 1.9831423162193844
         },
         {
-          "term": "fuchs",
-          "weight": 6.3181830851324605
+          "term": "le",
+          "weight": 1.9720092615326097
         },
         {
-          "term": "mir",
-          "weight": 5.98775035939091
+          "term": "dijo",
+          "weight": 1.9670628669509787
         }
       ]
     }
@@ -231,460 +231,649 @@
   "document_topics": [
     {
       "document_id": "1",
-      "language": "nl",
-      "dominant_topic": 0,
-      "topic_distribution": [
-        {
-          "topic_id": 0,
-          "weight": 0.9959850466564052
-        },
-        {
-          "topic_id": 2,
-          "weight": 0.0010190627841329995
-        },
-        {
-          "topic_id": 3,
-          "weight": 0.0010006198384200856
-        },
-        {
-          "topic_id": 4,
-          "weight": 0.0009978030038424682
-        },
-        {
-          "topic_id": 1,
-          "weight": 0.0009974677171993864
-        }
-      ]
-    },
-    {
-      "document_id": "2",
-      "language": "nl",
-      "dominant_topic": 2,
-      "topic_distribution": [
-        {
-          "topic_id": 2,
-          "weight": 0.9959854217497108
-        },
-        {
-          "topic_id": 0,
-          "weight": 0.0010073445065860384
-        },
-        {
-          "topic_id": 3,
-          "weight": 0.0010029850102538066
-        },
-        {
-          "topic_id": 4,
-          "weight": 0.001002300104700938
-        },
-        {
-          "topic_id": 1,
-          "weight": 0.0010019486287483731
-        }
-      ]
-    },
-    {
-      "document_id": "3",
-      "language": "nl",
-      "dominant_topic": 0,
-      "topic_distribution": [
-        {
-          "topic_id": 0,
-          "weight": 0.9922286778603243
-        },
-        {
-          "topic_id": 2,
-          "weight": 0.0019754619855521186
-        },
-        {
-          "topic_id": 3,
-          "weight": 0.0019387371325223148
-        },
-        {
-          "topic_id": 4,
-          "weight": 0.001929362023634793
-        },
-        {
-          "topic_id": 1,
-          "weight": 0.0019277609979663787
-        }
-      ]
-    },
-    {
-      "document_id": "4",
-      "language": "nl",
-      "dominant_topic": 2,
-      "topic_distribution": [
-        {
-          "topic_id": 2,
-          "weight": 0.9918614332637555
-        },
-        {
-          "topic_id": 0,
-          "weight": 0.0020497696031223102
-        },
-        {
-          "topic_id": 3,
-          "weight": 0.0020353492933919822
-        },
-        {
-          "topic_id": 4,
-          "weight": 0.0020281488065687996
-        },
-        {
-          "topic_id": 1,
-          "weight": 0.0020252990331614974
-        }
-      ]
-    },
-    {
-      "document_id": "5",
-      "language": "nl",
-      "dominant_topic": 2,
-      "topic_distribution": [
-        {
-          "topic_id": 2,
-          "weight": 0.9945373755760093
-        },
-        {
-          "topic_id": 0,
-          "weight": 0.0013737550739470815
-        },
-        {
-          "topic_id": 3,
-          "weight": 0.0013634963700778103
-        },
-        {
-          "topic_id": 1,
-          "weight": 0.0013629158481223572
-        },
-        {
-          "topic_id": 4,
-          "weight": 0.0013624571318433725
-        }
-      ]
-    },
-    {
-      "document_id": "6",
-      "language": "nl",
-      "dominant_topic": 2,
-      "topic_distribution": [
-        {
-          "topic_id": 2,
-          "weight": 0.9927022818247879
-        },
-        {
-          "topic_id": 0,
-          "weight": 0.0018321635112144028
-        },
-        {
-          "topic_id": 3,
-          "weight": 0.0018229224066874513
-        },
-        {
-          "topic_id": 1,
-          "weight": 0.001821609608714602
-        },
-        {
-          "topic_id": 4,
-          "weight": 0.0018210226485955948
-        }
-      ]
-    },
-    {
-      "document_id": "7",
-      "language": "nl",
-      "dominant_topic": 3,
-      "topic_distribution": [
-        {
-          "topic_id": 3,
-          "weight": 0.5878698967940271
-        },
-        {
-          "topic_id": 2,
-          "weight": 0.40625569970218045
-        },
-        {
-          "topic_id": 0,
-          "weight": 0.001973797056087052
-        },
-        {
-          "topic_id": 4,
-          "weight": 0.0019530513829845773
-        },
-        {
-          "topic_id": 1,
-          "weight": 0.0019475550647207922
-        }
-      ]
-    },
-    {
-      "document_id": "1",
-      "language": "de",
-      "dominant_topic": 4,
-      "topic_distribution": [
-        {
-          "topic_id": 4,
-          "weight": 0.9928888613754723
-        },
-        {
-          "topic_id": 0,
-          "weight": 0.0017887947614332953
-        },
-        {
-          "topic_id": 2,
-          "weight": 0.001776287102195204
-        },
-        {
-          "topic_id": 1,
-          "weight": 0.001773737447993931
-        },
-        {
-          "topic_id": 3,
-          "weight": 0.0017723193129052387
-        }
-      ]
-    },
-    {
-      "document_id": "2",
-      "language": "de",
-      "dominant_topic": 0,
-      "topic_distribution": [
-        {
-          "topic_id": 0,
-          "weight": 0.995801447055931
-        },
-        {
-          "topic_id": 4,
-          "weight": 0.001066340993088054
-        },
-        {
-          "topic_id": 2,
-          "weight": 0.001044683646805998
-        },
-        {
-          "topic_id": 1,
-          "weight": 0.0010443793321081897
-        },
-        {
-          "topic_id": 3,
-          "weight": 0.0010431489720666481
-        }
-      ]
-    },
-    {
-      "document_id": "3",
-      "language": "de",
-      "dominant_topic": 4,
-      "topic_distribution": [
-        {
-          "topic_id": 4,
-          "weight": 0.994302633002249
-        },
-        {
-          "topic_id": 0,
-          "weight": 0.001432584385268461
-        },
-        {
-          "topic_id": 2,
-          "weight": 0.0014224471646157282
-        },
-        {
-          "topic_id": 1,
-          "weight": 0.001421676484938516
-        },
-        {
-          "topic_id": 3,
-          "weight": 0.0014206589629283267
-        }
-      ]
-    },
-    {
-      "document_id": "4",
-      "language": "de",
-      "dominant_topic": 4,
-      "topic_distribution": [
-        {
-          "topic_id": 4,
-          "weight": 0.9839199695120793
-        },
-        {
-          "topic_id": 0,
-          "weight": 0.00404474836485901
-        },
-        {
-          "topic_id": 2,
-          "weight": 0.0040211546343818915
-        },
-        {
-          "topic_id": 1,
-          "weight": 0.004008300653589401
-        },
-        {
-          "topic_id": 3,
-          "weight": 0.004005826835090467
-        }
-      ]
-    },
-    {
-      "document_id": "5",
-      "language": "de",
-      "dominant_topic": 0,
-      "topic_distribution": [
-        {
-          "topic_id": 0,
-          "weight": 0.9883003095254381
-        },
-        {
-          "topic_id": 4,
-          "weight": 0.0029847213168703603
-        },
-        {
-          "topic_id": 2,
-          "weight": 0.0029058409922807092
-        },
-        {
-          "topic_id": 1,
-          "weight": 0.002905839904974837
-        },
-        {
-          "topic_id": 3,
-          "weight": 0.0029032882604358716
-        }
-      ]
-    },
-    {
-      "document_id": "6",
-      "language": "de",
-      "dominant_topic": 4,
-      "topic_distribution": [
-        {
-          "topic_id": 4,
-          "weight": 0.9924240734827632
-        },
-        {
-          "topic_id": 0,
-          "weight": 0.0019060213228931386
-        },
-        {
-          "topic_id": 1,
-          "weight": 0.0018906079577689068
-        },
-        {
-          "topic_id": 2,
-          "weight": 0.0018901116093562311
-        },
-        {
-          "topic_id": 3,
-          "weight": 0.0018891856272185512
-        }
-      ]
-    },
-    {
-      "document_id": "7",
-      "language": "de",
-      "dominant_topic": 4,
-      "topic_distribution": [
-        {
-          "topic_id": 4,
-          "weight": 0.9924219626575407
-        },
-        {
-          "topic_id": 0,
-          "weight": 0.0019021533273144533
-        },
-        {
-          "topic_id": 2,
-          "weight": 0.0018946082644404265
-        },
-        {
-          "topic_id": 1,
-          "weight": 0.0018913690008374286
-        },
-        {
-          "topic_id": 3,
-          "weight": 0.0018899067498670324
-        }
-      ]
-    },
-    {
-      "document_id": "1",
-      "language": "en",
-      "dominant_topic": 0,
-      "topic_distribution": [
-        {
-          "topic_id": 0,
-          "weight": 0.9825388176242857
-        },
-        {
-          "topic_id": 1,
-          "weight": 0.0043821117471736755
-        },
-        {
-          "topic_id": 4,
-          "weight": 0.004361943678525855
-        },
-        {
-          "topic_id": 2,
-          "weight": 0.004359161193440385
-        },
-        {
-          "topic_id": 3,
-          "weight": 0.004357965756574447
-        }
-      ]
-    },
-    {
-      "document_id": "2",
-      "language": "en",
+      "language": "grc",
       "dominant_topic": 1,
       "topic_distribution": [
         {
           "topic_id": 1,
-          "weight": 0.9887237023274278
-        },
-        {
-          "topic_id": 0,
-          "weight": 0.0028204002818988526
-        },
-        {
-          "topic_id": 3,
-          "weight": 0.002818749279864926
-        },
-        {
-          "topic_id": 2,
-          "weight": 0.002818606888785446
+          "weight": 0.981803777682367
         },
         {
           "topic_id": 4,
-          "weight": 0.002818541222023125
+          "weight": 0.004551536440841472
+        },
+        {
+          "topic_id": 3,
+          "weight": 0.004548487968641319
+        },
+        {
+          "topic_id": 0,
+          "weight": 0.0045484375428988125
+        },
+        {
+          "topic_id": 2,
+          "weight": 0.004547760365251324
+        }
+      ]
+    },
+    {
+      "document_id": "2",
+      "language": "grc",
+      "dominant_topic": 1,
+      "topic_distribution": [
+        {
+          "topic_id": 1,
+          "weight": 0.9912021577434554
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.0022005071052914483
+        },
+        {
+          "topic_id": 3,
+          "weight": 0.0021992624593699926
+        },
+        {
+          "topic_id": 0,
+          "weight": 0.0021991763532295872
+        },
+        {
+          "topic_id": 2,
+          "weight": 0.002198896338653516
+        }
+      ]
+    },
+    {
+      "document_id": "3",
+      "language": "grc",
+      "dominant_topic": 1,
+      "topic_distribution": [
+        {
+          "topic_id": 1,
+          "weight": 0.9846054490906265
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.0038500050902939777
+        },
+        {
+          "topic_id": 3,
+          "weight": 0.003848233659911277
+        },
+        {
+          "topic_id": 0,
+          "weight": 0.0038481877489325764
+        },
+        {
+          "topic_id": 2,
+          "weight": 0.003848124410235571
+        }
+      ]
+    },
+    {
+      "document_id": "4",
+      "language": "grc",
+      "dominant_topic": 1,
+      "topic_distribution": [
+        {
+          "topic_id": 1,
+          "weight": 0.9846054490906265
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.0038500050902939777
+        },
+        {
+          "topic_id": 3,
+          "weight": 0.003848233659911277
+        },
+        {
+          "topic_id": 0,
+          "weight": 0.0038481877489325764
+        },
+        {
+          "topic_id": 2,
+          "weight": 0.003848124410235571
+        }
+      ]
+    },
+    {
+      "document_id": "5",
+      "language": "grc",
+      "dominant_topic": 1,
+      "topic_distribution": [
+        {
+          "topic_id": 1,
+          "weight": 0.9825940874493673
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.004353957188389528
+        },
+        {
+          "topic_id": 3,
+          "weight": 0.004350984398097288
+        },
+        {
+          "topic_id": 0,
+          "weight": 0.004350781775307819
+        },
+        {
+          "topic_id": 2,
+          "weight": 0.004350189188838156
+        }
+      ]
+    },
+    {
+      "document_id": "6",
+      "language": "grc",
+      "dominant_topic": 1,
+      "topic_distribution": [
+        {
+          "topic_id": 1,
+          "weight": 0.9839873295627919
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.0040060506375084425
+        },
+        {
+          "topic_id": 0,
+          "weight": 0.004002523995877229
+        },
+        {
+          "topic_id": 3,
+          "weight": 0.004002303272520957
+        },
+        {
+          "topic_id": 2,
+          "weight": 0.004001792531301575
+        }
+      ]
+    },
+    {
+      "document_id": "7",
+      "language": "grc",
+      "dominant_topic": 1,
+      "topic_distribution": [
+        {
+          "topic_id": 1,
+          "weight": 0.992150366055639
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.001963504529415713
+        },
+        {
+          "topic_id": 3,
+          "weight": 0.0019621887270582098
+        },
+        {
+          "topic_id": 0,
+          "weight": 0.001962131240277
+        },
+        {
+          "topic_id": 2,
+          "weight": 0.0019618094476101526
+        }
+      ]
+    },
+    {
+      "document_id": "1",
+      "language": "nl",
+      "dominant_topic": 2,
+      "topic_distribution": [
+        {
+          "topic_id": 2,
+          "weight": 0.9959860445285371
+        },
+        {
+          "topic_id": 3,
+          "weight": 0.0010075804512430346
+        },
+        {
+          "topic_id": 0,
+          "weight": 0.001002915878443793
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.0010019699510082339
+        },
+        {
+          "topic_id": 1,
+          "weight": 0.0010014891907677175
+        }
+      ]
+    },
+    {
+      "document_id": "2",
+      "language": "nl",
+      "dominant_topic": 3,
+      "topic_distribution": [
+        {
+          "topic_id": 3,
+          "weight": 0.9956622060555947
+        },
+        {
+          "topic_id": 2,
+          "weight": 0.001103716196232739
+        },
+        {
+          "topic_id": 0,
+          "weight": 0.0010788762259535333
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.0010782020743428792
+        },
+        {
+          "topic_id": 1,
+          "weight": 0.001076999447876031
+        }
+      ]
+    },
+    {
+      "document_id": "3",
+      "language": "nl",
+      "dominant_topic": 2,
+      "topic_distribution": [
+        {
+          "topic_id": 2,
+          "weight": 0.9920544897317111
+        },
+        {
+          "topic_id": 3,
+          "weight": 0.0019946916374690826
+        },
+        {
+          "topic_id": 0,
+          "weight": 0.0019843664111790266
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.001983850162660349
+        },
+        {
+          "topic_id": 1,
+          "weight": 0.0019826020569805288
+        }
+      ]
+    },
+    {
+      "document_id": "4",
+      "language": "nl",
+      "dominant_topic": 2,
+      "topic_distribution": [
+        {
+          "topic_id": 2,
+          "weight": 0.9914310813107503
+        },
+        {
+          "topic_id": 3,
+          "weight": 0.0021672066000310154
+        },
+        {
+          "topic_id": 0,
+          "weight": 0.002135646991610226
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.0021341873415433696
+        },
+        {
+          "topic_id": 1,
+          "weight": 0.0021318777560652103
+        }
+      ]
+    },
+    {
+      "document_id": "5",
+      "language": "nl",
+      "dominant_topic": 2,
+      "topic_distribution": [
+        {
+          "topic_id": 2,
+          "weight": 0.9942306913618503
+        },
+        {
+          "topic_id": 3,
+          "weight": 0.0014471633535228904
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.0014412602446312733
+        },
+        {
+          "topic_id": 1,
+          "weight": 0.0014404868358934178
+        },
+        {
+          "topic_id": 0,
+          "weight": 0.0014403982041019494
+        }
+      ]
+    },
+    {
+      "document_id": "6",
+      "language": "nl",
+      "dominant_topic": 2,
+      "topic_distribution": [
+        {
+          "topic_id": 2,
+          "weight": 0.9921359572936952
+        },
+        {
+          "topic_id": 3,
+          "weight": 0.001972238844687786
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.0019645438504593766
+        },
+        {
+          "topic_id": 1,
+          "weight": 0.001964125130744938
+        },
+        {
+          "topic_id": 0,
+          "weight": 0.001963134880412607
+        }
+      ]
+    },
+    {
+      "document_id": "7",
+      "language": "nl",
+      "dominant_topic": 2,
+      "topic_distribution": [
+        {
+          "topic_id": 2,
+          "weight": 0.9919733110478735
+        },
+        {
+          "topic_id": 3,
+          "weight": 0.0020159375250096943
+        },
+        {
+          "topic_id": 0,
+          "weight": 0.002004956349454515
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.0020036920746306936
+        },
+        {
+          "topic_id": 1,
+          "weight": 0.002002103003031603
+        }
+      ]
+    },
+    {
+      "document_id": "1",
+      "language": "de",
+      "dominant_topic": 0,
+      "topic_distribution": [
+        {
+          "topic_id": 0,
+          "weight": 0.9922759645277528
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.0019358935568177078
+        },
+        {
+          "topic_id": 2,
+          "weight": 0.001933648459245584
+        },
+        {
+          "topic_id": 3,
+          "weight": 0.0019294169433435456
+        },
+        {
+          "topic_id": 1,
+          "weight": 0.001925076512840466
+        }
+      ]
+    },
+    {
+      "document_id": "2",
+      "language": "de",
+      "dominant_topic": 0,
+      "topic_distribution": [
+        {
+          "topic_id": 0,
+          "weight": 0.995494802301962
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.0011278270065741942
+        },
+        {
+          "topic_id": 2,
+          "weight": 0.0011268559558415719
+        },
+        {
+          "topic_id": 3,
+          "weight": 0.0011257444629025203
+        },
+        {
+          "topic_id": 1,
+          "weight": 0.001124770272719623
+        }
+      ]
+    },
+    {
+      "document_id": "3",
+      "language": "de",
+      "dominant_topic": 2,
+      "topic_distribution": [
+        {
+          "topic_id": 2,
+          "weight": 0.6051863900026021
+        },
+        {
+          "topic_id": 0,
+          "weight": 0.39027972661142224
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.0015178671784301181
+        },
+        {
+          "topic_id": 3,
+          "weight": 0.0015088463744533575
+        },
+        {
+          "topic_id": 1,
+          "weight": 0.001507169833092106
+        }
+      ]
+    },
+    {
+      "document_id": "4",
+      "language": "de",
+      "dominant_topic": 0,
+      "topic_distribution": [
+        {
+          "topic_id": 0,
+          "weight": 0.9841833344042217
+        },
+        {
+          "topic_id": 3,
+          "weight": 0.003996015697705258
+        },
+        {
+          "topic_id": 2,
+          "weight": 0.003948056258190361
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.003942767057536873
+        },
+        {
+          "topic_id": 1,
+          "weight": 0.003929826582345741
+        }
+      ]
+    },
+    {
+      "document_id": "5",
+      "language": "de",
+      "dominant_topic": 4,
+      "topic_distribution": [
+        {
+          "topic_id": 4,
+          "weight": 0.7773917303633617
+        },
+        {
+          "topic_id": 0,
+          "weight": 0.21240685983077384
+        },
+        {
+          "topic_id": 2,
+          "weight": 0.0034101894169205273
+        },
+        {
+          "topic_id": 3,
+          "weight": 0.0033981456045616676
+        },
+        {
+          "topic_id": 1,
+          "weight": 0.0033930747843823063
+        }
+      ]
+    },
+    {
+      "document_id": "6",
+      "language": "de",
+      "dominant_topic": 0,
+      "topic_distribution": [
+        {
+          "topic_id": 0,
+          "weight": 0.9918129712941772
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.0020512673327096292
+        },
+        {
+          "topic_id": 2,
+          "weight": 0.002046470428442823
+        },
+        {
+          "topic_id": 3,
+          "weight": 0.002046207478481363
+        },
+        {
+          "topic_id": 1,
+          "weight": 0.0020430834661889275
+        }
+      ]
+    },
+    {
+      "document_id": "7",
+      "language": "de",
+      "dominant_topic": 0,
+      "topic_distribution": [
+        {
+          "topic_id": 0,
+          "weight": 0.991980553183698
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.0020071688601221074
+        },
+        {
+          "topic_id": 2,
+          "weight": 0.002006072486135424
+        },
+        {
+          "topic_id": 3,
+          "weight": 0.0020038469229467976
+        },
+        {
+          "topic_id": 1,
+          "weight": 0.0020023585470976195
+        }
+      ]
+    },
+    {
+      "document_id": "1",
+      "language": "en",
+      "dominant_topic": 3,
+      "topic_distribution": [
+        {
+          "topic_id": 3,
+          "weight": 0.9817410570722548
+        },
+        {
+          "topic_id": 0,
+          "weight": 0.004581854108674078
+        },
+        {
+          "topic_id": 2,
+          "weight": 0.004570176902565268
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.004554867428785704
+        },
+        {
+          "topic_id": 1,
+          "weight": 0.004552044487720178
+        }
+      ]
+    },
+    {
+      "document_id": "2",
+      "language": "en",
+      "dominant_topic": 3,
+      "topic_distribution": [
+        {
+          "topic_id": 3,
+          "weight": 0.9866496906643967
+        },
+        {
+          "topic_id": 0,
+          "weight": 0.003339807217937423
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.003338572191413689
+        },
+        {
+          "topic_id": 1,
+          "weight": 0.0033365206997223707
+        },
+        {
+          "topic_id": 2,
+          "weight": 0.003335409226529913
         }
       ]
     },
     {
       "document_id": "3",
       "language": "en",
-      "dominant_topic": 3,
+      "dominant_topic": 0,
       "topic_distribution": [
         {
-          "topic_id": 3,
-          "weight": 0.9576750150170477
-        },
-        {
-          "topic_id": 1,
-          "weight": 0.010627581428255952
+          "topic_id": 0,
+          "weight": 0.9465802704439147
         },
         {
           "topic_id": 4,
-          "weight": 0.010607382730193756
+          "weight": 0.013365183261731542
         },
         {
-          "topic_id": 0,
-          "weight": 0.010550812378115797
+          "topic_id": 3,
+          "weight": 0.013359660558302018
+        },
+        {
+          "topic_id": 1,
+          "weight": 0.013350675176728565
         },
         {
           "topic_id": 2,
-          "weight": 0.010539208446386972
+          "weight": 0.01334421055932318
         }
       ]
     },
@@ -695,131 +884,131 @@
       "topic_distribution": [
         {
           "topic_id": 0,
-          "weight": 0.9756522492769868
-        },
-        {
-          "topic_id": 1,
-          "weight": 0.006108440127840497
-        },
-        {
-          "topic_id": 4,
-          "weight": 0.006084440284401543
+          "weight": 0.9732129118879927
         },
         {
           "topic_id": 3,
-          "weight": 0.006078223049042811
+          "weight": 0.006723360023725885
         },
         {
           "topic_id": 2,
-          "weight": 0.006076647261728326
+          "weight": 0.006703897908547404
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.006682318025541989
+        },
+        {
+          "topic_id": 1,
+          "weight": 0.006677512154191928
         }
       ]
     },
     {
       "document_id": "5",
       "language": "en",
-      "dominant_topic": 1,
+      "dominant_topic": 0,
       "topic_distribution": [
         {
-          "topic_id": 1,
-          "weight": 0.9665112882444801
-        },
-        {
-          "topic_id": 4,
-          "weight": 0.008413331495129689
-        },
-        {
           "topic_id": 0,
-          "weight": 0.008372262833459765
+          "weight": 0.9633393931235433
         },
         {
           "topic_id": 3,
-          "weight": 0.00836329117216507
+          "weight": 0.009341815567695146
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.00910951001414749
+        },
+        {
+          "topic_id": 1,
+          "weight": 0.009106667752272235
         },
         {
           "topic_id": 2,
-          "weight": 0.008339826254765391
+          "weight": 0.009102613542341877
         }
       ]
     },
     {
       "document_id": "7",
       "language": "en",
-      "dominant_topic": 4,
+      "dominant_topic": 0,
       "topic_distribution": [
         {
-          "topic_id": 4,
-          "weight": 0.9702004769865761
-        },
-        {
-          "topic_id": 3,
-          "weight": 0.007478754475424934
-        },
-        {
-          "topic_id": 1,
-          "weight": 0.007454496955878976
-        },
-        {
           "topic_id": 0,
-          "weight": 0.007437647365157204
+          "weight": 0.9665723075014235
         },
         {
           "topic_id": 2,
-          "weight": 0.007428624216962799
+          "weight": 0.008364123626648694
+        },
+        {
+          "topic_id": 3,
+          "weight": 0.008362541656555663
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.008354509773309704
+        },
+        {
+          "topic_id": 1,
+          "weight": 0.008346517442062423
         }
       ]
     },
     {
       "document_id": "1",
       "language": "es",
-      "dominant_topic": 3,
+      "dominant_topic": 4,
       "topic_distribution": [
         {
-          "topic_id": 3,
-          "weight": 0.9859475198043327
-        },
-        {
           "topic_id": 4,
-          "weight": 0.003514721681191505
+          "weight": 0.982839652416537
         },
         {
-          "topic_id": 1,
-          "weight": 0.0035142349000846927
-        },
-        {
-          "topic_id": 0,
-          "weight": 0.0035119146267830106
+          "topic_id": 3,
+          "weight": 0.0043586641896177815
         },
         {
           "topic_id": 2,
-          "weight": 0.003511608987608154
+          "weight": 0.004282568682023743
+        },
+        {
+          "topic_id": 1,
+          "weight": 0.004261266094028064
+        },
+        {
+          "topic_id": 0,
+          "weight": 0.004257848617793413
         }
       ]
     },
     {
       "document_id": "2",
       "language": "es",
-      "dominant_topic": 4,
+      "dominant_topic": 3,
       "topic_distribution": [
         {
-          "topic_id": 4,
-          "weight": 0.525485485828226
-        },
-        {
           "topic_id": 3,
-          "weight": 0.4681097707369045
+          "weight": 0.9907774220846015
         },
         {
-          "topic_id": 1,
-          "weight": 0.002136841114189313
-        },
-        {
-          "topic_id": 0,
-          "weight": 0.002134419385459927
+          "topic_id": 4,
+          "weight": 0.002310094933462905
         },
         {
           "topic_id": 2,
-          "weight": 0.002133482935220261
+          "weight": 0.0023094803779190767
+        },
+        {
+          "topic_id": 1,
+          "weight": 0.002302069956961823
+        },
+        {
+          "topic_id": 0,
+          "weight": 0.0023009326470546415
         }
       ]
     },
@@ -830,23 +1019,23 @@
       "topic_distribution": [
         {
           "topic_id": 3,
-          "weight": 0.5811051158456224
+          "weight": 0.926742599225353
         },
         {
           "topic_id": 4,
-          "weight": 0.3725743606416102
+          "weight": 0.01848170243857071
         },
         {
           "topic_id": 1,
-          "weight": 0.01546671267244946
-        },
-        {
-          "topic_id": 0,
-          "weight": 0.015430669420487693
+          "weight": 0.01830956639614088
         },
         {
           "topic_id": 2,
-          "weight": 0.015423141419830309
+          "weight": 0.018258125643307782
+        },
+        {
+          "topic_id": 0,
+          "weight": 0.018208006296627572
         }
       ]
     },
@@ -857,23 +1046,23 @@
       "topic_distribution": [
         {
           "topic_id": 3,
-          "weight": 0.9821902897503212
-        },
-        {
-          "topic_id": 4,
-          "weight": 0.00445370864317952
-        },
-        {
-          "topic_id": 0,
-          "weight": 0.004453161725897986
+          "weight": 0.4981831334917514
         },
         {
           "topic_id": 2,
-          "weight": 0.004451761002710603
+          "weight": 0.4854259853360021
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.005560947481233632
         },
         {
           "topic_id": 1,
-          "weight": 0.0044510788778906575
+          "weight": 0.005417067946203077
+        },
+        {
+          "topic_id": 0,
+          "weight": 0.00541286574480954
         }
       ]
     },
@@ -884,50 +1073,50 @@
       "topic_distribution": [
         {
           "topic_id": 3,
-          "weight": 0.9876754991542999
+          "weight": 0.9863937484308052
         },
         {
           "topic_id": 4,
-          "weight": 0.0030845997891007183
-        },
-        {
-          "topic_id": 1,
-          "weight": 0.0030813009955012968
-        },
-        {
-          "topic_id": 0,
-          "weight": 0.0030794400953508168
+          "weight": 0.0034105459260488063
         },
         {
           "topic_id": 2,
-          "weight": 0.0030791599657473204
+          "weight": 0.0034064611062103343
+        },
+        {
+          "topic_id": 1,
+          "weight": 0.00339689511404066
+        },
+        {
+          "topic_id": 0,
+          "weight": 0.003392349422895008
         }
       ]
     },
     {
       "document_id": "6",
       "language": "es",
-      "dominant_topic": 3,
+      "dominant_topic": 2,
       "topic_distribution": [
         {
+          "topic_id": 2,
+          "weight": 0.6429044267135888
+        },
+        {
           "topic_id": 3,
-          "weight": 0.989316789736281
+          "weight": 0.34836335248796174
         },
         {
           "topic_id": 4,
-          "weight": 0.0026714153247191317
-        },
-        {
-          "topic_id": 0,
-          "weight": 0.002670960589914606
+          "weight": 0.0029232813098992064
         },
         {
           "topic_id": 1,
-          "weight": 0.002670701038484244
+          "weight": 0.002905882821753164
         },
         {
-          "topic_id": 2,
-          "weight": 0.0026701333106010105
+          "topic_id": 0,
+          "weight": 0.002903056666797137
         }
       ]
     },
@@ -938,23 +1127,23 @@
       "topic_distribution": [
         {
           "topic_id": 3,
-          "weight": 0.9908960474353394
-        },
-        {
-          "topic_id": 4,
-          "weight": 0.002276461951019351
-        },
-        {
-          "topic_id": 0,
-          "weight": 0.00227601915298567
-        },
-        {
-          "topic_id": 1,
-          "weight": 0.002275954462924122
+          "weight": 0.9904458483827814
         },
         {
           "topic_id": 2,
-          "weight": 0.002275516997731339
+          "weight": 0.0023937413887614866
+        },
+        {
+          "topic_id": 4,
+          "weight": 0.002393269852076356
+        },
+        {
+          "topic_id": 1,
+          "weight": 0.002383995932014504
+        },
+        {
+          "topic_id": 0,
+          "weight": 0.002383144444366248
         }
       ]
     }

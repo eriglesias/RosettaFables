@@ -2,16 +2,21 @@
   "method": "dbscan",
   "eps": 0.5,
   "min_samples": 2,
-  "n_clusters": 0,
-  "noise_points": 27,
+  "n_clusters": 1,
+  "noise_points": 32,
   "feature_type": "tfidf",
   "feature_count": 200,
-  "fable_count": 27,
+  "fable_count": 34,
   "quality": {},
   "clusters": {
     "noise": {
-      "size": 27,
+      "size": 32,
       "fable_ids": [
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
+        "unknown",
         "unknown",
         "unknown",
         "unknown",
@@ -41,6 +46,7 @@
         "unknown"
       ],
       "languages": {
+        "grc": 5,
         "nl": 7,
         "de": 7,
         "en": 6,
@@ -49,43 +55,95 @@
       "top_features": [
         {
           "name": "de",
-          "weight": 0.13749546502536375
+          "weight": 0.12223192821841554
+        },
+        {
+          "name": "καὶ",
+          "weight": 0.08282867384876405
         },
         {
           "name": "und",
-          "weight": 0.09269041650234883
+          "weight": 0.07973246576390802
         },
         {
           "name": "en",
-          "weight": 0.08431789545942768
+          "weight": 0.07424762531601498
         },
         {
           "name": "the",
-          "weight": 0.08142681811299539
+          "weight": 0.07144961463312285
         },
         {
           "name": "que",
-          "weight": 0.08047484599596712
+          "weight": 0.0688499005012114
+        },
+        {
+          "name": "δὲ",
+          "weight": 0.063024525576346
         },
         {
           "name": "el",
-          "weight": 0.0699889866134814
+          "weight": 0.059665848725520644
         },
         {
           "name": "wolf",
-          "weight": 0.06525465207091592
-        },
-        {
-          "name": "la",
-          "weight": 0.05782437494004543
+          "weight": 0.05706583635365246
         },
         {
           "name": "der",
-          "weight": 0.05761016500282948
+          "weight": 0.04973036407035286
+        }
+      ]
+    },
+    "cluster_0": {
+      "size": 2,
+      "fable_ids": [
+        "unknown",
+        "unknown"
+      ],
+      "languages": {
+        "grc": 2
+      },
+      "top_features": [
+        {
+          "name": "ὀστοῦν",
+          "weight": 0.5454631694884758
         },
         {
-          "name": "un",
-          "weight": 0.05686848796908722
+          "name": "τὴν",
+          "weight": 0.46485632473449906
+        },
+        {
+          "name": "μισθὸν",
+          "weight": 0.36364211299231725
+        },
+        {
+          "name": "τὸν",
+          "weight": 0.2745079689516816
+        },
+        {
+          "name": "τὸ",
+          "weight": 0.2745079689516816
+        },
+        {
+          "name": "δὲ",
+          "weight": 0.2604607171638608
+        },
+        {
+          "name": "καὶ",
+          "weight": 0.2604607171638608
+        },
+        {
+          "name": "λύκος",
+          "weight": 0.166689249558686
+        },
+        {
+          "name": "αὐτοῦ",
+          "weight": 0.14536216551940304
+        },
+        {
+          "name": "αὐτὸν",
+          "weight": 0.1372539844758408
         }
       ]
     }

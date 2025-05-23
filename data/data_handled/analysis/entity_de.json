@@ -1,7 +1,7 @@
 {
   "ANIMAL_CHAR": {
-    "percentage": 38.63636363636363,
     "count": 17,
+    "percentage": 38.64,
     "examples": [
       "Ein Wolf",
       "Der Wolf",
@@ -11,8 +11,8 @@
     ]
   },
   "MISC": {
-    "percentage": 25.0,
     "count": 11,
+    "percentage": 25.0,
     "examples": [
       "Unverschämter",
       "sei.\"Du bist",
@@ -22,8 +22,8 @@
     ]
   },
   "PER": {
-    "percentage": 18.181818181818183,
     "count": 8,
+    "percentage": 18.18,
     "examples": [
       "hervorkroch",
       "Lieber",
@@ -33,8 +33,8 @@
     ]
   },
   "LOC": {
-    "percentage": 15.909090909090908,
     "count": 7,
+    "percentage": 15.91,
     "examples": [
       "Stadt",
       "Abendschmauses",
@@ -44,10 +44,17 @@
     ]
   },
   "ORG": {
-    "percentage": 2.272727272727273,
     "count": 1,
+    "percentage": 2.27,
     "examples": [
       "ihr,\"daß du"
     ]
+  },
+  "_metadata": {
+    "language": "de",
+    "total_entities": 44,
+    "processed_fables": 7,
+    "unique_entity_types": 5,
+    "analysis_timestamp": "2025-05-23T16:30:14.030078"
   }
 }

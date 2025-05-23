@@ -1,12 +1,14 @@
 {
   "fable_id": "3",
   "languages": [
+    "grc",
     "nl",
     "de",
     "en",
     "es"
   ],
   "token_counts": {
+    "grc": 62,
     "nl": 184,
     "de": 256,
     "en": 56,
@@ -17,36 +19,42 @@
   "complexity_scores": {},
   "basic_metrics": {
     "title": {
+      "grc": "Λύκος καὶ ἐρωδιός",
       "nl": "Vos en de druiven",
       "de": "Der Fuchs und die Trauben",
       "en": "Fox and the Grapes",
       "es": "La zorra y las uvas"
     },
     "word_counts": {
+      "grc": 55,
       "nl": 166,
       "de": 222,
       "en": 48,
       "es": 26
     },
     "character_counts": {
+      "grc": 299,
       "nl": 712,
       "de": 1165,
       "en": 206,
       "es": 129
     },
     "sentence_counts": {
+      "grc": 5,
       "nl": 13,
       "de": 17,
       "en": 4,
       "es": 2
     },
     "entity_counts": {
+      "grc": 0,
       "nl": 2,
       "de": 6,
       "en": 1,
       "es": 1
     },
     "avg_sentence_length": {
+      "grc": 11.0,
       "nl": 12.76923076923077,
       "de": 13.058823529411764,
       "en": 12.0,
@@ -55,6 +63,17 @@
   },
   "content": {
     "pos_distribution": {
+      "grc": {
+        "NOUN": 20.967741935483872,
+        "VERB": 27.419354838709676,
+        "DET": 12.903225806451612,
+        "PRON": 8.064516129032258,
+        "PUNCT": 11.29032258064516,
+        "ADV": 8.064516129032258,
+        "ADP": 6.451612903225806,
+        "CCONJ": 3.225806451612903,
+        "ADJ": 1.6129032258064515
+      },
       "nl": {
         "ADP": 10.869565217391305,
         "DET": 11.956521739130435,
@@ -111,12 +130,14 @@
       }
     },
     "has_moral": {
+      "grc": true,
       "nl": true,
       "de": false,
       "en": true,
       "es": true
     },
     "moral_length": {
+      "grc": 15,
       "nl": 13,
       "en": 23,
       "es": 16
@@ -171,6 +192,10 @@
   },
   "similarity": {
     "structural_similarity": {
+      "grc-nl": 0.45866543095458756,
+      "grc-de": 0.38521462639109705,
+      "grc-en": 0.8524242424242425,
+      "grc-es": 0.5183216783216784,
       "nl-de": 0.8005462476050712,
       "nl-en": 0.42669138090824843,
       "nl-es": 0.32063876809011194,
@@ -179,6 +204,10 @@
       "en-es": 0.6012820512820514
     },
     "content_similarity": {
+      "grc-nl": 0.45830285671136384,
+      "grc-de": 0.27293585705469026,
+      "grc-en": 0.4440574861122743,
+      "grc-es": 0.4720295132316653,
       "nl-de": 0.29099343607819483,
       "nl-en": 0.44112526439865446,
       "nl-es": 0.4531039818805498,
@@ -187,6 +216,10 @@
       "en-es": 0.4530309350130425
     },
     "lexical_similarity": {
+      "grc-nl": 0.0,
+      "grc-de": 0.0,
+      "grc-en": 0.0,
+      "grc-es": 0.0,
       "nl-de": 0.05091750772173155,
       "nl-en": 0.0,
       "nl-es": 0.13825251033437555,

@@ -1,7 +1,7 @@
 {
   "ANIMAL_CHAR": {
-    "percentage": 61.29032258064516,
     "count": 19,
+    "percentage": 61.29,
     "examples": [
       "Geitje",
       "Geit",
@@ -11,8 +11,8 @@
     ]
   },
   "WORK_OF_ART": {
-    "percentage": 9.67741935483871,
     "count": 3,
+    "percentage": 9.68,
     "examples": [
       "Alstublieft, laat mij gaan",
       "De grote",
@@ -20,48 +20,55 @@
     ]
   },
   "DATE": {
-    "percentage": 6.451612903225806,
     "count": 2,
+    "percentage": 6.45,
     "examples": [
       "volgende morgen",
       "Enkele dagen"
     ]
   },
   "PERSON": {
-    "percentage": 6.451612903225806,
     "count": 2,
+    "percentage": 6.45,
     "examples": [
       "Stadsmuis:\"Je",
       "Razend"
     ]
   },
   "ORG": {
-    "percentage": 6.451612903225806,
     "count": 2,
+    "percentage": 6.45,
     "examples": [
       "trekken.\"Ik",
       "Leeuw:\"Je"
     ]
   },
   "GPE": {
-    "percentage": 3.225806451612903,
     "count": 1,
+    "percentage": 3.23,
     "examples": [
       "opeten.\"Alstublieft"
     ]
   },
   "ORDINAL": {
-    "percentage": 3.225806451612903,
     "count": 1,
+    "percentage": 3.23,
     "examples": [
       "eerste"
     ]
   },
   "CARDINAL": {
-    "percentage": 3.225806451612903,
     "count": 1,
+    "percentage": 3.23,
     "examples": [
       "één"
     ]
+  },
+  "_metadata": {
+    "language": "nl",
+    "total_entities": 31,
+    "processed_fables": 7,
+    "unique_entity_types": 8,
+    "analysis_timestamp": "2025-05-23T16:30:14.024801"
   }
 }

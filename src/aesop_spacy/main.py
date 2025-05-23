@@ -55,14 +55,12 @@ sys.path.insert(0, str(project_root))
 def parse_arguments():
     """Parse and validate command line arguments"""
     parser = argparse.ArgumentParser(description="Process and analyze Aesop's fables")
-
     parser.add_argument('--data-dir', type=str, help='Data directory path')
     parser.add_argument('--output-dir', type=str, help='Output directory path')
     parser.add_argument('--only-process', action='store_true', help='Only process fables')
     parser.add_argument('--only-analyze', action='store_true', help='Only analyze processed fables')
     parser.add_argument('--debug', action='store_true', help='Enable debug logging')
-    parser.add_argument('--verify-models', action='store_true', help='Verify required models and exit')
-
+    parser.add_argument('--verify-models', action='store_true', help='Verify required models')
     return parser.parse_args()
 
 
@@ -79,34 +77,47 @@ def setup_logging(debug_mode=False):
 
 
 def setup_directories(data_dir, output_dir, logger):
-    """Ensure required directories exist and return validated paths"""
+    """
+    Ensure required directories exist with clean separation of concerns.
+    
+    Directory structure philosophy:
+    - data_raw/     : Contains only raw, unprocessed input files
+    - data_handled/ : Contains ALL processed outputs (JSON, analysis, figures)
+    
+    This creates a clear data flow: raw -> handled
+    """
     # Create absolute paths if relative paths provided
     base_dir = Path(data_dir) if data_dir else project_root / "data"
-    
-    # Define input and output paths based on your structure
+
+    # Define clean directory structure
+     # Raw input files only
     input_dir = base_dir / "data_raw"
+    # All processed outputs
     output_dir = Path(output_dir) if output_dir else base_dir / "data_handled"
 
     logger.info("Using input directory: %s", input_dir)
     logger.info("Using output directory: %s", output_dir)
 
-    # Ensure directories exist
+    # Create input structure (for raw files only)
     (input_dir / "fables").mkdir(parents=True, exist_ok=True)
-    (output_dir / "processed").mkdir(parents=True, exist_ok=True)
-    (output_dir / "analysis").mkdir(parents=True, exist_ok=True)
-
-    # Verify fable source file
+    # Create output structure (for all processed data)
+    (output_dir / "processed").mkdir(parents=True, exist_ok=True)  # Processed fables JSON
+    (output_dir / "analysis").mkdir(parents=True, exist_ok=True)   # Analysis results
+    (output_dir / "figures").mkdir(parents=True, exist_ok=True)    # Visualizations
+    # Verify input files exist
     fable_md_path = input_dir / "fables" / "initial_fables.md"
-    logger.info("Looking for fables at: %s (exists: %s)",fable_md_path, fable_md_path.exists())
-
-    # Check processed files
+    logger.info("Looking for raw fables at: %s (exists: %s)", fable_md_path, fable_md_path.exists())
+    # Check existing processed files (in the correct location)
     json_files = list((output_dir / "processed").glob("*.json"))
-    logger.info("Found %d JSON files in processed directory", len(json_files))
+    logger.info("Found %d processed JSON files in output directory", len(json_files))
+    # Log the clean directory structure
+    logger.debug("Directory structure:")
+    logger.debug("  Raw input:  %s", input_dir)
+    logger.debug("  Processed:  %s", output_dir / "processed")
+    logger.debug("  Analysis:   %s", output_dir / "analysis")
+    logger.debug("  Figures:    %s", output_dir / "figures")
 
-    # Return both input and output paths
     return input_dir, output_dir
-
-
 
 
 def save_analysis_summary(output_dir, results):

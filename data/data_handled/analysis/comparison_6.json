@@ -1,11 +1,13 @@
 {
   "fable_id": "6",
   "languages": [
+    "grc",
     "nl",
     "de",
     "es"
   ],
   "token_counts": {
+    "grc": 115,
     "nl": 189,
     "de": 186,
     "es": 171
@@ -15,31 +17,37 @@
   "complexity_scores": {},
   "basic_metrics": {
     "title": {
+      "grc": "Κώνωψ καὶ λέων",
       "nl": "Leeuw en Mug",
       "de": "Der Löwe und Die Mücke",
       "es": "El Mosquito y el León"
     },
     "word_counts": {
+      "grc": 99,
       "nl": 170,
       "de": 159,
       "es": 149
     },
     "character_counts": {
+      "grc": 494,
       "nl": 749,
       "de": 813,
       "es": 639
     },
     "sentence_counts": {
+      "grc": 7,
       "nl": 15,
       "de": 13,
       "es": 7
     },
     "entity_counts": {
+      "grc": 0,
       "nl": 3,
       "de": 6,
       "es": 7
     },
     "avg_sentence_length": {
+      "grc": 14.142857142857142,
       "nl": 11.333333333333334,
       "de": 12.23076923076923,
       "es": 21.285714285714285
@@ -47,6 +55,20 @@
   },
   "content": {
     "pos_distribution": {
+      "grc": {
+        "NOUN": 16.52173913043478,
+        "ADP": 4.3478260869565215,
+        "VERB": 18.26086956521739,
+        "CCONJ": 6.956521739130435,
+        "PRON": 6.086956521739131,
+        "PUNCT": 14.782608695652174,
+        "ADJ": 11.304347826086957,
+        "AUX": 1.7391304347826086,
+        "SCONJ": 3.4782608695652173,
+        "ADV": 3.4782608695652173,
+        "DET": 10.434782608695652,
+        "PART": 2.608695652173913
+      },
       "nl": {
         "PROPN": 3.7037037037037033,
         "VERB": 13.756613756613756,
@@ -92,6 +114,7 @@
       }
     },
     "has_moral": {
+      "grc": false,
       "nl": true,
       "de": false,
       "es": false
@@ -175,16 +198,25 @@
   },
   "similarity": {
     "structural_similarity": {
+      "grc-nl": 0.5798772034066153,
+      "grc-de": 0.6374015921185733,
+      "grc-es": 0.7986577181208054,
       "nl-de": 0.9061092613145888,
       "nl-es": 0.643742597710225,
       "de-es": 0.7051473620297225
     },
     "content_similarity": {
+      "grc-nl": 0.2610609130570481,
+      "grc-de": 0.46792423416007256,
+      "grc-es": 0.4723157044081794,
       "nl-de": 0.2816425684499864,
       "nl-es": 0.27410445935007915,
       "de-es": 0.480314024681249
     },
     "lexical_similarity": {
+      "grc-nl": 0.0,
+      "grc-de": 0.0,
+      "grc-es": 0.0,
       "nl-de": 0.01303277065821315,
       "nl-es": 0.12314150404932941,
       "de-es": 0.0

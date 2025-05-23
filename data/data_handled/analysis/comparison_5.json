@@ -1,12 +1,14 @@
 {
   "fable_id": "5",
   "languages": [
+    "grc",
     "nl",
     "de",
     "en",
     "es"
   ],
   "token_counts": {
+    "grc": 100,
     "nl": 270,
     "de": 136,
     "en": 86,
@@ -17,36 +19,42 @@
   "complexity_scores": {},
   "basic_metrics": {
     "title": {
+      "grc": "Λέων κιὰ μῦς ἀντευεργέτης",
       "nl": "Leeuw en Muis",
       "de": "Der Löwe und das Mäuschen",
       "en": "Lion and Mouse on His Mane",
       "es": "El León y el Ratón agradecido"
     },
     "word_counts": {
+      "grc": 93,
       "nl": 243,
       "de": 119,
       "en": 76,
       "es": 124
     },
     "character_counts": {
+      "grc": 467,
       "nl": 1022,
       "de": 639,
       "en": 321,
       "es": 533
     },
     "sentence_counts": {
+      "grc": 8,
       "nl": 20,
       "de": 7,
       "en": 5,
       "es": 5
     },
     "entity_counts": {
+      "grc": 0,
       "nl": 7,
       "de": 4,
       "en": 3,
       "es": 7
     },
     "avg_sentence_length": {
+      "grc": 11.625,
       "nl": 12.15,
       "de": 17.0,
       "en": 15.2,
@@ -55,6 +63,20 @@
   },
   "content": {
     "pos_distribution": {
+      "grc": {
+        "NOUN": 14.000000000000002,
+        "ADJ": 11.0,
+        "DET": 8.0,
+        "VERB": 26.0,
+        "PUNCT": 9.0,
+        "ADV": 9.0,
+        "CCONJ": 6.0,
+        "PRON": 6.0,
+        "AUX": 2.0,
+        "PART": 4.0,
+        "SCONJ": 3.0,
+        "ADP": 2.0
+      },
       "nl": {
         "NOUN": 13.333333333333334,
         "VERB": 15.555555555555555,
@@ -115,12 +137,14 @@
       }
     },
     "has_moral": {
+      "grc": true,
       "nl": true,
       "de": true,
       "en": true,
       "es": true
     },
     "moral_length": {
+      "grc": 13,
       "nl": 7,
       "de": 16,
       "en": 10,
@@ -224,6 +248,10 @@
   },
   "similarity": {
     "structural_similarity": {
+      "grc-nl": 0.5044444444444445,
+      "grc-de": 0.7993697478991597,
+      "grc-en": 0.729842246745897,
+      "grc-es": 0.64375,
       "nl-de": 0.47882595013313967,
       "nl-en": 0.38497130171106786,
       "nl-es": 0.40209909730519056,
@@ -232,6 +260,10 @@
       "en-es": 0.767741935483871
     },
     "content_similarity": {
+      "grc-nl": 0.44090141823463336,
+      "grc-de": 0.4377814172334903,
+      "grc-en": 0.4215792822300306,
+      "grc-es": 0.4269126366891519,
       "nl-de": 0.4375227555005982,
       "nl-en": 0.4678282684006791,
       "nl-es": 0.44437676470492293,
@@ -240,6 +272,10 @@
       "en-es": 0.4532163340209524
     },
     "lexical_similarity": {
+      "grc-nl": 0.0,
+      "grc-de": 0.0,
+      "grc-en": 0.0,
+      "grc-es": 0.0,
       "nl-de": 0.03645384698041506,
       "nl-en": 0.03944147098115301,
       "nl-es": 0.06700282313459718,

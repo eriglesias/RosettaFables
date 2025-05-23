@@ -1,11 +1,13 @@
 {
   "fable_id": "7",
   "languages": [
+    "grc",
     "nl",
     "de",
     "en"
   ],
   "token_counts": {
+    "grc": 195,
     "nl": 188,
     "de": 213,
     "en": 108
@@ -15,31 +17,37 @@
   "complexity_scores": {},
   "basic_metrics": {
     "title": {
+      "grc": "Ἀλώπηξ καὶ τράγος",
       "nl": "Vos en Geit",
       "de": "Der Fuchs und der Bock",
       "en": "Fox and Goat in the Well"
     },
     "word_counts": {
+      "grc": 177,
       "nl": 174,
       "de": 185,
       "en": 96
     },
     "character_counts": {
+      "grc": 913,
       "nl": 710,
       "de": 973,
       "en": 425
     },
     "sentence_counts": {
+      "grc": 11,
       "nl": 14,
       "de": 11,
       "en": 6
     },
     "entity_counts": {
+      "grc": 0,
       "nl": 3,
       "de": 4,
       "en": 3
     },
     "avg_sentence_length": {
+      "grc": 16.09090909090909,
       "nl": 12.428571428571429,
       "de": 16.818181818181817,
       "en": 16.0
@@ -47,6 +55,21 @@
   },
   "content": {
     "pos_distribution": {
+      "grc": {
+        "NOUN": 20.51282051282051,
+        "VERB": 17.435897435897434,
+        "ADP": 5.128205128205128,
+        "ADJ": 7.6923076923076925,
+        "PUNCT": 10.76923076923077,
+        "ADV": 6.666666666666667,
+        "DET": 16.923076923076923,
+        "PRON": 5.128205128205128,
+        "SCONJ": 3.076923076923077,
+        "AUX": 1.0256410256410255,
+        "CCONJ": 4.615384615384616,
+        "INTJ": 0.5128205128205128,
+        "PART": 0.5128205128205128
+      },
       "nl": {
         "PROPN": 4.787234042553192,
         "AUX": 5.851063829787234,
@@ -94,6 +117,7 @@
       }
     },
     "has_moral": {
+      "grc": false,
       "nl": true,
       "de": true,
       "en": true
@@ -155,16 +179,25 @@
   },
   "similarity": {
     "structural_similarity": {
+      "grc-nl": 0.8619854721549637,
+      "grc-de": 0.9740540540540541,
+      "grc-en": 0.6340010272213662,
       "nl-de": 0.8383011583011584,
       "nl-en": 0.547475369458128,
       "de-en": 0.616019656019656
     },
     "content_similarity": {
+      "grc-nl": 0.26295757433757744,
+      "grc-de": 0.2832770051597433,
+      "grc-en": 0.2641756899185961,
       "nl-de": 0.4692086831503294,
       "nl-en": 0.44440316880380143,
       "de-en": 0.43036568844276457
     },
     "lexical_similarity": {
+      "grc-nl": 0.0,
+      "grc-de": 0.0,
+      "grc-en": 0.0,
       "nl-de": 0.04512158422172299,
       "nl-en": 0.06508893971228143,
       "de-en": 0.01125372841515859

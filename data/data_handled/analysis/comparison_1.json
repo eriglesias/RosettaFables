@@ -1,12 +1,14 @@
 {
   "fable_id": "1",
   "languages": [
+    "grc",
     "nl",
     "de",
     "en",
     "es"
   ],
   "token_counts": {
+    "grc": 90,
     "nl": 367,
     "de": 224,
     "en": 174,
@@ -17,36 +19,42 @@
   "complexity_scores": {},
   "basic_metrics": {
     "title": {
+      "grc": "Λύκος καὶ ἀρήν",
       "nl": "Wolf en Geitje",
       "de": "Das Lamm und Der Wolf",
       "en": "Wolf and Lamb",
       "es": "El Lobo y el Cordero"
     },
     "word_counts": {
+      "grc": 80,
       "nl": 334,
       "de": 186,
       "en": 156,
       "es": 106
     },
     "character_counts": {
+      "grc": 419,
       "nl": 1439,
       "de": 870,
       "en": 660,
       "es": 470
     },
     "sentence_counts": {
+      "grc": 6,
       "nl": 25,
       "de": 14,
       "en": 12,
       "es": 4
     },
     "entity_counts": {
+      "grc": 0,
       "nl": 6,
       "de": 3,
       "en": 5,
       "es": 7
     },
     "avg_sentence_length": {
+      "grc": 13.333333333333334,
       "nl": 13.36,
       "de": 13.285714285714286,
       "en": 13.0,
@@ -55,6 +63,18 @@
   },
   "content": {
     "pos_distribution": {
+      "grc": {
+        "NOUN": 18.88888888888889,
+        "VERB": 23.333333333333332,
+        "ADJ": 10.0,
+        "PUNCT": 10.0,
+        "PRON": 10.0,
+        "ADP": 2.2222222222222223,
+        "SCONJ": 2.2222222222222223,
+        "DET": 8.88888888888889,
+        "CCONJ": 2.2222222222222223,
+        "ADV": 12.222222222222221
+      },
       "nl": {
         "ADV": 5.994550408719346,
         "VERB": 16.62125340599455,
@@ -119,12 +139,14 @@
       }
     },
     "has_moral": {
+      "grc": true,
       "nl": true,
       "de": true,
       "en": true,
       "es": true
     },
     "moral_length": {
+      "grc": 15,
       "nl": 9,
       "de": 23,
       "en": 8,
@@ -218,6 +240,10 @@
   },
   "similarity": {
     "structural_similarity": {
+      "grc-nl": 0.39140918163672656,
+      "grc-de": 0.5427572964669739,
+      "grc-en": 0.6001282051282051,
+      "grc-es": 0.669182389937107,
       "nl-de": 0.6456424294268606,
       "nl-en": 0.573437125748503,
       "nl-es": 0.2917762964636764,
@@ -226,6 +252,10 @@
       "en-es": 0.5032414126753749
     },
     "content_similarity": {
+      "grc-nl": 0.4476722819212126,
+      "grc-de": 0.4351249064049901,
+      "grc-en": 0.41016553662900934,
+      "grc-es": 0.44655527730862776,
       "nl-de": 0.4172336171445573,
       "nl-en": 0.5017114560190987,
       "nl-es": 0.45668366530771975,
@@ -234,6 +264,10 @@
       "en-es": 0.417679545668623
     },
     "lexical_similarity": {
+      "grc-nl": 0.0,
+      "grc-de": 0.0,
+      "grc-en": 0.0,
+      "grc-es": 0.0,
       "nl-de": 0.03869658786612877,
       "nl-en": 0.05350958248203707,
       "nl-es": 0.13009175795477,

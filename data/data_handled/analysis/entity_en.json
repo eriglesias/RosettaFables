@@ -1,28 +1,35 @@
 {
   "ANIMAL_CHAR": {
-    "percentage": 76.47058823529412,
-    "count": 13,
+    "count": 11,
+    "percentage": 73.33,
     "examples": [
       "Wolf",
       "Lamb",
-      "City Mouse",
-      "Country Mouse",
-      "Mouse"
+      "Mouse",
+      "Fox",
+      "Crane"
     ]
   },
   "DATE": {
-    "percentage": 17.647058823529413,
     "count": 3,
+    "percentage": 20.0,
     "examples": [
       "last year",
       "a year old"
     ]
   },
   "PERSON": {
-    "percentage": 5.88235294117647,
     "count": 1,
+    "percentage": 6.67,
     "examples": [
       "billy-"
     ]
+  },
+  "_metadata": {
+    "language": "en",
+    "total_entities": 15,
+    "processed_fables": 6,
+    "unique_entity_types": 3,
+    "analysis_timestamp": "2025-05-23T16:30:14.033349"
   }
 }

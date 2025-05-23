@@ -1,7 +1,7 @@
 {
   "ANIMAL_CHAR": {
-    "percentage": 42.22222222222222,
     "count": 19,
+    "percentage": 42.22,
     "examples": [
       "Un Lobo",
       "un Cordero",
@@ -11,8 +11,8 @@
     ]
   },
   "MISC": {
-    "percentage": 35.55555555555556,
     "count": 16,
+    "percentage": 35.56,
     "examples": [
       "Por eso, aunque",
       "Sin embargo,",
@@ -22,8 +22,8 @@
     ]
   },
   "PER": {
-    "percentage": 11.11111111111111,
     "count": 5,
+    "percentage": 11.11,
     "examples": [
       "Aquél",
       "Él",
@@ -33,8 +33,8 @@
     ]
   },
   "LOC": {
-    "percentage": 8.88888888888889,
     "count": 4,
+    "percentage": 8.89,
     "examples": [
       "injuriaste",
       "Apartándose",
@@ -43,10 +43,17 @@
     ]
   },
   "ORG": {
-    "percentage": 2.2222222222222223,
     "count": 1,
+    "percentage": 2.22,
     "examples": [
       "Ocurrió"
     ]
+  },
+  "_metadata": {
+    "language": "es",
+    "total_entities": 45,
+    "processed_fables": 7,
+    "unique_entity_types": 5,
+    "analysis_timestamp": "2025-05-23T16:30:14.036876"
   }
 }
