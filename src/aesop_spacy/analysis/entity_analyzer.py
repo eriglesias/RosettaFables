@@ -31,7 +31,7 @@ class EntityAnalyzer:
         Args:
             analysis_dir: Analysis output directory (data_handled/analysis)
         """
-        self.analysis_dir = analysis_dir
+        self.analysis_dir = Path(analysis_dir).resolve()
         self.logger = logging.getLogger(__name__)
         
         # The processed files should be in the same data_handled tree

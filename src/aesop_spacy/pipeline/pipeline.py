@@ -107,13 +107,23 @@ class FablePipeline:
 
     @property
     def entity_analyzer(self):
-        """Lazily load the entity analyzer"""
+        """Lazily load the entity analyzer with correct paths"""
         if self._entity_analyzer is None:
             from aesop_spacy.analysis.entity_analyzer import EntityAnalyzer
             self.logger.debug("Initializing EntityAnalyzer")
-            self._entity_analyzer = EntityAnalyzer(self.analysis_dir)
+            
+            # Ensure the analyzer can find processed files
+            analysis_dir = self.output_dir / "analysis"
+            self._entity_analyzer = EntityAnalyzer(analysis_dir)
+            
+            # Verify it found the processed directory correctly
+            processed_dir = self._entity_analyzer.processed_dir
+            if not processed_dir.exists():
+                self.logger.error("EntityAnalyzer cannot find processed directory: %s", processed_dir)
+                self.logger.error("Expected processed files at: %s", self.output_dir / "processed")
+        
         return self._entity_analyzer
-    
+
 
     @property
     def moral_detector(self):
