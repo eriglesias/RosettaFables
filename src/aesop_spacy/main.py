@@ -76,6 +76,30 @@ def setup_logging(debug_mode=False):
     return logging.getLogger("main")
 
 
+def debug_directory_structure(output_dir, logger):
+    """Debug helper to understand the directory structure"""
+    logger.info("=== DIRECTORY STRUCTURE DEBUG ===")
+    logger.info("Output dir: %s", output_dir)
+    logger.info("Analysis dir: %s", output_dir / "analysis")
+    logger.info("Processed dir: %s", output_dir / "processed")
+    # Check what actually exists
+    processed_dir = output_dir / "processed"
+    if processed_dir.exists():
+        json_files = list(processed_dir.glob("*.json"))
+        logger.info("Found %d JSON files in processed dir:", len(json_files))
+        for f in json_files:
+            logger.info("  - %s", f.name)
+    else:
+        logger.error("Processed directory does not exist: %s", processed_dir)
+
+    # Check analysis directory
+    analysis_dir = output_dir / "analysis"
+    logger.info("Analysis dir exists: %s", analysis_dir.exists())
+
+    logger.info("=== END DEBUG ===")
+
+
+
 def setup_directories(data_dir, output_dir, logger):
     """
     Ensure required directories exist with clean separation of concerns.

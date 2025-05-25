@@ -268,7 +268,13 @@ class SyntaxAnalyzer:
             'sentence_count': len(sentences),
             'language_insights': {}
         }
+
+        has_sentence_deps = any('dependencies' in s and s['dependencies'] for s in sentences)
+        has_document_deps = 'dependencies' in fable and fable['dependencies']
         
+        if not has_sentence_deps and not has_document_deps:
+            self.logger.warning("No dependencies found at either sentence or document level")
+        return results
         # Skip if no sentences
         if not sentences:
             self.logger.warning("No sentences found for tree shape analysis")

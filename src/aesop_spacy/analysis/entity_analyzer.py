@@ -36,7 +36,7 @@ class EntityAnalyzer:
         
         # The processed files should be in the same data_handled tree
         # This creates a clean separation: data_handled contains ALL processed outputs
-        self.processed_dir = analysis_dir.parent / "processed"
+        self.processed_dir = self._find_processed_directory()
         
         # Ensure our output directory exists
         self.analysis_dir.mkdir(parents=True, exist_ok=True)
@@ -198,7 +198,51 @@ class EntityAnalyzer:
         self._save_analysis_results(result, language)
         
         return result
-    
+
+    def _find_processed_directory(self) -> Path:
+        """
+        Bulletproof method to find the processed directory.
+        Uses multiple fallback strategies.
+        """
+        # Strategy 1: Standard sibling directory
+        candidate = self.analysis_dir.parent / "processed"
+        if candidate.exists():
+            self.logger.debug("Found processed dir via sibling: %s", candidate)
+            return candidate
+        
+        # Strategy 2: Look for data_handled structure anywhere up the tree
+        current = self.analysis_dir
+        for _ in range(5):  # Reasonable search depth
+            data_handled = current / "data_handled" / "processed"
+            if data_handled.exists():
+                self.logger.debug("Found processed dir via data_handled: %s", data_handled)
+                return data_handled
+            current = current.parent
+        
+        # Strategy 3: Direct search from project root
+        # This handles cases where the directory structure varies
+        project_patterns = [
+            "data/data_handled/processed",
+            "data_handled/processed", 
+            "processed"
+        ]
+        
+        for pattern in project_patterns:
+            candidate = self.analysis_dir
+            # Walk up to find project root, then apply pattern
+            for _ in range(5):
+                test_path = candidate / pattern
+                if test_path.exists():
+                    self.logger.debug("Found processed dir via pattern %s: %s", pattern, test_path)
+                    return test_path
+                candidate = candidate.parent
+        
+        # Fallback: Create the expected location
+        fallback = self.analysis_dir.parent / "processed"
+        self.logger.warning("Could not find processed directory, using fallback: %s", fallback)
+        return fallback
+
+
     def _parse_entity_safely(self, entity_data: Any) -> Optional[tuple]:
         """
         Parse entity data from various formats with defensive handling.

@@ -1,3 +1,5 @@
+🚧 Status: Code is being refactored and bugs fixed
+
 <div align="center">
   <h1>Multilingual Fables Analyzer</h1>
   <p><em>Analyzing Aesop's fables across languages using advanced NLP techniques</em></p>
@@ -8,7 +10,7 @@
 
 This project analyzes Aesop's fables in multiple languages (English, German, Dutch, Spanish, and Ancient Greek) to discover interesting patterns and comparisons. It uses natural language processing (NLP) to understand how stories are told differently across languages.
 
-**In simple terms**: It's like having a super-powered reading assistant that can analyze the same story in different languages and tell you how they compare!
+* It's like having a super-powered reading assistant that can analyze the same story in different languages and tell you how they compare!
 
 ## ✨ Features
 
@@ -47,21 +49,25 @@ Industry-standard NLP libraries are used:
 
 If you're just curious about the project:
 
-1. Browse the `notebooks` folder to see examples and visualizations
+1. Browse the `notebooks` folder to check some early explorations and playing around nlp
 2. Check out the original fables in the `data/raw/fables` directory
-3. Read the analyses in the `data/analysis` folder
+3. Run the main.py and see the analysis and figures output 
 
-### For researchers and developers
+### For developers 
 
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/
-RosetaFables.git
-
-# Change to project directory
-cd aesop_spacy
-
-# Install dependencies using Poetry
+#### Clone and setup
+git clone https://github.com/yourusername/RosetaFables.git
+cd RosetaFables
 poetry install
+
+#### Activate environment and run
+poetry shell
+python main.py
+
+#### Run tests
+poetry run pytest
+
+#### Run specific analysis
+poetry run python -m src.aesop_spacy.analysis.style_analyzer
 
 
